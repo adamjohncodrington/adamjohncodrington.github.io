@@ -58,7 +58,7 @@ const THEME = {
 
   breakpoints: BREAKPOINTS,
   recipe: RECIPES_THEME,
-  homepage: HOME_PAGE_THEME,
+  homePage: HOME_PAGE_THEME,
   section: SECTION_THEME,
   page: PAGE_THEME,
 
