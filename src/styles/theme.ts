@@ -1,0 +1,70 @@
+import { rgba } from "polished";
+
+import colors from "./colors";
+
+const BORDER_BLACK_THIN: string = `1px solid ${colors.black}`;
+const BORDER_GRAY_THIN: string = `1px solid ${colors.gray}`;
+
+const HOME_PAGE_THEME = {
+  icon: { padding: "1.5vmin", size: { desktop: "25vmin", phone: "42vmin" } }
+};
+
+const PAGE_THEME = {
+  count: { padding: "12px 0 0 7px" },
+  header: { margin: { bottom: "30px" } },
+  icon: { margin: { top: "15px" }, size: "60px" },
+  shell: { padding: "25px 20px" }
+};
+
+const SECTION_THEME = {
+  body: {
+    basicList: {
+      border: { bottom: BORDER_GRAY_THIN },
+      count: { width: "25px" },
+      padding: { vertical: "5px" }
+    },
+    eventCardList: { padding: { vertical: "10px" } },
+    padding: { bottom: "5px" }
+  },
+  border: { bottom: BORDER_BLACK_THIN },
+  borderRadius: "10px",
+  boxShadow: `0 1px 2px ${rgba(colors.gray, 0.5)}`,
+  count: { margin: { left: "5px" } },
+  header: { padding: "12px 0" },
+  icon: { padding: { top: "2px" }, size: "34px" },
+  margin: { bottom: "20px" },
+  padding: { horizontal: "12px" }
+};
+
+const RECIPES_THEME = {
+  border: { bottom: BORDER_GRAY_THIN },
+  image: { size: "300px" },
+  icon: { margin: { top: "4px" }, size: "24px" },
+  title: { padding: { vertical: "15px" } },
+  first: { padding: { top: "10px" } },
+  last: { padding: { bottom: "20px" } }
+};
+
+const BREAKPOINTS = { phone: { maxWidth: "480px" } };
+
+export const fontFamily: string = "-apple-system, Helvetica, sans-serif";
+export const scrollbarSize: string = "0.7rem";
+
+const THEME = {
+  animationDuration: 0.35,
+  fadedOpacity: 0.5,
+  circleBorder: BORDER_BLACK_THIN,
+  textColor: colors.black,
+
+  breakpoints: BREAKPOINTS,
+  recipe: RECIPES_THEME,
+  homepage: HOME_PAGE_THEME,
+  section: SECTION_THEME,
+  page: PAGE_THEME,
+
+  colors,
+  scrollbarSize,
+  fontFamily
+};
+
+export default THEME;
