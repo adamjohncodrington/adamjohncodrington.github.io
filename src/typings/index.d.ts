@@ -36,6 +36,17 @@ interface PageSectionData {
   eventCards?: Array<IEventCard>;
 }
 
+interface IEventCard {
+  title: string;
+  subtitle?: string;
+  favourite: boolean;
+  body: string;
+  eventType: IEventCardType;
+  dates: Array<Date>;
+  company?: Array<IFriend>;
+  disclaimer?: string;
+}
+
 interface IPageSection {
   details: IPageSectionDetails;
   icon?: IImageSrc;
@@ -63,5 +74,3 @@ interface IRoute extends IHomepageRoute {
 }
 
 type ITheme = any;
-
-type = string;

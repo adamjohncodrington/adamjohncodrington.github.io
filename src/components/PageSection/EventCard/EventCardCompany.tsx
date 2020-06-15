@@ -37,12 +37,17 @@ export const EventCardCompany: React.FC<EventCardCompanyProps> = ({
 }) => {
   const COMPANY = company.sort((a, b) => (a.initials > b.initials ? 1 : -1));
 
+  console.log(COMPANY);
+
+  // COMPANY = company;
+  // console.log(COMPANY);
+
   return (
     <CompanyContainer
       eventType={eventType}
       data-test="event-card-company-container"
     >
-      {COMPANY.map((item, index) => (
+      {COMPANY.map((item: IFriend, index: number) => (
         //@ts-ignore
         <StyledCircle
           data-test={"event-card-company-item-" + (index + 1)}

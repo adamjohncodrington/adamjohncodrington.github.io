@@ -7,15 +7,6 @@ interface IMapDataToEventCards {
   eventType: IEventCardType;
 }
 
-interface IEventCard {
-  title: string;
-  subtitle?: string;
-  body: string;
-  dates: Array<Date>;
-  company: Array<IFriend>;
-  eventType: IEventCardType;
-}
-
 type UnformattedEventItem = any;
 
 export const mapDataToEventCards = ({

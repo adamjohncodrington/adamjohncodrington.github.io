@@ -36,17 +36,6 @@ const EventCardBody = styled(Text.P.S)`
   padding: 1px 0 3px;
 `;
 
-interface IEventCard {
-  title: string;
-  subtitle: string;
-  favourite: boolean;
-  body: string;
-  eventType: IEventCardType;
-  dates: Array<Date>;
-  company: Array<IFriend>;
-  disclaimer?: string;
-}
-
 export const EventCard: React.FC<IEventCard> = ({
   title,
   subtitle,
@@ -76,7 +65,7 @@ export const EventCard: React.FC<IEventCard> = ({
           <EventCardBody data-test="event-card-body">{body}</EventCardBody>
         </TextContent>
 
-        {company.length > 0 && (
+        {company && (
           <EventCardCompany company={company} eventType={eventType} />
         )}
       </FlexRow>
