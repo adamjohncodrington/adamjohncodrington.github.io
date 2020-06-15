@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-// import RecipeCardCost from "./RecipeCardCost";
+import { RecipeCardCost } from "./RecipeCardCost";
 import { RecipeCardHeader } from "./RecipeCardHeader";
 import { RecipeCardIngredients } from "./RecipeCardIngredients";
 import { RecipeCardMethod } from "./RecipeCardMethod";
@@ -43,7 +43,7 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
         {serveWith && <RecipeCardServeWith serveWith={serveWith} />}
         <RecipeCardMethod method={method} />
         {image && <RecipeCardImage imageSource={image} />}
-        {/* <RecipeCardCost ingredients={ingredients} makes={makes} title={title} /> */}
+        <RecipeCardCost ingredients={ingredients} makes={makes} title={title} />
       </RecipeBody>
     </VisibilityToggle>
   );

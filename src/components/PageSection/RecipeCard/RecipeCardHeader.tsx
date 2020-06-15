@@ -29,10 +29,9 @@ export const RecipeCardHeader: React.FC<Props> = ({
   favourite = false
 }) => (
   <FlexRow>
-    <StyledH3 favourite={favourite}>{title}</StyledH3>(
+    <StyledH3 favourite={favourite}>{title}</StyledH3>
     <Circle fontSize="13px" size="25px" invert color={color}>
       {abbreviation}
     </Circle>
-    )
   </FlexRow>
 );
