@@ -1,18 +1,18 @@
-import { PAGE_SECTION_TYPES } from "../../constants";
+import { PAGE_SECTIONS } from "../../constants";
 
 import { isInFuture } from "./isInFuture";
 
 interface ILookupFunction {
   dataItem: any;
-  pageSectionType: IPageSectionType;
+  pageSectionTitle: IPageSectionDetails;
   itemToMatch: any;
 }
 const musicianMatchExists = ({
   dataItem,
   itemToMatch,
-  pageSectionType
+  pageSectionTitle
 }: ILookupFunction): boolean =>
-  pageSectionType === PAGE_SECTION_TYPES.MUSICIAN &&
+  pageSectionTitle === PAGE_SECTIONS.MUSICIAN &&
   (dataItem.headline === itemToMatch ||
     (dataItem.support && dataItem.support.includes(itemToMatch)) ||
     (dataItem.lineup && dataItem.lineup.includes(itemToMatch)));
@@ -20,76 +20,76 @@ const musicianMatchExists = ({
 const actorMatchExists = ({
   dataItem,
   itemToMatch,
-  pageSectionType
+  pageSectionTitle
 }: ILookupFunction): boolean =>
-  pageSectionType === PAGE_SECTION_TYPES.ACTOR &&
+  pageSectionTitle === PAGE_SECTIONS.ACTOR &&
   dataItem.cast &&
   dataItem.cast.includes(itemToMatch);
 
 const playMatchExists = ({
   dataItem,
   itemToMatch,
-  pageSectionType
+  pageSectionTitle
 }: ILookupFunction): boolean =>
-  pageSectionType === PAGE_SECTION_TYPES.PLAY && dataItem.play === itemToMatch;
+  pageSectionTitle === PAGE_SECTIONS.PLAY && dataItem.play === itemToMatch;
 
 const friendMatchExists = ({
   dataItem,
   itemToMatch,
-  pageSectionType
+  pageSectionTitle
 }: ILookupFunction): boolean =>
-  pageSectionType === PAGE_SECTION_TYPES.FRIEND &&
+  pageSectionTitle === PAGE_SECTIONS.FRIEND &&
   dataItem.company &&
   dataItem.company.includes(itemToMatch);
 
 const theatreVenueMatchExists = ({
   dataItem,
   itemToMatch,
-  pageSectionType
+  pageSectionTitle
 }: ILookupFunction): boolean =>
-  pageSectionType === PAGE_SECTION_TYPES.THEATRE_VENUES &&
+  pageSectionTitle === PAGE_SECTIONS.THEATRE_VENUES &&
   dataItem.theatre === itemToMatch;
 
 const festivalMatchExists = ({
   dataItem,
   itemToMatch,
-  pageSectionType
+  pageSectionTitle
 }: ILookupFunction): boolean =>
-  pageSectionType === PAGE_SECTION_TYPES.FESTIVAL &&
+  pageSectionTitle === PAGE_SECTIONS.FESTIVAL &&
   dataItem.festival === itemToMatch;
 
 const musicVenueMatchExists = ({
   dataItem,
   itemToMatch,
-  pageSectionType
+  pageSectionTitle
 }: ILookupFunction): boolean =>
-  pageSectionType === PAGE_SECTION_TYPES.MUSIC_VENUES &&
+  pageSectionTitle === PAGE_SECTIONS.MUSIC_VENUES &&
   dataItem.venue === itemToMatch;
 
 const countryCityTownMatchExists = ({
   dataItem,
   itemToMatch,
-  pageSectionType
+  pageSectionTitle
 }: ILookupFunction): boolean =>
-  (pageSectionType === PAGE_SECTION_TYPES.COUNTRY ||
-    pageSectionType === PAGE_SECTION_TYPES.ATTRACTION ||
-    pageSectionType === PAGE_SECTION_TYPES.REGION ||
-    pageSectionType === PAGE_SECTION_TYPES.TOWN ||
-    pageSectionType === PAGE_SECTION_TYPES.ISLAND ||
-    pageSectionType === PAGE_SECTION_TYPES.CITY) &&
+  (pageSectionTitle === PAGE_SECTIONS.COUNTRY ||
+    pageSectionTitle === PAGE_SECTIONS.ATTRACTION ||
+    pageSectionTitle === PAGE_SECTIONS.REGION ||
+    pageSectionTitle === PAGE_SECTIONS.TOWN ||
+    pageSectionTitle === PAGE_SECTIONS.ISLAND ||
+    pageSectionTitle === PAGE_SECTIONS.CITY) &&
   ((dataItem.title && dataItem.title.includes(itemToMatch)) ||
     (dataItem.hidden && dataItem.hidden.includes(itemToMatch)) ||
     (dataItem.subtitle && dataItem.subtitle.includes(itemToMatch)));
 
 interface IGetPageSectionItemCounts {
   itemToCount: any;
-  pageSectionType: IPageSectionType;
+  pageSectionTitle: IPageSectionDetails;
   data: any;
 }
 
 export const getPageSectionItemCounts = ({
   itemToCount,
-  pageSectionType,
+  pageSectionTitle,
   data
 }: IGetPageSectionItemCounts) => {
   let pastCount: number = 0;
@@ -97,7 +97,7 @@ export const getPageSectionItemCounts = ({
 
   data.map((dataItem: any) => {
     const params: ILookupFunction = {
-      pageSectionType,
+      pageSectionTitle,
       dataItem,
       itemToMatch: itemToCount
     };

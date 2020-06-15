@@ -1,4 +1,4 @@
-import { EVENT_CARD_TYPES, PAGE_SECTION_TYPES } from "../constants";
+import { EVENT_CARD_TYPES, PAGE_SECTIONS } from "../constants";
 import { DATA_TRAVEL } from "../data";
 import { ICONS } from "../resources";
 import { mapDataToEventCards, mapYearGroupsToSections } from "../utils/global";
@@ -12,52 +12,52 @@ const { pastCount, futureCount } = DATA_TRAVEL;
 
 const statsSections: Array<IPageSection> = [
   {
-    type: PAGE_SECTION_TYPES.BUCKET_LIST,
+    details: PAGE_SECTIONS.BUCKET_LIST,
     icon: ICONS.STARS,
     data: DATA_TRAVEL.BUCKET_LIST
   },
   {
-    type: PAGE_SECTION_TYPES.CITY,
+    details: PAGE_SECTIONS.CITY,
     icon: ICONS.CITY,
     showSectionLength: true,
     data: DATA_TRAVEL.CITIES
   },
   {
-    type: PAGE_SECTION_TYPES.COUNTRY,
+    details: PAGE_SECTIONS.COUNTRY,
     icon: ICONS.FLAG,
     data: DATA_TRAVEL.COUNTRIES,
     showSectionLength: true
   },
   {
-    type: PAGE_SECTION_TYPES.FRIEND,
+    details: PAGE_SECTIONS.FRIEND,
     icon: ICONS.PEOPLE,
     data: DATA_TRAVEL.FRIENDS,
     leaderboard: true
   },
   {
-    type: PAGE_SECTION_TYPES.HIGHLIGHT,
+    details: PAGE_SECTIONS.HIGHLIGHT,
     icon: ICONS.MAP_PIN,
     data: DATA_TRAVEL.HIGLIGHTS
   },
   {
-    type: PAGE_SECTION_TYPES.ISLAND,
+    details: PAGE_SECTIONS.ISLAND,
     showSectionLength: true,
     icon: ICONS.PALM_TREE,
     data: DATA_TRAVEL.ISLANDS
   },
   {
-    type: PAGE_SECTION_TYPES.THEME_PARK,
+    details: PAGE_SECTIONS.THEME_PARK,
     showSectionLength: true,
     icon: ICONS.ROLLER_COASTER,
     data: DATA_TRAVEL.THEME_PARKS
   },
   {
-    type: PAGE_SECTION_TYPES.TOWN,
+    details: PAGE_SECTIONS.TOWN,
     icon: ICONS.TOWN_HALL,
     data: DATA_TRAVEL.TOWNS
   },
   {
-    type: PAGE_SECTION_TYPES.UP_NEXT,
+    details: PAGE_SECTIONS.UP_NEXT,
     icon: ICONS.NOTEPAD,
     showSectionLength: true,
     listOfEventCards: true,

@@ -1,4 +1,4 @@
-import { EVENT_CARD_TYPES, PAGE_SECTION_TYPES } from "../constants";
+import { EVENT_CARD_TYPES, PAGE_SECTIONS } from "../constants";
 import { DATA_GIGS } from "../data";
 import { ICONS } from "../resources";
 import { mapDataToEventCards, mapYearGroupsToSections } from "../utils/global";
@@ -13,39 +13,39 @@ const { pastCount, futureCount } = DATA_GIGS;
 
 const statsSections: Array<IPageSection> = [
   {
-    type: PAGE_SECTION_TYPES.MUSICIAN,
+    details: PAGE_SECTIONS.MUSICIAN,
     icon: ICONS.ARTIST,
     data: DATA_GIGS.MUSICIANS,
     showSectionLength: true
   },
   {
-    type: PAGE_SECTION_TYPES.BUCKET_LIST,
+    details: PAGE_SECTIONS.BUCKET_LIST,
     icon: ICONS.STARS,
     data: DATA_GIGS.BUCKET_LIST,
     showSectionLength: true
   },
   {
-    type: PAGE_SECTION_TYPES.FESTIVAL,
+    details: PAGE_SECTIONS.FESTIVAL,
     showSectionLength: true,
     icon: ICONS.PEACE_SIGN,
     data: DATA_GIGS.FESTIVALS
   },
   {
-    type: PAGE_SECTION_TYPES.FRIEND,
+    details: PAGE_SECTIONS.FRIEND,
     icon: ICONS.PEOPLE,
     showSectionLength: false,
     data: DATA_GIGS.FRIENDS,
     leaderboard: true
   },
   {
-    type: PAGE_SECTION_TYPES.UP_NEXT,
+    details: PAGE_SECTIONS.UP_NEXT,
     icon: ICONS.NOTEPAD,
     data: mapGigsToEventCards({ data: DATA_GIGS.UPCOMING }),
     listOfEventCards: true,
     showSectionLength: true
   },
   {
-    type: PAGE_SECTION_TYPES.MUSIC_VENUES,
+    details: PAGE_SECTIONS.MUSIC_VENUES,
     icon: ICONS.STADIUM,
     data: DATA_GIGS.VENUES,
     showSectionLength: true

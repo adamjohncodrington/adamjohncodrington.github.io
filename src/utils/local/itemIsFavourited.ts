@@ -1,23 +1,23 @@
-import { PAGE_SECTION_TYPES } from "../../constants";
+import { PAGE_SECTIONS } from "../../constants";
 
 interface IItemIsFavourited {
   itemToInspect: any;
-  pageSectionType: IPageSectionType;
+  pageSectionTitle: IPageSectionDetails;
   favouritedData: any;
 }
 
 export const itemIsFavourited = ({
   itemToInspect,
-  pageSectionType,
+  pageSectionTitle,
   favouritedData
 }: IItemIsFavourited) => {
   let itemIsFavourited = false;
 
   favouritedData.map((dataItem: any) => {
     if (
-      (pageSectionType === PAGE_SECTION_TYPES.MUSICIAN &&
+      (pageSectionTitle === PAGE_SECTIONS.MUSICIAN &&
         itemToInspect === dataItem.headline) ||
-      (pageSectionType === PAGE_SECTION_TYPES.PLAY &&
+      (pageSectionTitle === PAGE_SECTIONS.PLAY &&
         itemToInspect === dataItem.play)
     )
       itemIsFavourited = true;

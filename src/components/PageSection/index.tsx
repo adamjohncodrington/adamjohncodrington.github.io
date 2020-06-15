@@ -7,6 +7,8 @@ import { RecipeCard } from "./RecipeCard";
 import { SimpleListItem } from "./SimpleListItem";
 import { VisibilityToggle } from "./VisibilityToggle";
 
+import { PAGE_SECTION_TYPES } from "../../constants";
+
 const PageSectionContainer = styled.section`
   //TODO: move this color to theme
   background: Gainsboro;
@@ -63,25 +65,28 @@ const RecipeGroupBody = styled.div`
 `;
 
 export const PageSection: React.FC<IPageSection> = ({
-  type,
+  details,
   icon,
   listOfEventCards,
   data,
   showSectionLength = false,
   expandedAutomatically = false,
   leaderboard,
-  recipes,
   onlySectionHeaderClickable
 }) => {
+  const { id, title, type } = details;
+
+  const isEventsCards: boolean = type === PAGE_SECTION_TYPES.EVENT_CARDS;
+  const isRecipes: boolean = type === PAGE_SECTION_TYPES.RECIPES;
+  const isCountedList: boolean = type === PAGE_SECTION_TYPES.COUNTED_LIST;
+
   // Precautionary exit
   const proceed =
-    (data && data.length) ||
+    data.length > 0 ||
     // e.g. if pesto is hidden, do not show sauces section because there will be no section children
     //@ts-ignore
-    (recipes && recipes.filter(item => !item.hide).length);
+    (isRecipes && data.filter((item: IRecipeCard) => !item.hide).length);
   if (!proceed) return null;
-
-  const { id, title } = type;
 
   return (
     <PageSectionContainer data-test={id && `${id}-section`}>
@@ -99,9 +104,9 @@ export const PageSection: React.FC<IPageSection> = ({
         }
       >
         <section data-test="section-content">
-          {recipes ? (
+          {type === PAGE_SECTION_TYPES.RECIPES ? (
             <RecipeGroupBody>
-              {recipes.map((item: IRecipeCard, index: number) => (
+              {data.map((item: IRecipeCard, index: number) => (
                 <RecipeCard key={index} {...item} />
               ))}
             </RecipeGroupBody>

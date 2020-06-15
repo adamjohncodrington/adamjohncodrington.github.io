@@ -14,35 +14,9 @@ const SectionsContainer = styled.div`
 const Page: React.FC<IRoute> = ({ icon, title, pageData }) => (
   <PageShell title={title} icon={icon} pageData={pageData}>
     <SectionsContainer data-test="page-sections">
-      {pageData.sections.map(
-        (
-          {
-            type,
-            icon,
-            data,
-            listOfEventCards,
-            showSectionLength,
-            expandedAutomatically,
-            leaderboard,
-            recipes,
-            onlySectionHeaderClickable
-          }: IPageSection,
-          index: number
-        ) => (
-          <PageSection
-            key={index}
-            type={type}
-            icon={icon}
-            data={data}
-            listOfEventCards={listOfEventCards}
-            showSectionLength={showSectionLength}
-            expandedAutomatically={expandedAutomatically}
-            leaderboard={leaderboard}
-            recipes={recipes}
-            onlySectionHeaderClickable={onlySectionHeaderClickable}
-          />
-        )
-      )}
+      {pageData.sections.map((item: IPageSection, index: number) => (
+        <PageSection key={index} {...item} />
+      ))}
     </SectionsContainer>
   </PageShell>
 );

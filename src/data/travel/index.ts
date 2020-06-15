@@ -2,7 +2,7 @@ import {
   generateSectionData,
   generateChildItemsFromParentItems
 } from "../../utils/global";
-import { FRIENDS, PAGE_SECTION_TYPES, LOCATIONS } from "../../constants";
+import { FRIENDS, PAGE_SECTIONS, LOCATIONS } from "../../constants";
 
 import { TRAVEL_1997 } from "./travel-1997";
 import { TRAVEL_1998 } from "./travel-1998";
@@ -145,44 +145,44 @@ export const DATA_TRAVEL = {
 
   CITIES: generateSectionDataWrapper({
     items: cities,
-    pageSectionType: PAGE_SECTION_TYPES.CITY
+    pageSectionTitle: PAGE_SECTIONS.CITY
   }),
 
   TOWNS: generateSectionDataWrapper({
     items: towns,
-    pageSectionType: PAGE_SECTION_TYPES.TOWN
+    pageSectionTitle: PAGE_SECTIONS.TOWN
   }),
 
   ATTRACTIONS: generateSectionDataWrapper({
     items: attractions.filter(item => !item.themePark && !item.highlight),
-    pageSectionType: PAGE_SECTION_TYPES.ATTRACTION
+    pageSectionTitle: PAGE_SECTIONS.ATTRACTION
   }),
 
   THEME_PARKS: generateSectionDataWrapper({
     items: themeParks,
-    pageSectionType: PAGE_SECTION_TYPES.ATTRACTION
+    pageSectionTitle: PAGE_SECTIONS.ATTRACTION
   }),
 
   HIGLIGHTS: generateSectionDataWrapper({
     items: highlights,
-    pageSectionType: PAGE_SECTION_TYPES.ATTRACTION
+    pageSectionTitle: PAGE_SECTIONS.ATTRACTION
   }),
 
   ISLANDS: generateSectionDataWrapper({
     items: islands,
-    pageSectionType: PAGE_SECTION_TYPES.ISLAND
+    pageSectionTitle: PAGE_SECTIONS.ISLAND
   }),
 
   COUNTRIES: generateSectionDataWrapper({
     items: countries,
-    pageSectionType: PAGE_SECTION_TYPES.COUNTRY
+    pageSectionTitle: PAGE_SECTIONS.COUNTRY
   }),
 
   FAVOURITES,
 
   FRIENDS: generateSectionDataWrapper({
     items: FRIENDS,
-    pageSectionType: PAGE_SECTION_TYPES.FRIEND,
+    pageSectionTitle: PAGE_SECTIONS.FRIEND,
     filter: "travel"
   }),
 

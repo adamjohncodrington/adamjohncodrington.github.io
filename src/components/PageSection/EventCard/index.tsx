@@ -41,7 +41,7 @@ interface IEventCard {
   subtitle: string;
   favourite: boolean;
   body: string;
-  eventType: IEventType;
+  eventType: IEventCardType;
   dates: Array<Date>;
   company: Array<IFriend>;
   disclaimer?: string;

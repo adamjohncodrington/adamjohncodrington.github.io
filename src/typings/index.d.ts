@@ -21,21 +21,30 @@ type IInputData =
   | ITheatreVenue
   | ILocationItem;
 
-interface IPageSectionType {
+type IEventCardType = "gig" | "trip" | "theatre";
+type IPageSecionType = "recipes" | "event-cards" | "counted-list";
+
+interface IPageSectionDetails {
   title: string;
   id: string;
+  type: IPageSectionType;
+}
+
+interface PageSectionData {
+  recipes?: Array<IRecipeCard>;
+  countedList?: Array<ICountedListEntry>;
+  eventCards?: Array<IEventCard>;
 }
 
 interface IPageSection {
-  type: IPageSectionType;
+  details: IPageSectionDetails;
   icon?: IImageSrc;
-  data: any;
+  data: Array<any>;
   leaderboard?: true;
   showSectionLength?: boolean;
   listOfEventCards?: boolean;
   listOfRecipes?: boolean;
   expandedAutomatically?: boolean;
-  recipes?: Array<IRecipeCard>;
   onlySectionHeaderClickable?: boolean;
 }
 
@@ -57,4 +66,4 @@ interface IRoute extends IHomepageRoute {
 
 type ITheme = any;
 
-type IEventType = string;
+type = string;

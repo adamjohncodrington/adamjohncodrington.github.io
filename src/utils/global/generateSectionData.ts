@@ -1,4 +1,4 @@
-import { PAGE_SECTION_TYPES } from "../../constants";
+import { PAGE_SECTIONS } from "../../constants";
 
 import {
   isInFuture,
@@ -9,7 +9,7 @@ import {
 
 interface IGenerateSectionData {
   items: any;
-  pageSectionType: IPageSectionType;
+  pageSectionTitle: IPageSectionDetails;
   filter: any;
   allData: any;
   favouritedData: any;
@@ -19,7 +19,7 @@ interface IGenerateSectionData {
 
 export const generateSectionData = ({
   items,
-  pageSectionType,
+  pageSectionTitle,
   filter,
   allData,
   favouritedData,
@@ -33,7 +33,7 @@ export const generateSectionData = ({
   const mapToListEntry = item => {
     const { pastCount, futureCount } = getPageSectionItemCounts({
       itemToCount: item,
-      pageSectionType,
+      pageSectionTitle,
       data: allData
     });
 
@@ -46,7 +46,7 @@ export const generateSectionData = ({
         item.favourite ||
         itemIsFavourited({
           itemToInspect: item,
-          pageSectionType,
+          pageSectionTitle,
           favouritedData
         }),
       star: item.capital
@@ -73,7 +73,7 @@ export const generateSectionData = ({
         ignoreCountInfo || futureCount !== 0 || pastCount !== 0
     );
 
-  return pageSectionType === PAGE_SECTION_TYPES.FRIEND
+  return pageSectionTitle === PAGE_SECTIONS.FRIEND
     ? data
         .sort((a, b) => (a.futureCount > b.futureCount ? -1 : 1))
         .sort((a, b) => (a.pastCount > b.pastCount ? -1 : 1))

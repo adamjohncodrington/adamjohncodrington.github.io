@@ -1,6 +1,6 @@
 import { DATA_THEATRE } from "../data";
 import { ICONS } from "../resources";
-import { EVENT_CARD_TYPES, PAGE_SECTION_TYPES } from "../constants";
+import { EVENT_CARD_TYPES, PAGE_SECTIONS } from "../constants";
 import { mapDataToEventCards, mapYearGroupsToSections } from "../utils/global";
 
 const eventType = EVENT_CARD_TYPES.THEATRE;
@@ -10,30 +10,30 @@ const mapTheatreVisitToEventCards = parms =>
 
 const statsSections: Array<IPageSection> = [
   {
-    type: PAGE_SECTION_TYPES.ACTOR,
+    details: PAGE_SECTIONS.ACTOR,
     icon: ICONS.ARTIST,
     data: DATA_THEATRE.ACTORS
   },
   {
-    type: PAGE_SECTION_TYPES.FRIEND,
+    details: PAGE_SECTIONS.FRIEND,
     icon: ICONS.PEOPLE,
     data: DATA_THEATRE.FRIENDS,
     leaderboard: true
   },
   {
-    type: PAGE_SECTION_TYPES.PLAY,
+    details: PAGE_SECTIONS.PLAY,
     icon: ICONS.BOOK,
     data: DATA_THEATRE.PLAYS,
     showSectionLength: true
   },
   {
-    type: PAGE_SECTION_TYPES.THEATRE_VENUES,
+    details: PAGE_SECTIONS.THEATRE_VENUES,
     icon: ICONS.THEATRE,
     data: DATA_THEATRE.VENUES,
     showSectionLength: true
   },
   {
-    type: PAGE_SECTION_TYPES.UP_NEXT,
+    details: PAGE_SECTIONS.UP_NEXT,
     icon: ICONS.NOTEPAD,
     listOfEventCards: true,
     data: mapTheatreVisitToEventCards({ data: DATA_THEATRE.UPCOMING }),

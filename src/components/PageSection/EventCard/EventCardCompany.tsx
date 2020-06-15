@@ -9,7 +9,7 @@ const StyledCircle = styled(Circle)`
 `;
 
 interface ICompanyContainer {
-  eventType: IEventType;
+  eventType: IEventCardType;
 }
 const CompanyContainer = styled(FlexRow)`
   max-width: ${({ eventType }: ICompanyContainer) =>
@@ -28,7 +28,7 @@ const CompanyContainer = styled(FlexRow)`
 
 interface EventCardCompanyProps {
   company: Array<IFriend>;
-  eventType: IEventType;
+  eventType: IEventCardType;
 }
 
 export const EventCardCompany: React.FC<EventCardCompanyProps> = ({
