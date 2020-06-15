@@ -1,39 +1,39 @@
 const LONDON = {
   // A
-  ADELPHI: "Adelphi Theatre",
-  APOLLO: "Apollo Theatre",
-  APOLLO_VICTORIA: "Apollo Victoria Theatre",
+  ADELPHI: { name: "Adelphi Theatre" },
+  APOLLO: { name: "Apollo Theatre" },
+  APOLLO_VICTORIA: { name: "Apollo Victoria Theatre" },
   // B
-  BRIDGE: "Bridge Theatre",
+  BRIDGE: { name: "Bridge Theatre" },
   // C
-  CAMBRIDGE: "Cambridge Theatre",
+  CAMBRIDGE: { name: "Cambridge Theatre" },
   // D
-  DUKE_OF_YORKS: "Duke of York's Theatre",
+  DUKE_OF_YORKS: { name: "Duke of York's Theatre" },
   // G
-  GIELGUD: "Gielgud Theatre",
+  GIELGUD: { name: "Gielgud Theatre" },
   // H
-  HAROLD_PINTER: "Harold Pinter Theatre",
+  HAROLD_PINTER: { name: "Harold Pinter Theatre" },
   // L
-  LYRIC: "Lyric Hammersmith",
+  LYRIC: { name: "Lyric Hammersmith" },
   // N
-  NATIONAL: "National Theatre",
-  NOEL_COWARD: "Noël Coward Theatre",
+  NATIONAL: { name: "National Theatre" },
+  NOEL_COWARD: { name: "Noël Coward Theatre" },
   // O
-  OLD_RED_LION: "Old Red Lion Theatre",
-  OLD_VIC: "The Old Vic",
+  OLD_RED_LION: { name: "Old Red Lion Theatre" },
+  OLD_VIC: { name: "The Old Vic" },
   // P
-  PLAYHOUSE: "Playhouse Theatre",
+  PLAYHOUSE: { name: "Playhouse Theatre" },
   // R
-  ROYAL_HAYMARKET: "Theatre Royal Haymarket",
+  ROYAL_HAYMARKET: { name: "Theatre Royal Haymarket" },
   // T
-  TRAFALGAR_STUDIOS: "Trafalgar Studios",
+  TRAFALGAR_STUDIOS: { name: "Trafalgar Studios" },
   // W
-  WATERLOO_EAST: "Waterloo East Theatre",
-  WHITE_BEAR: "White Bear Theatre"
+  WATERLOO_EAST: { name: "Waterloo East Theatre" },
+  WHITE_BEAR: { name: "White Bear Theatre" }
 };
 
 const STRATFORD = {
-  ROYAL_SHAKESPEARE: "Royal Shakespeare Theatre"
+  ROYAL_SHAKESPEARE: { name: "Royal Shakespeare Theatre" }
 };
 
 export const THEATRE_VENUES = {

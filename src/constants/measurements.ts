@@ -28,9 +28,5 @@ export const MEASUREMENTS = {
   PANCAKE: "pancake",
 
   // SIX TABLESPOONS FOR £1
-  SAINSBURYS_SEASONING_COST: {
-    quantity: 6,
-    measurement: TABLESPOON,
-    price: 1
-  }
+  SAINSBURYS_SEASONING_COST: { quantity: 6, measurement: TABLESPOON, price: 1 }
 };

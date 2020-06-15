@@ -1,41 +1,41 @@
 export const PLAYS = {
   // 123
-  "1984": "1984",
-  "4000_MILES": "4000 Miles",
+  "1984": { name: "1984" },
+  "4000_MILES": { name: "4000 Miles" },
   // A
-  AFTERGLOW: "Afterglow",
+  AFTERGLOW: { name: "Afterglow" },
   // C
-  CONSENT: "Consent",
+  CONSENT: { name: "Consent" },
   // D
-  DUST: "Dust",
+  DUST: { name: "Dust" },
   // E
-  EVERYBODYS_TALKING_ABOUT_JAMIE: "Everybody's Talking About Jamie",
+  EVERYBODYS_TALKING_ABOUT_JAMIE: { name: "Everybody's Talking About Jamie" },
   // F
-  FERRYMAN: "Ferryman, The",
-  FROZEN: "Frozen",
+  FERRYMAN: { name: "Ferryman, The" },
+  FROZEN: { name: "Frozen" },
   // H
-  HOME_IM_DARLING: "Home, I'm Darling",
+  HOME_IM_DARLING: { name: "Home, I'm Darling" },
   // I
-  INHERITANCE: "Inheritance, The",
+  INHERITANCE: { name: "Inheritance, The" },
   // K
-  KINKY_BOOTS: "Kinky Boots",
+  KINKY_BOOTS: { name: "Kinky Boots" },
   // L
-  LEAVE_TO_REMAIN: "Leave to Remain",
-  LOST_UNFOUND: "Lost Unfound",
-  LUNGS: "Lungs",
+  LEAVE_TO_REMAIN: { name: "Leave to Remain" },
+  LOST_UNFOUND: { name: "Lost Unfound" },
+  LUNGS: { name: "Lungs" },
   // M
-  MATILDA: "Matilda",
-  MIDSUMMER_NIGHTS_DREAM: "A Midsummer Night's Dream",
+  MATILDA: { name: "Matilda" },
+  MIDSUMMER_NIGHTS_DREAM: { name: "A Midsummer Night's Dream" },
   // S
-  SON: "The Son",
+  SON: { name: "The Son" },
   // T
-  THAT_GIRL: "That Girl",
+  THAT_GIRL: { name: "That Girl" },
   // U
-  UGLY_LIES_THE_BONE: "Ugly Lies the Bone",
-  UNCLE_VANYA: "Uncle Vanya",
+  UGLY_LIES_THE_BONE: { name: "Ugly Lies the Bone" },
+  UNCLE_VANYA: { name: "Uncle Vanya" },
   // W
-  WAITRESS: "Waitress",
-  WICKED: "Wicked",
+  WAITRESS: { name: "Waitress" },
+  WICKED: { name: "Wicked" },
   // Y
-  YOUNG_MARX: "Young Marx"
+  YOUNG_MARX: { name: "Young Marx" }
 };

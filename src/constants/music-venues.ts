@@ -1,153 +1,153 @@
 const MUSIC_VENUES_LONDON = {
   // A
-  ALEXANDRA_PALACE: "Alexandra Palace",
+  ALEXANDRA_PALACE: { name: "Alexandra Palace" },
   ALEXANDRA_PALACE_THEATRE: {
     name: "Alexandra Palace Theatre",
     favourite: true
   },
   // B
   BRIXTON_ACADEMY: { name: "Brixton Academy", favourite: true },
-  BROCKWELL_PARK: "Brockwell Park",
+  BROCKWELL_PARK: { name: "Brockwell Park" },
   // C
-  CAMDEN_ASSEMBLY: "Camden Assembly",
-  CORSICA_STUDIOS: "Corsica Studios",
-  COURTYARD_THEATRE: "Courtyard Theatre",
+  CAMDEN_ASSEMBLY: { name: "Camden Assembly" },
+  CORSICA_STUDIOS: { name: "Corsica Studios" },
+  COURTYARD_THEATRE: { name: "Courtyard Theatre" },
   // D
-  DINGWALLS: "Dingwalls",
-  THE_GARAGE: "Garage, The",
+  DINGWALLS: { name: "Dingwalls" },
+  THE_GARAGE: { name: "Garage, The" },
   // E
-  EARTH: "EartH",
-  EGG: "Egg",
-  ELECTRIC_BRIXTON: "Electric Brixton",
-  ELECTROWERKZ: "Electrowerkz",
+  EARTH: { name: "EartH" },
+  EGG: { name: "Egg" },
+  ELECTRIC_BRIXTON: { name: "Electric Brixton" },
+  ELECTROWERKZ: { name: "Electrowerkz" },
   // F
-  FABRIC: "Fabric",
-  FINSBURY_PARK: "Finsbury Park",
+  FABRIC: { name: "Fabric" },
+  FINSBURY_PARK: { name: "Finsbury Park" },
   // H
-  HAMMERSMITH_APOLLO: "Hammersmith Apollo",
-  HEAVEN: "Heaven",
-  HOXTON_HALL: "Hoxton Hall",
-  HOXTON_SQUARE_BAR_AND_KITCHEN: "Hoxton Square Bar & Kitchen",
+  HAMMERSMITH_APOLLO: { name: "Hammersmith Apollo" },
+  HEAVEN: { name: "Heaven" },
+  HOXTON_HALL: { name: "Hoxton Hall" },
+  HOXTON_SQUARE_BAR_AND_KITCHEN: { name: "Hoxton Square Bar & Kitchen" },
   // I
   ISLINGTON_ASSEMBLY_HALL: { name: "Islington Assembly Hall", favourite: true },
   // K
-  KENTISH_TOWN_FORUM: "Kentish Town Forum",
+  KENTISH_TOWN_FORUM: { name: "Kentish Town Forum" },
   KOKO: { name: "Koko", favourite: true },
   // L
-  LAFAYETTE: "Lafayette",
-  LAYLOW: "Laylow",
-  LONDON_STADIUM: "London Stadium",
+  LAFAYETTE: { name: "Lafayette" },
+  LAYLOW: { name: "Laylow" },
+  LONDON_STADIUM: { name: "London Stadium" },
   // M
-  MINISTRY_OF_SOUND: "Ministry of Sound",
+  MINISTRY_OF_SOUND: { name: "Ministry of Sound" },
   MOTH_CLUB: { name: "Moth Club", favourite: true },
   // O
   OLD_BLUE_LAST: { name: "Old Blue Last", favourite: true },
-  OMEARA: "Omeara",
-  OSLO_HACKNEY: "Oslo Hackney",
-  OVAL_SPACE: "Oval Space",
-  THE_O2: "O2, The",
+  OMEARA: { name: "Omeara" },
+  OSLO_HACKNEY: { name: "Oslo Hackney" },
+  OVAL_SPACE: { name: "Oval Space" },
+  THE_O2: { name: "O2, The" },
   // P
   PRINTWORKS: { name: "Printworks", favourite: true },
   // Q
-  QUEEN_OF_HOXTON: "Queen of Hoxton",
+  QUEEN_OF_HOXTON: { name: "Queen of Hoxton" },
   // R
-  RIDGEWAY_PARK: "Ridgeway Park",
+  RIDGEWAY_PARK: { name: "Ridgeway Park" },
   ROUNDHOUSE: { name: "Roundhouse", favourite: true },
   ROYAL_ALBERT_HALL: { name: "Royal Albert Hall", favourite: true },
   ROYAL_FESTIVAL_HALL: { name: "Royal Festival Hall", favourite: true },
   // S
-  SCALA: "Scala",
-  SERVANT_JAZZ_QUARTERS: "Servant Jazz Quarters",
-  SHEPHERDS_BUSH_EMPIRE: "Shepherd's Bush Empire",
-  ST_GILES_IN_THE_FIELD: "St Giles-in-the-Fields",
+  SCALA: { name: "Scala" },
+  SERVANT_JAZZ_QUARTERS: { name: "Servant Jazz Quarters" },
+  SHEPHERDS_BUSH_EMPIRE: { name: "Shepherd's Bush Empire" },
+  ST_GILES_IN_THE_FIELD: { name: "St Giles-in-the-Fields" },
   // T
-  TOTTENHAM_HOTSPUR_STADIUM: "Tottenham Hotspur Stadium",
-  TWICKENHAM_STADIUM: "Twickenham Stadium",
-  TROXY: "Troxy",
+  TOTTENHAM_HOTSPUR_STADIUM: { name: "Tottenham Hotspur Stadium" },
+  TWICKENHAM_STADIUM: { name: "Twickenham Stadium" },
+  TROXY: { name: "Troxy" },
   // V
-  VICTORIA_PARK: "Victoria Park",
-  VILLAGE_UNDERGROUND: "Village Underground",
+  VICTORIA_PARK: { name: "Victoria Park" },
+  VILLAGE_UNDERGROUND: { name: "Village Underground" },
   // W
-  WEMBLEY_STADIUM: "Wembley Stadium",
+  WEMBLEY_STADIUM: { name: "Wembley Stadium" },
   // X
-  XOYO: "XOYO",
+  XOYO: { name: "XOYO" },
   // Z
-  ZIGFRID_VON_UNDERBELLY: "Zigfrid von Underbelly"
+  ZIGFRID_VON_UNDERBELLY: { name: "Zigfrid von Underbelly" }
 };
 
 const MUSIC_VENUES_BIRMINGHAM = {
   // A
-  ACADEMY_BIRMINGHAM: "Birmingham Academy",
-  ACADEMY_2_BIRMINGHAM: "Birmingham Academy 2",
-  ALEXANDRA_THEATRE: "Alexandra Theatre",
+  ACADEMY_BIRMINGHAM: { name: "Birmingham Academy" },
+  ACADEMY_2_BIRMINGHAM: { name: "Birmingham Academy 2" },
+  ALEXANDRA_THEATRE: { name: "Alexandra Theatre" },
   // B
-  BARFLY_BIRMINGHAM: "Birmingham Barfly",
+  BARFLY_BIRMINGHAM: { name: "Birmingham Barfly" },
   // I
-  INSTITUTE_BIRMINGHAM: "Birmingham Institute",
+  INSTITUTE_BIRMINGHAM: { name: "Birmingham Institute" },
   // N
-  NEC_ARENA_BIRMINGHAM: "Birmingham NEC Arena",
-  NIA_ARENA_BIRMINGHAM: "Birmingham NIA Arena"
+  NEC_ARENA_BIRMINGHAM: { name: "Birmingham NEC Arena" },
+  NIA_ARENA_BIRMINGHAM: { name: "Birmingham NIA Arena" }
 };
 
 const MUSIC_VENUES_NOTTINGHAM = {
   // B
-  BODEGA: "Bodega",
-  ARENA_NOTTINGHAM: "Nottingham Arena",
+  BODEGA: { name: "Bodega" },
+  ARENA_NOTTINGHAM: { name: "Nottingham Arena" },
   // R
-  RESCUE_ROOMS: "Rescue Rooms",
-  ROCK_CITY: "Rock City",
+  RESCUE_ROOMS: { name: "Rescue Rooms" },
+  ROCK_CITY: { name: "Rock City" },
   // T
-  TRENT_UNIVERSITY_NOTTINGHAM: "Nottingham Trent University"
+  TRENT_UNIVERSITY_NOTTINGHAM: { name: "Nottingham Trent University" }
 };
 
 const MUSIC_VENUES_MANCHESTER = {
   // A
-  ACADEMY_MANCHESTER: "Manchester Academy",
-  ACADEMY_2_MANCHESTER: "Manchester Academy 2",
+  ACADEMY_MANCHESTER: { name: "Manchester Academy" },
+  ACADEMY_2_MANCHESTER: { name: "Manchester Academy 2" },
   ALBERT_HALL_MANCHESTER: { name: "Manchester Albert Hall", favourite: true },
-  APOLLO_MANCHESTER: "Manchester Apollo",
-  ARENA_MANCHESTER: "Manchester Arena",
+  APOLLO_MANCHESTER: { name: "Manchester Apollo" },
+  ARENA_MANCHESTER: { name: "Manchester Arena" },
   // C
-  CASTLEFIELD_BOWL: "Castlefield Bowl",
+  CASTLEFIELD_BOWL: { name: "Castlefield Bowl" },
   // D
-  DEAF_INSTITUTE: "Deaf Institute",
+  DEAF_INSTITUTE: { name: "Deaf Institute" },
   // G
-  GORILLA: "Gorilla",
+  GORILLA: { name: "Gorilla" },
   // H
-  HEATON_PARK: "Heaton Park",
+  HEATON_PARK: { name: "Heaton Park" },
   // R
-  MAYFIELD_DEPOT: "Mayfield Depot",
+  MAYFIELD_DEPOT: { name: "Mayfield Depot" },
   // R
-  RITZ_MANCHESTER: "Manchester Ritz",
-  RUBY_LOUNGE: "Ruby Lounge",
+  RITZ_MANCHESTER: { name: "Manchester Ritz" },
+  RUBY_LOUNGE: { name: "Ruby Lounge" },
   // S
-  SANKEYS: "Sankeys",
-  STORE_STREET: "Store Street"
+  SANKEYS: { name: "Sankeys" },
+  STORE_STREET: { name: "Store Street" }
 };
 
 const MUSIC_VENUES_ELSEWHERE = {
   // C
-  COCKPIT_LEEDS: "The Cockpit Leeds",
+  COCKPIT_LEEDS: { name: "The Cockpit Leeds" },
   // D
-  DE_MONTFORT_HALL: "Leicester De Montfort Hall",
+  DE_MONTFORT_HALL: { name: "Leicester De Montfort Hall" },
   // E
-  ENGINE_SHED: "Lincoln Engine Shed",
+  ENGINE_SHED: { name: "Lincoln Engine Shed" },
   // I
-  IFEMA_MADRID: "IFEMA",
+  IFEMA_MADRID: { name: "IFEMA" },
   // L
-  LULWORTH_ESTATE: "Lulworth Estate",
+  LULWORTH_ESTATE: { name: "Lulworth Estate" },
   // M
-  MOTION: "Motion",
+  MOTION: { name: "Motion" },
   // P
-  PRESTON_PARK: "Preston Park",
+  PRESTON_PARK: { name: "Preston Park" },
   // S
   SCHWUZ: { name: "SchwuZ Berlin", insignificant: true },
-  SHEFFIELD_ARENA: "Sheffield Arena",
+  SHEFFIELD_ARENA: { name: "Sheffield Arena" },
   // T
   TRESOR: { name: "Tresor Berlin", insignificant: true },
   // W
-  WESTON_PARK: "Weston Park",
-  WOLVERHAMPTON_CIVIC_HALL: "Wolverhampton Civic Hall",
+  WESTON_PARK: { name: "Weston Park" },
+  WOLVERHAMPTON_CIVIC_HALL: { name: "Wolverhampton Civic Hall" },
   WORTHY_FARM: { name: "Worthy Farm", favourite: true }
 };
 
