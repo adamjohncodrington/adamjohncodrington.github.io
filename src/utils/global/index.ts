@@ -4,6 +4,7 @@ export { daysToGo } from "./daysToGo";
 export { getDisplayDateText } from "./getDisplayDateText";
 export { generateChildItemsFromParentItems } from "./generateChildItemsFromParentItems";
 export { generateIngredientListItem } from "./generateIngredientListItem";
+export { getServeWithListItem } from "./getServeWithListItem";
 export { generateSectionData } from "./generateSectionData";
 export { mapDataToEventCards } from "./mapDataToEventCards";
 export { mapRecipeCategoriesToPageSections } from "./mapRecipeCategoriesToSections";

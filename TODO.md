@@ -17,4 +17,4 @@
 
 ## Tests
 
-- add tests to utils
+- add tests to all utils functions
