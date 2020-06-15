@@ -86,7 +86,7 @@ const ALL_GROUPED_BY_YEAR: Array<Array<ITravelData>> = [
 
 const FAVOURITES = ALL.filter(item => item.favourite);
 
-//@ts-ignore
+// @ts-ignore
 const countries: Array<ICountry> = Object.values(LOCATIONS);
 
 //@ts-ignore

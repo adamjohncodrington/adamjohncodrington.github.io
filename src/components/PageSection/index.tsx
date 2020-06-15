@@ -10,8 +10,7 @@ import { VisibilityToggle } from "./VisibilityToggle";
 import { PAGE_SECTION_TYPES } from "../../constants";
 
 const PageSectionContainer = styled.section`
-  //TODO: move this color to theme
-  background: Gainsboro;
+  background: ${props => props.theme.colors.gainsboro};
   box-shadow: ${props => props.theme.section.boxShadow};
   border-radius: ${props => props.theme.section.borderRadius};
 

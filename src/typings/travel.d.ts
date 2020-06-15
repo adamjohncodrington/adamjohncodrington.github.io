@@ -17,7 +17,6 @@ interface IIsland extends IBasicLocation {}
 interface ITown extends IBasicLocation {}
 interface IRegion extends IBasicLocation {}
 interface ICountry extends IBasicLocation {
-  //TODO: strongly type this
   cities: any;
   regions?: any;
   islands?: any;

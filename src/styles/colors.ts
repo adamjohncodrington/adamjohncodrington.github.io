@@ -1,4 +1,5 @@
 export const COLORS = {
+  gainsboro: "gainsboro",
   darkGreen: "darkGreen",
   green: "green",
   amethystSmoke: "#a186b0",
