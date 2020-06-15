@@ -2,6 +2,7 @@ type IIngredientMeasurement = string | undefined;
 type IIngredientQuantity = number;
 type IRecipeTitle = string;
 type IImageSrc = string;
+type IRecipeImage = IImageSrc;
 
 interface IIngredientCost {
   quantity?: IIngredientQuantity;
@@ -42,7 +43,7 @@ type IRecipeMethod = Array<string>;
 interface IRecipeCard {
   title: IRecipeTitle;
   makes?: IRecipeMakes;
-  image?: IImageSrc;
+  image?: IRecipeImage;
   serveWith?: IServeWith;
   ingredients: IRecipeIngredients;
   diet: IRecipeDiet;
