@@ -21,8 +21,6 @@ type IInputData =
   | ITheatreVenue
   | ILocationItem;
 
-interface ISectionData {}
-
 interface IPageSectionType {
   title: string;
   id: string;
@@ -30,7 +28,7 @@ interface IPageSectionType {
 
 interface IPageSection {
   type: IPageSectionType;
-  icon: IImageSrc;
+  icon?: IImageSrc;
   data: any;
   leaderboard?: true;
   showSectionLength?: boolean;

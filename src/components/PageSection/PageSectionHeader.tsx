@@ -31,7 +31,7 @@ interface PageSectionHeaderProps {
   text: string;
   showCounts: boolean;
   data: any;
-  icon: IImageSrc;
+  icon?: IImageSrc;
   dataTest: string;
 }
 
