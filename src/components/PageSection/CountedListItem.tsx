@@ -47,17 +47,7 @@ const FutureCount = styled(PastCount)`
   opacity: ${props => props.theme.fadedOpacity};
 `;
 
-interface ISimpleListItem {
-  listEntry: string;
-  favourite?: boolean;
-  star?: boolean;
-  futureCount: number;
-  pastCount: number;
-  ignoreCountInfo?: boolean;
-  leaderboard?: boolean;
-}
-
-export const SimpleListItem: React.FC<ISimpleListItem> = ({
+export const CountedListItem: React.FC<ICountedListItem> = ({
   listEntry,
   favourite,
   star,

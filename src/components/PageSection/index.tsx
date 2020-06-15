@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 import { EventCard } from "./EventCard";
 import { PageSectionHeader } from "./PageSectionHeader";
 import { RecipeCard } from "./RecipeCard";
-import { SimpleListItem } from "./SimpleListItem";
+import { CountedListItem } from "./CountedListItem";
 import { VisibilityToggle } from "./VisibilityToggle";
 
 import { PAGE_SECTION_TYPES } from "../../constants";
@@ -64,15 +64,13 @@ const RecipeGroupBody = styled.div`
 `;
 
 export const PageSection: React.FC<IPageSection> = ({
-  details,
+  details: { id, title, type },
   icon,
   data,
   showSectionLength = false,
   expandedAutomatically = false,
   leaderboard
 }) => {
-  const { id, title, type } = details;
-
   const isEventCards: boolean = type === PAGE_SECTION_TYPES.EVENT_CARDS;
   const isRecipes: boolean = type === PAGE_SECTION_TYPES.RECIPES;
   const isCountedList: boolean = type === PAGE_SECTION_TYPES.COUNTED_LIST;
@@ -111,19 +109,20 @@ export const PageSection: React.FC<IPageSection> = ({
               data-test="page-section-content"
               isEventCards={isEventCards}
             >
-              {data.map((item: any, index: number) =>
-                isEventCards ? (
-                  <EventCard key={index} {...item} />
-                ) : (
-                  isCountedList && (
-                    <SimpleListItem
+              {data.map((item: any, index: number) => {
+                if (isEventCards) return <EventCard key={index} {...item} />;
+
+                if (isCountedList)
+                  return (
+                    <CountedListItem
                       key={index}
                       {...item}
                       leaderboard={leaderboard}
                     />
-                  )
-                )
-              )}
+                  );
+
+                return null;
+              })}
             </SectionBody>
           )}
         </section>

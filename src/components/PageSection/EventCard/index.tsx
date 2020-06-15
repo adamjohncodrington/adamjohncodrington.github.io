@@ -65,9 +65,7 @@ export const EventCard: React.FC<IEventCard> = ({
           <EventCardBody data-test="event-card-body">{body}</EventCardBody>
         </TextContent>
 
-        {company && (
-          <EventCardCompany company={company} eventType={eventType} />
-        )}
+        <EventCardCompany company={company} eventType={eventType} />
       </FlexRow>
 
       <FlexColumn data-test="event-card-date-info">

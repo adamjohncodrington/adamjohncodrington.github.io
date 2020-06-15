@@ -34,30 +34,21 @@ interface EventCardCompanyProps {
 export const EventCardCompany: React.FC<EventCardCompanyProps> = ({
   company,
   eventType
-}) => {
-  const COMPANY = company.sort((a, b) => (a.initials > b.initials ? 1 : -1));
-
-  console.log(COMPANY);
-
-  // COMPANY = company;
-  // console.log(COMPANY);
-
-  return (
-    <CompanyContainer
-      eventType={eventType}
-      data-test="event-card-company-container"
-    >
-      {COMPANY.map((item: IFriend, index: number) => (
-        //@ts-ignore
-        <StyledCircle
-          data-test={"event-card-company-item-" + (index + 1)}
-          key={index}
-          size="20px"
-          fontSize="9px"
-        >
-          {item.initials}
-        </StyledCircle>
-      ))}
-    </CompanyContainer>
-  );
-};
+}) => (
+  <CompanyContainer
+    eventType={eventType}
+    data-test="event-card-company-container"
+  >
+    {company.map((item: IFriend, index: number) => (
+      //@ts-ignore
+      <StyledCircle
+        data-test={"event-card-company-item-" + (index + 1)}
+        key={index}
+        size="20px"
+        fontSize="9px"
+      >
+        {item.initials}
+      </StyledCircle>
+    ))}
+  </CompanyContainer>
+);

@@ -36,6 +36,16 @@ interface PageSectionData {
   eventCards?: Array<IEventCard>;
 }
 
+interface ICountedListItem {
+  listEntry: string;
+  favourite?: boolean;
+  star?: boolean;
+  futureCount: number;
+  pastCount: number;
+  ignoreCountInfo?: boolean;
+  leaderboard?: boolean;
+}
+
 interface IEventCard {
   title: string;
   subtitle?: string;
@@ -43,7 +53,7 @@ interface IEventCard {
   body: string;
   eventType: IEventCardType;
   dates: Array<Date>;
-  company?: Array<IFriend>;
+  company: Array<IFriend>;
   disclaimer?: string;
 }
 

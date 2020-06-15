@@ -62,7 +62,9 @@ export const mapDataToEventCards = ({
         : null
     ),
     dates,
-    company,
+    company: company.sort((a: IFriend, b: IFriend) =>
+      a.initials > b.initials ? 1 : -1
+    ),
     eventType,
     favourite,
     disclaimer:
