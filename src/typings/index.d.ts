@@ -33,6 +33,7 @@ interface IPageSection {
   leaderboard?: true;
   showSectionLength?: boolean;
   listOfEventCards?: boolean;
+  listOfRecipes?: boolean;
   expandedAutomatically?: boolean;
   recipes?: Array<IRecipeCard>;
   onlySectionHeaderClickable?: boolean;
