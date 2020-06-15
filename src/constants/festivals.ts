@@ -1,4 +1,6 @@
-export const FESTIVALS = {
+type IFESTIVALS = { [name: string]: IFestival };
+
+export const FESTIVALS: IFESTIVALS = {
   // A
   AREA_10_NYE: { name: "Area 10 NYE" },
   // B

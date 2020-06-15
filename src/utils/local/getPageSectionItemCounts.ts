@@ -129,6 +129,8 @@ export const getPageSectionItemCounts = ({
         pastCount += 1;
       }
     }
+
+    return null;
   });
 
   return { futureCount, pastCount };

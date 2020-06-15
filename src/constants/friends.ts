@@ -1,9 +1,11 @@
-const GROUPS = {
+type IFRIENDS = { [name: string]: IFriend };
+
+const GROUPS: IFRIENDS = {
   CFS: { name: "Colonel Frank Seely", initials: "CFS" },
   JHC: { name: "JHC", initials: "JHC" }
 };
 
-export const FRIENDS = {
+export const FRIENDS: IFRIENDS = {
   ...GROUPS,
   // A
   AISHA: { name: "Aisha Saeed", initials: "AS" },

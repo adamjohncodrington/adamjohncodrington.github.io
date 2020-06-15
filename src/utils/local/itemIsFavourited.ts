@@ -21,6 +21,7 @@ export const itemIsFavourited = ({
         itemToInspect === dataItem.play)
     )
       itemIsFavourited = true;
+    return null;
   });
 
   return itemIsFavourited;

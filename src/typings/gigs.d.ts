@@ -1,5 +1,7 @@
 interface IMusician extends INameFavourite {}
-interface IMusicVenue extends INameFavourite {}
+interface IMusicVenue extends INameFavourite {
+  insignificant?: boolean;
+}
 interface IFestival extends INameFavourite {
   festival?: boolean;
 }
