@@ -35,7 +35,6 @@ const statsSections: Array<IPageSection> = [
   {
     details: PAGE_SECTIONS.UP_NEXT,
     icon: ICONS.NOTEPAD,
-    listOfEventCards: true,
     data: mapTheatreVisitToEventCards({ data: DATA_THEATRE.UPCOMING }),
     showSectionLength: true
   }

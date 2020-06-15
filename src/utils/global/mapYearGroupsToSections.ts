@@ -19,7 +19,6 @@ export const mapYearGroupsToSections = ({
     return {
       details: { id: title, title, type: PAGE_SECTION_TYPES.EVENT_CARDS },
       showSectionLength: true,
-      listOfEventCards: true,
       data: mapDataToEventCards({ data: year, eventType }).filter(
         (item: any) => !isInFuture(item.dates)
       )

@@ -42,7 +42,6 @@ interface IPageSection {
   data: Array<any>;
   leaderboard?: true;
   showSectionLength?: boolean;
-  listOfEventCards?: boolean;
   listOfRecipes?: boolean;
   expandedAutomatically?: boolean;
   onlySectionHeaderClickable?: boolean;

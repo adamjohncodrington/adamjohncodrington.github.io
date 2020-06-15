@@ -60,7 +60,6 @@ const statsSections: Array<IPageSection> = [
     details: PAGE_SECTIONS.UP_NEXT,
     icon: ICONS.NOTEPAD,
     showSectionLength: true,
-    listOfEventCards: true,
     data: mapTripToEventCards({ data: DATA_TRAVEL.UPCOMING })
   }
 ];

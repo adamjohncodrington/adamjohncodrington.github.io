@@ -20,26 +20,26 @@ const PageSectionContainer = styled.section`
 `;
 
 interface ISectionBody {
-  listOfEventCards: boolean;
+  isEventCards: boolean;
   theme: ITheme;
 }
 const SectionBody = styled.div`
-  ${({ theme, listOfEventCards }: ISectionBody) => css`
+  ${({ theme, isEventCards }: ISectionBody) => css`
     padding-bottom: ${theme.section.body.padding.bottom};
 
     > * {
       border-bottom: ${theme.section.body.basicList.border.bottom};
-      padding: ${listOfEventCards
+      padding: ${isEventCards
         ? `${theme.section.body.eventCardList.padding.vertical} 0`
         : `${theme.section.body.basicList.padding.vertical} 0`};
     }
 
     > *:last-child {
-      ${listOfEventCards && `padding-bottom: 5px;`}
+      ${isEventCards && `padding-bottom: 5px;`}
       border-bottom: 0;
     }
 
-    ${listOfEventCards &&
+    ${isEventCards &&
     css`
       > *:first-child {
         padding-top: 0;
@@ -67,7 +67,6 @@ const RecipeGroupBody = styled.div`
 export const PageSection: React.FC<IPageSection> = ({
   details,
   icon,
-  listOfEventCards,
   data,
   showSectionLength = false,
   expandedAutomatically = false,
@@ -76,7 +75,7 @@ export const PageSection: React.FC<IPageSection> = ({
 }) => {
   const { id, title, type } = details;
 
-  const isEventsCards: boolean = type === PAGE_SECTION_TYPES.EVENT_CARDS;
+  const isEventCards: boolean = type === PAGE_SECTION_TYPES.EVENT_CARDS;
   const isRecipes: boolean = type === PAGE_SECTION_TYPES.RECIPES;
   const isCountedList: boolean = type === PAGE_SECTION_TYPES.COUNTED_LIST;
 
@@ -84,7 +83,6 @@ export const PageSection: React.FC<IPageSection> = ({
   const proceed =
     data.length > 0 ||
     // e.g. if pesto is hidden, do not show sauces section because there will be no section children
-    //@ts-ignore
     (isRecipes && data.filter((item: IRecipeCard) => !item.hide).length);
   if (!proceed) return null;
 
@@ -104,7 +102,7 @@ export const PageSection: React.FC<IPageSection> = ({
         }
       >
         <section data-test="section-content">
-          {type === PAGE_SECTION_TYPES.RECIPES ? (
+          {isRecipes ? (
             <RecipeGroupBody>
               {data.map((item: IRecipeCard, index: number) => (
                 <RecipeCard key={index} {...item} />
@@ -113,18 +111,19 @@ export const PageSection: React.FC<IPageSection> = ({
           ) : (
             <SectionBody
               data-test="page-section-content"
-              //@ts-ignore
-              listOfEventCards={listOfEventCards}
+              isEventCards={isEventCards}
             >
               {data.map((item: any, index: number) =>
-                listOfEventCards ? (
+                isEventCards ? (
                   <EventCard key={index} {...item} />
                 ) : (
-                  <SimpleListItem
-                    key={index}
-                    {...item}
-                    leaderboard={leaderboard}
-                  />
+                  isCountedList && (
+                    <SimpleListItem
+                      key={index}
+                      {...item}
+                      leaderboard={leaderboard}
+                    />
+                  )
                 )
               )}
             </SectionBody>
