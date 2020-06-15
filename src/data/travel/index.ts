@@ -2,7 +2,7 @@ import {
   generateSectionData,
   generateChildItemsFromParentItems
 } from "../../utils/global";
-import { FRIENDS, PAGE_SECTION_TITLES, LOCATIONS } from "../../constants";
+import { FRIENDS, PAGE_SECTION_TYPES, LOCATIONS } from "../../constants";
 
 import { TRAVEL_1997 } from "./travel-1997";
 import { TRAVEL_1998 } from "./travel-1998";
@@ -132,7 +132,6 @@ const UPCOMING = generateSectionDataWrapper({ upcomingMode: true });
 
 export const DATA_TRAVEL = {
   pastCount: ALL.filter(item => !item.notAbroad).length - UPCOMING.length,
-  // pastCount: ALL.length - UPCOMING.length,
   futureCount: UPCOMING.length,
 
   ALL,
@@ -146,44 +145,44 @@ export const DATA_TRAVEL = {
 
   CITIES: generateSectionDataWrapper({
     items: cities,
-    pageSectionType: PAGE_SECTION_TITLES.CITY
+    pageSectionType: PAGE_SECTION_TYPES.CITY
   }),
 
   TOWNS: generateSectionDataWrapper({
     items: towns,
-    pageSectionType: PAGE_SECTION_TITLES.TOWN
+    pageSectionType: PAGE_SECTION_TYPES.TOWN
   }),
 
   ATTRACTIONS: generateSectionDataWrapper({
     items: attractions.filter(item => !item.themePark && !item.highlight),
-    pageSectionType: PAGE_SECTION_TITLES.ATTRACTION
+    pageSectionType: PAGE_SECTION_TYPES.ATTRACTION
   }),
 
   THEME_PARKS: generateSectionDataWrapper({
     items: themeParks,
-    pageSectionType: PAGE_SECTION_TITLES.ATTRACTION
+    pageSectionType: PAGE_SECTION_TYPES.ATTRACTION
   }),
 
   HIGLIGHTS: generateSectionDataWrapper({
     items: highlights,
-    pageSectionType: PAGE_SECTION_TITLES.ATTRACTION
+    pageSectionType: PAGE_SECTION_TYPES.ATTRACTION
   }),
 
   ISLANDS: generateSectionDataWrapper({
     items: islands,
-    pageSectionType: PAGE_SECTION_TITLES.ISLAND
+    pageSectionType: PAGE_SECTION_TYPES.ISLAND
   }),
 
   COUNTRIES: generateSectionDataWrapper({
     items: countries,
-    pageSectionType: PAGE_SECTION_TITLES.COUNTRY
+    pageSectionType: PAGE_SECTION_TYPES.COUNTRY
   }),
 
   FAVOURITES,
 
   FRIENDS: generateSectionDataWrapper({
     items: FRIENDS,
-    pageSectionType: PAGE_SECTION_TITLES.FRIEND,
+    pageSectionType: PAGE_SECTION_TYPES.FRIEND,
     filter: "travel"
   }),
 

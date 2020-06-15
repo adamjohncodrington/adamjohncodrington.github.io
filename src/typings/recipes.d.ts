@@ -1,8 +1,7 @@
 type IIngredientMeasurement = string | undefined;
 type IIngredientQuantity = number;
-type IRecipeDietCategory = string;
 type IRecipeTitle = string;
-type IRecipeImage = string;
+type IImageSrc = string;
 
 interface IIngredientCost {
   quantity?: IIngredientQuantity;
@@ -32,7 +31,10 @@ interface IRecipeIngredient {
   notes?: string;
 }
 
-type IRecipeDiet = string;
+interface IRecipeDiet {
+  abbreviation: string;
+  color: string;
+}
 type IRecipeIngredients = Array<Array<IRecipeIngredient>>;
 type IServeWith = Array<Array<IServeWithItem>>;
 type IRecipeMethod = Array<string>;
@@ -40,10 +42,10 @@ type IRecipeMethod = Array<string>;
 interface IRecipeCard {
   title: IRecipeTitle;
   makes?: IRecipeMakes;
-  image?: IRecipeImage;
+  image?: IImageSrc;
   serveWith?: IServeWith;
   ingredients: IRecipeIngredients;
-  diet: IRecipeDietCategory;
+  diet: IRecipeDiet;
   method: IRecipeMethod;
   favourite?: boolean;
   newRecipe?: boolean;

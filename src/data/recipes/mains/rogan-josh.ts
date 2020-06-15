@@ -73,7 +73,7 @@ const method: IRecipeMethod = [
 ];
 const title: IRecipeTitle = "rogan josh";
 const makes: IRecipeMakes = { quantity: 5, measurement: MEASUREMENTS.PORTION };
-const diet: IRecipeDietCategory = DIETS.VEGAN;
+const diet: IRecipeDiet = DIETS.VEGAN;
 const image: IImageSrc = PHOTOS.ROGAN_JOSH;
 
 export const ROGAN_JOSH: IRecipeCard = {

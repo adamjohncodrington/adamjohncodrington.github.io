@@ -93,7 +93,7 @@ export const GIGS_2019: Array<IGigData> = [
     company: [FRIENDS.JERRY]
   },
   {
-    event: FESTIVALS.MANCHESTER_PRIDE,
+    festival: FESTIVALS.MANCHESTER_PRIDE,
     lineup: [
       MUSICIANS.BECKY_HILL,
       MUSICIANS.BANANARAMA,
@@ -118,7 +118,7 @@ export const GIGS_2019: Array<IGigData> = [
     company: [FRIENDS.DARREN, FRIENDS.JERRY]
   },
   {
-    event: FESTIVALS.CHINGFEST,
+    festival: FESTIVALS.CHINGFEST,
     lineup: [MUSICIANS.INCOGNITO, MUSICIANS.NAO],
     venue: MUSIC_VENUES.RIDGEWAY_PARK,
     dates: [new Date("2019-08-31")],
@@ -166,7 +166,7 @@ export const GIGS_2019: Array<IGigData> = [
     company: [FRIENDS.JERRY, FRIENDS.POPPY]
   },
   {
-    event: FESTIVALS.HOMOBLOC,
+    festival: FESTIVALS.HOMOBLOC,
     lineup: [MUSICIANS.ROMY, MUSICIANS.ROBYN, MUSICIANS.HORSE_MEAT_DISCO],
     venue: MUSIC_VENUES.MAYFIELD_DEPOT,
     dates: [new Date("2019-11-09")],
@@ -214,7 +214,7 @@ export const GIGS_2019: Array<IGigData> = [
     company: [FRIENDS.DARREN]
   },
   {
-    event: FESTIVALS.AREA_10_NYE,
+    festival: FESTIVALS.AREA_10_NYE,
     lineup: [MUSICIANS.MK],
     venue: MUSIC_VENUES.BRIXTON_ACADEMY,
     dates: [new Date("2019-12-31")],

@@ -2,28 +2,28 @@ import { FRIENDS, FESTIVALS, MUSICIANS, MUSIC_VENUES } from "../../constants";
 
 export const GIGS_2015: Array<IGigData> = [
   {
-    event: FESTIVALS.TRANSMISSION,
+    festival: FESTIVALS.TRANSMISSION,
     lineup: [MUSICIANS.TEN_WALLS, MUSICIANS.DUSKY, MUSICIANS.YOUSEF],
     venue: MUSIC_VENUES.ALBERT_HALL_MANCHESTER,
     company: [FRIENDS.CHLOE, FRIENDS.AMY_B, FRIENDS.BETH_SP],
     dates: [new Date("2015-02-07")]
   },
   {
-    event: FESTIVALS.TRIBAL_SESSIONS,
+    festival: FESTIVALS.TRIBAL_SESSIONS,
     lineup: [MUSICIANS.JOSH_BUTLER, MUSICIANS.BONTAN, MUSICIANS.GREEN_VELVET],
     venue: MUSIC_VENUES.SANKEYS,
     company: [FRIENDS.TONYA, FRIENDS.ALEX_FAYE],
     dates: [new Date("2015-02-13")]
   },
   {
-    event: FESTIVALS.TRANSMISSION,
+    festival: FESTIVALS.TRANSMISSION,
     lineup: [MUSICIANS.JAX_JONES, MUSICIANS.DUKE_DUMONT, MUSICIANS.BLONDE],
     venue: MUSIC_VENUES.ALBERT_HALL_MANCHESTER,
     company: [FRIENDS.BETH_SP],
     dates: [new Date("2015-02-27")]
   },
   {
-    event: FESTIVALS.TRANSMISSION,
+    festival: FESTIVALS.TRANSMISSION,
     lineup: [MUSICIANS.EATS_EVERYTHING, MUSICIANS.CARL_COX],
     venue: MUSIC_VENUES.ALBERT_HALL_MANCHESTER,
     company: [FRIENDS.SONYA, FRIENDS.TONYA, FRIENDS.ALEX_FAYE],
@@ -37,7 +37,7 @@ export const GIGS_2015: Array<IGigData> = [
     dates: [new Date("2015-06-04")]
   },
   {
-    event: FESTIVALS.PARKLIFE,
+    festival: FESTIVALS.PARKLIFE,
     lineup: [
       MUSICIANS.BONDAX,
       MUSICIANS.JUSTIN_MARTIN,
@@ -64,7 +64,7 @@ export const GIGS_2015: Array<IGigData> = [
     dates: [new Date("2015-06-06"), new Date("2015-06-07")]
   },
   {
-    event: FESTIVALS.GLASTONBURY,
+    festival: FESTIVALS.GLASTONBURY,
     lineup: [
       MUSICIANS.JAMES_BAY,
       MUSICIANS.MARY_J_BLIGE,
@@ -125,11 +125,10 @@ export const GIGS_2015: Array<IGigData> = [
     venue: MUSIC_VENUES.ACADEMY_2_MANCHESTER,
     dates: [new Date("2015-12-05")],
     company: [],
-    solo: true,
     favourite: true
   },
   {
-    event: FESTIVALS.FABRIC_NYE,
+    festival: FESTIVALS.FABRIC_NYE,
     lineup: [MUSICIANS.GEORGE_FITZGERALD, MUSICIANS.EATS_EVERYTHING],
     venue: MUSIC_VENUES.FABRIC,
     company: [

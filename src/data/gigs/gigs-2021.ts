@@ -8,8 +8,7 @@ import {
 
 export const GIGS_2021: Array<IGigData> = [
   {
-    event: FESTIVALS.MIGHTY_HOOPLA,
-    //TODO: confirm lineup retrospectively
+    festival: FESTIVALS.MIGHTY_HOOPLA,
     venue: MUSIC_VENUES.BROCKWELL_PARK,
     dates: [new Date("2021-06-05")],
     company: [
@@ -26,9 +25,6 @@ export const GIGS_2021: Array<IGigData> = [
   },
   {
     headline: MUSICIANS[1975],
-    // favourite: true,
-    //TODO: confirm the support lineup retrospectively
-    // support: [MUSICIANS.CHARLI_XCX, MUSICIANS.CLAIRO, MUSICIANS.PALE_WAVES],
     venue: MUSIC_VENUES.FINSBURY_PARK,
     dates: [new Date("2021-07-10")],
     company: [

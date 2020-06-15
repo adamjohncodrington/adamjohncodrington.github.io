@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { ThemeProvider } from "styled-components";
 
-import Routes from "./routes";
+import { App } from "./app";
 import { THEME, GlobalStyle } from "./styles";
 
 import * as serviceWorker from "./serviceWorker";
@@ -11,7 +11,7 @@ ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={THEME}>
       <GlobalStyle />
-      <Routes />
+      <App />
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById("root")

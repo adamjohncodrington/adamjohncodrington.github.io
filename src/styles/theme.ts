@@ -1,9 +1,9 @@
 import { rgba } from "polished";
 
-import colors from "./colors";
+import { COLORS } from "./colors";
 
-const BORDER_BLACK_THIN: string = `1px solid ${colors.black}`;
-const BORDER_GRAY_THIN: string = `1px solid ${colors.gray}`;
+const BORDER_BLACK_THIN: string = `1px solid ${COLORS.black}`;
+const BORDER_GRAY_THIN: string = `1px solid ${COLORS.gray}`;
 
 const HOME_PAGE_THEME = {
   icon: { padding: "1.5vmin", size: { desktop: "25vmin", phone: "42vmin" } }
@@ -28,7 +28,7 @@ const SECTION_THEME = {
   },
   border: { bottom: BORDER_BLACK_THIN },
   borderRadius: "10px",
-  boxShadow: `0 1px 2px ${rgba(colors.gray, 0.5)}`,
+  boxShadow: `0 1px 2px ${rgba(COLORS.gray, 0.5)}`,
   count: { margin: { left: "5px" } },
   header: { padding: "12px 0" },
   icon: { padding: { top: "2px" }, size: "34px" },
@@ -50,11 +50,11 @@ const BREAKPOINTS = { phone: { maxWidth: "480px" } };
 export const fontFamily: string = "-apple-system, Helvetica, sans-serif";
 export const scrollbarSize: string = "0.7rem";
 
-const THEME = {
+export const THEME: ITheme = {
   animationDuration: 0.35,
   fadedOpacity: 0.5,
   circleBorder: BORDER_BLACK_THIN,
-  textColor: colors.black,
+  textColor: COLORS.black,
 
   breakpoints: BREAKPOINTS,
   recipe: RECIPES_THEME,
@@ -62,9 +62,7 @@ const THEME = {
   section: SECTION_THEME,
   page: PAGE_THEME,
 
-  colors,
+  colors: COLORS,
   scrollbarSize,
   fontFamily
 };
-
-export default THEME;

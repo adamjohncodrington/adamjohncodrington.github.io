@@ -17,7 +17,6 @@ export const GIGS_2017: Array<IGigData> = [
     headline: MUSICIANS.LYVES,
     venue: MUSIC_VENUES.SERVANT_JAZZ_QUARTERS,
     dates: [new Date("2017-02-20")],
-    solo: true,
     company: []
   },
   {
@@ -104,7 +103,7 @@ export const GIGS_2017: Array<IGigData> = [
     favourite: true
   },
   {
-    event: FESTIVALS.LOVEBOX,
+    festival: FESTIVALS.LOVEBOX,
     lineup: [
       MUSICIANS.JOE_GODDARD,
       MUSICIANS.RUFUS_DU_SOL,
@@ -124,7 +123,7 @@ export const GIGS_2017: Array<IGigData> = [
     ]
   },
   {
-    event: FESTIVALS.BRIGHTON_PRIDE,
+    festival: FESTIVALS.BRIGHTON_PRIDE,
     lineup: [MUSICIANS.BECKY_HILL, MUSICIANS.YEARS_AND_YEARS],
     dates: [new Date("2017-08-05")],
     venue: MUSIC_VENUES.PRESTON_PARK,
@@ -138,7 +137,7 @@ export const GIGS_2017: Array<IGigData> = [
     ]
   },
   {
-    event: FESTIVALS.BESTIVAL,
+    festival: FESTIVALS.BESTIVAL,
     lineup: [
       MUSICIANS.ALMA,
       MUSICIANS.LITTLE_DRAGON,

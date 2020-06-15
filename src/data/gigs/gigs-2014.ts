@@ -20,7 +20,7 @@ export const GIGS_2014: Array<IGigData> = [
     dates: [new Date("2014-06-05")]
   },
   {
-    event: FESTIVALS.PARKLIFE,
+    festival: FESTIVALS.PARKLIFE,
     lineup: [
       MUSICIANS.FOXES,
       MUSICIANS.ROUTE_94,
@@ -45,7 +45,7 @@ export const GIGS_2014: Array<IGigData> = [
     dates: [new Date("2014-09-30")]
   },
   {
-    event: FESTIVALS.WAREHOUSE_PROJECT,
+    festival: FESTIVALS.WAREHOUSE_PROJECT,
     lineup: [
       MUSICIANS.JAX_JONES,
       MUSICIANS.DUKE_DUMONT,
@@ -83,7 +83,7 @@ export const GIGS_2014: Array<IGigData> = [
     dates: [new Date("2014-11-06")]
   },
   {
-    event: FESTIVALS.WAREHOUSE_PROJECT,
+    festival: FESTIVALS.WAREHOUSE_PROJECT,
     lineup: [
       MUSICIANS.KIDNAP,
       MUSICIANS.BONDAX,
@@ -95,7 +95,7 @@ export const GIGS_2014: Array<IGigData> = [
     dates: [new Date("2014-11-07")]
   },
   {
-    event: FESTIVALS.WAREHOUSE_PROJECT,
+    festival: FESTIVALS.WAREHOUSE_PROJECT,
     lineup: [
       MUSICIANS.GEORGE_FITZGERALD,
       MUSICIANS.SKREAM,
@@ -126,7 +126,7 @@ export const GIGS_2014: Array<IGigData> = [
     dates: [new Date("2014-11-25")]
   },
   {
-    event: FESTIVALS.WAREHOUSE_PROJECT,
+    festival: FESTIVALS.WAREHOUSE_PROJECT,
     lineup: [MUSICIANS.MIDLAND, MUSICIANS.JOY_ORBISON, MUSICIANS.DUSKY],
     venue: MUSIC_VENUES.STORE_STREET,
     company: [FRIENDS.EMMA, FRIENDS.BECKY, FRIENDS.NATALIE],

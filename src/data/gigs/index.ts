@@ -2,7 +2,7 @@ import {
   MUSIC_VENUES,
   FRIENDS,
   MUSICIANS,
-  PAGE_SECTION_TITLES,
+  PAGE_SECTION_TYPES,
   FESTIVALS
 } from "../../constants";
 import { generateSectionData } from "../../utils/global";
@@ -85,32 +85,32 @@ export const DATA_GIGS = {
   BUCKET_LIST: generateSectionDataWrapper({
     bucketListMode: true,
     items: MUSICIANS,
-    pageSectionType: PAGE_SECTION_TITLES.MUSICIAN
+    pageSectionType: PAGE_SECTION_TYPES.MUSICIAN
   }),
 
   FAVOURITES,
 
   FESTIVALS: generateSectionDataWrapper({
     items: FESTIVALS,
-    pageSectionType: PAGE_SECTION_TITLES.EVENT,
+    pageSectionType: PAGE_SECTION_TYPES.FESTIVAL,
     filter: "festival"
   }),
 
   FRIENDS: generateSectionDataWrapper({
     items: FRIENDS,
-    pageSectionType: PAGE_SECTION_TITLES.FRIEND,
+    pageSectionType: PAGE_SECTION_TYPES.FRIEND,
     filter: "gigs"
   }),
 
   MUSICIANS: generateSectionDataWrapper({
     items: MUSICIANS,
-    pageSectionType: PAGE_SECTION_TITLES.MUSICIAN
+    pageSectionType: PAGE_SECTION_TYPES.MUSICIAN
   }),
 
   UPCOMING,
 
   VENUES: generateSectionDataWrapper({
     items: MUSIC_VENUES,
-    pageSectionType: PAGE_SECTION_TITLES.VENUE
+    pageSectionType: PAGE_SECTION_TYPES.MUSIC_VENUES
   })
 };

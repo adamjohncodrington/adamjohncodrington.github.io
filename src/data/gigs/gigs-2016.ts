@@ -13,7 +13,6 @@ export const GIGS_2016: Array<IGigData> = [
     venue: MUSIC_VENUES.GORILLA,
     favourite: true,
     company: [],
-    solo: true,
     dates: [new Date("2016-03-06")]
   },
   {
@@ -29,7 +28,7 @@ export const GIGS_2016: Array<IGigData> = [
     dates: [new Date("2016-05-10")]
   },
   {
-    event: FESTIVALS.GLASTONBURY,
+    festival: FESTIVALS.GLASTONBURY,
     lineup: [
       MUSICIANS.NAO,
       MUSICIANS.CHRISTINE_AND_THE_QUEENS,
@@ -68,7 +67,7 @@ export const GIGS_2016: Array<IGigData> = [
     favourite: true
   },
   {
-    event: FESTIVALS.LOVEBOX,
+    festival: FESTIVALS.LOVEBOX,
     lineup: [
       MUSICIANS.MO,
       MUSICIANS.RITON,
@@ -91,14 +90,14 @@ export const GIGS_2016: Array<IGigData> = [
     dates: [new Date("2016-07-15")]
   },
   {
-    event: FESTIVALS.DEFECTED_BRISTOL,
+    festival: FESTIVALS.DEFECTED_BRISTOL,
     lineup: [MUSICIANS.MK],
     venue: MUSIC_VENUES.MOTION,
     dates: [new Date("2016-07-30")],
     company: [FRIENDS.CHELSEA, FRIENDS.SARAH_W]
   },
   {
-    event: FESTIVALS.BRIGHTON_PRIDE,
+    festival: FESTIVALS.BRIGHTON_PRIDE,
     lineup: [
       MUSICIANS.DUA_LIPA,
       MUSICIANS.CARLY_RAE_JEPSEN,
@@ -116,7 +115,7 @@ export const GIGS_2016: Array<IGigData> = [
     dates: [new Date("2016-08-06")]
   },
   {
-    event: FESTIVALS.V_FESTIVAL,
+    festival: FESTIVALS.V_FESTIVAL,
     lineup: [
       MUSICIANS.MIKE_POSNER,
       MUSICIANS.MNEK,
@@ -132,7 +131,7 @@ export const GIGS_2016: Array<IGigData> = [
     dates: [new Date("2016-08-21")]
   },
   {
-    event: FESTIVALS.WAREHOUSE_PROJECT,
+    festival: FESTIVALS.WAREHOUSE_PROJECT,
     lineup: [MUSICIANS.DUSKY, MUSICIANS.DANIEL_AVERY],
     venue: MUSIC_VENUES.STORE_STREET,
     company: [FRIENDS.DAN],

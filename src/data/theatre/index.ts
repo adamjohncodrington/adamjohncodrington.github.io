@@ -2,7 +2,7 @@ import {
   ACTORS,
   FRIENDS,
   PLAYS,
-  PAGE_SECTION_TITLES,
+  PAGE_SECTION_TYPES,
   THEATRE_VENUES
 } from "../../constants";
 import { generateSectionData } from "../../utils/global";
@@ -46,25 +46,25 @@ export const DATA_THEATRE = {
 
   ACTORS: generateSectionDataWrapper({
     items: ACTORS,
-    pageSectionType: PAGE_SECTION_TITLES.ACTOR
+    pageSectionType: PAGE_SECTION_TYPES.ACTOR
   }),
 
   FAVOURITES,
 
   FRIENDS: generateSectionDataWrapper({
     items: FRIENDS,
-    pageSectionType: PAGE_SECTION_TITLES.FRIEND,
+    pageSectionType: PAGE_SECTION_TYPES.FRIEND,
     filter: "theatre"
   }),
 
   PLAYS: generateSectionDataWrapper({
     items: PLAYS,
-    pageSectionType: PAGE_SECTION_TITLES.PLAY
+    pageSectionType: PAGE_SECTION_TYPES.PLAY
   }),
 
   VENUES: generateSectionDataWrapper({
     items: THEATRE_VENUES,
-    pageSectionType: PAGE_SECTION_TITLES.THEATRE
+    pageSectionType: PAGE_SECTION_TYPES.THEATRE_VENUES
   }),
 
   UPCOMING

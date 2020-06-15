@@ -9,7 +9,7 @@ export const GIGS_2007: Array<IGigData> = [
     company: [FRIENDS.MUM, FRIENDS.EMMA, FRIENDS.MEGAN]
   },
   {
-    event: FESTIVALS.DECAYDANCE,
+    festival: FESTIVALS.DECAYDANCE,
     lineup: [
       MUSICIANS.COBRA_STARSHIP,
       MUSICIANS.THE_ACADEMY_IS,

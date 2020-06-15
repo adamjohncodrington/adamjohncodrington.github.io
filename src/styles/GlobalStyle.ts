@@ -3,7 +3,7 @@ import { normalize } from "polished";
 
 import { fontFamily, scrollbarSize } from "./theme";
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   ${normalize()}
   
   *,
@@ -72,5 +72,3 @@ const GlobalStyle = createGlobalStyle`
   }
   
 `;
-
-export default GlobalStyle;

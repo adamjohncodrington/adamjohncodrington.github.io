@@ -63,7 +63,7 @@ export const GIGS_2020: Array<IGigData> = [
   //   ticketType: TICKET_TYPES.DICE,
   // },
   // {
-  //   event: FESTIVALS.MAD_COOL,
+  //   festival: FESTIVALS.MAD_COOL,
   //   lineup: [MUSICIANS.TWENTY_ONE_PILOTS],
   //   venue: MUSIC_VENUES.IFEMA_MADRID,
   //   dates: [new Date("2020-07-08")],

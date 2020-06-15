@@ -1,7 +1,8 @@
 import styled, { css } from "styled-components";
 
 interface ICircle {
-  theme: any;
+  className?: string;
+  theme: ITheme;
   size: string;
   fontSize: string;
   invert: boolean;

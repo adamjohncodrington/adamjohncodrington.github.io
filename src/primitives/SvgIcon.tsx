@@ -11,7 +11,7 @@ const StyledImage = styled.img`
 `;
 
 interface ISvgIcon {
-  className: string;
+  className?: string;
   icon: string;
   size: string;
 }

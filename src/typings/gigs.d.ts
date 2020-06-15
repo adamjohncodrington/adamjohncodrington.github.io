@@ -6,13 +6,12 @@ interface IFestival extends INameFavourite {
 
 interface IGigData {
   headline?: IMusician;
-  event?: IMusician;
+  festival?: IMusician;
   lineup?: Array<IMusician>;
   support?: Array<IMusician>;
   venue: IMusicVenue;
   dates: Array<Date>;
   company: Array<IFriend>;
-  solo?: boolean;
   ticketType?: string;
   favourite?: boolean;
 }
