@@ -44,7 +44,6 @@ interface IPageSection {
   showSectionLength?: boolean;
   listOfRecipes?: boolean;
   expandedAutomatically?: boolean;
-  onlySectionHeaderClickable?: boolean;
 }
 
 interface IPageData {

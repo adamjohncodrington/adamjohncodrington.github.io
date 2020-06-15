@@ -41,7 +41,7 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
       <RecipeBody>
         <RecipeCardIngredients makes={makes} ingredients={ingredients} />
         {serveWith && <RecipeCardServeWith serveWith={serveWith} />}
-        <RecipeCardMethod method={method} />
+        {method && <RecipeCardMethod method={method} />}
         {image && <RecipeCardImage imageSource={image} />}
         <RecipeCardCost ingredients={ingredients} makes={makes} title={title} />
       </RecipeBody>

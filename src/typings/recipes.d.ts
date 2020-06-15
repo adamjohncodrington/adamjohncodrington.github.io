@@ -47,7 +47,7 @@ interface IRecipeCard {
   serveWith?: IServeWith;
   ingredients: IRecipeIngredients;
   diet: IRecipeDiet;
-  method: IRecipeMethod;
+  method?: IRecipeMethod;
   favourite?: boolean;
   newRecipe?: boolean;
   hide?: boolean;

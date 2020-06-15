@@ -3,6 +3,7 @@
 ## Refactoring
 
 - move all instances of `Text.js` to the file itself, with loads of exports such as `PageTitleText`, `SectionTitleText`, etc.
+- avoid having to type out `•` in lists, use natural CSS instead
 
 ## TypeScript
 

@@ -69,8 +69,7 @@ export const PageSection: React.FC<IPageSection> = ({
   data,
   showSectionLength = false,
   expandedAutomatically = false,
-  leaderboard,
-  onlySectionHeaderClickable
+  leaderboard
 }) => {
   const { id, title, type } = details;
 
@@ -88,7 +87,7 @@ export const PageSection: React.FC<IPageSection> = ({
   return (
     <PageSectionContainer data-test={id && `${id}-section`}>
       <VisibilityToggle
-        onlyHeaderClickable={onlySectionHeaderClickable}
+        onlyHeaderClickable={isRecipes}
         expandedAutomatically={expandedAutomatically}
         headerComponent={
           <PageSectionHeader

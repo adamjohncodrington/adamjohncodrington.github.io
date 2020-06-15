@@ -13,8 +13,7 @@ export const mapRecipeCategoriesToPageSections = (
       type: PAGE_SECTION_TYPES.RECIPES
     },
     data,
-    expandedAutomatically: true,
-    onlySectionHeaderClickable: true
+    expandedAutomatically: true
   });
 
   return recipeCategories.map(item => mapRecipeCategoryToSection(item));

@@ -36,15 +36,11 @@ const StyledSvg = styled.img(({ theme }: ITheme) => {
 export const HomePage: React.FC = () => (
   <FlexContainer>
     <GridContainer>
-      {PAGE_ROUTES.map(({ icon, dest }: IRoute, index: number) => {
-        console.log(dest);
-
-        return (
-          <StyledLink key={index} to={dest}>
-            <StyledSvg src={icon} />
-          </StyledLink>
-        );
-      })}
+      {PAGE_ROUTES.map(({ icon, dest }: IRoute, index: number) => (
+        <StyledLink key={index} to={dest}>
+          <StyledSvg src={icon} />
+        </StyledLink>
+      ))}
     </GridContainer>
   </FlexContainer>
 );

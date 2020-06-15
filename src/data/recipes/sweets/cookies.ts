@@ -56,8 +56,6 @@ const ingredients: IRecipeIngredients = [
   ]
 ];
 
-const method: IRecipeMethod = [];
-
 const title: IRecipeTitle = "cookies";
 const makes: IRecipeMakes = { quantity: 20, measurement: "cookie" };
 const diet: IRecipeDiet = DIETS.VEGETARIAN;
@@ -66,7 +64,6 @@ export const COOKIES: IRecipeCard = {
   ingredients,
   title,
   makes,
-  method,
   favourite: true,
   diet
 };
