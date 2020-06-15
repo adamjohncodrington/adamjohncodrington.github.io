@@ -105,7 +105,7 @@ const method: IRecipeMethod = [
 
 const title: IRecipeTitle = "bolognese";
 const makes: IRecipeMakes = { quantity: 5, measurement: MEASUREMENTS.PORTION };
-const image: IRecipeImage = PHOTOS.BOLOGNESE;
+const image: IImageSrc = PHOTOS.BOLOGNESE;
 const diet: IRecipeDiet = DIETS.VEGAN;
 
 export const BOLOGNESE: IRecipeCard = {

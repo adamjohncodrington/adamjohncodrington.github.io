@@ -77,7 +77,7 @@ const method: IRecipeMethod = [
 const makes: IRecipeMakes = { quantity: 8, measurement: MEASUREMENTS.PORTION };
 const title: IRecipeTitle = "crumble";
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IRecipeImage = PHOTOS.CRUMBLE;
+const image: IImageSrc = PHOTOS.CRUMBLE;
 
 export const CRUMBLE: IRecipeCard = {
   title,

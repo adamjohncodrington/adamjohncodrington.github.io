@@ -58,7 +58,7 @@ const method: IRecipeMethod = [
 const title: IRecipeTitle = "piri piri";
 const makes: IRecipeMakes = { quantity: 475, measurement: MEASUREMENTS.GRAM };
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IRecipeImage = PHOTOS.PIRI_PIRI;
+const image: IImageSrc = PHOTOS.PIRI_PIRI;
 
 export const PIRI_PIRI: IRecipeCard = {
   title,

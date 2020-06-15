@@ -62,7 +62,7 @@ const method: IRecipeMethod = [
 const title: IRecipeTitle = "flapjacks";
 const makes: IRecipeMakes = { quantity: 12, measurement: MEASUREMENTS.CHUNK };
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IRecipeImage = PHOTOS.FLAPJACKS;
+const image: IImageSrc = PHOTOS.FLAPJACKS;
 
 export const FLAPJACKS: IRecipeCard = {
   title,

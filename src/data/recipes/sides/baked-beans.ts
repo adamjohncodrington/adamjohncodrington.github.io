@@ -73,7 +73,7 @@ const method: IRecipeMethod = [
 const title: IRecipeTitle = "baked beans";
 const makes: IRecipeMakes = { quantity: 4, measurement: MEASUREMENTS.PORTION };
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IRecipeImage = PHOTOS.BAKED_BEANS;
+const image: IImageSrc = PHOTOS.BAKED_BEANS;
 
 export const BAKED_BEANS: IRecipeCard = {
   title,

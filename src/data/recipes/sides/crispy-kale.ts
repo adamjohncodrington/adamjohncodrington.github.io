@@ -59,7 +59,7 @@ const method: IRecipeMethod = [
 
 const title: IRecipeTitle = "crispy kale";
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IRecipeImage = PHOTOS.KALE_CRISPY;
+const image: IImageSrc = PHOTOS.KALE_CRISPY;
 const makes: IRecipeMakes = { quantity: 2, measurement: MEASUREMENTS.SERVING };
 
 export const CRISPY_KALE: IRecipeCard = {

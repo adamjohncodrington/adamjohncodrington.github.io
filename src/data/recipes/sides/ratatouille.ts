@@ -82,7 +82,7 @@ const method: IRecipeMethod = [
 const title: IRecipeTitle = "ratatouille";
 const makes: IRecipeMakes = { quantity: 5, measurement: MEASUREMENTS.PORTION };
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IRecipeImage = PHOTOS.RATATOUILLE;
+const image: IImageSrc = PHOTOS.RATATOUILLE;
 
 export const RATATOUILLE: IRecipeCard = {
   title,

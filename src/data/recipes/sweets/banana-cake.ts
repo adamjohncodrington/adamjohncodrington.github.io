@@ -101,7 +101,7 @@ const method: IRecipeMethod = [
 const title: IRecipeTitle = "banana cake";
 const makes: IRecipeMakes = { quantity: 10, measurement: MEASUREMENTS.SLICE };
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IRecipeImage = PHOTOS.BANANA_CAKE;
+const image: IImageSrc = PHOTOS.BANANA_CAKE;
 
 export const BANANA_CAKE: IRecipeCard = {
   title,

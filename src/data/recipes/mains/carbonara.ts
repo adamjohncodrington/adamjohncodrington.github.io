@@ -118,7 +118,7 @@ const method: IRecipeMethod = [
 const title: IRecipeTitle = "carbonara";
 const makes: IRecipeMakes = { quantity: 5, measurement: MEASUREMENTS.PORTION };
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IRecipeImage = PHOTOS.CARBONARA;
+const image: IImageSrc = PHOTOS.CARBONARA;
 
 export const CARBONARA: IRecipeCard = {
   title,

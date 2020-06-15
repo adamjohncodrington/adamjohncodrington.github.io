@@ -34,7 +34,7 @@ const method: IRecipeMethod = [
 const title: IRecipeTitle = "mashed potato";
 const makes: IRecipeMakes = { quantity: 2, measurement: MEASUREMENTS.PORTION };
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IRecipeImage = PHOTOS.MASHED_POTATO;
+const image: IImageSrc = PHOTOS.MASHED_POTATO;
 
 export const MASHED_POTATO: IRecipeCard = {
   ingredients,

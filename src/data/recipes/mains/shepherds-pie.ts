@@ -117,7 +117,7 @@ const method: IRecipeMethod = [
 
 const title: IRecipeTitle = "shepherd's pie";
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IRecipeImage = PHOTOS.SHEPHERDS_PIE;
+const image: IImageSrc = PHOTOS.SHEPHERDS_PIE;
 const makes: IRecipeMakes = { quantity: 7, measurement: MEASUREMENTS.PORTION };
 
 export const SHEPHERDS_PIE: IRecipeCard = {

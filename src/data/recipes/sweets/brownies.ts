@@ -72,7 +72,7 @@ const method: IRecipeMethod = [
 
 const title: IRecipeTitle = "brownies";
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IRecipeImage = PHOTOS.BROWNIES;
+const image: IImageSrc = PHOTOS.BROWNIES;
 
 export const BROWNIES: IRecipeCard = {
   ingredients,

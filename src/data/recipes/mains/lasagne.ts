@@ -124,7 +124,7 @@ const method: IRecipeMethod = [
 const title: IRecipeTitle = "lasagne";
 const makes: IRecipeMakes = { quantity: 6, measurement: MEASUREMENTS.PORTION };
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IRecipeImage = PHOTOS.LASAGNE;
+const image: IImageSrc = PHOTOS.LASAGNE;
 
 export const LASAGNE: IRecipeCard = {
   title,
