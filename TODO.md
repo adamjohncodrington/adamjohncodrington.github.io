@@ -6,19 +6,19 @@
 
 ## TypeScript
 
-- remove all `: any` instances
+- remove all instances of `any`
 - Hammersmith Apollo bug when ading indexed types to `VENUES` file
 - add absolute paths/imports
-- remove all instances of `@ts-ignore` if possible
-
-## Data
-
-- move data to a database and call with APIs
+- remove all instances of `@ts-ignore` where possible
 
 ## Tests
 
 - add tests to all utils functions
 - add snapshot tests to components
+
+## Data
+
+- store data to a database and call with APIs
 
 ## Fix
 
