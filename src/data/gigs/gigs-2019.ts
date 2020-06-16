@@ -88,6 +88,7 @@ export const GIGS_2019: Array<IGigData> = [
   },
   {
     headline: MUSICIANS.SOPHIE,
+    favourite: true,
     venue: MUSIC_VENUES.ROYAL_FESTIVAL_HALL,
     dates: [new Date("2019-08-10")],
     company: [FRIENDS.JERRY]
