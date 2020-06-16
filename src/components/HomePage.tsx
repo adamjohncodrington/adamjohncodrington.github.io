@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { StyledLink } from "../components";
+import { StyledLink } from "./StyledLink";
 import { PAGE_ROUTES } from "../routes";
 
 const FlexContainer = styled.div`

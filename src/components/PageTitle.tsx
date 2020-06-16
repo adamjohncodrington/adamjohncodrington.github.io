@@ -1,8 +1,8 @@
 import React from "react";
 import styled, { ThemeContext } from "styled-components";
 
-import { FlexRow, Headers, Text, SvgIcon } from "../../primitives";
-import { StyledLink } from "../StyledLink";
+import { FlexRow, Headers, Text, SvgIcon } from "../primitives";
+import { StyledLink } from "./StyledLink";
 
 const { H1 } = Headers;
 

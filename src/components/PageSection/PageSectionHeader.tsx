@@ -27,13 +27,13 @@ const StyledIcon = styled(SvgIcon)`
   padding-top: ${props => props.theme.section.icon.padding.top};
 `;
 
-interface PageSectionHeaderProps {
+type PageSectionHeaderProps = {
   text: string;
   showCounts: boolean;
   data: any;
   icon?: IImageSrc;
   dataTest: string;
-}
+};
 
 export const PageSectionHeader: React.FC<PageSectionHeaderProps> = ({
   text,

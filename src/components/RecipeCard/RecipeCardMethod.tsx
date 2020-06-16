@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Ul, Li } from "../../../primitives";
+import { Ul, Li } from "../../primitives";
 
 interface RecipeCardMethodProps {
   method: IRecipeMethod;

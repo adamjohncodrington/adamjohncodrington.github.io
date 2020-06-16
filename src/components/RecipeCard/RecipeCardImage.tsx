@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { CentredOnPhone } from "../../CentredOnPhone";
+import { CentredOnPhone } from "../CentredOnPhone";
 
 const StyledImage = styled.img(
   ({

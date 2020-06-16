@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { Circle, Headers } from "../../../primitives";
+import { Circle, Headers } from "../../primitives";
 
 type IStyledH3 = { favourite: boolean };
 const StyledH3 = styled(Headers.H3)`

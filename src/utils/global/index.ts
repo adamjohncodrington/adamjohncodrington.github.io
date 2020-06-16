@@ -2,6 +2,7 @@ export { calculateRecipeCost } from "./calculateRecipeCost";
 export { concatenateMakesWithDefaultIngredientsHeader } from "./concatenateMakesWithDefaultIngredientsHeader";
 export { daysToGo } from "./daysToGo";
 export { getDisplayDateText } from "./getDisplayDateText";
+export { getCountdownText } from "./getCountdownText";
 export { generateChildItemsFromParentItems } from "./generateChildItemsFromParentItems";
 export { generateIngredientListItem } from "./generateIngredientListItem";
 export { getServeWithListItem } from "./getServeWithListItem";

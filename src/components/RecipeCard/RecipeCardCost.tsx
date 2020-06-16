@@ -1,13 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
-import {
-  MEASUREMENTS,
-  NO_UNIT_COST_FOR_RECIPE_EXISTS
-} from "../../../constants";
-import { calculateRecipeCost } from "../../../utils/global";
+import { MEASUREMENTS, NO_UNIT_COST_FOR_RECIPE_EXISTS } from "../../constants";
+import { calculateRecipeCost } from "../../utils/global";
 
-import { CentredOnPhone } from "../../CentredOnPhone";
+import { CentredOnPhone } from "../CentredOnPhone";
 
 const CostPerPortionContainer = styled.div`
   font-size: 80%;

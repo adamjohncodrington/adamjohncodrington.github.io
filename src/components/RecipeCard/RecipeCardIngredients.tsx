@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Ul, Li } from "../../../primitives";
+import { Ul, Li } from "../../primitives";
 import {
   concatenateMakesWithDefaultIngredientsHeader,
   generateIngredientListItem
-} from "../../../utils/global";
+} from "../../utils/global";
 
 const ingredientSectionPaddingBottom = "10px";
 

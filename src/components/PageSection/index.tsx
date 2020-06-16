@@ -1,13 +1,13 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { EventCard } from "./EventCard";
-import { PageSectionHeader } from "./PageSectionHeader";
-import { RecipeCard } from "./RecipeCard";
-import { CountedListItem } from "./CountedListItem";
-import { VisibilityToggle } from "./VisibilityToggle";
-
 import { PAGE_SECTION_TYPES } from "../../constants";
+
+import { EventCard } from "../EventCard";
+import { PageSectionHeader } from "./PageSectionHeader";
+import { RecipeCard } from "../RecipeCard";
+import { CountedListItem } from "./CountedListItem";
+import { VisibilityToggle } from "../VisibilityToggle";
 
 const PageSectionContainer = styled.section`
   background: ${props => props.theme.colors.gainsboro};
@@ -18,12 +18,9 @@ const PageSectionContainer = styled.section`
   margin-bottom: ${props => props.theme.section.margin.bottom};
 `;
 
-interface ISectionBody {
-  isEventCards: boolean;
-  theme: ITheme;
-}
+type SectionBodyProps = { isEventCards: boolean; theme: ITheme };
 const SectionBody = styled.div`
-  ${({ theme, isEventCards }: ISectionBody) => css`
+  ${({ theme, isEventCards }: SectionBodyProps) => css`
     padding-bottom: ${theme.section.body.padding.bottom};
 
     > * {

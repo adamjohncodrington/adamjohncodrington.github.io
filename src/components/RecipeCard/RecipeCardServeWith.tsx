@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Ul, Li } from "../../../primitives";
-import { getServeWithListItem } from "../../../utils/global";
+import { Ul, Li } from "../../primitives";
+import { getServeWithListItem } from "../../utils/global";
 
 type RecipeCardServeWithProps = { serveWith: IServeWith };
 
