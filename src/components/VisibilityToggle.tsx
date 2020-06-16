@@ -61,15 +61,14 @@ export const VisibilityToggle: React.FC<VisibilityToggleProps> = ({
   const getChildrenContainerClass = (
     bodyHeight: number | null,
     childIsVisible: boolean
-  ): string => {
-    return !bodyHeight
+  ): string =>
+    !bodyHeight
       ? "initial-state"
       : childIsVisible
       ? "child-visible"
       : "child-invisible";
-  };
 
-  const HiddenPanel: React.FC = () => (
+  const hiddenPanel = (
     <ChildrenContainer
       data-test="visibility-toggle-children"
       className={getChildrenContainerClass(
@@ -96,7 +95,7 @@ export const VisibilityToggle: React.FC<VisibilityToggleProps> = ({
       >
         {headerComponent}
       </ClickableRegion>
-      <HiddenPanel />
+      {hiddenPanel}
     </>
   ) : (
     <ClickableRegion
@@ -104,7 +103,7 @@ export const VisibilityToggle: React.FC<VisibilityToggleProps> = ({
       onClick={() => switchChildVisibility(!childIsVisible)}
     >
       {headerComponent}
-      <HiddenPanel />
+      {hiddenPanel}
     </ClickableRegion>
   );
 };
