@@ -10,9 +10,9 @@ import {
 interface IGenerateSectionData {
   items: any;
   pageSectionTitle: IPageSectionDetails;
-  filter: any;
-  allData: any;
-  favouritedData: any;
+  filter: IFilter;
+  allData: Array<any>;
+  favouritedData: Array<any>;
   upcomingMode: boolean;
   bucketListMode: boolean;
 }

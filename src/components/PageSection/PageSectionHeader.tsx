@@ -30,7 +30,7 @@ const StyledIcon = styled(SvgIcon)`
 type PageSectionHeaderProps = {
   text: string;
   showCounts: boolean;
-  data: any;
+  data: Array<any>;
   icon?: IImageSrc;
   dataTest: string;
 };

@@ -2,7 +2,7 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 interface ChildrenContainerProps {
-  bodyHeight: any;
+  bodyHeight: IBodyHeight;
   theme: ITheme;
 }
 const ChildrenContainer = styled.div`
@@ -32,6 +32,8 @@ const ClickableRegion = styled.div`
     `}
 `;
 
+type IBodyHeight = number | null;
+
 interface VisibilityToggleProps {
   expandedAutomatically?: boolean;
   onlyHeaderClickable?: boolean;
@@ -49,23 +51,24 @@ export const VisibilityToggle: React.FC<VisibilityToggleProps> = ({
     expandedAutomatically
   );
   const [childrenContainerHeight, setChildrenContainerHeight] = React.useState<
-    any
+    IBodyHeight
   >(null);
 
-  const refCallback = (element: any): void => {
+  const refCallback = (element: HTMLDivElement): void => {
     if (element && !childrenContainerHeight)
       setChildrenContainerHeight(element.getBoundingClientRect().height);
   };
 
   const getChildrenContainerClass = (
-    bodyHeight: any,
+    bodyHeight: number | null,
     childIsVisible: boolean
-  ) =>
-    !bodyHeight
+  ): string => {
+    return !bodyHeight
       ? "initial-state"
       : childIsVisible
       ? "child-visible"
       : "child-invisible";
+  };
 
   const HiddenPanel: React.FC = () => (
     <ChildrenContainer

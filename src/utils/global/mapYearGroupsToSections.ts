@@ -4,8 +4,9 @@ import { isInFuture } from "../local";
 
 import { mapDataToEventCards } from "./mapDataToEventCards";
 
+type SingleYearData = Array<any>;
 type IMapYearGroupsToSections = {
-  years: Array<any>;
+  years: Array<SingleYearData>;
   eventType: IEventCardType;
 };
 
@@ -13,7 +14,7 @@ export const mapYearGroupsToSections = ({
   years,
   eventType
 }: IMapYearGroupsToSections): Array<IPageSection> => {
-  const mapYearGroupToSection = (year: any): IPageSection => {
+  const mapYearGroupToSection = (year: SingleYearData): IPageSection => {
     const title = year[0].dates[0].getFullYear();
 
     return {

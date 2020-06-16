@@ -3,7 +3,7 @@ import { PAGE_SECTIONS } from "../../constants";
 import { isInFuture } from "./isInFuture";
 
 interface ILookupFunction {
-  dataItem: any;
+  dataItem: UnknownTypeDataItem;
   pageSectionTitle: IPageSectionDetails;
   itemToMatch: any;
 }
@@ -84,8 +84,10 @@ const countryCityTownMatchExists = ({
 interface IGetPageSectionItemCounts {
   itemToCount: any;
   pageSectionTitle: IPageSectionDetails;
-  data: any;
+  data: Array<UnknownTypeDataItem>;
 }
+
+type UnknownTypeDataItem = any;
 
 export const getPageSectionItemCounts = ({
   itemToCount,
@@ -95,7 +97,7 @@ export const getPageSectionItemCounts = ({
   let pastCount: number = 0;
   let futureCount: number = 0;
 
-  data.map((dataItem: any) => {
+  data.map((dataItem: UnknownTypeDataItem) => {
     const params: ILookupFunction = {
       pageSectionTitle,
       dataItem,

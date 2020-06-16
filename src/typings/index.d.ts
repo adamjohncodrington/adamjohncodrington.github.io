@@ -1,3 +1,5 @@
+type IFilter = string;
+
 interface INameFavourite {
   name: string;
   favourite?: boolean;
