@@ -1,9 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-interface ChildrenContainerProps {
+interface ChildrenContainerProps extends ThemeProps {
   bodyHeight: IBodyHeight;
-  theme: ITheme;
 }
 const ChildrenContainer = styled.div`
   &.initial-state {

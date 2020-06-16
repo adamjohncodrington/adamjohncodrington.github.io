@@ -3,12 +3,11 @@ import styled, { css } from "styled-components";
 
 import { FlexRow, Text } from "../primitives";
 
-type ListEntryProps = {
+interface ListEntryProps extends ThemeProps {
   favourite?: boolean;
   star?: boolean;
   faded?: boolean;
-  theme: ITheme;
-};
+}
 const ListEntry = styled(Text.P.S)`
   ${(props: ListEntryProps) =>
     props.favourite &&
@@ -31,7 +30,9 @@ const ListEntry = styled(Text.P.S)`
     props.faded && `opacity: ${props.theme.fadedOpacity};`}
 `;
 
-type PastCountProps = { leaderboard?: boolean; theme: ITheme };
+interface PastCountProps extends ThemeProps {
+  leaderboard: boolean;
+}
 const PastCount = styled(Text.P.S)`
   text-align: right;
   margin-left: ${(props: PastCountProps) => (props.leaderboard ? "10px" : 0)};
@@ -41,7 +42,7 @@ const PastCount = styled(Text.P.S)`
 `;
 
 const FutureCount = styled(PastCount)`
-  opacity: ${props => props.theme.fadedOpacity};
+  opacity: ${(props: ThemeProps) => props.theme.fadedOpacity};
 `;
 
 export const CountedListItem: React.FC<ICountedListItem> = ({
@@ -70,10 +71,10 @@ export const CountedListItem: React.FC<ICountedListItem> = ({
       </ListEntry>
 
       {!ignoreCountInfo && showFutureCount && (
+        // @ts-ignore
         <FutureCount>{futureCount}</FutureCount>
       )}
       {!ignoreCountInfo && showPastCount && (
-        // @ts-ignore
         <PastCount leaderboard={leaderboard}>{pastCount}</PastCount>
       )}
     </FlexRow>

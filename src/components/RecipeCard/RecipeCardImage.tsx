@@ -10,9 +10,7 @@ const StyledImage = styled.img(
         image: { size }
       }
     }
-  }: {
-    theme: ITheme;
-  }) => css`
+  }: ThemeProps) => css`
     height: ${size};
     width: ${size};
   `

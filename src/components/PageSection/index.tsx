@@ -18,7 +18,9 @@ const PageSectionContainer = styled.section`
   margin-bottom: ${props => props.theme.section.margin.bottom};
 `;
 
-type SectionBodyProps = { isEventCards: boolean; theme: ITheme };
+interface SectionBodyProps extends ThemeProps {
+  isEventCards: boolean;
+}
 const SectionBody = styled.div`
   ${({ theme, isEventCards }: SectionBodyProps) => css`
     padding-bottom: ${theme.section.body.padding.bottom};
