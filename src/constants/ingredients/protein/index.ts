@@ -3,7 +3,7 @@ import { MEASUREMENTS } from "../../measurements";
 import { BEANS } from "./beans";
 import { SEITAN } from "./seitan";
 
-export const PROTEIN = {
+export const PROTEIN: IInventoryIngredients = {
   ...BEANS,
   ...SEITAN,
 

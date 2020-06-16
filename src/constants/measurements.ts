@@ -1,6 +1,12 @@
 const TABLESPOON: string = "tbsp";
 
-export const MEASUREMENTS = {
+export const SAINSBURYS_SEASONING_COST: IIngredientCost = {
+  quantity: 6,
+  measurement: TABLESPOON,
+  price: 1
+};
+
+export const MEASUREMENTS: IMeasurements = {
   // WEIGHT
   GRAM: "g",
   KILOGRAM: "kg",
@@ -25,8 +31,5 @@ export const MEASUREMENTS = {
   SERVING: "serving",
   CHUNK: "chunk",
   SEGMENT: "segment",
-  PANCAKE: "pancake",
-
-  // SIX TABLESPOONS FOR £1
-  SAINSBURYS_SEASONING_COST: { quantity: 6, measurement: TABLESPOON, price: 1 }
+  PANCAKE: "pancake"
 };

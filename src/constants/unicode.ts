@@ -1,4 +1,4 @@
-export const UNICODE = {
+export const UNICODE: { [character: string]: string } = {
   // INGREDIENTS
   JALAPENOS: "jalape\u00f1os",
   TOMATO_PUREE: "tomato pur\u00e9e",

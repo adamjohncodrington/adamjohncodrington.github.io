@@ -3,7 +3,7 @@ export { DIETS } from "./diets";
 export { FESTIVALS } from "./festivals";
 export { FRIENDS } from "./friends";
 export { LOCATIONS } from "./locations";
-export { MEASUREMENTS } from "./measurements";
+export { MEASUREMENTS, SAINSBURYS_SEASONING_COST } from "./measurements";
 export { MUSICIANS } from "./musicians";
 export { MUSIC_VENUES } from "./music-venues";
 export { INGREDIENTS } from "./ingredients";

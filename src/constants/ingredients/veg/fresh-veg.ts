@@ -1,6 +1,6 @@
 import { MEASUREMENTS } from "../../measurements";
 
-export const VEG_FRESH = {
+export const VEG_FRESH: IInventoryIngredients = {
   ASPARAGUS: { displayText: "asparagus" },
   AUBERGINE: { displayText: "aubergine", cost: { quantity: 1, price: 0.7 } },
   BEANS_GREEN: {

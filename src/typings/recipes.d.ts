@@ -11,6 +11,10 @@ interface IIngredientCost {
   payFullAmountAlways?: boolean;
 }
 
+type IInventoryIngredients = {
+  [inventoryIngredient: string]: IInventoryIngredient;
+};
+
 interface IInventoryIngredient {
   displayText: string;
   cost?: IIngredientCost;
@@ -39,6 +43,8 @@ interface IRecipeDiet {
 type IRecipeIngredients = Array<Array<IRecipeIngredient>>;
 type IServeWith = Array<Array<IServeWithItem>>;
 type IRecipeMethod = Array<string>;
+
+type IMeasurements = { [measurement: string]: IIngredientMeasurement };
 
 interface IRecipeCard {
   title: IRecipeTitle;

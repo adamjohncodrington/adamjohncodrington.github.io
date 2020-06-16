@@ -1,4 +1,4 @@
-const MUSIC_VENUES_LONDON = {
+const MUSIC_VENUES_LONDON: IMusicVenues = {
   // A
   ALEXANDRA_PALACE: { name: "Alexandra Palace" },
   ALEXANDRA_PALACE_THEATRE: {
@@ -75,7 +75,7 @@ const MUSIC_VENUES_LONDON = {
   ZIGFRID_VON_UNDERBELLY: { name: "Zigfrid von Underbelly" }
 };
 
-const MUSIC_VENUES_BIRMINGHAM = {
+const MUSIC_VENUES_BIRMINGHAM: IMusicVenues = {
   // A
   ACADEMY_BIRMINGHAM: { name: "Birmingham Academy" },
   ACADEMY_2_BIRMINGHAM: { name: "Birmingham Academy 2" },
@@ -89,7 +89,7 @@ const MUSIC_VENUES_BIRMINGHAM = {
   NIA_ARENA_BIRMINGHAM: { name: "Birmingham NIA Arena" }
 };
 
-const MUSIC_VENUES_NOTTINGHAM = {
+const MUSIC_VENUES_NOTTINGHAM: IMusicVenues = {
   // B
   BODEGA: { name: "Bodega" },
   ARENA_NOTTINGHAM: { name: "Nottingham Arena" },
@@ -100,7 +100,7 @@ const MUSIC_VENUES_NOTTINGHAM = {
   TRENT_UNIVERSITY_NOTTINGHAM: { name: "Nottingham Trent University" }
 };
 
-const MUSIC_VENUES_MANCHESTER = {
+const MUSIC_VENUES_MANCHESTER: IMusicVenues = {
   // A
   ACADEMY_MANCHESTER: { name: "Manchester Academy" },
   ACADEMY_2_MANCHESTER: { name: "Manchester Academy 2" },
@@ -125,7 +125,7 @@ const MUSIC_VENUES_MANCHESTER = {
   STORE_STREET: { name: "Store Street" }
 };
 
-const MUSIC_VENUES_ELSEWHERE = {
+const MUSIC_VENUES_ELSEWHERE: IMusicVenues = {
   // C
   COCKPIT_LEEDS: { name: "The Cockpit Leeds" },
   // D
@@ -151,7 +151,7 @@ const MUSIC_VENUES_ELSEWHERE = {
   WORTHY_FARM: { name: "Worthy Farm", favourite: true }
 };
 
-export const MUSIC_VENUES = {
+export const MUSIC_VENUES: IMusicVenues = {
   ...MUSIC_VENUES_LONDON,
   ...MUSIC_VENUES_MANCHESTER,
   ...MUSIC_VENUES_NOTTINGHAM,

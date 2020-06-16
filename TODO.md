@@ -1,9 +1,5 @@
 # TO DO LIST
 
-## Fixes
-
-- establish why event card company circles are being suppressed on deployed build
-
 ## Refactoring
 
 - move all instances of `Text.js` to the file itself, with loads of exports such as `PageTitleText`, `SectionTitleText`, etc.
@@ -23,3 +19,4 @@
 ## Tests
 
 - add tests to all utils functions
+- add snapshot tests to components

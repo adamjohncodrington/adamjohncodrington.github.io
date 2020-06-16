@@ -2,7 +2,7 @@ import { MEASUREMENTS } from "../../measurements";
 
 import { MILK } from "./milk";
 
-export const DAIRY = {
+export const DAIRY: IInventoryIngredients = {
   ...MILK,
 
   BUTTER_VEGAN: {

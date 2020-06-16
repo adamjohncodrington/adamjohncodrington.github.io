@@ -1,4 +1,4 @@
-import { MEASUREMENTS } from "../../measurements";
+import { MEASUREMENTS, SAINSBURYS_SEASONING_COST } from "../../measurements";
 
 import { DRIED_SEASONING } from "./dried-seasoning";
 import { OILS } from "./oils";
@@ -7,7 +7,7 @@ import { SALT } from "./salt";
 import { SAUCES } from "./sauces";
 import { VINEGARS } from "./vinegars";
 
-export const SEASONING = {
+export const SEASONING: IInventoryIngredients = {
   ...DRIED_SEASONING,
   ...OILS,
   ...PASTES,
@@ -21,7 +21,7 @@ export const SEASONING = {
   },
   PEPPER_BLACK_GROUND: {
     displayText: "ground black pepper",
-    cost: MEASUREMENTS.SAINSBURYS_SEASONING_COST
+    cost: SAINSBURYS_SEASONING_COST
   },
   WINE_RED: {
     displayText: "red wine",
@@ -41,6 +41,6 @@ export const SEASONING = {
   },
   NUTMEG_FRESH: {
     displayText: "freshly grated whole nutmeg",
-    cost: MEASUREMENTS.SAINSBURYS_SEASONING_COST
+    cost: SAINSBURYS_SEASONING_COST
   }
 };

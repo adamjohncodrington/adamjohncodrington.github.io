@@ -1,7 +1,7 @@
 import { MEASUREMENTS } from "../../measurements";
 import { UNICODE } from "../../unicode";
 
-export const PASTES = {
+export const PASTES: IInventoryIngredients = {
   CURRY_PASTE_MADRAS: {
     displayText: "Madras curry paste",
     cost: { quantity: 283, measurement: MEASUREMENTS.GRAM, price: 2.25 }

@@ -1,6 +1,4 @@
-type IACTORS = { [name: string]: IActor };
-
-export const ACTORS: IACTORS = {
+export const ACTORS: IActors = {
   // A
   ADAM_JAMES: { name: "Adam James" },
   ADI_CHUGH: { name: "Adi Chugh" },

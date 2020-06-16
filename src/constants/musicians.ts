@@ -1,4 +1,4 @@
-export const A_TO_C = {
+export const MUSICIANS: IMusicians = {
   // 123
   "1975": { name: "1975, The" },
   "100_GECS": { name: "100 gecs" },
@@ -68,10 +68,7 @@ export const A_TO_C = {
   CODE: { name: "Code, The" },
   CRUEL_YOUTH: { name: "Cruel Youth", favourite: true },
   CUTE_IS_WHAT_WE_AIM_FOR: { name: "Cute Is What We Aim for" },
-  CYRIL_HAHN: { name: "Cyril Hahn" }
-};
-
-const D_TO_M = {
+  CYRIL_HAHN: { name: "Cyril Hahn" },
   // D
   DANIEL_AVERY: { name: "Daniel Avery" },
   DAUGHTER: { name: "Daughter" },
@@ -216,10 +213,7 @@ const D_TO_M = {
   MNEK: { name: "MNEK" },
   MO: { name: "MØ" },
   MUNA: { name: "MUNA" },
-  MURA_MASA: { name: "Mura Masa" }
-};
-
-const N_TO_Z = {
+  MURA_MASA: { name: "Mura Masa" },
   // N
   NAAZ: { name: "Naaz" },
   NAO: { name: "Nao" },
@@ -314,5 +308,3 @@ const N_TO_Z = {
   // Z
   ZARA_LARSSON: { name: "Zara Larsson" }
 };
-
-export const MUSICIANS = { ...A_TO_C, ...D_TO_M, ...N_TO_Z };

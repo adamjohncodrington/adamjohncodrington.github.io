@@ -1,6 +1,6 @@
 import { MEASUREMENTS } from "../../measurements";
 
-export const HERBS_DRIED = {
+export const HERBS_DRIED: IInventoryIngredients = {
   BASIL_DRIED: {
     displayText: "dried basil",
     cost: { quantity: 6, measurement: MEASUREMENTS.TABLESPOON, price: 1 }

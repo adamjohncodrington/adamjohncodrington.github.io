@@ -1,7 +1,11 @@
 interface IActor extends INameFavourite {}
-interface ITheatreVenue extends INameFavourite {}
+type IActors = { [actor: string]: IActor };
+
 interface IPlay extends INameFavourite {}
+type IPlays = { [play: string]: IPlay };
+
 interface ITheatreVenue extends INameFavourite {}
+type ITheatreVenues = { [theatreVenue: string]: ITheatreVenue };
 
 interface ITheatreData {
   play: IPlay;

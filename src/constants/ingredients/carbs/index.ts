@@ -3,7 +3,7 @@ import { PASTA } from "./pasta";
 import { RICE } from "./rice";
 import { GRAINS } from "./grains";
 
-export const CARBS = {
+export const CARBS: IInventoryIngredients = {
   ...BREAD,
   ...PASTA,
   ...RICE,

@@ -8,7 +8,7 @@ import { SEASONING } from "./seasoning";
 import { NUTS_AND_SEEDS } from "./nuts-seeds";
 import { VEG } from "./veg";
 
-export const INGREDIENTS = {
+export const INGREDIENTS: IInventoryIngredients = {
   ...BAKING,
   ...CARBS,
   ...DAIRY,

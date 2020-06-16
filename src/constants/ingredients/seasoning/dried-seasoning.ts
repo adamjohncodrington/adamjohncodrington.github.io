@@ -1,45 +1,45 @@
-import { MEASUREMENTS } from "../../measurements";
+import { MEASUREMENTS, SAINSBURYS_SEASONING_COST } from "../../measurements";
 
-export const DRIED_SEASONING = {
+export const DRIED_SEASONING: IInventoryIngredients = {
   PAPRIKA: {
     displayText: "paprika",
-    cost: MEASUREMENTS.SAINSBURYS_SEASONING_COST
+    cost: SAINSBURYS_SEASONING_COST
   },
   ONION_POWDER: {
     displayText: "onion powder",
-    cost: MEASUREMENTS.SAINSBURYS_SEASONING_COST
+    cost: SAINSBURYS_SEASONING_COST
   },
   GARLIC_GRANULES: {
     displayText: "garlic granules",
-    cost: MEASUREMENTS.SAINSBURYS_SEASONING_COST
+    cost: SAINSBURYS_SEASONING_COST
   },
   PAPRIKA_SMOKED: {
     displayText: "smoked paprika",
-    cost: MEASUREMENTS.SAINSBURYS_SEASONING_COST
+    cost: SAINSBURYS_SEASONING_COST
   },
   TURMERIC_GROUND: {
     displayText: "ground turmeric",
-    cost: MEASUREMENTS.SAINSBURYS_SEASONING_COST
+    cost: SAINSBURYS_SEASONING_COST
   },
   ALLSPICE_GROUND: {
     displayText: "ground allspice",
-    cost: MEASUREMENTS.SAINSBURYS_SEASONING_COST
+    cost: SAINSBURYS_SEASONING_COST
   },
   CHILLI_POWDER: {
     displayText: "chilli powder",
-    cost: MEASUREMENTS.SAINSBURYS_SEASONING_COST
+    cost: SAINSBURYS_SEASONING_COST
   },
   CINNAMON_GROUND: {
     displayText: "ground cinnamon",
-    cost: MEASUREMENTS.SAINSBURYS_SEASONING_COST
+    cost: SAINSBURYS_SEASONING_COST
   },
   CHILLI_CRUSHED_DRIED: {
     displayText: "dried crushed chillis",
-    cost: MEASUREMENTS.SAINSBURYS_SEASONING_COST
+    cost: SAINSBURYS_SEASONING_COST
   },
   NUTMEG_GROUND: {
     displayText: "ground nutmeg",
-    cost: MEASUREMENTS.SAINSBURYS_SEASONING_COST
+    cost: SAINSBURYS_SEASONING_COST
   },
   YEAST_NUTRITIONAL: {
     displayText: "nutritional yeast flakes",

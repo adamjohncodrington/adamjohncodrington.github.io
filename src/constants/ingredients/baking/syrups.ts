@@ -1,6 +1,6 @@
 import { MEASUREMENTS } from "../../measurements";
 
-export const SYRUPS = {
+export const SYRUPS: IInventoryIngredients = {
   LEMON_EXTRACT: {
     displayText: "lemon extract",
     cost: { quantity: 38, measurement: MEASUREMENTS.MILLILITRE, price: 1.5 }

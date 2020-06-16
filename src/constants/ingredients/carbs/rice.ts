@@ -1,6 +1,6 @@
 import { MEASUREMENTS } from "../../measurements";
 
-export const RICE = {
+export const RICE: IInventoryIngredients = {
   RICE: { displayText: "rice" },
   RICE_BASMATI: {
     displayText: "basmati rice",

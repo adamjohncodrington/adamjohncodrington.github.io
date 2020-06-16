@@ -1,6 +1,6 @@
 import { MEASUREMENTS } from "../../measurements";
 
-export const SEEDS = {
+export const SEEDS: IInventoryIngredients = {
   SEEDS_CHIA: {
     displayText: "chia seeds",
     cost: { quantity: 150, measurement: MEASUREMENTS.GRAM, price: 1.5 }

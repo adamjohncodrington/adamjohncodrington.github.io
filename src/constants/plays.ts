@@ -1,4 +1,4 @@
-export const PLAYS = {
+export const PLAYS: IPlays = {
   // 123
   "1984": { name: "1984" },
   "4000_MILES": { name: "4000 Miles" },

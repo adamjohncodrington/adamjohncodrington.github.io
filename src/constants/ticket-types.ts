@@ -1,4 +1,4 @@
-export const TICKET_TYPES = {
+export const TICKET_TYPES: ITicketTypes = {
   // A
   AXS_MOBILE_APP: "AXS app ticket",
   // D
