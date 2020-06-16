@@ -2,8 +2,7 @@
 
 ## Refactoring
 
-- move all instances of `Text.js` to the file itself, with loads of exports such as `PageTitleText`, `SectionTitleText`, etc.
-- avoid having to type out `•` in lists, use natural CSS instead
+- move all instances of `Text.ts` to the file itself, with loads of exports such as `PageTitleText`, `SectionTitleText`, etc.
 
 ## TypeScript
 
@@ -20,3 +19,7 @@
 
 - add tests to all utils functions
 - add snapshot tests to components
+
+## Fix
+
+- do not use `•` in lists, figure out why the CSS is suppressing it
