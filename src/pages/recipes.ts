@@ -1,8 +1,8 @@
 import { DATA_RECIPES } from "../data";
-import { mapRecipeCategoriesToPageSections } from "../utils/global";
+import { mapRecipeGroupsToPageSections } from "../utils/global";
 import { PAGE_SECTIONS } from "../constants";
 
-const recipeGroupSections: Array<IPageSection> = mapRecipeCategoriesToPageSections(
+const recipeGroupSections: Array<IPageSection> = mapRecipeGroupsToPageSections(
   DATA_RECIPES.CATEGORISED
 );
 

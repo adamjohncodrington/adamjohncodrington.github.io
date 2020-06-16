@@ -8,6 +8,6 @@ export { generateIngredientListItem } from "./generateIngredientListItem";
 export { getServeWithListItem } from "./getServeWithListItem";
 export { generateSectionData } from "./generateSectionData";
 export { mapDataToEventCards } from "./mapDataToEventCards";
-export { mapRecipeCategoriesToPageSections } from "./mapRecipeCategoriesToSections";
+export { mapRecipeGroupsToPageSections } from "./mapRecipeGroupsToSections";
 export { mapYearGroupsToSections } from "./mapYearGroupsToSections";
 export { recipeMethodEntries } from "./recipeMethodEntries";

@@ -6,7 +6,7 @@ import { PAGE_SECTION_TYPES } from "../../constants";
 import { EventCard } from "../EventCard";
 import { PageSectionHeader } from "./PageSectionHeader";
 import { RecipeCard } from "../RecipeCard";
-import { CountedListItem } from "./CountedListItem";
+import { CountedListItem } from "../CountedListItem";
 import { VisibilityToggle } from "../VisibilityToggle";
 
 const PageSectionContainer = styled.section`

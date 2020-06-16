@@ -1,9 +1,9 @@
 import { PAGE_SECTION_TYPES } from "../../constants";
 
-export const mapRecipeCategoriesToPageSections = (
-  recipeCategories: Array<IRecipeGroup>
+export const mapRecipeGroupsToPageSections = (
+  recipeGroups: Array<IRecipeGroup>
 ): Array<IPageSection> => {
-  const mapRecipeCategoryToSection = ({
+  const maprecipeGroupToSection = ({
     category,
     data
   }: IRecipeGroup): IPageSection => ({
@@ -16,5 +16,5 @@ export const mapRecipeCategoriesToPageSections = (
     expandedAutomatically: true
   });
 
-  return recipeCategories.map(item => mapRecipeCategoryToSection(item));
+  return recipeGroups.map(item => maprecipeGroupToSection(item));
 };

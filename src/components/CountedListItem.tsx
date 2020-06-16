@@ -1,16 +1,16 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { FlexRow, Text } from "../../primitives";
+import { FlexRow, Text } from "../primitives";
 
-interface IListEntryText {
+type ListEntryProps = {
   favourite?: boolean;
   star?: boolean;
   faded?: boolean;
   theme: ITheme;
-}
+};
 const ListEntry = styled(Text.P.S)`
-  ${(props: IListEntryText) =>
+  ${(props: ListEntryProps) =>
     props.favourite &&
     css`
       ::before {
@@ -18,7 +18,7 @@ const ListEntry = styled(Text.P.S)`
       }
     `}
 
-  ${(props: IListEntryText) =>
+  ${(props: ListEntryProps) =>
     props.star &&
     css`
       ::before {
@@ -27,14 +27,11 @@ const ListEntry = styled(Text.P.S)`
     `}
 
   flex: 1;
-  ${(props: IListEntryText) =>
+  ${(props: ListEntryProps) =>
     props.faded && `opacity: ${props.theme.fadedOpacity};`}
 `;
 
-interface PastCountProps {
-  leaderboard?: boolean;
-  theme: ITheme;
-}
+type PastCountProps = { leaderboard?: boolean; theme: ITheme };
 const PastCount = styled(Text.P.S)`
   text-align: right;
   margin-left: ${(props: PastCountProps) => (props.leaderboard ? "10px" : 0)};
