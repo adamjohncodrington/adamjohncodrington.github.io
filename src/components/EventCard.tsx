@@ -1,14 +1,12 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { FlexColumn, FlexRow, Text } from "../../primitives";
+import { FlexColumn, FlexRow, Text } from "../primitives";
 import {
   daysToGo,
   getDisplayDateText,
   getCountdownText
-} from "../../utils/global";
-
-import { EventCardCompany } from "./EventCardCompany";
+} from "../utils/global";
 
 interface IEventCardTitle {
   favourite: boolean;
@@ -83,8 +81,6 @@ export const EventCard: React.FC<IEventCard> = ({
           {disclaimer && <Disclaimer>({disclaimer})</Disclaimer>}
         </ItalicFlexRow>
       )}
-
-      <EventCardCompany company={company} />
     </FlexColumn>
   );
 };
