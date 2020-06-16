@@ -84,3 +84,6 @@ interface IRoute extends IHomepageRoute {
   icon: IImageSrc;
   pageData: IPageData;
 }
+
+type IconsObject = { [iconName: string]: IImageSrc };
+type PhotosObject = { [photoName: string]: IImageSrc };

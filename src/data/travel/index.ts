@@ -84,7 +84,7 @@ const ALL_GROUPED_BY_YEAR: Array<Array<ITravelData>> = [
   TRAVEL_2020
 ];
 
-const FAVOURITES = ALL.filter(item => item.favourite);
+const FAVOURITES: Array<ITravelData> = ALL.filter(item => item.favourite);
 
 // @ts-ignore
 const countries: Array<ICountry> = Object.values(LOCATIONS);

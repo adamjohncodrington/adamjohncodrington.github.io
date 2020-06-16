@@ -27,7 +27,7 @@ const ALL_GROUPED_BY_YEAR: Array<Array<ITheatreData>> = [
   THEATRE_2019,
   THEATRE_2020
 ];
-const FAVOURITES = ALL.filter(item => item.favourite);
+const FAVOURITES: Array<ITheatreData> = ALL.filter(item => item.favourite);
 
 //@ts-ignore
 const generateSectionDataWrapper = parms =>

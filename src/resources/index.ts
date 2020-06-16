@@ -1,7 +1,7 @@
-const requireSvg = (icon: string): string => require(`./svg/${icon}.svg`);
-const requireJpg = (photo: string): string => require(`./jpg/${photo}.jpg`);
+const requireSvg = (icon: string): IImageSrc => require(`./svg/${icon}.svg`);
+const requireJpg = (photo: string): IImageSrc => require(`./jpg/${photo}.jpg`);
 
-export const ICONS = {
+export const ICONS: IconsObject = {
   // A
   ARTIST: requireSvg("artist"),
   // B
@@ -41,7 +41,7 @@ export const ICONS = {
   VEG_BOWL: requireSvg("veg_bowl")
 };
 
-export const PHOTOS = {
+export const PHOTOS: PhotosObject = {
   // B
   BAKED_BEANS: requireJpg("baked_beans"),
   BANANA_CAKE: requireJpg("banana_cake"),
