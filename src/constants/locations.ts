@@ -1,6 +1,6 @@
 const KEY_WEST = { name: "Key West" };
 
-export const LOCATIONS = {
+export const LOCATIONS: IAllCountries = {
   // B
   BARBADOS: {
     name: "Barbados",
@@ -79,7 +79,7 @@ export const LOCATIONS = {
     cities: { DUBROVNIK: { name: "Dubrovnik" } },
     attractions: {
       DUBROVNIK_CABLE_CAR: { name: "Dubrovnik Cable Car" },
-      DUBROVNIK_WALLS: { name: "Walls of Dubrovnik", higlight: true }
+      DUBROVNIK_WALLS: { name: "Walls of Dubrovnik", highlight: true }
     }
   },
   CUBA: {
@@ -381,7 +381,6 @@ export const LOCATIONS = {
   UK: {
     name: "United Kingdom",
     insignificant: true,
-    regions: { CORNWALL: { name: "Cornwall" } },
     attractions: {
       ALTON_TOWERS: {
         name: "Alton Towers",
@@ -460,6 +459,7 @@ export const LOCATIONS = {
       WOLVERHAMPTON: { name: "Wolverhampton", insignificant: true },
       YORK: { name: "York", insignificant: true }
     },
+    regions: { CORNWALL: { name: "Cornwall" } },
     towns: {
       DONCASTER: { name: "Doncaster", insignificant: true },
       HARROGATE: { name: "Harrogate", insignificant: true },
@@ -476,11 +476,7 @@ export const LOCATIONS = {
   },
   USA: {
     name: "United States",
-    regions: {
-      CAPE_COD: { name: "Cape Cod" },
-      FLORIDA_KEYS: { name: "Florida Keys" },
-      ISLAMORADA: { name: "Islamorada" }
-    },
+
     attractions: {
       ALCATRAZ_PRISON: {
         name: "Alcatraz Federal Penitentiary",
@@ -547,16 +543,21 @@ export const LOCATIONS = {
       SPRINGFIELD_MASSACHUSETTS: { name: "Springfield" },
       WASHINGTON_DC: { name: "Washington DC", capital: true }
     },
+    islands: {
+      KEY_WEST,
+      ALCATRAZ: { name: "Alcatraz" },
+      MARTHAS_VINEYARD: { name: "Martha's Vineyard" }
+    },
+    regions: {
+      CAPE_COD: { name: "Cape Cod" },
+      FLORIDA_KEYS: { name: "Florida Keys" },
+      ISLAMORADA: { name: "Islamorada" }
+    },
     states: {
       FLORIDA: { name: "Florida" },
       NEW_YORK: { name: "New York" },
       MASSACHUSETTS: { name: "Massachusetts" },
       VIRGINIA: { name: "Virginia" }
-    },
-    islands: {
-      KEY_WEST,
-      ALCATRAZ: { name: "Alcatraz" },
-      MARTHAS_VINEYARD: { name: "Martha's Vineyard" }
     }
   }
 };

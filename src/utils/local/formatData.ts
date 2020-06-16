@@ -1,8 +1,6 @@
 import { turnTheSuffixIntoPrefix } from "./turnTheSuffixIntoPrefix";
 
-export const formatData = (
-  inputData: IInputData | Array<IInputData>
-): string | null => {
+export const formatData = (inputData: any | Array<any>): string | null => {
   if (!inputData) return null;
 
   if (!Array.isArray(inputData))

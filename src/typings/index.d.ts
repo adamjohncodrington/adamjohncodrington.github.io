@@ -12,17 +12,6 @@ interface IFriend extends INameFavourite {
   theatre?: boolean;
 }
 
-type IInputData =
-  | IActor
-  | IFriend
-  | IMusician
-  | IPlay
-  | IFestival
-  | IMusicVenue
-  | IAttraction
-  | ITheatreVenue
-  | ILocationItem;
-
 type IEventCardType = "gig" | "trip" | "theatre";
 type IPageSecionType = "recipes" | "event-cards" | "counted-list";
 
