@@ -86,16 +86,13 @@ const ALL_GROUPED_BY_YEAR: Array<Array<ITravelData>> = [
 
 const FAVOURITES: Array<ITravelData> = ALL.filter(item => item.favourite);
 
-// @ts-ignore
-const countries: Array<ICountry> = Object.values(LOCATIONS);
+const countries = Object.values(LOCATIONS);
 
-//@ts-ignore
 const cities: Array<ICity> = generateChildItemsFromParentItems({
   childItems: "cities",
   parentItems: LOCATIONS
 });
 
-//@ts-ignore
 const towns: Array<ITown> = generateChildItemsFromParentItems({
   childItems: "towns",
   parentItems: LOCATIONS
@@ -107,7 +104,6 @@ const islands: Array<IIsland> = generateChildItemsFromParentItems({
   parentFlag: "island"
 });
 
-//@ts-ignore
 const attractions: Array<IAttraction> = generateChildItemsFromParentItems({
   childItems: "attractions",
   parentItems: LOCATIONS
