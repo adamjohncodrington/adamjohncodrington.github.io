@@ -40,6 +40,7 @@ interface AllPageSectionTitles {
   TOWN: IPageSectionDetails;
   THEME_PARK: IPageSectionDetails;
   UP_NEXT: IPageSectionDetails;
+  RECIPES_COMING_SOON: IPageSectionDetails;
 }
 
 const actor: string = "actors";
@@ -114,5 +115,10 @@ export const PAGE_SECTIONS: AllPageSectionTitles = {
     title: "up next",
     id: "up-next",
     type: PAGE_SECTION_TYPES.EVENT_CARDS
+  },
+  RECIPES_COMING_SOON: {
+    title: "coming soon",
+    id: "coming-soon",
+    type: PAGE_SECTION_TYPES.COUNTED_LIST
   }
 };

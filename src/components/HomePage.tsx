@@ -16,7 +16,7 @@ const GridContainer = styled.div`
   grid-template-areas: "icon icon" "icon icon";
 `;
 
-const StyledSvg = styled.img(({ theme }: ITheme) => {
+const StyledSvg = styled.img(({ theme }: ThemeProps) => {
   const iconSizeDesktop = theme.homePage.icon.size.desktop;
   const iconSizePhone = theme.homePage.icon.size.phone;
   const iconSizePadding = theme.homePage.icon.padding;

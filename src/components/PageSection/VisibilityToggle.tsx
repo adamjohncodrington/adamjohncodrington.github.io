@@ -45,30 +45,29 @@ export const VisibilityToggle: React.FC<VisibilityToggleProps> = ({
   headerComponent,
   children
 }) => {
-  const [childIsVisible, switchChildVisibility] = React.useState(
+  const [childIsVisible, switchChildVisibility] = React.useState<boolean>(
     expandedAutomatically
   );
-  const [childrenContainerHeight, setChildrenContainerHeight] = React.useState(
-    null
-  );
+  const [childrenContainerHeight, setChildrenContainerHeight] = React.useState<
+    any
+  >(null);
 
-  //@ts-ignore
-  const refCallback = element => {
-    if (element && !childrenContainerHeight) {
+  const refCallback = (element: any): void => {
+    if (element && !childrenContainerHeight)
       setChildrenContainerHeight(element.getBoundingClientRect().height);
-    }
   };
 
-  //@ts-ignore
-  const getChildrenContainerClass = (bodyHeight, childIsVisible) =>
+  const getChildrenContainerClass = (
+    bodyHeight: any,
+    childIsVisible: boolean
+  ) =>
     !bodyHeight
       ? "initial-state"
       : childIsVisible
       ? "child-visible"
       : "child-invisible";
 
-  const HEADER = headerComponent;
-  const CHILDREN = (
+  const HiddenPanel: React.FC = () => (
     <ChildrenContainer
       data-test="visibility-toggle-children"
       className={getChildrenContainerClass(
@@ -93,17 +92,17 @@ export const VisibilityToggle: React.FC<VisibilityToggleProps> = ({
           !expandedAutomatically && switchChildVisibility(!childIsVisible)
         }
       >
-        {HEADER}
+        {headerComponent}
       </ClickableRegion>
-      {CHILDREN}
+      <HiddenPanel />
     </>
   ) : (
     <ClickableRegion
       data-test={dataTestVisibilityToggle}
       onClick={() => switchChildVisibility(!childIsVisible)}
     >
-      {HEADER}
-      {CHILDREN}
+      {headerComponent}
+      <HiddenPanel />
     </ClickableRegion>
   );
 };

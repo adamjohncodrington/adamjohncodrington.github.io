@@ -11,9 +11,8 @@
 
 ## TypeScript
 
+- remove all `: any` instances
 - Hammersmith Apollo bug when ading indexed types to `VENUES` file
-- strongly type all locations types
-- review all instances of type `any`
 - add absolute paths/imports
 - remove all instances of `@ts-ignore` if possible
 

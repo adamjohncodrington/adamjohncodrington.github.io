@@ -82,5 +82,3 @@ interface IRoute extends IHomepageRoute {
   icon: IImageSrc;
   pageData: IPageData;
 }
-
-type ITheme = any;

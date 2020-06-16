@@ -1,4 +1,4 @@
-export const COLORS = {
+export const COLORS: IColors = {
   gainsboro: "gainsboro",
   darkGreen: "darkGreen",
   green: "green",

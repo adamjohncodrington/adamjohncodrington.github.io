@@ -1,4 +1,4 @@
-export const FONT_SIZES = {
+export const FONT_SIZES: IFontSizes = {
   XL: "4.375rem",
   L: "2rem",
   M: "1.5rem",

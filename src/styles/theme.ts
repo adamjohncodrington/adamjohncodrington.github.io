@@ -2,21 +2,21 @@ import { rgba } from "polished";
 
 import { COLORS } from "./colors";
 
-const BORDER_BLACK_THIN: string = `1px solid ${COLORS.black}`;
-const BORDER_GRAY_THIN: string = `1px solid ${COLORS.gray}`;
+const BORDER_BLACK_THIN: IBorder = `1px solid ${COLORS.black}`;
+const BORDER_GRAY_THIN: IBorder = `1px solid ${COLORS.gray}`;
 
-const HOME_PAGE_THEME = {
+const HOME_PAGE_THEME: ITheme_Homepage = {
   icon: { padding: "1.5vmin", size: { desktop: "25vmin", phone: "42vmin" } }
 };
 
-const PAGE_THEME = {
+const PAGE_THEME: ITheme_Page = {
   count: { padding: "12px 0 0 7px" },
   header: { margin: { bottom: "30px" } },
   icon: { margin: { top: "15px" }, size: "60px" },
   shell: { padding: "25px 20px" }
 };
 
-const SECTION_THEME = {
+const SECTION_THEME: ITheme_Section = {
   body: {
     basicList: {
       border: { bottom: BORDER_GRAY_THIN },
@@ -36,7 +36,7 @@ const SECTION_THEME = {
   padding: { horizontal: "12px" }
 };
 
-const RECIPES_THEME = {
+const RECIPES_THEME: ITheme_Recipes = {
   border: { bottom: BORDER_GRAY_THIN },
   image: { size: "300px" },
   icon: { margin: { top: "4px" }, size: "24px" },
@@ -45,10 +45,10 @@ const RECIPES_THEME = {
   last: { padding: { bottom: "20px" } }
 };
 
-const BREAKPOINTS = { phone: { maxWidth: "480px" } };
+const BREAKPOINTS: IBreakpoints = { phone: { maxWidth: "480px" } };
 
-export const fontFamily: string = "-apple-system, Helvetica, sans-serif";
-export const scrollbarSize: string = "0.7rem";
+export const fontFamily: IFontFamily = "-apple-system, Helvetica, sans-serif";
+export const scrollbarSize: IScrollbarSize = "0.7rem";
 
 export const THEME: ITheme = {
   animationDuration: 0.35,
