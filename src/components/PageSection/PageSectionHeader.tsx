@@ -1,21 +1,15 @@
 import React, { useContext } from "react";
 import styled, { ThemeContext } from "styled-components";
 
-import { Text, Headers, SvgIcon } from "../../primitives";
+import { GlobalText, SvgIcon } from "../../primitives";
 
-const { H2 } = Headers;
+const { PageSectionTitle } = GlobalText;
 
-const Container = styled.div`
+const { PageSectionPrimaryCount, PageSectionSecondaryCount } = GlobalText;
+
+const PageSectionHeaderContainer = styled.div`
   display: flex;
   padding: ${props => props.theme.section.header.padding};
-`;
-
-const SectionCount = styled(Text.Span.S)`
-  margin-left: ${props => props.theme.section.count.margin.left};
-`;
-
-const SectionSubcount = styled(SectionCount)`
-  opacity: ${props => props.theme.fadedOpacity};
 `;
 
 const TextContainer = styled.div`
@@ -44,21 +38,25 @@ export const PageSectionHeader: React.FC<PageSectionHeaderProps> = ({
 }) => {
   //@ts-ignore
   const starredDataCount = data && data.filter(item => item.star).length;
-  const theme = useContext(ThemeContext);
+  const theme: ITheme = useContext(ThemeContext);
 
   return (
-    <Container data-test={dataTest}>
+    <PageSectionHeaderContainer data-test={dataTest}>
       <TextContainer data-test="section-header-text-container">
-        <H2 data-test="section-header-text">{text}</H2>
+        <PageSectionTitle data-test="section-header-text">
+          {text}
+        </PageSectionTitle>
 
         {showCounts && data && data.length > 1 && (
-          <SectionCount data-test="section-count">{data.length}</SectionCount>
+          <PageSectionPrimaryCount data-test="section-count">
+            {data.length}
+          </PageSectionPrimaryCount>
         )}
 
         {showCounts && starredDataCount > 0 && (
-          <SectionSubcount data-test="section-count">
+          <PageSectionSecondaryCount data-test="section-count">
             {starredDataCount}
-          </SectionSubcount>
+          </PageSectionSecondaryCount>
         )}
       </TextContainer>
 
@@ -69,6 +67,6 @@ export const PageSectionHeader: React.FC<PageSectionHeaderProps> = ({
           size={theme.section.icon.size}
         />
       )}
-    </Container>
+    </PageSectionHeaderContainer>
   );
 };

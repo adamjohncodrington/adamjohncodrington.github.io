@@ -1,52 +1,24 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-import { FlexColumn, FlexRow, Text } from "../../primitives";
+import { FlexColumn, FlexRow, GlobalText } from "../../primitives";
 import {
   daysToGo,
   getDisplayDateText,
   getCountdownText
 } from "../../utils/global";
 
-type EventCardTitleProps = {
-  favourite: boolean;
-};
-const Title = styled(Text.P.M)`
-  ${({ favourite }: EventCardTitleProps) =>
-    favourite &&
-    css`
-      ::before {
-        content: "♥ ";
-      }
-    `}
-
-  font-weight: bold;
-  text-transform: uppercase;
-`;
-
-const Subtitle = styled(Text.P.S)`
-  font-weight: bold;
-  text-transform: uppercase;
-`;
-
-const Body = styled(Text.P.S)`
-  padding: 1px 0 3px;
-`;
-
-const Dates = styled(Text.P.XS)``;
+const {
+  EventCardTitle,
+  EventCardSubtitle,
+  EventCardDates,
+  EventCardBody,
+  EventCardCountdown,
+  EventCardDisclaimer
+} = GlobalText;
 
 const ItalicFlexRow = styled(FlexRow)`
   font-style: italic;
-`;
-
-const Disclaimer = styled(Text.P.XS)`
-  margin: 8px 0 0 4px;
-`;
-
-const Countdown = styled(Text.P.S)`
-  font-weight: bold;
-  margin-top: 5px;
-  text-align: left;
 `;
 
 export const EventCard: React.FC<IEventCard> = ({
@@ -61,23 +33,33 @@ export const EventCard: React.FC<IEventCard> = ({
 
   return (
     <FlexColumn data-test="event-card-container">
-      <Title data-test="event-card-title" favourite={favourite}>
+      <EventCardTitle data-test="event-card-title" favourite={favourite}>
         {title}
-      </Title>
+      </EventCardTitle>
 
       {subtitle && (
-        <Subtitle data-test="event-card-subtitle">{subtitle}</Subtitle>
+        <EventCardSubtitle data-test="event-card-subtitle">
+          {subtitle}
+        </EventCardSubtitle>
       )}
 
-      {body && <Body data-test="event-card-body">{body}</Body>}
+      {body && (
+        <EventCardBody data-test="event-card-body">{body}</EventCardBody>
+      )}
 
-      <Dates data-test="event-card-date">{getDisplayDateText(dates)}</Dates>
+      <EventCardDates data-test="event-card-date">
+        {getDisplayDateText(dates)}
+      </EventCardDates>
 
       {daysTilGig >= 0 && (
         <ItalicFlexRow>
-          <Countdown>{getCountdownText(daysTilGig)}</Countdown>
+          <EventCardCountdown>
+            {getCountdownText(daysTilGig)}
+          </EventCardCountdown>
 
-          {disclaimer && <Disclaimer>({disclaimer})</Disclaimer>}
+          {disclaimer && (
+            <EventCardDisclaimer>({disclaimer})</EventCardDisclaimer>
+          )}
         </ItalicFlexRow>
       )}
     </FlexColumn>

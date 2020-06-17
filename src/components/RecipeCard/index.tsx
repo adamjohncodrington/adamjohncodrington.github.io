@@ -2,31 +2,20 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 import { MEASUREMENTS, NO_UNIT_COST_FOR_RECIPE_EXISTS } from "../../constants";
-import { Circle, Headers, FlexRow } from "../../primitives";
+import { Circle, GlobalText, FlexRow } from "../../primitives";
 import {
   getServeWithListItem,
   calculateRecipeCost,
   getIngredientsHeader,
-  generateIngredientListItem
+  mapRecipeIngredientsToListItems
 } from "../../utils/global";
 
 import { CentredOnPhone } from "../CentredOnPhone";
 import { UnorderedList } from "../UnorderedList";
 import { VisibilityToggle } from "../VisibilityToggle";
 
-type IStyledH3 = { favourite?: boolean };
-const StyledH3 = styled(Headers.H3)`
-  font-weight: 300;
-  flex: 1;
+const { RecipeCardTitle } = GlobalText;
 
-  ${(props: IStyledH3) =>
-    props.favourite &&
-    css`
-      ::before {
-        content: "♥ ";
-      }
-    `}
-`;
 const StyledImage = styled.img(
   ({
     theme: {
@@ -77,35 +66,12 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
     ? getIngredientsHeader({ makes, defaultIngredientsHeader })
     : defaultIngredientsHeader;
 
-  const mapIngredientsToListItemsWithPaddingFlags = (
-    ingredientsGroups: Array<Array<IRecipeIngredient>>
-  ): Array<IListItemWithPaddingTopFlag> => {
-    let ingredientsWithPaddingFlags: Array<IListItemWithPaddingTopFlag> = [];
-
-    ingredientsGroups.map(
-      (ingredientsGroup: Array<IRecipeIngredient>, INDEX_HIGH: number) => {
-        ingredientsGroup.map(
-          (ingredient: IRecipeIngredient, INDEX_LOW: number) => {
-            ingredientsWithPaddingFlags.push({
-              text: generateIngredientListItem(ingredient),
-              addPaddingTop: INDEX_HIGH !== 0 && INDEX_LOW === 0
-            });
-            return null;
-          }
-        );
-        return null;
-      }
-    );
-
-    return ingredientsWithPaddingFlags;
-  };
-
   return (
     <VisibilityToggle
       expandedAutomatically={newRecipe}
       headerComponent={
         <FlexRow>
-          <StyledH3 favourite={favourite}>{title}</StyledH3>
+          <RecipeCardTitle favourite={favourite}>{title}</RecipeCardTitle>
           <Circle fontSize="13px" size="25px" invert color={diet.color}>
             {diet.abbreviation}
           </Circle>
@@ -115,7 +81,7 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
       <RecipeBody>
         <UnorderedList
           title={ingredientsHeader}
-          items={mapIngredientsToListItemsWithPaddingFlags(ingredients)}
+          items={mapRecipeIngredientsToListItems(ingredients)}
         />
 
         {serveWith && (

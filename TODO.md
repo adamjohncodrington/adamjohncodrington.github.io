@@ -11,7 +11,6 @@
   - `RecipeCard`
   - `RecipeCardHeader`
   - `RecipeCardIngredients`
-- move all instances of `Text.ts` to the file itself, with loads of exports such as `PageTitleText`, `SectionTitleText`, etc.
 - review semantics of page structure, landmarks, accessibility, etc.
 
 ## TypeScript
