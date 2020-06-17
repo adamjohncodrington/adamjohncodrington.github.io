@@ -1,7 +1,7 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "../../../constants";
 import { PHOTOS } from "../../../resources";
 
-const ingredients: IRecipeIngredients = [
+const ingredients: Array<Array<IRecipeIngredient>> = [
   [
     { ingredient: INGREDIENTS.POTATO_BAKING, quantity: 3 },
     {

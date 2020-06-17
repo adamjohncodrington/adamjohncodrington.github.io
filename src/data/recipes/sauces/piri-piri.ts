@@ -1,7 +1,7 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "../../../constants";
 import { PHOTOS } from "../../../resources";
 
-const ingredients: IRecipeIngredients = [
+const ingredients: Array<Array<IRecipeIngredient>> = [
   [
     { ingredient: INGREDIENTS.PEPPER_RED, quantity: 1 },
     { ingredient: INGREDIENTS.ONION_WHITE_MEDIUM, quantity: 1 },

@@ -4,7 +4,7 @@ import { recipeMethodEntries } from "../../../utils/global";
 
 const { preheatOven, bakeForAbout } = recipeMethodEntries();
 
-const ingredients: IRecipeIngredients = [
+const ingredients: Array<Array<IRecipeIngredient>> = [
   [
     { ingredient: INGREDIENTS.POTATO_BAKING, quantity: 3 },
     { ingredient: INGREDIENTS.POTATO_SWEET, quantity: 2 },

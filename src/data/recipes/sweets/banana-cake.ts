@@ -10,7 +10,7 @@ const {
   transferToLoafTin
 } = recipeMethodEntries();
 
-const ingredients: IRecipeIngredients = [
+const ingredients: Array<Array<IRecipeIngredient>> = [
   [
     { ingredient: INGREDIENTS.BANANA, quantity: 4, notes: "very ripe" },
     {

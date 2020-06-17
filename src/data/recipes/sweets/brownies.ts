@@ -4,7 +4,7 @@ import { recipeMethodEntries } from "../../../utils/global";
 
 const { preheatOven, FOLD_IN_FLOUR_MIX, bakeForAbout } = recipeMethodEntries();
 
-const ingredients: IRecipeIngredients = [
+const ingredients: Array<Array<IRecipeIngredient>> = [
   [
     {
       ingredient: INGREDIENTS.CHOCOLATE_DARK,

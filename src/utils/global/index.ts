@@ -1,5 +1,5 @@
 export { calculateRecipeCost } from "./calculateRecipeCost";
-export { concatenateMakesWithDefaultIngredientsHeader } from "./concatenateMakesWithDefaultIngredientsHeader";
+export { getIngredientsHeader } from "./getIngredientsHeader";
 export { daysToGo } from "./daysToGo";
 export { getDisplayDateText } from "./getDisplayDateText";
 export { getCountdownText } from "./getCountdownText";

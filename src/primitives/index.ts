@@ -1,6 +1,5 @@
 export { Circle } from "./Circle";
 export { FlexRow, FlexColumn } from "./Flex";
-export { Headers } from "./Headers";
-export { Ul } from "./Lists";
+export { Link } from "./Link";
 export { SvgIcon } from "./SvgIcon";
-export { Text } from "./Text";
+export { Text, Headers } from "./Text";

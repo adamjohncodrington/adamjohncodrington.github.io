@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { FlexRow, Text } from "../primitives";
+import { FlexRow, Text } from "../../primitives";
 
 interface ListEntryProps extends ThemeProps {
   favourite?: boolean;

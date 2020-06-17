@@ -2,10 +2,15 @@ import { MEASUREMENTS } from "../../constants";
 
 import { concatenateQuantityAndMeasurement } from "../local";
 
-export const concatenateMakesWithDefaultIngredientsHeader = (
-  makes: IRecipeMakes,
-  defaultIngredientsHeader: string
-): string => {
+interface IGetIngredientsHeader {
+  defaultIngredientsHeader: string;
+  makes: IRecipeMakes;
+}
+
+export const getIngredientsHeader = ({
+  makes,
+  defaultIngredientsHeader
+}: IGetIngredientsHeader): string => {
   const { quantity, measurement } = makes;
 
   const quantitySpaceMeasurement: string =

@@ -40,7 +40,6 @@ interface IRecipeDiet {
   abbreviation: string;
   color: string;
 }
-type IRecipeIngredients = Array<Array<IRecipeIngredient>>;
 type IRecipeMethod = Array<string>;
 
 type IMeasurements = { [measurement: string]: IIngredientMeasurement };
@@ -50,7 +49,7 @@ interface IRecipeCard {
   makes?: IRecipeMakes;
   image?: IRecipeImage;
   serveWith?: Array<Array<IServeWithItem>>;
-  ingredients: IRecipeIngredients;
+  ingredients: Array<Array<IRecipeIngredient>>;
   diet: IRecipeDiet;
   method?: IRecipeMethod;
   favourite?: boolean;

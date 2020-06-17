@@ -1,8 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { StyledLink } from "./StyledLink";
-import { PAGE_ROUTES } from "../routes";
+import { Link } from "../../primitives";
+import { PAGE_ROUTES } from "../../routes";
 
 const FlexContainer = styled.div`
   display: flex;
@@ -37,9 +37,9 @@ export const HomePage: React.FC = () => (
   <FlexContainer>
     <GridContainer>
       {PAGE_ROUTES.map(({ icon, dest }: IRoute, index: number) => (
-        <StyledLink key={index} to={dest}>
+        <Link key={index} to={dest}>
           <StyledSvg src={icon} />
-        </StyledLink>
+        </Link>
       ))}
     </GridContainer>
   </FlexContainer>

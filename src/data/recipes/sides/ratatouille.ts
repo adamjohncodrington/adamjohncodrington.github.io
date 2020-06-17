@@ -4,7 +4,7 @@ import { recipeMethodEntries } from "../../../utils/global";
 
 const { preheatOven } = recipeMethodEntries();
 
-const ingredients: IRecipeIngredients = [
+const ingredients: Array<Array<IRecipeIngredient>> = [
   [
     { ingredient: INGREDIENTS.AUBERGINE, quantity: 1 },
     { ingredient: INGREDIENTS.PEPPER_RED, quantity: 1 },

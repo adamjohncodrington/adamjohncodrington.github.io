@@ -3,7 +3,7 @@ import { recipeMethodEntries } from "../../../utils/global";
 
 const { preheatOven } = recipeMethodEntries();
 
-const ingredients: IRecipeIngredients = [
+const ingredients: Array<Array<IRecipeIngredient>> = [
   [
     { ingredient: INGREDIENTS.CAULIFLOWER_REGULAR, quantity: 1 },
     {

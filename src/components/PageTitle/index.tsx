@@ -1,8 +1,7 @@
 import React from "react";
 import styled, { ThemeContext } from "styled-components";
 
-import { FlexRow, Headers, Text, SvgIcon } from "../primitives";
-import { StyledLink } from "./StyledLink";
+import { FlexRow, Headers, Text, SvgIcon, Link } from "../../primitives";
 
 const { H1 } = Headers;
 
@@ -59,11 +58,11 @@ export const PageTitle: React.FC<PageTitleProps> = ({
         )}
       </TitleTextContainer>
 
-      <StyledLink data-test="page-title-link" to="/">
+      <Link data-test="page-title-link" to="/">
         <SvgContainer>
           <SvgIcon icon={icon} size={theme.page.icon.size} />
         </SvgContainer>
-      </StyledLink>
+      </Link>
     </PaddedFlexRow>
   );
 };

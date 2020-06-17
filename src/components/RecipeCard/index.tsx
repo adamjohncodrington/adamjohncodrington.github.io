@@ -2,14 +2,31 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 import { MEASUREMENTS, NO_UNIT_COST_FOR_RECIPE_EXISTS } from "../../constants";
-import { getServeWithListItem, calculateRecipeCost } from "../../utils/global";
+import { Circle, Headers, FlexRow } from "../../primitives";
+import {
+  getServeWithListItem,
+  calculateRecipeCost,
+  getIngredientsHeader,
+  generateIngredientListItem
+} from "../../utils/global";
 
 import { CentredOnPhone } from "../CentredOnPhone";
 import { UnorderedList } from "../UnorderedList";
 import { VisibilityToggle } from "../VisibilityToggle";
-import { RecipeCardHeader } from "./RecipeCardHeader";
-import { RecipeCardIngredients } from "./RecipeCardIngredients";
 
+type IStyledH3 = { favourite?: boolean };
+const StyledH3 = styled(Headers.H3)`
+  font-weight: 300;
+  flex: 1;
+
+  ${(props: IStyledH3) =>
+    props.favourite &&
+    css`
+      ::before {
+        content: "♥ ";
+      }
+    `}
+`;
 const StyledImage = styled.img(
   ({
     theme: {
@@ -23,7 +40,6 @@ const StyledImage = styled.img(
   `
 );
 
-//TODO: move these px values to theme
 const RecipeBody = styled.div`
   padding-top: 5px;
 
@@ -56,33 +72,82 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
     recipeTitle: title
   });
 
+  const defaultIngredientsHeader: string = "ingredients";
+  const ingredientsHeader: string = makes
+    ? getIngredientsHeader({ makes, defaultIngredientsHeader })
+    : defaultIngredientsHeader;
+
+  const mapIngredientsToListItemsWithPaddingFlags = (
+    ingredientsGroups: Array<Array<IRecipeIngredient>>
+  ): Array<IListItemWithPaddingTopFlag> => {
+    let ingredientsWithPaddingFlags: Array<IListItemWithPaddingTopFlag> = [];
+
+    ingredientsGroups.map(
+      (ingredientsGroup: Array<IRecipeIngredient>, INDEX_HIGH: number) => {
+        ingredientsGroup.map(
+          (ingredient: IRecipeIngredient, INDEX_LOW: number) => {
+            ingredientsWithPaddingFlags.push({
+              text: generateIngredientListItem(ingredient),
+              addPaddingTop: INDEX_HIGH !== 0 && INDEX_LOW === 0
+            });
+            return null;
+          }
+        );
+        return null;
+      }
+    );
+
+    return ingredientsWithPaddingFlags;
+  };
+
   return (
     <VisibilityToggle
       expandedAutomatically={newRecipe}
       headerComponent={
-        <RecipeCardHeader title={title} diet={diet} favourite={favourite} />
+        <FlexRow>
+          <StyledH3 favourite={favourite}>{title}</StyledH3>
+          <Circle fontSize="13px" size="25px" invert color={diet.color}>
+            {diet.abbreviation}
+          </Circle>
+        </FlexRow>
       }
     >
       <RecipeBody>
-        <RecipeCardIngredients makes={makes} ingredients={ingredients} />
+        <UnorderedList
+          title={ingredientsHeader}
+          items={mapIngredientsToListItemsWithPaddingFlags(ingredients)}
+        />
 
         {serveWith && (
           <UnorderedList
             title="serve with"
-            items={serveWith.map((item: Array<IRecipeIngredient>) =>
-              getServeWithListItem(item)
+            items={serveWith.map(
+              (
+                item: Array<IRecipeIngredient>
+              ): IListItemWithPaddingTopFlag => ({
+                text: getServeWithListItem(item),
+                addPaddingTop: false
+              })
             )}
           />
         )}
-
-        {method && <UnorderedList title="method" items={method} showBullets />}
-
+        {method && (
+          <UnorderedList
+            title="method"
+            items={method.map(
+              (item: string): IListItemWithPaddingTopFlag => ({
+                text: item,
+                addPaddingTop: false
+              })
+            )}
+            showBullets
+          />
+        )}
         {image && (
           <CentredOnPhone>
             <StyledImage src={image} />
           </CentredOnPhone>
         )}
-
         <CentredOnPhone>
           <div>
             approx. <strong>{displayCost}</strong> to make

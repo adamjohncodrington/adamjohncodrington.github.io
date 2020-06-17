@@ -8,7 +8,7 @@ const {
   bakeForAbout
 } = recipeMethodEntries();
 
-const ingredients: IRecipeIngredients = [
+const ingredients: Array<Array<IRecipeIngredient>> = [
   [
     {
       ingredient: INGREDIENTS.MILK_COCONUT_CANNED,

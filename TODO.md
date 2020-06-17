@@ -2,7 +2,17 @@
 
 ## Refactoring
 
+- add `dataFactory` files, nest all components in their own folders
+- move final remaining instances of `px` to `theme`
+  - `CountedListItem`
+  - `EventCard`
+  - `UnorderedList`
+  - `PageSection`
+  - `RecipeCard`
+  - `RecipeCardHeader`
+  - `RecipeCardIngredients`
 - move all instances of `Text.ts` to the file itself, with loads of exports such as `PageTitleText`, `SectionTitleText`, etc.
+- review semantics of page structure, landmarks, accessibility, etc.
 
 ## TypeScript
 
@@ -18,7 +28,3 @@
 ## Data
 
 - store data to a database and call with APIs
-
-## Fix
-
-- do not use `•` in lists, figure out why the CSS is suppressing it

@@ -1,12 +1,12 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { FlexColumn, FlexRow, Text } from "../primitives";
+import { FlexColumn, FlexRow, Text } from "../../primitives";
 import {
   daysToGo,
   getDisplayDateText,
   getCountdownText
-} from "../utils/global";
+} from "../../utils/global";
 
 type EventCardTitleProps = {
   favourite: boolean;

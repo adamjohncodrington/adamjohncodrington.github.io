@@ -76,3 +76,8 @@ interface IRoute extends IHomepageRoute {
 
 type IconsObject = { [iconName: string]: IImageSrc };
 type PhotosObject = { [photoName: string]: IImageSrc };
+
+interface IListItemWithPaddingTopFlag {
+  text: string;
+  addPaddingTop?: boolean;
+}

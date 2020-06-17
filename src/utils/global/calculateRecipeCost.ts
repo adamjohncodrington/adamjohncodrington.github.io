@@ -9,7 +9,7 @@ import {
 } from "../local";
 
 interface ICalculateRecipeCost {
-  ingredients: IRecipeIngredients;
+  ingredients: Array<Array<IRecipeIngredient>>;
   yieldQuantity?: IIngredientQuantity;
   recipeTitle: string;
 }

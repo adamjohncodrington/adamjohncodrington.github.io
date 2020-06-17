@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { PageTitle } from "./PageTitle";
+import { PageTitle } from "../PageTitle";
 
 const StyledPageShell = styled.section`
   padding: ${props => props.theme.page.shell.padding};
