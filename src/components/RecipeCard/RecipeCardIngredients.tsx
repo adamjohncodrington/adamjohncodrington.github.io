@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Ul, Li } from "../../primitives";
+import { Ul } from "../../primitives";
 import {
   concatenateMakesWithDefaultIngredientsHeader,
   generateIngredientListItem
@@ -35,7 +35,7 @@ export const RecipeCardIngredients: React.FC<IRecipeCardIngredients> = ({
 
   return (
     <Ul>
-      {ingredientsHeader}
+      <strong>{ingredientsHeader}</strong>
 
       {ingredientsAreSeparated
         ? ingredients.map(
@@ -43,16 +43,16 @@ export const RecipeCardIngredients: React.FC<IRecipeCardIngredients> = ({
               <IngredientSection key={index}>
                 {ingredientSection.map(
                   (ingredient: IRecipeIngredient, subIndex: number) => (
-                    <Li key={subIndex}>
+                    <li key={subIndex}>
                       {generateIngredientListItem(ingredient)}
-                    </Li>
+                    </li>
                   )
                 )}
               </IngredientSection>
             )
           )
         : ingredients[0].map((ingredient: IRecipeIngredient, index: number) => (
-            <Li key={index}>{generateIngredientListItem(ingredient)}</Li>
+            <li key={index}>{generateIngredientListItem(ingredient)}</li>
           ))}
     </Ul>
   );
