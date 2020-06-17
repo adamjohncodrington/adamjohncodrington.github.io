@@ -93,7 +93,7 @@ const ingredients: IRecipeIngredients = [
   ]
 ];
 
-const serveWith: IServeWith = [
+const serveWith: Array<Array<IServeWithItem>> = [
   [{ ingredient: INGREDIENTS.ASPARAGUS, notes: "pan-fried" }]
 ];
 

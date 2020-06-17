@@ -8,11 +8,11 @@ import {
   getCountdownText
 } from "../utils/global";
 
-interface IEventCardTitle {
+type EventCardTitleProps = {
   favourite: boolean;
-}
+};
 const Title = styled(Text.P.M)`
-  ${({ favourite }: IEventCardTitle) =>
+  ${({ favourite }: EventCardTitleProps) =>
     favourite &&
     css`
       ::before {
@@ -55,7 +55,6 @@ export const EventCard: React.FC<IEventCard> = ({
   favourite,
   body,
   dates,
-  company,
   disclaimer
 }) => {
   const daysTilGig: number = daysToGo(dates);

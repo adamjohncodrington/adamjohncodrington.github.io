@@ -78,7 +78,9 @@ const ingredients: IRecipeIngredients = [
   ]
 ];
 
-const serveWith: IServeWith = [[{ ingredient: INGREDIENTS.RICE_BASMATI }]];
+const serveWith: Array<Array<IServeWithItem>> = [
+  [{ ingredient: INGREDIENTS.RICE_BASMATI }]
+];
 
 const method: IRecipeMethod = [
   "mix cornflour with water, set solution aside",

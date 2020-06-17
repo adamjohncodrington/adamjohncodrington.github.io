@@ -101,7 +101,9 @@ const ingredients: IRecipeIngredients = [
   ]
 ];
 
-const serveWith: IServeWith = [[{ ingredient: INGREDIENTS.BREAD_GARLIC }]];
+const serveWith: Array<Array<IServeWithItem>> = [
+  [{ ingredient: INGREDIENTS.BREAD_GARLIC }]
+];
 
 const method: IRecipeMethod = [
   "fry diced onion in oil and water for at least 5 minutes",

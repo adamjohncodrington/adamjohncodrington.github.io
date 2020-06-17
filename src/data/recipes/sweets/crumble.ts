@@ -59,7 +59,9 @@ const ingredients: IRecipeIngredients = [
   ]
 ];
 
-const serveWith: IServeWith = [[{ ingredient: INGREDIENTS.CREAM_OAT }]];
+const serveWith: Array<Array<IServeWithItem>> = [
+  [{ ingredient: INGREDIENTS.CREAM_OAT }]
+];
 
 const method: IRecipeMethod = [
   preheatOven({ degreesCelcius: 160 }),
