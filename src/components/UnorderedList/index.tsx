@@ -9,7 +9,7 @@ const StyledLi = styled.li`
   ${({ showBullets }: StyledLiProps) =>
     showBullets &&
     css`
-      margin-left: 16px;
+      margin-left: 18px;
     `}
 
   ${({ addPaddingTop }: StyledLiProps) =>
