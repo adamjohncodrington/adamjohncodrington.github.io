@@ -1,14 +1,17 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-interface StyledLiProps {
-  addPaddingTop?: boolean;
+interface StyledLiProps extends ThemeProps {
+  addPaddingTop: boolean | undefined;
 }
 const StyledLi = styled.li`
-  ${({ addPaddingTop }: StyledLiProps) =>
+  ${({
+    addPaddingTop,
+    theme: { listItemGroupVerticalSpacing }
+  }: StyledLiProps) =>
     addPaddingTop &&
     css`
-      padding-top: 10px;
+      padding-top: ${listItemGroupVerticalSpacing};
     `}
 `;
 

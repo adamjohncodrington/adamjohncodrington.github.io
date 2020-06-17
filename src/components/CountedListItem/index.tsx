@@ -1,12 +1,63 @@
 import React from "react";
+import styled, { css } from "styled-components";
 
-import { FlexRow, GlobalText } from "../../primitives";
+import { FlexRow } from "../../primitives";
 
-const {
-  ListEntry,
-  CountedListItemFutureCount,
-  CountedListItemPastCount
-} = GlobalText;
+interface ICountedListItemPastCount extends ThemeProps {
+  leaderboard: boolean;
+}
+const CountedListItemPastCount = styled.span`
+  ${({
+    leaderboard,
+    theme: {
+      section: {
+        body: {
+          countedList: {
+            count: { width },
+            leaderboardAdditonalHorizontalSpace
+          }
+        }
+      }
+    }
+  }: ICountedListItemPastCount) => css`
+    font-weight: bold;
+    text-align: right;
+    width: ${width};
+    margin-left: ${leaderboard ? leaderboardAdditonalHorizontalSpace : 0};
+  `}
+`;
+
+const CountedListItemFutureCount = styled(CountedListItemPastCount)`
+  opacity: ${(props: ThemeProps) => props.theme.fadedOpacity};
+`;
+
+interface ListEntryProps extends ThemeProps {
+  favourite?: boolean;
+  star?: boolean;
+  faded: boolean;
+}
+
+const ListEntry = styled.span`
+  ${(props: ListEntryProps) =>
+    props.favourite &&
+    css`
+      ::before {
+        content: "♥ ";
+      }
+    `}
+
+  ${(props: ListEntryProps) =>
+    props.star &&
+    css`
+      ::before {
+        content: "★ ";
+      }
+    `}
+
+  flex: 1;
+  ${(props: ListEntryProps) =>
+    props.faded && `opacity: ${props.theme.fadedOpacity};`}
+`;
 
 export const CountedListItem: React.FC<ICountedListItem> = ({
   listEntry,

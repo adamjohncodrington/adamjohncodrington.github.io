@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { PageTitle } from "../PageTitle";
+import { PageTitleComponent } from "../PageTitle";
 
 const StyledPageShell = styled.section`
   padding: ${props => props.theme.page.shell.padding};
@@ -24,7 +24,7 @@ export const PageShell: React.FC<PageShellProps> = ({
 
   return (
     <StyledPageShell data-test="page-shell">
-      <PageTitle
+      <PageTitleComponent
         titleText={title}
         pastCount={pastCount}
         futureCount={futureCount}

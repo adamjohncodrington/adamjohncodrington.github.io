@@ -1,15 +1,23 @@
 import React from "react";
 import styled, { ThemeContext } from "styled-components";
 
-import { FlexRow, GlobalText, SvgIcon, Link } from "../../primitives";
+import { FlexRow, Headers, SvgIcon, Link } from "../../primitives";
 
-const { PageTitlePrimaryCount, PageTitleSecondaryCount } = GlobalText;
+const { PageTitle } = Headers;
 
 const TitleTextContainer = styled.div`
   display: flex;
   flex: 1;
   text-transform: lowercase;
   margin-bottom: ${props => props.theme.page.header.margin.bottom};
+`;
+
+const PageTitlePrimaryCount = styled.span`
+  padding: ${props => props.theme.page.count.padding};
+`;
+
+const PageTitleSecondaryCount = styled(PageTitlePrimaryCount)`
+  opacity: ${props => props.theme.fadedOpacity};
 `;
 
 const PaddedFlexRow = styled(FlexRow)`
@@ -27,7 +35,7 @@ interface PageTitleProps {
   icon: IImageSrc;
 }
 
-export const PageTitle: React.FC<PageTitleProps> = ({
+export const PageTitleComponent: React.FC<PageTitleProps> = ({
   titleText,
   pastCount,
   futureCount,
@@ -38,9 +46,7 @@ export const PageTitle: React.FC<PageTitleProps> = ({
   return (
     <PaddedFlexRow data-test="page-title-container">
       <TitleTextContainer data-test="page-title-text-container">
-        <GlobalText.PageTitle data-test="page-title-text">
-          {titleText}
-        </GlobalText.PageTitle>
+        <PageTitle data-test="page-title-text">{titleText}</PageTitle>
 
         {!!pastCount && pastCount > 0 && (
           <PageTitlePrimaryCount data-test="page-title-past-count">

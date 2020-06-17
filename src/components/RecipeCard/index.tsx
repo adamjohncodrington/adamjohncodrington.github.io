@@ -1,45 +1,24 @@
 import React from "react";
-import styled, { css } from "styled-components";
 
 import { MEASUREMENTS, NO_UNIT_COST_FOR_RECIPE_EXISTS } from "../../constants";
-import { Circle, GlobalText, FlexRow } from "../../primitives";
-import {
-  getServeWithListItem,
-  calculateRecipeCost,
-  getIngredientsHeader,
-  mapRecipeIngredientsToListItems
-} from "../../utils/global";
+import { Circle, FlexRow, SeventyFivePercentSpan } from "../../primitives";
+import { calculateRecipeCost, getIngredientsHeader } from "../../utils/global";
 
 import { CentredOnPhone } from "../CentredOnPhone";
 import { UnorderedList } from "../UnorderedList";
 import { VisibilityToggle } from "../VisibilityToggle";
 
-const { RecipeCardTitle } = GlobalText;
-
-const StyledImage = styled.img(
-  ({
-    theme: {
-      recipe: {
-        image: { size }
-      }
-    }
-  }: ThemeProps) => css`
-    height: ${size};
-    width: ${size};
-  `
-);
-
-const RecipeBody = styled.div`
-  padding-top: 5px;
-
-  > * {
-    padding: 10px 0 5px;
-  }
-`;
-
-const UnitCostsContainer = styled.div`
-  font-size: 80%;
-`;
+import {
+  mapMethodToListItems,
+  mapServeWithToListItems,
+  mapRecipeIngredientsToListItems
+} from "./dataFactory";
+import {
+  StyledRecipeCardTitle,
+  RecipeBody,
+  StyledImage,
+  PaddedFlexColumn
+} from "./styles";
 
 export const RecipeCard: React.FC<IRecipeCard> = ({
   title,
@@ -55,7 +34,7 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
 }) => {
   if (hide) return null;
 
-  const { displayCost, displayUnitCost } = calculateRecipeCost({
+  const { costDisplayText, unitCostDisplayText } = calculateRecipeCost({
     ingredients,
     yieldQuantity: makes && makes.quantity,
     recipeTitle: title
@@ -71,7 +50,9 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
       expandedAutomatically={newRecipe}
       headerComponent={
         <FlexRow>
-          <RecipeCardTitle favourite={favourite}>{title}</RecipeCardTitle>
+          <StyledRecipeCardTitle favourite={favourite}>
+            {title}
+          </StyledRecipeCardTitle>
           <Circle fontSize="13px" size="25px" invert color={diet.color}>
             {diet.abbreviation}
           </Circle>
@@ -87,46 +68,40 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
         {serveWith && (
           <UnorderedList
             title="serve with"
-            items={serveWith.map(
-              (
-                item: Array<IRecipeIngredient>
-              ): IListItemWithPaddingTopFlag => ({
-                text: getServeWithListItem(item),
-                addPaddingTop: false
-              })
-            )}
+            items={mapServeWithToListItems(serveWith)}
           />
         )}
+
         {method && (
           <UnorderedList
             title="method"
-            items={method.map(
-              (item: string): IListItemWithPaddingTopFlag => ({
-                text: item,
-                addPaddingTop: false
-              })
-            )}
+            items={mapMethodToListItems(method)}
             showBullets
           />
         )}
+
         {image && (
           <CentredOnPhone>
             <StyledImage src={image} />
           </CentredOnPhone>
         )}
+
         <CentredOnPhone>
-          <div>
-            approx. <strong>{displayCost}</strong> to make
-            {displayUnitCost !== NO_UNIT_COST_FOR_RECIPE_EXISTS &&
+          <PaddedFlexColumn>
+            <span>
+              approx. <strong>{costDisplayText}</strong> to make
+            </span>
+
+            {unitCostDisplayText !== NO_UNIT_COST_FOR_RECIPE_EXISTS &&
               makes &&
               makes.measurement &&
               makes.quantity > 1 &&
               makes.measurement !== MEASUREMENTS.GRAM && (
-                <UnitCostsContainer>
-                  <strong>{displayUnitCost}</strong> per {makes.measurement}
-                </UnitCostsContainer>
+                <SeventyFivePercentSpan>
+                  <strong>{unitCostDisplayText}</strong> per {makes.measurement}
+                </SeventyFivePercentSpan>
               )}
-          </div>
+          </PaddedFlexColumn>
         </CentredOnPhone>
       </RecipeBody>
     </VisibilityToggle>

@@ -2,6 +2,8 @@ import { rgba } from "polished";
 
 import { COLORS } from "./colors";
 
+const countMarginLeft: PxValue = "5px";
+
 const BORDER_BLACK_THIN: IBorder = `1px solid ${COLORS.black}`;
 const BORDER_GRAY_THIN: IBorder = `1px solid ${COLORS.gray}`;
 
@@ -10,7 +12,7 @@ const HOME_PAGE_THEME: ITheme_Homepage = {
 };
 
 const PAGE_THEME: ITheme_Page = {
-  count: { padding: "12px 0 0 7px" },
+  count: { padding: `12px 0 0 ${countMarginLeft}` },
   header: { margin: { bottom: "30px" } },
   icon: { margin: { top: "15px" }, size: "60px" },
   shell: { padding: "25px 20px" }
@@ -18,18 +20,22 @@ const PAGE_THEME: ITheme_Page = {
 
 const SECTION_THEME: ITheme_Section = {
   body: {
-    basicList: {
+    countedList: {
       border: { bottom: BORDER_GRAY_THIN },
       count: { width: "25px" },
-      padding: { vertical: "5px" }
+      padding: { vertical: "5px" },
+      leaderboardAdditonalHorizontalSpace: "10px"
     },
-    eventCardList: { padding: { vertical: "10px" } },
+    eventCardList: {
+      padding: { vertical: "10px" },
+      finalEventCardPaddingBottom: "5px"
+    },
     padding: { bottom: "5px" }
   },
   border: { bottom: BORDER_BLACK_THIN },
   borderRadius: "10px",
   boxShadow: `0 1px 2px ${rgba(COLORS.gray, 0.5)}`,
-  count: { margin: { left: "5px" } },
+  count: { margin: { left: countMarginLeft } },
   header: { padding: "12px 0" },
   icon: { padding: { top: "2px" }, size: "34px" },
   margin: { bottom: "20px" },
@@ -64,5 +70,7 @@ export const THEME: ITheme = {
 
   colors: COLORS,
   scrollbarSize,
-  fontFamily
+  fontFamily,
+
+  listItemGroupVerticalSpacing: "10px"
 };

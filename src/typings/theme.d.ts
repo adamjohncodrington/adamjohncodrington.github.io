@@ -14,12 +14,11 @@ type ImageSize = PxValue;
 type SvgSize = PxValue;
 
 interface IFontSizes {
+  XxL: RemValue;
   XL: RemValue;
   L: RemValue;
   M: RemValue;
-  SM: RemValue;
   S: RemValue;
-  XS: RemValue;
 }
 
 type IBoxShadow = string;
@@ -36,12 +35,16 @@ interface ITheme_Homepage {
 
 interface ITheme_Section {
   body: {
-    basicList: {
+    countedList: {
       border: { bottom: IBorder };
       count: { width: PxValue };
       padding: { vertical: PaddingValue };
+      leaderboardAdditonalHorizontalSpace: PxValue;
     };
-    eventCardList: { padding: { vertical: PaddingValue } };
+    eventCardList: {
+      padding: { vertical: PaddingValue };
+      finalEventCardPaddingBottom: PxValue;
+    };
     padding: { bottom: PxValue };
   };
   border: { bottom: IBorder };
@@ -87,6 +90,8 @@ type ITheme = {
   colors: IColors;
   scrollbarSize: IScrollbarSize;
   fontFamily: IFontFamily;
+
+  listItemGroupVerticalSpacing: PxValue;
 };
 
 type ThemeProps = { theme: ITheme };

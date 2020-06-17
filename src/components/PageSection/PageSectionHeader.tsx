@@ -1,11 +1,9 @@
 import React, { useContext } from "react";
 import styled, { ThemeContext } from "styled-components";
 
-import { GlobalText, SvgIcon } from "../../primitives";
+import { SvgIcon, Headers } from "../../primitives";
 
-const { PageSectionTitle } = GlobalText;
-
-const { PageSectionPrimaryCount, PageSectionSecondaryCount } = GlobalText;
+const { PageSectionTitle } = Headers;
 
 const PageSectionHeaderContainer = styled.div`
   display: flex;
@@ -15,6 +13,14 @@ const PageSectionHeaderContainer = styled.div`
 const TextContainer = styled.div`
   display: flex;
   flex: 1;
+`;
+
+const PageSectionPrimaryCount = styled.span`
+  margin-left: ${props => props.theme.section.count.margin.left};
+`;
+
+const PageSectionSecondaryCount = styled(PageSectionPrimaryCount)`
+  opacity: ${props => props.theme.fadedOpacity};
 `;
 
 const StyledIcon = styled(SvgIcon)`

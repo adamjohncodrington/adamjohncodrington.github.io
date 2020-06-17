@@ -2,22 +2,13 @@
 
 ## Refactoring
 
-- add `dataFactory` files, nest all components in their own folders
-- move final remaining instances of `px` to `theme`
-  - `CountedListItem`
-  - `EventCard`
-  - `UnorderedList`
-  - `PageSection`
-  - `RecipeCard`
-  - `RecipeCardHeader`
-  - `RecipeCardIngredients`
 - review semantics of page structure, landmarks, accessibility, etc.
+- move final instances of `px` (in `EventCard` and `RecipeCard`) to `theme`
 
 ## TypeScript
 
-- remove all instances of `any`
+- remove instances of `any` and `@ts-ignore` where possible
 - add absolute paths/imports
-- remove all instances of `@ts-ignore` where possible
 
 ## Tests
 

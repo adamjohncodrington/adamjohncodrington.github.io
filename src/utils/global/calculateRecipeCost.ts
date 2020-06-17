@@ -18,7 +18,10 @@ export const calculateRecipeCost = ({
   ingredients,
   yieldQuantity,
   recipeTitle
-}: ICalculateRecipeCost): { displayCost: string; displayUnitCost: string } => {
+}: ICalculateRecipeCost): {
+  costDisplayText: string;
+  unitCostDisplayText: string;
+} => {
   if (CONSOLE_LOG_RECIPE_COST_CALCULATIONS) consoleLogRecipeTitle(recipeTitle);
 
   let runningRecipeCost: number = 5;
@@ -26,12 +29,19 @@ export const calculateRecipeCost = ({
   ingredients.map(ingredientSection => {
     ingredientSection.map(recipeIngredient => {
       // @ts-ignore
-      runningRecipeCost += calculateIngredientCost(recipeIngredient);
+      const recipeIngredientCost = calculateIngredientCost(recipeIngredient);
+
+      runningRecipeCost += recipeIngredientCost;
 
       if (CONSOLE_LOG_RECIPE_COST_CALCULATIONS) {
         const { quantity, measurement, ingredient } = recipeIngredient;
-        //@ts-ignore
-        consoleLogCostedIngredient({ cost, quantity, measurement, ingredient });
+        consoleLogCostedIngredient({
+          cost: recipeIngredientCost,
+          //@ts-ignore
+          quantity,
+          measurement,
+          ingredient
+        });
       }
 
       return null;
@@ -41,10 +51,10 @@ export const calculateRecipeCost = ({
 
   const unitCost: number | undefined =
     yieldQuantity && runningRecipeCost / yieldQuantity;
-  const displayCost: string = numberToCurrencyString(runningRecipeCost, 1);
-  const displayUnitCost: string = unitCost
+  const costDisplayText: string = numberToCurrencyString(runningRecipeCost, 1);
+  const unitCostDisplayText: string = unitCost
     ? numberToCurrencyString(unitCost, 1)
     : NO_UNIT_COST_FOR_RECIPE_EXISTS;
 
-  return { displayCost, displayUnitCost };
+  return { costDisplayText, unitCostDisplayText };
 };

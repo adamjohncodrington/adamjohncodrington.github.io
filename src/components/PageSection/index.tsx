@@ -22,44 +22,56 @@ interface SectionBodyProps extends ThemeProps {
   isEventCards: boolean;
 }
 const SectionBody = styled.div`
-  ${({ theme, isEventCards }: SectionBodyProps) => css`
-    padding-bottom: ${theme.section.body.padding.bottom};
-
-    > * {
-      border-bottom: ${theme.section.body.basicList.border.bottom};
-      padding: ${isEventCards
-        ? `${theme.section.body.eventCardList.padding.vertical} 0`
-        : `${theme.section.body.basicList.padding.vertical} 0`};
+  ${({
+    isEventCards,
+    theme: {
+      section: { body }
     }
+  }: SectionBodyProps) => {
+    const { padding, countedList, eventCardList } = body;
 
-    > *:last-child {
-      ${isEventCards && `padding-bottom: 5px;`}
-      border-bottom: 0;
-    }
+    return css`
+      padding-bottom: ${padding.bottom};
 
-    ${isEventCards &&
-    css`
-      > *:first-child {
-        padding-top: 0;
+      > * {
+        border-bottom: ${countedList.border.bottom};
+        padding: ${isEventCards
+          ? `${eventCardList.padding.vertical} 0`
+          : `${countedList.padding.vertical} 0`};
       }
-    `}
-  `}
+
+      > *:last-child {
+        ${isEventCards &&
+        `padding-bottom: ${eventCardList.finalEventCardPaddingBottom};`}
+        border-bottom: 0;
+      }
+
+      ${isEventCards &&
+      css`
+        > *:first-child {
+          padding-top: 0;
+        }
+      `}
+    `;
+  }}
 `;
 
 const RecipeGroupBody = styled.div`
-  > * {
-    border-bottom: ${props => props.theme.recipe.border.bottom};
-    padding: ${props => props.theme.recipe.title.padding.vertical} 0;
-  }
+  ${({ theme: { recipe } }: ThemeProps) => css`
+    > * {
+      border-bottom: ${recipe.border.bottom};
+      padding: ${recipe.title.padding.vertical} 0;
+    }
 
-  > *:first-child {
-    padding-top: ${props => props.theme.recipe.first.padding.top};
-  }
+    > *:first-child {
+      padding-top: ${recipe.first.padding.top};
+    }
 
-  > *:last-child {
-    border-bottom: 0;
-    padding-bottom: ${props => props.theme.recipe.last.padding.bottom};
-  }
+    > *:last-child {
+      border-bottom: 0;
+      padding-bottom: ${recipe.last.padding.bottom};
+    }
+  `}
 `;
 
 export const PageSection: React.FC<IPageSection> = ({

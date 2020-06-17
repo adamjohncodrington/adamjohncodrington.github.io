@@ -1,25 +1,59 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-import { FlexColumn, FlexRow, GlobalText } from "../../primitives";
+import {
+  FlexColumn,
+  FlexRow,
+  Headers,
+  SeventyFivePercentSpan
+} from "../../primitives";
 import {
   daysToGo,
   getDisplayDateText,
   getCountdownText
 } from "../../utils/global";
 
-const {
-  EventCardTitle,
-  EventCardSubtitle,
-  EventCardDates,
-  EventCardBody,
-  EventCardCountdown,
-  EventCardDisclaimer
-} = GlobalText;
+const { EventCardTitle } = Headers;
 
-const ItalicFlexRow = styled(FlexRow)`
-  font-style: italic;
+const verticalSpaceBetweenEventCardRows: PxValue = "3px";
+
+interface EventCardTitleProps {
+  favourite: boolean;
+}
+const StyledEventCardTitle = styled(EventCardTitle)`
+  ${({ favourite }: EventCardTitleProps) =>
+    favourite &&
+    css`
+      ::before {
+        content: "♥ ";
+      }
+    `}
+
+  font-weight: bold;
+  text-transform: uppercase;
 `;
+
+const ItalicBoldFlexRow = styled(FlexRow)`
+  font-style: italic;
+
+  > *:not(:first-child) {
+    margin-top: 3px;
+    margin-left: 5px;
+  }
+`;
+
+const EventCardSubtitle = styled.span`
+  font-weight: bold;
+  text-transform: uppercase;
+`;
+
+const StyledFlexColumn = styled(FlexColumn)`
+  > *:not(:first-child) {
+    padding-top: ${verticalSpaceBetweenEventCardRows};
+  }
+`;
+
+const TitleAndSubtitle = styled.div``;
 
 export const EventCard: React.FC<IEventCard> = ({
   title,
@@ -32,36 +66,37 @@ export const EventCard: React.FC<IEventCard> = ({
   const daysTilGig: number = daysToGo(dates);
 
   return (
-    <FlexColumn data-test="event-card-container">
-      <EventCardTitle data-test="event-card-title" favourite={favourite}>
-        {title}
-      </EventCardTitle>
+    <StyledFlexColumn data-test="event-card-container">
+      <TitleAndSubtitle>
+        <StyledEventCardTitle
+          data-test="event-card-title"
+          favourite={favourite}
+        >
+          {title}
+        </StyledEventCardTitle>
 
-      {subtitle && (
-        <EventCardSubtitle data-test="event-card-subtitle">
-          {subtitle}
-        </EventCardSubtitle>
-      )}
+        {subtitle && (
+          <EventCardSubtitle data-test="event-card-subtitle">
+            {subtitle}
+          </EventCardSubtitle>
+        )}
+      </TitleAndSubtitle>
 
-      {body && (
-        <EventCardBody data-test="event-card-body">{body}</EventCardBody>
-      )}
+      {body && <span data-test="event-card-body">{body}</span>}
 
-      <EventCardDates data-test="event-card-date">
+      <SeventyFivePercentSpan data-test="event-card-date">
         {getDisplayDateText(dates)}
-      </EventCardDates>
+      </SeventyFivePercentSpan>
 
       {daysTilGig >= 0 && (
-        <ItalicFlexRow>
-          <EventCardCountdown>
-            {getCountdownText(daysTilGig)}
-          </EventCardCountdown>
+        <ItalicBoldFlexRow>
+          <strong>{getCountdownText(daysTilGig)}</strong>
 
           {disclaimer && (
-            <EventCardDisclaimer>({disclaimer})</EventCardDisclaimer>
+            <SeventyFivePercentSpan>({disclaimer})</SeventyFivePercentSpan>
           )}
-        </ItalicFlexRow>
+        </ItalicBoldFlexRow>
       )}
-    </FlexColumn>
+    </StyledFlexColumn>
   );
 };

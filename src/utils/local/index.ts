@@ -7,7 +7,6 @@ export { concatenateQuantityAndMeasurement } from "./concatenateQuantityAndMeasu
 export { convertDecimalToFraction } from "./convertDecimalToFraction";
 export { convertIngredientQuantity } from "./convertIngredientQuantity";
 export { formatData } from "./formatData";
-export { generateIngredientListItem } from "./generateIngredientListItem";
 export { getPageSectionItemCounts } from "./getPageSectionItemCounts";
 export { isInFuture } from "./isInFuture";
 export { itemIsFavourited } from "./itemIsFavourited";
