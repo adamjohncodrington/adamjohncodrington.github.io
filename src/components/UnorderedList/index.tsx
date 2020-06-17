@@ -2,16 +2,9 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 interface StyledLiProps {
-  showBullets?: boolean;
   addPaddingTop?: boolean;
 }
 const StyledLi = styled.li`
-  ${({ showBullets }: StyledLiProps) =>
-    showBullets &&
-    css`
-      // margin-left: 18px;
-    `}
-
   ${({ addPaddingTop }: StyledLiProps) =>
     addPaddingTop &&
     css`
@@ -23,16 +16,18 @@ interface StyledUlProps {
   showBullets?: boolean;
 }
 const Ul = styled.ul`
-  list-style-type: none;
   margin: 0;
   padding: 0;
 
   ${({ showBullets }: StyledUlProps) =>
-    showBullets &&
-    css`
-      list-style-type: square;
-      list-style-position: inside;
-    `}
+    showBullets
+      ? css`
+          list-style-type: square;
+          list-style-position: inside;
+        `
+      : css`
+          list-style-type: none;
+        `}
 `;
 
 interface UnorderedListProps {
@@ -50,11 +45,7 @@ export const UnorderedList: React.FC<UnorderedListProps> = ({
       <strong>{title}</strong>
 
       {items.map((item: IListItemWithPaddingTopFlag, index: number) => (
-        <StyledLi
-          key={index}
-          showBullets={showBullets}
-          addPaddingTop={item.addPaddingTop}
-        >
+        <StyledLi key={index} addPaddingTop={item.addPaddingTop}>
           {item.text}
         </StyledLi>
       ))}
