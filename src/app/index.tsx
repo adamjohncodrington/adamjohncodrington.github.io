@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import { HomePage, PageShell, PageSection } from "../components";
-import { Ul, Li } from "../primitives";
+import { Ul } from "../primitives";
 import { HOMEPAGE_ROUTE, PAGE_ROUTES } from "../routes";
 
 export const App: React.FC = () => (
