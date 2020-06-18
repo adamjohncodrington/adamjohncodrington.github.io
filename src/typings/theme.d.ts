@@ -47,6 +47,7 @@ interface ITheme_Section {
     };
     padding: { bottom: PxValue };
   };
+  background: ColorValue;
   border: { bottom: IBorder };
   borderRadius: IBorderRadius;
   boxShadow: IBoxShadow;

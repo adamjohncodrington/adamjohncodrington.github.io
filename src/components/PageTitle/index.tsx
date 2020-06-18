@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { ThemeContext } from "styled-components";
 
-import { FlexRow, Headers, SvgIcon, Link } from "../../primitives";
+import { FlexRowDiv, Headers, SvgIcon, Link } from "../../primitives";
 
 const { PageTitle } = Headers;
 
@@ -20,7 +20,7 @@ const PageTitleSecondaryCount = styled(PageTitlePrimaryCount)`
   opacity: ${props => props.theme.fadedOpacity};
 `;
 
-const PaddedFlexRow = styled(FlexRow)`
+const PaddedFlexRowDiv = styled(FlexRowDiv)`
   padding-bottom: ${props => props.theme.pageTitleMarginBottom};
 `;
 
@@ -44,7 +44,7 @@ export const PageTitleComponent: React.FC<PageTitleProps> = ({
   const theme: ITheme = React.useContext(ThemeContext);
 
   return (
-    <PaddedFlexRow data-test="page-title-container">
+    <PaddedFlexRowDiv data-test="page-title-container">
       <TitleTextContainer data-test="page-title-text-container">
         <PageTitle data-test="page-title-text">{titleText}</PageTitle>
 
@@ -65,6 +65,6 @@ export const PageTitleComponent: React.FC<PageTitleProps> = ({
           <SvgIcon icon={icon} size={theme.page.icon.size} />
         </SvgContainer>
       </Link>
-    </PaddedFlexRow>
+    </PaddedFlexRowDiv>
   );
 };

@@ -1,5 +1,4 @@
 import React from "react";
-import styled, { css } from "styled-components";
 
 import { PAGE_SECTION_TYPES } from "../../constants";
 
@@ -9,70 +8,7 @@ import { RecipeCard } from "../RecipeCard";
 import { CountedListItem } from "../CountedListItem";
 import { VisibilityToggle } from "../VisibilityToggle";
 
-const PageSectionContainer = styled.section`
-  background: ${props => props.theme.colors.gainsboro};
-  box-shadow: ${props => props.theme.section.boxShadow};
-  border-radius: ${props => props.theme.section.borderRadius};
-
-  padding: 0 ${props => props.theme.section.padding.horizontal};
-  margin-bottom: ${props => props.theme.section.margin.bottom};
-`;
-
-interface SectionBodyProps extends ThemeProps {
-  isEventCards: boolean;
-}
-const SectionBody = styled.div`
-  ${({
-    isEventCards,
-    theme: {
-      section: { body }
-    }
-  }: SectionBodyProps) => {
-    const { padding, countedList, eventCardList } = body;
-
-    return css`
-      padding-bottom: ${padding.bottom};
-
-      > * {
-        border-bottom: ${countedList.border.bottom};
-        padding: ${isEventCards
-          ? `${eventCardList.padding.vertical} 0`
-          : `${countedList.padding.vertical} 0`};
-      }
-
-      > *:last-child {
-        ${isEventCards &&
-        `padding-bottom: ${eventCardList.finalEventCardPaddingBottom};`}
-        border-bottom: 0;
-      }
-
-      ${isEventCards &&
-      css`
-        > *:first-child {
-          padding-top: 0;
-        }
-      `}
-    `;
-  }}
-`;
-
-const RecipeGroupBody = styled.div`
-  ${({ theme: { recipe } }: ThemeProps) => css`
-    > * {
-      border-bottom: ${recipe.border.bottom};
-      padding: ${recipe.title.padding.vertical} 0;
-    }
-
-    > *:first-child {
-      padding-top: ${recipe.first.padding.top};
-    }
-
-    > *:last-child {
-      border-bottom: 0;
-      padding-bottom: ${recipe.last.padding.bottom};
-    }
-  `}
-`;
+import { PageSectionContainer, RecipeGroupBody, SectionBody } from "./styles";
 
 export const PageSection: React.FC<IPageSection> = ({
   details: { id, title, type },

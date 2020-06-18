@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-import { FlexRow } from "../../primitives";
+import { FlexRowDiv } from "../../primitives";
 
-export const CentredOnPhone = styled(FlexRow)`
+export const CentredOnPhone = styled(FlexRowDiv)`
   @media (max-width: ${props => props.theme.breakpoints.phone.maxWidth}) {
     justify-content: center;
     text-align: center;

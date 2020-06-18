@@ -1,31 +1,16 @@
 import React, { useContext } from "react";
-import styled, { ThemeContext } from "styled-components";
+import { ThemeContext } from "styled-components";
 
-import { SvgIcon, Headers } from "../../primitives";
+import { Headers, FlexRowDivGrow } from "../../primitives";
+
+import {
+  PageSectionHeaderContainer,
+  StyledIcon,
+  PageSectionPrimaryCount,
+  PageSectionSecondaryCount
+} from "./styles";
 
 const { PageSectionTitle } = Headers;
-
-const PageSectionHeaderContainer = styled.div`
-  display: flex;
-  padding: ${props => props.theme.section.header.padding};
-`;
-
-const TextContainer = styled.div`
-  display: flex;
-  flex: 1;
-`;
-
-const PageSectionPrimaryCount = styled.span`
-  margin-left: ${props => props.theme.section.count.margin.left};
-`;
-
-const PageSectionSecondaryCount = styled(PageSectionPrimaryCount)`
-  opacity: ${props => props.theme.fadedOpacity};
-`;
-
-const StyledIcon = styled(SvgIcon)`
-  padding-top: ${props => props.theme.section.icon.padding.top};
-`;
 
 type PageSectionHeaderProps = {
   text: string;
@@ -48,7 +33,7 @@ export const PageSectionHeader: React.FC<PageSectionHeaderProps> = ({
 
   return (
     <PageSectionHeaderContainer data-test={dataTest}>
-      <TextContainer data-test="section-header-text-container">
+      <FlexRowDivGrow data-test="section-header-text-container">
         <PageSectionTitle data-test="section-header-text">
           {text}
         </PageSectionTitle>
@@ -64,7 +49,7 @@ export const PageSectionHeader: React.FC<PageSectionHeaderProps> = ({
             {starredDataCount}
           </PageSectionSecondaryCount>
         )}
-      </TextContainer>
+      </FlexRowDivGrow>
 
       {icon && (
         <StyledIcon

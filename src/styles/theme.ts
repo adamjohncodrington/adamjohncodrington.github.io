@@ -32,6 +32,7 @@ const SECTION_THEME: ITheme_Section = {
     },
     padding: { bottom: "5px" }
   },
+  background: COLORS.gainsboro,
   border: { bottom: BORDER_BLACK_THIN },
   borderRadius: "10px",
   boxShadow: `0 1px 2px ${rgba(COLORS.gray, 0.5)}`,

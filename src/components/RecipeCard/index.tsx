@@ -1,7 +1,7 @@
 import React from "react";
 
 import { MEASUREMENTS, NO_UNIT_COST_FOR_RECIPE_EXISTS } from "../../constants";
-import { Circle, FlexRow, SeventyFivePercentSpan } from "../../primitives";
+import { Circle, FlexRowDiv, SeventyFivePercentSpan } from "../../primitives";
 import { calculateRecipeCost, getIngredientsHeader } from "../../utils/global";
 
 import { CentredOnPhone } from "../CentredOnPhone";
@@ -17,7 +17,7 @@ import {
   StyledRecipeCardTitle,
   RecipeBody,
   StyledImage,
-  PaddedFlexColumn
+  PaddedFlexColDivumn
 } from "./styles";
 
 export const RecipeCard: React.FC<IRecipeCard> = ({
@@ -49,14 +49,14 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
     <VisibilityToggle
       expandedAutomatically={newRecipe}
       headerComponent={
-        <FlexRow>
+        <FlexRowDiv>
           <StyledRecipeCardTitle favourite={favourite}>
             {title}
           </StyledRecipeCardTitle>
           <Circle fontSize="13px" size="25px" invert color={diet.color}>
             {diet.abbreviation}
           </Circle>
-        </FlexRow>
+        </FlexRowDiv>
       }
     >
       <RecipeBody>
@@ -87,7 +87,7 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
         )}
 
         <CentredOnPhone>
-          <PaddedFlexColumn>
+          <PaddedFlexColDivumn>
             <span>
               approx. <strong>{costDisplayText}</strong> to make
             </span>
@@ -101,7 +101,7 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
                   <strong>{unitCostDisplayText}</strong> per {makes.measurement}
                 </SeventyFivePercentSpan>
               )}
-          </PaddedFlexColumn>
+          </PaddedFlexColDivumn>
         </CentredOnPhone>
       </RecipeBody>
     </VisibilityToggle>

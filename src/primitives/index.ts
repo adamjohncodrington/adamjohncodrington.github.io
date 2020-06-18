@@ -1,5 +1,11 @@
 export { Circle } from "./Circle";
-export { FlexRow, FlexColumn } from "./Flex";
+export {
+  FlexRowSpan,
+  FlexRowSpanGrow,
+  FlexRowDiv,
+  FlexRowDivGrow,
+  FlexColDivumn
+} from "./Flex";
 export { Link } from "./Link";
 export { SvgIcon } from "./SvgIcon";
 export { Headers, SeventyFivePercentSpan } from "./Text";

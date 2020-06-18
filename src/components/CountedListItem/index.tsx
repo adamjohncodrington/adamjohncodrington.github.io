@@ -1,10 +1,10 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { FlexRow } from "../../primitives";
+import { FlexRowDiv } from "../../primitives";
 
 interface ICountedListItemPastCount extends ThemeProps {
-  leaderboard: boolean;
+  leaderboard?: boolean;
 }
 const CountedListItemPastCount = styled.span`
   ${({
@@ -68,14 +68,15 @@ export const CountedListItem: React.FC<ICountedListItem> = ({
   ignoreCountInfo,
   leaderboard = false
 }) => {
-  const showFutureCount = futureCount > 0 && (pastCount > 0 || leaderboard);
-  const showPastCount =
+  const showFutureCount: boolean =
+    futureCount > 0 && (pastCount > 0 || leaderboard);
+  const showPastCount: boolean =
     (leaderboard && pastCount > 0) ||
     pastCount > 1 ||
     (futureCount > 0 && pastCount > 0);
 
   return (
-    <FlexRow>
+    <FlexRowDiv>
       <ListEntry
         faded={!ignoreCountInfo && pastCount === 0}
         favourite={favourite}
@@ -85,14 +86,14 @@ export const CountedListItem: React.FC<ICountedListItem> = ({
       </ListEntry>
 
       {!ignoreCountInfo && showFutureCount && (
-        // @ts-ignore
         <CountedListItemFutureCount>{futureCount}</CountedListItemFutureCount>
       )}
+
       {!ignoreCountInfo && showPastCount && (
         <CountedListItemPastCount leaderboard={leaderboard}>
           {pastCount}
         </CountedListItemPastCount>
       )}
-    </FlexRow>
+    </FlexRowDiv>
   );
 };
