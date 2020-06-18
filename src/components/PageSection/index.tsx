@@ -82,16 +82,15 @@ export const PageSection: React.FC<IPageSection> = ({
   expandedAutomatically = false,
   leaderboard
 }) => {
+  const isCountedList: boolean = type === PAGE_SECTION_TYPES.COUNTED_LIST;
   const isEventCards: boolean = type === PAGE_SECTION_TYPES.EVENT_CARDS;
   const isRecipes: boolean = type === PAGE_SECTION_TYPES.RECIPES;
-  const isCountedList: boolean = type === PAGE_SECTION_TYPES.COUNTED_LIST;
 
-  // Precautionary exit
-  const proceed =
-    data.length > 0 ||
-    // e.g. if pesto is hidden, do not show sauces section because there will be no section children
-    (isRecipes && data.filter((item: IRecipeCard) => !item.hide).length);
-  if (!proceed) return null;
+  const noData: boolean =
+    data.length === 0 ||
+    (isRecipes && data.filter((item: IRecipeCard) => !item.hide).length) === 0;
+
+  if (noData) return null;
 
   return (
     <PageSectionContainer data-test={id && `${id}-section`}>
