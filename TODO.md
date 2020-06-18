@@ -2,6 +2,7 @@
 
 ## Refactoring
 
+- rationalise theme
 - review semantics of page structure, landmarks, accessibility, etc.
 - move final instances of `px` (in `EventCard` and `RecipeCard`) to `theme`
 
