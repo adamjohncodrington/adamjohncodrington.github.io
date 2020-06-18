@@ -6,7 +6,6 @@
 - rationalise `data-test` attributes
 - move final instances of `px` (in `EventCard` and `RecipeCard`) to `theme`
 - review semantics of page structure, landmarks, accessibility, etc.
-  - use `<li>` for all types of page section
 
 ## TypeScript
 
