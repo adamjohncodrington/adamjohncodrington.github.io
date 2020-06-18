@@ -86,12 +86,12 @@ export const CountedListItem: React.FC<ICountedListItem> = ({
 
       {!ignoreCountInfo && showFutureCount && (
         // @ts-ignore
-        <CountedListItemPastCount>{futureCount}</CountedListItemPastCount>
+        <CountedListItemFutureCount>{futureCount}</CountedListItemFutureCount>
       )}
       {!ignoreCountInfo && showPastCount && (
-        <CountedListItemFutureCount leaderboard={leaderboard}>
+        <CountedListItemPastCount leaderboard={leaderboard}>
           {pastCount}
-        </CountedListItemFutureCount>
+        </CountedListItemPastCount>
       )}
     </FlexRow>
   );
