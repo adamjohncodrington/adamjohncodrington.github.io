@@ -6,5 +6,4 @@ export { PageSection } from "./PageSection";
 export { PageShell } from "./PageShell";
 export { PageTitleComponent } from "./PageTitle";
 export { RecipeCard } from "./RecipeCard";
-export { UnorderedList } from "./UnorderedList";
-export { VisibilityToggle } from "./VisibilityToggle";
+export { Disclosure } from "./Disclosure";

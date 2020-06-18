@@ -2,8 +2,8 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 import {
-  FlexColDivumn,
-  FlexRowDiv,
+  FlexColumn,
+  FlexRow,
   Headers,
   SeventyFivePercentSpan
 } from "../../primitives";
@@ -33,7 +33,7 @@ const StyledEventCardTitle = styled(EventCardTitle)`
   text-transform: uppercase;
 `;
 
-const ItalicBoldFlexRowDiv = styled(FlexRowDiv)`
+const ItalicBoldFlexRow = styled(FlexRow)`
   font-style: italic;
 
   > *:not(:first-child) {
@@ -47,7 +47,7 @@ const EventCardSubtitle = styled.span`
   text-transform: uppercase;
 `;
 
-const StyledFlexColDivumn = styled(FlexColDivumn)`
+const StyledFlexColumn = styled(FlexColumn)`
   > *:not(:first-child) {
     padding-top: ${verticalSpaceBetweenEventCardRows};
   }
@@ -66,7 +66,7 @@ export const EventCard: React.FC<IEventCard> = ({
   const daysTilGig: number = daysToGo(dates);
 
   return (
-    <StyledFlexColDivumn data-test="event-card-container">
+    <StyledFlexColumn data-test="event-card-container">
       <TitleAndSubtitle>
         <StyledEventCardTitle
           data-test="event-card-title"
@@ -89,14 +89,14 @@ export const EventCard: React.FC<IEventCard> = ({
       </SeventyFivePercentSpan>
 
       {daysTilGig >= 0 && (
-        <ItalicBoldFlexRowDiv>
+        <ItalicBoldFlexRow>
           <strong>{getCountdownText(daysTilGig)}</strong>
 
           {disclaimer && (
             <SeventyFivePercentSpan>({disclaimer})</SeventyFivePercentSpan>
           )}
-        </ItalicBoldFlexRowDiv>
+        </ItalicBoldFlexRow>
       )}
-    </StyledFlexColDivumn>
+    </StyledFlexColumn>
   );
 };

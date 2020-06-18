@@ -1,14 +1,19 @@
 import React from "react";
 
 import { PAGE_SECTION_TYPES } from "../../constants";
+import { Li } from "../../primitives";
 
+import { CountedListItem } from "../CountedListItem";
+import { Disclosure } from "../Disclosure";
 import { EventCard } from "../EventCard";
 import { PageSectionHeader } from "./PageSectionHeader";
 import { RecipeCard } from "../RecipeCard";
-import { CountedListItem } from "../CountedListItem";
-import { VisibilityToggle } from "../VisibilityToggle";
 
-import { PageSectionContainer, RecipeGroupBody, SectionBody } from "./styles";
+import {
+  PageSectionContainer,
+  RecipeGroupList,
+  SectionPanelList
+} from "./styles";
 
 export const PageSection: React.FC<IPageSection> = ({
   details: { id, title, type },
@@ -29,50 +34,79 @@ export const PageSection: React.FC<IPageSection> = ({
   if (noData) return null;
 
   return (
-    <PageSectionContainer data-test={id && `${id}-section`}>
-      <VisibilityToggle
-        onlyHeaderClickable={isRecipes}
-        expandedAutomatically={expandedAutomatically}
-        headerComponent={
-          <PageSectionHeader
-            text={title}
-            showCounts={showSectionLength}
-            data={data}
-            icon={icon}
-            dataTest="visibility-toggle-header"
-          />
-        }
-      >
-        <section data-test="section-content">
-          {isRecipes ? (
-            <RecipeGroupBody>
-              {data.map((item: IRecipeCard, index: number) => (
-                <RecipeCard key={index} {...item} />
-              ))}
-            </RecipeGroupBody>
-          ) : (
-            <SectionBody
-              data-test="page-section-content"
-              isEventCards={isEventCards}
-            >
-              {data.map((item: any, index: number) => {
-                if (isEventCards) return <EventCard key={index} {...item} />;
-
-                if (isCountedList)
-                  return (
-                    <CountedListItem
-                      key={index}
-                      {...item}
-                      leaderboard={leaderboard}
-                    />
-                  );
-
-                return null;
-              })}
-            </SectionBody>
-          )}
-        </section>
-      </VisibilityToggle>
-    </PageSectionContainer>
+    <Li data-test={`section-${id}`}>
+      <PageSectionContainer>
+        <Disclosure
+          onlyHeaderClickable={isRecipes}
+          expandedAutomatically={expandedAutomatically}
+          headerComponent={
+            <PageSectionHeader
+              text={title}
+              showCounts={showSectionLength}
+              data={data}
+              icon={icon}
+              dataTest="disclosure-header"
+            />
+          }
+        >
+          <section data-test="section-content">
+            {isRecipes ? (
+              <Recipes recipes={data} />
+            ) : isCountedList ? (
+              <CountedList countedListItems={data} leaderboard={leaderboard} />
+            ) : (
+              isEventCards && <EventCards eventCards={data} />
+            )}
+          </section>
+        </Disclosure>
+      </PageSectionContainer>
+    </Li>
   );
 };
+
+interface IRecipes {
+  recipes: Array<IRecipeCard>;
+}
+
+const Recipes: React.FC<IRecipes> = ({ recipes }) => (
+  <RecipeGroupList>
+    {recipes.map(
+      (item: IRecipeCard, index: number) =>
+        !item.hide && (
+          <Li>
+            <RecipeCard key={index} {...item} />
+          </Li>
+        )
+    )}
+  </RecipeGroupList>
+);
+
+interface ICountedList {
+  countedListItems: Array<ICountedListItem>;
+  leaderboard?: boolean;
+}
+
+const CountedList: React.FC<ICountedList> = ({
+  countedListItems,
+  leaderboard
+}) => (
+  <SectionPanelList data-test="page-section-panel">
+    {countedListItems.map((listItem: ICountedListItem, index: number) => (
+      <CountedListItem key={index} {...listItem} leaderboard={leaderboard} />
+    ))}
+  </SectionPanelList>
+);
+
+interface IEventCards {
+  eventCards: Array<IEventCard>;
+}
+
+const EventCards: React.FC<IEventCards> = ({ eventCards }) => (
+  <SectionPanelList data-test="page-section-panel" isEventCards>
+    {eventCards.map((eventCard: IEventCard, index: number) => (
+      <Li>
+        <EventCard key={index} {...eventCard} />
+      </Li>
+    ))}
+  </SectionPanelList>
+);

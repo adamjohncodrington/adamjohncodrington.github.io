@@ -28,7 +28,7 @@ interface PageSectionData {
 }
 
 interface ICountedListItem {
-  listEntry: string;
+  text: string;
   favourite?: boolean;
   star?: boolean;
   futureCount: number;

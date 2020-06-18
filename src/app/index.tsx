@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import { HomePage, PageShell, PageSection } from "../components";
+import { Ul, Li } from "../primitives";
 import { HOMEPAGE_ROUTE, PAGE_ROUTES } from "../routes";
 
 export const App: React.FC = () => (
@@ -11,9 +12,11 @@ export const App: React.FC = () => (
         ({ icon, title, dest, pageData }: IRoute, index: number) => (
           <Route key={index} path={dest}>
             <PageShell title={title} icon={icon} pageData={pageData}>
-              {pageData.sections.map((item: IPageSection, index: number) => (
-                <PageSection key={index} {...item} />
-              ))}
+              <Ul data-test="page-sections">
+                {pageData.sections.map((item: IPageSection, index: number) => (
+                  <PageSection key={index} {...item} />
+                ))}
+              </Ul>
             </PageShell>
           </Route>
         )

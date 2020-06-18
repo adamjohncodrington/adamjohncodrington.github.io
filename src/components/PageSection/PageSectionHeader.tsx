@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "styled-components";
 
-import { Headers, FlexRowDivGrow } from "../../primitives";
+import { Headers, FlexRowGrow } from "../../primitives";
 
 import {
   PageSectionHeaderContainer,
@@ -33,7 +33,7 @@ export const PageSectionHeader: React.FC<PageSectionHeaderProps> = ({
 
   return (
     <PageSectionHeaderContainer data-test={dataTest}>
-      <FlexRowDivGrow data-test="section-header-text-container">
+      <FlexRowGrow data-test="section-header-text-container">
         <PageSectionTitle data-test="section-header-text">
           {text}
         </PageSectionTitle>
@@ -49,7 +49,7 @@ export const PageSectionHeader: React.FC<PageSectionHeaderProps> = ({
             {starredDataCount}
           </PageSectionSecondaryCount>
         )}
-      </FlexRowDivGrow>
+      </FlexRowGrow>
 
       {icon && (
         <StyledIcon

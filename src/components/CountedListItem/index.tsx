@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { FlexRowDiv } from "../../primitives";
+import { FlexLiGrow } from "../../primitives";
 
 interface ICountedListItemPastCount extends ThemeProps {
   leaderboard?: boolean;
@@ -31,14 +31,14 @@ const CountedListItemFutureCount = styled(CountedListItemPastCount)`
   opacity: ${(props: ThemeProps) => props.theme.fadedOpacity};
 `;
 
-interface ListEntryProps extends ThemeProps {
+interface CountedListItemTextProps extends ThemeProps {
   favourite?: boolean;
   star?: boolean;
   faded: boolean;
 }
 
-const ListEntry = styled.span`
-  ${(props: ListEntryProps) =>
+const CountedListItemText = styled.span`
+  ${(props: CountedListItemTextProps) =>
     props.favourite &&
     css`
       ::before {
@@ -46,7 +46,7 @@ const ListEntry = styled.span`
       }
     `}
 
-  ${(props: ListEntryProps) =>
+  ${(props: CountedListItemTextProps) =>
     props.star &&
     css`
       ::before {
@@ -55,12 +55,12 @@ const ListEntry = styled.span`
     `}
 
   flex: 1;
-  ${(props: ListEntryProps) =>
+  ${(props: CountedListItemTextProps) =>
     props.faded && `opacity: ${props.theme.fadedOpacity};`}
 `;
 
 export const CountedListItem: React.FC<ICountedListItem> = ({
-  listEntry,
+  text,
   favourite,
   star,
   futureCount,
@@ -76,14 +76,14 @@ export const CountedListItem: React.FC<ICountedListItem> = ({
     (futureCount > 0 && pastCount > 0);
 
   return (
-    <FlexRowDiv>
-      <ListEntry
+    <FlexLiGrow>
+      <CountedListItemText
         faded={!ignoreCountInfo && pastCount === 0}
         favourite={favourite}
         star={star}
       >
-        {listEntry}
-      </ListEntry>
+        {text}
+      </CountedListItemText>
 
       {!ignoreCountInfo && showFutureCount && (
         <CountedListItemFutureCount>{futureCount}</CountedListItemFutureCount>
@@ -94,6 +94,6 @@ export const CountedListItem: React.FC<ICountedListItem> = ({
           {pastCount}
         </CountedListItemPastCount>
       )}
-    </FlexRowDiv>
+    </FlexLiGrow>
   );
 };

@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { Headers, FlexColDivumn } from "../../primitives";
+import { Headers, FlexColumn } from "../../primitives";
 
 const { RecipeCardTitle } = Headers;
 
@@ -41,7 +41,7 @@ export const RecipeBody = styled.div`
   }
 `;
 
-export const PaddedFlexColDivumn = styled(FlexColDivumn)`
+export const PaddedFlexColumn = styled(FlexColumn)`
   > *:not(:first-child) {
     padding-top: 4px;
   }

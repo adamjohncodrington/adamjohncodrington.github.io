@@ -38,7 +38,7 @@ export const generateSectionData = ({
     });
 
     return {
-      listEntry: formatData(item),
+      text: formatData(item),
       ignoreCountInfo: item.insignificant || bucketListMode,
       pastCount,
       futureCount,

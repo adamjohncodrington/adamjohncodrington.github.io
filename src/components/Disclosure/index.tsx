@@ -1,22 +1,21 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-interface ChildrenContainerProps extends ThemeProps {
+interface PanelContainerProps extends ThemeProps {
   bodyHeight: IBodyHeight;
 }
-const ChildrenContainer = styled.div`
+const PanelContainer = styled.div`
   &.initial-state {
     max-height: unset;
   }
 
-  transition: ${(props: ChildrenContainerProps) =>
-      props.theme.animationDuration}s
+  transition: ${(props: PanelContainerProps) => props.theme.animationDuration}s
     ease;
   overflow: hidden;
   max-height: 0;
 
-  &.child-visible {
-    max-height: ${(props: ChildrenContainerProps) => props.bodyHeight}px;
+  &.panel-visible {
+    max-height: ${(props: PanelContainerProps) => props.bodyHeight}px;
   }
 `;
 
@@ -33,64 +32,61 @@ const ClickableRegion = styled.div`
 
 type IBodyHeight = number | null;
 
-interface VisibilityToggleProps {
+interface DisclosureProps {
   expandedAutomatically?: boolean;
   onlyHeaderClickable?: boolean;
   headerComponent: React.ReactNode;
   children: React.ReactNode;
 }
 
-export const VisibilityToggle: React.FC<VisibilityToggleProps> = ({
+export const Disclosure: React.FC<DisclosureProps> = ({
   expandedAutomatically = false,
   onlyHeaderClickable = false,
   headerComponent,
   children
 }) => {
-  const [childIsVisible, switchChildVisibility] = React.useState<boolean>(
+  const [panelIsVisible, switchPanelVisibility] = React.useState<boolean>(
     expandedAutomatically
   );
-  const [childrenContainerHeight, setChildrenContainerHeight] = React.useState<
+  const [panelContainerHeight, setPanelContainerHeight] = React.useState<
     IBodyHeight
   >(null);
 
   const refCallback = (element: HTMLDivElement): void => {
-    if (element && !childrenContainerHeight)
-      setChildrenContainerHeight(element.getBoundingClientRect().height);
+    if (element && !panelContainerHeight)
+      setPanelContainerHeight(element.getBoundingClientRect().height);
   };
 
-  const getChildrenContainerClass = (
+  const getPanelContainerClass = (
     bodyHeight: number | null,
-    childIsVisible: boolean
+    panelIsVisible: boolean
   ): string =>
     !bodyHeight
       ? "initial-state"
-      : childIsVisible
-      ? "child-visible"
-      : "child-invisible";
+      : panelIsVisible
+      ? "panel-visible"
+      : "panel-invisible";
 
   const hiddenPanel = (
-    <ChildrenContainer
-      data-test="visibility-toggle-children"
-      className={getChildrenContainerClass(
-        childrenContainerHeight,
-        childIsVisible
-      )}
-      bodyHeight={childrenContainerHeight}
+    <PanelContainer
+      data-test="disclosure-panel"
+      className={getPanelContainerClass(panelContainerHeight, panelIsVisible)}
+      bodyHeight={panelContainerHeight}
       ref={refCallback}
     >
       {children}
-    </ChildrenContainer>
+    </PanelContainer>
   );
 
-  const dataTestVisibilityToggle = "visibility-toggle-container";
+  const dataTestDisclosure: string = "disclosure-container";
 
   return onlyHeaderClickable ? (
     <>
       <ClickableRegion
         expandedAutomatically={expandedAutomatically}
-        data-test={dataTestVisibilityToggle}
+        data-test={dataTestDisclosure}
         onClick={() =>
-          !expandedAutomatically && switchChildVisibility(!childIsVisible)
+          !expandedAutomatically && switchPanelVisibility(!panelIsVisible)
         }
       >
         {headerComponent}
@@ -99,8 +95,8 @@ export const VisibilityToggle: React.FC<VisibilityToggleProps> = ({
     </>
   ) : (
     <ClickableRegion
-      data-test={dataTestVisibilityToggle}
-      onClick={() => switchChildVisibility(!childIsVisible)}
+      data-test={dataTestDisclosure}
+      onClick={() => switchPanelVisibility(!panelIsVisible)}
     >
       {headerComponent}
       {hiddenPanel}

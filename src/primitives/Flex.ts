@@ -1,21 +1,28 @@
 import styled from "styled-components";
 
-export const FlexRowSpan = styled.span`
+import { Li } from "./Lists";
+
+export const FlexSpan = styled.span`
   display: flex;
 `;
 
-export const FlexRowSpanGrow = styled(FlexRowSpan)`
+export const FlexSpanGrow = styled(FlexSpan)`
   flex: 1;
 `;
 
-export const FlexRowDiv = styled.div`
+export const FlexRow = styled.div`
   display: flex;
 `;
 
-export const FlexRowDivGrow = styled(FlexRowDiv)`
+export const FlexRowGrow = styled(FlexRow)`
   flex: 1;
 `;
 
-export const FlexColDivumn = styled(FlexRowDiv)`
+export const FlexColumn = styled(FlexRow)`
   flex-direction: column;
+`;
+
+export const FlexLiGrow = styled(Li)`
+  display: flex;
+  flex: 1;
 `;

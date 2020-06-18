@@ -1,12 +1,12 @@
 import React from "react";
 
 import { MEASUREMENTS, NO_UNIT_COST_FOR_RECIPE_EXISTS } from "../../constants";
-import { Circle, FlexRowDiv, SeventyFivePercentSpan } from "../../primitives";
+import { Circle, FlexRow, SeventyFivePercentSpan } from "../../primitives";
 import { calculateRecipeCost, getIngredientsHeader } from "../../utils/global";
 
 import { CentredOnPhone } from "../CentredOnPhone";
-import { UnorderedList } from "../UnorderedList";
-import { VisibilityToggle } from "../VisibilityToggle";
+import { RecipeCardList } from "./RecipeCardList";
+import { Disclosure } from "../Disclosure";
 
 import {
   mapMethodToListItems,
@@ -17,7 +17,7 @@ import {
   StyledRecipeCardTitle,
   RecipeBody,
   StyledImage,
-  PaddedFlexColDivumn
+  PaddedFlexColumn
 } from "./styles";
 
 export const RecipeCard: React.FC<IRecipeCard> = ({
@@ -28,12 +28,9 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
   favourite,
   serveWith,
   newRecipe,
-  hide,
   diet,
   image
 }) => {
-  if (hide) return null;
-
   const { costDisplayText, unitCostDisplayText } = calculateRecipeCost({
     ingredients,
     yieldQuantity: makes && makes.quantity,
@@ -46,34 +43,34 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
     : defaultIngredientsHeader;
 
   return (
-    <VisibilityToggle
+    <Disclosure
       expandedAutomatically={newRecipe}
       headerComponent={
-        <FlexRowDiv>
+        <FlexRow>
           <StyledRecipeCardTitle favourite={favourite}>
             {title}
           </StyledRecipeCardTitle>
           <Circle fontSize="13px" size="25px" invert color={diet.color}>
             {diet.abbreviation}
           </Circle>
-        </FlexRowDiv>
+        </FlexRow>
       }
     >
       <RecipeBody>
-        <UnorderedList
+        <RecipeCardList
           title={ingredientsHeader}
           items={mapRecipeIngredientsToListItems(ingredients)}
         />
 
         {serveWith && (
-          <UnorderedList
+          <RecipeCardList
             title="serve with"
             items={mapServeWithToListItems(serveWith)}
           />
         )}
 
         {method && (
-          <UnorderedList
+          <RecipeCardList
             title="method"
             items={mapMethodToListItems(method)}
             showBullets
@@ -87,7 +84,7 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
         )}
 
         <CentredOnPhone>
-          <PaddedFlexColDivumn>
+          <PaddedFlexColumn>
             <span>
               approx. <strong>{costDisplayText}</strong> to make
             </span>
@@ -101,9 +98,9 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
                   <strong>{unitCostDisplayText}</strong> per {makes.measurement}
                 </SeventyFivePercentSpan>
               )}
-          </PaddedFlexColDivumn>
+          </PaddedFlexColumn>
         </CentredOnPhone>
       </RecipeBody>
-    </VisibilityToggle>
+    </Disclosure>
   );
 };

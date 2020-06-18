@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { SvgIcon, FlexRowDiv } from "../../primitives";
+import { SvgIcon, FlexRow, Ul } from "../../primitives";
 
 export const PageSectionContainer = styled.section`
   ${({
@@ -16,10 +16,10 @@ export const PageSectionContainer = styled.section`
   `}
 `;
 
-interface SectionBodyProps extends ThemeProps {
-  isEventCards: boolean;
+interface SectionPanelListProps extends ThemeProps {
+  isEventCards?: boolean;
 }
-export const SectionBody = styled.div`
+export const SectionPanelList = styled(Ul)`
   ${({
     isEventCards,
     theme: {
@@ -27,7 +27,7 @@ export const SectionBody = styled.div`
         body: { padding, countedList, eventCardList }
       }
     }
-  }: SectionBodyProps) => css`
+  }: SectionPanelListProps) => css`
     padding-bottom: ${padding.bottom};
 
     > * {
@@ -52,7 +52,7 @@ export const SectionBody = styled.div`
   `}
 `;
 
-export const RecipeGroupBody = styled.div`
+export const RecipeGroupList = styled(Ul)`
   ${({
     theme: {
       recipe: { border, title, first, last }
@@ -74,7 +74,7 @@ export const RecipeGroupBody = styled.div`
   `}
 `;
 
-export const PageSectionHeaderContainer = styled(FlexRowDiv)`
+export const PageSectionHeaderContainer = styled(FlexRow)`
   padding: ${props => props.theme.section.header.padding};
 `;
 
