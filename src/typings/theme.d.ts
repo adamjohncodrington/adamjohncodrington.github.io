@@ -33,20 +33,19 @@ interface ITheme_Homepage {
   };
 }
 
-interface ITheme_Section {
-  body: {
-    countedList: {
-      border: { bottom: IBorder };
-      count: { width: PxValue };
-      padding: { vertical: PaddingValue };
-      leaderboardAdditonalHorizontalSpace: PxValue;
-    };
-    eventCardList: {
-      padding: { vertical: PaddingValue };
-      finalEventCardPaddingBottom: PxValue;
-    };
-    padding: { bottom: PxValue };
-  };
+interface ITheme_CountedList {
+  border: { bottom: IBorder };
+  count: { width: PxValue };
+  padding: { vertical: PaddingValue };
+  leaderboardAdditonalHorizontalSpace: PxValue;
+}
+
+interface ITheme_EventCardList {
+  padding: { vertical: PaddingValue };
+  finalEventCardPaddingBottom: PxValue;
+}
+
+interface ITheme_PageSection {
   background: ColorValue;
   border: { bottom: IBorder };
   borderRadius: IBorderRadius;
@@ -55,13 +54,13 @@ interface ITheme_Section {
   header: { padding: PaddingValue };
   icon: { padding: { top: PaddingValue }; size: SvgSize };
   margin: IMargin;
-  padding: { horizontal: PaddingValue };
+  padding: { horizontal: PaddingValue; bottom: PaddingValue };
 }
 
 interface ITheme_Recipes {
   border: { bottom: IBorder };
   image: { size: ImageSize };
-  icon: { margin: IMargin; size: SvgSize };
+  dietIcon: { margin: IMargin; size: SvgSize };
   title: { padding: { vertical: PaddingValue } };
   first: { padding: { top: PaddingValue } };
   last: { padding: { bottom: PaddingValue } };
@@ -77,22 +76,25 @@ type ITheme_Page = {
 type IBreakpoints = { phone: { maxWidth: PxValue } };
 
 type ITheme = {
+  // Surface level
   animationDuration: number;
-  fadedOpacity: number;
   circleBorder: IBorder;
+  fadedOpacity: number;
+  fontFamily: IFontFamily;
+  listItemGroupVerticalSpacing: PxValue;
+  scrollbarSize: IScrollbarSize;
   textColor: ColorValue;
 
+  // Nested level
   breakpoints: IBreakpoints;
   recipe: ITheme_Recipes;
   homePage: ITheme_Homepage;
+  eventCardList: ITheme_EventCardList;
   page: ITheme_Page;
-  section: ITheme_Section;
-
-  colors: IColors;
-  scrollbarSize: IScrollbarSize;
-  fontFamily: IFontFamily;
-
-  listItemGroupVerticalSpacing: PxValue;
+  section: ITheme_PageSection;
+  countedList: ITheme_CountedList;
 };
 
-type ThemeProps = { theme: ITheme };
+interface IThemeProp {
+  theme: ITheme;
+}

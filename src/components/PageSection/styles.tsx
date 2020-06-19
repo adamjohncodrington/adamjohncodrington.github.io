@@ -7,7 +7,7 @@ export const PageSectionContainer = styled.section`
     theme: {
       section: { background, boxShadow, borderRadius, padding, margin }
     }
-  }: ThemeProps) => css`
+  }) => css`
     background: ${background};
     box-shadow: ${boxShadow};
     border-radius: ${borderRadius};
@@ -16,16 +16,16 @@ export const PageSectionContainer = styled.section`
   `}
 `;
 
-interface SectionPanelListProps extends ThemeProps {
+interface SectionPanelListProps extends IThemeProp {
   isEventCards?: boolean;
 }
 export const SectionPanelList = styled(Ul)`
   ${({
     isEventCards,
     theme: {
-      section: {
-        body: { padding, countedList, eventCardList }
-      }
+      countedList,
+      eventCardList,
+      section: { padding }
     }
   }: SectionPanelListProps) => css`
     padding-bottom: ${padding.bottom};
@@ -57,7 +57,7 @@ export const RecipeGroupList = styled(Ul)`
     theme: {
       recipe: { border, title, first, last }
     }
-  }: ThemeProps) => css`
+  }: IThemeProp) => css`
     > * {
       border-bottom: ${border.bottom};
       padding: ${title.padding.vertical} 0;
@@ -75,17 +75,33 @@ export const RecipeGroupList = styled(Ul)`
 `;
 
 export const PageSectionHeaderContainer = styled(FlexRow)`
-  padding: ${props => props.theme.section.header.padding};
+  padding: ${({
+    theme: {
+      section: { header }
+    }
+  }: IThemeProp) => header.padding};
 `;
 
 export const PageSectionPrimaryCount = styled.span`
-  margin-left: ${props => props.theme.section.count.margin.left};
+  margin-left: ${({
+    theme: {
+      section: {
+        count: { margin }
+      }
+    }
+  }: IThemeProp) => margin.left};
 `;
 
 export const PageSectionSecondaryCount = styled(PageSectionPrimaryCount)`
-  opacity: ${props => props.theme.fadedOpacity};
+  opacity: ${({ theme: { fadedOpacity } }: IThemeProp) => fadedOpacity};
 `;
 
 export const StyledIcon = styled(SvgIcon)`
-  padding-top: ${props => props.theme.section.icon.padding.top};
+  padding-top: ${({
+    theme: {
+      section: {
+        icon: { padding }
+      }
+    }
+  }: IThemeProp) => padding.top};
 `;

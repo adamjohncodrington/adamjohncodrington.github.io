@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-interface ICircle extends ThemeProps {
+interface ICircle extends IThemeProp {
   className?: string;
   size: string;
   fontSize: string;

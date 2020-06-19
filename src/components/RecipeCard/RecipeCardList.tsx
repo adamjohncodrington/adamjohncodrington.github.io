@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 
 import { Ul, Li } from "../../primitives";
 
-interface StyledLiProps extends ThemeProps {
+interface StyledLiProps extends IThemeProp {
   addPaddingTop: boolean | undefined;
 }
 

@@ -27,7 +27,7 @@ export const StyledImage = styled.img(
         image: { size }
       }
     }
-  }: ThemeProps) => css`
+  }: IThemeProp) => css`
     height: ${size};
     width: ${size};
   `

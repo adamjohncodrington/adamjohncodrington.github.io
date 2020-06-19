@@ -50,6 +50,7 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
           <StyledRecipeCardTitle favourite={favourite}>
             {title}
           </StyledRecipeCardTitle>
+
           <Circle fontSize="13px" size="25px" invert color={diet.color}>
             {diet.abbreviation}
           </Circle>

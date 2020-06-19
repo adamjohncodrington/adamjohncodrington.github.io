@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-interface PanelContainerProps extends ThemeProps {
+interface PanelContainerProps extends IThemeProp {
   bodyHeight: IBodyHeight;
 }
 const PanelContainer = styled.div`

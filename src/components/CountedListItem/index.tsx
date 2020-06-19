@@ -3,20 +3,16 @@ import styled, { css } from "styled-components";
 
 import { FlexLiGrow } from "../../primitives";
 
-interface ICountedListItemPastCount extends ThemeProps {
+interface ICountedListItemPastCount extends IThemeProp {
   leaderboard?: boolean;
 }
 const CountedListItemPastCount = styled.span`
   ${({
     leaderboard,
     theme: {
-      section: {
-        body: {
-          countedList: {
-            count: { width },
-            leaderboardAdditonalHorizontalSpace
-          }
-        }
+      countedList: {
+        count: { width },
+        leaderboardAdditonalHorizontalSpace
       }
     }
   }: ICountedListItemPastCount) => css`
@@ -28,10 +24,10 @@ const CountedListItemPastCount = styled.span`
 `;
 
 const CountedListItemFutureCount = styled(CountedListItemPastCount)`
-  opacity: ${(props: ThemeProps) => props.theme.fadedOpacity};
+  opacity: ${(props: IThemeProp) => props.theme.fadedOpacity};
 `;
 
-interface CountedListItemTextProps extends ThemeProps {
+interface CountedListItemTextProps extends IThemeProp {
   favourite?: boolean;
   star?: boolean;
   faded: boolean;
