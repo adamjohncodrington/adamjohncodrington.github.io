@@ -60,6 +60,7 @@ export const MUSICIANS: IMusicians = {
   CHELSEA_CUTLER: { name: "Chelsea Cutler" },
   CHEMICAL_BROTHERS: { name: "Chemical Brothers, The" },
   CHERYL: { name: "Cheryl" },
+  CHLOE_X_HALLE: { name: "Chloe x Halle" },
   CHRISTINE_AND_THE_QUEENS: { name: "Christine and the Queens" },
   CHRVCHES: { name: "CHVRCHES" },
   CLAIRO: { name: "Clairo" },
