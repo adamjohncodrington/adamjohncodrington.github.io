@@ -34,8 +34,7 @@ const statsSections: Array<IPageSection> = [
     details: PAGE_SECTIONS.FRIEND,
     icon: ICONS.PEOPLE,
     showSectionLength: false,
-    data: DATA_GIGS.FRIENDS,
-    leaderboard: true
+    data: DATA_GIGS.FRIENDS
   },
   {
     details: PAGE_SECTIONS.UP_NEXT,

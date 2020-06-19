@@ -1,6 +1,6 @@
 import React from "react";
 
-import { PAGE_SECTION_TYPES } from "../../constants";
+import { PAGE_SECTION_TYPES, PAGE_SECTIONS } from "../../constants";
 import { Li } from "../../primitives";
 
 import { CountedListItem } from "../CountedListItem";
@@ -20,12 +20,12 @@ export const PageSection: React.FC<IPageSection> = ({
   icon,
   data,
   showSectionLength = false,
-  expandedAutomatically = false,
-  leaderboard
+  expandedAutomatically = false
 }) => {
   const isCountedList: boolean = type === PAGE_SECTION_TYPES.COUNTED_LIST;
   const isEventCards: boolean = type === PAGE_SECTION_TYPES.EVENT_CARDS;
   const isRecipes: boolean = type === PAGE_SECTION_TYPES.RECIPES;
+  const isFriendsSection: boolean = id === PAGE_SECTIONS.FRIEND.id;
 
   const noData: boolean =
     data.length === 0 ||
@@ -53,7 +53,10 @@ export const PageSection: React.FC<IPageSection> = ({
             {isRecipes ? (
               <Recipes recipes={data} />
             ) : isCountedList ? (
-              <CountedList countedListItems={data} leaderboard={leaderboard} />
+              <CountedList
+                countedListItems={data}
+                leaderboard={isFriendsSection}
+              />
             ) : (
               isEventCards && <EventCards eventCards={data} />
             )}

@@ -52,7 +52,6 @@ interface IPageSection {
   details: IPageSectionDetails;
   icon?: IImageSrc;
   data: Array<any>;
-  leaderboard?: true;
   showSectionLength?: boolean;
   listOfRecipes?: boolean;
   expandedAutomatically?: boolean;
