@@ -28,16 +28,14 @@ export const RecipeCardList: React.FC<RecipeCardListProps> = ({
   title,
   items,
   showBullets = false
-}) => {
-  return (
-    <Ul showBullets={showBullets}>
-      <strong>{title}</strong>
+}) => (
+  <Ul showBullets={showBullets}>
+    <strong>{title}</strong>
 
-      {items.map((item: IListItemWithPaddingTopFlag, index: number) => (
-        <StyledLi key={index} addPaddingTop={item.addPaddingTop}>
-          {item.text}
-        </StyledLi>
-      ))}
-    </Ul>
-  );
-};
+    {items.map((item: IListItemWithPaddingTopFlag, index: number) => (
+      <StyledLi key={index} addPaddingTop={item.addPaddingTop}>
+        {item.text}
+      </StyledLi>
+    ))}
+  </Ul>
+);
