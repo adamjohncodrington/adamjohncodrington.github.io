@@ -1,6 +1,6 @@
-import { UNICODE } from "../../constants";
+import { UNICODE } from "../constants";
 
-export const convertDecimalToFraction = (decimal: number): string => {
+export const decimalToFractionString = (decimal: number): string => {
   switch (decimal) {
     case 0.25:
       return UNICODE.QUARTER;

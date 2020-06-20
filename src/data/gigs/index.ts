@@ -5,7 +5,7 @@ import {
   PAGE_SECTIONS,
   FESTIVALS
 } from "../../constants";
-import { generateSectionData } from "../../utils/global";
+import { generateSectionData } from "../../factories";
 
 import { GIGS_2006 } from "./gigs-2006";
 import { GIGS_2007 } from "./gigs-2007";

@@ -7,11 +7,7 @@ import {
   Headers,
   SeventyFivePercentSpan
 } from "../../primitives";
-import {
-  daysToGo,
-  getDisplayDateText,
-  getCountdownText
-} from "../../utils/global";
+import { daysToGo, getDisplayDateText, getCountdownText } from "../../utils";
 
 const { EventCardTitle } = Headers;
 
@@ -53,8 +49,6 @@ const StyledFlexColumn = styled(FlexColumn)`
   }
 `;
 
-const TitleAndSubtitle = styled.div``;
-
 export const EventCard: React.FC<IEventCard> = ({
   title,
   subtitle,
@@ -67,7 +61,7 @@ export const EventCard: React.FC<IEventCard> = ({
 
   return (
     <StyledFlexColumn data-test="event-card-container">
-      <TitleAndSubtitle>
+      <div>
         <StyledEventCardTitle
           data-test="event-card-title"
           favourite={favourite}
@@ -80,7 +74,7 @@ export const EventCard: React.FC<IEventCard> = ({
             {subtitle}
           </EventCardSubtitle>
         )}
-      </TitleAndSubtitle>
+      </div>
 
       {body && <span data-test="event-card-body">{body}</span>}
 

@@ -37,7 +37,8 @@
     "deploy": "gh-pages -b master -d build",
     "typecheck": "rimraf dist-ts && yarn tsc && rimraf dist-ts",
     "lint": "eslint ./src --ext .ts,.tsx,.js,.json",
-    "lint:watch": "esw --watch ./src --ext .ts,.tsx,.js,.json"
+    "lint:watch": "esw --watch ./src --ext .ts,.tsx,.js,.json",
+    "checks": "yarn lint && yarn typecheck"
   },
   "eslintConfig": {
     "extends": "react-app"

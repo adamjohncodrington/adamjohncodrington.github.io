@@ -1,6 +1,6 @@
-import { MEASUREMENTS } from "../../constants";
+import { MEASUREMENTS } from "../constants";
 
-import { concatenateQuantityAndMeasurement } from "../local";
+import { concatenateQuantityAndMeasurement } from "./concatenateQuantityAndMeasurement";
 
 interface IGetIngredientsHeader {
   defaultIngredientsHeader: string;

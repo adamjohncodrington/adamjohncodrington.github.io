@@ -1,4 +1,4 @@
-import { DAYS_OF_THE_WEEK, MONTHS } from "../../constants";
+import { DAYS_OF_THE_WEEK, MONTHS } from "../constants";
 
 export const getDisplayDateText = (dates: Array<Date>): string => {
   const stringifyDate = (date: Date): string => {

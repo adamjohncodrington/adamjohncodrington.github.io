@@ -1,7 +1,7 @@
 import {
   generateSectionData,
   generateChildItemsFromParentItems
-} from "../../utils/global";
+} from "../../factories";
 import { FRIENDS, PAGE_SECTIONS, LOCATIONS } from "../../constants";
 
 import { TRAVEL_1997 } from "./travel-1997";

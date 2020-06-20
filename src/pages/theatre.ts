@@ -1,7 +1,7 @@
 import { DATA_THEATRE } from "../data";
 import { ICONS } from "../resources";
 import { EVENT_CARD_TYPES, PAGE_SECTIONS } from "../constants";
-import { mapDataToEventCards, mapYearGroupsToSections } from "../utils/global";
+import { mapDataToEventCards, mapYearGroupsToSections } from "../factories";
 
 const eventType = EVENT_CARD_TYPES.THEATRE;
 //@ts-ignore

@@ -1,7 +1,7 @@
 import { EVENT_CARD_TYPES, PAGE_SECTIONS } from "../constants";
 import { DATA_TRAVEL } from "../data";
 import { ICONS } from "../resources";
-import { mapDataToEventCards, mapYearGroupsToSections } from "../utils/global";
+import { mapDataToEventCards, mapYearGroupsToSections } from "../factories";
 
 const eventType = EVENT_CARD_TYPES.TRIP;
 //@ts-ignore
@@ -32,7 +32,6 @@ const statsSections: Array<IPageSection> = [
     details: PAGE_SECTIONS.FRIEND,
     icon: ICONS.PEOPLE,
     data: DATA_TRAVEL.FRIENDS
-    //: true
   },
   {
     details: PAGE_SECTIONS.HIGHLIGHT,

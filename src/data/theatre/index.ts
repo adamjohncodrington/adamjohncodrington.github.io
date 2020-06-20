@@ -5,7 +5,7 @@ import {
   PAGE_SECTIONS,
   THEATRE_VENUES
 } from "../../constants";
-import { generateSectionData } from "../../utils/global";
+import { generateSectionData } from "../../factories";
 
 import { THEATRE_2016 } from "./theatre-2016";
 import { THEATRE_2017 } from "./theatre-2017";

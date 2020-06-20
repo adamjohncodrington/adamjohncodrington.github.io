@@ -1,11 +1,10 @@
-import { PAGE_SECTIONS } from "../../constants";
-
+import { PAGE_SECTIONS } from "../constants";
 import {
   isInFuture,
   formatData,
   getPageSectionItemCounts,
   itemIsFavourited
-} from "../local";
+} from "../utils";
 
 interface IGenerateSectionData {
   items: any;

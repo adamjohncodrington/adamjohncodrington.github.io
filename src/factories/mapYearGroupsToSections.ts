@@ -1,6 +1,5 @@
-import { PAGE_SECTION_TYPES } from "../../constants";
-
-import { isInFuture } from "../local";
+import { PAGE_SECTION_TYPES } from "../constants";
+import { isInFuture } from "../utils";
 
 import { mapDataToEventCards } from "./mapDataToEventCards";
 

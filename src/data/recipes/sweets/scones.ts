@@ -1,5 +1,6 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "../../../constants";
-import { recipeMethodEntries } from "../../../utils/global";
+
+import { recipeMethodEntries } from "../utils";
 
 const { preheatOven, bakeForAbout } = recipeMethodEntries();
 

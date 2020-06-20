@@ -1,6 +1,7 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "../../../constants";
 import { PHOTOS } from "../../../resources";
-import { recipeMethodEntries } from "../../../utils/global";
+
+import { recipeMethodEntries } from "../utils";
 
 const { preheatOven, FOLD_IN_FLOUR_MIX, bakeForAbout } = recipeMethodEntries();
 

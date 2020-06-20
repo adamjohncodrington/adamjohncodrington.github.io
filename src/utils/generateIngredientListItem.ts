@@ -1,7 +1,5 @@
-import {
-  convertDecimalToFraction,
-  concatenateQuantityAndMeasurement
-} from "../local";
+import { decimalToFractionString } from "./decimalToFractionString";
+import { concatenateQuantityAndMeasurement } from "./concatenateQuantityAndMeasurement";
 
 const POTATO = "potato";
 
@@ -19,7 +17,7 @@ export const generateIngredientListItem = ({
 
   // Do we need to turn a decimal to a more aesthetically-pleasing fraction?
   //@ts-ignore
-  const displayQuantity: string = convertDecimalToFraction(quantity);
+  const displayQuantity: string = decimalToFractionString(quantity);
 
   // Ensure it says "2 limes" instead of "2 lime" or "3 potatoes" instead of "3 potato"
   const displayIngredient: string =

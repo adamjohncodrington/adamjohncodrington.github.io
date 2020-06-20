@@ -2,9 +2,12 @@
 
 ## Refactoring
 
+- review the name of all the files in `factories` and `utils`
+- amalgamate `data` and `pages` folders, there is too much overlap
+- move final instances of `px` (in `EventCard` and `RecipeCard`) to `theme`
+- add a high-level `factories` folder
 - rationalise theme
 - rationalise `data-test` attributes
-- move final instances of `px` (in `EventCard` and `RecipeCard`) to `theme`
 - review semantics of page structure, landmarks, accessibility, etc.
 
 ## TypeScript

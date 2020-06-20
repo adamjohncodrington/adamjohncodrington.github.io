@@ -1,4 +1,4 @@
-import { PAGE_SECTIONS } from "../../constants";
+import { PAGE_SECTIONS } from "../constants";
 
 import { isInFuture } from "./isInFuture";
 

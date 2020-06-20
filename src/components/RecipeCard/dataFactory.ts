@@ -1,4 +1,4 @@
-import { generateIngredientListItem } from "../../utils/global";
+import { generateIngredientListItem } from "../../utils";
 
 export const mapMethodToListItems = (
   method: IRecipeMethod

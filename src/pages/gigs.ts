@@ -1,7 +1,7 @@
 import { EVENT_CARD_TYPES, PAGE_SECTIONS } from "../constants";
 import { DATA_GIGS } from "../data";
 import { ICONS } from "../resources";
-import { mapDataToEventCards, mapYearGroupsToSections } from "../utils/global";
+import { mapDataToEventCards, mapYearGroupsToSections } from "../factories";
 
 const eventType = EVENT_CARD_TYPES.GIG;
 
