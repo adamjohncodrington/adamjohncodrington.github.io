@@ -97,7 +97,7 @@ export const getPageSectionItemCounts = ({
   let pastCount: number = 0;
   let futureCount: number = 0;
 
-  data.map((dataItem: UnknownTypeDataItem) => {
+  data.forEach((dataItem: UnknownTypeDataItem) => {
     const params: ILookupFunction = {
       pageSectionTitle,
       dataItem,
@@ -120,8 +120,6 @@ export const getPageSectionItemCounts = ({
         pastCount += 1;
       }
     }
-
-    return null;
   });
 
   return { futureCount, pastCount };

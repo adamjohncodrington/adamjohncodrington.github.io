@@ -14,7 +14,7 @@ export const itemIsFavourited = ({
 }: IItemIsFavourited) => {
   let itemIsFavourited = false;
 
-  favouritedData.map((dataItem: UnknownTypeDataItem) => {
+  favouritedData.forEach((dataItem: UnknownTypeDataItem) => {
     if (
       (pageSectionTitle === PAGE_SECTIONS.MUSICIAN &&
         itemToInspect === dataItem.headline) ||
@@ -22,7 +22,6 @@ export const itemIsFavourited = ({
         itemToInspect === dataItem.play)
     )
       itemIsFavourited = true;
-    return null;
   });
 
   return itemIsFavourited;

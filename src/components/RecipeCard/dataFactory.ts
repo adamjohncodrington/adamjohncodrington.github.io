@@ -41,18 +41,16 @@ export const mapRecipeIngredientsToListItems = (
 ): Array<IListItemWithPaddingTopFlag> => {
   let ingredientsWithPaddingFlags: Array<IListItemWithPaddingTopFlag> = [];
 
-  ingredientsGroups.map(
+  ingredientsGroups.forEach(
     (ingredientsGroup: Array<IRecipeIngredient>, INDEX_HIGH: number) => {
-      ingredientsGroup.map(
+      ingredientsGroup.forEach(
         (ingredient: IRecipeIngredient, INDEX_LOW: number) => {
           ingredientsWithPaddingFlags.push({
             text: generateIngredientListItem(ingredient),
             addPaddingTop: INDEX_HIGH !== 0 && INDEX_LOW === 0
           });
-          return null;
         }
       );
-      return null;
     }
   );
 

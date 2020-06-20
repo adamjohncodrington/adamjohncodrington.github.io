@@ -26,8 +26,8 @@ export const calculateRecipeCost = ({
 
   let runningRecipeCost: number = 5;
 
-  ingredients.map(ingredientSection => {
-    ingredientSection.map(recipeIngredient => {
+  ingredients.forEach(ingredientSection => {
+    ingredientSection.forEach(recipeIngredient => {
       // @ts-ignore
       const recipeIngredientCost = calculateIngredientCost(recipeIngredient);
 
@@ -43,10 +43,7 @@ export const calculateRecipeCost = ({
           ingredient
         });
       }
-
-      return null;
     });
-    return null;
   });
 
   const unitCost: number | undefined =
