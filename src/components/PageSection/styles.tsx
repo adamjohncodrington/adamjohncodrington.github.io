@@ -17,7 +17,7 @@ export const PageSectionContainer = styled.section`
 `;
 
 interface SectionPanelListProps extends IThemeProp {
-  isEventCards?: boolean;
+  isEventCards: boolean;
 }
 export const SectionPanelList = styled(Ul)`
   ${({

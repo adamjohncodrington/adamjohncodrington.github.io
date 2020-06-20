@@ -49,7 +49,7 @@ export const PageSection: React.FC<IPageSection> = ({
             />
           }
         >
-          <section data-test="section-content">
+          <section data-test="page-section-body">
             {isRecipes ? (
               <Recipes recipes={data} />
             ) : isCountedList ? (
@@ -93,7 +93,7 @@ const CountedList: React.FC<ICountedList> = ({
   countedListItems,
   leaderboard
 }) => (
-  <SectionPanelList data-test="page-section-panel">
+  <SectionPanelList data-test="page-section-panel" isEventCards={false}>
     {countedListItems.map((listItem: ICountedListItem, index: number) => (
       <CountedListItem key={index} {...listItem} leaderboard={leaderboard} />
     ))}
