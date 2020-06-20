@@ -2,23 +2,17 @@
 
 ## Refactoring
 
-- review the name of all the files in `factories` and `utils`
 - amalgamate `data` and `pages` folders, there is too much overlap
-- move final instances of `px` (in `EventCard` and `RecipeCard`) to `theme`
-- add a high-level `factories` folder
+- review the name of all the files in `factories` and `utils`
+- move final instances of `px` in `EventCard` and `RecipeCard` to `theme`
 - rationalise theme
 - rationalise `data-test` attributes
 - review semantics of page structure, landmarks, accessibility, etc.
 
 ## TypeScript
 
-- remove instances of `any` and `@ts-ignore` where possible
 - add absolute paths/imports
-
-## Tests
-
-- add tests to all utils functions
-- add snapshot tests to components
+- remove as many instances of `any` and `@ts-ignore` as possible
 
 ## Data
 
