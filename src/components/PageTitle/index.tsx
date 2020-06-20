@@ -1,9 +1,7 @@
 import React from "react";
 import styled, { ThemeContext } from "styled-components";
 
-import { FlexRow, Headers, SvgIcon, Link } from "../../primitives";
-
-const { PageTitle } = Headers;
+import { FlexRow, H1, SvgIcon, Link } from "../../primitives";
 
 const TitleTextContainer = styled.div`
   display: flex;
@@ -46,7 +44,7 @@ export const PageTitleComponent: React.FC<PageTitleProps> = ({
   return (
     <PaddedFlexRow data-test="page-title-container">
       <TitleTextContainer data-test="page-title-text-container">
-        <PageTitle data-test="page-title-text">{titleText}</PageTitle>
+        <H1 data-test="page-title-text">{titleText}</H1>
 
         {!!pastCount && pastCount > 0 && (
           <PageTitlePrimaryCount data-test="page-title-past-count">

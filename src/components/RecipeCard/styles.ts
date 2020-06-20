@@ -1,13 +1,11 @@
 import styled, { css } from "styled-components";
 
-import { Headers, FlexColumn } from "../../primitives";
-
-const { RecipeCardTitle } = Headers;
+import { H3, FlexColumn } from "../../primitives";
 
 interface IRecipeCardTitle {
   favourite?: boolean;
 }
-export const StyledRecipeCardTitle = styled(RecipeCardTitle)`
+export const RecipeCardTitle = styled(H3)`
   font-weight: 300;
   flex: 1;
 

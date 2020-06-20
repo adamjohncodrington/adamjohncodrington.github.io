@@ -66,11 +66,9 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
 ];
 
 const serveWith: Array<Array<IServeWithItem>> = [
-  [
-    { ingredient: INGREDIENTS.SALT_ROCK_FRESH },
-    { ingredient: INGREDIENTS.PEPPER_BLACK_FRESH },
-    { ingredient: INGREDIENTS.SAGE_FRESH, notes: "crispy" }
-  ]
+  [{ ingredient: INGREDIENTS.SALT_ROCK_FRESH }],
+  [{ ingredient: INGREDIENTS.PEPPER_BLACK_FRESH }],
+  [{ ingredient: INGREDIENTS.SAGE_FRESH, notes: "crispy" }]
 ];
 
 const method: IRecipeMethod = [

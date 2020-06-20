@@ -10,31 +10,34 @@ export const mapMethodToListItems = (
     })
   );
 
-const getServeWithListItem = (
-  serveWithItems: Array<IRecipeIngredient>
-): string => {
-  let stringList = serveWithItems[0].ingredient.displayText;
-
-  for (let i = 1; i < serveWithItems.length; i++) {
-    const ingredient = serveWithItems[i].ingredient.displayText;
-    if (i === serveWithItems.length - 1) {
-      stringList += ` or ${ingredient}`;
-    } else {
-      stringList += `, ${ingredient}`;
-    }
-  }
-  return stringList;
-};
-
 export const mapServeWithToListItems = (
   serveWith: Array<Array<IRecipeIngredient>>
-): Array<IListItemWithPaddingTopFlag> =>
-  serveWith.map(
-    (item: Array<IRecipeIngredient>): IListItemWithPaddingTopFlag => ({
-      text: getServeWithListItem(item),
+): Array<IListItemWithPaddingTopFlag> => {
+  const getServeWithListItem = (
+    lineOptions: Array<IRecipeIngredient>
+  ): string => {
+    let output: string = "";
+
+    lineOptions.forEach(
+      ({ ingredient: { displayText } }: IRecipeIngredient, index: number) =>
+        (output +=
+          index === 0
+            ? displayText
+            : index === lineOptions.length - 1
+            ? ` or ${displayText}`
+            : `, ${displayText}`)
+    );
+
+    return output;
+  };
+
+  return serveWith.map(
+    (lineOptions: Array<IRecipeIngredient>): IListItemWithPaddingTopFlag => ({
+      text: getServeWithListItem(lineOptions),
       addPaddingTop: false
     })
   );
+};
 
 export const mapRecipeIngredientsToListItems = (
   ingredientsGroups: Array<Array<IRecipeIngredient>>

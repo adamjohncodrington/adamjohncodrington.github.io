@@ -1,4 +1,4 @@
-export const turnTheSuffixIntoPrefix = (word: string): string => {
+export const moveTheSuffixToPrefix = (word: string): string => {
   const THE_SUFFIX = ", The";
 
   if (word.slice(-5) === THE_SUFFIX)

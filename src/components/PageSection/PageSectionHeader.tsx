@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "styled-components";
 
-import { Headers, FlexRowGrow } from "../../primitives";
+import { H2, FlexRowGrow } from "../../primitives";
 
 import {
   PageSectionHeaderContainer,
@@ -9,8 +9,6 @@ import {
   PageSectionPrimaryCount,
   PageSectionSecondaryCount
 } from "./styles";
-
-const { PageSectionTitle } = Headers;
 
 type PageSectionHeaderProps = {
   text: string;
@@ -34,9 +32,7 @@ export const PageSectionHeader: React.FC<PageSectionHeaderProps> = ({
   return (
     <PageSectionHeaderContainer data-test={dataTest}>
       <FlexRowGrow data-test="section-header-text-container">
-        <PageSectionTitle data-test="section-header-text">
-          {text}
-        </PageSectionTitle>
+        <H2 data-test="section-header-text">{text}</H2>
 
         {showCounts && data && data.length > 1 && (
           <PageSectionPrimaryCount data-test="section-count">

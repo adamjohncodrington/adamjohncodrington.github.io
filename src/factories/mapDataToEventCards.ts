@@ -1,5 +1,5 @@
 import { EVENT_CARD_TYPES } from "../constants";
-import { formatData, isInFuture } from "../utils";
+import { formatNames, isInFuture } from "../utils";
 
 interface IMapDataToEventCards {
   data: Array<UnformattedEventItem>;
@@ -29,7 +29,7 @@ export const mapDataToEventCards = ({
     theatre
   }: any): IEventCard => ({
     //@ts-ignore
-    title: formatData(
+    title: formatNames(
       title
         ? title
         : eventType === EVENT_CARD_TYPES.GIG
@@ -41,7 +41,7 @@ export const mapDataToEventCards = ({
         : null
     ),
     //@ts-ignore
-    subtitle: formatData(
+    subtitle: formatNames(
       subtitle
         ? subtitle
         : eventType === EVENT_CARD_TYPES.GIG
@@ -53,7 +53,7 @@ export const mapDataToEventCards = ({
         : null
     ),
     //@ts-ignore
-    body: formatData(
+    body: formatNames(
       eventType === EVENT_CARD_TYPES.GIG
         ? venue
         : eventType === EVENT_CARD_TYPES.THEATRE

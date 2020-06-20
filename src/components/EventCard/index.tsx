@@ -4,19 +4,18 @@ import styled, { css } from "styled-components";
 import {
   FlexColumn,
   FlexRow,
-  Headers,
+  H3,
   SeventyFivePercentSpan
 } from "../../primitives";
-import { daysToGo, getDisplayDateText, getCountdownText } from "../../utils";
 
-const { EventCardTitle } = Headers;
+import { getCountdownText, getDisplayDateText, daysToGo } from "./utils";
 
 const verticalSpaceBetweenEventCardRows: PxValue = "3px";
 
 interface EventCardTitleProps {
   favourite: boolean;
 }
-const StyledEventCardTitle = styled(EventCardTitle)`
+const EventCardTitle = styled(H3)`
   ${({ favourite }: EventCardTitleProps) =>
     favourite &&
     css`
@@ -62,12 +61,9 @@ export const EventCard: React.FC<IEventCard> = ({
   return (
     <StyledFlexColumn data-test="event-card-container">
       <div>
-        <StyledEventCardTitle
-          data-test="event-card-title"
-          favourite={favourite}
-        >
+        <EventCardTitle data-test="event-card-title" favourite={favourite}>
           {title}
-        </StyledEventCardTitle>
+        </EventCardTitle>
 
         {subtitle && (
           <EventCardSubtitle data-test="event-card-subtitle">

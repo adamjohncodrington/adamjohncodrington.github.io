@@ -5,16 +5,18 @@ import { Circle, FlexRow, SeventyFivePercentSpan } from "../../primitives";
 import { calculateRecipeCost, getIngredientsHeader } from "../../utils";
 
 import { CentredOnPhone } from "../CentredOnPhone";
-import { RecipeCardList } from "./RecipeCardList";
 import { Disclosure } from "../Disclosure";
+
+// import { RecipeCardCost } from "./RecipeCardCost";
+import { RecipeCardList } from "./RecipeCardList";
 
 import {
   mapMethodToListItems,
   mapServeWithToListItems,
   mapRecipeIngredientsToListItems
-} from "./dataFactory";
+} from "./factory";
 import {
-  StyledRecipeCardTitle,
+  RecipeCardTitle,
   RecipeBody,
   StyledImage,
   PaddedFlexColumn
@@ -47,9 +49,7 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
       expandedAutomatically={newRecipe}
       headerComponent={
         <FlexRow>
-          <StyledRecipeCardTitle favourite={favourite}>
-            {title}
-          </StyledRecipeCardTitle>
+          <RecipeCardTitle favourite={favourite}>{title}</RecipeCardTitle>
 
           <Circle fontSize="13px" size="25px" invert color={diet.color}>
             {diet.abbreviation}

@@ -1,7 +1,7 @@
 import { PAGE_SECTIONS } from "../constants";
 import {
   isInFuture,
-  formatData,
+  formatNames,
   getPageSectionItemCounts,
   itemIsFavourited
 } from "../utils";
@@ -37,7 +37,7 @@ export const generateSectionData = ({
     });
 
     return {
-      text: formatData(item),
+      text: formatNames(item),
       ignoreCountInfo: item.insignificant || bucketListMode,
       pastCount,
       futureCount,
