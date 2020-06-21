@@ -32,7 +32,6 @@ export const generateSectionData = ({
   const mapToListEntry = item => {
     const { pastCount, futureCount } = getPageSectionItemCounts({
       itemToCount: item,
-      pageSectionTitle,
       data: allData
     });
 

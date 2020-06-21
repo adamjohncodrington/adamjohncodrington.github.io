@@ -76,7 +76,7 @@ const Recipes: React.FC<IRecipes> = ({ recipes }) => (
     {recipes.map(
       (item: IRecipeCard, index: number) =>
         !item.hide && (
-          <Li>
+          <Li key={index}>
             <RecipeCard key={index} {...item} />
           </Li>
         )
