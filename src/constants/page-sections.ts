@@ -1,15 +1,3 @@
-interface I_PAGE_SECTION_TYPES {
-  RECIPES: IPageSecionType;
-  COUNTED_LIST: IPageSecionType;
-  EVENT_CARDS: IPageSecionType;
-}
-
-export const PAGE_SECTION_TYPES: I_PAGE_SECTION_TYPES = {
-  RECIPES: "recipes",
-  COUNTED_LIST: "counted-list",
-  EVENT_CARDS: "event-cards"
-};
-
 interface IEventCardTypes {
   GIG: IEventCardType;
   THEATRE: IEventCardType;
@@ -20,6 +8,18 @@ export const EVENT_CARD_TYPES: IEventCardTypes = {
   GIG: "gig",
   THEATRE: "theatre",
   TRIP: "trip"
+};
+
+interface I_PAGE_SECTION_TYPES {
+  RECIPES: IPageSecionType;
+  COUNTED_LIST: IPageSecionType;
+  EVENT_CARDS: IPageSecionType;
+}
+
+export const PAGE_SECTION_TYPES: I_PAGE_SECTION_TYPES = {
+  RECIPES: "recipes",
+  COUNTED_LIST: "counted-list",
+  EVENT_CARDS: "event-cards"
 };
 
 interface AllPageSectionTitles {
