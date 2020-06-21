@@ -3,10 +3,10 @@ import { ICONS } from "../resources";
 import { EVENT_CARD_TYPES, PAGE_SECTIONS } from "../constants";
 import { mapDataToEventCards, mapYearGroupsToSections } from "../factories";
 
-const eventType = EVENT_CARD_TYPES.THEATRE;
+const eventCardType = EVENT_CARD_TYPES.THEATRE;
 //@ts-ignore
 const mapTheatreVisitToEventCards = parms =>
-  mapDataToEventCards({ ...parms, eventType });
+  mapDataToEventCards({ ...parms, eventCardType });
 
 const statsSections: Array<IPageSection> = [
   {
@@ -41,7 +41,7 @@ const statsSections: Array<IPageSection> = [
 
 const yearSections: Array<IPageSection> = mapYearGroupsToSections({
   years: DATA_THEATRE.ALL_GROUPED_BY_YEAR,
-  eventType
+  eventCardType
 });
 
 const sections: Array<IPageSection> = [...statsSections, ...yearSections];

@@ -6,12 +6,12 @@ import { mapDataToEventCards } from "./mapDataToEventCards";
 type SingleYearData = Array<any>;
 type IMapYearGroupsToSections = {
   years: Array<SingleYearData>;
-  eventType: IEventCardType;
+  eventCardType: IEventCardType;
 };
 
 export const mapYearGroupsToSections = ({
   years,
-  eventType
+  eventCardType
 }: IMapYearGroupsToSections): Array<IPageSection> => {
   const mapYearGroupToSection = (year: SingleYearData): IPageSection => {
     const title = year[0].dates[0].getFullYear();
@@ -19,7 +19,7 @@ export const mapYearGroupsToSections = ({
     return {
       details: { id: title, title, type: PAGE_SECTION_TYPES.EVENT_CARDS },
       showSectionLength: true,
-      data: mapDataToEventCards({ data: year, eventType }).filter(
+      data: mapDataToEventCards({ data: year, eventCardType }).filter(
         (item: any) => !isInFuture(item.dates)
       )
     };

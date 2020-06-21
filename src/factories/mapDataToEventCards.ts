@@ -3,14 +3,14 @@ import { formatNames, isInFuture } from "../utils";
 
 interface IMapDataToEventCards {
   data: Array<UnformattedEventItem>;
-  eventType: IEventCardType;
+  eventCardType: IEventCardType;
 }
 
 type UnformattedEventItem = any;
 
 export const mapDataToEventCards = ({
   data,
-  eventType
+  eventCardType
 }: IMapDataToEventCards): Array<IEventCard> => {
   const mapDataToEventCard = ({
     title,
@@ -32,11 +32,11 @@ export const mapDataToEventCards = ({
     title: formatNames(
       title
         ? title
-        : eventType === EVENT_CARD_TYPES.GIG
+        : eventCardType === EVENT_CARD_TYPES.GIG
         ? headline
           ? headline
           : festival
-        : eventType === EVENT_CARD_TYPES.THEATRE
+        : eventCardType === EVENT_CARD_TYPES.THEATRE
         ? play
         : null
     ),
@@ -44,19 +44,19 @@ export const mapDataToEventCards = ({
     subtitle: formatNames(
       subtitle
         ? subtitle
-        : eventType === EVENT_CARD_TYPES.GIG
+        : eventCardType === EVENT_CARD_TYPES.GIG
         ? lineup
           ? lineup
           : support
-        : eventType === EVENT_CARD_TYPES.THEATRE
+        : eventCardType === EVENT_CARD_TYPES.THEATRE
         ? cast
         : null
     ),
     //@ts-ignore
     body: formatNames(
-      eventType === EVENT_CARD_TYPES.GIG
+      eventCardType === EVENT_CARD_TYPES.GIG
         ? venue
-        : eventType === EVENT_CARD_TYPES.THEATRE
+        : eventCardType === EVENT_CARD_TYPES.THEATRE
         ? theatre
         : null
     ),
@@ -64,10 +64,10 @@ export const mapDataToEventCards = ({
     company: company.sort((a: IFriend, b: IFriend) =>
       a.initials > b.initials ? 1 : -1
     ),
-    eventType,
+    eventCardType,
     favourite,
     disclaimer:
-      eventType === EVENT_CARD_TYPES.GIG && isInFuture(dates) && ticketType
+      eventCardType === EVENT_CARD_TYPES.GIG && isInFuture(dates) && ticketType
   });
 
   return data.map((item: UnformattedEventItem) => mapDataToEventCard(item));

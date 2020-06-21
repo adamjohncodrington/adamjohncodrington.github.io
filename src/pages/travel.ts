@@ -3,10 +3,10 @@ import { DATA_TRAVEL } from "../data";
 import { ICONS } from "../resources";
 import { mapDataToEventCards, mapYearGroupsToSections } from "../factories";
 
-const eventType = EVENT_CARD_TYPES.TRIP;
+const eventCardType = EVENT_CARD_TYPES.TRIP;
 //@ts-ignore
 const mapTripToEventCards = parms =>
-  mapDataToEventCards({ ...parms, eventType });
+  mapDataToEventCards({ ...parms, eventCardType });
 
 const { pastCount, futureCount } = DATA_TRAVEL;
 
@@ -65,7 +65,7 @@ const statsSections: Array<IPageSection> = [
 
 const yearSections: Array<IPageSection> = mapYearGroupsToSections({
   years: DATA_TRAVEL.ALL_GROUPED_BY_YEAR,
-  eventType
+  eventCardType
 });
 
 const sections: Array<IPageSection> = [...statsSections, ...yearSections];
