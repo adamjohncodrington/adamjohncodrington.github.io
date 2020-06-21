@@ -1,7 +1,7 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "../../../constants";
 import { PHOTOS } from "../../../resources";
 
-import { recipeMethodEntries } from "../utils";
+import { recipeMethodEntries } from "utils";
 
 const { preheatOven, FOLD_IN_FLOUR_MIX, bakeForAbout } = recipeMethodEntries();
 

@@ -1,5 +1,5 @@
 import { EVENT_CARD_TYPES } from "../constants";
-import { formatNames, isInFuture } from "../utils";
+import { formatNames, isInFuture } from "utils";
 
 type UnformattedEventItem = any;
 interface IMapDataToEventCards {

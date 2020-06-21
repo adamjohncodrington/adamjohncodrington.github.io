@@ -5,7 +5,7 @@ import {
   PAGE_SECTIONS,
   THEATRE_VENUES
 } from "../../constants";
-import { generateSectionData } from "../../factories";
+import { mapToCountedList } from "../../factories";
 import { isInFuture } from "utils";
 
 import { THEATRE_2016 } from "./theatre-2016";
@@ -35,8 +35,8 @@ const FAVOURITES: Array<ITheatreData> = ALL.filter(item => item.favourite);
 const UPCOMING = ALL.filter(theatreTrip => isInFuture(theatreTrip.dates));
 
 //@ts-ignore
-const generateSectionDataWrapper = parms =>
-  generateSectionData({
+const mapToCountedListWrapper = parms =>
+  mapToCountedList({
     ...parms,
     allData: ALL,
     favouritedData: FAVOURITES
@@ -48,20 +48,20 @@ export const DATA_THEATRE = {
   FAVOURITES,
   UPCOMING,
 
-  ACTORS: generateSectionDataWrapper({
+  ACTORS: mapToCountedListWrapper({
     items: ACTORS,
     pageSectionTitle: PAGE_SECTIONS.ACTOR
   }),
-  FRIENDS: generateSectionDataWrapper({
+  FRIENDS: mapToCountedListWrapper({
     items: FRIENDS,
     pageSectionTitle: PAGE_SECTIONS.FRIEND,
     filter: "theatre"
   }),
-  PLAYS: generateSectionDataWrapper({
+  PLAYS: mapToCountedListWrapper({
     items: PLAYS,
     pageSectionTitle: PAGE_SECTIONS.PLAY
   }),
-  VENUES: generateSectionDataWrapper({
+  VENUES: mapToCountedListWrapper({
     items: THEATRE_VENUES,
     pageSectionTitle: PAGE_SECTIONS.THEATRE_VENUES
   })

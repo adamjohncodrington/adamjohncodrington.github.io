@@ -5,7 +5,7 @@ import {
   PAGE_SECTIONS,
   FESTIVALS
 } from "../../constants";
-import { generateSectionData } from "../../factories";
+import { mapToCountedList } from "../../factories";
 import { isInFuture } from "utils";
 
 import { GIGS_2006 } from "./gigs-2006";
@@ -68,8 +68,8 @@ const FAVOURITES: Array<IGigData> = ALL.filter(item => item.favourite);
 const UPCOMING = ALL.filter(gig => isInFuture(gig.dates));
 
 //@ts-ignore
-const generateSectionDataWrapper = parms =>
-  generateSectionData({
+const mapToCountedListWrapper = parms =>
+  mapToCountedList({
     ...parms,
     allData: ALL,
     favouritedData: FAVOURITES
@@ -84,26 +84,26 @@ export const DATA_GIGS = {
   FAVOURITES,
   UPCOMING,
 
-  BUCKET_LIST: generateSectionDataWrapper({
+  BUCKET_LIST: mapToCountedListWrapper({
     bucketListMode: true,
     items: MUSICIANS,
     pageSectionTitle: PAGE_SECTIONS.MUSICIAN
   }),
-  FESTIVALS: generateSectionDataWrapper({
+  FESTIVALS: mapToCountedListWrapper({
     items: FESTIVALS,
     pageSectionTitle: PAGE_SECTIONS.FESTIVAL,
     filter: "festival"
   }),
-  FRIENDS: generateSectionDataWrapper({
+  FRIENDS: mapToCountedListWrapper({
     items: FRIENDS,
     pageSectionTitle: PAGE_SECTIONS.FRIEND,
     filter: "gigs"
   }),
-  MUSICIANS: generateSectionDataWrapper({
+  MUSICIANS: mapToCountedListWrapper({
     items: MUSICIANS,
     pageSectionTitle: PAGE_SECTIONS.MUSICIAN
   }),
-  VENUES: generateSectionDataWrapper({
+  VENUES: mapToCountedListWrapper({
     items: MUSIC_VENUES,
     pageSectionTitle: PAGE_SECTIONS.MUSIC_VENUES
   })

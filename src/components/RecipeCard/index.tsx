@@ -1,8 +1,8 @@
 import React from "react";
 
 import { MEASUREMENTS, NO_UNIT_COST_FOR_RECIPE_EXISTS } from "../../constants";
-import { Circle, FlexRow, SeventyFivePercentSpan } from "../../primitives";
-import { calculateRecipeCost, getIngredientsHeader } from "../../utils";
+import { Circle, FlexRow, SeventyFivePercentSpan } from "primitives";
+import { calculateRecipeCost, getIngredientsHeader } from "utils";
 
 import { CentredOnPhone } from "../CentredOnPhone";
 import { Disclosure } from "../Disclosure";

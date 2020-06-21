@@ -1,7 +1,7 @@
 import { INGREDIENTS, MEASUREMENTS, UNICODE, DIETS } from "../../../constants";
 import { PHOTOS } from "../../../resources";
 
-import { recipeMethodEntries } from "../utils";
+import { recipeMethodEntries } from "utils";
 
 const { preheatOven } = recipeMethodEntries();
 

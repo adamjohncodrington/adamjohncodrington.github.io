@@ -1,5 +1,5 @@
 import {
-  generateSectionData,
+  mapToCountedList,
   generatePropertyArrayFromObject
 } from "../../factories";
 import { FRIENDS, PAGE_SECTIONS, LOCATIONS } from "../../constants";
@@ -119,8 +119,8 @@ const highlights: Array<IAttraction> = attractions.filter(
 );
 
 //@ts-ignore
-const generateSectionDataWrapper = parms =>
-  generateSectionData({
+const mapToCountedListWrapper = parms =>
+  mapToCountedList({
     ...parms,
     allData: ALL,
     favouritedData: FAVOURITES
@@ -135,39 +135,39 @@ export const DATA_TRAVEL = {
   FAVOURITES,
   UPCOMING,
 
-  BUCKET_LIST: generateSectionDataWrapper({
+  BUCKET_LIST: mapToCountedListWrapper({
     bucketListMode: true,
     items: TRAVEL_BUCKET_LIST
   }),
-  CITIES: generateSectionDataWrapper({
+  CITIES: mapToCountedListWrapper({
     items: cities,
     pageSectionTitle: PAGE_SECTIONS.CITY
   }),
-  TOWNS: generateSectionDataWrapper({
+  TOWNS: mapToCountedListWrapper({
     items: towns,
     pageSectionTitle: PAGE_SECTIONS.TOWN
   }),
-  ATTRACTIONS: generateSectionDataWrapper({
+  ATTRACTIONS: mapToCountedListWrapper({
     items: attractions.filter(item => !item.themePark && !item.highlight),
     pageSectionTitle: PAGE_SECTIONS.ATTRACTION
   }),
-  THEME_PARKS: generateSectionDataWrapper({
+  THEME_PARKS: mapToCountedListWrapper({
     items: themeParks,
     pageSectionTitle: PAGE_SECTIONS.ATTRACTION
   }),
-  HIGHLIGHTS: generateSectionDataWrapper({
+  HIGHLIGHTS: mapToCountedListWrapper({
     items: highlights,
     pageSectionTitle: PAGE_SECTIONS.ATTRACTION
   }),
-  ISLANDS: generateSectionDataWrapper({
+  ISLANDS: mapToCountedListWrapper({
     items: islands,
     pageSectionTitle: PAGE_SECTIONS.ISLAND
   }),
-  COUNTRIES: generateSectionDataWrapper({
+  COUNTRIES: mapToCountedListWrapper({
     items: countries,
     pageSectionTitle: PAGE_SECTIONS.COUNTRY
   }),
-  FRIENDS: generateSectionDataWrapper({
+  FRIENDS: mapToCountedListWrapper({
     items: FRIENDS,
     pageSectionTitle: PAGE_SECTIONS.FRIEND,
     filter: "travel"

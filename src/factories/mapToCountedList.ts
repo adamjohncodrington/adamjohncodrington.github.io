@@ -1,32 +1,24 @@
 import { PAGE_SECTIONS } from "../constants";
-import {
-  isInFuture,
-  formatNames,
-  getPageSectionItemCounts,
-  itemIsFavourited
-} from "../utils";
+import { formatNames, getPageSectionItemCounts, itemIsFavourited } from "utils";
 
-interface IGenerateSectionData {
+interface IMapToCountedList {
   items: Object;
   pageSectionTitle: IPageSectionDetails;
   filter: IFilter;
   allData: Array<any>;
   favouritedData: Array<any>;
-  upcomingMode: boolean;
   bucketListMode: boolean;
 }
 
-export const generateSectionData = ({
+export const mapToCountedList = ({
   items,
   pageSectionTitle,
   filter,
   allData,
   favouritedData,
-  upcomingMode,
   bucketListMode
-}: IGenerateSectionData) => {
-  //@ts-ignore
-  if (upcomingMode) return allData.filter(item => isInFuture(item.dates));
+}: IMapToCountedList): Array<ICountedListItem> => {
+  console.log(items);
 
   //@ts-ignore
   const mapToListEntry = item => {
@@ -71,6 +63,7 @@ export const generateSectionData = ({
         ignoreCountInfo || futureCount !== 0 || pastCount !== 0
     );
 
+  //@ts-ignore
   return pageSectionTitle === PAGE_SECTIONS.FRIEND
     ? data
         .sort((a, b) => (a.futureCount > b.futureCount ? -1 : 1))

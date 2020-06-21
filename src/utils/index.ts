@@ -13,5 +13,6 @@ export { convertIngredientQuantity } from "./convertIngredientQuantity";
 export { formatNames } from "./formatNames";
 export { getPageSectionItemCounts } from "./getPageSectionItemCounts";
 export { isInFuture } from "./isInFuture";
+export { recipeMethodEntries } from "./recipeMethodEntries";
 export { itemIsFavourited } from "./itemIsFavourited";
 export { numberToCurrencyString } from "./numberToCurrencyString";
