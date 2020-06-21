@@ -16,5 +16,7 @@ export const mapRecipeGroupsToSections = (
     expandedAutomatically: true
   });
 
-  return recipeGroups.map(item => maprecipeGroupToSection(item));
+  return recipeGroups.map((item: IRecipeGroup) =>
+    maprecipeGroupToSection(item)
+  );
 };
