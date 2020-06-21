@@ -107,7 +107,7 @@ interface IEventCards {
 const EventCards: React.FC<IEventCards> = ({ eventCards }) => (
   <SectionPanelList data-test="page-section-panel" isEventCards>
     {eventCards.map((eventCard: IEventCard, index: number) => (
-      <Li>
+      <Li key={index}>
         <EventCard key={index} {...eventCard} />
       </Li>
     ))}

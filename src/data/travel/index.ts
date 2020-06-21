@@ -1,6 +1,6 @@
 import {
   generateSectionData,
-  generateChildItemsFromParentItems
+  generatePropertyArrayFromObject
 } from "../../factories";
 import { FRIENDS, PAGE_SECTIONS, LOCATIONS } from "../../constants";
 
@@ -88,25 +88,25 @@ const FAVOURITES: Array<ITravelData> = ALL.filter(item => item.favourite);
 
 const countries = Object.values(LOCATIONS);
 
-const cities: Array<ICity> = generateChildItemsFromParentItems({
-  childItems: "cities",
-  parentItems: LOCATIONS
+const cities: Array<ICity> = generatePropertyArrayFromObject({
+  object: LOCATIONS,
+  childLevelProperty: "cities"
 });
 
-const towns: Array<ITown> = generateChildItemsFromParentItems({
-  childItems: "towns",
-  parentItems: LOCATIONS
+const towns: Array<ITown> = generatePropertyArrayFromObject({
+  object: LOCATIONS,
+  childLevelProperty: "towns"
 });
 
-const islands: Array<IIsland> = generateChildItemsFromParentItems({
-  childItems: "islands",
-  parentItems: LOCATIONS,
-  parentFlag: "island"
+const islands: Array<IIsland> = generatePropertyArrayFromObject({
+  object: LOCATIONS,
+  childLevelProperty: "islands",
+  topLevelProperty: "island"
 });
 
-const attractions: Array<IAttraction> = generateChildItemsFromParentItems({
-  childItems: "attractions",
-  parentItems: LOCATIONS
+const attractions: Array<IAttraction> = generatePropertyArrayFromObject({
+  object: LOCATIONS,
+  childLevelProperty: "attractions"
 });
 
 const themeParks: Array<IAttraction> = attractions.filter(
