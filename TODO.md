@@ -1,5 +1,11 @@
 # TO DO LIST
 
+## TypeScript
+
+- add more absolute paths/imports
+- `mapToCountedList` and `mapToEventCardData` would benefit from being rewritten
+- remove as many instances of `any` and `@ts-ignore` as possible
+
 ## Refactoring
 
 - amalgamate `data` and `pages` folders, there is too much overlap
@@ -8,12 +14,6 @@
 - rationalise theme
 - rationalise `data-test` attributes
 - review semantics of page structure, landmarks, accessibility, etc.
-
-## TypeScript
-
-- `mapToCountedList` and `mapToEventCardData` could benefit from being rewritten
-- add absolute paths/imports
-- remove as many instances of `any` and `@ts-ignore` as possible
 
 ## Data
 
