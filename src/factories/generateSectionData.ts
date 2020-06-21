@@ -7,7 +7,7 @@ import {
 } from "../utils";
 
 interface IGenerateSectionData {
-  items: any;
+  items: Object;
   pageSectionTitle: IPageSectionDetails;
   filter: IFilter;
   allData: Array<any>;
@@ -25,6 +25,8 @@ export const generateSectionData = ({
   upcomingMode,
   bucketListMode
 }: IGenerateSectionData) => {
+  console.log(items);
+
   //@ts-ignore
   if (upcomingMode) return allData.filter(item => isInFuture(item.dates));
 

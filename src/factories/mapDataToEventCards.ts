@@ -1,12 +1,11 @@
 import { EVENT_CARD_TYPES } from "../constants";
 import { formatNames, isInFuture } from "../utils";
 
+type UnformattedEventItem = any;
 interface IMapDataToEventCards {
   data: Array<UnformattedEventItem>;
   eventCardType: IEventCardType;
 }
-
-type UnformattedEventItem = any;
 
 export const mapDataToEventCards = ({
   data,
@@ -27,7 +26,7 @@ export const mapDataToEventCards = ({
     play,
     cast,
     theatre
-  }: any): IEventCard => ({
+  }: UnformattedEventItem): IEventCard => ({
     //@ts-ignore
     title: formatNames(
       title

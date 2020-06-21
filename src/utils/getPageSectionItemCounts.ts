@@ -2,11 +2,21 @@ import { PAGE_SECTIONS } from "../constants";
 
 import { isInFuture } from "./isInFuture";
 
+type UnknownTypeDataItem = any;
+type IItemToMatch = any;
+
 interface ILookupFunction {
   dataItem: UnknownTypeDataItem;
   pageSectionTitle: IPageSectionDetails;
-  itemToMatch: any;
+  itemToMatch: IItemToMatch;
 }
+
+interface IGetPageSectionItemCounts {
+  itemToCount: any;
+  pageSectionTitle: IPageSectionDetails;
+  data: Array<UnknownTypeDataItem>;
+}
+
 const musicianMatchExists = ({
   dataItem,
   itemToMatch,
@@ -80,14 +90,6 @@ const countryCityTownMatchExists = ({
   ((dataItem.title && dataItem.title.includes(itemToMatch)) ||
     (dataItem.hidden && dataItem.hidden.includes(itemToMatch)) ||
     (dataItem.subtitle && dataItem.subtitle.includes(itemToMatch)));
-
-interface IGetPageSectionItemCounts {
-  itemToCount: any;
-  pageSectionTitle: IPageSectionDetails;
-  data: Array<UnknownTypeDataItem>;
-}
-
-type UnknownTypeDataItem = any;
 
 export const getPageSectionItemCounts = ({
   itemToCount,

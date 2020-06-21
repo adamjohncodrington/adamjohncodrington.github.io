@@ -11,6 +11,7 @@
 
 ## TypeScript
 
+- `generateSectionData` and `mapDataToEventCards` could benefit from being rewritten
 - add absolute paths/imports
 - remove as many instances of `any` and `@ts-ignore` as possible
 

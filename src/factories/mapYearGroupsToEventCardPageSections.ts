@@ -9,7 +9,7 @@ type IMapYearGroupsToSections = {
   eventCardType: IEventCardType;
 };
 
-export const mapYearGroupsToSections = ({
+export const mapYearGroupsToEventCardPageSections = ({
   years,
   eventCardType
 }: IMapYearGroupsToSections): Array<IPageSection> => {
@@ -20,7 +20,7 @@ export const mapYearGroupsToSections = ({
       details: { id: title, title, type: PAGE_SECTION_TYPES.EVENT_CARDS },
       showSectionLength: true,
       data: mapDataToEventCards({ data: year, eventCardType }).filter(
-        (item: any) => !isInFuture(item.dates)
+        (item: IEventCard) => !isInFuture(item.dates)
       )
     };
   };

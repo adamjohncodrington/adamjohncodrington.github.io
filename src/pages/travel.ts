@@ -1,7 +1,10 @@
 import { EVENT_CARD_TYPES, PAGE_SECTIONS } from "../constants";
 import { DATA_TRAVEL } from "../data";
 import { ICONS } from "../resources";
-import { mapDataToEventCards, mapYearGroupsToSections } from "../factories";
+import {
+  mapDataToEventCards,
+  mapYearGroupsToEventCardPageSections
+} from "../factories";
 
 const eventCardType = EVENT_CARD_TYPES.TRIP;
 //@ts-ignore
@@ -63,7 +66,7 @@ const statsSections: Array<IPageSection> = [
   }
 ];
 
-const yearSections: Array<IPageSection> = mapYearGroupsToSections({
+const yearSections: Array<IPageSection> = mapYearGroupsToEventCardPageSections({
   years: DATA_TRAVEL.ALL_GROUPED_BY_YEAR,
   eventCardType
 });
