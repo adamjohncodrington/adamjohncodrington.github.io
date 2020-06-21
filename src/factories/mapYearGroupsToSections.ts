@@ -3,7 +3,7 @@ import { isInFuture } from "../utils";
 
 import { mapDataToEventCards } from "./mapDataToEventCards";
 
-type SingleYearData = Array<any>;
+type SingleYearData = Array<IEventCardRawData>;
 type IMapYearGroupsToSections = {
   years: Array<SingleYearData>;
   eventCardType: IEventCardType;
@@ -14,7 +14,7 @@ export const mapYearGroupsToSections = ({
   eventCardType
 }: IMapYearGroupsToSections): Array<IPageSection> => {
   const mapYearGroupToSection = (year: SingleYearData): IPageSection => {
-    const title = year[0].dates[0].getFullYear();
+    const title = year[0].dates[0].getFullYear().toString();
 
     return {
       details: { id: title, title, type: PAGE_SECTION_TYPES.EVENT_CARDS },
@@ -25,5 +25,5 @@ export const mapYearGroupsToSections = ({
     };
   };
 
-  return years.map((year: any) => mapYearGroupToSection(year));
+  return years.map((year: SingleYearData) => mapYearGroupToSection(year));
 };

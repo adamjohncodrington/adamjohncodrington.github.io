@@ -13,6 +13,9 @@ interface IFriend extends INameFavourite {
 }
 
 type IEventCardType = "gig" | "trip" | "theatre";
+
+type IEventCardRawData = IGigData | ITravelData | ITheatreData;
+
 type IPageSecionType = "recipes" | "event-cards" | "counted-list";
 
 interface IPageSectionDetails {
@@ -42,7 +45,6 @@ interface IEventCard {
   subtitle?: string;
   favourite: boolean;
   body: string;
-  eventCardType: IEventCardType;
   dates: Array<Date>;
   company: Array<IFriend>;
   disclaimer?: string;
