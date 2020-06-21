@@ -2,14 +2,14 @@ import { EVENT_CARD_TYPES, PAGE_SECTIONS } from "../constants";
 import { DATA_TRAVEL } from "../data";
 import { ICONS } from "../resources";
 import {
-  mapDataToEventCards,
-  mapYearGroupsToEventCardPageSections
+  mapToEventCardData,
+  mapYearsToEventCardPageSections
 } from "../factories";
 
 const eventCardType = EVENT_CARD_TYPES.TRIP;
 //@ts-ignore
 const mapTripToEventCards = parms =>
-  mapDataToEventCards({ ...parms, eventCardType });
+  mapToEventCardData({ ...parms, eventCardType });
 
 const { pastCount, futureCount } = DATA_TRAVEL;
 
@@ -39,7 +39,7 @@ const statsSections: Array<IPageSection> = [
   {
     details: PAGE_SECTIONS.HIGHLIGHT,
     icon: ICONS.MAP_PIN,
-    data: DATA_TRAVEL.HIGLIGHTS
+    data: DATA_TRAVEL.HIGHLIGHTS
   },
   {
     details: PAGE_SECTIONS.ISLAND,
@@ -66,7 +66,7 @@ const statsSections: Array<IPageSection> = [
   }
 ];
 
-const yearSections: Array<IPageSection> = mapYearGroupsToEventCardPageSections({
+const yearSections: Array<IPageSection> = mapYearsToEventCardPageSections({
   years: DATA_TRAVEL.ALL_GROUPED_BY_YEAR,
   eventCardType
 });

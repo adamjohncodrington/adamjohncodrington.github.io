@@ -29,6 +29,7 @@ import { TRAVEL_2018 } from "./travel-2018";
 import { TRAVEL_2019 } from "./travel-2019";
 import { TRAVEL_2020 } from "./travel-2020";
 import { TRAVEL_BUCKET_LIST } from "./travel-bucket-list";
+import { isInFuture } from "utils";
 
 const ALL: Array<ITravelData> = [
   ...TRAVEL_1997,
@@ -85,6 +86,7 @@ const ALL_GROUPED_BY_YEAR: Array<Array<ITravelData>> = [
 ];
 
 const FAVOURITES: Array<ITravelData> = ALL.filter(item => item.favourite);
+const UPCOMING = ALL.filter(theatreTrip => isInFuture(theatreTrip.dates));
 
 const countries = Object.values(LOCATIONS);
 
@@ -124,63 +126,50 @@ const generateSectionDataWrapper = parms =>
     favouritedData: FAVOURITES
   });
 
-const UPCOMING = generateSectionDataWrapper({ upcomingMode: true });
-
 export const DATA_TRAVEL = {
   pastCount: ALL.filter(item => !item.notAbroad).length - UPCOMING.length,
   futureCount: UPCOMING.length,
 
   ALL,
-
   ALL_GROUPED_BY_YEAR,
+  FAVOURITES,
+  UPCOMING,
 
   BUCKET_LIST: generateSectionDataWrapper({
     bucketListMode: true,
     items: TRAVEL_BUCKET_LIST
   }),
-
   CITIES: generateSectionDataWrapper({
     items: cities,
     pageSectionTitle: PAGE_SECTIONS.CITY
   }),
-
   TOWNS: generateSectionDataWrapper({
     items: towns,
     pageSectionTitle: PAGE_SECTIONS.TOWN
   }),
-
   ATTRACTIONS: generateSectionDataWrapper({
     items: attractions.filter(item => !item.themePark && !item.highlight),
     pageSectionTitle: PAGE_SECTIONS.ATTRACTION
   }),
-
   THEME_PARKS: generateSectionDataWrapper({
     items: themeParks,
     pageSectionTitle: PAGE_SECTIONS.ATTRACTION
   }),
-
-  HIGLIGHTS: generateSectionDataWrapper({
+  HIGHLIGHTS: generateSectionDataWrapper({
     items: highlights,
     pageSectionTitle: PAGE_SECTIONS.ATTRACTION
   }),
-
   ISLANDS: generateSectionDataWrapper({
     items: islands,
     pageSectionTitle: PAGE_SECTIONS.ISLAND
   }),
-
   COUNTRIES: generateSectionDataWrapper({
     items: countries,
     pageSectionTitle: PAGE_SECTIONS.COUNTRY
   }),
-
-  FAVOURITES,
-
   FRIENDS: generateSectionDataWrapper({
     items: FRIENDS,
     pageSectionTitle: PAGE_SECTIONS.FRIEND,
     filter: "travel"
-  }),
-
-  UPCOMING
+  })
 };

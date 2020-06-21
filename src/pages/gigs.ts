@@ -2,15 +2,15 @@ import { EVENT_CARD_TYPES, PAGE_SECTIONS } from "../constants";
 import { DATA_GIGS } from "../data";
 import { ICONS } from "../resources";
 import {
-  mapDataToEventCards,
-  mapYearGroupsToEventCardPageSections
+  mapToEventCardData,
+  mapYearsToEventCardPageSections
 } from "../factories";
 
 const eventCardType = EVENT_CARD_TYPES.GIG;
 
 //@ts-ignore
 const mapGigsToEventCards = parms =>
-  mapDataToEventCards({ ...parms, eventCardType });
+  mapToEventCardData({ ...parms, eventCardType });
 
 const { pastCount, futureCount } = DATA_GIGS;
 
@@ -53,7 +53,7 @@ const statsSections: Array<IPageSection> = [
   }
 ];
 
-const yearSections: Array<IPageSection> = mapYearGroupsToEventCardPageSections({
+const yearSections: Array<IPageSection> = mapYearsToEventCardPageSections({
   years: DATA_GIGS.ALL_GROUPED_BY_YEAR,
   eventCardType
 });

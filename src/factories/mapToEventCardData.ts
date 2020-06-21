@@ -7,7 +7,7 @@ interface IMapDataToEventCards {
   eventCardType: IEventCardType;
 }
 
-export const mapDataToEventCards = ({
+export const mapToEventCardData = ({
   data,
   eventCardType
 }: IMapDataToEventCards): Array<IEventCard> => {

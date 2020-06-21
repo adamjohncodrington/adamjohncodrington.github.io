@@ -6,6 +6,7 @@ import {
   FESTIVALS
 } from "../../constants";
 import { generateSectionData } from "../../factories";
+import { isInFuture } from "utils";
 
 import { GIGS_2006 } from "./gigs-2006";
 import { GIGS_2007 } from "./gigs-2007";
@@ -64,6 +65,8 @@ const ALL_GROUPED_BY_YEAR: Array<Array<IGigData>> = [
 
 const FAVOURITES: Array<IGigData> = ALL.filter(item => item.favourite);
 
+const UPCOMING = ALL.filter(gig => isInFuture(gig.dates));
+
 //@ts-ignore
 const generateSectionDataWrapper = parms =>
   generateSectionData({
@@ -72,43 +75,34 @@ const generateSectionDataWrapper = parms =>
     favouritedData: FAVOURITES
   });
 
-const UPCOMING = generateSectionDataWrapper({ upcomingMode: true });
-
 export const DATA_GIGS = {
   pastCount: ALL.length - UPCOMING.length,
   futureCount: UPCOMING.length,
 
   ALL,
-
   ALL_GROUPED_BY_YEAR,
+  FAVOURITES,
+  UPCOMING,
 
   BUCKET_LIST: generateSectionDataWrapper({
     bucketListMode: true,
     items: MUSICIANS,
     pageSectionTitle: PAGE_SECTIONS.MUSICIAN
   }),
-
-  FAVOURITES,
-
   FESTIVALS: generateSectionDataWrapper({
     items: FESTIVALS,
     pageSectionTitle: PAGE_SECTIONS.FESTIVAL,
     filter: "festival"
   }),
-
   FRIENDS: generateSectionDataWrapper({
     items: FRIENDS,
     pageSectionTitle: PAGE_SECTIONS.FRIEND,
     filter: "gigs"
   }),
-
   MUSICIANS: generateSectionDataWrapper({
     items: MUSICIANS,
     pageSectionTitle: PAGE_SECTIONS.MUSICIAN
   }),
-
-  UPCOMING,
-
   VENUES: generateSectionDataWrapper({
     items: MUSIC_VENUES,
     pageSectionTitle: PAGE_SECTIONS.MUSIC_VENUES

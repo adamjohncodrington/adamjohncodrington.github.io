@@ -1,5 +1,5 @@
 export { generatePropertyArrayFromObject } from "./generatePropertyArrayFromObject";
 export { generateSectionData } from "./generateSectionData";
-export { mapDataToEventCards } from "./mapDataToEventCards";
+export { mapToEventCardData } from "./mapToEventCardData";
 export { mapRecipeGroupsToSections } from "./mapRecipeGroupsToSections";
-export { mapYearGroupsToEventCardPageSections } from "./mapYearGroupsToEventCardPageSections";
+export { mapYearsToEventCardPageSections } from "./mapYearsToEventCardPageSections";

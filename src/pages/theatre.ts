@@ -2,14 +2,14 @@ import { DATA_THEATRE } from "../data";
 import { ICONS } from "../resources";
 import { EVENT_CARD_TYPES, PAGE_SECTIONS } from "../constants";
 import {
-  mapDataToEventCards,
-  mapYearGroupsToEventCardPageSections
+  mapToEventCardData,
+  mapYearsToEventCardPageSections
 } from "../factories";
 
 const eventCardType = EVENT_CARD_TYPES.THEATRE;
 //@ts-ignore
 const mapTheatreVisitToEventCards = parms =>
-  mapDataToEventCards({ ...parms, eventCardType });
+  mapToEventCardData({ ...parms, eventCardType });
 
 const statsSections: Array<IPageSection> = [
   {
@@ -42,7 +42,7 @@ const statsSections: Array<IPageSection> = [
   }
 ];
 
-const yearSections: Array<IPageSection> = mapYearGroupsToEventCardPageSections({
+const yearSections: Array<IPageSection> = mapYearsToEventCardPageSections({
   years: DATA_THEATRE.ALL_GROUPED_BY_YEAR,
   eventCardType
 });

@@ -1,7 +1,7 @@
 import { PAGE_SECTION_TYPES } from "../constants";
 import { isInFuture } from "../utils";
 
-import { mapDataToEventCards } from "./mapDataToEventCards";
+import { mapToEventCardData } from "./mapToEventCardData";
 
 type SingleYearData = Array<IEventCardRawData>;
 type IMapYearGroupsToSections = {
@@ -9,7 +9,7 @@ type IMapYearGroupsToSections = {
   eventCardType: IEventCardType;
 };
 
-export const mapYearGroupsToEventCardPageSections = ({
+export const mapYearsToEventCardPageSections = ({
   years,
   eventCardType
 }: IMapYearGroupsToSections): Array<IPageSection> => {
@@ -19,7 +19,7 @@ export const mapYearGroupsToEventCardPageSections = ({
     return {
       details: { id: title, title, type: PAGE_SECTION_TYPES.EVENT_CARDS },
       showSectionLength: true,
-      data: mapDataToEventCards({ data: year, eventCardType }).filter(
+      data: mapToEventCardData({ data: year, eventCardType }).filter(
         (item: IEventCard) => !isInFuture(item.dates)
       )
     };
