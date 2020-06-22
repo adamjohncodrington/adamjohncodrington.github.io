@@ -3,7 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 
 import { HomePage, PageShell, PageSection } from "_components";
 import { Ul } from "_primitives";
-import { HOMEPAGE_ROUTE, PAGE_ROUTES } from "_routes";
+import { HOMEPAGE_ROUTE, PAGE_ROUTES } from "_config";
 
 export const App: React.FC = () => (
   <BrowserRouter>
