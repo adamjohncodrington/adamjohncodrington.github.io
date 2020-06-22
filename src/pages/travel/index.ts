@@ -1,4 +1,9 @@
-import { EVENT_CARD_TYPES, FRIENDS, LOCATIONS, PAGE_SECTIONS } from "CONSTANTS";
+import {
+  EVENT_CARD_TYPES,
+  FRIENDS,
+  LOCATIONS,
+  PAGE_SECTION_IDS
+} from "@constants";
 import { DATA_TRAVEL } from "data";
 import { ICONS } from "resources";
 import { isInFuture } from "utils";
@@ -11,8 +16,8 @@ import {
 } from "../factory";
 
 const eventCardType = EVENT_CARD_TYPES.TRIP;
-const mapTripToEventCards = (parms: any) =>
-  mapToEventCard({ ...parms, eventCardType });
+const mapTripToEventCards = (params: any) =>
+  mapToEventCard({ ...params, eventCardType });
 
 const { ALL, ALL_GROUPED_BY_YEAR } = DATA_TRAVEL;
 
@@ -53,9 +58,9 @@ const highlights: Array<IAttraction> = attractions.filter(
   item => item.highlight
 );
 
-const mapToCountedListWrapper = (parms: any): Array<ICountedListItem> =>
+const mapToCountedListWrapper = (params: any): Array<ICountedListItem> =>
   mapToCountedList({
-    ...parms,
+    ...params,
     allData: ALL,
     favouritedData: FAVOURITES
   });
@@ -66,85 +71,85 @@ const BUCKET_LIST: Array<ICountedListItem> = mapToCountedListWrapper({
 });
 const CITIES: Array<ICountedListItem> = mapToCountedListWrapper({
   items: cities,
-  pageSectionTitle: PAGE_SECTIONS.CITY
+  id: PAGE_SECTION_IDS.CITY
 });
 const TOWNS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: towns,
-  pageSectionTitle: PAGE_SECTIONS.TOWN
+  id: PAGE_SECTION_IDS.TOWN
 });
 // const ATTRACTIONS: any = mapToCountedListWrapper({
 //   items: attractions.filter(item => !item.themePark && !item.highlight),
-//   pageSectionTitle: PAGE_SECTIONS.ATTRACTION
+//   id: PAGE_SECTION_IDS.ATTRACTION
 // });
 const THEME_PARKS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: themeParks,
-  pageSectionTitle: PAGE_SECTIONS.ATTRACTION
+  id: PAGE_SECTION_IDS.ATTRACTION
 });
 const HIGHLIGHTS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: highlights,
-  pageSectionTitle: PAGE_SECTIONS.ATTRACTION
+  id: PAGE_SECTION_IDS.ATTRACTION
 });
 const ISLANDS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: islands,
-  pageSectionTitle: PAGE_SECTIONS.ISLAND
+  id: PAGE_SECTION_IDS.ISLAND
 });
 const COUNTRIES: Array<ICountedListItem> = mapToCountedListWrapper({
   items: countries,
-  pageSectionTitle: PAGE_SECTIONS.COUNTRY
+  id: PAGE_SECTION_IDS.COUNTRY
 });
 const friends: Array<ICountedListItem> = mapToCountedListWrapper({
   items: FRIENDS,
-  pageSectionTitle: PAGE_SECTIONS.FRIEND,
+  id: PAGE_SECTION_IDS.FRIEND,
   filter: "travel"
 });
 
 const SECTIONS_STATS: Array<IPageSection> = [
   {
-    details: PAGE_SECTIONS.BUCKET_LIST,
+    details: PAGE_SECTION_IDS.BUCKET_LIST,
     icon: ICONS.STARS,
     data: BUCKET_LIST
   },
   {
-    details: PAGE_SECTIONS.CITY,
+    details: PAGE_SECTION_IDS.CITY,
     icon: ICONS.CITY,
     showSectionLength: true,
     data: CITIES
   },
   {
-    details: PAGE_SECTIONS.COUNTRY,
+    details: PAGE_SECTION_IDS.COUNTRY,
     icon: ICONS.FLAG,
     data: COUNTRIES,
     showSectionLength: true
   },
   {
-    details: PAGE_SECTIONS.FRIEND,
+    details: PAGE_SECTION_IDS.FRIEND,
     icon: ICONS.PEOPLE,
     data: friends
   },
   {
-    details: PAGE_SECTIONS.HIGHLIGHT,
+    details: PAGE_SECTION_IDS.HIGHLIGHT,
     icon: ICONS.MAP_PIN,
     data: HIGHLIGHTS
   },
   {
-    details: PAGE_SECTIONS.ISLAND,
+    details: PAGE_SECTION_IDS.ISLAND,
     showSectionLength: true,
     icon: ICONS.PALM_TREE,
     data: ISLANDS
   },
   {
-    details: PAGE_SECTIONS.THEME_PARK,
+    details: PAGE_SECTION_IDS.THEME_PARK,
     showSectionLength: true,
     icon: ICONS.ROLLER_COASTER,
     data: THEME_PARKS
   },
   {
-    details: PAGE_SECTIONS.TOWN,
+    details: PAGE_SECTION_IDS.TOWN,
     icon: ICONS.TOWN_HALL,
     data: TOWNS
   },
   {
-    details: PAGE_SECTIONS.UP_NEXT,
+    details: PAGE_SECTION_IDS.UP_NEXT,
     icon: ICONS.NOTEPAD,
     showSectionLength: true,
     data: mapTripToEventCards({ data: UPCOMING })

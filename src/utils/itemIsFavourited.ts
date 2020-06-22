@@ -1,24 +1,23 @@
-import { PAGE_SECTIONS } from "CONSTANTS";
+import { PAGE_SECTION_IDS } from "@constants";
 
 interface IItemIsFavourited {
   itemToInspect: any;
-  pageSectionTitle: IPageSectionDetails;
+  id: IPageSectionDetails;
   favouritedData: Array<any>;
 }
 
 export const itemIsFavourited = ({
   itemToInspect,
-  pageSectionTitle,
+  id,
   favouritedData
 }: IItemIsFavourited) => {
   let itemIsFavourited = false;
 
   favouritedData.forEach((dataItem: any) => {
     if (
-      (pageSectionTitle === PAGE_SECTIONS.MUSICIAN &&
+      (id === PAGE_SECTION_IDS.MUSICIAN &&
         itemToInspect === dataItem.headline) ||
-      (pageSectionTitle === PAGE_SECTIONS.PLAY &&
-        itemToInspect === dataItem.play)
+      (id === PAGE_SECTION_IDS.PLAY && itemToInspect === dataItem.play)
     )
       itemIsFavourited = true;
   });

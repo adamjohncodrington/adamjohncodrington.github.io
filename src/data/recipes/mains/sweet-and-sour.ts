@@ -1,4 +1,4 @@
-import { INGREDIENTS, MEASUREMENTS, DIETS } from "CONSTANTS";
+import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
 
 const ingredients: Array<Array<IRecipeIngredient>> = [
   [

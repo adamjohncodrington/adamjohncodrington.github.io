@@ -1,4 +1,4 @@
-import { PAGE_SECTION_TYPES } from "CONSTANTS";
+import { PAGE_SECTION_DATA_TYPES } from "@constants";
 
 export const mapRecipeGroupsToSections = (
   recipeGroups: Array<IRecipeGroup>
@@ -10,7 +10,7 @@ export const mapRecipeGroupsToSections = (
     details: {
       id: category,
       title: category,
-      type: PAGE_SECTION_TYPES.RECIPES
+      type: PAGE_SECTION_DATA_TYPES.RECIPES
     },
     data,
     expandedAutomatically: true

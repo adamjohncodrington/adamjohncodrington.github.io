@@ -1,4 +1,4 @@
-import { DAYS_OF_THE_WEEK, MONTHS } from "CONSTANTS";
+import { DAYS_OF_THE_WEEK, MONTHS } from "@constants";
 
 export const getCountdownText = (daysToGo: number): string => {
   if (daysToGo === 0) return "TODAY";

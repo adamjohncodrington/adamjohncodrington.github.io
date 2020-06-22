@@ -1,4 +1,4 @@
-import { MEASUREMENTS } from "CONSTANTS";
+import { MEASUREMENTS } from "@constants";
 
 import { concatenateQuantityAndMeasurement } from "./concatenateQuantityAndMeasurement";
 

@@ -1,4 +1,4 @@
-import { FRIENDS, LOCATIONS } from "CONSTANTS";
+import { FRIENDS, LOCATIONS } from "@constants";
 
 export const TRAVEL_2009: Array<ITravelData> = [
   {

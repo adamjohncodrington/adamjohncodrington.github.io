@@ -3,9 +3,9 @@ import {
   EVENT_CARD_TYPES,
   FRIENDS,
   PLAYS,
-  PAGE_SECTIONS,
+  PAGE_SECTION_IDS,
   THEATRE_VENUES
-} from "CONSTANTS";
+} from "@constants";
 import { DATA_THEATRE } from "data";
 import { ICONS } from "resources";
 import { isInFuture } from "utils";
@@ -19,62 +19,62 @@ import {
 const { ALL, ALL_GROUPED_BY_YEAR } = DATA_THEATRE;
 
 const eventCardType = EVENT_CARD_TYPES.THEATRE;
-const mapTheatreVisitToEventCards = (parms: any) =>
-  mapToEventCard({ ...parms, eventCardType });
+const mapTheatreVisitToEventCards = (params: any) =>
+  mapToEventCard({ ...params, eventCardType });
 
 const FAVOURITES: Array<ITheatreData> = ALL.filter(item => item.favourite);
 const UPCOMING = ALL.filter(theatreTrip => isInFuture(theatreTrip.dates));
 
-const mapToCountedListWrapper = (parms: any) =>
+const mapToCountedListWrapper = (params: any) =>
   mapToCountedList({
-    ...parms,
+    ...params,
     allData: ALL,
     favouritedData: FAVOURITES
   });
 
 const actors: any = mapToCountedListWrapper({
   items: ACTORS,
-  pageSectionTitle: PAGE_SECTIONS.ACTOR
+  id: PAGE_SECTION_IDS.ACTOR
 });
 const friends: any = mapToCountedListWrapper({
   items: FRIENDS,
-  pageSectionTitle: PAGE_SECTIONS.FRIEND,
+  id: PAGE_SECTION_IDS.FRIEND,
   filter: "theatre"
 });
 const plays: any = mapToCountedListWrapper({
   items: PLAYS,
-  pageSectionTitle: PAGE_SECTIONS.PLAY
+  id: PAGE_SECTION_IDS.PLAY
 });
 const venues: any = mapToCountedListWrapper({
   items: THEATRE_VENUES,
-  pageSectionTitle: PAGE_SECTIONS.THEATRE_VENUES
+  id: PAGE_SECTION_IDS.THEATRE_VENUES
 });
 
 const SECTIONS_STATS: Array<IPageSection> = [
   {
-    details: PAGE_SECTIONS.ACTOR,
+    details: PAGE_SECTION_IDS.ACTOR,
     icon: ICONS.ARTIST,
     data: actors
   },
   {
-    details: PAGE_SECTIONS.FRIEND,
+    details: PAGE_SECTION_IDS.FRIEND,
     icon: ICONS.PEOPLE,
     data: friends
   },
   {
-    details: PAGE_SECTIONS.PLAY,
+    details: PAGE_SECTION_IDS.PLAY,
     icon: ICONS.BOOK,
     data: plays,
     showSectionLength: true
   },
   {
-    details: PAGE_SECTIONS.THEATRE_VENUES,
+    details: PAGE_SECTION_IDS.THEATRE_VENUES,
     icon: ICONS.THEATRE,
     data: venues,
     showSectionLength: true
   },
   {
-    details: PAGE_SECTIONS.UP_NEXT,
+    details: PAGE_SECTION_IDS.UP_NEXT,
     icon: ICONS.NOTEPAD,
     data: mapTheatreVisitToEventCards({ data: UPCOMING }),
     showSectionLength: true

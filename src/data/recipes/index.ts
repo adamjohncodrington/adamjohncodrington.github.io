@@ -9,7 +9,16 @@ interface IRecipesData {
   COMING_SOON: Array<ICountedListItem>;
 }
 
+const CATEGORISED: Array<IRecipeGroup> = [
+  SAUCES,
+  MAINS,
+  SIDES,
+  SWEETS
+].sort((a: IRecipeGroup, b: IRecipeGroup) =>
+  a.category > b.category ? 1 : -1
+);
+
 export const DATA_RECIPES: IRecipesData = {
-  CATEGORISED: [MAINS, SIDES, SAUCES, SWEETS],
+  CATEGORISED,
   COMING_SOON: RECIPES_COMING_SOON
 };

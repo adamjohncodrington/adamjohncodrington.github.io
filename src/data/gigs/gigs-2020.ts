@@ -1,4 +1,4 @@
-import { FRIENDS, MUSICIANS, TICKET_TYPES, MUSIC_VENUES } from "CONSTANTS";
+import { FRIENDS, MUSICIANS, TICKET_TYPES, MUSIC_VENUES } from "@constants";
 
 export const GIGS_2020: Array<IGigData> = [
   {

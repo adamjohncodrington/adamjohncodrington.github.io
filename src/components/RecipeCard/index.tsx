@@ -1,6 +1,6 @@
 import React from "react";
 
-import { MEASUREMENTS, NO_UNIT_COST_FOR_RECIPE_EXISTS } from "CONSTANTS";
+import { MEASUREMENTS, NO_UNIT_COST_FOR_RECIPE_EXISTS } from "@constants";
 import { Circle, FlexRow, SeventyFivePercentSpan } from "primitives";
 import { calculateRecipeCost, getIngredientsHeader } from "utils";
 

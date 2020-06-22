@@ -1,4 +1,8 @@
-import { PAGE_SECTIONS, PAGE_SECTION_TYPES, EVENT_CARD_TYPES } from "CONSTANTS";
+import {
+  PAGE_SECTION_IDS,
+  PAGE_SECTION_DATA_TYPES,
+  EVENT_CARD_TYPES
+} from "@constants";
 import {
   formatNames,
   getPageSectionItemCounts,
@@ -8,7 +12,7 @@ import {
 
 interface IMapToCountedList {
   items: Object;
-  pageSectionTitle: IPageSectionDetails;
+  id: IPageSectionDetails;
   filter: IFilter;
   allData: Array<any>;
   favouritedData: Array<any>;
@@ -17,7 +21,7 @@ interface IMapToCountedList {
 
 export const mapToCountedList = ({
   items,
-  pageSectionTitle,
+  id,
   filter,
   allData,
   favouritedData,
@@ -38,7 +42,7 @@ export const mapToCountedList = ({
         item.favourite ||
         itemIsFavourited({
           itemToInspect: item,
-          pageSectionTitle,
+          id,
           favouritedData
         }),
       star: item.capital
@@ -62,7 +66,7 @@ export const mapToCountedList = ({
         ignoreCountInfo || futureCount !== 0 || pastCount !== 0
     );
 
-  return pageSectionTitle === PAGE_SECTIONS.FRIEND
+  return id === PAGE_SECTION_IDS.FRIEND
     ? data
         .sort((a, b) => (a.futureCount > b.futureCount ? -1 : 1))
         .sort((a, b) => (a.pastCount > b.pastCount ? -1 : 1))
@@ -182,7 +186,7 @@ export const mapYearsToEventCardPageSections = ({
     const title = year[0].dates[0].getFullYear().toString();
 
     return {
-      details: { id: title, title, type: PAGE_SECTION_TYPES.EVENT_CARDS },
+      details: { id: title, title, type: PAGE_SECTION_DATA_TYPES.EVENT_CARDS },
       showSectionLength: true,
       data: mapToEventCard({ data: year, eventCardType }).filter(
         (item: IEventCard) => !isInFuture(item.dates)

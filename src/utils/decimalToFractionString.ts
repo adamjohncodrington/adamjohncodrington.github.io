@@ -1,4 +1,4 @@
-import { UNICODE } from "CONSTANTS";
+import { UNICODE } from "@constants";
 
 export const decimalToFractionString = (decimal: number): string => {
   switch (decimal) {

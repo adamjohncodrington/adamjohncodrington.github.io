@@ -16,9 +16,6 @@ const { ALL, ALL_GROUPED_BY_YEAR } = DATA_GIGS;
 
 const UPCOMING: Array<IGigData> = ALL.filter(gig => isInFuture(gig.dates));
 
-const pastCount: number = ALL.length - UPCOMING.length;
-const futureCount: number = UPCOMING.length;
-
 const SECTIONS_STATS: Array<IPageSection> = [
   {
     details: PAGE_SECTION_IDS.FESTIVAL,
@@ -68,6 +65,7 @@ const SECTIONS_YEARS: Array<IPageSection> = mapYearsToEventCardPageSections({
   eventCardType: EVENT_CARD_TYPES.GIG
 });
 
-const sections: Array<IPageSection> = [...SECTIONS_STATS, ...SECTIONS_YEARS];
-
-export const PAGE_GIGS: IPageData = { pastCount, futureCount, sections };
+export const sections: Array<IPageSection> = [
+  ...SECTIONS_STATS,
+  ...SECTIONS_YEARS
+];

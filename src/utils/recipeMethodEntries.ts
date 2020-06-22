@@ -1,4 +1,4 @@
-import { UNICODE } from "CONSTANTS";
+import { UNICODE } from "@constants";
 
 interface IBakeForAbout {
   minutes: number;
@@ -16,9 +16,9 @@ interface IRecipeMethodEntries {
   FOLD_IN_FLOUR_MIX: string;
   LEAVE_TO_COOL_BEFORE_REMOVING_FROM_LOAF_TIN: string;
   MAKE_FLAX_EGG: string;
-  bakeForAbout: (parms: IBakeForAbout) => string;
-  preheatOven: (parms: IPreheatOven) => string;
-  transferToLoafTin: (parms: ITransferToLoafTin) => string;
+  bakeForAbout: (params: IBakeForAbout) => string;
+  preheatOven: (params: IPreheatOven) => string;
+  transferToLoafTin: (params: ITransferToLoafTin) => string;
 }
 
 export const recipeMethodEntries = (): IRecipeMethodEntries => {
