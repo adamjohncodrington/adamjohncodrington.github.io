@@ -1,5 +1,6 @@
 import { mapToCountedList, generatePropertyArrayFromObject } from "_factories";
 import { FRIENDS, PAGE_SECTIONS, LOCATIONS } from "_constants";
+import { isInFuture } from "_utils";
 
 import { TRAVEL_1997 } from "./travel-1997";
 import { TRAVEL_1998 } from "./travel-1998";
@@ -26,7 +27,6 @@ import { TRAVEL_2018 } from "./travel-2018";
 import { TRAVEL_2019 } from "./travel-2019";
 import { TRAVEL_2020 } from "./travel-2020";
 import { TRAVEL_BUCKET_LIST } from "./travel-bucket-list";
-import { isInFuture } from "_utils";
 
 const ALL: Array<ITravelData> = [
   ...TRAVEL_1997,
@@ -115,18 +115,14 @@ const highlights: Array<IAttraction> = attractions.filter(
   item => item.highlight
 );
 
-//@ts-ignore
-const mapToCountedListWrapper = parms =>
+const mapToCountedListWrapper = (parms: any) =>
   mapToCountedList({
     ...parms,
     allData: ALL,
     favouritedData: FAVOURITES
   });
 
-export const DATA_TRAVEL = {
-  pastCount: ALL.filter(item => !item.notAbroad).length - UPCOMING.length,
-  futureCount: UPCOMING.length,
-
+export const DATA_RAW_TRAVEL = {
   ALL,
   ALL_GROUPED_BY_YEAR,
   FAVOURITES,

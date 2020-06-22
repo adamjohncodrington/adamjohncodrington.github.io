@@ -2,7 +2,7 @@ import { numberToCurrencyString } from "./numberToCurrencyString";
 import { concatenateQuantityAndMeasurement } from "./concatenateQuantityAndMeasurement";
 
 export const consoleLogRecipeTitle = (title: string): void => {
-  const logDashedLine = () => console.log("----------");
+  const logDashedLine = (): void => console.log("----------");
 
   logDashedLine();
   console.log(title);

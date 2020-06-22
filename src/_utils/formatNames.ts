@@ -1,7 +1,12 @@
 import { moveTheSuffixToPrefix } from "./moveTheSuffixToPrefix";
 
-export const formatNames = (inputData: any): string | null => {
-  if (!inputData) return null;
+export const formatNames = (inputData: any): string => {
+  // if (!inputData) return null;
+
+  if (!inputData) {
+    // console.log(inputData);
+    return "";
+  }
 
   if (!Array.isArray(inputData))
     return inputData.name && moveTheSuffixToPrefix(inputData.name);

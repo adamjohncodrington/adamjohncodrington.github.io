@@ -67,18 +67,14 @@ const FAVOURITES: Array<IGigData> = ALL.filter(item => item.favourite);
 
 const UPCOMING = ALL.filter(gig => isInFuture(gig.dates));
 
-//@ts-ignore
-const mapToCountedListWrapper = parms =>
+const mapToCountedListWrapper = (parms: any) =>
   mapToCountedList({
     ...parms,
     allData: ALL,
     favouritedData: FAVOURITES
   });
 
-export const DATA_GIGS = {
-  pastCount: ALL.length - UPCOMING.length,
-  futureCount: UPCOMING.length,
-
+export const DATA_RAW_GIGS = {
   ALL,
   ALL_GROUPED_BY_YEAR,
   FAVOURITES,

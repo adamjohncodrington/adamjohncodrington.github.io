@@ -34,15 +34,14 @@ const FAVOURITES: Array<ITheatreData> = ALL.filter(item => item.favourite);
 
 const UPCOMING = ALL.filter(theatreTrip => isInFuture(theatreTrip.dates));
 
-//@ts-ignore
-const mapToCountedListWrapper = parms =>
+const mapToCountedListWrapper = (parms: any) =>
   mapToCountedList({
     ...parms,
     allData: ALL,
     favouritedData: FAVOURITES
   });
 
-export const DATA_THEATRE = {
+export const DATA_RAW_THEATRE = {
   ALL,
   ALL_GROUPED_BY_YEAR,
   FAVOURITES,

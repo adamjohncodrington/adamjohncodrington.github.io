@@ -62,7 +62,6 @@ export const mapToEventCardData = ({
     company: company.sort((a: IFriend, b: IFriend) =>
       a.initials > b.initials ? 1 : -1
     ),
-    eventCardType,
     favourite,
     disclaimer:
       eventCardType === EVENT_CARD_TYPES.GIG && isInFuture(dates) && ticketType

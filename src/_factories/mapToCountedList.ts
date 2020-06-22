@@ -24,8 +24,7 @@ export const mapToCountedList = ({
 }: IMapToCountedList): Array<ICountedListItem> => {
   console.log(items);
 
-  //@ts-ignore
-  const mapToListEntry = item => {
+  const mapToListEntry = (item: any): ICountedListItem => {
     const { pastCount, futureCount } = getPageSectionItemCounts({
       itemToCount: item,
       data: allData
@@ -47,14 +46,11 @@ export const mapToCountedList = ({
     };
   };
 
-  const data = Object.values(items)
-    //@ts-ignore
+  const data: Array<any> = Object.values(items)
     .filter(item => (filter ? item[filter] : true))
     .sort((a, b) =>
-      //@ts-ignore
       (a.name ? a.name : a)
         .toLowerCase()
-        //@ts-ignore
         .localeCompare((b.name ? b.name : b).toLowerCase())
     )
     .map(item => mapToListEntry(item))
@@ -67,7 +63,6 @@ export const mapToCountedList = ({
         ignoreCountInfo || futureCount !== 0 || pastCount !== 0
     );
 
-  //@ts-ignore
   return pageSectionTitle === PAGE_SECTIONS.FRIEND
     ? data
         .sort((a, b) => (a.futureCount > b.futureCount ? -1 : 1))

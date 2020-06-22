@@ -1,77 +1,80 @@
 import { EVENT_CARD_TYPES, PAGE_SECTIONS } from "_constants";
-import { DATA_TRAVEL } from "_data";
-import { ICONS } from "_resources";
+import { DATA_RAW_TRAVEL } from "_data";
 import {
   mapToEventCardData,
   mapYearsToEventCardPageSections
 } from "_factories";
+import { ICONS } from "_resources";
 
 const eventCardType = EVENT_CARD_TYPES.TRIP;
-//@ts-ignore
-const mapTripToEventCards = parms =>
+const mapTripToEventCards = (parms: any) =>
   mapToEventCardData({ ...parms, eventCardType });
 
-const { pastCount, futureCount } = DATA_TRAVEL;
+const { ALL, UPCOMING, ALL_GROUPED_BY_YEAR } = DATA_RAW_TRAVEL;
 
-const statsSections: Array<IPageSection> = [
+const pastCount: number =
+  ALL.filter(item => !item.notAbroad).length - UPCOMING.length;
+const futureCount: number = UPCOMING.length;
+
+const SECTIONS_STATS: Array<IPageSection> = [
   {
     details: PAGE_SECTIONS.BUCKET_LIST,
     icon: ICONS.STARS,
-    data: DATA_TRAVEL.BUCKET_LIST
+    data: DATA_RAW_TRAVEL.BUCKET_LIST
   },
   {
     details: PAGE_SECTIONS.CITY,
     icon: ICONS.CITY,
     showSectionLength: true,
-    data: DATA_TRAVEL.CITIES
+    data: DATA_RAW_TRAVEL.CITIES
   },
   {
     details: PAGE_SECTIONS.COUNTRY,
     icon: ICONS.FLAG,
-    data: DATA_TRAVEL.COUNTRIES,
+    data: DATA_RAW_TRAVEL.COUNTRIES,
     showSectionLength: true
   },
   {
     details: PAGE_SECTIONS.FRIEND,
     icon: ICONS.PEOPLE,
-    data: DATA_TRAVEL.FRIENDS
+    data: DATA_RAW_TRAVEL.FRIENDS
   },
   {
     details: PAGE_SECTIONS.HIGHLIGHT,
     icon: ICONS.MAP_PIN,
-    data: DATA_TRAVEL.HIGHLIGHTS
+    data: DATA_RAW_TRAVEL.HIGHLIGHTS
   },
   {
     details: PAGE_SECTIONS.ISLAND,
     showSectionLength: true,
     icon: ICONS.PALM_TREE,
-    data: DATA_TRAVEL.ISLANDS
+    data: DATA_RAW_TRAVEL.ISLANDS
   },
   {
     details: PAGE_SECTIONS.THEME_PARK,
     showSectionLength: true,
     icon: ICONS.ROLLER_COASTER,
-    data: DATA_TRAVEL.THEME_PARKS
+    data: DATA_RAW_TRAVEL.THEME_PARKS
   },
   {
     details: PAGE_SECTIONS.TOWN,
     icon: ICONS.TOWN_HALL,
-    data: DATA_TRAVEL.TOWNS
+    data: DATA_RAW_TRAVEL.TOWNS
   },
   {
     details: PAGE_SECTIONS.UP_NEXT,
     icon: ICONS.NOTEPAD,
     showSectionLength: true,
-    data: mapTripToEventCards({ data: DATA_TRAVEL.UPCOMING })
+    data: mapTripToEventCards({ data: DATA_RAW_TRAVEL.UPCOMING })
   }
 ];
 
-const yearSections: Array<IPageSection> = mapYearsToEventCardPageSections({
-  years: DATA_TRAVEL.ALL_GROUPED_BY_YEAR,
+const SECTIONS_YEARS: Array<IPageSection> = mapYearsToEventCardPageSections({
+  years: ALL_GROUPED_BY_YEAR,
   eventCardType
 });
 
-const sections: Array<IPageSection> = [...statsSections, ...yearSections];
+const sections: Array<IPageSection> = [...SECTIONS_STATS, ...SECTIONS_YEARS];
 
 export const PAGE_DATA_TRAVEL: IPageData = {
   pastCount,

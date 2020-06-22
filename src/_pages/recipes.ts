@@ -1,19 +1,19 @@
+import { PAGE_SECTIONS } from "_constants";
 import { DATA_RECIPES } from "_data";
 import { mapRecipeGroupsToSections } from "_factories";
-import { PAGE_SECTIONS } from "_constants";
 
-const recipeGroupSections: Array<IPageSection> = mapRecipeGroupsToSections(
+const SECTIONS_RECIPE_GROUPS: Array<IPageSection> = mapRecipeGroupsToSections(
   DATA_RECIPES.CATEGORISED
 );
 
-const comingSoonSection: IPageSection = {
+const SECTION_COMING_SOON: IPageSection = {
   details: PAGE_SECTIONS.RECIPES_COMING_SOON,
   data: DATA_RECIPES.COMING_SOON
 };
 
 const sections: Array<IPageSection> = [
-  ...recipeGroupSections,
-  comingSoonSection
+  ...SECTIONS_RECIPE_GROUPS,
+  SECTION_COMING_SOON
 ];
 
 export const PAGE_DATA_RECIPES: IPageData = { sections };
