@@ -2,7 +2,6 @@
 
 ## TypeScript
 
-- add more absolute paths/imports
 - `mapToCountedList` and `mapToEventCardData` would benefit from being rewritten
 - remove as many instances of `any` and `@ts-ignore` as possible
 
