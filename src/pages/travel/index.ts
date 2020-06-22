@@ -1,17 +1,18 @@
 import { EVENT_CARD_TYPES, FRIENDS, LOCATIONS, PAGE_SECTIONS } from "CONSTANTS";
 import { DATA_TRAVEL } from "data";
 import {
-  mapToCountedList,
   generatePropertyArrayFromObject,
-  mapToEventCardData,
+  mapToEventCard,
   mapYearsToEventCardPageSections
 } from "factories";
 import { ICONS } from "resources";
 import { isInFuture } from "utils";
 
+import { mapToCountedList } from "../factory";
+
 const eventCardType = EVENT_CARD_TYPES.TRIP;
 const mapTripToEventCards = (parms: any) =>
-  mapToEventCardData({ ...parms, eventCardType });
+  mapToEventCard({ ...parms, eventCardType });
 
 const { ALL, ALL_GROUPED_BY_YEAR } = DATA_TRAVEL;
 

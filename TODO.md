@@ -2,7 +2,7 @@
 
 ## TypeScript
 
-- `mapToCountedList` and `mapToEventCardData` would benefit from being rewritten
+- `mapToCountedList` and `mapToEventCard` would benefit from being rewritten
 - remove as many instances of `any` and `@ts-ignore` as possible
 
 ## Refactoring

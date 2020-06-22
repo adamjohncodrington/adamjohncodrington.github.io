@@ -7,19 +7,17 @@ import {
   THEATRE_VENUES
 } from "CONSTANTS";
 import { DATA_THEATRE } from "data";
-import {
-  mapToEventCardData,
-  mapYearsToEventCardPageSections,
-  mapToCountedList
-} from "factories";
+import { mapToEventCard, mapYearsToEventCardPageSections } from "factories";
 import { ICONS } from "resources";
 import { isInFuture } from "utils";
+
+import { mapToCountedList } from "../factory";
 
 const { ALL, ALL_GROUPED_BY_YEAR } = DATA_THEATRE;
 
 const eventCardType = EVENT_CARD_TYPES.THEATRE;
 const mapTheatreVisitToEventCards = (parms: any) =>
-  mapToEventCardData({ ...parms, eventCardType });
+  mapToEventCard({ ...parms, eventCardType });
 
 const FAVOURITES: Array<ITheatreData> = ALL.filter(item => item.favourite);
 const UPCOMING = ALL.filter(theatreTrip => isInFuture(theatreTrip.dates));

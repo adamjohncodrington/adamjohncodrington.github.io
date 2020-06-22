@@ -6,14 +6,12 @@ import {
   MUSICIANS,
   FESTIVALS
 } from "CONSTANTS";
-import {
-  mapToEventCardData,
-  mapToCountedList,
-  mapYearsToEventCardPageSections
-} from "factories";
+import { mapToEventCard, mapYearsToEventCardPageSections } from "factories";
 import { DATA_GIGS } from "data";
 import { ICONS } from "resources";
 import { isInFuture } from "utils";
+
+import { mapToCountedList } from "../factory";
 
 const { ALL, ALL_GROUPED_BY_YEAR } = DATA_GIGS;
 
@@ -31,7 +29,7 @@ const mapToCountedListWrapper = (parms: any) =>
 const eventCardType = EVENT_CARD_TYPES.GIG;
 
 const mapGigsToEventCards = (parms: any) =>
-  mapToEventCardData({ ...parms, eventCardType });
+  mapToEventCard({ ...parms, eventCardType });
 
 const pastCount: number = ALL.length - UPCOMING.length;
 const futureCount: number = UPCOMING.length;

@@ -1,7 +1,7 @@
 import { PAGE_SECTION_TYPES } from "CONSTANTS";
 import { isInFuture } from "utils";
 
-import { mapToEventCardData } from "./mapToEventCardData";
+import { mapToEventCard } from "./mapToEventCard";
 
 type SingleYearData = Array<IEventCardRawData>;
 type IMapYearGroupsToSections = {
@@ -19,7 +19,7 @@ export const mapYearsToEventCardPageSections = ({
     return {
       details: { id: title, title, type: PAGE_SECTION_TYPES.EVENT_CARDS },
       showSectionLength: true,
-      data: mapToEventCardData({ data: year, eventCardType }).filter(
+      data: mapToEventCard({ data: year, eventCardType }).filter(
         (item: IEventCard) => !isInFuture(item.dates)
       )
     };

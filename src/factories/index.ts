@@ -1,5 +1,4 @@
 export { generatePropertyArrayFromObject } from "./generatePropertyArrayFromObject";
-export { mapToCountedList } from "./mapToCountedList";
-export { mapToEventCardData } from "./mapToEventCardData";
+export { mapToEventCard } from "./mapToEventCard";
 export { mapRecipeGroupsToSections } from "./mapRecipeGroupsToSections";
 export { mapYearsToEventCardPageSections } from "./mapYearsToEventCardPageSections";
