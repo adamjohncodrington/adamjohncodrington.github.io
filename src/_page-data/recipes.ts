@@ -1,5 +1,5 @@
 import { PAGE_SECTIONS } from "_constants";
-import { DATA_RECIPES } from "_data";
+import { DATA_RECIPES } from "_raw-data";
 import { mapRecipeGroupsToSections } from "_factories";
 
 const SECTIONS_RECIPE_GROUPS: Array<IPageSection> = mapRecipeGroupsToSections(
@@ -16,4 +16,4 @@ const sections: Array<IPageSection> = [
   SECTION_COMING_SOON
 ];
 
-export const PAGE_DATA_RECIPES: IPageData = { sections };
+export const DATA_PAGE_RECIPES: IPageData = { sections };

@@ -3,7 +3,7 @@ import {
   mapToEventCardData,
   mapYearsToEventCardPageSections
 } from "_factories";
-import { DATA_RAW_GIGS } from "_data";
+import { DATA_RAW_GIGS } from "_raw-data";
 import { ICONS } from "_resources";
 
 const eventCardType = EVENT_CARD_TYPES.GIG;
@@ -62,8 +62,4 @@ const SECTIONS_YEARS: Array<IPageSection> = mapYearsToEventCardPageSections({
 
 const sections: Array<IPageSection> = [...SECTIONS_STATS, ...SECTIONS_YEARS];
 
-export const PAGE_DATA_GIGS: IPageData = {
-  pastCount,
-  futureCount,
-  sections
-};
+export const DATA_PAGE_GIGS: IPageData = { pastCount, futureCount, sections };

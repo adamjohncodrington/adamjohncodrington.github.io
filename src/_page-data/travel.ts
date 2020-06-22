@@ -1,5 +1,5 @@
 import { EVENT_CARD_TYPES, PAGE_SECTIONS } from "_constants";
-import { DATA_RAW_TRAVEL } from "_data";
+import { DATA_RAW_TRAVEL } from "_raw-data";
 import {
   mapToEventCardData,
   mapYearsToEventCardPageSections
@@ -76,8 +76,4 @@ const SECTIONS_YEARS: Array<IPageSection> = mapYearsToEventCardPageSections({
 
 const sections: Array<IPageSection> = [...SECTIONS_STATS, ...SECTIONS_YEARS];
 
-export const PAGE_DATA_TRAVEL: IPageData = {
-  pastCount,
-  futureCount,
-  sections
-};
+export const DATA_PAGE_TRAVEL: IPageData = { pastCount, futureCount, sections };

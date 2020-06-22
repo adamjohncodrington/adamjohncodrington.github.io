@@ -1,5 +1,10 @@
 import { ICONS } from "_resources";
-import { PAGE_DATA } from "_pages";
+import {
+  DATA_PAGE_GIGS,
+  DATA_PAGE_RECIPES,
+  DATA_PAGE_THEATRE,
+  DATA_PAGE_TRAVEL
+} from "_page-data";
 
 export const HOMEPAGE_ROUTE: IHomepageRoute = {
   title: "Home",
@@ -11,24 +16,24 @@ export const PAGE_ROUTES: Array<IRoute> = [
     dest: "/gigs",
     icon: ICONS.MICROPHONE,
     title: "gigs",
-    pageData: PAGE_DATA.GIGS
+    pageData: DATA_PAGE_GIGS
   },
   {
     dest: "/recipes",
     icon: ICONS.VEG_BOWL,
     title: "recipes",
-    pageData: PAGE_DATA.RECIPES
+    pageData: DATA_PAGE_RECIPES
   },
   {
     dest: "/theatre",
     icon: ICONS.MASKS,
     title: "theatre",
-    pageData: PAGE_DATA.THEATRE
+    pageData: DATA_PAGE_THEATRE
   },
   {
     dest: "/travel",
     icon: ICONS.TRAVEL,
     title: "travel",
-    pageData: PAGE_DATA.TRAVEL
+    pageData: DATA_PAGE_TRAVEL
   }
 ];

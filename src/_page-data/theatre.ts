@@ -1,5 +1,5 @@
 import { EVENT_CARD_TYPES, PAGE_SECTIONS } from "_constants";
-import { DATA_RAW_THEATRE } from "_data";
+import { DATA_RAW_THEATRE } from "_raw-data";
 import {
   mapToEventCardData,
   mapYearsToEventCardPageSections
@@ -50,6 +50,4 @@ const SECTIONS_YEARS: Array<IPageSection> = mapYearsToEventCardPageSections({
 
 const sections: Array<IPageSection> = [...SECTIONS_STATS, ...SECTIONS_YEARS];
 
-export const PAGE_DATA_THEATRE: IPageData = {
-  sections
-};
+export const DATA_PAGE_THEATRE: IPageData = { sections };
