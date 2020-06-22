@@ -1,9 +1,8 @@
 import { isInFuture } from "./isInFuture";
 
-type UnknownTypeDataItem = any;
 interface IGetPageSectionItemCounts {
   itemToCount: any;
-  data: Array<UnknownTypeDataItem>;
+  data: Array<any>;
 }
 
 export const getPageSectionItemCounts = ({
@@ -13,7 +12,7 @@ export const getPageSectionItemCounts = ({
   let pastCount: number = 0;
   let futureCount: number = 0;
 
-  data.forEach((dataItem: UnknownTypeDataItem) => {
+  data.forEach((dataItem: any) => {
     if (
       // MUSICIAN
       dataItem.headline === itemToCount ||

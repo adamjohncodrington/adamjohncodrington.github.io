@@ -1,9 +1,8 @@
 import { EVENT_CARD_TYPES } from "_constants";
 import { formatNames, isInFuture } from "_utils";
 
-type UnformattedEventItem = any;
 interface IMapDataToEventCards {
-  data: Array<UnformattedEventItem>;
+  data: Array<any>;
   eventCardType: IEventCardType;
 }
 
@@ -26,7 +25,7 @@ export const mapToEventCardData = ({
     play,
     cast,
     theatre
-  }: UnformattedEventItem): IEventCard => ({
+  }: any): IEventCard => ({
     //@ts-ignore
     title: formatNames(
       title
@@ -69,5 +68,5 @@ export const mapToEventCardData = ({
       eventCardType === EVENT_CARD_TYPES.GIG && isInFuture(dates) && ticketType
   });
 
-  return data.map((item: UnformattedEventItem) => mapDataToEventCard(item));
+  return data.map((item: any) => mapDataToEventCard(item));
 };

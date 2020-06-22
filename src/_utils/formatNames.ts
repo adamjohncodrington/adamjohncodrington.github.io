@@ -1,10 +1,6 @@
 import { moveTheSuffixToPrefix } from "./moveTheSuffixToPrefix";
 
-type IInputData = any;
-
-export const formatNames = (
-  inputData: IInputData | Array<any>
-): string | null => {
+export const formatNames = (inputData: any): string | null => {
   if (!inputData) return null;
 
   if (!Array.isArray(inputData))

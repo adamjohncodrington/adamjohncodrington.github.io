@@ -1,10 +1,9 @@
 import { PAGE_SECTIONS } from "_constants";
 
-type UnknownTypeDataItem = any;
 interface IItemIsFavourited {
   itemToInspect: any;
   pageSectionTitle: IPageSectionDetails;
-  favouritedData: Array<UnknownTypeDataItem>;
+  favouritedData: Array<any>;
 }
 
 export const itemIsFavourited = ({
@@ -14,7 +13,7 @@ export const itemIsFavourited = ({
 }: IItemIsFavourited) => {
   let itemIsFavourited = false;
 
-  favouritedData.forEach((dataItem: UnknownTypeDataItem) => {
+  favouritedData.forEach((dataItem: any) => {
     if (
       (pageSectionTitle === PAGE_SECTIONS.MUSICIAN &&
         itemToInspect === dataItem.headline) ||

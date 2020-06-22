@@ -25,7 +25,6 @@ export const PageSectionHeader: React.FC<PageSectionHeaderProps> = ({
   icon,
   dataTest
 }) => {
-  //@ts-ignore
   const starredDataCount = data && data.filter(item => item.star).length;
   const theme: ITheme = useContext(ThemeContext);
 

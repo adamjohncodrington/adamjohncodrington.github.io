@@ -3,20 +3,19 @@ interface IGeneratePropertyArrayFromObject {
   childLevelProperty: string;
   topLevelProperty?: string;
 }
-type UndeterminedDataType = any;
 
 export const generatePropertyArrayFromObject = ({
   object,
   childLevelProperty,
   topLevelProperty
 }: IGeneratePropertyArrayFromObject) => {
-  const array: Array<UndeterminedDataType> = Object.values(object);
+  const array: Array<any> = Object.values(object);
 
-  const arrayFilteredByTopLevelProperty: Array<UndeterminedDataType> = array.filter(
+  const arrayFilteredByTopLevelProperty: Array<any> = array.filter(
     item => topLevelProperty && item[topLevelProperty]
   );
 
-  const arrayFilteredByChildLevelProperty: Array<UndeterminedDataType> = [].concat.apply(
+  const arrayFilteredByChildLevelProperty: Array<any> = [].concat.apply(
     [],
     array
       .filter(item => item[childLevelProperty])
