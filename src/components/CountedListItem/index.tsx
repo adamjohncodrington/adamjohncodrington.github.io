@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { FlexLiGrow } from "../../primitives";
+import { FlexLiGrow } from "primitives";
 
 interface ICountedListItemPastCount extends IThemeProp {
   leaderboard?: boolean;

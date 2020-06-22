@@ -1,4 +1,4 @@
-import { INGREDIENTS, MEASUREMENTS, DIETS } from "../../../constants";
+import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
 
 import { recipeMethodEntries } from "utils";
 

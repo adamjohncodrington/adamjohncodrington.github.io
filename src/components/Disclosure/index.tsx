@@ -9,8 +9,15 @@ const PanelContainer = styled.div`
     max-height: unset;
   }
 
-  transition: ${(props: PanelContainerProps) => props.theme.animationDuration}s
-    ease;
+  ${({
+    theme: {
+      section: { transition }
+    }
+  }: PanelContainerProps) =>
+    css`
+      transition: ${transition};
+    `}
+
   overflow: hidden;
   max-height: 0;
 

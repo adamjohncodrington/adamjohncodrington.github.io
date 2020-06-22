@@ -1,13 +1,12 @@
 import React from "react";
 
-import { MEASUREMENTS, NO_UNIT_COST_FOR_RECIPE_EXISTS } from "../../constants";
+import { MEASUREMENTS, NO_UNIT_COST_FOR_RECIPE_EXISTS } from "@constants";
 import { Circle, FlexRow, SeventyFivePercentSpan } from "primitives";
 import { calculateRecipeCost, getIngredientsHeader } from "utils";
 
 import { CentredOnPhone } from "../CentredOnPhone";
 import { Disclosure } from "../Disclosure";
 
-// import { RecipeCardCost } from "./RecipeCardCost";
 import { RecipeCardList } from "./RecipeCardList";
 
 import {
@@ -18,7 +17,7 @@ import {
 import {
   RecipeCardTitle,
   RecipeBody,
-  StyledImage,
+  RecipeCardImage,
   PaddedFlexColumn
 } from "./styles";
 
@@ -51,7 +50,7 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
         <FlexRow>
           <RecipeCardTitle favourite={favourite}>{title}</RecipeCardTitle>
 
-          <Circle fontSize="13px" size="25px" invert color={diet.color}>
+          <Circle fontSize="13.5px" size="27px" invert color={diet.color}>
             {diet.abbreviation}
           </Circle>
         </FlexRow>
@@ -80,7 +79,7 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
 
         {image && (
           <CentredOnPhone>
-            <StyledImage src={image} />
+            <RecipeCardImage src={image} />
           </CentredOnPhone>
         )}
 

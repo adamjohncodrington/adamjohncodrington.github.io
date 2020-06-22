@@ -55,6 +55,7 @@ interface ITheme_PageSection {
   icon: { padding: { top: PaddingValue }; size: SvgSize };
   margin: IMargin;
   padding: { horizontal: PaddingValue; bottom: PaddingValue };
+  transition: string;
 }
 
 interface ITheme_Recipes {
@@ -77,7 +78,6 @@ type IBreakpoints = { phone: { maxWidth: PxValue } };
 
 type ITheme = {
   // Surface level
-  animationDuration: number;
   circleBorder: IBorder;
   fadedOpacity: number;
   fontFamily: IFontFamily;

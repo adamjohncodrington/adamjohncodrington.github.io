@@ -1,4 +1,4 @@
-import { EVENT_CARD_TYPES, PAGE_SECTIONS } from "../constants";
+import { EVENT_CARD_TYPES, PAGE_SECTIONS } from "@constants";
 import { DATA_GIGS } from "../data";
 import { ICONS } from "../resources";
 import {

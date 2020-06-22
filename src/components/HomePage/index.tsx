@@ -1,8 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { Link } from "../../primitives";
-import { PAGE_ROUTES } from "../../routes";
+import { Link } from "primitives";
+import { PAGE_ROUTES } from "routes";
 
 const FlexContainer = styled.div`
   display: flex;

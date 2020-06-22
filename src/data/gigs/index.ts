@@ -4,7 +4,7 @@ import {
   MUSICIANS,
   PAGE_SECTIONS,
   FESTIVALS
-} from "../../constants";
+} from "@constants";
 import { mapToCountedList } from "../../factories";
 import { isInFuture } from "utils";
 

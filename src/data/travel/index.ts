@@ -2,7 +2,7 @@ import {
   mapToCountedList,
   generatePropertyArrayFromObject
 } from "../../factories";
-import { FRIENDS, PAGE_SECTIONS, LOCATIONS } from "../../constants";
+import { FRIENDS, PAGE_SECTIONS, LOCATIONS } from "@constants";
 
 import { TRAVEL_1997 } from "./travel-1997";
 import { TRAVEL_1998 } from "./travel-1998";

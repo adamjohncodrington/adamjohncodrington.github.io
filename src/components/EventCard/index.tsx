@@ -1,12 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import {
-  FlexColumn,
-  FlexRow,
-  H3,
-  SeventyFivePercentSpan
-} from "../../primitives";
+import { FlexColumn, FlexRow, H3, SeventyFivePercentSpan } from "primitives";
 
 import { getCountdownText, getDisplayDateText, daysToGo } from "./utils";
 

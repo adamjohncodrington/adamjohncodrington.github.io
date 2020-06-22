@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { Ul, Li } from "../../primitives";
+import { Ul, Li } from "primitives";
 
 interface StyledLiProps extends IThemeProp {
   addPaddingTop: boolean | undefined;
@@ -32,10 +32,12 @@ export const RecipeCardList: React.FC<RecipeCardListProps> = ({
   <Ul showBullets={showBullets}>
     <strong>{title}</strong>
 
-    {items.map((item: IListItemWithPaddingTopFlag, index: number) => (
-      <StyledLi key={index} addPaddingTop={item.addPaddingTop}>
-        {item.text}
-      </StyledLi>
-    ))}
+    {items.map(
+      ({ text, addPaddingTop }: IListItemWithPaddingTopFlag, index: number) => (
+        <StyledLi key={index} addPaddingTop={addPaddingTop}>
+          {text}
+        </StyledLi>
+      )
+    )}
   </Ul>
 );

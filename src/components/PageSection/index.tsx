@@ -1,7 +1,7 @@
 import React from "react";
 
-import { PAGE_SECTION_TYPES, PAGE_SECTIONS } from "../../constants";
-import { Li } from "../../primitives";
+import { PAGE_SECTION_TYPES, PAGE_SECTIONS } from "@constants";
+import { Li } from "primitives";
 
 import { CountedListItem } from "../CountedListItem";
 import { Disclosure } from "../Disclosure";

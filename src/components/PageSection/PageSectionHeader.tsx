@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "styled-components";
 
-import { H2, FlexRowGrow } from "../../primitives";
+import { H2, FlexRowGrow } from "primitives";
 
 import {
   PageSectionHeaderContainer,

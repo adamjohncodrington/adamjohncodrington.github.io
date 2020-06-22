@@ -1,4 +1,4 @@
-import { EVENT_CARD_TYPES } from "../constants";
+import { EVENT_CARD_TYPES } from "@constants";
 import { formatNames, isInFuture } from "utils";
 
 type UnformattedEventItem = any;

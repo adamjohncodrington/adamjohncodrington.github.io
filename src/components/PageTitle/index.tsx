@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { ThemeContext } from "styled-components";
 
-import { FlexRow, H1, SvgIcon, Link } from "../../primitives";
+import { FlexRow, H1, SvgIcon, Link } from "primitives";
 
 const TitleTextContainer = styled.div`
   display: flex;

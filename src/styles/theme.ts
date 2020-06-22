@@ -39,7 +39,8 @@ const THEME_pageSection: ITheme_PageSection = {
   header: { padding: "12px 0" },
   icon: { padding: { top: "2px" }, size: "34px" },
   margin: { bottom: "20px" },
-  padding: { horizontal: "12px", bottom: "5px" }
+  padding: { horizontal: "12px", bottom: "5px" },
+  transition: "all 0.4s ease"
 };
 
 const THEME_recipe: ITheme_Recipes = {
@@ -58,7 +59,6 @@ export const scrollbarSize: IScrollbarSize = "0.7rem";
 
 export const THEME: ITheme = {
   // Surface level
-  animationDuration: 0.35,
   circleBorder: BORDER_BLACK_THIN,
   fadedOpacity: 0.5,
   fontFamily,

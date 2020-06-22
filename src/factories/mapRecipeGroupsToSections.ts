@@ -1,4 +1,4 @@
-import { PAGE_SECTION_TYPES } from "../constants";
+import { PAGE_SECTION_TYPES } from "@constants";
 
 export const mapRecipeGroupsToSections = (
   recipeGroups: Array<IRecipeGroup>

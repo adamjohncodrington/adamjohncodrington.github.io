@@ -18,7 +18,7 @@ export const RecipeCardTitle = styled(H3)`
     `}
 `;
 
-export const StyledImage = styled.img(
+export const RecipeCardImage = styled.img(
   ({
     theme: {
       recipe: {

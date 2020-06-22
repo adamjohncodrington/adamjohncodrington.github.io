@@ -1,5 +1,5 @@
 import { CONSOLE_LOG_RECIPE_COST_CALCULATIONS } from "../config";
-import { NO_UNIT_COST_FOR_RECIPE_EXISTS } from "../constants";
+import { NO_UNIT_COST_FOR_RECIPE_EXISTS } from "@constants";
 
 import { numberToCurrencyString } from "./numberToCurrencyString";
 import {
