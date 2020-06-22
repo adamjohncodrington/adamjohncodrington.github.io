@@ -1,13 +1,3 @@
-import {
-  MUSIC_VENUES,
-  FRIENDS,
-  MUSICIANS,
-  PAGE_SECTIONS,
-  FESTIVALS
-} from "CONSTANTS";
-import { mapToCountedList } from "factories";
-import { isInFuture } from "utils";
-
 import { GIGS_2006 } from "./gigs-2006";
 import { GIGS_2007 } from "./gigs-2007";
 import { GIGS_2008 } from "./gigs-2008";
@@ -63,44 +53,4 @@ const ALL_GROUPED_BY_YEAR: Array<Array<IGigData>> = [
   GIGS_2021
 ];
 
-const FAVOURITES: Array<IGigData> = ALL.filter(item => item.favourite);
-
-const UPCOMING = ALL.filter(gig => isInFuture(gig.dates));
-
-const mapToCountedListWrapper = (parms: any) =>
-  mapToCountedList({
-    ...parms,
-    allData: ALL,
-    favouritedData: FAVOURITES
-  });
-
-export const DATA_GIGS = {
-  ALL,
-  ALL_GROUPED_BY_YEAR,
-  FAVOURITES,
-  UPCOMING,
-
-  BUCKET_LIST: mapToCountedListWrapper({
-    bucketListMode: true,
-    items: MUSICIANS,
-    pageSectionTitle: PAGE_SECTIONS.MUSICIAN
-  }),
-  FESTIVALS: mapToCountedListWrapper({
-    items: FESTIVALS,
-    pageSectionTitle: PAGE_SECTIONS.FESTIVAL,
-    filter: "festival"
-  }),
-  FRIENDS: mapToCountedListWrapper({
-    items: FRIENDS,
-    pageSectionTitle: PAGE_SECTIONS.FRIEND,
-    filter: "gigs"
-  }),
-  MUSICIANS: mapToCountedListWrapper({
-    items: MUSICIANS,
-    pageSectionTitle: PAGE_SECTIONS.MUSICIAN
-  }),
-  VENUES: mapToCountedListWrapper({
-    items: MUSIC_VENUES,
-    pageSectionTitle: PAGE_SECTIONS.MUSIC_VENUES
-  })
-};
+export const DATA_GIGS = { ALL, ALL_GROUPED_BY_YEAR };

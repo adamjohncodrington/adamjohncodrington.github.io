@@ -18,8 +18,6 @@ export const mapToCountedList = ({
   favouritedData,
   bucketListMode
 }: IMapToCountedList): Array<ICountedListItem> => {
-  console.log(items);
-
   const mapToListEntry = (item: any): ICountedListItem => {
     const { pastCount, futureCount } = getPageSectionItemCounts({
       itemToCount: item,

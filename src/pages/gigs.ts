@@ -1,53 +1,100 @@
-import { EVENT_CARD_TYPES, PAGE_SECTIONS } from "CONSTANTS";
-import { mapToEventCardData, mapYearsToEventCardPageSections } from "factories";
+import {
+  EVENT_CARD_TYPES,
+  PAGE_SECTIONS,
+  MUSIC_VENUES,
+  FRIENDS,
+  MUSICIANS,
+  FESTIVALS
+} from "CONSTANTS";
+import {
+  mapToEventCardData,
+  mapToCountedList,
+  mapYearsToEventCardPageSections
+} from "factories";
 import { DATA_GIGS } from "data";
 import { ICONS } from "resources";
+import { isInFuture } from "utils";
+
+const { ALL, ALL_GROUPED_BY_YEAR } = DATA_GIGS;
+
+const FAVOURITES: Array<IGigData> = ALL.filter(item => item.favourite);
+
+const UPCOMING = ALL.filter(gig => isInFuture(gig.dates));
+
+const mapToCountedListWrapper = (parms: any) =>
+  mapToCountedList({
+    ...parms,
+    allData: ALL,
+    favouritedData: FAVOURITES
+  });
 
 const eventCardType = EVENT_CARD_TYPES.GIG;
 
 const mapGigsToEventCards = (parms: any) =>
   mapToEventCardData({ ...parms, eventCardType });
 
-const { ALL, ALL_GROUPED_BY_YEAR, UPCOMING } = DATA_GIGS;
-
 const pastCount: number = ALL.length - UPCOMING.length;
 const futureCount: number = UPCOMING.length;
+
+const bucketList: Array<ICountedListItem> = mapToCountedListWrapper({
+  bucketListMode: true,
+  items: MUSICIANS,
+  pageSectionTitle: PAGE_SECTIONS.MUSICIAN
+});
+const festivals: Array<ICountedListItem> = mapToCountedListWrapper({
+  items: FESTIVALS,
+  pageSectionTitle: PAGE_SECTIONS.FESTIVAL,
+  filter: "festival"
+});
+const friends: Array<ICountedListItem> = mapToCountedListWrapper({
+  items: FRIENDS,
+  pageSectionTitle: PAGE_SECTIONS.FRIEND,
+  filter: "gigs"
+});
+const musicians: Array<ICountedListItem> = mapToCountedListWrapper({
+  items: MUSICIANS,
+  pageSectionTitle: PAGE_SECTIONS.MUSICIAN
+});
+const venues: Array<ICountedListItem> = mapToCountedListWrapper({
+  items: MUSIC_VENUES,
+  pageSectionTitle: PAGE_SECTIONS.MUSIC_VENUES
+});
 
 const SECTIONS_STATS: Array<IPageSection> = [
   {
     details: PAGE_SECTIONS.MUSICIAN,
     icon: ICONS.ARTIST,
-    data: DATA_GIGS.MUSICIANS,
+    data: musicians,
     showSectionLength: true
   },
   {
     details: PAGE_SECTIONS.BUCKET_LIST,
     icon: ICONS.STARS,
-    data: DATA_GIGS.BUCKET_LIST,
+    data: bucketList,
     showSectionLength: true
   },
   {
     details: PAGE_SECTIONS.FESTIVAL,
     showSectionLength: true,
     icon: ICONS.PEACE_SIGN,
-    data: DATA_GIGS.FESTIVALS
+    data: festivals
   },
   {
     details: PAGE_SECTIONS.FRIEND,
     icon: ICONS.PEOPLE,
     showSectionLength: false,
-    data: DATA_GIGS.FRIENDS
+    data: friends
   },
   {
     details: PAGE_SECTIONS.UP_NEXT,
     icon: ICONS.NOTEPAD,
-    data: mapGigsToEventCards({ data: DATA_GIGS.UPCOMING }),
+    data: mapGigsToEventCards({ data: UPCOMING }),
     showSectionLength: true
   },
   {
     details: PAGE_SECTIONS.MUSIC_VENUES,
     icon: ICONS.STADIUM,
-    data: DATA_GIGS.VENUES,
+    data: venues,
     showSectionLength: true
   }
 ];

@@ -1,7 +1,3 @@
-import { mapToCountedList, generatePropertyArrayFromObject } from "factories";
-import { FRIENDS, PAGE_SECTIONS, LOCATIONS } from "CONSTANTS";
-import { isInFuture } from "utils";
-
 import { TRAVEL_1997 } from "./travel-1997";
 import { TRAVEL_1998 } from "./travel-1998";
 import { TRAVEL_1999 } from "./travel-1999";
@@ -26,7 +22,7 @@ import { TRAVEL_2017 } from "./travel-2017";
 import { TRAVEL_2018 } from "./travel-2018";
 import { TRAVEL_2019 } from "./travel-2019";
 import { TRAVEL_2020 } from "./travel-2020";
-import { TRAVEL_BUCKET_LIST } from "./travel-bucket-list";
+import { TRAVEL_BUCKET_LIST as BUCKET_LIST } from "./travel-bucket-list";
 
 const ALL: Array<ITravelData> = [
   ...TRAVEL_1997,
@@ -82,87 +78,4 @@ const ALL_GROUPED_BY_YEAR: Array<Array<ITravelData>> = [
   TRAVEL_2020
 ];
 
-const FAVOURITES: Array<ITravelData> = ALL.filter(item => item.favourite);
-const UPCOMING = ALL.filter(theatreTrip => isInFuture(theatreTrip.dates));
-
-const countries = Object.values(LOCATIONS);
-
-const cities: Array<ICity> = generatePropertyArrayFromObject({
-  object: LOCATIONS,
-  childLevelProperty: "cities"
-});
-
-const towns: Array<ITown> = generatePropertyArrayFromObject({
-  object: LOCATIONS,
-  childLevelProperty: "towns"
-});
-
-const islands: Array<IIsland> = generatePropertyArrayFromObject({
-  object: LOCATIONS,
-  childLevelProperty: "islands",
-  topLevelProperty: "island"
-});
-
-const attractions: Array<IAttraction> = generatePropertyArrayFromObject({
-  object: LOCATIONS,
-  childLevelProperty: "attractions"
-});
-
-const themeParks: Array<IAttraction> = attractions.filter(
-  item => item.themePark
-);
-const highlights: Array<IAttraction> = attractions.filter(
-  item => item.highlight
-);
-
-const mapToCountedListWrapper = (parms: any) =>
-  mapToCountedList({
-    ...parms,
-    allData: ALL,
-    favouritedData: FAVOURITES
-  });
-
-export const DATA_TRAVEL = {
-  ALL,
-  ALL_GROUPED_BY_YEAR,
-  FAVOURITES,
-  UPCOMING,
-
-  BUCKET_LIST: mapToCountedListWrapper({
-    bucketListMode: true,
-    items: TRAVEL_BUCKET_LIST
-  }),
-  CITIES: mapToCountedListWrapper({
-    items: cities,
-    pageSectionTitle: PAGE_SECTIONS.CITY
-  }),
-  TOWNS: mapToCountedListWrapper({
-    items: towns,
-    pageSectionTitle: PAGE_SECTIONS.TOWN
-  }),
-  ATTRACTIONS: mapToCountedListWrapper({
-    items: attractions.filter(item => !item.themePark && !item.highlight),
-    pageSectionTitle: PAGE_SECTIONS.ATTRACTION
-  }),
-  THEME_PARKS: mapToCountedListWrapper({
-    items: themeParks,
-    pageSectionTitle: PAGE_SECTIONS.ATTRACTION
-  }),
-  HIGHLIGHTS: mapToCountedListWrapper({
-    items: highlights,
-    pageSectionTitle: PAGE_SECTIONS.ATTRACTION
-  }),
-  ISLANDS: mapToCountedListWrapper({
-    items: islands,
-    pageSectionTitle: PAGE_SECTIONS.ISLAND
-  }),
-  COUNTRIES: mapToCountedListWrapper({
-    items: countries,
-    pageSectionTitle: PAGE_SECTIONS.COUNTRY
-  }),
-  FRIENDS: mapToCountedListWrapper({
-    items: FRIENDS,
-    pageSectionTitle: PAGE_SECTIONS.FRIEND,
-    filter: "travel"
-  })
-};
+export const DATA_TRAVEL = { ALL, ALL_GROUPED_BY_YEAR, BUCKET_LIST };

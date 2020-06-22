@@ -1,4 +1,4 @@
-const recipeComingSoon: Array<string> = [
+const recipesComingSoon: Array<string> = [
   "gingerbread",
   "spinach sweet potato hash",
   "shortbread",
@@ -18,7 +18,7 @@ const recipeComingSoon: Array<string> = [
   "dahl"
 ];
 
-export const RECIPES_COMING_SOON: Array<ICountedListItem> = recipeComingSoon
+export const RECIPES_COMING_SOON: Array<ICountedListItem> = recipesComingSoon
   .sort((a, b) => (a > b ? 1 : -1))
   .map(item => ({
     text: item,
