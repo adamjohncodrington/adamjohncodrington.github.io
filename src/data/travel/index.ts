@@ -122,7 +122,7 @@ const mapToCountedListWrapper = (parms: any) =>
     favouritedData: FAVOURITES
   });
 
-export const DATA_RAW_TRAVEL = {
+export const DATA_TRAVEL = {
   ALL,
   ALL_GROUPED_BY_YEAR,
   FAVOURITES,

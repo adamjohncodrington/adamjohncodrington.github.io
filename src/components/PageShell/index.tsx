@@ -10,17 +10,17 @@ const StyledPageShell = styled.section`
 interface PageShellProps {
   title: string;
   icon: IImageSrc;
-  pageData: IPageData;
+  page: IPageData;
   children: React.ReactNode;
 }
 
 export const PageShell: React.FC<PageShellProps> = ({
   title,
   icon,
-  pageData,
+  page,
   children
 }) => {
-  const { pastCount, futureCount } = pageData;
+  const { pastCount, futureCount } = page;
 
   return (
     <StyledPageShell data-test="page-shell">

@@ -8,19 +8,17 @@ import { HOMEPAGE_ROUTE, PAGE_ROUTES } from "config";
 export const App: React.FC = () => (
   <BrowserRouter>
     <Switch>
-      {PAGE_ROUTES.map(
-        ({ icon, title, dest, pageData }: IRoute, index: number) => (
-          <Route key={index} path={dest}>
-            <PageShell title={title} icon={icon} pageData={pageData}>
-              <Ul data-test="page-sections">
-                {pageData.sections.map((item: IPageSection, index: number) => (
-                  <PageSection key={index} {...item} />
-                ))}
-              </Ul>
-            </PageShell>
-          </Route>
-        )
-      )}
+      {PAGE_ROUTES.map(({ icon, title, dest, page }: IRoute, index: number) => (
+        <Route key={index} path={dest}>
+          <PageShell title={title} icon={icon} page={page}>
+            <Ul data-test="page-sections">
+              {page.sections.map((item: IPageSection, index: number) => (
+                <PageSection key={index} {...item} />
+              ))}
+            </Ul>
+          </PageShell>
+        </Route>
+      ))}
 
       <Route path={HOMEPAGE_ROUTE.dest}>
         <HomePage />

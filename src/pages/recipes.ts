@@ -16,4 +16,4 @@ const sections: Array<IPageSection> = [
   SECTION_COMING_SOON
 ];
 
-export const DATA_PAGE_RECIPES: IPageData = { sections };
+export const PAGE_RECIPES: IPageData = { sections };

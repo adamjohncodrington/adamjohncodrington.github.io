@@ -72,7 +72,7 @@ interface IHomepageRoute {
 
 interface IRoute extends IHomepageRoute {
   icon: IImageSrc;
-  pageData: IPageData;
+  page: IPageData;
 }
 
 type IconsObject = { [iconName: string]: IImageSrc };
