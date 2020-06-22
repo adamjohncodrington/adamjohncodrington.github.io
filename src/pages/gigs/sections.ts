@@ -1,59 +1,54 @@
 import { EVENT_CARD_TYPES, PAGE_SECTION_IDS } from "@constants";
 import { DATA_GIGS } from "data";
 import { ICONS } from "resources";
-import { isInFuture } from "utils";
 
-import { mapToEventCard, mapYearsToEventCardPageSections } from "../factory";
+import { mapYearsToEventCardPageSections } from "../factory";
 import {
-  CL_BUCKET_LIST,
-  CL_FESTIVALS,
-  CL_FRIENDS,
-  CL_MUSICIANS,
-  CL_VENUES
+  DATA_BUCKET_LIST,
+  DATA_FESTIVALS,
+  DATA_FRIENDS,
+  DATA_MUSICIANS,
+  DATA_UP_NEXT,
+  DATA_VENUES
 } from "./factory";
 
-const { ALL, ALL_GROUPED_BY_YEAR } = DATA_GIGS;
-
-const UPCOMING: Array<IGigData> = ALL.filter(gig => isInFuture(gig.dates));
+const { ALL_GROUPED_BY_YEAR } = DATA_GIGS;
 
 const SECTIONS_STATS: Array<IPageSection> = [
   {
     details: PAGE_SECTION_IDS.FESTIVAL,
     showSectionLength: true,
     icon: ICONS.PEACE_SIGN,
-    data: CL_FESTIVALS
+    data: DATA_FESTIVALS
   },
   {
     details: PAGE_SECTION_IDS.MUSICIAN,
     icon: ICONS.ARTIST,
-    data: CL_MUSICIANS,
+    data: DATA_MUSICIANS,
     showSectionLength: true
   },
   {
     details: PAGE_SECTION_IDS.BUCKET_LIST,
     icon: ICONS.STARS,
-    data: CL_BUCKET_LIST,
+    data: DATA_BUCKET_LIST,
     showSectionLength: true
   },
   {
     details: PAGE_SECTION_IDS.FRIEND,
     icon: ICONS.PEOPLE,
     showSectionLength: false,
-    data: CL_FRIENDS
+    data: DATA_FRIENDS
   },
   {
     details: PAGE_SECTION_IDS.UP_NEXT,
     icon: ICONS.NOTEPAD,
-    data: mapToEventCard({
-      data: UPCOMING,
-      eventCardType: EVENT_CARD_TYPES.GIG
-    }),
+    data: DATA_UP_NEXT,
     showSectionLength: true
   },
   {
     details: PAGE_SECTION_IDS.MUSIC_VENUES,
     icon: ICONS.STADIUM,
-    data: CL_VENUES,
+    data: DATA_VENUES,
     showSectionLength: true
   }
 ].sort((a: IPageSection, b: IPageSection) =>

@@ -3,15 +3,27 @@ import {
   MUSIC_VENUES,
   FRIENDS,
   MUSICIANS,
-  FESTIVALS
+  FESTIVALS,
+  EVENT_CARD_TYPES
 } from "@constants";
 import { DATA_GIGS } from "data";
+import { isInFuture } from "utils";
 
-import { mapToCountedList } from "../factory";
+import { mapToCountedList, mapToEventCard } from "../factory";
 
 const { ALL } = DATA_GIGS;
-
 const FAVOURITES: Array<IGigData> = ALL.filter(item => item.favourite);
+const UPCOMING: Array<IGigData> = ALL.filter((gig: IGigData) =>
+  isInFuture(gig.dates)
+);
+
+export const pastCount: number = ALL.length - UPCOMING.length;
+export const futureCount: number = UPCOMING.length;
+
+export const DATA_UP_NEXT: Array<IEventCard> = mapToEventCard({
+  data: UPCOMING,
+  eventCardType: EVENT_CARD_TYPES.GIG
+});
 
 const mapToCountedListWrapper = (params: any) =>
   mapToCountedList({
@@ -20,30 +32,32 @@ const mapToCountedListWrapper = (params: any) =>
     favouritedData: FAVOURITES
   });
 
-export const CL_BUCKET_LIST: Array<ICountedListItem> = mapToCountedListWrapper({
-  bucketListMode: true,
-  items: MUSICIANS,
-  id: PAGE_SECTION_IDS.MUSICIAN
-});
+export const DATA_BUCKET_LIST: Array<ICountedListItem> = mapToCountedListWrapper(
+  {
+    bucketListMode: true,
+    items: MUSICIANS,
+    id: PAGE_SECTION_IDS.MUSICIAN
+  }
+);
 
-export const CL_FESTIVALS: Array<ICountedListItem> = mapToCountedListWrapper({
+export const DATA_FESTIVALS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: FESTIVALS,
   id: PAGE_SECTION_IDS.FESTIVAL,
   filter: "festival"
 });
 
-export const CL_FRIENDS: Array<ICountedListItem> = mapToCountedListWrapper({
+export const DATA_FRIENDS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: FRIENDS,
   id: PAGE_SECTION_IDS.FRIEND,
   filter: "gigs"
 });
 
-export const CL_MUSICIANS: Array<ICountedListItem> = mapToCountedListWrapper({
+export const DATA_MUSICIANS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: MUSICIANS,
   id: PAGE_SECTION_IDS.MUSICIAN
 });
 
-export const CL_VENUES: Array<ICountedListItem> = mapToCountedListWrapper({
+export const DATA_VENUES: Array<ICountedListItem> = mapToCountedListWrapper({
   items: MUSIC_VENUES,
   id: PAGE_SECTION_IDS.MUSIC_VENUES
 });

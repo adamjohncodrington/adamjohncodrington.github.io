@@ -1,10 +1,9 @@
 # TO DO LIST
 
+- reflect `pages/gigs` changes/strucutre in `theatre` and `travel`
 
 ## Refactoring
 
-- review `factory.ts` files
-- amalgamate `data` and `pages` folders, there is too much overlap
 - move final instances of `px` in `EventCard` and `RecipeCard` to `theme`
 - rationalise theme
 - rationalise `data-test` attributes
