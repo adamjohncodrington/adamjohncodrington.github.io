@@ -1,4 +1,4 @@
-import { PAGE_SECTION_IDS } from "@constants";
+import { PAGE_SECTION_TEMPLATES } from "@constants";
 import { DATA_RECIPES } from "data";
 
 import { mapRecipeGroupsToSections } from "./factory";
@@ -8,7 +8,7 @@ const SECTIONS_RECIPE_GROUPS: Array<IPageSection> = mapRecipeGroupsToSections(
 );
 
 const SECTION_COMING_SOON: IPageSection = {
-  details: PAGE_SECTION_IDS.RECIPES_COMING_SOON,
+  details: PAGE_SECTION_TEMPLATES.RECIPES_COMING_SOON,
   data: DATA_RECIPES.COMING_SOON
 };
 

@@ -3,7 +3,7 @@ import {
   EVENT_CARD_TYPES,
   FRIENDS,
   PLAYS,
-  PAGE_SECTION_IDS,
+  PAGE_SECTION_TEMPLATES,
   THEATRE_VENUES
 } from "@constants";
 import { DATA_THEATRE } from "data";
@@ -34,47 +34,47 @@ const mapToCountedListWrapper = (params: any) =>
 
 const actors: any = mapToCountedListWrapper({
   items: ACTORS,
-  id: PAGE_SECTION_IDS.ACTOR
+  id: PAGE_SECTION_TEMPLATES.ACTOR
 });
 const friends: any = mapToCountedListWrapper({
   items: FRIENDS,
-  id: PAGE_SECTION_IDS.FRIEND,
+  id: PAGE_SECTION_TEMPLATES.FRIEND,
   filter: "theatre"
 });
 const plays: any = mapToCountedListWrapper({
   items: PLAYS,
-  id: PAGE_SECTION_IDS.PLAY
+  id: PAGE_SECTION_TEMPLATES.PLAY
 });
 const venues: any = mapToCountedListWrapper({
   items: THEATRE_VENUES,
-  id: PAGE_SECTION_IDS.THEATRE_VENUES
+  id: PAGE_SECTION_TEMPLATES.THEATRE_VENUES
 });
 
 const SECTIONS_STATS: Array<IPageSection> = [
   {
-    details: PAGE_SECTION_IDS.ACTOR,
+    details: PAGE_SECTION_TEMPLATES.ACTOR,
     icon: ICONS.ARTIST,
     data: actors
   },
   {
-    details: PAGE_SECTION_IDS.FRIEND,
+    details: PAGE_SECTION_TEMPLATES.FRIEND,
     icon: ICONS.PEOPLE,
     data: friends
   },
   {
-    details: PAGE_SECTION_IDS.PLAY,
+    details: PAGE_SECTION_TEMPLATES.PLAY,
     icon: ICONS.BOOK,
     data: plays,
     showSectionLength: true
   },
   {
-    details: PAGE_SECTION_IDS.THEATRE_VENUES,
+    details: PAGE_SECTION_TEMPLATES.THEATRE_VENUES,
     icon: ICONS.THEATRE,
     data: venues,
     showSectionLength: true
   },
   {
-    details: PAGE_SECTION_IDS.UP_NEXT,
+    details: PAGE_SECTION_TEMPLATES.UP_NEXT,
     icon: ICONS.NOTEPAD,
     data: mapTheatreVisitToEventCards({ data: UPCOMING }),
     showSectionLength: true

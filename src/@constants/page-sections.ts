@@ -58,7 +58,7 @@ const region: string = "regions";
 const theatreVenue: string = "theatres";
 const town: string = "towns";
 
-export const PAGE_SECTION_IDS: AllPageSectionTitles = {
+export const PAGE_SECTION_TEMPLATES: AllPageSectionTitles = {
   ACTOR: {
     title: actor,
     id: actor,

@@ -1,5 +1,5 @@
 import {
-  PAGE_SECTION_IDS,
+  PAGE_SECTION_TEMPLATES,
   PAGE_SECTION_DATA_TYPES,
   EVENT_CARD_TYPES
 } from "@constants";
@@ -66,7 +66,7 @@ export const mapToCountedList = ({
         ignoreCountInfo || futureCount !== 0 || pastCount !== 0
     );
 
-  return id === PAGE_SECTION_IDS.FRIEND
+  return id === PAGE_SECTION_TEMPLATES.FRIEND
     ? data
         .sort((a, b) => (a.futureCount > b.futureCount ? -1 : 1))
         .sort((a, b) => (a.pastCount > b.pastCount ? -1 : 1))

@@ -2,7 +2,7 @@ import {
   EVENT_CARD_TYPES,
   FRIENDS,
   LOCATIONS,
-  PAGE_SECTION_IDS
+  PAGE_SECTION_TEMPLATES
 } from "@constants";
 import { DATA_TRAVEL } from "data";
 import { ICONS } from "resources";
@@ -71,85 +71,85 @@ const BUCKET_LIST: Array<ICountedListItem> = mapToCountedListWrapper({
 });
 const CITIES: Array<ICountedListItem> = mapToCountedListWrapper({
   items: cities,
-  id: PAGE_SECTION_IDS.CITY
+  id: PAGE_SECTION_TEMPLATES.CITY
 });
 const TOWNS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: towns,
-  id: PAGE_SECTION_IDS.TOWN
+  id: PAGE_SECTION_TEMPLATES.TOWN
 });
 // const ATTRACTIONS: any = mapToCountedListWrapper({
 //   items: attractions.filter(item => !item.themePark && !item.highlight),
-//   id: PAGE_SECTION_IDS.ATTRACTION
+//   id: PAGE_SECTION_TEMPLATES.ATTRACTION
 // });
 const THEME_PARKS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: themeParks,
-  id: PAGE_SECTION_IDS.ATTRACTION
+  id: PAGE_SECTION_TEMPLATES.ATTRACTION
 });
 const HIGHLIGHTS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: highlights,
-  id: PAGE_SECTION_IDS.ATTRACTION
+  id: PAGE_SECTION_TEMPLATES.ATTRACTION
 });
 const ISLANDS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: islands,
-  id: PAGE_SECTION_IDS.ISLAND
+  id: PAGE_SECTION_TEMPLATES.ISLAND
 });
 const COUNTRIES: Array<ICountedListItem> = mapToCountedListWrapper({
   items: countries,
-  id: PAGE_SECTION_IDS.COUNTRY
+  id: PAGE_SECTION_TEMPLATES.COUNTRY
 });
 const friends: Array<ICountedListItem> = mapToCountedListWrapper({
   items: FRIENDS,
-  id: PAGE_SECTION_IDS.FRIEND,
+  id: PAGE_SECTION_TEMPLATES.FRIEND,
   filter: "travel"
 });
 
 const SECTIONS_STATS: Array<IPageSection> = [
   {
-    details: PAGE_SECTION_IDS.BUCKET_LIST,
+    details: PAGE_SECTION_TEMPLATES.BUCKET_LIST,
     icon: ICONS.STARS,
     data: BUCKET_LIST
   },
   {
-    details: PAGE_SECTION_IDS.CITY,
+    details: PAGE_SECTION_TEMPLATES.CITY,
     icon: ICONS.CITY,
     showSectionLength: true,
     data: CITIES
   },
   {
-    details: PAGE_SECTION_IDS.COUNTRY,
+    details: PAGE_SECTION_TEMPLATES.COUNTRY,
     icon: ICONS.FLAG,
     data: COUNTRIES,
     showSectionLength: true
   },
   {
-    details: PAGE_SECTION_IDS.FRIEND,
+    details: PAGE_SECTION_TEMPLATES.FRIEND,
     icon: ICONS.PEOPLE,
     data: friends
   },
   {
-    details: PAGE_SECTION_IDS.HIGHLIGHT,
+    details: PAGE_SECTION_TEMPLATES.HIGHLIGHT,
     icon: ICONS.MAP_PIN,
     data: HIGHLIGHTS
   },
   {
-    details: PAGE_SECTION_IDS.ISLAND,
+    details: PAGE_SECTION_TEMPLATES.ISLAND,
     showSectionLength: true,
     icon: ICONS.PALM_TREE,
     data: ISLANDS
   },
   {
-    details: PAGE_SECTION_IDS.THEME_PARK,
+    details: PAGE_SECTION_TEMPLATES.THEME_PARK,
     showSectionLength: true,
     icon: ICONS.ROLLER_COASTER,
     data: THEME_PARKS
   },
   {
-    details: PAGE_SECTION_IDS.TOWN,
+    details: PAGE_SECTION_TEMPLATES.TOWN,
     icon: ICONS.TOWN_HALL,
     data: TOWNS
   },
   {
-    details: PAGE_SECTION_IDS.UP_NEXT,
+    details: PAGE_SECTION_TEMPLATES.UP_NEXT,
     icon: ICONS.NOTEPAD,
     showSectionLength: true,
     data: mapTripToEventCards({ data: UPCOMING })

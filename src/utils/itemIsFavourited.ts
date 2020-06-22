@@ -1,4 +1,4 @@
-import { PAGE_SECTION_IDS } from "@constants";
+import { PAGE_SECTION_TEMPLATES } from "@constants";
 
 interface IItemIsFavourited {
   itemToInspect: any;
@@ -15,9 +15,9 @@ export const itemIsFavourited = ({
 
   favouritedData.forEach((dataItem: any) => {
     if (
-      (id === PAGE_SECTION_IDS.MUSICIAN &&
+      (id === PAGE_SECTION_TEMPLATES.MUSICIAN &&
         itemToInspect === dataItem.headline) ||
-      (id === PAGE_SECTION_IDS.PLAY && itemToInspect === dataItem.play)
+      (id === PAGE_SECTION_TEMPLATES.PLAY && itemToInspect === dataItem.play)
     )
       itemIsFavourited = true;
   });

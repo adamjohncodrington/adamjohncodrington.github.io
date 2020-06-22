@@ -8,7 +8,7 @@ export { MUSICIANS } from "./musicians";
 export { MUSIC_VENUES } from "./music-venues";
 export { INGREDIENTS } from "./ingredients";
 export {
-  PAGE_SECTION_IDS,
+  PAGE_SECTION_TEMPLATES,
   EVENT_CARD_TYPES,
   PAGE_SECTION_DATA_TYPES
 } from "./page-sections";

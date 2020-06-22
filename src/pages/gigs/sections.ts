@@ -1,4 +1,4 @@
-import { EVENT_CARD_TYPES, PAGE_SECTION_IDS } from "@constants";
+import { EVENT_CARD_TYPES, PAGE_SECTION_TEMPLATES } from "@constants";
 import { DATA_GIGS } from "data";
 import { ICONS } from "resources";
 
@@ -16,37 +16,37 @@ const { ALL_GROUPED_BY_YEAR } = DATA_GIGS;
 
 const SECTIONS_STATS: Array<IPageSection> = [
   {
-    details: PAGE_SECTION_IDS.FESTIVAL,
+    details: PAGE_SECTION_TEMPLATES.FESTIVAL,
     showSectionLength: true,
     icon: ICONS.PEACE_SIGN,
     data: DATA_FESTIVALS
   },
   {
-    details: PAGE_SECTION_IDS.MUSICIAN,
+    details: PAGE_SECTION_TEMPLATES.MUSICIAN,
     icon: ICONS.ARTIST,
     data: DATA_MUSICIANS,
     showSectionLength: true
   },
   {
-    details: PAGE_SECTION_IDS.BUCKET_LIST,
+    details: PAGE_SECTION_TEMPLATES.BUCKET_LIST,
     icon: ICONS.STARS,
     data: DATA_BUCKET_LIST,
     showSectionLength: true
   },
   {
-    details: PAGE_SECTION_IDS.FRIEND,
+    details: PAGE_SECTION_TEMPLATES.FRIEND,
     icon: ICONS.PEOPLE,
     showSectionLength: false,
     data: DATA_FRIENDS
   },
   {
-    details: PAGE_SECTION_IDS.UP_NEXT,
+    details: PAGE_SECTION_TEMPLATES.UP_NEXT,
     icon: ICONS.NOTEPAD,
     data: DATA_UP_NEXT,
     showSectionLength: true
   },
   {
-    details: PAGE_SECTION_IDS.MUSIC_VENUES,
+    details: PAGE_SECTION_TEMPLATES.MUSIC_VENUES,
     icon: ICONS.STADIUM,
     data: DATA_VENUES,
     showSectionLength: true
