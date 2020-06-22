@@ -7,11 +7,14 @@ import {
   THEATRE_VENUES
 } from "CONSTANTS";
 import { DATA_THEATRE } from "data";
-import { mapToEventCard, mapYearsToEventCardPageSections } from "factories";
 import { ICONS } from "resources";
 import { isInFuture } from "utils";
 
-import { mapToCountedList } from "../factory";
+import {
+  mapToCountedList,
+  mapYearsToEventCardPageSections,
+  mapToEventCard
+} from "../factory";
 
 const { ALL, ALL_GROUPED_BY_YEAR } = DATA_THEATRE;
 

@@ -6,12 +6,15 @@ import {
   MUSICIANS,
   FESTIVALS
 } from "CONSTANTS";
-import { mapToEventCard, mapYearsToEventCardPageSections } from "factories";
 import { DATA_GIGS } from "data";
 import { ICONS } from "resources";
 import { isInFuture } from "utils";
 
-import { mapToCountedList } from "../factory";
+import {
+  mapToCountedList,
+  mapToEventCard,
+  mapYearsToEventCardPageSections
+} from "../factory";
 
 const { ALL, ALL_GROUPED_BY_YEAR } = DATA_GIGS;
 
