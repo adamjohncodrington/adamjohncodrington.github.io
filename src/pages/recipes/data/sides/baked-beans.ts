@@ -66,7 +66,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
 
 const method: IRecipeMethod = [
   "fry diced onion, garlic and pepper in oil (and some water if need be) for 5-10 minutes",
-  "transfer to slow cooker along with passata and seasoning",
+  "transfer to slow cooker along with drained beans, passata and seasoning",
   "cook on low for 8 hours or medium for 5 hours"
 ];
 
