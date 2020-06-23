@@ -1,63 +1,69 @@
 import {
   PAGE_SECTION_TEMPLATES,
   MUSIC_VENUES,
-  FRIENDS,
-  MUSICIANS,
-  FESTIVALS,
+  FRIENDS as friends,
+  MUSICIANS as musicians,
+  FESTIVALS as festivals,
   EVENT_CARD_TYPES
 } from "@constants";
-import { DATA_GIGS } from "data";
 import { isInFuture } from "utils";
 
 import { mapToCountedList, mapToEventCard } from "../factory";
+import { DATA_ALL } from "./data";
 
-const { ALL } = DATA_GIGS;
-const FAVOURITES: Array<IGigData> = ALL.filter(item => item.favourite);
-const UPCOMING: Array<IGigData> = ALL.filter((gig: IGigData) =>
+const FAVOURITES: Array<IGigData> = DATA_ALL.filter(item => item.favourite);
+const UPCOMING: Array<IGigData> = DATA_ALL.filter((gig: IGigData) =>
   isInFuture(gig.dates)
 );
 
-export const pastCount: number = ALL.length - UPCOMING.length;
+export const pastCount: number = DATA_ALL.length - UPCOMING.length;
 export const futureCount: number = UPCOMING.length;
-
-export const DATA_UP_NEXT: Array<IEventCard> = mapToEventCard({
-  data: UPCOMING,
-  eventCardType: EVENT_CARD_TYPES.GIG
-});
 
 const mapToCountedListWrapper = (params: any) =>
   mapToCountedList({
     ...params,
-    allData: ALL,
+    allData: DATA_ALL,
     favouritedData: FAVOURITES
   });
 
-export const DATA_BUCKET_LIST: Array<ICountedListItem> = mapToCountedListWrapper(
-  {
-    bucketListMode: true,
-    items: MUSICIANS,
-    template: PAGE_SECTION_TEMPLATES.MUSICIAN
-  }
-);
+const BUCKET_LIST: Array<ICountedListItem> = mapToCountedListWrapper({
+  bucketListMode: true,
+  items: musicians,
+  template: PAGE_SECTION_TEMPLATES.MUSICIAN
+});
 
-export const DATA_FESTIVALS: Array<ICountedListItem> = mapToCountedListWrapper({
-  items: FESTIVALS,
+const FESTIVALS: Array<ICountedListItem> = mapToCountedListWrapper({
+  items: festivals,
   template: PAGE_SECTION_TEMPLATES.FESTIVAL,
   filter: "festival"
 });
 
-export const DATA_FRIENDS: Array<ICountedListItem> = mapToCountedListWrapper({
-  items: FRIENDS,
+const FRIENDS: Array<ICountedListItem> = mapToCountedListWrapper({
+  items: friends,
   template: PAGE_SECTION_TEMPLATES.FRIEND,
   filter: "gigs"
 });
 
-export const DATA_MUSICIANS: Array<ICountedListItem> = mapToCountedListWrapper({
-  items: MUSICIANS,
+const MUSICIANS: Array<ICountedListItem> = mapToCountedListWrapper({
+  items: musicians,
   template: PAGE_SECTION_TEMPLATES.MUSICIAN
 });
 
-export const DATA_VENUES: Array<ICountedListItem> = mapToCountedListWrapper({
+const VENUES: Array<ICountedListItem> = mapToCountedListWrapper({
   items: MUSIC_VENUES,
   template: PAGE_SECTION_TEMPLATES.MUSIC_VENUES
 });
+
+const UP_NEXT: Array<IEventCard> = mapToEventCard({
+  data: UPCOMING,
+  eventCardType: EVENT_CARD_TYPES.GIG
+});
+
+export const FACTORY = {
+  BUCKET_LIST,
+  MUSICIANS,
+  FESTIVALS,
+  FRIENDS,
+  UP_NEXT,
+  VENUES
+};

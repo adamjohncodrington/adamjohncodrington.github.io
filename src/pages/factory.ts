@@ -185,8 +185,8 @@ export const mapYearsToEventCardPageSections = ({
     const title = year[0].dates[0].getFullYear().toString();
 
     return {
-      details: { id: title, title, type: PAGE_SECTION_DATA_TYPES.EVENT_CARDS },
-      showSectionLength: true,
+      template: { id: title, title, type: PAGE_SECTION_DATA_TYPES.EVENT_CARDS },
+      showCount: true,
       data: mapToEventCard({ data: year, eventCardType }).filter(
         (item: IEventCard) => !isInFuture(item.dates)
       )

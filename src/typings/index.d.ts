@@ -51,10 +51,10 @@ interface IEventCard {
 }
 
 interface IPageSection {
-  details: IPageSectionTemplate;
+  template: IPageSectionTemplate;
   icon?: IImageSrc;
   data: Array<any>;
-  showSectionLength?: boolean;
+  showCount?: boolean;
   listOfRecipes?: boolean;
   expandedAutomatically?: boolean;
 }

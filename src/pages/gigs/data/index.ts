@@ -15,7 +15,7 @@ import { GIGS_2019 } from "./gigs-2019";
 import { GIGS_2020 } from "./gigs-2020";
 import { GIGS_2021 } from "./gigs-2021";
 
-const ALL: Array<IGigData> = [
+export const DATA_ALL: Array<IGigData> = [
   ...GIGS_2006,
   ...GIGS_2007,
   ...GIGS_2008,
@@ -34,7 +34,7 @@ const ALL: Array<IGigData> = [
   ...GIGS_2021
 ];
 
-const ALL_GROUPED_BY_YEAR: Array<Array<IGigData>> = [
+export const DATA_SPLIT_BY_YEAR: Array<Array<IGigData>> = [
   GIGS_2006,
   GIGS_2007,
   GIGS_2008,
@@ -52,5 +52,3 @@ const ALL_GROUPED_BY_YEAR: Array<Array<IGigData>> = [
   GIGS_2020,
   GIGS_2021
 ];
-
-export const DATA_GIGS = { ALL, ALL_GROUPED_BY_YEAR };

@@ -16,10 +16,10 @@ import {
 } from "./styles";
 
 export const PageSection: React.FC<IPageSection> = ({
-  details: { id, title, type },
+  template: { id, title, type },
   icon,
   data,
-  showSectionLength = false,
+  showCount = false,
   expandedAutomatically = false
 }) => {
   const isCountedList: boolean = type === PAGE_SECTION_DATA_TYPES.COUNTED_LIST;
@@ -42,7 +42,7 @@ export const PageSection: React.FC<IPageSection> = ({
           headerComponent={
             <PageSectionHeader
               text={title}
-              showCounts={showSectionLength}
+              showCounts={showCount}
               data={data}
               icon={icon}
               dataTest="disclosure-header"

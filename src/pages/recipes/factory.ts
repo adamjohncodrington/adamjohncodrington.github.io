@@ -7,7 +7,7 @@ export const mapRecipeGroupsToSections = (
     category,
     data
   }: IRecipeGroup): IPageSection => ({
-    details: {
+    template: {
       id: category,
       title: category,
       type: PAGE_SECTION_DATA_TYPES.RECIPES
