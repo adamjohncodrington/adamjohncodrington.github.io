@@ -1,7 +1,5 @@
 # TO DO LIST
 
-- reflect `pages/gigs` changes/strucutre in `theatre` and `travel`
-
 ## Refactoring
 
 - move final instances of `px` in `EventCard` and `RecipeCard` to `theme`
@@ -11,8 +9,7 @@
 
 ## TypeScript
 
-- remove as many instances of `any` and `@ts-ignore` as possible
-
+- remove as many remaining instances of `any` and `@ts-ignore` as possible
 
 ## Data
 
