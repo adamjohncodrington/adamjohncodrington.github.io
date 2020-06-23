@@ -36,28 +36,28 @@ export const DATA_BUCKET_LIST: Array<ICountedListItem> = mapToCountedListWrapper
   {
     bucketListMode: true,
     items: MUSICIANS,
-    id: PAGE_SECTION_TEMPLATES.MUSICIAN
+    template: PAGE_SECTION_TEMPLATES.MUSICIAN
   }
 );
 
 export const DATA_FESTIVALS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: FESTIVALS,
-  id: PAGE_SECTION_TEMPLATES.FESTIVAL,
+  template: PAGE_SECTION_TEMPLATES.FESTIVAL,
   filter: "festival"
 });
 
 export const DATA_FRIENDS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: FRIENDS,
-  id: PAGE_SECTION_TEMPLATES.FRIEND,
+  template: PAGE_SECTION_TEMPLATES.FRIEND,
   filter: "gigs"
 });
 
 export const DATA_MUSICIANS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: MUSICIANS,
-  id: PAGE_SECTION_TEMPLATES.MUSICIAN
+  template: PAGE_SECTION_TEMPLATES.MUSICIAN
 });
 
 export const DATA_VENUES: Array<ICountedListItem> = mapToCountedListWrapper({
   items: MUSIC_VENUES,
-  id: PAGE_SECTION_TEMPLATES.MUSIC_VENUES
+  template: PAGE_SECTION_TEMPLATES.MUSIC_VENUES
 });

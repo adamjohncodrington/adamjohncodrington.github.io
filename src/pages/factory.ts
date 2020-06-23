@@ -12,7 +12,7 @@ import {
 
 interface IMapToCountedList {
   items: Object;
-  id: IPageSectionDetails;
+  template: IPageSectionTemplate;
   filter: IFilter;
   allData: Array<any>;
   favouritedData: Array<any>;
@@ -21,7 +21,7 @@ interface IMapToCountedList {
 
 export const mapToCountedList = ({
   items,
-  id,
+  template,
   filter,
   allData,
   favouritedData,
@@ -42,7 +42,6 @@ export const mapToCountedList = ({
         item.favourite ||
         itemIsFavourited({
           itemToInspect: item,
-          id,
           favouritedData
         }),
       star: item.capital
@@ -66,7 +65,7 @@ export const mapToCountedList = ({
         ignoreCountInfo || futureCount !== 0 || pastCount !== 0
     );
 
-  return id === PAGE_SECTION_TEMPLATES.FRIEND
+  return template === PAGE_SECTION_TEMPLATES.FRIEND
     ? data
         .sort((a, b) => (a.futureCount > b.futureCount ? -1 : 1))
         .sort((a, b) => (a.pastCount > b.pastCount ? -1 : 1))

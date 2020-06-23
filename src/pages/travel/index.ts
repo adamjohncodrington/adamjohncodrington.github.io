@@ -71,35 +71,35 @@ const BUCKET_LIST: Array<ICountedListItem> = mapToCountedListWrapper({
 });
 const CITIES: Array<ICountedListItem> = mapToCountedListWrapper({
   items: cities,
-  id: PAGE_SECTION_TEMPLATES.CITY
+  template: PAGE_SECTION_TEMPLATES.CITY
 });
 const TOWNS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: towns,
-  id: PAGE_SECTION_TEMPLATES.TOWN
+  template: PAGE_SECTION_TEMPLATES.TOWN
 });
 // const ATTRACTIONS: any = mapToCountedListWrapper({
 //   items: attractions.filter(item => !item.themePark && !item.highlight),
-//   id: PAGE_SECTION_TEMPLATES.ATTRACTION
+//   template: PAGE_SECTION_TEMPLATES.ATTRACTION
 // });
 const THEME_PARKS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: themeParks,
-  id: PAGE_SECTION_TEMPLATES.ATTRACTION
+  template: PAGE_SECTION_TEMPLATES.ATTRACTION
 });
 const HIGHLIGHTS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: highlights,
-  id: PAGE_SECTION_TEMPLATES.ATTRACTION
+  template: PAGE_SECTION_TEMPLATES.ATTRACTION
 });
 const ISLANDS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: islands,
-  id: PAGE_SECTION_TEMPLATES.ISLAND
+  template: PAGE_SECTION_TEMPLATES.ISLAND
 });
 const COUNTRIES: Array<ICountedListItem> = mapToCountedListWrapper({
   items: countries,
-  id: PAGE_SECTION_TEMPLATES.COUNTRY
+  template: PAGE_SECTION_TEMPLATES.COUNTRY
 });
 const friends: Array<ICountedListItem> = mapToCountedListWrapper({
   items: FRIENDS,
-  id: PAGE_SECTION_TEMPLATES.FRIEND,
+  template: PAGE_SECTION_TEMPLATES.FRIEND,
   filter: "travel"
 });
 

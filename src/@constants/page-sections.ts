@@ -23,24 +23,24 @@ export const PAGE_SECTION_DATA_TYPES: I_PAGE_SECTION_DATA_TYPES = {
 };
 
 interface AllPageSectionTitles {
-  ACTOR: IPageSectionDetails;
-  ATTRACTION: IPageSectionDetails;
-  BUCKET_LIST: IPageSectionDetails;
-  CITY: IPageSectionDetails;
-  COUNTRY: IPageSectionDetails;
-  FESTIVAL: IPageSectionDetails;
-  HIGHLIGHT: IPageSectionDetails;
-  ISLAND: IPageSectionDetails;
-  FRIEND: IPageSectionDetails;
-  MUSICIAN: IPageSectionDetails;
-  MUSIC_VENUES: IPageSectionDetails;
-  REGION: IPageSectionDetails;
-  PLAY: IPageSectionDetails;
-  THEATRE_VENUES: IPageSectionDetails;
-  TOWN: IPageSectionDetails;
-  THEME_PARK: IPageSectionDetails;
-  UP_NEXT: IPageSectionDetails;
-  RECIPES_COMING_SOON: IPageSectionDetails;
+  ACTOR: IPageSectionTemplate;
+  ATTRACTION: IPageSectionTemplate;
+  BUCKET_LIST: IPageSectionTemplate;
+  CITY: IPageSectionTemplate;
+  COUNTRY: IPageSectionTemplate;
+  FESTIVAL: IPageSectionTemplate;
+  HIGHLIGHT: IPageSectionTemplate;
+  ISLAND: IPageSectionTemplate;
+  FRIEND: IPageSectionTemplate;
+  MUSICIAN: IPageSectionTemplate;
+  MUSIC_VENUES: IPageSectionTemplate;
+  REGION: IPageSectionTemplate;
+  PLAY: IPageSectionTemplate;
+  THEATRE_VENUES: IPageSectionTemplate;
+  TOWN: IPageSectionTemplate;
+  THEME_PARK: IPageSectionTemplate;
+  UP_NEXT: IPageSectionTemplate;
+  RECIPES_COMING_SOON: IPageSectionTemplate;
 }
 
 const actor: string = "actors";

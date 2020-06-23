@@ -18,7 +18,7 @@ type IEventCardRawData = IGigData | ITravelData | ITheatreData;
 
 type IPageSecionType = "recipes" | "event-cards" | "counted-list";
 
-interface IPageSectionDetails {
+interface IPageSectionTemplate {
   title: string;
   id: string;
   type: IPageSectionType;
@@ -51,7 +51,7 @@ interface IEventCard {
 }
 
 interface IPageSection {
-  details: IPageSectionDetails;
+  details: IPageSectionTemplate;
   icon?: IImageSrc;
   data: Array<any>;
   showSectionLength?: boolean;

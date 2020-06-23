@@ -34,20 +34,20 @@ const mapToCountedListWrapper = (params: any) =>
 
 const actors: any = mapToCountedListWrapper({
   items: ACTORS,
-  id: PAGE_SECTION_TEMPLATES.ACTOR
+  template: PAGE_SECTION_TEMPLATES.ACTOR
 });
 const friends: any = mapToCountedListWrapper({
   items: FRIENDS,
-  id: PAGE_SECTION_TEMPLATES.FRIEND,
+  template: PAGE_SECTION_TEMPLATES.FRIEND,
   filter: "theatre"
 });
 const plays: any = mapToCountedListWrapper({
   items: PLAYS,
-  id: PAGE_SECTION_TEMPLATES.PLAY
+  template: PAGE_SECTION_TEMPLATES.PLAY
 });
 const venues: any = mapToCountedListWrapper({
   items: THEATRE_VENUES,
-  id: PAGE_SECTION_TEMPLATES.THEATRE_VENUES
+  template: PAGE_SECTION_TEMPLATES.THEATRE_VENUES
 });
 
 const SECTIONS_STATS: Array<IPageSection> = [
