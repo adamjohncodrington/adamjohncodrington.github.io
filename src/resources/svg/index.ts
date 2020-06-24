@@ -10,11 +10,8 @@ export const SVG_ICONS: IconsObject = {
   CAKE: requireSvg("cake"),
   CAMERA: requireSvg("camera"),
   CITY: requireSvg("city"),
-  CLOCHE: requireSvg("cloche"),
   // F
   FLAG: requireSvg("flag"),
-  // H
-  HEART: requireSvg("heart"),
   // M
   MAP_PIN: requireSvg("map_pin"),
   MASKS: requireSvg("masks"),
@@ -33,10 +30,9 @@ export const SVG_ICONS: IconsObject = {
   // T
   TENT: requireSvg("tent"),
   THEATRE: requireSvg("theatre"),
-  TOAST: requireSvg("toast"),
   TOWN_HALL: requireSvg("town_hall"),
   TRAVEL: requireSvg("travel"),
   // V
   VEG_BOWL: requireSvg("veg_bowl"),
-  VINYL: requireSvg("vinyl_1")
+  VINYL: requireSvg("vinyl")
 };
