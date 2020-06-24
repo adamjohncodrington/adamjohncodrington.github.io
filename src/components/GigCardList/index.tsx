@@ -10,7 +10,7 @@ interface IGigCards {
 }
 
 export const GigCardList: React.FC<IGigCards> = ({ gigCards }) => (
-  <PageSectionList isCards>
+  <PageSectionList isCardList>
     {gigCards.map((gigCard: IGigCard, index: number) => (
       <Li key={index}>
         <GigCard {...gigCard} />

@@ -10,7 +10,7 @@ interface ITheatreCards {
 }
 
 export const TheatreCardList: React.FC<ITheatreCards> = ({ theatreCards }) => (
-  <PageSectionList isCards>
+  <PageSectionList isCardList>
     {theatreCards.map((theatreCard: ITheatreCard, index: number) => (
       <Li key={index}>
         <TheatreCard {...theatreCard} />

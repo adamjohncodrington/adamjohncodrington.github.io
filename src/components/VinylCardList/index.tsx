@@ -10,7 +10,7 @@ interface IVinylCards {
 }
 
 export const VinylCardList: React.FC<IVinylCards> = ({ vinylCards }) => (
-  <PageSectionList isCards>
+  <PageSectionList isCardList>
     {vinylCards.map((vinyl: IVinylCard, index: number) => (
       <Li key={index}>
         <VinylCard {...vinyl} />

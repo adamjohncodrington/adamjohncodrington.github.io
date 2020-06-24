@@ -3,13 +3,13 @@ import styled, { css } from "styled-components";
 import { Ul } from "primitives";
 
 interface IPageSectionList extends IThemeProp {
-  isCards?: boolean;
+  isCardList?: boolean;
   isVinylCards?: boolean;
 }
 
 export const PageSectionList = styled(Ul)`
   ${({
-    isCards,
+    isCardList,
     theme: {
       countedList,
       eventCardList,
@@ -20,18 +20,18 @@ export const PageSectionList = styled(Ul)`
 
     > * {
       border-bottom: ${countedList.border.bottom};
-      padding: ${isCards
+      padding: ${isCardList
         ? `${eventCardList.padding.vertical} 0`
         : `${countedList.padding.vertical} 0`};
     }
 
     > *:last-child {
-      ${isCards &&
+      ${isCardList &&
       `padding-bottom: ${eventCardList.finalEventCardPaddingBottom};`}
       border-bottom: 0;
     }
 
-    ${isCards &&
+    ${isCardList &&
     css`
       > *:first-child {
         padding-top: 0;

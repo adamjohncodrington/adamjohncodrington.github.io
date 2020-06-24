@@ -10,7 +10,7 @@ interface ITravelCards {
 }
 
 export const TravelCardList: React.FC<ITravelCards> = ({ travelCards }) => (
-  <PageSectionList isCards>
+  <PageSectionList isCardList>
     {travelCards.map((travelCard: ITravelCard, index: number) => (
       <Li key={index}>
         <TravelCard {...travelCard} />
