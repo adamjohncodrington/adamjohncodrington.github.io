@@ -69,6 +69,7 @@ interface IHomepageRoute {
 }
 
 interface IRoute extends IHomepageRoute {
+  hide?: boolean;
   icon: IImageSrc;
   page: IPage;
 }

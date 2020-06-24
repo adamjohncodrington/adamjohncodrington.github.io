@@ -37,6 +37,7 @@ export const PAGE_ROUTES: Array<IRoute> = [
     dest: "/vinyl",
     icon: SVG_ICONS.VINYL,
     title: "Vinyl",
+    hide: true,
     page: VINYL
   }
-];
+].filter((route: IRoute) => !route.hide);
