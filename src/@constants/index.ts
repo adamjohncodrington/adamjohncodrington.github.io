@@ -7,11 +7,7 @@ export { MEASUREMENTS, SAINSBURYS_SEASONING_COST } from "./measurements";
 export { MUSICIANS } from "./musicians";
 export { MUSIC_VENUES } from "./music-venues";
 export { INGREDIENTS } from "./ingredients";
-export {
-  PAGE_SECTION_TEMPLATES,
-  EVENT_CARD_TYPES,
-  PAGE_SECTION_DATA_TYPES
-} from "./page-sections";
+export { PAGE_SECTION_TITLES } from "./page-section-titles";
 export { PLAYS } from "./plays";
 export { THEATRE_VENUES } from "./theatre-venues";
 export { TICKET_TYPES } from "./ticket-types";

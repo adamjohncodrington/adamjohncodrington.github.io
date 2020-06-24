@@ -1,6 +1,6 @@
 import { FRIENDS, LOCATIONS } from "@constants";
 
-export const TRAVEL_2011: Array<ITravelData> = [
+export const TRAVEL_2011: Array<ITravelCard> = [
   {
     title: [LOCATIONS.UK.regions.CORNWALL],
     notAbroad: true,

@@ -2,51 +2,43 @@ import {
   ACTORS as actors,
   FRIENDS as friends,
   PLAYS as plays,
-  PAGE_SECTION_TEMPLATES,
-  THEATRE_VENUES,
-  EVENT_CARD_TYPES
+  THEATRE_VENUES
 } from "@constants";
 import { isInFuture } from "utils";
 
-import { mapToCountedList, mapToEventCard } from "../factory";
-import { DATA_ALL } from "./data";
+import { mapToCountedList } from "../factory";
+import { DATA } from "./data";
 
-const DATA_FAVOURITES: Array<ITheatreData> = DATA_ALL.filter(
-  item => item.favourite
+const { ALL } = DATA;
+
+const DATA_FAVOURITES: Array<ITheatreCard> = ALL.filter(item => item.favourite);
+const UP_NEXT: Array<ITheatreCard> = ALL.filter(theatreTrip =>
+  isInFuture(theatreTrip.dates)
 );
-const UPCOMING = DATA_ALL.filter(theatreTrip => isInFuture(theatreTrip.dates));
 
 const mapToCountedListWrapper = (params: any) =>
   mapToCountedList({
     ...params,
-    allData: DATA_ALL,
+    allData: ALL,
     favouritedData: DATA_FAVOURITES
   });
 
-const ACTORS: Array<ICountedListItem> = mapToCountedListWrapper({
-  items: actors,
-  template: PAGE_SECTION_TEMPLATES.ACTOR
+const ACTORS: Array<ICountedItem> = mapToCountedListWrapper({
+  items: actors
 });
 
-const FRIENDS: Array<ICountedListItem> = mapToCountedListWrapper({
+const FRIENDS: Array<ICountedItem> = mapToCountedListWrapper({
   items: friends,
-  template: PAGE_SECTION_TEMPLATES.FRIEND,
-  filter: "theatre"
+  filter: "theatre",
+  sortByPastAndFutureCount: true
 });
 
-const PLAYS: Array<ICountedListItem> = mapToCountedListWrapper({
-  items: plays,
-  template: PAGE_SECTION_TEMPLATES.PLAY
+const PLAYS: Array<ICountedItem> = mapToCountedListWrapper({
+  items: plays
 });
 
-const VENUES: Array<ICountedListItem> = mapToCountedListWrapper({
-  items: THEATRE_VENUES,
-  template: PAGE_SECTION_TEMPLATES.THEATRE_VENUES
-});
-
-const UP_NEXT: Array<IEventCard> = mapToEventCard({
-  data: UPCOMING,
-  eventCardType: EVENT_CARD_TYPES.THEATRE
+const VENUES: Array<ICountedItem> = mapToCountedListWrapper({
+  items: THEATRE_VENUES
 });
 
 export const FACTORY = { ACTORS, FRIENDS, PLAYS, VENUES, UP_NEXT };

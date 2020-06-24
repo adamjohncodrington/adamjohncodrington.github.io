@@ -1,6 +1,6 @@
 import { FRIENDS, LOCATIONS } from "@constants";
 
-export const TRAVEL_2009: Array<ITravelData> = [
+export const TRAVEL_2009: Array<ITravelCard> = [
   {
     title: [LOCATIONS.BELGIUM.attractions.BATTLEFIELDS],
     subtitle: [LOCATIONS.BELGIUM],

@@ -1,33 +1,45 @@
 import {
-  PAGE_SECTION_TEMPLATES,
-  PAGE_SECTION_DATA_TYPES,
-  EVENT_CARD_TYPES
-} from "@constants";
-import {
-  formatNames,
   getPageSectionItemCounts,
   itemIsFavourited,
-  isInFuture
+  moveTheSuffixToPrefix
 } from "utils";
+
+//TODO: this file is a mess! Rewrite it.
 
 interface IMapToCountedList {
   items: Object;
-  template: IPageSectionTemplate;
   filter: IFilter;
   allData: Array<any>;
+  sortByPastAndFutureCount?: boolean;
   favouritedData: Array<any>;
   bucketListMode: boolean;
 }
 
 export const mapToCountedList = ({
   items,
-  template,
   filter,
   allData,
+  sortByPastAndFutureCount,
   favouritedData,
   bucketListMode
-}: IMapToCountedList): Array<ICountedListItem> => {
-  const mapToListEntry = (item: any): ICountedListItem => {
+}: IMapToCountedList): Array<ICountedItem> => {
+  const formatNames = (inputData: any): string => {
+    if (!Array.isArray(inputData))
+      return inputData.name && moveTheSuffixToPrefix(inputData.name);
+
+    const array = inputData.map(
+      item => item.name && moveTheSuffixToPrefix(item.name)
+    );
+
+    let outputString: string = "";
+    array.forEach(
+      (name: string, index: number) =>
+        (outputString += index === array.length - 1 ? name : `${name}, `)
+    );
+    return outputString;
+  };
+
+  const mapToCountedListItem = (item: any): ICountedItem => {
     const { pastCount, futureCount } = getPageSectionItemCounts({
       itemToCount: item,
       data: allData
@@ -35,8 +47,9 @@ export const mapToCountedList = ({
 
     return {
       text: formatNames(item),
-      ignoreCountInfo: item.insignificant || bucketListMode,
+      countInfoIrrelevant: item.insignificant || bucketListMode,
       pastCount,
+      doNotIncludeInList: item.passedAway,
       futureCount,
       favourite:
         item.favourite ||
@@ -48,28 +61,32 @@ export const mapToCountedList = ({
     };
   };
 
-  const data: Array<any> = Object.values(items)
+  const countedList: Array<ICountedItem> = Object.values(items)
     .filter(item => (filter ? item[filter] : true))
     .sort((a, b) =>
       (a.name ? a.name : a)
         .toLowerCase()
         .localeCompare((b.name ? b.name : b).toLowerCase())
     )
-    .map(item => mapToListEntry(item))
+    .map(item => mapToCountedListItem(item))
+    .filter(item => !item.doNotIncludeInList)
+
     .filter(({ futureCount, pastCount }) =>
       bucketListMode ? futureCount === 0 && pastCount === 0 : true
     )
     // DO NOT INCLUDE VENUES I'VE NEVER GONE TO ON THE WEBSITE, e.g. "Lafayette" venu
     .filter(
-      ({ futureCount, ignoreCountInfo, pastCount }) =>
-        ignoreCountInfo || futureCount !== 0 || pastCount !== 0
+      ({ futureCount, countInfoIrrelevant, pastCount }) =>
+        countInfoIrrelevant || futureCount !== 0 || pastCount !== 0
     );
 
-  return template === PAGE_SECTION_TEMPLATES.FRIEND
-    ? data
-        .sort((a, b) => (a.futureCount > b.futureCount ? -1 : 1))
-        .sort((a, b) => (a.pastCount > b.pastCount ? -1 : 1))
-    : data;
+  if (sortByPastAndFutureCount) {
+    countedList
+      .sort((a, b) => (a.futureCount > b.futureCount ? -1 : 1))
+      .sort((a, b) => (a.pastCount > b.pastCount ? -1 : 1));
+  }
+
+  return countedList;
 };
 
 interface IGeneratePropertyArrayFromObject {
@@ -100,98 +117,4 @@ export const generatePropertyArrayFromObject = ({
     ...arrayFilteredByTopLevelProperty,
     ...arrayFilteredByChildLevelProperty
   ];
-};
-
-interface IMapDataToEventCards {
-  data: Array<any>;
-  eventCardType: IEventCardType;
-}
-
-export const mapToEventCard = ({
-  data,
-  eventCardType
-}: IMapDataToEventCards): Array<IEventCard> => {
-  const mapDataToEventCard = ({
-    title,
-    subtitle,
-    headline,
-    festival,
-    support,
-    lineup,
-    dates,
-    venue,
-    favourite,
-    company,
-    ticketType,
-    play,
-    cast,
-    theatre
-  }: any): IEventCard => ({
-    //@ts-ignore
-    title: formatNames(
-      title
-        ? title
-        : eventCardType === EVENT_CARD_TYPES.GIG
-        ? headline
-          ? headline
-          : festival
-        : eventCardType === EVENT_CARD_TYPES.THEATRE
-        ? play
-        : null
-    ),
-    //@ts-ignore
-    subtitle: formatNames(
-      subtitle
-        ? subtitle
-        : eventCardType === EVENT_CARD_TYPES.GIG
-        ? lineup
-          ? lineup
-          : support
-        : eventCardType === EVENT_CARD_TYPES.THEATRE
-        ? cast
-        : null
-    ),
-    //@ts-ignore
-    body: formatNames(
-      eventCardType === EVENT_CARD_TYPES.GIG
-        ? venue
-        : eventCardType === EVENT_CARD_TYPES.THEATRE
-        ? theatre
-        : null
-    ),
-    dates,
-    company: company.sort((a: IFriend, b: IFriend) =>
-      a.initials > b.initials ? 1 : -1
-    ),
-    favourite,
-    disclaimer:
-      eventCardType === EVENT_CARD_TYPES.GIG && isInFuture(dates) && ticketType
-  });
-
-  return data.map((item: any) => mapDataToEventCard(item));
-};
-
-type SingleYearData = Array<IEventCardRawData>;
-type IMapYearGroupsToSections = {
-  years: Array<SingleYearData>;
-  eventCardType: IEventCardType;
-};
-
-export const mapYearsToEventCardPageSections = ({
-  years,
-  eventCardType
-}: IMapYearGroupsToSections): Array<IPageSection> => {
-  const mapYearGroupToSection = (year: SingleYearData): IPageSection => {
-    const title = year[0].dates[0].getFullYear().toString();
-
-    return {
-      template: { id: title, title, type: PAGE_SECTION_DATA_TYPES.EVENT_CARDS },
-      showCount: true,
-      data: mapToEventCard({ data: year, eventCardType }).filter(
-        (item: IEventCard) => !isInFuture(item.dates)
-      )
-    };
-  };
-
-  return years.map((year: SingleYearData) => mapYearGroupToSection(year));
 };

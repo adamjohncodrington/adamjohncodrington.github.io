@@ -21,8 +21,7 @@ const THEME_page: ITheme_Page = {
 const THEME_countedList: ITheme_CountedList = {
   border: { bottom: BORDER_GRAY_THIN },
   count: { width: "25px" },
-  padding: { vertical: "5px" },
-  leaderboardAdditonalHorizontalSpace: "10px"
+  padding: { vertical: "5px" }
 };
 
 const THEME_eventCardList: ITheme_EventCardList = {

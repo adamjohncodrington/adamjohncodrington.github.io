@@ -9,7 +9,7 @@ import { SCONES } from "./scones";
 
 export const SWEETS: IRecipeGroup = {
   category: "sweets",
-  data: [
+  recipes: [
     BANANA_CAKE,
     BLUEBERRY_PANCAKES,
     BROWNIES,

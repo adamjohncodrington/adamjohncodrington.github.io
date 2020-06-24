@@ -1,5 +1,5 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
-import { PHOTOS } from "resources";
+import { PHOTOS_RECIPES } from "resources";
 
 const ingredients: Array<Array<IRecipeIngredient>> = [
   [
@@ -74,7 +74,7 @@ const method: IRecipeMethod = [
 const title: IRecipeTitle = "rogan josh";
 const makes: IRecipeMakes = { quantity: 5, measurement: MEASUREMENTS.PORTION };
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IImageSrc = PHOTOS.ROGAN_JOSH;
+const image: IImageSrc = PHOTOS_RECIPES.ROGAN_JOSH;
 
 export const ROGAN_JOSH: IRecipeCard = {
   title,

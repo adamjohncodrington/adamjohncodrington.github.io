@@ -1,59 +1,24 @@
 import React from "react";
-import styled, { css } from "styled-components";
 
-interface PanelContainerProps extends IThemeProp {
-  bodyHeight: IBodyHeight;
-}
-const PanelContainer = styled.div`
-  &.initial-state {
-    max-height: unset;
-  }
+import { PanelContainer, ClickableRegion } from "./styles";
 
-  ${({
-    theme: {
-      section: { transition }
-    }
-  }: PanelContainerProps) =>
-    css`
-      transition: ${transition};
-    `}
-
-  overflow: hidden;
-  max-height: 0;
-
-  &.panel-visible {
-    max-height: ${(props: PanelContainerProps) => props.bodyHeight}px;
-  }
-`;
-
-interface ClickableRegionProps {
-  expandedAutomatically?: boolean;
-}
-const ClickableRegion = styled.div`
-  ${(props: ClickableRegionProps) =>
-    !props.expandedAutomatically &&
-    css`
-      cursor: pointer;
-    `}
-`;
-
-type IBodyHeight = number | null;
+export type IBodyHeight = number | null;
 
 interface DisclosureProps {
-  expandedAutomatically?: boolean;
-  onlyHeaderClickable?: boolean;
+  initiallyExpanded?: boolean;
+  isStatic?: boolean;
   headerComponent: React.ReactNode;
   children: React.ReactNode;
 }
 
 export const Disclosure: React.FC<DisclosureProps> = ({
-  expandedAutomatically = false,
-  onlyHeaderClickable = false,
+  initiallyExpanded = false,
   headerComponent,
+  isStatic = false,
   children
 }) => {
   const [panelIsVisible, switchPanelVisibility] = React.useState<boolean>(
-    expandedAutomatically
+    !!(initiallyExpanded || isStatic)
   );
   const [panelContainerHeight, setPanelContainerHeight] = React.useState<
     IBodyHeight
@@ -74,7 +39,7 @@ export const Disclosure: React.FC<DisclosureProps> = ({
       ? "panel-visible"
       : "panel-invisible";
 
-  const hiddenPanel = (
+  const panel = (
     <PanelContainer
       data-test="disclosure-panel"
       className={getPanelContainerClass(panelContainerHeight, panelIsVisible)}
@@ -85,28 +50,18 @@ export const Disclosure: React.FC<DisclosureProps> = ({
     </PanelContainer>
   );
 
-  const dataTestDisclosure: string = "disclosure-container";
-
-  return onlyHeaderClickable ? (
+  return isStatic ? (
     <>
-      <ClickableRegion
-        expandedAutomatically={expandedAutomatically}
-        data-test={dataTestDisclosure}
-        onClick={() =>
-          !expandedAutomatically && switchPanelVisibility(!panelIsVisible)
-        }
-      >
-        {headerComponent}
-      </ClickableRegion>
-      {hiddenPanel}
+      {headerComponent}
+      {children}
     </>
   ) : (
     <ClickableRegion
-      data-test={dataTestDisclosure}
+      data-test="disclosure-container"
       onClick={() => switchPanelVisibility(!panelIsVisible)}
     >
       {headerComponent}
-      {hiddenPanel}
+      {panel}
     </ClickableRegion>
   );
 };

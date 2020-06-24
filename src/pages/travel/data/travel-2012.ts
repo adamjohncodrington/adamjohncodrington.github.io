@@ -1,6 +1,6 @@
 import { FRIENDS, LOCATIONS } from "@constants";
 
-export const TRAVEL_2012: Array<ITravelData> = [
+export const TRAVEL_2012: Array<ITravelCard> = [
   {
     title: [
       LOCATIONS.EGYPT.cities.SHARM_EL_SHEIKH,

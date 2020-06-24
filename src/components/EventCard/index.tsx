@@ -1,27 +1,11 @@
 import React from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
-import { FlexColumn, FlexRow, H3, SeventyFivePercentSpan } from "primitives";
+import { FlexColumn, FlexRow, SeventyFivePercentSpan } from "primitives";
+import { datesArrayToString } from "utils";
 
-import { getCountdownText, getDisplayDateText, daysToGo } from "./utils";
-
-const verticalSpaceBetweenEventCardRows: PxValue = "3px";
-
-interface EventCardTitleProps {
-  favourite: boolean;
-}
-const EventCardTitle = styled(H3)`
-  ${({ favourite }: EventCardTitleProps) =>
-    favourite &&
-    css`
-      ::before {
-        content: "♥ ";
-      }
-    `}
-
-  font-weight: bold;
-  text-transform: uppercase;
-`;
+import { CardTitleBold, CardSubtitleBold } from "../styles";
+import { getCountdownText, daysToGo } from "./utils";
 
 const ItalicBoldFlexRow = styled(FlexRow)`
   font-style: italic;
@@ -32,11 +16,7 @@ const ItalicBoldFlexRow = styled(FlexRow)`
   }
 `;
 
-const EventCardSubtitle = styled.span`
-  font-weight: bold;
-  text-transform: uppercase;
-`;
-
+const verticalSpaceBetweenEventCardRows: PxValue = "3px";
 const StyledFlexColumn = styled(FlexColumn)`
   > *:not(:first-child) {
     padding-top: ${verticalSpaceBetweenEventCardRows};
@@ -55,22 +35,22 @@ export const EventCard: React.FC<IEventCard> = ({
 
   return (
     <StyledFlexColumn data-test="event-card-container">
-      <div>
-        <EventCardTitle data-test="event-card-title" favourite={favourite}>
+      <div data-test="event-card-title-and-subtitle">
+        <CardTitleBold data-test="event-card-title" favourite={favourite}>
           {title}
-        </EventCardTitle>
+        </CardTitleBold>
 
         {subtitle && (
-          <EventCardSubtitle data-test="event-card-subtitle">
+          <CardSubtitleBold data-test="event-card-subtitle">
             {subtitle}
-          </EventCardSubtitle>
+          </CardSubtitleBold>
         )}
       </div>
 
       {body && <span data-test="event-card-body">{body}</span>}
 
       <SeventyFivePercentSpan data-test="event-card-date">
-        {getDisplayDateText(dates)}
+        {datesArrayToString(dates)}
       </SeventyFivePercentSpan>
 
       {daysTilGig >= 0 && (

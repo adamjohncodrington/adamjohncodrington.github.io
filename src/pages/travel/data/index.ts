@@ -22,8 +22,9 @@ import { TRAVEL_2017 } from "./travel-2017";
 import { TRAVEL_2018 } from "./travel-2018";
 import { TRAVEL_2019 } from "./travel-2019";
 import { TRAVEL_2020 } from "./travel-2020";
+import { TRAVEL_BUCKET_LIST as BUCKET_LIST } from "./travel-bucket-list";
 
-export const DATA_ALL: Array<ITravelData> = [
+const ALL: Array<ITravelCard> = [
   ...TRAVEL_1997,
   ...TRAVEL_1998,
   ...TRAVEL_1999,
@@ -50,7 +51,7 @@ export const DATA_ALL: Array<ITravelData> = [
   ...TRAVEL_2020
 ];
 
-export const DATA_SPLIT_BY_YEAR: Array<Array<ITravelData>> = [
+const SPLIT_BY_YEAR: Array<Array<ITravelCard>> = [
   TRAVEL_1997,
   TRAVEL_1998,
   TRAVEL_1999,
@@ -77,4 +78,4 @@ export const DATA_SPLIT_BY_YEAR: Array<Array<ITravelData>> = [
   TRAVEL_2020
 ];
 
-export { TRAVEL_BUCKET_LIST as DATA_BUCKET_LIST } from "./travel-bucket-list";
+export const DATA = { ALL, SPLIT_BY_YEAR, BUCKET_LIST };

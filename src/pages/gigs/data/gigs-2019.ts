@@ -1,6 +1,6 @@
 import { FRIENDS, FESTIVALS, MUSICIANS, MUSIC_VENUES } from "@constants";
 
-export const GIGS_2019: Array<IGigData> = [
+export const GIGS_2019: Array<IGigCard> = [
   {
     headline: MUSICIANS[1975],
     venue: MUSIC_VENUES.THE_O2,
@@ -100,7 +100,7 @@ export const GIGS_2019: Array<IGigData> = [
       MUSICIANS.BANANARAMA,
       MUSICIANS.TULISA,
       MUSICIANS.CHERYL,
-      MUSICIANS.ARIANA_GRANDA
+      MUSICIANS.ARIANA_GRANDE
     ],
     venue: MUSIC_VENUES.MAYFIELD_DEPOT,
     dates: [new Date("2019-08-25")],

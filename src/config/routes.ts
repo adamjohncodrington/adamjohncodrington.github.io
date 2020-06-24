@@ -1,5 +1,7 @@
-import { ICONS } from "resources";
-import { PAGE_GIGS, PAGE_RECIPES, PAGE_THEATRE, PAGE_TRAVEL } from "pages";
+import { SVG_ICONS } from "resources";
+import { PAGES } from "pages";
+
+const { GIGS, RECIPES, THEATRE, TRAVEL, VINYL } = PAGES;
 
 export const HOMEPAGE_ROUTE: IHomepageRoute = {
   title: "Home",
@@ -9,26 +11,32 @@ export const HOMEPAGE_ROUTE: IHomepageRoute = {
 export const PAGE_ROUTES: Array<IRoute> = [
   {
     dest: "/gigs",
-    icon: ICONS.MICROPHONE,
-    title: "gigs",
-    page: PAGE_GIGS
+    icon: SVG_ICONS.MICROPHONE,
+    title: "Gigs",
+    page: GIGS
   },
   {
     dest: "/recipes",
-    icon: ICONS.VEG_BOWL,
-    title: "recipes",
-    page: PAGE_RECIPES
+    icon: SVG_ICONS.VEG_BOWL,
+    title: "Recipes",
+    page: RECIPES
   },
   {
     dest: "/theatre",
-    icon: ICONS.MASKS,
-    title: "theatre",
-    page: PAGE_THEATRE
+    icon: SVG_ICONS.MASKS,
+    title: "Theatre",
+    page: THEATRE
   },
   {
     dest: "/travel",
-    icon: ICONS.TRAVEL,
-    title: "travel",
-    page: PAGE_TRAVEL
+    icon: SVG_ICONS.TRAVEL,
+    title: "Travel",
+    page: TRAVEL
+  },
+  {
+    dest: "/vinyl",
+    icon: SVG_ICONS.VINYL,
+    title: "Vinyl",
+    page: VINYL
   }
 ];

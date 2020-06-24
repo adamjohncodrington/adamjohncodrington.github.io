@@ -1,37 +1,23 @@
-import {
-  FRIENDS as friends,
-  LOCATIONS,
-  PAGE_SECTION_TEMPLATES,
-  EVENT_CARD_TYPES
-} from "@constants";
+import { FRIENDS as friends, LOCATIONS } from "@constants";
 import { isInFuture } from "utils";
 
-import {
-  mapToCountedList,
-  generatePropertyArrayFromObject,
-  mapToEventCard
-} from "../factory";
-import { DATA_ALL, DATA_BUCKET_LIST } from "./data";
+import { mapToCountedList, generatePropertyArrayFromObject } from "../factory";
+import { DATA } from "./data";
 
-const FAVOURITES: Array<ITravelData> = DATA_ALL.filter(item => item.favourite);
-const UPCOMING: Array<ITravelData> = DATA_ALL.filter(item =>
-  isInFuture(item.dates)
-);
+const { ALL, BUCKET_LIST } = DATA;
 
+const FAVOURITES: Array<ITravelCard> = ALL.filter(item => item.favourite);
+const UP_NEXT: Array<ITravelCard> = ALL.filter(item => isInFuture(item.dates));
+
+export const futureCount: number = UP_NEXT.length;
 export const pastCount: number =
-  DATA_ALL.filter(item => !item.notAbroad).length - UPCOMING.length;
-export const futureCount: number = UPCOMING.length;
+  ALL.filter(item => !item.notAbroad).length - futureCount;
 
 const countries: Array<any> = Object.values(LOCATIONS);
 
 const cities: Array<ICity> = generatePropertyArrayFromObject({
   object: LOCATIONS,
   childLevelProperty: "cities"
-});
-
-const towns: Array<ITown> = generatePropertyArrayFromObject({
-  object: LOCATIONS,
-  childLevelProperty: "towns"
 });
 
 const islands: Array<IIsland> = generatePropertyArrayFromObject({
@@ -52,67 +38,51 @@ const highlights: Array<IAttraction> = attractions.filter(
   item => item.highlight
 );
 
-const mapToCountedListWrapper = (params: any): Array<ICountedListItem> =>
+const mapToCountedListWrapper = (params: any): Array<ICountedItem> =>
   mapToCountedList({
     ...params,
-    allData: DATA_ALL,
+    allData: ALL,
     favouritedData: FAVOURITES
   });
 
-const BUCKET_LIST: Array<ICountedListItem> = mapToCountedListWrapper({
+const bucketList: Array<ICountedItem> = mapToCountedListWrapper({
   bucketListMode: true,
-  items: DATA_BUCKET_LIST
+  items: BUCKET_LIST
 });
 
-const CITIES: Array<ICountedListItem> = mapToCountedListWrapper({
-  items: cities,
-  template: PAGE_SECTION_TEMPLATES.CITY
+const CITIES: Array<ICountedItem> = mapToCountedListWrapper({
+  items: cities
 });
 
-const TOWNS: Array<ICountedListItem> = mapToCountedListWrapper({
-  items: towns,
-  template: PAGE_SECTION_TEMPLATES.TOWN
+const THEME_PARKS: Array<ICountedItem> = mapToCountedListWrapper({
+  items: themeParks
 });
 
-const THEME_PARKS: Array<ICountedListItem> = mapToCountedListWrapper({
-  items: themeParks,
-  template: PAGE_SECTION_TEMPLATES.ATTRACTION
+const HIGHLIGHTS: Array<ICountedItem> = mapToCountedListWrapper({
+  items: highlights
 });
 
-const HIGHLIGHTS: Array<ICountedListItem> = mapToCountedListWrapper({
-  items: highlights,
-  template: PAGE_SECTION_TEMPLATES.ATTRACTION
+const ISLANDS: Array<ICountedItem> = mapToCountedListWrapper({
+  items: islands
 });
 
-const ISLANDS: Array<ICountedListItem> = mapToCountedListWrapper({
-  items: islands,
-  template: PAGE_SECTION_TEMPLATES.ISLAND
+const COUNTRIES: Array<ICountedItem> = mapToCountedListWrapper({
+  items: countries
 });
 
-const COUNTRIES: Array<ICountedListItem> = mapToCountedListWrapper({
-  items: countries,
-  template: PAGE_SECTION_TEMPLATES.COUNTRY
-});
-
-const FRIENDS: Array<ICountedListItem> = mapToCountedListWrapper({
+const FRIENDS: Array<ICountedItem> = mapToCountedListWrapper({
   items: friends,
-  template: PAGE_SECTION_TEMPLATES.FRIEND,
+  sortByPastAndFutureCount: true,
   filter: "travel"
 });
 
-const UP_NEXT: Array<IEventCard> = mapToEventCard({
-  data: UPCOMING,
-  eventCardType: EVENT_CARD_TYPES.TRIP
-});
-
 export const FACTORY = {
-  BUCKET_LIST,
+  BUCKET_LIST: bucketList,
   HIGHLIGHTS,
   ISLANDS,
   COUNTRIES,
   FRIENDS,
   UP_NEXT,
   THEME_PARKS,
-  TOWNS,
   CITIES
 };

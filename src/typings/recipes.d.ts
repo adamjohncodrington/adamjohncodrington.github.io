@@ -59,5 +59,5 @@ interface IRecipeCard {
 
 interface IRecipeGroup {
   category: string;
-  data: Array<IRecipeCard>;
+  recipes: Array<IRecipeCard>;
 }

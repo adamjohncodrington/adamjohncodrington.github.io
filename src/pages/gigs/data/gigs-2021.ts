@@ -6,7 +6,7 @@ import {
   MUSIC_VENUES
 } from "@constants";
 
-export const GIGS_2021: Array<IGigData> = [
+export const GIGS_2021: Array<IGigCard> = [
   {
     festival: FESTIVALS.MIGHTY_HOOPLA,
     venue: MUSIC_VENUES.BROCKWELL_PARK,

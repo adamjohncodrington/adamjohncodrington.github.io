@@ -1,115 +1,66 @@
 import React from "react";
 
-import { PAGE_SECTION_DATA_TYPES, PAGE_SECTION_TEMPLATES } from "@constants";
-import { Li } from "primitives";
-
-import { CountedListItem } from "../CountedListItem";
+import { CountedList } from "../CountedList";
 import { Disclosure } from "../Disclosure";
-import { EventCard } from "../EventCard";
-import { PageSectionHeader } from "./PageSectionHeader";
-import { RecipeCard } from "../RecipeCard";
+import { GigCardList } from "../GigCardList";
+import { PageSectionHeader } from "../PageSectionHeader";
+import { RecipeCardList } from "../RecipeCardList";
+import { TheatreCardList } from "../TheatreCardList";
+import { TravelCardList } from "../TravelCardList";
+import { VinylCardList } from "../VinylCardList";
 
-import {
-  PageSectionContainer,
-  RecipeGroupList,
-  SectionPanelList
-} from "./styles";
+import { PageSectionContainer } from "./styles";
 
 export const PageSection: React.FC<IPageSection> = ({
-  template: { id, title, type },
+  title,
   icon,
-  data,
-  showCount = false,
-  expandedAutomatically = false
+  data: {
+    countedItems,
+    gigCards,
+    recipeCards,
+    theatreCards,
+    travelCards,
+    vinylCards
+  },
+  count,
+  starredCount,
+  isStatic = false,
+  initiallyExpanded = false
 }) => {
-  const isCountedList: boolean = type === PAGE_SECTION_DATA_TYPES.COUNTED_LIST;
-  const isEventCards: boolean = type === PAGE_SECTION_DATA_TYPES.EVENT_CARDS;
-  const isRecipes: boolean = type === PAGE_SECTION_DATA_TYPES.RECIPES;
-  const isFriendsSection: boolean = id === PAGE_SECTION_TEMPLATES.FRIEND.id;
-
   const noData: boolean =
-    data.length === 0 ||
-    (isRecipes && data.filter((item: IRecipeCard) => !item.hide).length) === 0;
+    !!(countedItems && countedItems.length === 0) ||
+    !!(gigCards && gigCards.length === 0) ||
+    !!(recipeCards && recipeCards.filter(item => !item.hide).length === 0) ||
+    !!(theatreCards && theatreCards.length === 0) ||
+    !!(travelCards && travelCards.length === 0) ||
+    !!(vinylCards && vinylCards.length === 0);
 
   if (noData) return null;
 
   return (
-    <Li data-test={`section-${id}`}>
-      <PageSectionContainer>
-        <Disclosure
-          onlyHeaderClickable={isRecipes}
-          expandedAutomatically={expandedAutomatically}
-          headerComponent={
-            <PageSectionHeader
-              text={title}
-              showCounts={showCount}
-              data={data}
-              icon={icon}
-              dataTest="disclosure-header"
-            />
-          }
-        >
-          <section data-test="page-section-body">
-            {isRecipes ? (
-              <Recipes recipes={data} />
-            ) : isCountedList ? (
-              <CountedList
-                countedListItems={data}
-                leaderboard={isFriendsSection}
-              />
-            ) : (
-              isEventCards && <EventCards eventCards={data} />
-            )}
-          </section>
-        </Disclosure>
-      </PageSectionContainer>
-    </Li>
+    <PageSectionContainer>
+      <Disclosure
+        isStatic={isStatic}
+        initiallyExpanded={initiallyExpanded}
+        headerComponent={
+          <PageSectionHeader
+            text={title}
+            count={count}
+            starredCount={starredCount}
+            icon={icon}
+            dataTest="disclosure-header"
+          />
+        }
+      >
+        <section data-test="page-section-body">
+          {countedItems && <CountedList countedItems={countedItems} />}
+          {gigCards && <GigCardList gigCards={gigCards} />}
+          {recipeCards && <RecipeCardList recipeCards={recipeCards} />}
+          {theatreCards && <TheatreCardList theatreCards={theatreCards} />}
+          {travelCards && <TravelCardList travelCards={travelCards} />}
+          {vinylCards && <VinylCardList vinylCards={vinylCards} />}
+        </section>
+      </Disclosure>
+    </PageSectionContainer>
   );
 };
-
-interface IRecipes {
-  recipes: Array<IRecipeCard>;
-}
-
-const Recipes: React.FC<IRecipes> = ({ recipes }) => (
-  <RecipeGroupList>
-    {recipes.map(
-      (item: IRecipeCard, index: number) =>
-        !item.hide && (
-          <Li key={index}>
-            <RecipeCard key={index} {...item} />
-          </Li>
-        )
-    )}
-  </RecipeGroupList>
-);
-
-interface ICountedList {
-  countedListItems: Array<ICountedListItem>;
-  leaderboard?: boolean;
-}
-
-const CountedList: React.FC<ICountedList> = ({
-  countedListItems,
-  leaderboard
-}) => (
-  <SectionPanelList data-test="page-section-panel" isEventCards={false}>
-    {countedListItems.map((listItem: ICountedListItem, index: number) => (
-      <CountedListItem key={index} {...listItem} leaderboard={leaderboard} />
-    ))}
-  </SectionPanelList>
-);
-
-interface IEventCards {
-  eventCards: Array<IEventCard>;
-}
-
-const EventCards: React.FC<IEventCards> = ({ eventCards }) => (
-  <SectionPanelList data-test="page-section-panel" isEventCards>
-    {eventCards.map((eventCard: IEventCard, index: number) => (
-      <Li key={index}>
-        <EventCard key={index} {...eventCard} />
-      </Li>
-    ))}
-  </SectionPanelList>
-);

@@ -1,7 +1,9 @@
 type ITicketType = string;
 type ITicketTypes = { [ticketType: string]: ITicketType };
 
-interface IMusician extends INameFavourite {}
+interface IMusician extends INameFavourite {
+  passedAway?: boolean;
+}
 type IMusicians = { [musician: string]: IMusician };
 
 interface IMusicVenue extends INameFavourite {
@@ -14,7 +16,7 @@ interface IFestival extends INameFavourite {
 }
 type IFestivals = { [festival: string]: IFestival };
 
-interface IGigData {
+interface IGigCard {
   headline?: IMusician;
   festival?: IMusician;
   lineup?: Array<IMusician>;

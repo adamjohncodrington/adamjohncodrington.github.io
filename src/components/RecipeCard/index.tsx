@@ -6,8 +6,7 @@ import { calculateRecipeCost, getIngredientsHeader } from "utils";
 
 import { CentredOnPhone } from "../CentredOnPhone";
 import { Disclosure } from "../Disclosure";
-
-import { RecipeCardList } from "./RecipeCardList";
+import { List } from "../List";
 
 import {
   mapMethodToListItems,
@@ -45,7 +44,7 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
 
   return (
     <Disclosure
-      expandedAutomatically={newRecipe}
+      initiallyExpanded={newRecipe}
       headerComponent={
         <FlexRow>
           <RecipeCardTitle favourite={favourite}>{title}</RecipeCardTitle>
@@ -57,22 +56,22 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
       }
     >
       <RecipeBody>
-        <RecipeCardList
+        <List
           title={ingredientsHeader}
-          items={mapRecipeIngredientsToListItems(ingredients)}
+          listItems={mapRecipeIngredientsToListItems(ingredients)}
         />
 
         {serveWith && (
-          <RecipeCardList
+          <List
             title="serve with"
-            items={mapServeWithToListItems(serveWith)}
+            listItems={mapServeWithToListItems(serveWith)}
           />
         )}
 
         {method && (
-          <RecipeCardList
+          <List
             title="method"
-            items={mapMethodToListItems(method)}
+            listItems={mapMethodToListItems(method)}
             showBullets
           />
         )}

@@ -18,11 +18,11 @@ const recipesComingSoon: Array<string> = [
   "dahl"
 ];
 
-export const RECIPES_COMING_SOON: Array<ICountedListItem> = recipesComingSoon
+export const RECIPES_COMING_SOON: Array<ICountedItem> = recipesComingSoon
   .sort((a, b) => (a > b ? 1 : -1))
   .map(item => ({
     text: item,
-    ignoreCountInfo: true,
+    countInfoIrrelevant: true,
     futureCount: 0,
     pastCount: 0
   }));

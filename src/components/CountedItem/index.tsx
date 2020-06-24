@@ -3,23 +3,18 @@ import styled, { css } from "styled-components";
 
 import { FlexLiGrow } from "primitives";
 
-interface ICountedListItemPastCount extends IThemeProp {
-  leaderboard?: boolean;
-}
 const CountedListItemPastCount = styled.span`
   ${({
-    leaderboard,
     theme: {
       countedList: {
-        count: { width },
-        leaderboardAdditonalHorizontalSpace
+        count: { width }
       }
     }
-  }: ICountedListItemPastCount) => css`
+  }: IThemeProp) => css`
     font-weight: bold;
     text-align: right;
     width: ${width};
-    margin-left: ${leaderboard ? leaderboardAdditonalHorizontalSpace : 0};
+    margin-left: 5px;
   `}
 `;
 
@@ -55,40 +50,34 @@ const CountedListItemText = styled.span`
     props.faded && `opacity: ${props.theme.fadedOpacity};`}
 `;
 
-export const CountedListItem: React.FC<ICountedListItem> = ({
+export const CountedItem: React.FC<ICountedItem> = ({
   text,
   favourite,
   star,
   futureCount,
   pastCount,
-  ignoreCountInfo,
-  leaderboard = false
+  countInfoIrrelevant
 }) => {
-  const showFutureCount: boolean =
-    futureCount > 0 && (pastCount > 0 || leaderboard);
+  const showFutureCount: boolean = futureCount > 0 && pastCount > 0;
   const showPastCount: boolean =
-    (leaderboard && pastCount > 0) ||
-    pastCount > 1 ||
-    (futureCount > 0 && pastCount > 0);
+    pastCount > 1 || (futureCount > 0 && pastCount > 0);
 
   return (
     <FlexLiGrow>
       <CountedListItemText
-        faded={!ignoreCountInfo && pastCount === 0}
+        faded={!countInfoIrrelevant && pastCount === 0}
         favourite={favourite}
         star={star}
       >
         {text}
       </CountedListItemText>
 
-      {!ignoreCountInfo && showFutureCount && (
+      {!countInfoIrrelevant && showFutureCount && (
         <CountedListItemFutureCount>{futureCount}</CountedListItemFutureCount>
       )}
 
-      {!ignoreCountInfo && showPastCount && (
-        <CountedListItemPastCount leaderboard={leaderboard}>
-          {pastCount}
-        </CountedListItemPastCount>
+      {!countInfoIrrelevant && showPastCount && (
+        <CountedListItemPastCount>{pastCount}</CountedListItemPastCount>
       )}
     </FlexLiGrow>
   );

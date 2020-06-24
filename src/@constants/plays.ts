@@ -27,7 +27,7 @@ export const PLAYS: IPlays = {
   MATILDA: { name: "Matilda" },
   MIDSUMMER_NIGHTS_DREAM: { name: "A Midsummer Night's Dream" },
   // S
-  SON: { name: "The Son" },
+  SON: { name: "Son, The" },
   // T
   THAT_GIRL: { name: "That Girl" },
   // U

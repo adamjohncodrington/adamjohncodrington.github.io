@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 import { Ul, Li } from "primitives";
 
 interface StyledLiProps extends IThemeProp {
-  addPaddingTop: boolean | undefined;
+  addPaddingTop: boolean;
 }
 
 const StyledLi = styled(Li)`
@@ -18,22 +18,25 @@ const StyledLi = styled(Li)`
     `}
 `;
 
-interface RecipeCardListProps {
+interface ListProps {
   title: string;
-  items: Array<IListItemWithPaddingTopFlag>;
+  listItems: Array<IListItemWithPaddingTopFlag>;
   showBullets?: boolean;
 }
 
-export const RecipeCardList: React.FC<RecipeCardListProps> = ({
+export const List: React.FC<ListProps> = ({
   title,
-  items,
+  listItems,
   showBullets = false
 }) => (
   <Ul showBullets={showBullets}>
     <strong>{title}</strong>
 
-    {items.map(
-      ({ text, addPaddingTop }: IListItemWithPaddingTopFlag, index: number) => (
+    {listItems.map(
+      (
+        { text, addPaddingTop = false }: IListItemWithPaddingTopFlag,
+        index: number
+      ) => (
         <StyledLi key={index} addPaddingTop={addPaddingTop}>
           {text}
         </StyledLi>

@@ -7,7 +7,7 @@ import { TOFU_SCRAMBLE } from "./tofu-scramble";
 
 export const SIDES: IRecipeGroup = {
   category: "sides",
-  data: [
+  recipes: [
     BAKED_BEANS,
     BANG_BANG_CAULIFLOWER,
     CRISPY_KALE,

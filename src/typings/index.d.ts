@@ -12,54 +12,52 @@ interface IFriend extends INameFavourite {
   theatre?: boolean;
 }
 
-type IEventCardType = "gig" | "trip" | "theatre";
-
-type IEventCardRawData = IGigData | ITravelData | ITheatreData;
-
-type IPageSecionType = "recipes" | "event-cards" | "counted-list";
-
-interface IPageSectionTemplate {
-  title: string;
-  id: string;
-  type: IPageSectionType;
-}
-
 interface PageSectionData {
   recipes?: Array<IRecipeCard>;
   countedList?: Array<ICountedListEntry>;
   eventCards?: Array<IEventCard>;
 }
 
-interface ICountedListItem {
+interface ICountedItem {
   text: string;
+  doNotIncludeInList?: boolean;
   favourite?: boolean;
   star?: boolean;
   futureCount: number;
   pastCount: number;
-  ignoreCountInfo?: boolean;
-  leaderboard?: boolean;
+  countInfoIrrelevant?: boolean;
 }
 
 interface IEventCard {
   title: string;
   subtitle?: string;
-  favourite: boolean;
-  body: string;
+  favourite?: boolean;
+  body?: string;
   dates: Array<Date>;
   company: Array<IFriend>;
   disclaimer?: string;
 }
 
-interface IPageSection {
-  template: IPageSectionTemplate;
-  icon?: IImageSrc;
-  data: Array<any>;
-  showCount?: boolean;
-  listOfRecipes?: boolean;
-  expandedAutomatically?: boolean;
+interface IPageSectionDataTypes {
+  countedItems?: Array<ICountedItem>;
+  gigCards?: Array<IGigCard>;
+  recipeCards?: Array<IRecipeCard>;
+  theatreCards?: Array<ITheatreCard>;
+  travelCards?: Array<ITravelCard>;
+  vinylCards?: Array<IVinylCard>;
 }
 
-interface IPageData {
+interface IPageSection {
+  title: string;
+  icon?: IImageSrc;
+  data: IPageSectionDataTypes;
+  count?: number;
+  starredCount?: number;
+  initiallyExpanded?: boolean;
+  isStatic?: boolean;
+}
+
+interface IPage {
   pastCount?: number;
   futureCount?: number;
   sections: Array<IPageSection>;
@@ -72,11 +70,12 @@ interface IHomepageRoute {
 
 interface IRoute extends IHomepageRoute {
   icon: IImageSrc;
-  page: IPageData;
+  page: IPage;
 }
 
 type IconsObject = { [iconName: string]: IImageSrc };
-type PhotosObject = { [photoName: string]: IImageSrc };
+type RecipePhotosObject = { [recipe: string]: IImageSrc };
+type VinylPhotosObject = { [artist: string]: { [album: string]: IImageSrc } };
 
 interface IListItemWithPaddingTopFlag {
   text: string;

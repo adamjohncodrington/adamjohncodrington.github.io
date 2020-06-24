@@ -1,6 +1,6 @@
 import { FRIENDS, MUSICIANS, MUSIC_VENUES } from "@constants";
 
-export const GIGS_2013: Array<IGigData> = [
+export const GIGS_2013: Array<IGigCard> = [
   {
     headline: MUSICIANS.BASTILLE,
     venue: MUSIC_VENUES.ROCK_CITY,

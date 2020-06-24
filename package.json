@@ -38,7 +38,7 @@
     "typecheck": "rimraf dist-ts && yarn tsc && rimraf dist-ts",
     "lint": "eslint ./src --ext .ts,.tsx,.js,.json",
     "lint:watch": "esw --watch ./src --ext .ts,.tsx,.js,.json",
-    "checks": "yarn lint && yarn typecheck"
+    "checks": "yarn lint && yarn typecheck && yarn test"
   },
   "eslintConfig": {
     "extends": "react-app"

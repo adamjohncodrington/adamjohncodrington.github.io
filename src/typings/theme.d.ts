@@ -37,7 +37,6 @@ interface ITheme_CountedList {
   border: { bottom: IBorder };
   count: { width: PxValue };
   padding: { vertical: PaddingValue };
-  leaderboardAdditonalHorizontalSpace: PxValue;
 }
 
 interface ITheme_EventCardList {

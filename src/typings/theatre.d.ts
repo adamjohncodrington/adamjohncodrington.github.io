@@ -7,7 +7,7 @@ type IPlays = { [play: string]: IPlay };
 interface ITheatreVenue extends INameFavourite {}
 type ITheatreVenues = { [theatreVenue: string]: ITheatreVenue };
 
-interface ITheatreData {
+interface ITheatreCard {
   play: IPlay;
   theatre: ITheatreVenue;
   company: Array<IFriend>;

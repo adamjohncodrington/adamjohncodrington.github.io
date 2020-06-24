@@ -33,7 +33,7 @@ interface PageTitleProps {
   icon: IImageSrc;
 }
 
-export const PageTitleComponent: React.FC<PageTitleProps> = ({
+export const PageTitle: React.FC<PageTitleProps> = ({
   titleText,
   pastCount,
   futureCount,

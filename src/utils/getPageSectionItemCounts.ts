@@ -1,4 +1,4 @@
-import { isInFuture } from "./isInFuture";
+import { isInFuture } from "./basic/isInFuture";
 
 interface IGetPageSectionItemCounts {
   itemToCount: any;

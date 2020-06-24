@@ -1,5 +1,5 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
-import { PHOTOS } from "resources";
+import { PHOTOS_RECIPES } from "resources";
 
 import { recipeMethodEntries } from "utils";
 
@@ -102,7 +102,7 @@ const method: IRecipeMethod = [
 const title: IRecipeTitle = "banana cake";
 const makes: IRecipeMakes = { quantity: 10, measurement: MEASUREMENTS.SLICE };
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IImageSrc = PHOTOS.BANANA_CAKE;
+const image: IImageSrc = PHOTOS_RECIPES.BANANA_CAKE;
 
 export const BANANA_CAKE: IRecipeCard = {
   title,

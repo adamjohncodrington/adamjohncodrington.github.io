@@ -12,13 +12,14 @@ export const MUSICIANS: IMusicians = {
   ALL_TIME_LOW: { name: "All Time Low" },
   ALMA: { name: "Alma" },
   AMOS_LEE: { name: "Amos Lee" },
+  AMY_WINEHOUSE: { name: "Amy Winehouse", passedAway: true },
   ANNA_OF_THE_NORTH: { name: "Anna of the North" },
   ADELE: { name: "Adele" },
   ANASTACIA: { name: "Anastacia" },
   ANNE_MARIE: { name: "Anne-Marie" },
   AQUILO: { name: "Aquilo" },
   ARCTIC_MONKEYS: { name: "Arctic Monkeys" },
-  ARIANA_GRANDA: { name: "Ariana Grande" },
+  ARIANA_GRANDE: { name: "Ariana Grande" },
   AUDITION: { name: "Audition, The" },
   // B
   BAAUER: { name: "Baauer" },
@@ -106,9 +107,7 @@ export const MUSICIANS: IMusicians = {
   FREYA_RIDINGS: { name: "Freya Ridings" },
   THE_FRIDAY_NIGHT_BOYS: { name: "Friday Night Boys, The" },
   FRIEND_WITHIN: { name: "Friend Within" },
-  FUN_LOVIN_CRIMINALS: { name: "Fun Lovin' Criminals" },
   // G
-  GABRIELLE: { name: "Gabrielle" },
   GEORGE_EZRA: { name: "George Ezra" },
   GEORGE_FITZGERALD: { name: "George FitzGerald" },
   GEORGIA: { name: "Georgia" },
@@ -280,6 +279,7 @@ export const MUSICIANS: IMusicians = {
   THE_SMYTHS: { name: "Smyths, The" },
   THE_SPILL_CANVAS: { name: "Spill Canvas, The" },
   SKREAM: { name: "Skream" },
+  SUFJAN_STEVENS: { name: "Sufjan Stevens" },
   SUNDAY_GIRL: { name: "Sunday Girl" },
   // T
   TAYLOR_SWIFT: { name: "Taylor Swift" },

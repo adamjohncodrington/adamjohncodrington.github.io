@@ -1,50 +1,50 @@
-interface ITravelData {
-  title: Array<IBaseLocation>;
-  subtitle?: Array<IBaseLocation>;
+interface ITravelCard {
+  title: Array<ILocation>;
+  subtitle?: Array<ILocation>;
   favourite?: boolean;
-  hidden?: Array<IBaseLocation>;
+  hidden?: Array<ILocation>;
   dates: Array<Date>;
   notAbroad?: boolean;
   company: Array<IFriend>;
 }
 
-interface IBaseLocation extends INameFavourite {
+interface ILocation extends INameFavourite {
   island?: boolean;
   insignificant?: boolean;
   englishName?: string;
   foreignName?: string;
 }
 
-type IIsland = IBaseLocation;
+type IIsland = ILocation;
 type IIslandsObject = { [island: string]: IIsland };
 type IIslands = { islands: IIslandsObject };
 
-type ITown = IBaseLocation;
+type ITown = ILocation;
 type ITownsObject = { [town: string]: ITown };
 type ITowns = { towns: ITownsObject };
 
-interface IAttraction extends IBaseLocation {
+interface IAttraction extends ILocation {
   themePark?: boolean;
   highlight?: boolean;
 }
 type IAttractionsObject = { [attraction: string]: IAttraction };
 type IAttractions = { attractions: IAttractionsObject };
 
-interface IRegion extends IBaseLocation {}
+interface IRegion extends ILocation {}
 type IRegionsObject = { [region: string]: IRegion };
 type IRegions = { regions: IRegionsObject };
 
-interface ICity extends IBaseLocation {
+interface ICity extends ILocation {
   capital?: boolean;
 }
 type ICitiesObject = { [city: string]: ICity };
 type ICities = { cities: ICitiesObject };
 
-interface IVillage extends IBaseLocation {}
+interface IVillage extends ILocation {}
 type IVillagesObject = { [village: string]: IVillage };
 type IVillages = { villages: IVillagesObject };
 
-interface IState extends IBaseLocation {}
+interface IState extends ILocation {}
 type IStatesObject = { [state: string]: IState };
 type IStates = { states: IStatesObject };
 
@@ -73,61 +73,58 @@ type IStates = { states: IStatesObject };
 //     ITowns {}
 // interface ICountry_IslandRegions extends IBasicCountry, IIslands, IRegions {}
 
-interface ICountry_Attractions extends IBaseLocation, IAttractions {}
-interface ICountry_AttractionsCities
-  extends IBaseLocation,
-    IAttractions,
-    ICities {}
+interface ICountry_Attractions extends ILocation, IAttractions {}
+interface ICountry_AttractionsCities extends ILocation, IAttractions, ICities {}
 interface ICountry_AttractionsCitiesIslands
-  extends IBaseLocation,
+  extends ILocation,
     IAttractions,
     ICities,
     IIslands {}
 interface ICountry_AttractionsCitiesRegionsTowns
-  extends IBaseLocation,
+  extends ILocation,
     IAttractions,
     ICities,
     IRegions,
     ITowns {}
 interface ICountry_AttractionsCitiesIslands
-  extends IBaseLocation,
+  extends ILocation,
     IAttractions,
     ICities,
     IIslands {}
 interface ICountry_AttractionsCitiesTowns
-  extends IBaseLocation,
+  extends ILocation,
     IAttractions,
     ICities,
     ITowns {}
 interface ICountry_AttractionsCitiesTownsVillages
-  extends IBaseLocation,
+  extends ILocation,
     IAttractions,
     ICities,
     ITowns,
     IVillages {}
 interface ICountry_AttractionsCitiesIslandsTowns
-  extends IBaseLocation,
+  extends ILocation,
     IAttractions,
     ICities,
     IIslands,
     ITowns {}
 interface ICountry_AttractionsCitiesIslandsTownsRegions
-  extends IBaseLocation,
+  extends ILocation,
     IAttractions,
     ICities,
     IIslands,
     ITowns,
     IRegions {}
 interface ICountry_AttractionsCitiesIslandsRegionsStates
-  extends IBaseLocation,
+  extends ILocation,
     IAttractions,
     ICities,
     IIslands,
     IRegions,
     IStates {}
-interface ICountry_CitiesIslands extends IBaseLocation, ICities, IIslands {}
-interface ICountry_CitiesTowns extends IBaseLocation, ICities, ITowns {}
-interface ICountry_IslandsRegions extends IBaseLocation, IIslands, IRegions {}
+interface ICountry_CitiesIslands extends ILocation, ICities, IIslands {}
+interface ICountry_CitiesTowns extends ILocation, ICities, ITowns {}
+interface ICountry_IslandsRegions extends ILocation, IIslands, IRegions {}
 
 interface IAllCountries {
   BARBADOS: ICountry_Attractions;

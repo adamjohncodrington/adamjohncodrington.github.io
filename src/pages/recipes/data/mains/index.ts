@@ -8,7 +8,7 @@ import { SWEET_AND_SOUR } from "./sweet-and-sour";
 
 export const MAINS: IRecipeGroup = {
   category: "mains",
-  data: [
+  recipes: [
     BOLOGNESE,
     CARBONARA,
     LASAGNE,

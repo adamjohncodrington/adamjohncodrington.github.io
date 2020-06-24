@@ -2,7 +2,8 @@ import { MAINS } from "./mains";
 import { SAUCES } from "./sauces";
 import { SIDES } from "./sides";
 import { SWEETS } from "./sweets";
+import { RECIPES_COMING_SOON as COMING_SOON } from "./recipes-coming-soon";
 
-export const CATEGORISED: Array<IRecipeGroup> = [MAINS, SIDES, SAUCES, SWEETS];
+const CATEGORISED: Array<IRecipeGroup> = [MAINS, SIDES, SAUCES, SWEETS];
 
-export { RECIPES_COMING_SOON as COMING_SOON } from "./recipes-coming-soon";
+export const DATA = { CATEGORISED, COMING_SOON };

@@ -1,48 +1,50 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "styled-components";
 
-import { H2, FlexRowGrow } from "primitives";
+import { FlexRowGrow } from "primitives";
 
 import {
   PageSectionHeaderContainer,
   StyledIcon,
-  PageSectionPrimaryCount,
-  PageSectionSecondaryCount
+  PageSectionTitle,
+  PageSectionCount,
+  PageSectionStarredCount
 } from "./styles";
 
 type PageSectionHeaderProps = {
   text: string;
-  showCounts: boolean;
-  data: Array<any>;
   icon?: IImageSrc;
+  count?: number;
+  starredCount?: number;
   dataTest: string;
 };
 
 export const PageSectionHeader: React.FC<PageSectionHeaderProps> = ({
   text,
-  showCounts,
-  data,
   icon,
+  count,
+  starredCount,
   dataTest
 }) => {
-  const starredDataCount = data && data.filter(item => item.star).length;
   const theme: ITheme = useContext(ThemeContext);
 
   return (
     <PageSectionHeaderContainer data-test={dataTest}>
-      <FlexRowGrow data-test="section-header-text-container">
-        <H2 data-test="section-header-text">{text}</H2>
+      <FlexRowGrow data-test="section-header-title-and-counts">
+        <PageSectionTitle data-test="section-header-title">
+          {text}
+        </PageSectionTitle>
 
-        {showCounts && data && data.length > 1 && (
-          <PageSectionPrimaryCount data-test="section-count">
-            {data.length}
-          </PageSectionPrimaryCount>
+        {count && count > 1 && (
+          <PageSectionCount data-test="section-header-count">
+            {count}
+          </PageSectionCount>
         )}
 
-        {showCounts && starredDataCount > 0 && (
-          <PageSectionSecondaryCount data-test="section-count">
-            {starredDataCount}
-          </PageSectionSecondaryCount>
+        {starredCount && starredCount > 0 && (
+          <PageSectionStarredCount data-test="section-header-starred-count">
+            {starredCount}
+          </PageSectionStarredCount>
         )}
       </FlexRowGrow>
 
