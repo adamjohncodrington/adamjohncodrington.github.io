@@ -82,8 +82,9 @@ export const VINYL_WISH_LIST: Array<IVinylCard> = [
   },
   {
     artist: MUSICIANS.LADY_GAGA,
-    title: "The Fame Monster",
-    year: 2009
+    title: "Born This Way",
+    artwork: PHOTOS_VINYL.LADY_GAGA.BORN_THIS_WAY,
+    year: 2011
   },
   {
     artist: MUSICIANS.KATY_PERRY,
@@ -94,6 +95,7 @@ export const VINYL_WISH_LIST: Array<IVinylCard> = [
   {
     artist: MUSICIANS.PARAMORE,
     title: "Riot!",
+    artwork: PHOTOS_VINYL.PARAMORE.RIOT,
     year: 2007
   },
   {

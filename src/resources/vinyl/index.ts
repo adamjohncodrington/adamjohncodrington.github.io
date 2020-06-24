@@ -15,6 +15,12 @@ export const PHOTOS_VINYL: VinylPhotosObject = {
   AMY_WINEHOUSE: {
     BACK_TO_BLACK: requireVinyl("amy-winehouse", "back-to-black")
   },
+  ARCTIC_MONKEYS: {
+    FAVOURITE_WORST_NIGHTMARE: requireVinyl(
+      "arctic-monkeys",
+      "favourite-worst-nightmare"
+    )
+  },
   ARIANA_GRANDE: {
     THANK_U_NEXT: requireVinyl("ariana-grande", "thank-u-next")
   },
@@ -53,6 +59,7 @@ export const PHOTOS_VINYL: VinylPhotosObject = {
     ONE_OF_THE_BOYS: requireVinyl("katy-perry", "one-of-the-boys")
   },
   // L
+  LADY_GAGA: { BORN_THIS_WAY: requireVinyl("lady-gaga", "born-this-way") },
   LANA_DEL_REY: { BORN_TO_DIE: requireVinyl("lana-del-rey", "born-to-die") },
   LANE_8: { RISE: requireVinyl("lane-8", "rise") },
   LANY: { MALIBU_NIGHTS: requireVinyl("lany", "malibu-nights") },
@@ -69,6 +76,7 @@ export const PHOTOS_VINYL: VinylPhotosObject = {
       "a-fever-you-cant-sweat-out"
     )
   },
+  PARAMORE: { RIOT: requireVinyl("paramore", "riot") },
   PVRIS: {
     ALL_WE_KNOW_OF_HEAVEN_ALL_WE_NEED_OF_HELL: requireVinyl(
       "pvris",

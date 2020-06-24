@@ -60,6 +60,7 @@ export const VINYL_COLLECTION: Array<IVinylCard> = [
   {
     artist: MUSICIANS.ARCTIC_MONKEYS,
     title: "Favourite Worst Nightmare",
+    artwork: PHOTOS_VINYL.ARCTIC_MONKEYS.FAVOURITE_WORST_NIGHTMARE,
     year: 2018
   },
   {
