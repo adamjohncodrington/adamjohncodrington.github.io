@@ -18,19 +18,6 @@ export const RecipeCardTitle = styled(H3)`
     `}
 `;
 
-export const RecipeCardImage = styled.img(
-  ({
-    theme: {
-      recipe: {
-        image: { size }
-      }
-    }
-  }: IThemeProp) => css`
-    height: ${size};
-    width: ${size};
-  `
-);
-
 export const RecipeBody = styled.div`
   padding-top: 5px;
 

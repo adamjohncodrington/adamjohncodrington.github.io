@@ -5,22 +5,22 @@ interface IStyledImage {
   size: string;
 }
 const StyledImage = styled.img`
-  height: ${(props: IStyledImage) => props.size};
-  width: ${(props: IStyledImage) => props.size};
+  height: ${({ size }: IStyledImage) => size};
+  width: ${({ size }: IStyledImage) => size};
   margin: 0;
 `;
 
-interface ISvgIcon {
+interface ISquareImage {
   className?: string;
-  icon: string;
+  imgSrc: string;
   size: string;
 }
 
-export const SvgIcon = ({ className, icon, size }: ISvgIcon) => (
+export const SquareImage = ({ className, imgSrc, size }: ISquareImage) => (
   <StyledImage
     className={className}
     data-test="svg-icon"
-    src={icon}
+    src={imgSrc}
     size={size}
   />
 );

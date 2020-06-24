@@ -13,7 +13,7 @@ const FlexContainer = styled.div`
 
 const GridContainer = styled.div`
   display: grid;
-  grid-template-areas: "icon icon" "icon icon";
+  grid-template-areas: "col1 col2";
 `;
 
 const StyledSvg = styled.img(({ theme }: IThemeProp) => {

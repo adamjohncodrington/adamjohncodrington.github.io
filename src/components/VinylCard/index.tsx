@@ -1,15 +1,13 @@
 import React from "react";
 import styled from "styled-components";
 
-import { FlexRow } from "primitives";
+import { FlexRow, SquareImage } from "primitives";
 import { moveTheSuffixToPrefix } from "utils";
 
 import { CardTitleBold, CardSubtitleBold } from "../styles";
 
 //TODO: move to theme
-const VinylArtwork = styled.img`
-  width: 100px;
-  height: 100px;
+const VinylArtwork = styled(SquareImage)`
   margin-right: 15px;
 `;
 
@@ -31,7 +29,7 @@ export const VinylCard: React.FC<IVinylCard> = ({
 
   return (
     <FlexRow data-test="vinyl-card">
-      <VinylArtwork src={artwork} />
+      <VinylArtwork size="100px" imgSrc={artwork} />
 
       <TextContainer>
         <CardTitleBold>{title}</CardTitleBold>

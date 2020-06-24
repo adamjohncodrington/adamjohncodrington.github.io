@@ -6,7 +6,7 @@
 - rationalise theme
 - rationalise `data-test` attributes
 - review semantics of page structure, landmarks, accessibility, etc.
-- recipe method array should be `ol` not `ul`
+- recipe method array should be `ol` not `ul`?
 - move the `cost` and `displayCost` to the definition of recipes
 
 ## Features
@@ -17,6 +17,7 @@
 ## Styling
 
 - make page count font size larger again (review `FONT_SIZES`)
+- reduce whitespace between bullet points and list text?
 
 ## TypeScript
 

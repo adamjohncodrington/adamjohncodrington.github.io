@@ -38,7 +38,7 @@ export const List: React.FC<ListProps> = ({
         index: number
       ) => (
         <StyledLi key={index} addPaddingTop={addPaddingTop}>
-          {text}
+          <span>{text}</span>
         </StyledLi>
       )
     )}

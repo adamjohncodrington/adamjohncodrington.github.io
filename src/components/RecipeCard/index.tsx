@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "styled-components";
 
 import { MEASUREMENTS, NO_UNIT_COST_FOR_RECIPE_EXISTS } from "@constants";
-import { Circle, FlexRow, SeventyFivePercentSpan } from "primitives";
+import {
+  Circle,
+  FlexRow,
+  SeventyFivePercentSpan,
+  SquareImage
+} from "primitives";
 import { calculateRecipeCost, getIngredientsHeader } from "utils";
 
 import { CentredOnPhone } from "../CentredOnPhone";
@@ -13,12 +19,7 @@ import {
   mapServeWithToListItems,
   mapRecipeIngredientsToListItems
 } from "./factory";
-import {
-  RecipeCardTitle,
-  RecipeBody,
-  RecipeCardImage,
-  PaddedFlexColumn
-} from "./styles";
+import { RecipeCardTitle, RecipeBody, PaddedFlexColumn } from "./styles";
 
 export const RecipeCard: React.FC<IRecipeCard> = ({
   title,
@@ -31,6 +32,8 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
   diet,
   image
 }) => {
+  const theme: ITheme = useContext(ThemeContext);
+
   const { costDisplayText, unitCostDisplayText } = calculateRecipeCost({
     ingredients,
     yieldQuantity: makes && makes.quantity,
@@ -78,7 +81,7 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
 
         {image && (
           <CentredOnPhone>
-            <RecipeCardImage src={image} />
+            <SquareImage imgSrc={image} size={theme.recipe.image.size} />
           </CentredOnPhone>
         )}
 

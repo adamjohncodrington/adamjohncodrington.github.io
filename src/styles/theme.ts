@@ -51,7 +51,10 @@ const THEME_recipe: ITheme_Recipes = {
   last: { padding: { bottom: "20px" } }
 };
 
-const THEME_breakpoints: IBreakpoints = { phone: { maxWidth: "480px" } };
+const THEME_breakpoints: IBreakpoints = {
+  tablet: { minWidth: "768px" },
+  phone: { maxWidth: "480px" }
+};
 
 export const fontFamily: IFontFamily = "-apple-system, Helvetica, sans-serif";
 export const scrollbarSize: IScrollbarSize = "0.7rem";

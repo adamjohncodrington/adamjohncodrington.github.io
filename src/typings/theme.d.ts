@@ -73,7 +73,10 @@ type ITheme_Page = {
   shell: { padding: PaddingValue };
 };
 
-type IBreakpoints = { phone: { maxWidth: PxValue } };
+type IBreakpoints = {
+  tablet: { minWidth: PxValue };
+  phone: { maxWidth: PxValue };
+};
 
 type ITheme = {
   // Surface level

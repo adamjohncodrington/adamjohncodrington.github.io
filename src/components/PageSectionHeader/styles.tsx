@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { SvgIcon, FlexRow, H2 } from "primitives";
+import { SquareImage, FlexRow, H2 } from "primitives";
 
 export const PageSectionTitle = styled(H2)`
   text-transform: lowercase;
@@ -42,7 +42,7 @@ export const PageSectionStarredCount = styled(PageSectionCount)`
   opacity: ${({ theme: { fadedOpacity } }: IThemeProp) => fadedOpacity};
 `;
 
-export const StyledIcon = styled(SvgIcon)`
+export const PageSectionHeaderIcon = styled(SquareImage)`
   padding-top: ${({
     theme: {
       section: {

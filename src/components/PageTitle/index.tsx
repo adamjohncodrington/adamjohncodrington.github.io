@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { ThemeContext } from "styled-components";
 
-import { FlexRow, H1, SvgIcon, Link } from "primitives";
+import { FlexRow, H1, SquareImage, Link } from "primitives";
 
 const TitleTextContainer = styled.div`
   display: flex;
@@ -60,9 +60,9 @@ export const PageTitle: React.FC<PageTitleProps> = ({
 
       <Link data-test="page-title-icon-link" to="/">
         <SvgContainer>
-          <SvgIcon
+          <SquareImage
             data-test="page-title-icon"
-            icon={icon}
+            imgSrc={icon}
             size={theme.page.icon.size}
           />
         </SvgContainer>
