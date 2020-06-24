@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "666d300cb7d3a2df76c5ac6f2fafade1",
+    "revision": "88936e810efee913482fa5e26f245221",
     "url": "/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.ddf39fdb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "34088e4689f1d857ddce",
-    "url": "/static/js/main.a6f5aa92.chunk.js"
+    "revision": "193d6a77ac5f47ac7de8",
+    "url": "/static/js/main.a85c0e42.chunk.js"
   },
   {
     "revision": "3cf57b419839acabd216",
@@ -34,6 +34,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ecf94e0683443e895ef93c8d6a0ea889",
     "url": "/static/media/amy-winehouse_back-to-black.ecf94e06.jpg"
+  },
+  {
+    "revision": "58968a16ed7a0d327c17e9eb7dce18f1",
+    "url": "/static/media/arctic-monkeys_favourite-worst-nightmare.58968a16.jpg"
   },
   {
     "revision": "da50a9a7aa2c4dee5db218868d02ef41",
@@ -104,10 +108,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/city.c6cfa7a4.svg"
   },
   {
-    "revision": "0db1256b91e0e3486b2af052409d0b5d",
-    "url": "/static/media/cloche.0db1256b.svg"
-  },
-  {
     "revision": "263fe8b3e5873606a7eb45550450ca83",
     "url": "/static/media/crumble.263fe8b3.jpg"
   },
@@ -148,10 +148,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/haim_women-in-music-pt-iii.40870384.jpg"
   },
   {
-    "revision": "50bdf1aae90e13f42837c9560067a347",
-    "url": "/static/media/heart.50bdf1aa.svg"
-  },
-  {
     "revision": "9b297b882dbe3fc1e84825841a6f6794",
     "url": "/static/media/jon-hopkins_singularity.9b297b88.jpg"
   },
@@ -166,6 +162,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "b2413afa9109bbeb67777901cff28be7",
     "url": "/static/media/katy-perry_one-of-the-boys.b2413afa.jpg"
+  },
+  {
+    "revision": "557d8c6f42b98ab770159ed2e0f9383f",
+    "url": "/static/media/lady-gaga_born-this-way.557d8c6f.jpg"
   },
   {
     "revision": "603d1f0a86205a7bbbf1b98e640e844c",
@@ -190,10 +190,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "08a934f88c0b8ff929974ac4b314ba42",
     "url": "/static/media/lissie_catching-a-tiger.08a934f8.jpg"
-  },
-  {
-    "revision": "f1b12302d21ec466bb74bb68936370ba",
-    "url": "/static/media/loading.f1b12302.svg"
   },
   {
     "revision": "5fb4c00806c045d8ff8e858aa1e2502a",
@@ -234,6 +230,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6809f1868cff7aecdf9d98c1ef0e84ae",
     "url": "/static/media/panic-at-the-disco_a-fever-you-cant-sweat-out.6809f186.jpg"
+  },
+  {
+    "revision": "bb10da248caeb21b44158624e0cee33b",
+    "url": "/static/media/paramore_riot.bb10da24.jpg"
   },
   {
     "revision": "05525562ffcb7a230a58ff6ee76cdee1",
@@ -296,10 +296,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/theatre.e5eaee16.svg"
   },
   {
-    "revision": "df12ac4b1417078f4c36a603166584f7",
-    "url": "/static/media/toast.df12ac4b.svg"
-  },
-  {
     "revision": "43cf73ca171a9664c2ad17f7460a9dd7",
     "url": "/static/media/tourist_u.43cf73ca.jpg"
   },
@@ -320,11 +316,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/veg_bowl.ee16e10a.svg"
   },
   {
-    "revision": "85d3ae6aecaabad53e283349ececb16c",
-    "url": "/static/media/vinyl_1.85d3ae6a.svg"
-  },
-  {
     "revision": "69320bab670623edba060441d82c0c99",
-    "url": "/static/media/vinyl_2.69320bab.svg"
+    "url": "/static/media/vinyl.69320bab.svg"
   }
 ]);
