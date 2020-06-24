@@ -8,7 +8,6 @@ interface PanelContainerProps extends IThemeProp {
 export const PanelContainer = styled.div`
   &.initial-state {
     max-height: unset;
-    opacity: 0;
   }
 
   ${({
@@ -21,12 +20,10 @@ export const PanelContainer = styled.div`
     `}
 
   overflow: hidden;
-  opacity: 0;
   max-height: 0;
 
   &.panel-visible {
     max-height: ${(props: PanelContainerProps) => props.bodyHeight}px;
-    opacity: 1;
   }
 `;
 

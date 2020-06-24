@@ -12,7 +12,6 @@ export const sections: Array<IPageSection> = [
   {
     title: "wish list",
     data: { vinylCards: WISH_LIST },
-    count: WISH_LIST.length,
-    initiallyExpanded: true
+    count: WISH_LIST.length
   }
 ];
