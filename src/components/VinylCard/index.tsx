@@ -14,6 +14,8 @@ const VinylArtwork = styled.img`
 `;
 
 const TextContainer = styled.div`
+  flex: 1;
+
   > *:not(:last-child) {
     padding-bottom: 5px;
   }
@@ -25,13 +27,15 @@ export const VinylCard: React.FC<IVinylCard> = ({
   year,
   artwork
 }) => {
+  const artist: string = moveTheSuffixToPrefix(name);
+
   return (
     <FlexRow data-test="vinyl-card">
-      {artwork && <VinylArtwork src={artwork} />}
+      <VinylArtwork src={artwork} />
 
       <TextContainer>
         <CardTitleBold>{title}</CardTitleBold>
-        <CardSubtitleBold>{moveTheSuffixToPrefix(name)}</CardSubtitleBold>
+        <CardSubtitleBold>{artist}</CardSubtitleBold>
 
         <div>{year}</div>
       </TextContainer>

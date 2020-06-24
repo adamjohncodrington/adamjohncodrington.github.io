@@ -2,6 +2,6 @@ interface IVinylCard {
   artist: IMusician;
   title: string;
   year: number;
-  artwork?: IImageSrc;
+  artwork: IImageSrc;
   notes?: string;
 }
