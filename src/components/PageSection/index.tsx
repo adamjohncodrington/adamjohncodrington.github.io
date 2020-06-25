@@ -25,44 +25,34 @@ export const PageSection: React.FC<IPageSection> = ({
   count,
   starredCount,
   isStatic,
-  initiallyExpanded,
+  initiallyExpandedAlways,
+  initiallyExpandedOnDesktop,
   onlyHeaderClickable
-}) => {
-  const noData: boolean =
-    !!(countedItems && countedItems.length === 0) ||
-    !!(gigCards && gigCards.length === 0) ||
-    !!(recipeCards && recipeCards.filter(item => !item.hide).length === 0) ||
-    !!(theatreCards && theatreCards.length === 0) ||
-    !!(travelCards && travelCards.length === 0) ||
-    !!(vinylCards && vinylCards.length === 0);
-
-  if (noData) return null;
-
-  return (
-    <PageSectionContainer>
-      <Disclosure
-        isStatic={isStatic}
-        initiallyExpanded={initiallyExpanded}
-        onlyHeaderClickable={onlyHeaderClickable}
-        headerComponent={
-          <PageSectionHeader
-            text={title}
-            count={count}
-            starredCount={starredCount}
-            icon={icon}
-            dataTest="disclosure-header"
-          />
-        }
-      >
-        <section data-test="page-section-body">
-          {countedItems && <CountedList countedItems={countedItems} />}
-          {gigCards && <GigCardList gigCards={gigCards} />}
-          {recipeCards && <RecipeCardList recipeCards={recipeCards} />}
-          {theatreCards && <TheatreCardList theatreCards={theatreCards} />}
-          {travelCards && <TravelCardList travelCards={travelCards} />}
-          {vinylCards && <VinylCardList vinylCards={vinylCards} />}
-        </section>
-      </Disclosure>
-    </PageSectionContainer>
-  );
-};
+}) => (
+  <PageSectionContainer>
+    <Disclosure
+      isStatic={isStatic}
+      initiallyExpandedAlways={initiallyExpandedAlways}
+      initiallyExpandedOnDesktop={initiallyExpandedOnDesktop}
+      onlyHeaderClickable={onlyHeaderClickable}
+      headerComponent={
+        <PageSectionHeader
+          text={title}
+          count={count}
+          starredCount={starredCount}
+          icon={icon}
+          dataTest="disclosure-header"
+        />
+      }
+    >
+      <section data-test="page-section-body">
+        {countedItems && <CountedList countedItems={countedItems} />}
+        {gigCards && <GigCardList gigCards={gigCards} />}
+        {recipeCards && <RecipeCardList recipeCards={recipeCards} />}
+        {theatreCards && <TheatreCardList theatreCards={theatreCards} />}
+        {travelCards && <TravelCardList travelCards={travelCards} />}
+        {vinylCards && <VinylCardList vinylCards={vinylCards} />}
+      </section>
+    </Disclosure>
+  </PageSectionContainer>
+);

@@ -1,4 +1,5 @@
 export { Circle } from "./Circle";
+export { CentredDiv } from "./Div";
 export {
   FlexSpan,
   FlexSpanGrow,
@@ -7,6 +8,7 @@ export {
   FlexColumn,
   FlexLiGrow
 } from "./Flex";
+export { Columns } from "./Grid";
 export { Link } from "./Link";
 export { Ul, Li } from "./Lists";
 export { SquareImage } from "./SquareImage";

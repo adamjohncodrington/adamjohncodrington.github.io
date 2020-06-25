@@ -18,10 +18,6 @@ const TextContainer = styled.div`
 const ArtworkLinkWrapper = styled.a`
   > * {
     display: block;
-
-    :hover {
-      border: 10px solid black;
-    }
   }
 `;
 

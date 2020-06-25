@@ -8,12 +8,13 @@ export const sections: Array<IPageSection> = [
     data: { vinylCards: COLLECTION },
     count: COLLECTION.length,
     onlyHeaderClickable: true,
-    initiallyExpanded: true
+    initiallyExpandedAlways: true
   },
   {
     title: "wish list",
     data: { vinylCards: WISH_LIST },
     count: WISH_LIST.length,
-    onlyHeaderClickable: true
+    onlyHeaderClickable: true,
+    initiallyExpandedOnDesktop: true
   }
 ];

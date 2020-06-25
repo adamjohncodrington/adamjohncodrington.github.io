@@ -1,6 +1,7 @@
 # TO DO LIST
 
 - make `link` a compulsory attribute on `IVinylCard` by adding remaining links to all vinyl data
+- use `theme` value on `primitives/Grid`
 
 ## Refactoring
 

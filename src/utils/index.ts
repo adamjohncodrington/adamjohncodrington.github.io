@@ -16,3 +16,4 @@ export { itemIsFavourited } from "./itemIsFavourited";
 export { numberToCurrencyString } from "./numberToCurrencyString";
 
 export * from "./basic";
+export { useScreenWidths } from "./useScreenWidths";

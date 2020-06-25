@@ -48,7 +48,8 @@ interface IPageSectionDataTypes {
 }
 
 interface IPageSectionDisclosure {
-  initiallyExpanded?: boolean;
+  initiallyExpandedOnDesktop?: boolean;
+  initiallyExpandedAlways?: boolean;
   isStatic?: boolean;
   onlyHeaderClickable?: boolean;
 }

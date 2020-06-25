@@ -10,7 +10,6 @@ import {
 } from "primitives";
 import { calculateRecipeCost, getIngredientsHeader } from "utils";
 
-import { CentredOnPhone } from "../CentredOnPhone";
 import { Disclosure } from "../Disclosure";
 import { List } from "../List";
 
@@ -47,7 +46,7 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
 
   return (
     <Disclosure
-      initiallyExpanded={newRecipe}
+      initiallyExpandedAlways={newRecipe}
       headerComponent={
         <FlexRow>
           <RecipeCardTitle favourite={favourite}>{title}</RecipeCardTitle>
@@ -79,29 +78,23 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
           />
         )}
 
-        {image && (
-          <CentredOnPhone>
-            <SquareImage imgSrc={image} size={theme.recipe.image.size} />
-          </CentredOnPhone>
-        )}
+        {image && <SquareImage imgSrc={image} size={theme.recipe.image.size} />}
 
-        <CentredOnPhone>
-          <PaddedFlexColumn>
-            <span>
-              approx. <strong>{costDisplayText}</strong> to make
-            </span>
+        <PaddedFlexColumn>
+          <span>
+            approx. <strong>{costDisplayText}</strong> to make
+          </span>
 
-            {unitCostDisplayText !== NO_UNIT_COST_FOR_RECIPE_EXISTS &&
-              makes &&
-              makes.measurement &&
-              makes.quantity > 1 &&
-              makes.measurement !== MEASUREMENTS.GRAM && (
-                <SeventyFivePercentSpan>
-                  <strong>{unitCostDisplayText}</strong> per {makes.measurement}
-                </SeventyFivePercentSpan>
-              )}
-          </PaddedFlexColumn>
-        </CentredOnPhone>
+          {unitCostDisplayText !== NO_UNIT_COST_FOR_RECIPE_EXISTS &&
+            makes &&
+            makes.measurement &&
+            makes.quantity > 1 &&
+            makes.measurement !== MEASUREMENTS.GRAM && (
+              <SeventyFivePercentSpan>
+                <strong>{unitCostDisplayText}</strong> per {makes.measurement}
+              </SeventyFivePercentSpan>
+            )}
+        </PaddedFlexColumn>
       </RecipeBody>
     </Disclosure>
   );

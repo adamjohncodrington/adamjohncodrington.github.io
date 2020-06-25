@@ -1,5 +1,7 @@
 import React, { ReactElement } from "react";
 
+import { useScreenWidths } from "utils";
+
 import { PanelContainer, ClickableRegion } from "./styles";
 
 export type IBodyHeight = number | null;
@@ -11,12 +13,17 @@ interface IDisclosure extends IPageSectionDisclosure {
 export const Disclosure: React.FC<IDisclosure> = ({
   headerComponent,
   children,
-  initiallyExpanded = false,
+  initiallyExpandedAlways = false,
+  initiallyExpandedOnDesktop = false,
   onlyHeaderClickable = false,
   isStatic = false
 }) => {
+  const { isDesktop } = useScreenWidths();
+
   const [panelIsVisible, switchPanelVisibility] = React.useState<boolean>(
-    initiallyExpanded || isStatic
+    initiallyExpandedAlways ||
+      (isDesktop && initiallyExpandedOnDesktop) ||
+      isStatic
   );
   const [panelContainerHeight, setPanelContainerHeight] = React.useState<
     IBodyHeight

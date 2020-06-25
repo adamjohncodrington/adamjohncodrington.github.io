@@ -28,11 +28,11 @@ export const PanelContainer = styled.div`
 `;
 
 interface ClickableRegionProps {
-  initiallyExpanded?: boolean;
+  initiallyExpandedAlways?: boolean;
 }
 export const ClickableRegion = styled.div`
   ${(props: ClickableRegionProps) =>
-    !props.initiallyExpanded &&
+    !props.initiallyExpandedAlways &&
     css`
       cursor: pointer;
     `}
