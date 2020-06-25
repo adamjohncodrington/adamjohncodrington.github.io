@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e5a4d278b62df447bf5e802d7b207899",
+    "revision": "bf4a6025fc46415ab33ed827807cf25c",
     "url": "/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.ddf39fdb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "523ec1b681c5f18a1b2a",
-    "url": "/static/js/main.78a7403c.chunk.js"
+    "revision": "43c168afe20ecf123e15",
+    "url": "/static/js/main.a9b7a4e7.chunk.js"
   },
   {
     "revision": "3cf57b419839acabd216",
@@ -164,6 +164,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/katy-perry_one-of-the-boys.b2413afa.jpg"
   },
   {
+    "revision": "d1fee18a4ab32014067f4c88fdc191d3",
+    "url": "/static/media/kim-petras_clarity.d1fee18a.jpg"
+  },
+  {
     "revision": "557d8c6f42b98ab770159ed2e0f9383f",
     "url": "/static/media/lady-gaga_born-this-way.557d8c6f.jpg"
   },
@@ -182,6 +186,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8d8fb594ce45beff4c9c01834fde0300",
     "url": "/static/media/lasagne.8d8fb594.jpg"
+  },
+  {
+    "revision": "d69b662b96a14d80d4dc7f1890f79b07",
+    "url": "/static/media/lennon-stella_three-two-one.d69b662b.jpg"
   },
   {
     "revision": "c6cc0d11e338f636e23d43ac70dffe8b",
@@ -270,6 +278,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "d49c016590c22f5828cc3a23cddce95f",
     "url": "/static/media/shepherds_pie.d49c0165.jpg"
+  },
+  {
+    "revision": "18bc11aff4a4bccd8ba4307909a14497",
+    "url": "/static/media/sophie_oil-of-every-pearls-uninsides.18bc11af.jpg"
   },
   {
     "revision": "5bff58bb1033ba3377ffe8c61f772dba",

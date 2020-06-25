@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.78a7403c.chunk.js",
-    "main.js.map": "/static/js/main.78a7403c.chunk.js.map",
+    "main.js": "/static/js/main.a9b7a4e7.chunk.js",
+    "main.js.map": "/static/js/main.a9b7a4e7.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.27f1f56c.js",
     "runtime-main.js.map": "/static/js/runtime-main.27f1f56c.js.map",
     "static/js/2.ddf39fdb.chunk.js": "/static/js/2.ddf39fdb.chunk.js",
     "static/js/2.ddf39fdb.chunk.js.map": "/static/js/2.ddf39fdb.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.60a863be23be1a3e933340dba3edbf84.js": "/precache-manifest.60a863be23be1a3e933340dba3edbf84.js",
+    "precache-manifest.c893c614adc01b0e642ba63e7d03853d.js": "/precache-manifest.c893c614adc01b0e642ba63e7d03853d.js",
     "service-worker.js": "/service-worker.js",
     "static/js/2.ddf39fdb.chunk.js.LICENSE.txt": "/static/js/2.ddf39fdb.chunk.js.LICENSE.txt",
     "static/media/1975_a-brief-inquiry-into-online-relationships.jpg": "/static/media/1975_a-brief-inquiry-into-online-relationships.450622e7.jpg",
@@ -46,11 +46,13 @@
     "static/media/kale_crispy.jpg": "/static/media/kale_crispy.b5419d7e.jpg",
     "static/media/kate-nash_made-of-bricks.jpg": "/static/media/kate-nash_made-of-bricks.667a0a03.jpg",
     "static/media/katy-perry_one-of-the-boys.jpg": "/static/media/katy-perry_one-of-the-boys.b2413afa.jpg",
+    "static/media/kim-petras_clarity.jpg": "/static/media/kim-petras_clarity.d1fee18a.jpg",
     "static/media/lady-gaga_born-this-way.jpg": "/static/media/lady-gaga_born-this-way.557d8c6f.jpg",
     "static/media/lana-del-rey_born-to-die.jpg": "/static/media/lana-del-rey_born-to-die.603d1f0a.jpg",
     "static/media/lane-8_rise.jpg": "/static/media/lane-8_rise.9e86b3c7.jpg",
     "static/media/lany_malibu-nights.jpg": "/static/media/lany_malibu-nights.c0777d86.jpg",
     "static/media/lasagne.jpg": "/static/media/lasagne.8d8fb594.jpg",
+    "static/media/lennon-stella_three-two-one.jpg": "/static/media/lennon-stella_three-two-one.d69b662b.jpg",
     "static/media/leon_leon.jpg": "/static/media/leon_leon.c6cc0d11.jpg",
     "static/media/lissie_catching-a-tiger.jpg": "/static/media/lissie_catching-a-tiger.08a934f8.jpg",
     "static/media/lorde_pure-heroine.jpg": "/static/media/lorde_pure-heroine.5fb4c008.jpg",
@@ -73,6 +75,7 @@
     "static/media/rogan_josh.jpg": "/static/media/rogan_josh.904346f2.jpg",
     "static/media/roller_coaster.svg": "/static/media/roller_coaster.6bcd9568.svg",
     "static/media/shepherds_pie.jpg": "/static/media/shepherds_pie.d49c0165.jpg",
+    "static/media/sophie_oil-of-every-pearls-uninsides.jpg": "/static/media/sophie_oil-of-every-pearls-uninsides.18bc11af.jpg",
     "static/media/stadium.svg": "/static/media/stadium.5bff58bb.svg",
     "static/media/stars.svg": "/static/media/stars.86e33730.svg",
     "static/media/sufjan-stevens_carrie-and-lowell.jpg": "/static/media/sufjan-stevens_carrie-and-lowell.e2842b0a.jpg",
@@ -89,6 +92,6 @@
   "entrypoints": [
     "static/js/runtime-main.27f1f56c.js",
     "static/js/2.ddf39fdb.chunk.js",
-    "static/js/main.78a7403c.chunk.js"
+    "static/js/main.a9b7a4e7.chunk.js"
   ]
 }
