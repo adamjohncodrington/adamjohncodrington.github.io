@@ -58,6 +58,6 @@ interface IRecipeCard {
 }
 
 interface IRecipeGroup {
-  category: string;
+  title: string;
   recipes: Array<IRecipeCard>;
 }

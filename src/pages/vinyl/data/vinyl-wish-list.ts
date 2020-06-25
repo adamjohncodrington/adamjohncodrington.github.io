@@ -12,6 +12,7 @@ export const VINYL_WISH_LIST: Array<IVinylCard> = [
     artist: MUSICIANS.CHARLI_XCX,
     title: "how i'm feeling now",
     year: 2020,
+    link: "https://music.apple.com/gb/album/how-im-feeling-now/1513162098",
     artwork: PHOTOS_VINYL.CHARLI_XCX.HOW_IM_FEELING_NOW
   },
   {
@@ -49,6 +50,25 @@ export const VINYL_WISH_LIST: Array<IVinylCard> = [
     title: "All That Must Be",
     year: 2018,
     artwork: PHOTOS_VINYL.GEORGE_FITZGERALD.ALL_THAT_MUST_BE
+  },
+  {
+    artist: MUSICIANS.KIM_PETRAS,
+    title: "Clarity",
+    year: 2019,
+    link: "https://music.apple.com/gb/album/clarity/1469298192",
+    artwork: PHOTOS_VINYL.KIM_PETRAS.CLARITY
+  },
+  {
+    artist: MUSICIANS.SOPHIE,
+    title: "Oil of Every Pearl's Un-Insides",
+    year: 2018,
+    artwork: PHOTOS_VINYL.SOPHIE.OIL_OF_EVERY_PEARLS_UNINSIDES
+  },
+  {
+    artist: MUSICIANS.LENNON_STELLA,
+    title: "Three. Two. One.",
+    year: 2020,
+    artwork: PHOTOS_VINYL.LENNON_STELLA.THREE_TWO_ONE
   },
   {
     artist: MUSICIANS.LANE_8,

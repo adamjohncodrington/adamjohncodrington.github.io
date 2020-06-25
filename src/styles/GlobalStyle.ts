@@ -1,7 +1,32 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle, css } from "styled-components";
 import { normalize } from "polished";
 
 import { fontFamily, scrollbarSize } from "./theme";
+
+export const CSS_scrollbar = css`
+  ::-webkit-scrollbar {
+    width: ${scrollbarSize};
+    height: ${scrollbarSize};
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(180, 178, 183, 0.3);
+    border: 1px solid rgba(180, 178, 183, 0.3);
+    border-radius: ${scrollbarSize};
+  }
+
+  ::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(180, 178, 183, 0.3);
+    border-radius: ${scrollbarSize};
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5);
+    border-color: rgba(180, 178, 183, 0.5);
+  }
+`;
 
 export const GlobalStyle = createGlobalStyle`
   ${normalize()}
@@ -12,28 +37,6 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   
-  ::-webkit-scrollbar {
-    width: ${scrollbarSize};
-    height: ${scrollbarSize};
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: rgba(180, 178, 183, 0.3);
-    border: 1px solid rgba(180, 178, 183, 0.3);
-    border-radius: ${scrollbarSize};
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    cursor: pointer;
-    background: rgba(0, 0, 0, 0.3);
-    border: 1px solid rgba(180, 178, 183, 0.3);
-    border-radius: ${scrollbarSize};
-  }
-  
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 0, 0, 0.5);
-    border-color: rgba(180, 178, 183, 0.5);
-  }
   
   ::-webkit-scrollbar-corner {
     background-color: transparent;

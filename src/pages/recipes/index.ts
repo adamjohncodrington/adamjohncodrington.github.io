@@ -1,8 +1,8 @@
 import { DATA } from "./data";
 
 const SECTIONS_RECIPE_GROUPS: Array<IPageSection> = DATA.CATEGORISED.map(
-  ({ category, recipes }: IRecipeGroup) => ({
-    title: category,
+  ({ title, recipes }: IRecipeGroup) => ({
+    title: title,
     data: { recipeCards: recipes },
     isStatic: true
   })

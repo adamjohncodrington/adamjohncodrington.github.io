@@ -18,6 +18,7 @@ export const VINYL_COLLECTION: Array<IVinylCard> = [
     artist: MUSICIANS.FKA_TWIGS,
     title: "Magdalene",
     artwork: PHOTOS_VINYL.FKA_TWIGS.MAGDALENE,
+    link: "https://music.apple.com/gb/album/magdalene/1477652618",
     year: 2019
   },
   {
@@ -42,6 +43,7 @@ export const VINYL_COLLECTION: Array<IVinylCard> = [
     artist: MUSICIANS.ALLIE_X,
     title: "Super Sunset",
     artwork: PHOTOS_VINYL.ALLIE_X.SUPER_SUNSET,
+    link: "https://music.apple.com/gb/album/super-sunset/1421851140",
     year: 2018
   },
   {
@@ -61,7 +63,7 @@ export const VINYL_COLLECTION: Array<IVinylCard> = [
     artist: MUSICIANS.ARCTIC_MONKEYS,
     title: "Favourite Worst Nightmare",
     artwork: PHOTOS_VINYL.ARCTIC_MONKEYS.FAVOURITE_WORST_NIGHTMARE,
-    year: 2018
+    year: 2007
   },
   {
     artist: MUSICIANS.LANA_DEL_REY,
@@ -72,7 +74,7 @@ export const VINYL_COLLECTION: Array<IVinylCard> = [
   {
     artist: MUSICIANS.MUNA,
     title: "About U",
-    year: 2013,
+    year: 2017,
     artwork: PHOTOS_VINYL.MUNA.ABOUT_U
   },
   {

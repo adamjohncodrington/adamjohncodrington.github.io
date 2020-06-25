@@ -1,24 +1,22 @@
-import React from "react";
+import React, { ReactElement } from "react";
 
 import { PanelContainer, ClickableRegion } from "./styles";
 
 export type IBodyHeight = number | null;
 
-interface DisclosureProps {
-  initiallyExpanded?: boolean;
-  isStatic?: boolean;
+interface IDisclosure extends IPageSectionDisclosure {
   headerComponent: React.ReactNode;
-  children: React.ReactNode;
 }
 
-export const Disclosure: React.FC<DisclosureProps> = ({
-  initiallyExpanded = false,
+export const Disclosure: React.FC<IDisclosure> = ({
   headerComponent,
-  isStatic = false,
-  children
+  children,
+  initiallyExpanded = false,
+  onlyHeaderClickable = false,
+  isStatic = false
 }) => {
   const [panelIsVisible, switchPanelVisibility] = React.useState<boolean>(
-    !!(initiallyExpanded || isStatic)
+    initiallyExpanded || isStatic
   );
   const [panelContainerHeight, setPanelContainerHeight] = React.useState<
     IBodyHeight
@@ -30,7 +28,7 @@ export const Disclosure: React.FC<DisclosureProps> = ({
   };
 
   const getPanelContainerClass = (
-    bodyHeight: number | null,
+    bodyHeight: IBodyHeight,
     panelIsVisible: boolean
   ): string =>
     !bodyHeight
@@ -39,7 +37,7 @@ export const Disclosure: React.FC<DisclosureProps> = ({
       ? "panel-visible"
       : "panel-invisible";
 
-  const panel = (
+  const Panel: ReactElement = (
     <PanelContainer
       data-test="disclosure-panel"
       className={getPanelContainerClass(panelContainerHeight, panelIsVisible)}
@@ -50,18 +48,25 @@ export const Disclosure: React.FC<DisclosureProps> = ({
     </PanelContainer>
   );
 
+  const dataTestClickableRegion: string = "disclosure-clickable-region";
+  const onClick = (): void => switchPanelVisibility(!panelIsVisible);
+
   return isStatic ? (
     <>
       {headerComponent}
       {children}
     </>
+  ) : onlyHeaderClickable ? (
+    <>
+      <ClickableRegion data-test={dataTestClickableRegion} onClick={onClick}>
+        {headerComponent}
+      </ClickableRegion>
+      {Panel}
+    </>
   ) : (
-    <ClickableRegion
-      data-test="disclosure-container"
-      onClick={() => switchPanelVisibility(!panelIsVisible)}
-    >
+    <ClickableRegion data-test={dataTestClickableRegion} onClick={onClick}>
       {headerComponent}
-      {panel}
+      {Panel}
     </ClickableRegion>
   );
 };

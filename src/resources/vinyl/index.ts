@@ -58,12 +58,16 @@ export const PHOTOS_VINYL: VinylPhotosObject = {
   KATY_PERRY: {
     ONE_OF_THE_BOYS: requireVinyl("katy-perry", "one-of-the-boys")
   },
+  KIM_PETRAS: { CLARITY: requireVinyl("kim-petras", "clarity") },
   // L
   LADY_GAGA: { BORN_THIS_WAY: requireVinyl("lady-gaga", "born-this-way") },
   LANA_DEL_REY: { BORN_TO_DIE: requireVinyl("lana-del-rey", "born-to-die") },
   LANE_8: { RISE: requireVinyl("lane-8", "rise") },
   LANY: { MALIBU_NIGHTS: requireVinyl("lany", "malibu-nights") },
   LEON: { LEON: requireVinyl("leon", "leon") },
+  LENNON_STELLA: {
+    THREE_TWO_ONE: requireVinyl("lennon-stella", "three-two-one")
+  },
   LISSIE: { CATCHING_A_TIGER: requireVinyl("lissie", "catching-a-tiger") },
   LORDE: { PURE_HEROINE: requireVinyl("lorde", "pure-heroine") },
   // M
@@ -86,6 +90,12 @@ export const PHOTOS_VINYL: VinylPhotosObject = {
   // R
   RIHANNA: { RATED_R: requireVinyl("rihanna", "rated-r") },
   // S
+  SOPHIE: {
+    OIL_OF_EVERY_PEARLS_UNINSIDES: requireVinyl(
+      "sophie",
+      "oil-of-every-pearls-uninsides"
+    )
+  },
   SUFJAN_STEVENS: {
     CARRIE_AND_LOWELL: requireVinyl("sufjan-stevens", "carrie-and-lowell")
   },

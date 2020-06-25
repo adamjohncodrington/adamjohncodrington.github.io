@@ -14,10 +14,5 @@ export const arrayToString = ({
   if (useAmpersandsForPair && stringArray.length === 2)
     return `${stringArray[0]} & ${stringArray[1]}`;
 
-  let output: string = "";
-  stringArray.forEach(
-    (item: string, index: number) =>
-      (output += index === stringArray.length - 1 ? item : `${item}, `)
-  );
-  return output;
+  return stringArray.join(", ");
 };

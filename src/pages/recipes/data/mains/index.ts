@@ -7,7 +7,7 @@ import { SHEPHERDS_PIE } from "./shepherds-pie";
 import { SWEET_AND_SOUR } from "./sweet-and-sour";
 
 export const MAINS: IRecipeGroup = {
-  category: "mains",
+  title: "Mains",
   recipes: [
     BOLOGNESE,
     CARBONARA,

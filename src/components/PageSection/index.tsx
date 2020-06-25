@@ -24,8 +24,9 @@ export const PageSection: React.FC<IPageSection> = ({
   },
   count,
   starredCount,
-  isStatic = false,
-  initiallyExpanded = false
+  isStatic,
+  initiallyExpanded,
+  onlyHeaderClickable
 }) => {
   const noData: boolean =
     !!(countedItems && countedItems.length === 0) ||
@@ -42,6 +43,7 @@ export const PageSection: React.FC<IPageSection> = ({
       <Disclosure
         isStatic={isStatic}
         initiallyExpanded={initiallyExpanded}
+        onlyHeaderClickable={onlyHeaderClickable}
         headerComponent={
           <PageSectionHeader
             text={title}

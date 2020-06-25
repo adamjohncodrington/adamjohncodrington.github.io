@@ -8,7 +8,7 @@ import { LEMON_DRIZZLE } from "./lemon-drizzle";
 import { SCONES } from "./scones";
 
 export const SWEETS: IRecipeGroup = {
-  category: "sweets",
+  title: "Sweets",
   recipes: [
     BANANA_CAKE,
     BLUEBERRY_PANCAKES,

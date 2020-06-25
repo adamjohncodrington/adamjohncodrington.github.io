@@ -47,14 +47,18 @@ interface IPageSectionDataTypes {
   vinylCards?: Array<IVinylCard>;
 }
 
-interface IPageSection {
+interface IPageSectionDisclosure {
+  initiallyExpanded?: boolean;
+  isStatic?: boolean;
+  onlyHeaderClickable?: boolean;
+}
+
+interface IPageSection extends IPageSectionDisclosure {
   title: string;
   icon?: IImageSrc;
   data: IPageSectionDataTypes;
   count?: number;
   starredCount?: number;
-  initiallyExpanded?: boolean;
-  isStatic?: boolean;
 }
 
 interface IPage {

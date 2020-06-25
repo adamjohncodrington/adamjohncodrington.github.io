@@ -6,7 +6,7 @@ import { RATATOUILLE } from "./ratatouille";
 import { TOFU_SCRAMBLE } from "./tofu-scramble";
 
 export const SIDES: IRecipeGroup = {
-  category: "sides",
+  title: "Sides",
   recipes: [
     BAKED_BEANS,
     BANG_BANG_CAULIFLOWER,

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import styled from "styled-components";
 
 import { FlexRow, SquareImage } from "primitives";
@@ -6,12 +6,8 @@ import { moveTheSuffixToPrefix } from "utils";
 
 import { CardTitleBold, CardSubtitleBold } from "../styles";
 
-//TODO: move to theme
-const VinylArtwork = styled(SquareImage)`
-  margin-right: 15px;
-`;
-
 const TextContainer = styled.div`
+  margin-left: 10px;
   flex: 1;
 
   > *:not(:last-child) {
@@ -19,17 +15,39 @@ const TextContainer = styled.div`
   }
 `;
 
+const ArtworkLinkWrapper = styled.a`
+  > * {
+    display: block;
+
+    :hover {
+      border: 10px solid black;
+    }
+  }
+`;
+
 export const VinylCard: React.FC<IVinylCard> = ({
   artist: { name },
   title,
   year,
-  artwork
+  artwork,
+  link
 }) => {
   const artist: string = moveTheSuffixToPrefix(name);
+  const artworkSize: string = "100px";
+
+  const ArtworkImage: ReactElement = (
+    <SquareImage dataTest="vinyl-artwork" size={artworkSize} imgSrc={artwork} />
+  );
+
+  const ArtworkPlusWrapper: ReactElement = link ? (
+    <ArtworkLinkWrapper href={link}>{ArtworkImage}</ArtworkLinkWrapper>
+  ) : (
+    ArtworkImage
+  );
 
   return (
     <FlexRow data-test="vinyl-card">
-      <VinylArtwork size="100px" imgSrc={artwork} />
+      {ArtworkPlusWrapper}
 
       <TextContainer>
         <CardTitleBold>{title}</CardTitleBold>

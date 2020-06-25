@@ -12,14 +12,20 @@ const StyledImage = styled.img`
 
 interface ISquareImage {
   className?: string;
+  dataTest?: string;
   imgSrc: string;
   size: string;
 }
 
-export const SquareImage = ({ className, imgSrc, size }: ISquareImage) => (
+export const SquareImage = ({
+  className,
+  dataTest,
+  imgSrc,
+  size
+}: ISquareImage) => (
   <StyledImage
     className={className}
-    data-test="svg-icon"
+    data-test={dataTest}
     src={imgSrc}
     size={size}
   />
