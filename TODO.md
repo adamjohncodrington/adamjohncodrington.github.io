@@ -1,5 +1,7 @@
 # TO DO LIST
 
+- make `link` a compulsory attribute on `IVinylCard` by adding remaining links to all vinyl data
+
 ## Refactoring
 
 - move final instances of `px` in `EventCard` and `RecipeCard` to `theme`
