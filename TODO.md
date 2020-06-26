@@ -1,5 +1,11 @@
 # TO DO LIST
 
+- merge routes and pages (IPage extends IRoute)
+- add `NavBar` mobile component
+- remove hard-coded recipe image width + implement react-disclosure/react-accessible-accordion?
+- add isTablet, isTabletOrLarger, isPortrait, isTouch, isRetina, isLaptop to “useMediaQuery” (beef up breakpoints)
+- add isStaticOnDesktop and rename isStatic to isStaticAlways on IPageSection
+
 ## Refactoring
 
 - move all remaining instances of `px` to theme
@@ -10,7 +16,6 @@
 
 ## Features
 
-- add `NavBar` mobile component
 - add sorting to vinyls collection and wish list
 - reinstate circles indicating `company` on cards
 
