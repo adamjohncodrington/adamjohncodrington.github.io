@@ -1,5 +1,7 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
-import { calculateRecipeCost } from "@utils";
+import { calculateRecipeCost, recipeMethodEntries } from "@utils";
+
+const { preheatOven, bakeForAbout } = recipeMethodEntries();
 
 const ingredients: Array<Array<IRecipeIngredient>> = [
   [
@@ -60,6 +62,17 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
 const title: string = "Cookies";
 const makes: IRecipeMakes = { quantity: 20, measurement: "cookie" };
 const diet: IRecipeDiet = DIETS.VEGETARIAN;
+const method: Array<string> = [
+  "in a small mixing bowl, combine flour with cinnamon, baking soda and salt",
+  "in a large mixing bowl, cream butter with both types of sugar for 1-2 minutes",
+  "whisk in egg and vanilla extract to wet ingredients",
+  "slowly introduce the flour mix to the wet ingredients and combine",
+  "fold in the oats and raisins",
+  "cover and refrigerate the cookie dough for 30 minutes",
+  preheatOven({ degreesCelcius: 170, bakingTray: true }),
+  "scoop balls of cookie dough onto baking tray, leaving space for them to expand",
+  bakeForAbout({ minutes: 10, continueToCookOutsideOven: true })
+];
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;
@@ -68,6 +81,8 @@ export const COOKIES: IRecipeCard = {
   ingredients,
   title,
   totalCost,
+  method,
+  newRecipe: true,
   portionCost,
   makes,
   favourite: true,

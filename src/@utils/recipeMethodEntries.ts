@@ -4,6 +4,7 @@ interface IBakeForAbout {
   minutes: number;
   skewer?: boolean;
   wellRisen?: boolean;
+  continueToCookOutsideOven?: boolean;
 }
 interface IPreheatOven {
   degreesCelcius: number;
@@ -32,11 +33,14 @@ export const recipeMethodEntries = (): IRecipeMethodEntries => {
   const bakeForAbout = ({
     minutes,
     skewer,
-    wellRisen
+    wellRisen,
+    continueToCookOutsideOven
   }: IBakeForAbout): string => {
     const defaultText = `bake for about ${minutes} minutes`;
     const additionalText =
       (skewer && "just until skewer runs clean") ||
+      (continueToCookOutsideOven &&
+        "they will continue cooking out of the oven") ||
       (wellRisen && "until well-risen and slightly golden");
 
     if (!additionalText) return defaultText;

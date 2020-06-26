@@ -1,4 +1,4 @@
-export { Circle } from "./Circle";
+export { DietSymbol } from "./DietSymbol";
 export { CentredDiv } from "./Div";
 export {
   FlexSpan,

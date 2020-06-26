@@ -39,7 +39,7 @@ export const mapServeWithToListItems = (
   );
 };
 
-export const mapRecipeIngredientsToListItems = (
+export const mapIngredientsToListItems = (
   ingredientsGroups: Array<Array<IRecipeIngredient>>
 ): Array<IListItemWithPaddingTopFlag> => {
   let ingredientsWithPaddingFlags: Array<IListItemWithPaddingTopFlag> = [];

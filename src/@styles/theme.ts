@@ -4,7 +4,6 @@ import { COLORS } from "./colors";
 
 const countMarginLeft: PxValue = "5px";
 
-const BORDER_BLACK_THIN: IBorder = `1px solid ${COLORS.black}`;
 const BORDER_GRAY_THIN: IBorder = `1px solid ${COLORS.gray}`;
 
 const THEME_homePage: ITheme_Homepage = {
@@ -19,7 +18,6 @@ const THEME_page: ITheme_Page = {
 };
 
 const THEME_countedList: ITheme_CountedList = {
-  border: { bottom: BORDER_GRAY_THIN },
   count: { width: "25px" },
   padding: { vertical: "5px" }
 };
@@ -31,7 +29,6 @@ const THEME_eventCardList: ITheme_EventCardList = {
 
 const THEME_pageSection: ITheme_PageSection = {
   background: COLORS.gainsboro,
-  border: { bottom: BORDER_BLACK_THIN },
   borderRadius: "10px",
   boxShadow: `0 1px 2px ${rgba(COLORS.gray, 0.5)}`,
   count: { margin: { left: countMarginLeft } },
@@ -43,7 +40,6 @@ const THEME_pageSection: ITheme_PageSection = {
 };
 
 const THEME_recipe: ITheme_Recipes = {
-  border: { bottom: BORDER_GRAY_THIN },
   image: { size: "300px" },
   dietIcon: { margin: { top: "4px" }, size: "24px" },
   title: { padding: { vertical: "15px" } },
@@ -65,7 +61,6 @@ export const scrollbarSize: IScrollbarSize = "0.7rem";
 
 export const THEME: ITheme = {
   // Surface level
-  circleBorder: BORDER_BLACK_THIN,
   fadedOpacity: 0.5,
   fontFamily,
   listItemGroupVerticalSpacing: "10px",

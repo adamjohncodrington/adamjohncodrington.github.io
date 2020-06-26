@@ -46,7 +46,7 @@ interface IRecipeCard {
   serveWith?: Array<Array<IServeWithItem>>;
   ingredients: Array<Array<IRecipeIngredient>>;
   diet: IRecipeDiet;
-  method?: Array<string>;
+  method: Array<string>;
   favourite?: boolean;
   newRecipe?: boolean;
   hide?: boolean;

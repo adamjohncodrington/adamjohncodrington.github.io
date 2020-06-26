@@ -1,6 +1,6 @@
 export const numberToCurrencyString = (
   number: number,
-  decimalPrecision: number = 1
+  decimalPrecision: number = 2
 ): string => {
   if (decimalPrecision === 1)
     return `£${(Math.round(number * 10) / 10).toFixed(2)}`;

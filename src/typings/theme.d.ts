@@ -34,7 +34,6 @@ interface ITheme_Homepage {
 }
 
 interface ITheme_CountedList {
-  border: { bottom: IBorder };
   count: { width: PxValue };
   padding: { vertical: PaddingValue };
 }
@@ -46,7 +45,6 @@ interface ITheme_EventCardList {
 
 interface ITheme_PageSection {
   background: ColorValue;
-  border: { bottom: IBorder };
   borderRadius: IBorderRadius;
   boxShadow: IBoxShadow;
   count: { margin: IMargin };
@@ -62,7 +60,6 @@ interface ITheme_PageSectionPanelList {
 }
 
 interface ITheme_Recipes {
-  border: { bottom: IBorder };
   image: { size: ImageSize };
   dietIcon: { margin: IMargin; size: SvgSize };
   title: { padding: { vertical: PaddingValue } };
@@ -84,7 +81,6 @@ type IBreakpoints = {
 
 type ITheme = {
   // Surface level
-  circleBorder: IBorder;
   fadedOpacity: number;
   fontFamily: IFontFamily;
   listItemGroupVerticalSpacing: PxValue;
