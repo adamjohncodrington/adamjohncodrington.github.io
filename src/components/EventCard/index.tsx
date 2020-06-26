@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { FlexColumn, FlexRow, SeventyFivePercentSpan } from "primitives";
-import { datesArrayToString } from "utils";
+import { datesArrayToString } from "@utils";
 
 import { CardTitleBold, CardSubtitleBold } from "../styles";
 import { getCountdownText, daysToGo } from "./utils";

@@ -31,8 +31,8 @@ export const recipeMethodEntries = (): IRecipeMethodEntries => {
 
   const bakeForAbout = ({
     minutes,
-    skewer = false,
-    wellRisen = false
+    skewer,
+    wellRisen
   }: IBakeForAbout): string => {
     const defaultText = `bake for about ${minutes} minutes`;
     const additionalText =
@@ -45,7 +45,7 @@ export const recipeMethodEntries = (): IRecipeMethodEntries => {
 
   const preheatOven = ({
     degreesCelcius,
-    bakingTray = false
+    bakingTray
   }: IPreheatOven): string => {
     const ovenTemperature = degreesCelcius + UNICODE.DEGREES_CELCIUS;
 
@@ -53,9 +53,7 @@ export const recipeMethodEntries = (): IRecipeMethodEntries => {
     return "preheat baking tray in oven at " + ovenTemperature;
   };
 
-  const transferToLoafTin = ({
-    sunkenCentre = false
-  }: ITransferToLoafTin): string => {
+  const transferToLoafTin = ({ sunkenCentre }: ITransferToLoafTin): string => {
     const defaultText = "transfer mixture to non-stick loaf tin";
     const additionalText =
       sunkenCentre &&

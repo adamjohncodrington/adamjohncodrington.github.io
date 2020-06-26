@@ -13,9 +13,6 @@ export { THEATRE_VENUES } from "./theatre-venues";
 export { TICKET_TYPES } from "./ticket-types";
 export { UNICODE } from "./unicode";
 
-export const NO_UNIT_COST_FOR_RECIPE_EXISTS: string =
-  "NO_UNIT_COST_FOR_RECIPE_EXISTS";
-
 export const DAYS_OF_THE_WEEK: Array<string> = [
   "Sun",
   "Mon",

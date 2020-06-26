@@ -31,7 +31,7 @@ interface IRecipeCards {
   recipeCards: Array<IRecipeCard>;
 }
 
-export const RecipeCardList: React.FC<IRecipeCards> = ({ recipeCards }) => (
+export const RecipeCards: React.FC<IRecipeCards> = ({ recipeCards }) => (
   <RecipeGroupList>
     {recipeCards.map(
       (recipeCard: IRecipeCard, index: number) =>

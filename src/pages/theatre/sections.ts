@@ -1,6 +1,6 @@
 import { PAGE_SECTION_TITLES } from "@constants";
 import { SVG_ICONS } from "resources";
-import { isInFuture } from "utils";
+import { isInFuture } from "@utils";
 
 import { FACTORY } from "./factory";
 import { DATA } from "./data";

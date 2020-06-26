@@ -36,7 +36,7 @@ const StyledSvg = styled.img(({ theme }: IThemeProp) => {
 export const HomePage: React.FC = () => (
   <FlexContainer>
     <GridContainer>
-      {PAGE_ROUTES.map(({ icon, dest }: IRoute, index: number) => (
+      {PAGE_ROUTES.map(({ icon, dest }: IPageRoute, index: number) => (
         <Link key={index} to={dest}>
           <StyledSvg src={icon} />
         </Link>

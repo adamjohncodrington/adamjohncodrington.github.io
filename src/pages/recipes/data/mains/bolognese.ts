@@ -1,7 +1,7 @@
 import { INGREDIENTS, MEASUREMENTS, UNICODE, DIETS } from "@constants";
 import { PHOTOS_RECIPES } from "resources";
 
-import { recipeMethodEntries } from "utils";
+import { recipeMethodEntries, calculateRecipeCost } from "@utils";
 
 const { preheatOven } = recipeMethodEntries();
 
@@ -87,7 +87,7 @@ const serveWith: Array<Array<IServeWithItem>> = [
   [{ ingredient: INGREDIENTS.BREAD_GARLIC }]
 ];
 
-const method: IRecipeMethod = [
+const method: Array<string> = [
   preheatOven({ degreesCelcius: 180 }),
   "make paste from yeast, soy, oil, crushed garlic, chilli powder, liquid smoke",
   "drain tofu, use both fingers to crumble into small pieces",
@@ -104,10 +104,13 @@ const method: IRecipeMethod = [
   "stir in tofu, remove from heat"
 ];
 
-const title: IRecipeTitle = "bolognese";
+const title: string = "Bolognese";
 const makes: IRecipeMakes = { quantity: 5, measurement: MEASUREMENTS.PORTION };
 const image: IImageSrc = PHOTOS_RECIPES.BOLOGNESE;
 const diet: IRecipeDiet = DIETS.VEGAN;
+
+const totalCost: number = calculateRecipeCost(ingredients, title);
+const portionCost: number = totalCost / makes.quantity;
 
 export const BOLOGNESE: IRecipeCard = {
   title,
@@ -117,5 +120,7 @@ export const BOLOGNESE: IRecipeCard = {
   serveWith,
   diet,
   method,
-  image
+  image,
+  totalCost,
+  portionCost
 };

@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 import { Ul, Li } from "primitives";
 
 interface StyledLiProps extends IThemeProp {
-  addPaddingTop: boolean;
+  addPaddingTop?: boolean;
 }
 
 const StyledLi = styled(Li)`
@@ -27,16 +27,13 @@ interface ListProps {
 export const List: React.FC<ListProps> = ({
   title,
   listItems,
-  showBullets = false
+  showBullets
 }) => (
   <Ul showBullets={showBullets}>
     <strong>{title}</strong>
 
     {listItems.map(
-      (
-        { text, addPaddingTop = false }: IListItemWithPaddingTopFlag,
-        index: number
-      ) => (
+      ({ text, addPaddingTop }: IListItemWithPaddingTopFlag, index: number) => (
         <StyledLi key={index} addPaddingTop={addPaddingTop}>
           <span>{text}</span>
         </StyledLi>

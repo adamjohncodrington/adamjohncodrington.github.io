@@ -1,4 +1,5 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
+import { calculateRecipeCost } from "@utils";
 
 const ingredients: Array<Array<IRecipeIngredient>> = [
   [
@@ -56,13 +57,18 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   ]
 ];
 
-const title: IRecipeTitle = "cookies";
+const title: string = "Cookies";
 const makes: IRecipeMakes = { quantity: 20, measurement: "cookie" };
 const diet: IRecipeDiet = DIETS.VEGETARIAN;
+
+const totalCost: number = calculateRecipeCost(ingredients, title);
+const portionCost: number = totalCost / makes.quantity;
 
 export const COOKIES: IRecipeCard = {
   ingredients,
   title,
+  totalCost,
+  portionCost,
   makes,
   favourite: true,
   diet

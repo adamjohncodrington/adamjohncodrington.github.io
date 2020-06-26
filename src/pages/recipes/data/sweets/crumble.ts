@@ -1,7 +1,7 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
 import { PHOTOS_RECIPES } from "resources";
 
-import { recipeMethodEntries } from "utils";
+import { recipeMethodEntries, calculateRecipeCost } from "@utils";
 
 const { preheatOven } = recipeMethodEntries();
 
@@ -64,7 +64,7 @@ const serveWith: Array<Array<IServeWithItem>> = [
   [{ ingredient: INGREDIENTS.CREAM_OAT }]
 ];
 
-const method: IRecipeMethod = [
+const method: Array<string> = [
   preheatOven({ degreesCelcius: 160 }),
   "mix sieved flour and sieved caster sugar",
   "introduce chunks of butter, use fingertips to form light crumble but don't overwork",
@@ -78,9 +78,12 @@ const method: IRecipeMethod = [
 ];
 
 const makes: IRecipeMakes = { quantity: 8, measurement: MEASUREMENTS.PORTION };
-const title: IRecipeTitle = "crumble";
+const title: string = "Crumble";
 const diet: IRecipeDiet = DIETS.VEGAN;
 const image: IImageSrc = PHOTOS_RECIPES.CRUMBLE;
+
+const totalCost: number = calculateRecipeCost(ingredients, title);
+const portionCost: number = totalCost / makes.quantity;
 
 export const CRUMBLE: IRecipeCard = {
   title,
@@ -89,6 +92,8 @@ export const CRUMBLE: IRecipeCard = {
   serveWith,
   favourite: true,
   method,
+  totalCost,
+  portionCost,
   diet,
   image
 };

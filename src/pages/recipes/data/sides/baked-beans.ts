@@ -1,5 +1,6 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
 import { PHOTOS_RECIPES } from "resources";
+import { calculateRecipeCost } from "@utils";
 
 const ingredients: Array<Array<IRecipeIngredient>> = [
   [
@@ -64,21 +65,26 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   ]
 ];
 
-const method: IRecipeMethod = [
+const method: Array<string> = [
   "fry diced onion, garlic and pepper in oil (and some water if need be) for 5-10 minutes",
   "transfer to slow cooker along with drained beans, passata and seasoning",
   "cook on low for 8 hours or medium for 5 hours"
 ];
 
-const title: IRecipeTitle = "baked beans";
+const title: string = "Baked Beans";
 const makes: IRecipeMakes = { quantity: 4, measurement: MEASUREMENTS.PORTION };
 const diet: IRecipeDiet = DIETS.VEGAN;
 const image: IImageSrc = PHOTOS_RECIPES.BAKED_BEANS;
+
+const totalCost: number = calculateRecipeCost(ingredients, title);
+const portionCost: number = totalCost / makes.quantity;
 
 export const BAKED_BEANS: IRecipeCard = {
   title,
   ingredients,
   makes,
+  totalCost,
+  portionCost,
   method,
   diet,
   image

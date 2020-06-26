@@ -12,18 +12,18 @@ import {
 } from "./styles";
 
 type PageSectionHeaderProps = {
-  text: string;
+  title: string;
   icon?: IImageSrc;
   count?: number;
-  starredCount?: number;
+  starCount?: number;
   dataTest: string;
 };
 
 export const PageSectionHeader: React.FC<PageSectionHeaderProps> = ({
-  text,
+  title,
   icon,
   count,
-  starredCount,
+  starCount,
   dataTest
 }) => {
   const theme: ITheme = useContext(ThemeContext);
@@ -32,7 +32,7 @@ export const PageSectionHeader: React.FC<PageSectionHeaderProps> = ({
     <PageSectionHeaderContainer data-test={dataTest}>
       <FlexRowGrow data-test="section-header-title-and-counts">
         <PageSectionTitle data-test="section-header-title">
-          {text}
+          {title}
         </PageSectionTitle>
 
         {count && count > 1 && (
@@ -41,9 +41,9 @@ export const PageSectionHeader: React.FC<PageSectionHeaderProps> = ({
           </PageSectionCount>
         )}
 
-        {starredCount && starredCount > 0 && (
+        {starCount && starCount > 0 && (
           <PageSectionStarredCount data-test="section-header-starred-count">
-            {starredCount}
+            {starCount}
           </PageSectionStarredCount>
         )}
       </FlexRowGrow>

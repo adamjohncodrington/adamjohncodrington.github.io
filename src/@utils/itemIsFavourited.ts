@@ -6,8 +6,8 @@ interface IItemIsFavourited {
 export const itemIsFavourited = ({
   itemToInspect,
   favouritedData
-}: IItemIsFavourited) => {
-  let itemIsFavourited = false;
+}: IItemIsFavourited): boolean => {
+  let itemIsFavourited: boolean = false;
 
   favouritedData.forEach((dataItem: any) => {
     if (itemToInspect === dataItem.headline || itemToInspect === dataItem.play)

@@ -7,7 +7,7 @@ import { SALT } from "./salt";
 import { SAUCES } from "./sauces";
 import { VINEGARS } from "./vinegars";
 
-export const SEASONING: IInventoryIngredients = {
+export const SEASONING: IInventoryIngredientsObject = {
   ...DRIED_SEASONING,
   ...OILS,
   ...PASTES,
@@ -17,30 +17,34 @@ export const SEASONING: IInventoryIngredients = {
 
   PEPPER_BLACK_FRESH: {
     displayText: "freshly ground black pepper",
-    cost: { price: 0 }
+    knownCost: { price: 0 }
   },
   PEPPER_BLACK_GROUND: {
     displayText: "ground black pepper",
-    cost: SAINSBURYS_SEASONING_COST
+    knownCost: SAINSBURYS_SEASONING_COST
   },
   WINE_RED: {
     displayText: "red wine",
-    cost: { quantity: 750, measurement: MEASUREMENTS.MILLILITRE, price: 6.5 }
+    knownCost: {
+      quantity: 750,
+      measurement: MEASUREMENTS.MILLILITRE,
+      price: 6.5
+    }
   },
   CHILLI_RED_FRESH: {
     displayText: "fresh red chilli",
-    cost: { quantity: 2, price: 0.6 }
+    knownCost: { quantity: 2, price: 0.6 }
   },
   CHILLI_BIRD_EYE_FRESH: {
     displayText: "bird eye chillies",
-    cost: { quantity: 20, measurement: MEASUREMENTS.GRAM, price: 0.7 }
+    knownCost: { quantity: 20, measurement: MEASUREMENTS.GRAM, price: 0.7 }
   },
   GINGER_FRESH: {
     displayText: "fresh ginger",
-    cost: { payFullAmountAlways: true, price: 0.3 }
+    knownCost: { payFullAmountAlways: true, price: 0.3 }
   },
   NUTMEG_FRESH: {
     displayText: "freshly grated whole nutmeg",
-    cost: SAINSBURYS_SEASONING_COST
+    knownCost: SAINSBURYS_SEASONING_COST
   }
 };

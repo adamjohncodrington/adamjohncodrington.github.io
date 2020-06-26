@@ -1,9 +1,9 @@
 import { MEASUREMENTS } from "../../measurements";
 
-export const HERBS_FRESH: IInventoryIngredients = {
+export const HERBS_FRESH: IInventoryIngredientsObject = {
   BASIL_FRESH: {
     displayText: "fresh basil",
-    cost: {
+    knownCost: {
       quantity: 30,
       measurement: MEASUREMENTS.GRAM,
       price: 0.75,
@@ -12,7 +12,7 @@ export const HERBS_FRESH: IInventoryIngredients = {
   },
   CORIANDER_FRESH: {
     displayText: "fresh coriander",
-    cost: {
+    knownCost: {
       quantity: 30,
       measurement: MEASUREMENTS.GRAM,
       price: 0.75,
@@ -21,7 +21,7 @@ export const HERBS_FRESH: IInventoryIngredients = {
   },
   PARSLEY_FRESH: {
     displayText: "fresh parsley",
-    cost: {
+    knownCost: {
       quantity: 30,
       measurement: MEASUREMENTS.GRAM,
       price: 0.75,

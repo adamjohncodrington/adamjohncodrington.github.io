@@ -1,7 +1,7 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
 import { PHOTOS_RECIPES } from "resources";
 
-import { recipeMethodEntries } from "utils";
+import { recipeMethodEntries, calculateRecipeCost } from "@utils";
 
 const {
   LEAVE_TO_COOL_BEFORE_REMOVING_FROM_LOAF_TIN,
@@ -87,7 +87,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   ]
 ];
 
-const method: IRecipeMethod = [
+const method: Array<string> = [
   preheatOven({ degreesCelcius: 150 }),
   "blend (peeled) bananas with butter, sugar, oil and vanilla",
   "in a small mixing bowl, weigh flour and stir in the baking powder, bicarbonate of soda, cinnamon and nutmeg",
@@ -99,15 +99,20 @@ const method: IRecipeMethod = [
   "evenly spread icing over the cake"
 ];
 
-const title: IRecipeTitle = "banana cake";
+const title: string = "Banana Cake";
 const makes: IRecipeMakes = { quantity: 10, measurement: MEASUREMENTS.SLICE };
 const diet: IRecipeDiet = DIETS.VEGAN;
 const image: IImageSrc = PHOTOS_RECIPES.BANANA_CAKE;
+
+const totalCost: number = calculateRecipeCost(ingredients, title);
+const portionCost: number = totalCost / makes.quantity;
 
 export const BANANA_CAKE: IRecipeCard = {
   title,
   favourite: true,
   ingredients,
+  totalCost,
+  portionCost,
   makes,
   method,
   diet,

@@ -5,7 +5,7 @@ interface IScreenSizes {
   isPhone: boolean;
 }
 
-export const useScreenWidths = (): IScreenSizes => {
+export const useMediaQueries = (): IScreenSizes => {
   const isDesktop: boolean = useMediaQuery({
     query: "(min-width: 1000px)"
   });

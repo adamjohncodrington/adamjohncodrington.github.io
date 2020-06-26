@@ -3,12 +3,12 @@ import { PAGES } from "pages";
 
 const { GIGS, RECIPES, THEATRE, TRAVEL, VINYL } = PAGES;
 
-export const HOMEPAGE_ROUTE: IHomepageRoute = {
+export const HOMEPAGE_ROUTE: IRoute = {
   title: "Home",
   dest: "/"
 };
 
-export const PAGE_ROUTES: Array<IRoute> = [
+export const PAGE_ROUTES: Array<IPageRoute> = [
   {
     dest: "/gigs",
     icon: SVG_ICONS.MICROPHONE,
@@ -39,4 +39,4 @@ export const PAGE_ROUTES: Array<IRoute> = [
     title: "Vinyl",
     page: VINYL
   }
-].filter((route: IRoute) => !route.hide);
+].filter((route: IPageRoute) => !route.hide);

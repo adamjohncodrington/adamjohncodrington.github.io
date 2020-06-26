@@ -1,5 +1,6 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
 import { PHOTOS_RECIPES } from "resources";
+import { calculateRecipeCost } from "@utils";
 
 const ingredients: Array<Array<IRecipeIngredient>> = [
   [
@@ -48,23 +49,26 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   ]
 ];
 
-const method: IRecipeMethod = [
+const method: Array<string> = [
   "transfer all ingredients to blender and blitz until smooth",
   "transfer to a saucepan and heat on low for about 20 minutes",
   "remove from heat, leave to cool",
   "keep refrigerated in a jar for up to 2 weeks"
 ];
 
-const title: IRecipeTitle = "piri piri";
+const title: string = "Piri Piri";
 const makes: IRecipeMakes = { quantity: 475, measurement: MEASUREMENTS.GRAM };
 const diet: IRecipeDiet = DIETS.VEGAN;
 const image: IImageSrc = PHOTOS_RECIPES.PIRI_PIRI;
+
+const totalCost: number = calculateRecipeCost(ingredients, title);
 
 export const PIRI_PIRI: IRecipeCard = {
   title,
   ingredients,
   makes,
   method,
+  totalCost,
   diet,
   image
 };

@@ -1,6 +1,6 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
 
-import { recipeMethodEntries } from "utils";
+import { recipeMethodEntries, calculateRecipeCost } from "@utils";
 
 const { preheatOven } = recipeMethodEntries();
 
@@ -71,7 +71,7 @@ const serveWith: Array<Array<IServeWithItem>> = [
   [{ ingredient: INGREDIENTS.SAGE_FRESH, notes: "crispy" }]
 ];
 
-const method: IRecipeMethod = [
+const method: Array<string> = [
   preheatOven({ degreesCelcius: 200 }),
   "roast evenly-cubed squash for 40 minutes (in some olive oil, salt and pepper)",
   "fry diced onion and leek with crushed garlic in half the butter (and some water) for about 10 minutes until soft",
@@ -81,15 +81,20 @@ const method: IRecipeMethod = [
   "add finely sliced green beans shortly into the rice cooking",
   "remove from heat, stir in squash, yeast, salt, pepper, remaining butter"
 ];
-const title: IRecipeTitle = "risotto";
+const title: string = "Risotto";
 const makes: IRecipeMakes = { quantity: 4, measurement: MEASUREMENTS.PORTION };
 const diet: IRecipeDiet = DIETS.VEGAN;
+
+const totalCost: number = calculateRecipeCost(ingredients, title);
+const portionCost: number = totalCost / makes.quantity;
 
 export const RISOTTO: IRecipeCard = {
   title,
   ingredients,
   makes,
   serveWith,
+  portionCost,
+  totalCost,
   diet,
   method
 };

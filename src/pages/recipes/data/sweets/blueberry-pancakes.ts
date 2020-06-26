@@ -1,4 +1,5 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
+import { calculateRecipeCost } from "@utils";
 
 const ingredients: Array<Array<IRecipeIngredient>> = [
   [
@@ -45,7 +46,7 @@ const serveWith: Array<Array<IServeWithItem>> = [
   [{ ingredient: INGREDIENTS.CINNAMON_GROUND }]
 ];
 
-const method: IRecipeMethod = [
+const method: Array<string> = [
   "whisk all ingredients except blueberries",
   "fold blueberries into pancake batter",
   "brush frying pan with sunflower oil and heat",
@@ -54,12 +55,15 @@ const method: IRecipeMethod = [
   "remove from heat and serve"
 ];
 
-const title: IRecipeTitle = "blueberry pancakes";
+const title: string = "Blueberry Pancakes";
 const diet: IRecipeDiet = DIETS.VEGETARIAN;
+
+const totalCost: number = calculateRecipeCost(ingredients, title);
 
 export const BLUEBERRY_PANCAKES: IRecipeCard = {
   title,
   ingredients,
+  totalCost,
   serveWith,
   method,
   diet

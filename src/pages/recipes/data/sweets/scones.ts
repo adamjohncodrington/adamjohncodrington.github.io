@@ -1,6 +1,6 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
 
-import { recipeMethodEntries } from "utils";
+import { recipeMethodEntries, calculateRecipeCost } from "@utils";
 
 const { preheatOven, bakeForAbout } = recipeMethodEntries();
 
@@ -44,7 +44,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   ]
 ];
 
-const method: IRecipeMethod = [
+const method: Array<string> = [
   preheatOven({ degreesCelcius: 200, bakingTray: true }),
   "sieve flour and baking powder, combine with sugar and salt",
   "add butter, use fingertips to form fine crumbs",
@@ -56,12 +56,15 @@ const method: IRecipeMethod = [
   bakeForAbout({ minutes: 10, wellRisen: true })
 ];
 
-const title: IRecipeTitle = "scones";
+const title: string = "Scones";
 const diet: IRecipeDiet = DIETS.VEGAN;
+
+const totalCost: number = calculateRecipeCost(ingredients, title);
 
 export const SCONES: IRecipeCard = {
   ingredients,
   method,
   diet,
+  totalCost,
   title
 };

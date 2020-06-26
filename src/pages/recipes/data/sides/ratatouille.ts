@@ -1,7 +1,7 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
 import { PHOTOS_RECIPES } from "resources";
 
-import { recipeMethodEntries } from "utils";
+import { recipeMethodEntries, calculateRecipeCost } from "@utils";
 
 const { preheatOven } = recipeMethodEntries();
 
@@ -67,7 +67,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   ]
 ];
 
-const method: IRecipeMethod = [
+const method: Array<string> = [
   preheatOven({ degreesCelcius: 180 }),
   "chunkily chop the aubergine, courgette, peppers and onions and distribute evenly across 2 baking trays",
   "drizzle the vegetables in oil, ensuring they are evenly coated, plus season with salt and pepper",
@@ -80,16 +80,21 @@ const method: IRecipeMethod = [
   "bake for a final 10 minutes"
 ];
 
-const title: IRecipeTitle = "ratatouille";
+const title: string = "Ratatouille";
 const makes: IRecipeMakes = { quantity: 5, measurement: MEASUREMENTS.PORTION };
 const diet: IRecipeDiet = DIETS.VEGAN;
 const image: IImageSrc = PHOTOS_RECIPES.RATATOUILLE;
+
+const totalCost: number = calculateRecipeCost(ingredients, title);
+const portionCost: number = totalCost / makes.quantity;
 
 export const RATATOUILLE: IRecipeCard = {
   title,
   ingredients,
   makes,
   method,
+  totalCost,
+  portionCost,
   diet,
   image,
   favourite: true

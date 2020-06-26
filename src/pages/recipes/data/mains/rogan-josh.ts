@@ -1,5 +1,6 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
 import { PHOTOS_RECIPES } from "resources";
+import { calculateRecipeCost } from "@utils";
 
 const ingredients: Array<Array<IRecipeIngredient>> = [
   [
@@ -62,7 +63,7 @@ const serveWith: Array<Array<IServeWithItem>> = [
   [{ ingredient: INGREDIENTS.KALE }, { ingredient: INGREDIENTS.POPPADOMS }]
 ];
 
-const method: IRecipeMethod = [
+const method: Array<string> = [
   "fry diced onion in oil, curry paste and some water on a medium heat for at least 10 minutes",
   "meanwhile, blend coriander with some water",
   "add grated ginger, diced sweet potato, drained chickpeas and blended coriander to frying pan",
@@ -71,15 +72,20 @@ const method: IRecipeMethod = [
   "reduce heat and simmer for at least 30 minutes",
   "stir in petit pois, coconut milk and spinach"
 ];
-const title: IRecipeTitle = "rogan josh";
+const title: string = "Rogan josh";
 const makes: IRecipeMakes = { quantity: 5, measurement: MEASUREMENTS.PORTION };
 const diet: IRecipeDiet = DIETS.VEGAN;
 const image: IImageSrc = PHOTOS_RECIPES.ROGAN_JOSH;
+
+const totalCost: number = calculateRecipeCost(ingredients, title);
+const portionCost: number = totalCost / makes.quantity;
 
 export const ROGAN_JOSH: IRecipeCard = {
   title,
   ingredients,
   makes,
+  totalCost,
+  portionCost,
   serveWith,
   diet,
   method,

@@ -1,7 +1,7 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
 import { PHOTOS_RECIPES } from "resources";
 
-import { recipeMethodEntries } from "utils";
+import { recipeMethodEntries, calculateRecipeCost } from "@utils";
 
 const { preheatOven } = recipeMethodEntries();
 
@@ -50,7 +50,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   ]
 ];
 
-const method: IRecipeMethod = [
+const method: Array<string> = [
   preheatOven({ degreesCelcius: 150 }),
   "in a large mixing bowl, stir finely chopped fruit and salt into the oats",
   "melt butter in a saucepan with golden syrup and sugar",
@@ -60,16 +60,21 @@ const method: IRecipeMethod = [
   "leave to cool before cutting into suitably-sized chunks"
 ];
 
-const title: IRecipeTitle = "flapjacks";
+const title: string = "Flapjacks";
 const makes: IRecipeMakes = { quantity: 12, measurement: MEASUREMENTS.CHUNK };
 const diet: IRecipeDiet = DIETS.VEGAN;
 const image: IImageSrc = PHOTOS_RECIPES.FLAPJACKS;
+
+const totalCost: number = calculateRecipeCost(ingredients, title);
+const portionCost: number = totalCost / makes.quantity;
 
 export const FLAPJACKS: IRecipeCard = {
   title,
   ingredients,
   makes,
   method,
+  totalCost,
+  portionCost,
   diet,
   image
 };

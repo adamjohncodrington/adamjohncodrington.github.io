@@ -4,7 +4,7 @@ import {
   MUSICIANS as musicians,
   FESTIVALS as festivals
 } from "@constants";
-import { isInFuture } from "utils";
+import { isInFuture } from "@utils";
 
 import { mapToCountedList } from "../factory";
 import { DATA } from "./data";
@@ -16,8 +16,7 @@ const UP_NEXT: Array<IGigCard> = ALL.filter((gig: IGigCard) =>
   isInFuture(gig.dates)
 );
 
-export const futureCount: number = UP_NEXT.length;
-export const pastCount: number = ALL.length - futureCount;
+export const pastCount: number = ALL.length - UP_NEXT.length;
 
 const mapToCountedListWrapper = (params: any) =>
   mapToCountedList({

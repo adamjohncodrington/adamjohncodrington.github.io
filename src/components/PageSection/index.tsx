@@ -4,7 +4,7 @@ import { CountedList } from "../CountedList";
 import { Disclosure } from "../Disclosure";
 import { GigCardList } from "../GigCardList";
 import { PageSectionHeader } from "../PageSectionHeader";
-import { RecipeCardList } from "../RecipeCardList";
+import { RecipeCards } from "../RecipeCards";
 import { TheatreCardList } from "../TheatreCardList";
 import { TravelCardList } from "../TravelCardList";
 import { VinylCardList } from "../VinylCardList";
@@ -23,7 +23,7 @@ export const PageSection: React.FC<IPageSection> = ({
     vinylCards
   },
   count,
-  starredCount,
+  starCount,
   isStatic,
   initiallyExpandedAlways,
   initiallyExpandedOnDesktop,
@@ -37,18 +37,18 @@ export const PageSection: React.FC<IPageSection> = ({
       onlyHeaderClickable={onlyHeaderClickable}
       headerComponent={
         <PageSectionHeader
-          text={title}
+          title={title}
           count={count}
-          starredCount={starredCount}
+          starCount={starCount}
           icon={icon}
-          dataTest="disclosure-header"
+          dataTest="section-header-container"
         />
       }
     >
       <section data-test="page-section-body">
         {countedItems && <CountedList countedItems={countedItems} />}
         {gigCards && <GigCardList gigCards={gigCards} />}
-        {recipeCards && <RecipeCardList recipeCards={recipeCards} />}
+        {recipeCards && <RecipeCards recipeCards={recipeCards} />}
         {theatreCards && <TheatreCardList theatreCards={theatreCards} />}
         {travelCards && <TravelCardList travelCards={travelCards} />}
         {vinylCards && <VinylCardList vinylCards={vinylCards} />}

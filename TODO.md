@@ -1,30 +1,27 @@
 # TO DO LIST
 
-- make `link` a compulsory attribute on `IVinylCard` by adding remaining links to all vinyl data
-- use `theme` value on `primitives/Grid`
-
 ## Refactoring
 
-- move final instances of `px` in `EventCard` and `RecipeCard` to `theme`
+- move all remaining instances of `px` to theme
 - rationalise theme
 - rationalise `data-test` attributes
 - review semantics of page structure, landmarks, accessibility, etc.
 - recipe method array should be `ol` not `ul`?
-- move the `cost` and `displayCost` to the definition of recipes
 
 ## Features
 
-- add sorting to vinyls collection and wishlist
+- add `NavBar` mobile component
+- add sorting to vinyls collection and wish list
 - reinstate circles indicating `company` on cards
 
 ## Styling
 
-- make page count font size larger again (review `FONT_SIZES`)
 - reduce whitespace between bullet points and list text?
+- prevent wrapping of `li` text beneath the bullet point
 
 ## TypeScript
 
-- remove as many remaining instances of `any` and `@ts-ignore` as possible
+- remove as many remaining instances of `any` as possible
 
 ## Testing
 

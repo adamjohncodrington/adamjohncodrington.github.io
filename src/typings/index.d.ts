@@ -59,21 +59,20 @@ interface IPageSection extends IPageSectionDisclosure {
   icon?: IImageSrc;
   data: IPageSectionDataTypes;
   count?: number;
-  starredCount?: number;
+  starCount?: number;
 }
 
 interface IPage {
-  pastCount?: number;
-  futureCount?: number;
+  count?: number;
   sections: Array<IPageSection>;
 }
 
-interface IHomepageRoute {
+interface IRoute {
   title: string;
   dest: string;
 }
 
-interface IRoute extends IHomepageRoute {
+interface IPageRoute extends IRoute {
   hide?: boolean;
   icon: IImageSrc;
   page: IPage;

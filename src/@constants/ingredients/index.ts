@@ -8,7 +8,7 @@ import { SEASONING } from "./seasoning";
 import { NUTS_AND_SEEDS } from "./nuts-seeds";
 import { VEG } from "./veg";
 
-export const INGREDIENTS: IInventoryIngredients = {
+export const INGREDIENTS: IInventoryIngredientsObject = {
   ...BAKING,
   ...CARBS,
   ...DAIRY,
@@ -19,6 +19,6 @@ export const INGREDIENTS: IInventoryIngredients = {
   ...SEASONING,
   ...VEG,
 
-  WATER: { displayText: "water", cost: { price: 0 } },
-  WATER_BOILING: { displayText: "boiling water", cost: { price: 0 } }
+  WATER: { displayText: "water", knownCost: { price: 0 } },
+  WATER_BOILING: { displayText: "boiling water", knownCost: { price: 0 } }
 };

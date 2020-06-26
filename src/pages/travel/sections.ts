@@ -1,6 +1,6 @@
 import { PAGE_SECTION_TITLES } from "@constants";
 import { SVG_ICONS } from "resources";
-import { isInFuture } from "utils";
+import { isInFuture } from "@utils";
 
 import { DATA } from "./data";
 import { FACTORY } from "./factory";
@@ -27,7 +27,7 @@ const SECTIONS_STATS: Array<IPageSection> = [
     icon: SVG_ICONS.CITY,
     data: { countedItems: CITIES },
     count: CITIES.length,
-    starredCount: CITIES.filter(city => city.star).length
+    starCount: CITIES.filter(city => city.star).length
   },
   {
     title: "Countries",

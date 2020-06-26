@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Ul, Li, Columns } from "primitives";
-import { replaceSpacesWithDashes, useScreenWidths } from "utils";
+import { replaceSpacesWithDashes, useMediaQueries } from "@utils";
 
 import { PageSection } from "../PageSection";
 
@@ -23,21 +23,20 @@ export const PageSectionsLayout: React.FC<IPageSectionsLayout> = ({
         vinylCards
       }
     }: IPageSection): boolean => {
-      const noData: boolean =
-        !!(countedItems && countedItems.length === 0) ||
-        !!(gigCards && gigCards.length === 0) ||
-        !!(
-          recipeCards && recipeCards.filter(item => !item.hide).length === 0
-        ) ||
-        !!(theatreCards && theatreCards.length === 0) ||
-        !!(travelCards && travelCards.length === 0) ||
-        !!(vinylCards && vinylCards.length === 0);
+      const validData: boolean = !(
+        (countedItems && countedItems.length === 0) ||
+        (gigCards && gigCards.length === 0) ||
+        (recipeCards && recipeCards.filter(item => !item.hide).length === 0) ||
+        (theatreCards && theatreCards.length === 0) ||
+        (travelCards && travelCards.length === 0) ||
+        (vinylCards && vinylCards.length === 0)
+      );
 
-      return !noData;
+      return validData;
     }
   );
 
-  const { isDesktop } = useScreenWidths();
+  const { isDesktop } = useMediaQueries();
 
   const validPageSectionCount: number = validPageSections.length;
 
@@ -52,7 +51,7 @@ export const PageSectionsLayout: React.FC<IPageSectionsLayout> = ({
 
   const pageSectionColumns: Array<Array<IPageSection>> = isDesktop
     ? [pageSectionsCol1, pageSectionsCol2]
-    : [pageSections];
+    : [validPageSections];
 
   return (
     <Columns data-test="page-sections">

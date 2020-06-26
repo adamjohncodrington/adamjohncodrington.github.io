@@ -3,6 +3,6 @@ interface IVinylCard {
   title: string;
   year: number;
   artwork: IImageSrc;
-  link?: string;
+  appleMusic: string;
   notes?: string;
 }

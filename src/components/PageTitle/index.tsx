@@ -14,10 +14,6 @@ const PageTitlePrimaryCount = styled.span`
   padding: ${props => props.theme.page.count.padding};
 `;
 
-const PageTitleSecondaryCount = styled(PageTitlePrimaryCount)`
-  opacity: ${props => props.theme.fadedOpacity};
-`;
-
 const PaddedFlexRow = styled(FlexRow)`
   padding-bottom: ${props => props.theme.pageTitleMarginBottom};
 `;
@@ -28,15 +24,13 @@ const SvgContainer = styled.div`
 
 interface PageTitleProps {
   titleText: string;
-  pastCount?: number;
-  futureCount?: number;
+  count?: number;
   icon: IImageSrc;
 }
 
 export const PageTitle: React.FC<PageTitleProps> = ({
   titleText,
-  pastCount,
-  futureCount,
+  count,
   icon
 }) => {
   const theme: ITheme = React.useContext(ThemeContext);
@@ -46,15 +40,10 @@ export const PageTitle: React.FC<PageTitleProps> = ({
       <TitleTextContainer data-test="page-title-text-container">
         <H1 data-test="page-title-text">{titleText}</H1>
 
-        {!!pastCount && pastCount > 0 && (
+        {!!count && count > 0 && (
           <PageTitlePrimaryCount data-test="page-title-past-count">
-            {pastCount}
+            {count}
           </PageTitlePrimaryCount>
-        )}
-        {!!futureCount && futureCount > 0 && (
-          <PageTitleSecondaryCount data-test="page-title-future-count">
-            {futureCount}
-          </PageTitleSecondaryCount>
         )}
       </TitleTextContainer>
 

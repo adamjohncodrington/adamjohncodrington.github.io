@@ -1,7 +1,7 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
 import { PHOTOS_RECIPES } from "resources";
 
-import { recipeMethodEntries } from "utils";
+import { recipeMethodEntries } from "@utils";
 
 const { preheatOven, FOLD_IN_FLOUR_MIX, bakeForAbout } = recipeMethodEntries();
 
@@ -57,7 +57,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   ]
 ];
 
-const method: IRecipeMethod = [
+const method: Array<string> = [
   preheatOven({ degreesCelcius: 150 }),
   "in a large mixing bowl, add chocolate (broken into chunks), oil and butter",
   "rest the large mixing bowl over a small saucepan of hot (not boiling) water and stir until melted, then remove from heat",
@@ -71,7 +71,7 @@ const method: IRecipeMethod = [
   "store in airtight container"
 ];
 
-const title: IRecipeTitle = "brownies";
+const title: string = "Brownies";
 const diet: IRecipeDiet = DIETS.VEGAN;
 const image: IImageSrc = PHOTOS_RECIPES.BROWNIES;
 

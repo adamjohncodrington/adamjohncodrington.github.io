@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { FONT_SIZES, CSS } from "styles";
+import { FONT_SIZES, CSS } from "@styles";
 
 export const SeventyFivePercentSpan = styled.span`
   font-size: 75%;

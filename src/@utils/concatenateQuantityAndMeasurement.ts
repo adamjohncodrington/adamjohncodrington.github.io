@@ -2,7 +2,7 @@ import { MEASUREMENTS } from "@constants";
 
 export const concatenateQuantityAndMeasurement = (
   displayQuantity: string,
-  measurement: IIngredientMeasurement
+  measurement: string
 ) => {
   if (
     measurement === MEASUREMENTS.GRAM ||

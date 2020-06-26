@@ -1,20 +1,28 @@
 import { MEASUREMENTS } from "../../measurements";
 
-export const SYRUPS: IInventoryIngredients = {
+export const SYRUPS: IInventoryIngredientsObject = {
   LEMON_EXTRACT: {
     displayText: "lemon extract",
-    cost: { quantity: 38, measurement: MEASUREMENTS.MILLILITRE, price: 1.5 }
+    knownCost: {
+      quantity: 38,
+      measurement: MEASUREMENTS.MILLILITRE,
+      price: 1.5
+    }
   },
   NECTAR_AGAVE: {
     displayText: "agave nectar",
-    cost: { quantity: 250, measurement: MEASUREMENTS.MILLILITRE, price: 4 }
+    knownCost: { quantity: 250, measurement: MEASUREMENTS.MILLILITRE, price: 4 }
   },
   SYRUP_GOLDEN: {
     displayText: "golden syrup",
-    cost: { quantity: 600, measurement: MEASUREMENTS.GRAM, price: 1.9 }
+    knownCost: { quantity: 600, measurement: MEASUREMENTS.GRAM, price: 1.9 }
   },
   VANILLA_EXTRACT: {
     displayText: "vanilla extract",
-    cost: { quantity: 35, measurement: MEASUREMENTS.MILLILITRE, price: 1.3 }
+    knownCost: {
+      quantity: 35,
+      measurement: MEASUREMENTS.MILLILITRE,
+      price: 1.3
+    }
   }
 };

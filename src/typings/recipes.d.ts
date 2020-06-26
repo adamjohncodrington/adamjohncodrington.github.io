@@ -1,60 +1,57 @@
-type IIngredientMeasurement = string | undefined;
-type IIngredientQuantity = number;
-type IRecipeTitle = string;
 type IImageSrc = string;
 type IRecipeImage = IImageSrc;
 
 interface IIngredientCost {
-  quantity?: IIngredientQuantity;
   price: number;
-  measurement?: IIngredientMeasurement;
+  quantity?: number;
+  measurement?: string;
   payFullAmountAlways?: boolean;
 }
 
-type IInventoryIngredients = {
+type IInventoryIngredientsObject = {
   [inventoryIngredient: string]: IInventoryIngredient;
 };
 
 interface IInventoryIngredient {
   displayText: string;
-  cost?: IIngredientCost;
+  knownCost?: IIngredientCost;
 }
+
+interface IRecipeIngredient {
+  ingredient: IInventoryIngredient;
+  quantity?: number;
+  measurement?: string;
+  optional?: boolean;
+  notes?: string;
+}
+
 interface IServeWithItem {
   ingredient: IInventoryIngredient;
   notes?: string;
 }
 interface IRecipeMakes {
-  quantity: IIngredientQuantity;
-  measurement: IIngredientMeasurement;
-}
-
-interface IRecipeIngredient {
-  ingredient: IInventoryIngredient;
-  quantity?: IIngredientQuantity;
-  measurement?: IIngredientMeasurement;
-  optional?: boolean;
-  notes?: string;
+  quantity: number;
+  measurement?: string;
 }
 
 interface IRecipeDiet {
   abbreviation: string;
   color: string;
 }
-type IRecipeMethod = Array<string>;
-
-type IMeasurements = { [measurement: string]: IIngredientMeasurement };
 
 interface IRecipeCard {
-  title: IRecipeTitle;
+  title: string;
   makes?: IRecipeMakes;
   image?: IRecipeImage;
   serveWith?: Array<Array<IServeWithItem>>;
   ingredients: Array<Array<IRecipeIngredient>>;
   diet: IRecipeDiet;
-  method?: IRecipeMethod;
+  method?: Array<string>;
   favourite?: boolean;
   newRecipe?: boolean;
   hide?: boolean;
+  totalCost?: number;
+  portionCost?: number;
 }
 
 interface IRecipeGroup {

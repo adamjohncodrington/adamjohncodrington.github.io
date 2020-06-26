@@ -1,6 +1,6 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
 
-import { recipeMethodEntries } from "utils";
+import { recipeMethodEntries } from "@utils";
 
 const {
   preheatOven,
@@ -72,7 +72,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   ]
 ];
 
-const method: IRecipeMethod = [
+const method: Array<string> = [
   preheatOven({ degreesCelcius: 150 }),
   "in a large mixing bowl, whisk the coconut milk with the sugar, oil and lemon juice for at least 3 minutes",
   "stir in the lemon zest, vanilla extract and lemon extract",
@@ -85,7 +85,7 @@ const method: IRecipeMethod = [
   "evenly coat drizzle topping"
 ];
 
-const title: IRecipeTitle = "lemon drizzle";
+const title: string = "Lemon Drizzle";
 const makes: IRecipeMakes = { quantity: 10, measurement: MEASUREMENTS.SLICE };
 const diet: IRecipeDiet = DIETS.VEGAN;
 

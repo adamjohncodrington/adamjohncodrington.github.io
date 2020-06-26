@@ -1,4 +1,5 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
+import { calculateRecipeCost } from "@utils";
 
 const ingredients: Array<Array<IRecipeIngredient>> = [
   [
@@ -55,19 +56,22 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   ]
 ];
 
-const method: IRecipeMethod = [
+const method: Array<string> = [
   "transfer all ingredients to blender",
   "blend until smooth",
   "store in refrigerator for up to 1 week"
 ];
 
-const title: IRecipeTitle = "pesto";
+const title: string = "Pesto";
 const diet: IRecipeDiet = DIETS.VEGAN;
 const makes: IRecipeMakes = { quantity: 100, measurement: MEASUREMENTS.GRAM };
+
+const totalCost: number = calculateRecipeCost(ingredients, title);
 
 export const PESTO: IRecipeCard = {
   title,
   ingredients,
+  totalCost,
   diet,
   makes,
   method

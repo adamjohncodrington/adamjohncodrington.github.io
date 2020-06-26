@@ -6,6 +6,7 @@ interface IRecipeCardTitle {
   favourite?: boolean;
 }
 export const RecipeCardTitle = styled(H3)`
+  text-transform: lowercase;
   font-weight: 300;
   flex: 1;
 
@@ -22,11 +23,14 @@ export const RecipeBody = styled.div`
   padding-top: 5px;
 
   > * {
-    padding: 10px 0 5px;
+    padding-top: 10px;
+    padding-bottom: 5px;
   }
 `;
 
 export const PaddedFlexColumn = styled(FlexColumn)`
+  text-align: center;
+
   > *:not(:first-child) {
     padding-top: 4px;
   }

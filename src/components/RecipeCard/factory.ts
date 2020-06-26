@@ -1,7 +1,7 @@
-import { generateIngredientListItem } from "utils";
+import { generateIngredientListItem } from "@utils";
 
 export const mapMethodToListItems = (
-  method: IRecipeMethod
+  method: Array<string>
 ): Array<IListItemWithPaddingTopFlag> =>
   method.map(
     (item: string): IListItemWithPaddingTopFlag => ({

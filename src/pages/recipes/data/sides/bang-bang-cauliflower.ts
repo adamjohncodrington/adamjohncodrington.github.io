@@ -1,6 +1,6 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
 
-import { recipeMethodEntries } from "utils";
+import { recipeMethodEntries, calculateRecipeCost } from "@utils";
 
 const { preheatOven } = recipeMethodEntries();
 
@@ -58,13 +58,11 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
       quantity: 1,
       measurement: MEASUREMENTS.TEASPOON
     },
-    { ingredient: INGREDIENTS.GARLIC_CLOVE, quantity: 2 },
-    { ingredient: INGREDIENTS.ONION_SPRING },
-    { ingredient: INGREDIENTS.SEEDS_SESAME }
+    { ingredient: INGREDIENTS.GARLIC_CLOVE, quantity: 2 }
   ]
 ];
 
-const method: IRecipeMethod = [
+const method: Array<string> = [
   preheatOven({ degreesCelcius: 200 }),
   "mix flour, almond milk, salt, pepper, turmeric, paprika in large bowl to make batter",
   "remove all leaves from cauliflower, cut vertically around the stem to release florets",
@@ -76,13 +74,24 @@ const method: IRecipeMethod = [
   "pour over fried spring onion and sesame seeds"
 ];
 
-const title: IRecipeTitle = "bang bang cauliflower";
+const serveWith: Array<Array<IServeWithItem>> = [
+  [{ ingredient: INGREDIENTS.ONION_SPRING }],
+  [{ ingredient: INGREDIENTS.SEEDS_SESAME }]
+];
+
+const title: string = "Bang Bang Cauliflower";
 const makes: IRecipeMakes = { quantity: 2, measurement: MEASUREMENTS.PORTION };
 const diet: IRecipeDiet = DIETS.VEGAN;
+
+const totalCost: number = calculateRecipeCost(ingredients, title);
+const portionCost: number = totalCost / makes.quantity;
 
 export const BANG_BANG_CAULIFLOWER: IRecipeCard = {
   title,
   ingredients,
+  totalCost,
+  serveWith,
+  portionCost,
   makes,
   method,
   diet

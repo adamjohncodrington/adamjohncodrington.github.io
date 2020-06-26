@@ -1,20 +1,20 @@
 import { MEASUREMENTS } from "../../measurements";
 
-export const FRUIT_DRIED: IInventoryIngredients = {
+export const FRUIT_DRIED: IInventoryIngredientsObject = {
   APRICOTS_DRIED: {
     displayText: "dried apricots",
-    cost: { quantity: 500, measurement: MEASUREMENTS.GRAM, price: 2.7 }
+    knownCost: { quantity: 500, measurement: MEASUREMENTS.GRAM, price: 2.7 }
   },
   BLUEBERRIES_DRIED: {
     displayText: "dried blueberries",
-    cost: { quantity: 75, measurement: MEASUREMENTS.GRAM, price: 2.25 }
+    knownCost: { quantity: 75, measurement: MEASUREMENTS.GRAM, price: 2.25 }
   },
   CRANBERRIES_DRIED: {
     displayText: "dried cranberries",
-    cost: { quantity: 75, measurement: MEASUREMENTS.GRAM, price: 1.15 }
+    knownCost: { quantity: 75, measurement: MEASUREMENTS.GRAM, price: 1.15 }
   },
   RAISINS: {
     displayText: "raisins",
-    cost: { quantity: 500, measurement: MEASUREMENTS.GRAM, price: 1.8 }
+    knownCost: { quantity: 500, measurement: MEASUREMENTS.GRAM, price: 1.8 }
   }
 };

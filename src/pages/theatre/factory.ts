@@ -4,7 +4,7 @@ import {
   PLAYS as plays,
   THEATRE_VENUES
 } from "@constants";
-import { isInFuture } from "utils";
+import { isInFuture } from "@utils";
 
 import { mapToCountedList } from "../factory";
 import { DATA } from "./data";

@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "styled-components";
 
-import { MEASUREMENTS, NO_UNIT_COST_FOR_RECIPE_EXISTS } from "@constants";
 import {
   Circle,
   FlexRow,
+  CentredDiv,
   SeventyFivePercentSpan,
   SquareImage
 } from "primitives";
-import { calculateRecipeCost, getIngredientsHeader } from "utils";
+import { getIngredientsHeader, numberToCurrencyString } from "@utils";
 
 import { Disclosure } from "../Disclosure";
 import { List } from "../List";
@@ -29,15 +29,11 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
   serveWith,
   newRecipe,
   diet,
-  image
+  image,
+  totalCost,
+  portionCost
 }) => {
   const theme: ITheme = useContext(ThemeContext);
-
-  const { costDisplayText, unitCostDisplayText } = calculateRecipeCost({
-    ingredients,
-    yieldQuantity: makes && makes.quantity,
-    recipeTitle: title
-  });
 
   const defaultIngredientsHeader: string = "ingredients";
   const ingredientsHeader: string = makes
@@ -78,23 +74,27 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
           />
         )}
 
-        {image && <SquareImage imgSrc={image} size={theme.recipe.image.size} />}
+        {image && (
+          <CentredDiv>
+            <SquareImage imgSrc={image} size={theme.recipe.image.size} />
+          </CentredDiv>
+        )}
 
-        <PaddedFlexColumn>
-          <span>
-            approx. <strong>{costDisplayText}</strong> to make
-          </span>
+        {totalCost && (
+          <PaddedFlexColumn>
+            <span>
+              approx. <strong>{numberToCurrencyString(totalCost)}</strong> to
+              make
+            </span>
 
-          {unitCostDisplayText !== NO_UNIT_COST_FOR_RECIPE_EXISTS &&
-            makes &&
-            makes.measurement &&
-            makes.quantity > 1 &&
-            makes.measurement !== MEASUREMENTS.GRAM && (
+            {portionCost && makes && makes.measurement && (
               <SeventyFivePercentSpan>
-                <strong>{unitCostDisplayText}</strong> per {makes.measurement}
+                <strong>{numberToCurrencyString(portionCost)}</strong> per
+                {makes.measurement}
               </SeventyFivePercentSpan>
             )}
-        </PaddedFlexColumn>
+          </PaddedFlexColumn>
+        )}
       </RecipeBody>
     </Disclosure>
   );

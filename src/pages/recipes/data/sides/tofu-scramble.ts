@@ -1,4 +1,5 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
+import { calculateRecipeCost } from "@utils";
 
 const ingredients: Array<Array<IRecipeIngredient>> = [
   [
@@ -55,7 +56,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   ]
 ];
 
-const method: IRecipeMethod = [
+const method: Array<string> = [
   "drain tofu, crumble into small pieces (using both fingers) into a large mixing bowl",
   "in a small jug, make paste from yeast, turmeric, paprika, salt, pepper, thyme, water and oil",
   "pour the paste over the crumbled tofu and stir until evenly covered",
@@ -63,13 +64,18 @@ const method: IRecipeMethod = [
   "fry tofu until heated through"
 ];
 
-const title: IRecipeTitle = "tofu scramble";
+const title: string = "Tofu Scramble";
 const makes: IRecipeMakes = { quantity: 4, measurement: MEASUREMENTS.PORTION };
 const diet: IRecipeDiet = DIETS.VEGAN;
+
+const totalCost: number = calculateRecipeCost(ingredients, title);
+const portionCost: number = totalCost / makes.quantity;
 
 export const TOFU_SCRAMBLE: IRecipeCard = {
   ingredients,
   makes,
+  totalCost,
+  portionCost,
   method,
   title,
   diet

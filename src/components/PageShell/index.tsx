@@ -19,19 +19,10 @@ export const PageShell: React.FC<PageShellProps> = ({
   icon,
   page,
   children
-}) => {
-  const { pastCount, futureCount } = page;
+}) => (
+  <StyledPageShell data-test="page-shell">
+    <PageTitle titleText={title} count={page.count} icon={icon} />
 
-  return (
-    <StyledPageShell data-test="page-shell">
-      <PageTitle
-        titleText={title}
-        pastCount={pastCount}
-        futureCount={futureCount}
-        icon={icon}
-      />
-
-      {children}
-    </StyledPageShell>
-  );
-};
+    {children}
+  </StyledPageShell>
+);

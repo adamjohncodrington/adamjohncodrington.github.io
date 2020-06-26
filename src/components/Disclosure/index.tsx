@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 
-import { useScreenWidths } from "utils";
+import { useMediaQueries } from "@utils";
 
 import { PanelContainer, ClickableRegion } from "./styles";
 
@@ -18,7 +18,7 @@ export const Disclosure: React.FC<IDisclosure> = ({
   onlyHeaderClickable = false,
   isStatic = false
 }) => {
-  const { isDesktop } = useScreenWidths();
+  const { isDesktop } = useMediaQueries();
 
   const [panelIsVisible, switchPanelVisibility] = React.useState<boolean>(
     initiallyExpandedAlways ||

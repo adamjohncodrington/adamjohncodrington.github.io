@@ -3,7 +3,7 @@ import { SVG_ICONS } from "resources";
 
 import { FACTORY } from "./factory";
 import { DATA } from "./data";
-import { isInFuture } from "utils";
+import { isInFuture } from "@utils";
 
 const { BUCKET_LIST, FESTIVALS, FRIENDS, MUSICIANS, UP_NEXT, VENUES } = FACTORY;
 

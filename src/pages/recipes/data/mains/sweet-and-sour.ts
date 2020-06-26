@@ -1,4 +1,5 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
+import { calculateRecipeCost } from "@utils";
 
 const ingredients: Array<Array<IRecipeIngredient>> = [
   [
@@ -82,7 +83,7 @@ const serveWith: Array<Array<IServeWithItem>> = [
   [{ ingredient: INGREDIENTS.RICE_BASMATI }]
 ];
 
-const method: IRecipeMethod = [
+const method: Array<string> = [
   "mix cornflour with water, set solution aside",
   "fry crushed garlic and grated ginger in a small saucepan for 1 minute",
   "pour over soy, vinegar, ketchup, crushed chillis and water",
@@ -96,14 +97,19 @@ const method: IRecipeMethod = [
   "toss in the pineapple, tofu and pour over the sauce",
   "simmer for at least 5 minutes to let the flavours infuse, serve"
 ];
-const title: IRecipeTitle = "sweet and sour";
+const title: string = "Sweet and Sour";
 const makes: IRecipeMakes = { quantity: 4, measurement: MEASUREMENTS.PORTION };
 const diet: IRecipeDiet = DIETS.VEGAN;
+
+const totalCost: number = calculateRecipeCost(ingredients, title);
+const portionCost: number = totalCost / makes.quantity;
 
 export const SWEET_AND_SOUR: IRecipeCard = {
   title,
   ingredients,
   makes,
+  totalCost,
+  portionCost,
   serveWith,
   diet,
   method

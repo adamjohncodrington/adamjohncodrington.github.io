@@ -1,5 +1,6 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
 import { PHOTOS_RECIPES } from "resources";
+import { calculateRecipeCost } from "@utils";
 
 const ingredients: Array<Array<IRecipeIngredient>> = [
   [
@@ -23,7 +24,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   ]
 ];
 
-const method: IRecipeMethod = [
+const method: Array<string> = [
   "peel potatoes and chop into small-ish chunks (to speed up the boiling process)",
   "submerge potato chunks in boiling water for at least 25 minutes (until soft enough to easily mash)",
   "drain the boiling water, then use a masher to break down the potato",
@@ -31,15 +32,18 @@ const method: IRecipeMethod = [
   "stir in the butter, then season with black pepper"
 ];
 
-const title: IRecipeTitle = "mashed potato";
+const title: string = "Mashed Potato";
 const makes: IRecipeMakes = { quantity: 2, measurement: MEASUREMENTS.PORTION };
 const diet: IRecipeDiet = DIETS.VEGAN;
 const image: IImageSrc = PHOTOS_RECIPES.MASHED_POTATO;
+
+const totalCost: number = calculateRecipeCost(ingredients, title);
 
 export const MASHED_POTATO: IRecipeCard = {
   ingredients,
   title,
   makes,
+  totalCost,
   method,
   diet,
   image

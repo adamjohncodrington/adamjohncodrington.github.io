@@ -1,7 +1,7 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
 import { PHOTOS_RECIPES } from "resources";
 
-import { recipeMethodEntries } from "utils";
+import { recipeMethodEntries, calculateRecipeCost } from "@utils";
 
 const { preheatOven } = recipeMethodEntries();
 
@@ -47,7 +47,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   ]
 ];
 
-const method: IRecipeMethod = [
+const method: Array<string> = [
   preheatOven({ degreesCelcius: 100 }),
   "wash and dry kale thoroughly, discard large stems, transfer to large mixing bowl",
   "mix oil with seasoning in a small jug",
@@ -58,15 +58,18 @@ const method: IRecipeMethod = [
   "remove from oven, leave to cool"
 ];
 
-const title: IRecipeTitle = "crispy kale";
+const title: string = "Crispy Kale";
 const diet: IRecipeDiet = DIETS.VEGAN;
 const image: IImageSrc = PHOTOS_RECIPES.KALE_CRISPY;
 const makes: IRecipeMakes = { quantity: 2, measurement: MEASUREMENTS.SERVING };
+
+const totalCost: number = calculateRecipeCost(ingredients, title);
 
 export const CRISPY_KALE: IRecipeCard = {
   title,
   ingredients,
   makes,
+  totalCost,
   method,
   image,
   diet

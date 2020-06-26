@@ -1,5 +1,5 @@
 import { FRIENDS as friends, LOCATIONS } from "@constants";
-import { isInFuture } from "utils";
+import { isInFuture } from "@utils";
 
 import { mapToCountedList, generatePropertyArrayFromObject } from "../factory";
 import { DATA } from "./data";
@@ -9,9 +9,8 @@ const { ALL, BUCKET_LIST } = DATA;
 const FAVOURITES: Array<ITravelCard> = ALL.filter(item => item.favourite);
 const UP_NEXT: Array<ITravelCard> = ALL.filter(item => isInFuture(item.dates));
 
-export const futureCount: number = UP_NEXT.length;
 export const pastCount: number =
-  ALL.filter(item => !item.notAbroad).length - futureCount;
+  ALL.filter(item => !item.notAbroad).length - UP_NEXT.length;
 
 const countries: Array<any> = Object.values(LOCATIONS);
 

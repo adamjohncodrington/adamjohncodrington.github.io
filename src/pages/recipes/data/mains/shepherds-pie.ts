@@ -1,7 +1,7 @@
 import { INGREDIENTS, MEASUREMENTS, UNICODE, DIETS } from "@constants";
 import { PHOTOS_RECIPES } from "resources";
 
-import { recipeMethodEntries } from "utils";
+import { recipeMethodEntries } from "@utils";
 
 const { preheatOven, bakeForAbout } = recipeMethodEntries();
 
@@ -98,7 +98,7 @@ const serveWith: Array<Array<IServeWithItem>> = [
   [{ ingredient: INGREDIENTS.ASPARAGUS, notes: "pan-fried" }]
 ];
 
-const method: IRecipeMethod = [
+const method: Array<string> = [
   "peel and chop potato into smallish chunks (it cooks quicker and makes it easier to mash)",
   "boil potatoes for about 25 minutes until soft and easily mashable",
   "mash potato, then stir in butter, salt, pepper and some water to loosen it",
@@ -116,7 +116,7 @@ const method: IRecipeMethod = [
   bakeForAbout({ minutes: 40 })
 ];
 
-const title: IRecipeTitle = "shepherd's pie";
+const title: string = "Shepherd's pie";
 const diet: IRecipeDiet = DIETS.VEGAN;
 const image: IImageSrc = PHOTOS_RECIPES.SHEPHERDS_PIE;
 const makes: IRecipeMakes = { quantity: 7, measurement: MEASUREMENTS.PORTION };

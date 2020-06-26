@@ -103,7 +103,7 @@ const serveWith: Array<Array<IServeWithItem>> = [
   ]
 ];
 
-const method: IRecipeMethod = [
+const method: Array<string> = [
   "thoroughly drain sun dried tomatoes from oil",
   "chop tomatoes into many smaller pieces",
   "marinade tomatoes in soy sauce and liquid smoke",
@@ -115,7 +115,7 @@ const method: IRecipeMethod = [
   "remove from heat and stir in spaghetti and tomatoes until evenly covered"
 ];
 
-const title: IRecipeTitle = "carbonara";
+const title: string = "Carbonara";
 const makes: IRecipeMakes = { quantity: 5, measurement: MEASUREMENTS.PORTION };
 const diet: IRecipeDiet = DIETS.VEGAN;
 const image: IImageSrc = PHOTOS_RECIPES.CARBONARA;

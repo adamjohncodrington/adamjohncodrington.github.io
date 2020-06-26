@@ -2,7 +2,7 @@ import {
   getPageSectionItemCounts,
   itemIsFavourited,
   moveTheSuffixToPrefix
-} from "utils";
+} from "@utils";
 
 //TODO: this file is a mess! Rewrite it.
 

@@ -1,7 +1,7 @@
 import { INGREDIENTS, MEASUREMENTS, UNICODE, DIETS } from "@constants";
 import { PHOTOS_RECIPES } from "resources";
 
-import { recipeMethodEntries } from "utils";
+import { recipeMethodEntries, calculateRecipeCost } from "@utils";
 
 const { preheatOven } = recipeMethodEntries();
 
@@ -106,7 +106,7 @@ const serveWith: Array<Array<IServeWithItem>> = [
   [{ ingredient: INGREDIENTS.BREAD_GARLIC }]
 ];
 
-const method: IRecipeMethod = [
+const method: Array<string> = [
   "fry diced onion in oil and water for at least 5 minutes",
   "add diced peppers, mushrooms, crushed garlic and fry for at least 10 minutes (replenishing the water to prevent burning)",
   `blend basil with stock powder, dried herbs, soy sauce, black pepper, balsamic vinegar, ${UNICODE.TOMATO_PUREE}, sugar and some water`,
@@ -124,10 +124,13 @@ const method: IRecipeMethod = [
   "seal the dish with vegan cheese slices",
   "bake for 35 minutes"
 ];
-const title: IRecipeTitle = "lasagne";
+const title: string = "Lasagne";
 const makes: IRecipeMakes = { quantity: 6, measurement: MEASUREMENTS.PORTION };
 const diet: IRecipeDiet = DIETS.VEGAN;
 const image: IImageSrc = PHOTOS_RECIPES.LASAGNE;
+
+const totalCost: number = calculateRecipeCost(ingredients, title);
+const portionCost: number = totalCost / makes.quantity;
 
 export const LASAGNE: IRecipeCard = {
   title,
@@ -135,6 +138,8 @@ export const LASAGNE: IRecipeCard = {
   makes,
   diet,
   serveWith,
+  totalCost,
+  portionCost,
   method,
   image
 };
