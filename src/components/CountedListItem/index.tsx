@@ -50,7 +50,7 @@ const CountedListItemText = styled.span`
     props.faded && `opacity: ${props.theme.fadedOpacity};`}
 `;
 
-export const CountedItem: React.FC<ICountedItem> = ({
+export const CountedListItem: React.FC<ICountedItem> = ({
   text,
   favourite,
   star,

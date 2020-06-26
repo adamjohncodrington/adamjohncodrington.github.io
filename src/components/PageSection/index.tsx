@@ -1,27 +1,28 @@
 import React from "react";
+import styled, { css } from "styled-components";
 
-import { CountedList } from "../CountedList";
 import { Disclosure } from "../Disclosure";
-import { GigCardList } from "../GigCardList";
 import { PageSectionHeader } from "../PageSectionHeader";
-import { RecipeCards } from "../RecipeCards";
-import { TheatreCardList } from "../TheatreCardList";
-import { TravelCardList } from "../TravelCardList";
-import { VinylCardList } from "../VinylCardList";
+import { PageSectionPanel } from "../PageSectionPanel";
 
-import { PageSectionContainer } from "./styles";
+const PageSectionContainer = styled.section`
+  ${({
+    theme: {
+      section: { background, boxShadow, borderRadius, padding, margin }
+    }
+  }) => css`
+    background: ${background};
+    box-shadow: ${boxShadow};
+    border-radius: ${borderRadius};
+    padding: 0 ${padding.horizontal};
+    margin-bottom: ${margin.bottom};
+  `}
+`;
 
 export const PageSection: React.FC<IPageSection> = ({
   title,
   icon,
-  data: {
-    countedItems,
-    gigCards,
-    recipeCards,
-    theatreCards,
-    travelCards,
-    vinylCards
-  },
+  data,
   count,
   starCount,
   isStatic,
@@ -45,14 +46,7 @@ export const PageSection: React.FC<IPageSection> = ({
         />
       }
     >
-      <section data-test="page-section-body">
-        {countedItems && <CountedList countedItems={countedItems} />}
-        {gigCards && <GigCardList gigCards={gigCards} />}
-        {recipeCards && <RecipeCards recipeCards={recipeCards} />}
-        {theatreCards && <TheatreCardList theatreCards={theatreCards} />}
-        {travelCards && <TravelCardList travelCards={travelCards} />}
-        {vinylCards && <VinylCardList vinylCards={vinylCards} />}
-      </section>
+      <PageSectionPanel {...data} />
     </Disclosure>
   </PageSectionContainer>
 );
