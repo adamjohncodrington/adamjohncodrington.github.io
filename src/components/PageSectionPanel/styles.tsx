@@ -1,63 +1,61 @@
 import styled, { css } from "styled-components";
 
 import { Ul } from "primitives";
+import { PAGE_SECTION_PANEL_TYPES } from "@constants";
 
-export const RecipeGroupList = styled(Ul)`
-  ${({
-    theme: {
-      recipe: { border, title, first, last }
-    }
-  }: IThemeProp) => css`
-    > * {
-      border-bottom: ${border.bottom};
-      padding: ${title.padding.vertical} 0;
-    }
-
-    > *:first-child {
-      padding-top: ${first.padding.top};
-    }
-
-    > *:last-child {
-      border-bottom: 0;
-      padding-bottom: ${last.padding.bottom};
-    }
-  `}
-`;
-
-interface IPageSectionList extends IThemeProp {
-  extraVerticalPaddingBetweenListItems: boolean;
-  isVinylCards?: boolean;
+interface IPageSectionPanelList {
+  pageSectionPanelType: string;
 }
 
-export const PageSectionList = styled(Ul)`
-  ${({
-    extraVerticalPaddingBetweenListItems,
-    theme: {
-      countedList,
-      eventCardList,
-      section: { padding }
-    }
-  }: IPageSectionList) => css`
-    padding-bottom: ${padding.bottom};
+const CSS_COMMON = ({ theme }: IThemeProp) => css`
+  > * {
+    border-bottom: ${theme.pageSectionPanelList.borderBottom};
+  }
+  > *:last-child {
+    border-bottom: 0;
+  }
+`;
 
-    > * {
-      border-bottom: ${countedList.border.bottom};
-      padding: ${extraVerticalPaddingBetweenListItems
-        ? `${eventCardList.padding.vertical} 0`
-        : `${countedList.padding.vertical} 0`};
-    }
+const CSS_RECIPE_CARDS = ({ theme }: IThemeProp) => css`
+  ${CSS_COMMON}
+  > * {
+    padding: ${theme.recipe.title.padding.vertical} 0;
+  }
+  > *:first-child {
+    padding-top: ${theme.recipe.first.padding.top};
+  }
+  > *:last-child {
+    padding-bottom: ${theme.recipe.last.padding.bottom};
+  }
+`;
 
-    > *:last-child {
-      ${extraVerticalPaddingBetweenListItems &&
-      `padding-bottom: ${eventCardList.finalEventCardPaddingBottom};`}
-      border-bottom: 0;
-    }
+const CSS_COUNTED_LIST = ({ theme }: IThemeProp) => css`
+  ${CSS_COMMON}
+  padding-bottom: ${theme.section.padding.bottom};
+  > * {
+    padding: ${theme.countedList.padding.vertical} 0;
+  }
+`;
 
-    ${extraVerticalPaddingBetweenListItems &&
-    css`
-      > *:first-child {
-        padding-top: 0;
-      }
-    `}
-  `}
+const CSS_REGULAR_CARDS = ({ theme }: IThemeProp) => css`
+  ${CSS_COMMON}
+  padding-bottom: ${theme.section.padding.bottom};
+  > * {
+    padding: ${theme.eventCardList.padding.vertical} 0;
+  }
+  > *:first-child {
+    padding-top: 0;
+  }
+  > *:last-child {
+    padding-bottom: ${theme.eventCardList.finalEventCardPaddingBottom};
+  }
+`;
+
+export const PageSectionPanelList = styled(Ul)`
+  ${({ pageSectionPanelType }: IPageSectionPanelList) =>
+    pageSectionPanelType === PAGE_SECTION_PANEL_TYPES.RECIPE_CARDS
+      ? CSS_RECIPE_CARDS
+      : pageSectionPanelType === PAGE_SECTION_PANEL_TYPES.COUNTED_LIST
+      ? CSS_COUNTED_LIST
+      : CSS_REGULAR_CARDS}
 `;

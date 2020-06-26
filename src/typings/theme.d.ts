@@ -57,6 +57,10 @@ interface ITheme_PageSection {
   transition: string;
 }
 
+interface ITheme_PageSectionPanelList {
+  borderBottom: IBorder;
+}
+
 interface ITheme_Recipes {
   border: { bottom: IBorder };
   image: { size: ImageSize };
@@ -88,6 +92,7 @@ type ITheme = {
   textColor: ColorValue;
 
   // Nested level
+  pageSectionPanelList: ITheme_PageSectionPanelList;
   breakpoints: IBreakpoints;
   recipe: ITheme_Recipes;
   homePage: ITheme_Homepage;

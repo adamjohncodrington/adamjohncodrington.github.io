@@ -1,5 +1,6 @@
 import React from "react";
 
+import { PAGE_SECTION_PANEL_TYPES } from "@constants";
 import { Li } from "primitives";
 
 import { CountedListItem } from "../CountedListItem";
@@ -9,7 +10,7 @@ import { TheatreCard } from "../TheatreCard";
 import { TravelCard } from "../TravelCard";
 import { VinylCard } from "../VinylCard";
 
-import { PageSectionList, RecipeGroupList } from "./styles";
+import { PageSectionPanelList } from "./styles";
 
 export const PageSectionPanel: React.FC<IPageSectionDataTypes> = ({
   countedItems,
@@ -19,17 +20,16 @@ export const PageSectionPanel: React.FC<IPageSectionDataTypes> = ({
   travelCards,
   vinylCards
 }) => {
-  const extraVerticalPaddingBetweenListItems: boolean = !!(
-    gigCards ||
-    theatreCards ||
-    travelCards ||
-    vinylCards
-  );
+  const pageSectionPanelType: string = !!recipeCards
+    ? PAGE_SECTION_PANEL_TYPES.RECIPE_CARDS
+    : !!countedItems
+    ? PAGE_SECTION_PANEL_TYPES.COUNTED_LIST
+    : PAGE_SECTION_PANEL_TYPES.REGULAR_CARDS;
 
-  if (recipeCards)
-    return (
-      <RecipeGroupList>
-        {recipeCards.map(
+  return (
+    <PageSectionPanelList pageSectionPanelType={pageSectionPanelType}>
+      {recipeCards &&
+        recipeCards.map(
           (recipeCard: IRecipeCard, index: number) =>
             !recipeCard.hide && (
               <Li key={index}>
@@ -37,15 +37,7 @@ export const PageSectionPanel: React.FC<IPageSectionDataTypes> = ({
               </Li>
             )
         )}
-      </RecipeGroupList>
-    );
 
-  return (
-    <PageSectionList
-      extraVerticalPaddingBetweenListItems={
-        extraVerticalPaddingBetweenListItems
-      }
-    >
       {gigCards &&
         gigCards.map((gigCard: IGigCard, index: number) => (
           <Li key={index}>
@@ -78,6 +70,6 @@ export const PageSectionPanel: React.FC<IPageSectionDataTypes> = ({
         countedItems.map((countedListItem: ICountedItem, index: number) => (
           <CountedListItem key={index} {...countedListItem} />
         ))}
-    </PageSectionList>
+    </PageSectionPanelList>
   );
 };

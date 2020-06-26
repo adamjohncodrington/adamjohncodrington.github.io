@@ -56,6 +56,10 @@ const THEME_breakpoints: IBreakpoints = {
   phone: { maxWidth: "480px" }
 };
 
+const THEME_pageSectionPanelList = {
+  borderBottom: BORDER_GRAY_THIN
+};
+
 export const fontFamily: IFontFamily = "-apple-system, Helvetica, sans-serif";
 export const scrollbarSize: IScrollbarSize = "0.7rem";
 
@@ -69,6 +73,8 @@ export const THEME: ITheme = {
   textColor: COLORS.black,
 
   // Nested level
+  pageSectionPanelList: THEME_pageSectionPanelList,
+
   breakpoints: THEME_breakpoints,
   countedList: THEME_countedList,
   eventCardList: THEME_eventCardList,

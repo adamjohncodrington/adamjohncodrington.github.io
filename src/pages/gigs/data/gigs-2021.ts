@@ -35,5 +35,11 @@ export const GIGS_2021: Array<IGigCard> = [
       FRIENDS.COBY_B
     ],
     ticketType: TICKET_TYPES.TICKETMASTER_ETICKET
+  },
+  {
+    headline: MUSICIANS.LADY_GAGA,
+    venue: MUSIC_VENUES.TOTTENHAM_HOTSPUR_STADIUM,
+    dates: [new Date("2021-07-30")],
+    company: [FRIENDS.RYAN, FRIENDS.DAN, FRIENDS.TOM]
   }
 ];

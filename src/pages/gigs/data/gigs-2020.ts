@@ -65,12 +65,6 @@ export const GIGS_2020: Array<IGigCard> = [
   //   company: [FRIENDS.DAN],
   //   ticketType: TICKET_TYPES.FESTICKET_PDF
   // },
-  // {
-  //   headline: MUSICIANS.LADY_GAGA,
-  //   venue: MUSIC_VENUES.TOTTENHAM_HOTSPUR_STADIUM,
-  //   dates: [new Date("2020-07-30")],
-  //   company: [FRIENDS.RYAN, FRIENDS.DAN, FRIENDS.TOM]
-  // },
   {
     headline: MUSICIANS.CARIBOU,
     venue: MUSIC_VENUES.BRIXTON_ACADEMY,
