@@ -1,15 +1,15 @@
-export { DietSymbol } from "./DietSymbol";
 export { DivWithCentredText } from "./Div";
 export {
-  FlexSpan,
-  FlexSpanGrow,
+  FlexColumn,
+  FlexLiGrow,
   FlexRow,
   FlexRowGrow,
-  FlexColumn,
-  FlexLiGrow
+  FlexSpan,
+  FlexSpanGrow
 } from "./Flex";
-export { Columns } from "./Grid";
+export { GridColumnDiv } from "./Grid";
+export { H1, H2, H3 } from "./Headings";
 export { Link } from "./Link";
 export { Ul, Li } from "./Lists";
 export { SquareImage } from "./SquareImage";
-export { H1, H2, H3, SeventyFivePercentSpan } from "./Text";
+export { SeventyFivePercentSpan } from "./Spans";

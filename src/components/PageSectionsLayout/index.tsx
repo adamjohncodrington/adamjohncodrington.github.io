@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Ul, Li, Columns } from "primitives";
+import { Ul, Li, GridColumnDiv } from "primitives";
 import { replaceSpacesWithDashes, useMediaQueries } from "@utils";
 
 import { PageSection } from "../PageSection";
@@ -36,7 +36,7 @@ export const PageSectionsLayout: React.FC<IPageSectionsLayout> = ({
     }
   );
 
-  const { isDesktop } = useMediaQueries();
+  const { displayPageSectionsIn2Columns } = useMediaQueries();
 
   const validPageSectionCount: number = validPageSections.length;
 
@@ -49,12 +49,14 @@ export const PageSectionsLayout: React.FC<IPageSectionsLayout> = ({
       !pageSectionsCol1.includes(pageSection)
   );
 
-  const pageSectionColumns: Array<Array<IPageSection>> = isDesktop
+  const pageSectionColumns: Array<Array<
+    IPageSection
+  >> = displayPageSectionsIn2Columns
     ? [pageSectionsCol1, pageSectionsCol2]
     : [validPageSections];
 
   return (
-    <Columns data-test="page-sections">
+    <GridColumnDiv data-test="page-sections" columnGap="20px">
       {pageSectionColumns.map(
         (pageSectionColumn: Array<IPageSection>, index: number) => (
           <Ul key={index} data-test={"page-column-" + (index + 1)}>
@@ -73,6 +75,6 @@ export const PageSectionsLayout: React.FC<IPageSectionsLayout> = ({
           </Ul>
         )
       )}
-    </Columns>
+    </GridColumnDiv>
   );
 };

@@ -14,15 +14,15 @@ export const Disclosure: React.FC<IDisclosure> = ({
   headerComponent,
   children,
   initiallyExpandedAlways = false,
-  initiallyExpandedOnDesktop = false,
+  initiallyExpandedIf2Columns = false,
   onlyHeaderClickable = false,
   isStatic = false
 }) => {
-  const { isDesktop } = useMediaQueries();
+  const { displayPageSectionsIn2Columns } = useMediaQueries();
 
   const [panelIsVisible, switchPanelVisibility] = React.useState<boolean>(
     initiallyExpandedAlways ||
-      (isDesktop && initiallyExpandedOnDesktop) ||
+      (displayPageSectionsIn2Columns && initiallyExpandedIf2Columns) ||
       isStatic
   );
   const [panelContainerHeight, setPanelContainerHeight] = React.useState<

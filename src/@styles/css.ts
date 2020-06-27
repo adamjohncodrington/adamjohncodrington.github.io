@@ -17,7 +17,19 @@ const ZERO_MARGIN_AND_PADDING = css`
   padding: 0;
 `;
 
+const GRID_COLUMN = css`
+  display: grid;
+  grid-auto-flow: column;
+`;
+
+const GRID_COLUMN_EQUAL_WIDTHS = css`
+  ${GRID_COLUMN}
+  grid-auto-columns: 1fr;
+`;
+
 export const CSS = {
+  GRID_COLUMN,
+  GRID_COLUMN_EQUAL_WIDTHS,
   PSEUDO_ELEMENT_HEART,
   PSEUDO_ELEMENT_STAR,
   ZERO_MARGIN_AND_PADDING

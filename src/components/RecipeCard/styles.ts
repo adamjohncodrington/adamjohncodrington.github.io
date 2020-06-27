@@ -18,12 +18,14 @@ export const RecipeCardTitle = styled(H3)`
 `;
 
 export const RecipeCardPanel = styled.div`
-  padding-top: 5px;
+  ${({ theme: { recipeCard } }: IThemeProp) => css`
+    padding-top: ${recipeCard.panel.padding.top};
 
-  > * {
-    padding-top: 10px;
-    padding-bottom: 5px;
-  }
+    > * {
+      padding-top: ${recipeCard.panel.children.padding.top};
+      padding-bottom: ${recipeCard.panel.children.padding.bottom};
+    }
+  `}
 `;
 
 export const PaddedFlexColumn = styled(FlexColumn)`
@@ -40,19 +42,18 @@ interface IDietSymbol {
 }
 
 export const DietSymbol = styled.div`
-  ${({ size }: IDietSymbol) => css`
+  ${({ size, color }: IDietSymbol) => css`
     border-radius: 25%;
     text-align: center;
     height: ${size};
     width: ${size};
     line-height: ${size};
     font-size: 80%;
-  `}
 
-  ${({ color }: IDietSymbol) =>
-    color &&
+    ${color &&
     css`
       background: ${color};
       color: white;
     `}
+  `}
 `;

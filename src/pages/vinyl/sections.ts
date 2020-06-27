@@ -15,6 +15,6 @@ export const sections: Array<IPageSection> = [
     data: { vinylCards: WISH_LIST },
     count: WISH_LIST.length,
     onlyHeaderClickable: true,
-    initiallyExpandedOnDesktop: true
+    initiallyExpandedIf2Columns: true
   }
 ];

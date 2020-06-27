@@ -1,7 +1,7 @@
+import { LOG_RECIPE_COST_CALCULATIONS } from "@config";
+
 import { numberToCurrencyString } from "../basic";
 import { concatenateQuantityAndMeasurement } from "../concatenateQuantityAndMeasurement";
-
-const LOG_RECIPE_COST_CALCULATIONS: boolean = false;
 
 export const consoleLogRecipeTitle = (title: string): void => {
   if (!LOG_RECIPE_COST_CALCULATIONS) return;

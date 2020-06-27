@@ -1,14 +1,11 @@
 import { rgba } from "polished";
 
+import { BREAKPOINTS } from "./breakpoints";
 import { COLORS } from "./colors";
 import { fontFamily, scrollbarSize } from "./GlobalStyle";
 
 const THEME_BREAKPOINTS: IThemeBreakpoints = {
-  breakpoints: {
-    phone: { maxWidth: "767px" },
-    tablet: { minWidth: "768px", maxWidth: "1279px" },
-    desktop: { minWidth: "1280px" }
-  }
+  breakpoints: BREAKPOINTS
 };
 
 const THEME_COUNTED_LIST_ITEM: IThemeCountedListItem = {
@@ -78,6 +75,10 @@ const THEME_PAGE_SHELL: IThemePageShell = {
 const THEME_RECIPE_CARD: IThemeRecipeCard = {
   recipeCard: {
     dietSymbol: { margin: { top: "4px" }, size: "27px" },
+    panel: {
+      children: { padding: { top: "10px", bottom: "5px" } },
+      padding: { top: "5px" }
+    },
     photo: { size: "300px" },
     title: { fontWeight: "300" }
   }

@@ -27,14 +27,14 @@ export const PageSection: React.FC<IPageSection> = ({
   starCount,
   isStatic,
   initiallyExpandedAlways,
-  initiallyExpandedOnDesktop,
+  initiallyExpandedIf2Columns,
   onlyHeaderClickable
 }) => (
   <PageSectionContainer>
     <Disclosure
       isStatic={isStatic}
       initiallyExpandedAlways={initiallyExpandedAlways}
-      initiallyExpandedOnDesktop={initiallyExpandedOnDesktop}
+      initiallyExpandedIf2Columns={initiallyExpandedIf2Columns}
       onlyHeaderClickable={onlyHeaderClickable}
       headerComponent={
         <PageSectionHeader

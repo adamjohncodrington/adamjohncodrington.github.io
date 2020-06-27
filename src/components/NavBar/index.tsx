@@ -2,10 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
+import { CSS } from "@styles";
+
 const StyledNav = styled.nav`
   ${({ theme: { navBar } }: IThemeProp) => css`
-    display: grid;
-    grid-auto-flow: column;
+    ${CSS.GRID_COLUMN_EQUAL_WIDTHS}
+
     background: ${navBar.background};
     padding: ${navBar.padding.vertical} 0;
 

@@ -1,8 +1,18 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-export const Columns = styled.div`
-  display: grid;
-  grid-auto-columns: 1fr;
-  grid-auto-flow: column;
-  column-gap: 20px;
+import { CSS } from "@styles";
+
+interface IGridColumnDiv {
+  columnGap?: PxValue;
+}
+
+export const GridColumnDiv = styled.div`
+  ${({ columnGap }: IGridColumnDiv) => css`
+    ${CSS.GRID_COLUMN_EQUAL_WIDTHS}
+
+    ${columnGap &&
+    css`
+      column-gap: ${columnGap};
+    `}
+  `}
 `;

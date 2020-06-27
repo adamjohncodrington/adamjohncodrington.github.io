@@ -6,11 +6,7 @@ type BoxShadowValue = string;
 type TransitionValue = string;
 
 interface IThemeBreakpoints {
-  breakpoints: {
-    phone: { maxWidth: PxValue };
-    tablet: { minWidth: PxValue; maxWidth: PxValue };
-    desktop: { minWidth: PxValue };
-  };
+  breakpoints: IBreakpoints;
 }
 
 interface IThemeCountedListItem {
@@ -83,6 +79,10 @@ interface IThemePageShell {
 interface IThemeRecipeCard {
   recipeCard: {
     dietSymbol: { margin: { top: PxValue }; size: PxValue };
+    panel: {
+      children: { padding: { top: PxValue; bottom: PxValue } };
+      padding: { top: PxValue };
+    };
     title: { fontWeight: FontWeightValue };
     photo: { size: PxValue };
   };
