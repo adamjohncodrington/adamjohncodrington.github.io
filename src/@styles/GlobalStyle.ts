@@ -1,7 +1,8 @@
 import { createGlobalStyle, css } from "styled-components";
 import { normalize } from "polished";
 
-import { fontFamily, scrollbarSize } from "./theme";
+export const fontFamily: string = "-apple-system, Helvetica, sans-serif";
+export const scrollbarSize: PxValue = "10px";
 
 export const CSS_scrollbar = css`
   ::-webkit-scrollbar {
@@ -28,16 +29,13 @@ export const CSS_scrollbar = css`
   }
 `;
 
-export const GlobalStyle = createGlobalStyle`
-  ${normalize()}
-  
+const CSS_GlobalStyle = css`
   *,
   *:before,
   *:after {
     box-sizing: border-box;
   }
-  
-  
+
   ::-webkit-scrollbar-corner {
     background-color: transparent;
   }
@@ -48,7 +46,7 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  
+
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
     -khtml-user-select: none; /* Konqueror HTML */
@@ -56,7 +54,7 @@ export const GlobalStyle = createGlobalStyle`
     -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
   }
-  
+
   body:before {
     margin: 0;
     content: "";
@@ -73,5 +71,9 @@ export const GlobalStyle = createGlobalStyle`
     -o-background-size: cover;
     background-size: cover;
   }
-  
+`;
+
+export const GlobalStyle = createGlobalStyle`
+  ${normalize()}
+  ${CSS_GlobalStyle}
 `;

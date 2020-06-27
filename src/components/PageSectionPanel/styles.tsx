@@ -7,9 +7,9 @@ interface IPageSectionPanelList {
   pageSectionPanelType: string;
 }
 
-const CSS_COMMON = ({ theme: { pageSectionPanelList } }: IThemeProp) => css`
+const CSS_COMMON = ({ theme: { pageSection } }: IThemeProp) => css`
   > * {
-    border-bottom: ${pageSectionPanelList.border.bottom};
+    border-bottom: ${pageSection.panelList.border.bottom};
   }
 
   > *:last-child {
@@ -19,7 +19,9 @@ const CSS_COMMON = ({ theme: { pageSectionPanelList } }: IThemeProp) => css`
 
 const CSS_RECIPE_CARDS = ({
   theme: {
-    pageSectionPanelList: { recipeCards }
+    pageSection: {
+      panelList: { recipeCards }
+    }
   }
 }: IThemeProp) => css`
   ${CSS_COMMON}
@@ -38,7 +40,9 @@ const CSS_RECIPE_CARDS = ({
 
 const CSS_COUNTED_LIST = ({
   theme: {
-    pageSectionPanelList: { padding, countedListItems }
+    pageSection: {
+      panelList: { padding, countedListItems }
+    }
   }
 }: IThemeProp) => css`
   ${CSS_COMMON}
@@ -51,7 +55,9 @@ const CSS_COUNTED_LIST = ({
 
 const CSS_REGULAR_CARDS = ({
   theme: {
-    pageSectionPanelList: { padding, regularCards }
+    pageSection: {
+      panelList: { padding, regularCards }
+    }
   }
 }: IThemeProp) => css`
   ${CSS_COMMON}

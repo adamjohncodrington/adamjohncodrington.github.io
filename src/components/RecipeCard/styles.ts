@@ -1,25 +1,23 @@
 import styled, { css } from "styled-components";
 
 import { H3, FlexColumn } from "primitives";
+import { CSS } from "@styles";
 
-interface IRecipeCardTitle {
+interface IRecipeCardTitle extends IThemeProp {
   favourite?: boolean;
 }
-export const RecipeCardTitle = styled(H3)`
-  text-transform: lowercase;
-  font-weight: 300;
-  flex: 1;
 
-  ${(props: IRecipeCardTitle) =>
-    props.favourite &&
-    css`
-      ::before {
-        content: "♥ ";
-      }
-    `}
+export const RecipeCardTitle = styled(H3)`
+  ${({ theme: { recipeCard }, favourite }: IRecipeCardTitle) => css`
+    text-transform: lowercase;
+    font-weight: ${recipeCard.title.fontWeight};
+    flex: 1;
+
+    ${favourite && CSS.PSEUDO_ELEMENT_HEART}
+  `}
 `;
 
-export const RecipeBody = styled.div`
+export const RecipeCardPanel = styled.div`
   padding-top: 5px;
 
   > * {

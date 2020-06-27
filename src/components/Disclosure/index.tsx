@@ -2,7 +2,7 @@ import React, { ReactElement } from "react";
 
 import { useMediaQueries } from "@utils";
 
-import { PanelContainer, ClickableRegion } from "./styles";
+import { PanelContainer, ClickableDiv } from "./styles";
 
 export type IBodyHeight = number | null;
 
@@ -55,7 +55,7 @@ export const Disclosure: React.FC<IDisclosure> = ({
     </PanelContainer>
   );
 
-  const dataTestClickableRegion: string = "disclosure-clickable-region";
+  const dataTestClickableDiv: string = "disclosure-clickable-region";
   const onClick = (): void => switchPanelVisibility(!panelIsVisible);
 
   return isStatic ? (
@@ -65,15 +65,15 @@ export const Disclosure: React.FC<IDisclosure> = ({
     </>
   ) : onlyHeaderClickable ? (
     <>
-      <ClickableRegion data-test={dataTestClickableRegion} onClick={onClick}>
+      <ClickableDiv data-test={dataTestClickableDiv} onClick={onClick}>
         {headerComponent}
-      </ClickableRegion>
+      </ClickableDiv>
       {Panel}
     </>
   ) : (
-    <ClickableRegion data-test={dataTestClickableRegion} onClick={onClick}>
+    <ClickableDiv data-test={dataTestClickableDiv} onClick={onClick}>
       {headerComponent}
       {Panel}
-    </ClickableRegion>
+    </ClickableDiv>
   );
 };

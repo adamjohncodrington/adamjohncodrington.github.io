@@ -20,7 +20,7 @@ import {
 import {
   DietSymbol,
   RecipeCardTitle,
-  RecipeBody,
+  RecipeCardPanel,
   PaddedFlexColumn
 } from "./styles";
 
@@ -47,7 +47,7 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
   const RecipeCardHeader: ReactElement = (
     <FlexRow>
       <RecipeCardTitle favourite={favourite}>{title}</RecipeCardTitle>
-      <DietSymbol size="27px" color={diet.color}>
+      <DietSymbol size={theme.recipeCard.dietSymbol.size} color={diet.color}>
         {diet.abbreviation}
       </DietSymbol>
     </FlexRow>
@@ -58,7 +58,7 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
       initiallyExpandedAlways={newRecipe}
       headerComponent={RecipeCardHeader}
     >
-      <RecipeBody>
+      <RecipeCardPanel>
         <List
           title={ingredientsHeader}
           listItems={mapIngredientsToListItems(ingredients)}
@@ -101,7 +101,7 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
             )}
           </PaddedFlexColumn>
         )}
-      </RecipeBody>
+      </RecipeCardPanel>
     </Disclosure>
   );
 };

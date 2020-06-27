@@ -18,7 +18,6 @@
 ## Refactoring
 
 - move all remaining instances of `px` to theme
-- rationalise theme
 - rationalise `data-test` attributes
 - review semantics of page structure, landmarks, accessibility, etc.
 - recipe method array should be `ol` not `ul`?

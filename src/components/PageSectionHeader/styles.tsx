@@ -7,14 +7,14 @@ export const PageSectionTitle = styled(H2)`
 `;
 
 export const PageSectionHeaderContainer = styled(FlexRow)`
-  ${({ theme: { section } }: IThemeProp) => css`
-    padding: ${section.header.padding};
+  ${({ theme: { pageSection } }: IThemeProp) => css`
+    padding: ${pageSection.header.padding.vertical} 0;
   `}
 `;
 
 export const PageSectionCount = styled.span`
-  ${({ theme: { section } }: IThemeProp) => css`
-    margin-left: ${section.count.margin.left};
+  ${({ theme: { pageSection } }: IThemeProp) => css`
+    margin-left: ${pageSection.count.margin.left};
   `}
 `;
 

@@ -1,11 +1,11 @@
 import { useMediaQuery } from "react-responsive";
 
-interface IScreenSizes {
+interface IUseMediaQueries {
   isDesktop: boolean;
   isPhone: boolean;
 }
 
-export const useMediaQueries = (): IScreenSizes => {
+export const useMediaQueries = (): IUseMediaQueries => {
   const isDesktop: boolean = useMediaQuery({
     query: "(min-width: 1000px)"
   });

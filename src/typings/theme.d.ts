@@ -1,41 +1,9 @@
-type RemValue = string;
-type PxValue = string;
-type VminVmaxValue = string;
-
 type ColorValue = string;
-type PaddingValue = string;
-type IBorder = string;
-
-type IMargin = { left?: PxValue; top?: PxValue; bottom?: PxValue };
-
-type IBoxShadow = string;
-type IBorderRadius = PxValue;
-type IFontFamily = string;
-type IScrollbarSize = RemValue;
-
-interface ITheme_EventCardList {
-  padding: { vertical: PaddingValue };
-  finalEventCardPaddingBottom: PxValue;
-}
-
-interface ITheme_PageSection {
-  background: ColorValue;
-  borderRadius: IBorderRadius;
-  boxShadow: IBoxShadow;
-  count: { margin: IMargin };
-  header: { padding: PaddingValue };
-  icon: { padding: { top: PaddingValue }; size: PxValue };
-  margin: IMargin;
-  padding: { horizontal: PaddingValue; bottom: PaddingValue };
-  transition: string;
-}
-
-type ITheme_Page = {
-  count: { padding: PaddingValue };
-  header: { margin: IMargin };
-  icon: { margin: IMargin; size: PxValue };
-  shell: { padding: PaddingValue };
-};
+type FontWeightValue = string;
+type PxValue = string;
+type RemValue = string;
+type BoxShadowValue = string;
+type TransitionValue = string;
 
 interface IThemeBreakpoints {
   breakpoints: {
@@ -46,19 +14,15 @@ interface IThemeBreakpoints {
 }
 
 interface IThemeCountedListItem {
-  countedListItem: {
-    count: {
-      margin: { left: PxValue };
-      width: PxValue;
-    };
-  };
+  countedListItem: { count: { margin: { left: PxValue }; width: PxValue } };
 }
 
-interface IThemeRecipeCard {
-  recipeCard: {
-    dietSymbol: { margin: { top: PxValue }; size: PxValue };
-    photo: { size: PxValue };
-  };
+interface IThemeDisclosure {
+  disclosure: { transition: TransitionValue };
+}
+
+interface IThemeEventCard {
+  eventCard: { notFirstChild: { padding: { top: PxValue } } };
 }
 
 interface IThemeNavBar {
@@ -74,40 +38,70 @@ interface IThemeNavBar {
   };
 }
 
-interface IThemePageSectionPanelList {
-  pageSectionPanelList: {
-    border: { bottom: PxValue };
-    countedListItems: {
-      padding: { vertical: PxValue };
+interface IThemePageHeader {
+  pageHeader: {
+    count: { padding: { all: PxValue } };
+    margin: { bottom: PxValue };
+  };
+}
+
+interface IThemePageSection {
+  pageSection: {
+    background: ColorValue;
+    borderRadius: PxValue;
+    boxShadow: BoxShadowValue;
+    count: { margin: { left: PxValue } };
+    header: { padding: { vertical: PxValue } };
+    icon: {
+      padding: { top: PxValue };
+      size: PxValue;
     };
-    padding: { bottom: PxValue };
-    recipeCards: {
-      firstRecipeCard: { padding: { top: PxValue } };
-      lastRecipeCard: { padding: { bottom: PxValue } };
-      padding: { vertical: PxValue };
+    margin: { bottom: PxValue };
+    padding: { horizontal: PxValue; bottom: PxValue };
+    panelList: {
+      border: { bottom: PxValue };
+      countedListItems: { padding: { vertical: PxValue } };
+      padding: { bottom: PxValue };
+      recipeCards: {
+        firstRecipeCard: { padding: { top: PxValue } };
+        lastRecipeCard: { padding: { bottom: PxValue } };
+        padding: { vertical: PxValue };
+      };
+      regularCards: {
+        lastRegularCard: { padding: { bottom: PxValue } };
+        padding: { vertical: PxValue };
+      };
     };
-    regularCards: {
-      lastRegularCard: { padding: { bottom: PxValue } };
-      padding: { vertical: PxValue };
-    };
+    transition: TransitionValue;
+  };
+}
+
+interface IThemePageShell {
+  pageShell: { padding: { all: PxValue } };
+}
+
+interface IThemeRecipeCard {
+  recipeCard: {
+    dietSymbol: { margin: { top: PxValue }; size: PxValue };
+    title: { fontWeight: FontWeightValue };
+    photo: { size: PxValue };
   };
 }
 
 interface ITheme
   extends IThemeBreakpoints,
     IThemeCountedListItem,
+    IThemeDisclosure,
+    IThemeEventCard,
     IThemeNavBar,
-    IThemePageSectionPanelList,
-    IThemeRecipeCard {
+    IThemeRecipeCard,
+    IThemePageHeader,
+    IThemePageShell,
+    IThemePageSection {
   fadedOpacity: number;
   fontFamily: IFontFamily;
   listItemGroupVerticalSpacing: PxValue;
   scrollbarSize: IScrollbarSize;
-  textColor: ColorValue;
-
-  // Nested level
-  page: ITheme_Page;
-  section: ITheme_PageSection;
 }
 
 interface IThemeProp {

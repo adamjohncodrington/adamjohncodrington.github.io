@@ -2,38 +2,27 @@ import styled, { css } from "styled-components";
 
 import { IBodyHeight } from "./";
 
-interface PanelContainerProps extends IThemeProp {
+interface IPanelContainer extends IThemeProp {
   bodyHeight: IBodyHeight;
 }
+
 export const PanelContainer = styled.div`
-  &.initial-state {
-    max-height: unset;
-  }
-
-  ${({
-    theme: {
-      section: { transition }
-    }
-  }: PanelContainerProps) =>
+  ${({ bodyHeight, theme: { disclosure } }: IPanelContainer) =>
     css`
-      transition: ${transition};
+      transition: ${disclosure.transition};
+      overflow: hidden;
+      max-height: 0;
+
+      &.initial-state {
+        max-height: unset;
+      }
+
+      &.panel-visible {
+        max-height: ${bodyHeight}px;
+      }
     `}
-
-  overflow: hidden;
-  max-height: 0;
-
-  &.panel-visible {
-    max-height: ${(props: PanelContainerProps) => props.bodyHeight}px;
-  }
 `;
 
-interface ClickableRegionProps {
-  initiallyExpandedAlways?: boolean;
-}
-export const ClickableRegion = styled.div`
-  ${(props: ClickableRegionProps) =>
-    !props.initiallyExpandedAlways &&
-    css`
-      cursor: pointer;
-    `}
+export const ClickableDiv = styled.div`
+  cursor: pointer;
 `;

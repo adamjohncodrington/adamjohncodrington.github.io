@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { FlexColumn, FlexRow, SeventyFivePercentSpan } from "primitives";
 import { datesArrayToString } from "@utils";
@@ -17,9 +17,11 @@ const ItalicBoldFlexRow = styled(FlexRow)`
 `;
 
 const StyledFlexColumn = styled(FlexColumn)`
-  > *:not(:first-child) {
-    padding-top: 3px;
-  }
+  ${({ theme: { eventCard } }: IThemeProp) => css`
+    > *:not(:first-child) {
+      padding-top: ${eventCard.notFirstChild.padding.top};
+    }
+  `}
 `;
 
 export const EventCard: React.FC<IEventCard> = ({

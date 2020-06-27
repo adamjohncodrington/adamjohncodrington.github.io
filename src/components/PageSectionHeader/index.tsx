@@ -51,7 +51,7 @@ export const PageSectionHeader: React.FC<PageSectionHeaderProps> = ({
         <SquareImage
           data-test="section-header-icon"
           imgSrc={icon}
-          size={theme.section.icon.size}
+          size={theme.pageSection.icon.size}
         />
       )}
     </PageSectionHeaderContainer>

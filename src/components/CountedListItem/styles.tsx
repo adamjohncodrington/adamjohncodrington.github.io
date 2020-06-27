@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 
 import { FlexLiGrow } from "primitives";
+import { CSS } from "@styles";
 
 export const CountedListItemContainer = styled(FlexLiGrow)``;
 
@@ -11,30 +12,18 @@ interface ICountedListItemText extends IThemeProp {
 }
 
 export const CountedListItemText = styled.span`
-  flex: 1;
+  ${({ favourite, star, faded, theme }: ICountedListItemText) => css`
+    flex: 1;
 
-  ${({ favourite }: ICountedListItemText) =>
-    favourite &&
-    css`
-      ::before {
-        content: "♥ ";
-      }
-    `}
-
-  ${({ star }: ICountedListItemText) =>
-    star &&
-    css`
-      ::before {
-        content: "★ ";
-      }
-    `}
-
-
-  ${({ theme: { fadedOpacity }, faded }: ICountedListItemText) =>
-    faded &&
-    css`
-      opacity: ${fadedOpacity};
-    `}
+    ${favourite && CSS.PSEUDO_ELEMENT_HEART}
+    ${star && CSS.PSEUDO_ELEMENT_STAR}
+    ${
+      faded &&
+      css`
+        opacity: ${theme.fadedOpacity};
+      `
+    }
+  `}
 `;
 
 export const CountedListItemPastCount = styled.span`
