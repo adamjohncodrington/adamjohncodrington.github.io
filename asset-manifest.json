@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/static/js/main.15e0ec27.chunk.js",
-    "main.js.map": "/static/js/main.15e0ec27.chunk.js.map",
+    "main.js": "/static/js/main.8a9a661f.chunk.js",
+    "main.js.map": "/static/js/main.8a9a661f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.27f1f56c.js",
     "runtime-main.js.map": "/static/js/runtime-main.27f1f56c.js.map",
-    "static/js/2.41a2d9fc.chunk.js": "/static/js/2.41a2d9fc.chunk.js",
-    "static/js/2.41a2d9fc.chunk.js.map": "/static/js/2.41a2d9fc.chunk.js.map",
+    "static/js/2.491a762e.chunk.js": "/static/js/2.491a762e.chunk.js",
+    "static/js/2.491a762e.chunk.js.map": "/static/js/2.491a762e.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.2b5a3c377d3175a3ac877ef52a3de227.js": "/precache-manifest.2b5a3c377d3175a3ac877ef52a3de227.js",
+    "precache-manifest.fe41e7810f4b2c65d473249293383dc6.js": "/precache-manifest.fe41e7810f4b2c65d473249293383dc6.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.41a2d9fc.chunk.js.LICENSE.txt": "/static/js/2.41a2d9fc.chunk.js.LICENSE.txt",
+    "static/js/2.491a762e.chunk.js.LICENSE.txt": "/static/js/2.491a762e.chunk.js.LICENSE.txt",
     "static/media/1975_a-brief-inquiry-into-online-relationships.jpg": "/static/media/1975_a-brief-inquiry-into-online-relationships.450622e7.jpg",
     "static/media/adele_19.jpg": "/static/media/adele_19.e2cf5b85.jpg",
     "static/media/allie-x_super-sunset.jpg": "/static/media/allie-x_super-sunset.e4ba903d.jpg",
@@ -91,7 +91,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.27f1f56c.js",
-    "static/js/2.41a2d9fc.chunk.js",
-    "static/js/main.15e0ec27.chunk.js"
+    "static/js/2.491a762e.chunk.js",
+    "static/js/main.8a9a661f.chunk.js"
   ]
 }
