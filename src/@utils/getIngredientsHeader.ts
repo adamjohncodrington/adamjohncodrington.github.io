@@ -8,18 +8,23 @@ interface IGetIngredientsHeader {
 }
 
 export const getIngredientsHeader = ({
-  makes,
-  defaultIngredientsHeader
+  defaultIngredientsHeader,
+  makes
 }: IGetIngredientsHeader): string => {
-  const { quantity, measurement } = makes;
+  if (!makes.measurement)
+    return `${defaultIngredientsHeader} (makes ${makes.quantity})`;
 
   const quantitySpaceMeasurement: string =
-    quantity.toString() + " " + measurement;
+    makes.quantity.toString() + " " + makes.measurement;
 
   const quantityAndMeasurement: string =
-    measurement === MEASUREMENTS.GRAM || measurement === MEASUREMENTS.MILLILITRE
-      ? concatenateQuantityAndMeasurement(quantity.toString(), measurement)
-      : quantity === 1
+    makes.measurement === MEASUREMENTS.GRAM ||
+    makes.measurement === MEASUREMENTS.MILLILITRE
+      ? concatenateQuantityAndMeasurement(
+          makes.quantity.toString(),
+          makes.measurement
+        )
+      : makes.quantity === 1
       ? quantitySpaceMeasurement
       : quantitySpaceMeasurement + "s";
 

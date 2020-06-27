@@ -22,7 +22,7 @@ export const mapToCountedList = ({
   sortByPastAndFutureCount,
   favouritedData,
   bucketListMode
-}: IMapToCountedList): Array<ICountedItem> => {
+}: IMapToCountedList): Array<ICountedListItem> => {
   const formatNames = (inputData: any): string => {
     if (!Array.isArray(inputData))
       return inputData.name && moveTheSuffixToPrefix(inputData.name);
@@ -39,7 +39,7 @@ export const mapToCountedList = ({
     return outputString;
   };
 
-  const mapToCountedListItem = (item: any): ICountedItem => {
+  const mapToCountedListItem = (item: any): ICountedListItem => {
     const { pastCount, futureCount } = getPageSectionItemCounts({
       itemToCount: item,
       data: allData
@@ -61,7 +61,7 @@ export const mapToCountedList = ({
     };
   };
 
-  const countedList: Array<ICountedItem> = Object.values(items)
+  const countedList: Array<ICountedListItem> = Object.values(items)
     .filter(item => (filter ? item[filter] : true))
     .sort((a, b) =>
       (a.name ? a.name : a)

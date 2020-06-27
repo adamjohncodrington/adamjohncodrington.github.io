@@ -16,10 +16,9 @@ const ItalicBoldFlexRow = styled(FlexRow)`
   }
 `;
 
-const verticalSpaceBetweenEventCardRows: PxValue = "3px";
 const StyledFlexColumn = styled(FlexColumn)`
   > *:not(:first-child) {
-    padding-top: ${verticalSpaceBetweenEventCardRows};
+    padding-top: 3px;
   }
 `;
 
@@ -31,7 +30,7 @@ export const EventCard: React.FC<IEventCard> = ({
   dates,
   disclaimer
 }) => {
-  const daysTilGig: number = daysToGo(dates);
+  const daysUntilEvent: number = daysToGo(dates);
 
   return (
     <StyledFlexColumn data-test="event-card-container">
@@ -53,9 +52,9 @@ export const EventCard: React.FC<IEventCard> = ({
         {datesArrayToString(dates)}
       </SeventyFivePercentSpan>
 
-      {daysTilGig >= 0 && (
+      {daysUntilEvent >= 0 && (
         <ItalicBoldFlexRow>
-          <strong>{getCountdownText(daysTilGig)}</strong>
+          <strong>{getCountdownText(daysUntilEvent)}</strong>
 
           {disclaimer && (
             <SeventyFivePercentSpan>({disclaimer})</SeventyFivePercentSpan>

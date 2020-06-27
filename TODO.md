@@ -11,6 +11,10 @@
 - roast potatoes
 - potato salad
 
+## Travel
+
+- add photos
+
 ## Refactoring
 
 - move all remaining instances of `px` to theme
@@ -22,7 +26,7 @@
 ## Features
 
 - add sorting to vinyls collection and wish list
-- reinstate circles indicating `company` on cards
+- reinstate circles indicating `company` on cards?
 
 ## Styling
 
@@ -31,7 +35,7 @@
 
 ## TypeScript
 
-- remove as many remaining instances of `any` as possible
+- remove all remaining instances of type: `any`
 
 ## Testing
 

@@ -25,27 +25,27 @@ const mapToCountedListWrapper = (params: any) =>
     favouritedData: FAVOURITES
   });
 
-const BUCKET_LIST: Array<ICountedItem> = mapToCountedListWrapper({
+const BUCKET_LIST: Array<ICountedListItem> = mapToCountedListWrapper({
   bucketListMode: true,
   items: musicians
 });
 
-const FESTIVALS: Array<ICountedItem> = mapToCountedListWrapper({
+const FESTIVALS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: festivals,
   filter: "festival"
 });
 
-const FRIENDS: Array<ICountedItem> = mapToCountedListWrapper({
+const FRIENDS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: friends,
   filter: "gigs",
   sortByPastAndFutureCount: true
 });
 
-const MUSICIANS: Array<ICountedItem> = mapToCountedListWrapper({
+const MUSICIANS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: musicians
 });
 
-const VENUES: Array<ICountedItem> = mapToCountedListWrapper({
+const VENUES: Array<ICountedListItem> = mapToCountedListWrapper({
   items: MUSIC_VENUES
 });
 

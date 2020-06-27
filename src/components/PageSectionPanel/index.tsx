@@ -13,7 +13,7 @@ import { VinylCard } from "../VinylCard";
 import { PageSectionPanelList } from "./styles";
 
 export const PageSectionPanel: React.FC<IPageSectionDataTypes> = ({
-  countedItems,
+  countedListItems,
   gigCards,
   recipeCards,
   theatreCards,
@@ -22,7 +22,7 @@ export const PageSectionPanel: React.FC<IPageSectionDataTypes> = ({
 }) => {
   const pageSectionPanelType: string = !!recipeCards
     ? PAGE_SECTION_PANEL_TYPES.RECIPE_CARDS
-    : !!countedItems
+    : !!countedListItems
     ? PAGE_SECTION_PANEL_TYPES.COUNTED_LIST
     : PAGE_SECTION_PANEL_TYPES.REGULAR_CARDS;
 
@@ -66,10 +66,12 @@ export const PageSectionPanel: React.FC<IPageSectionDataTypes> = ({
           </Li>
         ))}
 
-      {countedItems &&
-        countedItems.map((countedListItem: ICountedItem, index: number) => (
-          <CountedListItem key={index} {...countedListItem} />
-        ))}
+      {countedListItems &&
+        countedListItems.map(
+          (countedListItem: ICountedListItem, index: number) => (
+            <CountedListItem key={index} {...countedListItem} />
+          )
+        )}
     </PageSectionPanelList>
   );
 };

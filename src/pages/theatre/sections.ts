@@ -11,23 +11,23 @@ const SECTIONS_STATS: Array<IPageSection> = [
   {
     title: "Actors",
     icon: SVG_ICON_STRINGS.ARTIST,
-    data: { countedItems: ACTORS }
+    data: { countedListItems: ACTORS }
   },
   {
     title: PAGE_SECTION_TITLES.FRIENDS,
     icon: SVG_ICON_STRINGS.PEOPLE,
-    data: { countedItems: FRIENDS }
+    data: { countedListItems: FRIENDS }
   },
   {
     title: "Plays",
     icon: SVG_ICON_STRINGS.BOOK,
-    data: { countedItems: PLAYS },
+    data: { countedListItems: PLAYS },
     count: PLAYS.length
   },
   {
     title: "Theatres",
     icon: SVG_ICON_STRINGS.THEATRE,
-    data: { countedItems: VENUES },
+    data: { countedListItems: VENUES },
     count: VENUES.length
   },
   {

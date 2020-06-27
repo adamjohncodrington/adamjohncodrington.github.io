@@ -15,7 +15,7 @@ export const PageSectionsLayout: React.FC<IPageSectionsLayout> = ({
   const validPageSections: Array<IPageSection> = pageSections.filter(
     ({
       data: {
-        countedItems,
+        countedListItems,
         gigCards,
         recipeCards,
         theatreCards,
@@ -24,7 +24,7 @@ export const PageSectionsLayout: React.FC<IPageSectionsLayout> = ({
       }
     }: IPageSection): boolean => {
       const dataExists: boolean = !(
-        (countedItems && countedItems.length === 0) ||
+        (countedListItems && countedListItems.length === 0) ||
         (gigCards && gigCards.length === 0) ||
         (recipeCards && recipeCards.filter(item => !item.hide).length === 0) ||
         (theatreCards && theatreCards.length === 0) ||

@@ -60,7 +60,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
 ];
 
 const title: string = "Cookies";
-const makes: IRecipeMakes = { quantity: 20, measurement: "cookie" };
+const makes: IRecipeMakes = { quantity: 20 };
 const diet: IRecipeDiet = DIETS.VEGETARIAN;
 const method: Array<string> = [
   "in a small mixing bowl, combine flour with cinnamon, baking soda and salt",

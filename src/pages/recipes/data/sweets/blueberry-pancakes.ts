@@ -57,13 +57,17 @@ const method: Array<string> = [
 
 const title: string = "Blueberry Pancakes";
 const diet: IRecipeDiet = DIETS.VEGETARIAN;
+const makes: IRecipeMakes = { quantity: 15 };
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
+const portionCost: number = totalCost / makes.quantity;
 
 export const BLUEBERRY_PANCAKES: IRecipeCard = {
   title,
   ingredients,
   totalCost,
+  makes,
+  portionCost,
   serveWith,
   method,
   diet

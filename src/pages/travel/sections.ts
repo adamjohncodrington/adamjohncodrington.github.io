@@ -20,40 +20,40 @@ const SECTIONS_STATS: Array<IPageSection> = [
   {
     title: PAGE_SECTION_TITLES.BUCKET_LIST,
     icon: SVG_ICON_STRINGS.STARS,
-    data: { countedItems: BUCKET_LIST }
+    data: { countedListItems: BUCKET_LIST }
   },
   {
     title: "Cities",
     icon: SVG_ICON_STRINGS.CITY,
-    data: { countedItems: CITIES },
+    data: { countedListItems: CITIES },
     count: CITIES.length,
     starCount: CITIES.filter(city => city.star).length
   },
   {
     title: "Countries",
     icon: SVG_ICON_STRINGS.FLAG,
-    data: { countedItems: COUNTRIES },
+    data: { countedListItems: COUNTRIES },
     count: COUNTRIES.length
   },
   {
     title: PAGE_SECTION_TITLES.FRIENDS,
     icon: SVG_ICON_STRINGS.PEOPLE,
-    data: { countedItems: FRIENDS }
+    data: { countedListItems: FRIENDS }
   },
   {
     title: "Highlights",
     icon: SVG_ICON_STRINGS.MAP_PIN,
-    data: { countedItems: HIGHLIGHTS }
+    data: { countedListItems: HIGHLIGHTS }
   },
   {
     title: "Islands",
     icon: SVG_ICON_STRINGS.PALM_TREE,
-    data: { countedItems: ISLANDS }
+    data: { countedListItems: ISLANDS }
   },
   {
     title: "Theme Parks",
     icon: SVG_ICON_STRINGS.ROLLER_COASTER,
-    data: { countedItems: THEME_PARKS },
+    data: { countedListItems: THEME_PARKS },
     count: THEME_PARKS.length,
     hide: true
   },

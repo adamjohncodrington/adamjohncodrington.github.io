@@ -1,3 +1,11 @@
+interface IFontSizes {
+  XxL: RemValue;
+  XL: RemValue;
+  L: RemValue;
+  M: RemValue;
+  S: RemValue;
+}
+
 export const FONT_SIZES: IFontSizes = {
   XxL: "4.375rem",
   XL: "2rem",

@@ -11,23 +11,23 @@ const SECTIONS_STATS: Array<IPageSection> = [
   {
     title: PAGE_SECTION_TITLES.BUCKET_LIST,
     icon: SVG_ICON_STRINGS.STARS,
-    data: { countedItems: BUCKET_LIST }
+    data: { countedListItems: BUCKET_LIST }
   },
   {
     title: "Festivals",
     icon: SVG_ICON_STRINGS.PEACE_SIGN,
-    data: { countedItems: FESTIVALS }
+    data: { countedListItems: FESTIVALS }
   },
   {
     title: "Artists",
     icon: SVG_ICON_STRINGS.ARTIST,
-    data: { countedItems: MUSICIANS },
+    data: { countedListItems: MUSICIANS },
     count: MUSICIANS.length
   },
   {
     title: PAGE_SECTION_TITLES.FRIENDS,
     icon: SVG_ICON_STRINGS.PEOPLE,
-    data: { countedItems: FRIENDS }
+    data: { countedListItems: FRIENDS }
   },
   {
     title: PAGE_SECTION_TITLES.UP_NEXT,
@@ -38,7 +38,7 @@ const SECTIONS_STATS: Array<IPageSection> = [
   {
     title: "Venues",
     icon: SVG_ICON_STRINGS.STADIUM,
-    data: { countedItems: VENUES },
+    data: { countedListItems: VENUES },
     count: VENUES.length
   }
 ].sort((a: IPageSection, b: IPageSection) => (a.title > b.title ? 1 : -1));

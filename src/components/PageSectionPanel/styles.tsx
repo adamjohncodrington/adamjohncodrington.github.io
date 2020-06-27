@@ -7,47 +7,66 @@ interface IPageSectionPanelList {
   pageSectionPanelType: string;
 }
 
-const CSS_COMMON = ({ theme }: IThemeProp) => css`
+const CSS_COMMON = ({ theme: { pageSectionPanelList } }: IThemeProp) => css`
   > * {
-    border-bottom: ${theme.pageSectionPanelList.borderBottom};
+    border-bottom: ${pageSectionPanelList.border.bottom};
   }
+
   > *:last-child {
     border-bottom: 0;
   }
 `;
 
-const CSS_RECIPE_CARDS = ({ theme }: IThemeProp) => css`
+const CSS_RECIPE_CARDS = ({
+  theme: {
+    pageSectionPanelList: { recipeCards }
+  }
+}: IThemeProp) => css`
   ${CSS_COMMON}
   > * {
-    padding: ${theme.recipe.title.padding.vertical} 0;
+    padding: ${recipeCards.padding.vertical} 0;
   }
+
   > *:first-child {
-    padding-top: ${theme.recipe.first.padding.top};
+    padding-top: ${recipeCards.firstRecipeCard.padding.top};
   }
+
   > *:last-child {
-    padding-bottom: ${theme.recipe.last.padding.bottom};
+    padding-bottom: ${recipeCards.lastRecipeCard.padding.bottom};
   }
 `;
 
-const CSS_COUNTED_LIST = ({ theme }: IThemeProp) => css`
+const CSS_COUNTED_LIST = ({
+  theme: {
+    pageSectionPanelList: { padding, countedListItems }
+  }
+}: IThemeProp) => css`
   ${CSS_COMMON}
-  padding-bottom: ${theme.section.padding.bottom};
+  padding-bottom: ${padding.bottom};
+
   > * {
-    padding: ${theme.countedList.padding.vertical} 0;
+    padding: ${countedListItems.padding.vertical} 0;
   }
 `;
 
-const CSS_REGULAR_CARDS = ({ theme }: IThemeProp) => css`
-  ${CSS_COMMON}
-  padding-bottom: ${theme.section.padding.bottom};
-  > * {
-    padding: ${theme.eventCardList.padding.vertical} 0;
+const CSS_REGULAR_CARDS = ({
+  theme: {
+    pageSectionPanelList: { padding, regularCards }
   }
+}: IThemeProp) => css`
+  ${CSS_COMMON}
+  padding-bottom: ${padding.bottom};
+
+  > * {
+    padding: ${regularCards.padding.vertical} 0;
+  }
+
   > *:first-child {
     padding-top: 0;
   }
+
   > *:last-child {
-    padding-bottom: ${theme.eventCardList.finalEventCardPaddingBottom};
+    padding-bottom: ${regularCards.lastRegularCard.padding.bottom};
   }
 `;
 

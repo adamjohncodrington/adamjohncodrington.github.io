@@ -14,8 +14,6 @@ export const SVG_ICON_STRINGS: IconsStringObject = {
   FLAG: requireSvg("flag"),
   // M
   MAP_PIN: requireSvg("map_pin"),
-  MASKS: requireSvg("masks"),
-  MICROPHONE: requireSvg("microphone"),
   // N
   NOTEPAD: requireSvg("notepad"),
   // P
@@ -30,11 +28,7 @@ export const SVG_ICON_STRINGS: IconsStringObject = {
   // T
   TENT: requireSvg("tent"),
   THEATRE: requireSvg("theatre"),
-  TOWN_HALL: requireSvg("town_hall"),
-  TRAVEL: requireSvg("travel"),
-  // V
-  VEG_BOWL: requireSvg("veg_bowl"),
-  VINYL: requireSvg("vinyl")
+  TOWN_HALL: requireSvg("town_hall")
 };
 
 export { ReactComponent as SvgMicrophone } from "./microphone.svg";

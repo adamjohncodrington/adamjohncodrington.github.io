@@ -37,39 +37,39 @@ const highlights: Array<IAttraction> = attractions.filter(
   item => item.highlight
 );
 
-const mapToCountedListWrapper = (params: any): Array<ICountedItem> =>
+const mapToCountedListWrapper = (params: any): Array<ICountedListItem> =>
   mapToCountedList({
     ...params,
     allData: ALL,
     favouritedData: FAVOURITES
   });
 
-const bucketList: Array<ICountedItem> = mapToCountedListWrapper({
+const bucketList: Array<ICountedListItem> = mapToCountedListWrapper({
   bucketListMode: true,
   items: BUCKET_LIST
 });
 
-const CITIES: Array<ICountedItem> = mapToCountedListWrapper({
+const CITIES: Array<ICountedListItem> = mapToCountedListWrapper({
   items: cities
 });
 
-const THEME_PARKS: Array<ICountedItem> = mapToCountedListWrapper({
+const THEME_PARKS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: themeParks
 });
 
-const HIGHLIGHTS: Array<ICountedItem> = mapToCountedListWrapper({
+const HIGHLIGHTS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: highlights
 });
 
-const ISLANDS: Array<ICountedItem> = mapToCountedListWrapper({
+const ISLANDS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: islands
 });
 
-const COUNTRIES: Array<ICountedItem> = mapToCountedListWrapper({
+const COUNTRIES: Array<ICountedListItem> = mapToCountedListWrapper({
   items: countries
 });
 
-const FRIENDS: Array<ICountedItem> = mapToCountedListWrapper({
+const FRIENDS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: friends,
   sortByPastAndFutureCount: true,
   filter: "travel"

@@ -1,11 +1,10 @@
 import React, { useContext } from "react";
 import { ThemeContext } from "styled-components";
 
-import { FlexRowGrow } from "primitives";
+import { FlexRowGrow, SquareImage } from "primitives";
 
 import {
   PageSectionHeaderContainer,
-  PageSectionHeaderIcon,
   PageSectionTitle,
   PageSectionCount,
   PageSectionStarredCount
@@ -49,7 +48,7 @@ export const PageSectionHeader: React.FC<PageSectionHeaderProps> = ({
       </FlexRowGrow>
 
       {icon && (
-        <PageSectionHeaderIcon
+        <SquareImage
           data-test="section-header-icon"
           imgSrc={icon}
           size={theme.section.icon.size}

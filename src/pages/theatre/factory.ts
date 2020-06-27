@@ -23,21 +23,21 @@ const mapToCountedListWrapper = (params: any) =>
     favouritedData: DATA_FAVOURITES
   });
 
-const ACTORS: Array<ICountedItem> = mapToCountedListWrapper({
+const ACTORS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: actors
 });
 
-const FRIENDS: Array<ICountedItem> = mapToCountedListWrapper({
+const FRIENDS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: friends,
   filter: "theatre",
   sortByPastAndFutureCount: true
 });
 
-const PLAYS: Array<ICountedItem> = mapToCountedListWrapper({
+const PLAYS: Array<ICountedListItem> = mapToCountedListWrapper({
   items: plays
 });
 
-const VENUES: Array<ICountedItem> = mapToCountedListWrapper({
+const VENUES: Array<ICountedListItem> = mapToCountedListWrapper({
   items: THEATRE_VENUES
 });
 

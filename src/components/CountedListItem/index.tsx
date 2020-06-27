@@ -1,56 +1,13 @@
 import React from "react";
-import styled, { css } from "styled-components";
 
-import { FlexLiGrow } from "primitives";
+import {
+  CountedListItemContainer,
+  CountedListItemText,
+  CountedListItemPastCount,
+  CountedListItemFutureCount
+} from "./styles";
 
-const CountedListItemPastCount = styled.span`
-  ${({
-    theme: {
-      countedList: {
-        count: { width }
-      }
-    }
-  }: IThemeProp) => css`
-    font-weight: bold;
-    text-align: right;
-    width: ${width};
-    margin-left: 5px;
-  `}
-`;
-
-const CountedListItemFutureCount = styled(CountedListItemPastCount)`
-  opacity: ${(props: IThemeProp) => props.theme.fadedOpacity};
-`;
-
-interface CountedListItemTextProps extends IThemeProp {
-  favourite?: boolean;
-  star?: boolean;
-  faded: boolean;
-}
-
-const CountedListItemText = styled.span`
-  ${(props: CountedListItemTextProps) =>
-    props.favourite &&
-    css`
-      ::before {
-        content: "♥ ";
-      }
-    `}
-
-  ${(props: CountedListItemTextProps) =>
-    props.star &&
-    css`
-      ::before {
-        content: "★ ";
-      }
-    `}
-
-  flex: 1;
-  ${(props: CountedListItemTextProps) =>
-    props.faded && `opacity: ${props.theme.fadedOpacity};`}
-`;
-
-export const CountedListItem: React.FC<ICountedItem> = ({
+export const CountedListItem: React.FC<ICountedListItem> = ({
   text,
   favourite,
   star,
@@ -63,7 +20,7 @@ export const CountedListItem: React.FC<ICountedItem> = ({
     pastCount > 1 || (futureCount > 0 && pastCount > 0);
 
   return (
-    <FlexLiGrow>
+    <CountedListItemContainer>
       <CountedListItemText
         faded={!countInfoIrrelevant && pastCount === 0}
         favourite={favourite}
@@ -79,6 +36,6 @@ export const CountedListItem: React.FC<ICountedItem> = ({
       {!countInfoIrrelevant && showPastCount && (
         <CountedListItemPastCount>{pastCount}</CountedListItemPastCount>
       )}
-    </FlexLiGrow>
+    </CountedListItemContainer>
   );
 };

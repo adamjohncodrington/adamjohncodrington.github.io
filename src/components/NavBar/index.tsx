@@ -3,25 +3,27 @@ import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
 const StyledNav = styled.nav`
-  ${({
-    theme: {
-      navBar: { iconSize, verticalPadding }
-    }
-  }: IThemeProp) => css`
+  ${({ theme: { navBar } }: IThemeProp) => css`
     display: grid;
     grid-auto-flow: column;
-    background: black;
-    padding: ${verticalPadding} 0;
+    background: ${navBar.background};
+    padding: ${navBar.padding.vertical} 0;
 
     a {
       display: flex;
       justify-content: center;
-    }
 
-    svg {
-      fill: white;
-      width: ${iconSize};
-      height: ${iconSize};
+      :hover {
+        svg {
+          border: ${navBar.icon.hoverShrinkSize} solid transparent;
+        }
+      }
+
+      svg {
+        fill: ${navBar.icon.color};
+        width: ${navBar.icon.size};
+        height: ${navBar.icon.size};
+      }
     }
   `}
 `;

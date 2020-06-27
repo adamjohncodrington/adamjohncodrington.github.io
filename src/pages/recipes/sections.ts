@@ -11,7 +11,7 @@ const SECTIONS_RECIPE_GROUPS: Array<IPageSection> = DATA.CATEGORISED.map(
 const SECTION_COMING_SOON: IPageSection = {
   title: "Coming Soon",
   initiallyExpandedOnDesktop: true,
-  data: { countedItems: DATA.COMING_SOON }
+  data: { countedListItems: DATA.COMING_SOON }
 };
 
 export const sections: Array<IPageSection> = [

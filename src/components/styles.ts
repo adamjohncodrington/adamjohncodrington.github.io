@@ -7,6 +7,9 @@ interface ICardTitleBold {
 }
 
 export const CardTitleBold = styled(H3)`
+  font-weight: bold;
+  text-transform: uppercase;
+
   ${({ favourite }: ICardTitleBold) =>
     favourite &&
     css`
@@ -14,9 +17,6 @@ export const CardTitleBold = styled(H3)`
         content: "♥ ";
       }
     `}
-
-  font-weight: bold;
-  text-transform: uppercase;
 `;
 
 export const CardSubtitleBold = styled.div`

@@ -18,7 +18,7 @@ interface PageSectionData {
   eventCards?: Array<IEventCard>;
 }
 
-interface ICountedItem {
+interface ICountedListItem {
   text: string;
   doNotIncludeInList?: boolean;
   favourite?: boolean;
@@ -39,7 +39,7 @@ interface IEventCard {
 }
 
 interface IPageSectionDataTypes {
-  countedItems?: Array<ICountedItem>;
+  countedListItems?: Array<ICountedListItem>;
   gigCards?: Array<IGigCard>;
   recipeCards?: Array<IRecipeCard>;
   theatreCards?: Array<ITheatreCard>;
@@ -63,12 +63,9 @@ interface IPageSection extends IPageSectionDisclosure {
   hide?: boolean;
 }
 
-interface IRoute {
+interface IPage {
   title: string;
   path: string;
-}
-
-interface IPage extends IRoute {
   SvgIcon: React.FC<React.SVGProps<SVGSVGElement>>;
   sections: Array<IPageSection>;
   count?: number;

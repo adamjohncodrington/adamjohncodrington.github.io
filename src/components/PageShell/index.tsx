@@ -6,7 +6,7 @@ import { PageHeader } from "../PageHeader";
 const StyledPageShell = styled.main`
   ${({ theme: { navBar, page } }: IThemeProp) => css`
     padding: ${page.shell.padding};
-    height: calc(100vh - ${navBar.iconSize} - 2 * ${navBar.verticalPadding});
+    height: calc(100vh - ${navBar.icon.size} - 2 * ${navBar.padding.vertical});
     overflow-y: auto;
   `}
 `;

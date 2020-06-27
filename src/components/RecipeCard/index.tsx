@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, ReactElement } from "react";
 import { ThemeContext } from "styled-components";
 
 import {
@@ -44,18 +44,19 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
     ? getIngredientsHeader({ makes, defaultIngredientsHeader })
     : defaultIngredientsHeader;
 
+  const RecipeCardHeader: ReactElement = (
+    <FlexRow>
+      <RecipeCardTitle favourite={favourite}>{title}</RecipeCardTitle>
+      <DietSymbol size="27px" color={diet.color}>
+        {diet.abbreviation}
+      </DietSymbol>
+    </FlexRow>
+  );
+
   return (
     <Disclosure
       initiallyExpandedAlways={newRecipe}
-      headerComponent={
-        <FlexRow>
-          <RecipeCardTitle favourite={favourite}>{title}</RecipeCardTitle>
-
-          <DietSymbol fontSize="13.5px" size="27px" color={diet.color}>
-            {diet.abbreviation}
-          </DietSymbol>
-        </FlexRow>
-      }
+      headerComponent={RecipeCardHeader}
     >
       <RecipeBody>
         <List
@@ -78,21 +79,24 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
 
         {image && (
           <DivWithCentredText>
-            <SquareImage imgSrc={image} size={theme.recipe.image.size} />
+            <SquareImage imgSrc={image} size={theme.recipeCard.photo.size} />
           </DivWithCentredText>
         )}
 
         {totalCost && (
           <PaddedFlexColumn>
             <span>
-              approx. <strong>{numberToCurrencyString(totalCost, 1)}</strong> to
-              make
+              <span>approx. </span>
+              <strong>{numberToCurrencyString(totalCost, 1)}</strong>
+              <span> to make</span>
             </span>
 
-            {portionCost && makes && makes.measurement && (
+            {portionCost && makes && (
               <SeventyFivePercentSpan>
-                <strong>{numberToCurrencyString(portionCost, 1)}</strong> per
-                {makes.measurement}
+                <strong>{numberToCurrencyString(portionCost, 1)}</strong>
+                <span>
+                  {makes.measurement ? ` per ${makes.measurement}` : " each"}
+                </span>
               </SeventyFivePercentSpan>
             )}
           </PaddedFlexColumn>

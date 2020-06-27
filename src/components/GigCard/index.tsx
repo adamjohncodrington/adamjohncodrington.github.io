@@ -34,7 +34,7 @@ export const GigCard: React.FC<IGigCard> = ({
         )
       });
 
-  const body: string = venue.name;
+  const body: string = moveTheSuffixToPrefix(venue.name);
 
   return (
     <EventCard
