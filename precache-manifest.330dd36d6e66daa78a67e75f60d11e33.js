@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3d03d08f3130bf918bd0877983e9bc82",
+    "revision": "4e0f54b870fbe35f225465775791e61a",
     "url": "/index.html"
   },
   {
-    "revision": "8b01f4a2439a98146c06",
-    "url": "/static/js/2.0dc378c7.chunk.js"
+    "revision": "b47746c71b17c9e33021",
+    "url": "/static/js/2.41a2d9fc.chunk.js"
   },
   {
     "revision": "4bf00ea42f5dad8ab33d5f32afec9baf",
-    "url": "/static/js/2.0dc378c7.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.41a2d9fc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5be6a692fc482f213821",
-    "url": "/static/js/main.72b4de7f.chunk.js"
+    "revision": "3f19c40efb1080c2c885",
+    "url": "/static/js/main.c58b30e6.chunk.js"
   },
   {
     "revision": "3cf57b419839acabd216",
@@ -44,8 +44,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/ariana-grande_thank-u-next.da50a9a7.jpg"
   },
   {
-    "revision": "7b2f97421c6bff8b6dd4b18eb19fc63e",
-    "url": "/static/media/artist.7b2f9742.svg"
+    "revision": "6b1569d53170d79d23d2c0ddad81955c",
+    "url": "/static/media/artist.6b1569d5.svg"
   },
   {
     "revision": "b17978e3563daf52df27a1714692dc47",
@@ -72,24 +72,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/bolognese.b9573028.jpg"
   },
   {
-    "revision": "7629194113b724a954db79d3612ec251",
-    "url": "/static/media/book.76291941.svg"
+    "revision": "a7bef01bba3d9aee14f481bfe76d3ee3",
+    "url": "/static/media/book.a7bef01b.svg"
   },
   {
-    "revision": "09b4a667380a39e83d153497ebf85eb6",
-    "url": "/static/media/brain.09b4a667.svg"
+    "revision": "237ef4f48ff41d4faa7485237c411968",
+    "url": "/static/media/brain.237ef4f4.svg"
   },
   {
     "revision": "8469260458b814565877e6297f8815e7",
     "url": "/static/media/brownies.84692604.jpg"
   },
   {
-    "revision": "fd8c22a8f78e994bcc29375552f9c41c",
-    "url": "/static/media/cake.fd8c22a8.svg"
+    "revision": "9b302a0220bdc5a0c69a06fc5687f511",
+    "url": "/static/media/cake.9b302a02.svg"
   },
   {
-    "revision": "90fcc14d26442e92c03650e711cc0ad1",
-    "url": "/static/media/camera.90fcc14d.svg"
+    "revision": "33f4f24c98c61bc9835a682b0c848668",
+    "url": "/static/media/camera.33f4f24c.svg"
   },
   {
     "revision": "9848608aea9dab8cf445d973bf8a1413",
@@ -104,8 +104,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/charli-xcx_how-im-feeling-now.189d54fe.jpg"
   },
   {
-    "revision": "c6cfa7a4e02c837785c6619ed0f8e6a3",
-    "url": "/static/media/city.c6cfa7a4.svg"
+    "revision": "e57fc0cac76651783a0de46415051fb9",
+    "url": "/static/media/city.e57fc0ca.svg"
   },
   {
     "revision": "263fe8b3e5873606a7eb45550450ca83",
@@ -244,8 +244,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/paramore_riot.bb10da24.jpg"
   },
   {
-    "revision": "05525562ffcb7a230a58ff6ee76cdee1",
-    "url": "/static/media/peace_sign.05525562.svg"
+    "revision": "045db1fc595731246a893222fabef3ee",
+    "url": "/static/media/peace_sign.045db1fc.svg"
   },
   {
     "revision": "af13270c2a54ade62bc1d0edaef5a2b9",
