@@ -9,7 +9,7 @@ const { ALL, BUCKET_LIST } = DATA;
 const FAVOURITES: Array<ITravelCard> = ALL.filter(item => item.favourite);
 const UP_NEXT: Array<ITravelCard> = ALL.filter(item => isInFuture(item.dates));
 
-export const pastCount: number =
+export const totalAbroadTripsSoFar: number =
   ALL.filter(item => !item.notAbroad).length - UP_NEXT.length;
 
 const countries: Array<any> = Object.values(LOCATIONS);

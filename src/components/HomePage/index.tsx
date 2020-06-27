@@ -1,8 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
+import { PAGES } from "pages";
 import { Link } from "primitives";
-import { PAGE_ROUTES } from "config";
 
 const FlexContainer = styled.div`
   display: flex;
@@ -36,8 +36,8 @@ const StyledSvg = styled.img(({ theme }: IThemeProp) => {
 export const HomePage: React.FC = () => (
   <FlexContainer>
     <GridContainer>
-      {PAGE_ROUTES.map(({ icon, dest }: IPageRoute, index: number) => (
-        <Link key={index} to={dest}>
+      {PAGES.map(({ icon, path }: IPage, index: number) => (
+        <Link key={index} to={path}>
           <StyledSvg src={icon} />
         </Link>
       ))}

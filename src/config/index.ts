@@ -1,1 +1,1 @@
-export { HOMEPAGE_ROUTE, PAGE_ROUTES } from "./routes";
+export { HOMEPAGE_ROUTE } from "./routes";

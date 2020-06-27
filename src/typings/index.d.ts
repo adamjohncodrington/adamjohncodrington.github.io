@@ -62,20 +62,16 @@ interface IPageSection extends IPageSectionDisclosure {
   starCount?: number;
 }
 
-interface IPage {
-  count?: number;
-  sections: Array<IPageSection>;
-}
-
 interface IRoute {
   title: string;
-  dest: string;
+  path: string;
 }
 
-interface IPageRoute extends IRoute {
-  hide?: boolean;
+interface IPage extends IRoute {
   icon: IImageSrc;
-  page: IPage;
+  sections: Array<IPageSection>;
+  count?: number;
+  hide?: boolean;
 }
 
 type IconsObject = { [iconName: string]: IImageSrc };

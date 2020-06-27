@@ -16,7 +16,7 @@ const UP_NEXT: Array<IGigCard> = ALL.filter((gig: IGigCard) =>
   isInFuture(gig.dates)
 );
 
-export const pastCount: number = ALL.length - UP_NEXT.length;
+export const totalGigsSoFar: number = ALL.length - UP_NEXT.length;
 
 const mapToCountedListWrapper = (params: any) =>
   mapToCountedList({
