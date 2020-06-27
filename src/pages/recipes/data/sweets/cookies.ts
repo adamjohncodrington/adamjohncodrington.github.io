@@ -82,7 +82,6 @@ export const COOKIES: IRecipeCard = {
   title,
   totalCost,
   method,
-  newRecipe: true,
   portionCost,
   makes,
   favourite: true,
