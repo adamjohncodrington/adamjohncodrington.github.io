@@ -1,3 +1,3 @@
-export { PHOTOS_RECIPES } from "./recipes";
-export { SVG_ICONS } from "./svg";
-export { PHOTOS_VINYL } from "./vinyl";
+export * from "./recipes";
+export * from "./svg";
+export * from "./vinyl";

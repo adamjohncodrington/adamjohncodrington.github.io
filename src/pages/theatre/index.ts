@@ -1,10 +1,10 @@
-import { SVG_ICONS } from "resources";
+import { SvgTheatreMasks } from "resources";
 
 import { sections } from "./sections";
 
 export const PAGE_THEATRE: IPage = {
   title: "Theatre",
   path: "/theatre",
-  icon: SVG_ICONS.MASKS,
+  SvgIcon: SvgTheatreMasks,
   sections
 };

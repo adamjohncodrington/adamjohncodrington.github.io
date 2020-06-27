@@ -1,5 +1,5 @@
 import { PAGE_SECTION_TITLES } from "@constants";
-import { SVG_ICONS } from "resources";
+import { SVG_ICON_STRINGS } from "resources";
 
 import { FACTORY } from "./factory";
 import { DATA } from "./data";
@@ -10,34 +10,34 @@ const { BUCKET_LIST, FESTIVALS, FRIENDS, MUSICIANS, UP_NEXT, VENUES } = FACTORY;
 const SECTIONS_STATS: Array<IPageSection> = [
   {
     title: PAGE_SECTION_TITLES.BUCKET_LIST,
-    icon: SVG_ICONS.STARS,
+    icon: SVG_ICON_STRINGS.STARS,
     data: { countedItems: BUCKET_LIST }
   },
   {
     title: "Festivals",
-    icon: SVG_ICONS.PEACE_SIGN,
+    icon: SVG_ICON_STRINGS.PEACE_SIGN,
     data: { countedItems: FESTIVALS }
   },
   {
     title: "Artists",
-    icon: SVG_ICONS.ARTIST,
+    icon: SVG_ICON_STRINGS.ARTIST,
     data: { countedItems: MUSICIANS },
     count: MUSICIANS.length
   },
   {
     title: PAGE_SECTION_TITLES.FRIENDS,
-    icon: SVG_ICONS.PEOPLE,
+    icon: SVG_ICON_STRINGS.PEOPLE,
     data: { countedItems: FRIENDS }
   },
   {
     title: PAGE_SECTION_TITLES.UP_NEXT,
-    icon: SVG_ICONS.NOTEPAD,
+    icon: SVG_ICON_STRINGS.NOTEPAD,
     data: { gigCards: UP_NEXT },
     count: UP_NEXT.length
   },
   {
     title: "Venues",
-    icon: SVG_ICONS.STADIUM,
+    icon: SVG_ICON_STRINGS.STADIUM,
     data: { countedItems: VENUES },
     count: VENUES.length
   }

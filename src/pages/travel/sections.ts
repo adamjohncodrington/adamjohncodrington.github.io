@@ -1,5 +1,5 @@
 import { PAGE_SECTION_TITLES } from "@constants";
-import { SVG_ICONS } from "resources";
+import { SVG_ICON_STRINGS } from "resources";
 import { isInFuture } from "@utils";
 
 import { DATA } from "./data";
@@ -19,49 +19,52 @@ const {
 const SECTIONS_STATS: Array<IPageSection> = [
   {
     title: PAGE_SECTION_TITLES.BUCKET_LIST,
-    icon: SVG_ICONS.STARS,
+    icon: SVG_ICON_STRINGS.STARS,
     data: { countedItems: BUCKET_LIST }
   },
   {
     title: "Cities",
-    icon: SVG_ICONS.CITY,
+    icon: SVG_ICON_STRINGS.CITY,
     data: { countedItems: CITIES },
     count: CITIES.length,
     starCount: CITIES.filter(city => city.star).length
   },
   {
     title: "Countries",
-    icon: SVG_ICONS.FLAG,
+    icon: SVG_ICON_STRINGS.FLAG,
     data: { countedItems: COUNTRIES },
     count: COUNTRIES.length
   },
   {
     title: PAGE_SECTION_TITLES.FRIENDS,
-    icon: SVG_ICONS.PEOPLE,
+    icon: SVG_ICON_STRINGS.PEOPLE,
     data: { countedItems: FRIENDS }
   },
   {
     title: "Highlights",
-    icon: SVG_ICONS.MAP_PIN,
+    icon: SVG_ICON_STRINGS.MAP_PIN,
     data: { countedItems: HIGHLIGHTS }
   },
   {
     title: "Islands",
-    icon: SVG_ICONS.PALM_TREE,
+    icon: SVG_ICON_STRINGS.PALM_TREE,
     data: { countedItems: ISLANDS }
   },
   {
     title: "Theme Parks",
-    icon: SVG_ICONS.ROLLER_COASTER,
+    icon: SVG_ICON_STRINGS.ROLLER_COASTER,
     data: { countedItems: THEME_PARKS },
-    count: THEME_PARKS.length
+    count: THEME_PARKS.length,
+    hide: true
   },
   {
     title: PAGE_SECTION_TITLES.UP_NEXT,
-    icon: SVG_ICONS.NOTEPAD,
+    icon: SVG_ICON_STRINGS.NOTEPAD,
     data: { travelCards: UP_NEXT }
   }
-].sort((a: IPageSection, b: IPageSection) => (a.title > b.title ? 1 : -1));
+]
+  .filter((pageSection: IPageSection) => !pageSection.hide)
+  .sort((a: IPageSection, b: IPageSection) => (a.title > b.title ? 1 : -1));
 
 const SECTIONS_YEARS: Array<IPageSection> = DATA.SPLIT_BY_YEAR.map(
   (year: Array<ITravelCard>) => ({

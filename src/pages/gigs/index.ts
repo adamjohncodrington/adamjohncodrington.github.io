@@ -1,4 +1,4 @@
-import { SVG_ICONS } from "resources";
+import { SvgMicrophone } from "resources";
 
 import { totalGigsSoFar } from "./factory";
 import { sections } from "./sections";
@@ -6,7 +6,7 @@ import { sections } from "./sections";
 export const PAGE_GIGS: IPage = {
   title: "Gigs",
   path: "/gigs",
-  icon: SVG_ICONS.MICROPHONE,
+  SvgIcon: SvgMicrophone,
   count: totalGigsSoFar,
   sections
 };

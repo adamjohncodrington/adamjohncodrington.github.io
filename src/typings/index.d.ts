@@ -60,6 +60,7 @@ interface IPageSection extends IPageSectionDisclosure {
   data: IPageSectionDataTypes;
   count?: number;
   starCount?: number;
+  hide?: boolean;
 }
 
 interface IRoute {
@@ -68,13 +69,13 @@ interface IRoute {
 }
 
 interface IPage extends IRoute {
-  icon: IImageSrc;
+  SvgIcon: React.FC<React.SVGProps<SVGSVGElement>>;
   sections: Array<IPageSection>;
   count?: number;
   hide?: boolean;
 }
 
-type IconsObject = { [iconName: string]: IImageSrc };
+type IconsStringObject = { [iconName: string]: IImageSrc };
 type RecipePhotosObject = { [recipe: string]: IImageSrc };
 type VinylPhotosObject = { [artist: string]: { [album: string]: IImageSrc } };
 

@@ -1,10 +1,15 @@
 # TO DO LIST
 
-- merge routes and pages (IPage extends IRoute)
-- add `NavBar` mobile component
+- make all `.svg` files render as `SvgIcon` components
 - remove hard-coded recipe image width + implement react-disclosure/react-accessible-accordion?
 - add isTablet, isTabletOrLarger, isPortrait, isTouch, isRetina, isLaptop to “useMediaQuery” (beef up breakpoints)
 - add isStaticOnDesktop and rename isStatic to isStaticAlways on IPageSection
+
+## Recipes
+
+- margaritas
+- roast potatoes
+- potato salad
 
 ## Refactoring
 

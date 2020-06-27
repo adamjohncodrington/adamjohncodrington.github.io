@@ -2,9 +2,8 @@ import React, { useContext } from "react";
 import { ThemeContext } from "styled-components";
 
 import {
-  DietSymbol,
   FlexRow,
-  CentredDiv,
+  DivWithCentredText,
   SeventyFivePercentSpan,
   SquareImage
 } from "primitives";
@@ -18,7 +17,12 @@ import {
   mapServeWithToListItems,
   mapIngredientsToListItems
 } from "./factory";
-import { RecipeCardTitle, RecipeBody, PaddedFlexColumn } from "./styles";
+import {
+  DietSymbol,
+  RecipeCardTitle,
+  RecipeBody,
+  PaddedFlexColumn
+} from "./styles";
 
 export const RecipeCard: React.FC<IRecipeCard> = ({
   title,
@@ -73,9 +77,9 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
         />
 
         {image && (
-          <CentredDiv>
+          <DivWithCentredText>
             <SquareImage imgSrc={image} size={theme.recipe.image.size} />
-          </CentredDiv>
+          </DivWithCentredText>
         )}
 
         {totalCost && (

@@ -14,7 +14,7 @@ const THEME_page: ITheme_Page = {
   count: { padding: `12px 0 0 ${countMarginLeft}` },
   header: { margin: { bottom: "30px" } },
   icon: { margin: { top: "15px" }, size: "60px" },
-  shell: { padding: "25px 20px" }
+  shell: { padding: "15px 20px 25px" }
 };
 
 const THEME_countedList: ITheme_CountedList = {

@@ -1,6 +1,6 @@
 const requireSvg = (icon: string): IImageSrc => require(`./${icon}.svg`);
 
-export const SVG_ICONS: IconsObject = {
+export const SVG_ICON_STRINGS: IconsStringObject = {
   // A
   ARTIST: requireSvg("artist"),
   // B
@@ -36,3 +36,9 @@ export const SVG_ICONS: IconsObject = {
   VEG_BOWL: requireSvg("veg_bowl"),
   VINYL: requireSvg("vinyl")
 };
+
+export { ReactComponent as SvgMicrophone } from "./microphone.svg";
+export { ReactComponent as SvgTheatreMasks } from "./masks.svg";
+export { ReactComponent as SvgVinyl } from "./vinyl.svg";
+export { ReactComponent as SvgTravel } from "./travel.svg";
+export { ReactComponent as SvgVegBowl } from "./veg_bowl.svg";

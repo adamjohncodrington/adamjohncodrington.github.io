@@ -1,5 +1,5 @@
 import { PAGE_SECTION_TITLES } from "@constants";
-import { SVG_ICONS } from "resources";
+import { SVG_ICON_STRINGS } from "resources";
 import { isInFuture } from "@utils";
 
 import { FACTORY } from "./factory";
@@ -10,29 +10,29 @@ const { ACTORS, FRIENDS, PLAYS, VENUES, UP_NEXT } = FACTORY;
 const SECTIONS_STATS: Array<IPageSection> = [
   {
     title: "Actors",
-    icon: SVG_ICONS.ARTIST,
+    icon: SVG_ICON_STRINGS.ARTIST,
     data: { countedItems: ACTORS }
   },
   {
     title: PAGE_SECTION_TITLES.FRIENDS,
-    icon: SVG_ICONS.PEOPLE,
+    icon: SVG_ICON_STRINGS.PEOPLE,
     data: { countedItems: FRIENDS }
   },
   {
     title: "Plays",
-    icon: SVG_ICONS.BOOK,
+    icon: SVG_ICON_STRINGS.BOOK,
     data: { countedItems: PLAYS },
     count: PLAYS.length
   },
   {
     title: "Theatres",
-    icon: SVG_ICONS.THEATRE,
+    icon: SVG_ICON_STRINGS.THEATRE,
     data: { countedItems: VENUES },
     count: VENUES.length
   },
   {
     title: PAGE_SECTION_TITLES.UP_NEXT,
-    icon: SVG_ICONS.NOTEPAD,
+    icon: SVG_ICON_STRINGS.NOTEPAD,
     data: { theatreCards: UP_NEXT }
   }
 ];

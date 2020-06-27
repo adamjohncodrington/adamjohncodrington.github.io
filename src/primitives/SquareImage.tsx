@@ -1,32 +1,24 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 interface IStyledImage {
   size: string;
 }
+
 const StyledImage = styled.img`
-  height: ${({ size }: IStyledImage) => size};
-  width: ${({ size }: IStyledImage) => size};
-  margin: 0;
+  ${({ size }: IStyledImage) => css`
+    height: ${size};
+    width: ${size};
+    margin: 0;
+  `}
 `;
 
 interface ISquareImage {
-  className?: string;
   dataTest?: string;
   imgSrc: string;
   size: string;
 }
 
-export const SquareImage = ({
-  className,
-  dataTest,
-  imgSrc,
-  size
-}: ISquareImage) => (
-  <StyledImage
-    className={className}
-    data-test={dataTest}
-    src={imgSrc}
-    size={size}
-  />
+export const SquareImage = ({ dataTest, imgSrc, size }: ISquareImage) => (
+  <StyledImage data-test={dataTest} src={imgSrc} size={size} />
 );

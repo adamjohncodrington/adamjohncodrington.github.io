@@ -23,7 +23,7 @@ export const PageSectionsLayout: React.FC<IPageSectionsLayout> = ({
         vinylCards
       }
     }: IPageSection): boolean => {
-      const validData: boolean = !(
+      const dataExists: boolean = !(
         (countedItems && countedItems.length === 0) ||
         (gigCards && gigCards.length === 0) ||
         (recipeCards && recipeCards.filter(item => !item.hide).length === 0) ||
@@ -32,7 +32,7 @@ export const PageSectionsLayout: React.FC<IPageSectionsLayout> = ({
         (vinylCards && vinylCards.length === 0)
       );
 
-      return validData;
+      return dataExists;
     }
   );
 

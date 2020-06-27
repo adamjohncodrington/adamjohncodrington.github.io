@@ -1,5 +1,5 @@
 export { DietSymbol } from "./DietSymbol";
-export { CentredDiv } from "./Div";
+export { DivWithCentredText } from "./Div";
 export {
   FlexSpan,
   FlexSpanGrow,
