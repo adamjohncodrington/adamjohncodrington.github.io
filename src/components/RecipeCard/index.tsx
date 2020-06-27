@@ -13,12 +13,12 @@ import {
   mapIngredientsToListItems
 } from "./factory";
 import {
-  DietSymbol,
+  RecipeCardDietSymbol,
   RecipeCardTitle,
   RecipeCardPanel,
   RecipeCardPortionCost,
   RecipeCardPhotoContainer,
-  PaddedFlexColumn
+  RecipeCardCostsContainer
 } from "./styles";
 
 export const RecipeCard: React.FC<IRecipeCard> = ({
@@ -44,9 +44,12 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
   const RecipeCardHeader: ReactElement = (
     <FlexRow>
       <RecipeCardTitle favourite={favourite}>{title}</RecipeCardTitle>
-      <DietSymbol size={theme.recipeCard.dietSymbol.size} color={diet.color}>
+      <RecipeCardDietSymbol
+        size={theme.recipeCard.dietSymbol.size}
+        color={diet.color}
+      >
         {diet.abbreviation}
-      </DietSymbol>
+      </RecipeCardDietSymbol>
     </FlexRow>
   );
 
@@ -81,7 +84,7 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
         )}
 
         {totalCost && (
-          <PaddedFlexColumn>
+          <RecipeCardCostsContainer>
             <span>
               <span>approx. </span>
               <strong>{numberToCurrencyString(totalCost, 1)}</strong>
@@ -96,7 +99,7 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
                 </span>
               </RecipeCardPortionCost>
             )}
-          </PaddedFlexColumn>
+          </RecipeCardCostsContainer>
         )}
       </RecipeCardPanel>
     </Disclosure>

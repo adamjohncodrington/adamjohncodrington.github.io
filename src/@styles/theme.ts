@@ -74,12 +74,19 @@ const THEME_PAGE_SHELL: IThemePageShell = {
 
 const THEME_RECIPE_CARD: IThemeRecipeCard = {
   recipeCard: {
-    dietSymbol: { margin: { top: "4px" }, size: "27px" },
+    dietSymbol: {
+      borderRadius: "25%",
+      fontSize: "80%",
+      margin: { top: "4px" },
+      size: "26px",
+      textColor: COLORS.white
+    },
     panel: {
       children: { padding: { top: "10px", bottom: "5px" } },
       padding: { top: "5px" }
     },
     photo: { size: "300px" },
+    portionCost: { margin: { top: "5px" } },
     title: { fontWeight: "300" }
   }
 };

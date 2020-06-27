@@ -32,36 +32,36 @@ export const RecipeCardPanel = styled.div(
   `
 );
 
-export const PaddedFlexColumn = styled(FlexColumn)`
+export const RecipeCardCostsContainer = styled(FlexColumn)`
   text-align: center;
-
-  > *:not(:first-child) {
-    padding-top: 4px;
-  }
 `;
 
-interface IDietSymbol {
+interface IDietSymbol extends IThemeProp {
   color: string;
   size: string;
 }
 
-export const DietSymbol = styled.div(
-  ({ size, color }: IDietSymbol) => css`
-    border-radius: 25%;
+export const RecipeCardDietSymbol = styled.div(
+  ({ size, color, theme: { recipeCard } }: IDietSymbol) => css`
+    border-radius: ${recipeCard.dietSymbol.borderRadius};
     text-align: center;
     height: ${size};
     width: ${size};
     line-height: ${size};
-    font-size: 80%;
+    font-size: ${recipeCard.dietSymbol.fontSize};
 
     ${color &&
     css`
       background: ${color};
-      color: white;
+      color: ${recipeCard.dietSymbol.textColor};
     `}
   `
 );
 
-export const RecipeCardPortionCost = SeventyFivePercentSpan;
+export const RecipeCardPortionCost = styled(SeventyFivePercentSpan)(
+  ({ theme: { recipeCard } }: IThemeProp) => css`
+    margin-top: ${recipeCard.portionCost.margin.top};
+  `
+);
 
 export const RecipeCardPhotoContainer = DivWithCentredText;

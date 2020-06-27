@@ -5,43 +5,45 @@ import { FACTORY } from "./factory";
 import { DATA } from "./data";
 import { isInFuture } from "@utils";
 
-const { BUCKET_LIST, FESTIVALS, FRIENDS, MUSICIANS, UP_NEXT, VENUES } = FACTORY;
+const SECTION_BUCKET_LIST: IPageSection = {
+  title: PAGE_SECTION_TITLES.BUCKET_LIST,
+  icon: SVG_ICON_STRINGS.STARS,
+  data: { countedListItems: FACTORY.BUCKET_LIST }
+};
 
-const SECTIONS_STATS: Array<IPageSection> = [
-  {
-    title: PAGE_SECTION_TITLES.BUCKET_LIST,
-    icon: SVG_ICON_STRINGS.STARS,
-    data: { countedListItems: BUCKET_LIST }
-  },
-  {
-    title: "Festivals",
-    icon: SVG_ICON_STRINGS.PEACE_SIGN,
-    data: { countedListItems: FESTIVALS }
-  },
-  {
-    title: "Artists",
-    icon: SVG_ICON_STRINGS.ARTIST,
-    data: { countedListItems: MUSICIANS },
-    count: MUSICIANS.length
-  },
-  {
-    title: PAGE_SECTION_TITLES.FRIENDS,
-    icon: SVG_ICON_STRINGS.PEOPLE,
-    data: { countedListItems: FRIENDS }
-  },
-  {
-    title: PAGE_SECTION_TITLES.UP_NEXT,
-    icon: SVG_ICON_STRINGS.NOTEPAD,
-    data: { gigCards: UP_NEXT },
-    count: UP_NEXT.length
-  },
-  {
-    title: "Venues",
-    icon: SVG_ICON_STRINGS.STADIUM,
-    data: { countedListItems: VENUES },
-    count: VENUES.length
-  }
-].sort((a: IPageSection, b: IPageSection) => (a.title > b.title ? 1 : -1));
+const SECTION_FESTIVALS: IPageSection = {
+  title: "Festivals",
+  icon: SVG_ICON_STRINGS.PEACE_SIGN,
+  data: { countedListItems: FACTORY.FESTIVALS }
+};
+
+const SECTION_ARTISTS: IPageSection = {
+  title: "Artists",
+  icon: SVG_ICON_STRINGS.ARTIST,
+  data: { countedListItems: FACTORY.MUSICIANS },
+  count: FACTORY.MUSICIANS.length
+};
+
+const SECTION_FRIENDS_GIGS: IPageSection = {
+  title: PAGE_SECTION_TITLES.FRIENDS,
+  icon: SVG_ICON_STRINGS.PEOPLE,
+  data: { countedListItems: FACTORY.FRIENDS }
+};
+
+const SECTION_UP_NEXT_GIGS: IPageSection = {
+  title: PAGE_SECTION_TITLES.UP_NEXT,
+  icon: SVG_ICON_STRINGS.NOTEPAD,
+  data: { gigCards: FACTORY.UP_NEXT },
+  count: FACTORY.UP_NEXT.length,
+  initiallyExpandedAlways: true
+};
+
+const SECTION_VENUES_GIGS: IPageSection = {
+  title: "Venues",
+  icon: SVG_ICON_STRINGS.STADIUM,
+  data: { countedListItems: FACTORY.VENUES },
+  count: FACTORY.VENUES.length
+};
 
 const SECTIONS_YEARS: Array<IPageSection> = DATA.SPLIT_BY_YEAR.map(
   (year: Array<IGigCard>) => ({
@@ -54,6 +56,11 @@ const SECTIONS_YEARS: Array<IPageSection> = DATA.SPLIT_BY_YEAR.map(
 );
 
 export const sections: Array<IPageSection> = [
-  ...SECTIONS_STATS,
+  SECTION_ARTISTS,
+  SECTION_BUCKET_LIST,
+  SECTION_FESTIVALS,
+  SECTION_FRIENDS_GIGS,
+  SECTION_UP_NEXT_GIGS,
+  SECTION_VENUES_GIGS,
   ...SECTIONS_YEARS
 ];

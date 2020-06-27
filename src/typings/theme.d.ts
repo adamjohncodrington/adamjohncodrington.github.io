@@ -4,6 +4,7 @@ type PxValue = string;
 type RemValue = string;
 type BoxShadowValue = string;
 type TransitionValue = string;
+type PercentageValue = string;
 
 interface IThemeBreakpoints {
   breakpoints: IBreakpoints;
@@ -78,13 +79,20 @@ interface IThemePageShell {
 
 interface IThemeRecipeCard {
   recipeCard: {
-    dietSymbol: { margin: { top: PxValue }; size: PxValue };
+    dietSymbol: {
+      borderRadius: PercentageValue;
+      fontSize: PercentageValue;
+      margin: { top: PxValue };
+      size: PxValue;
+      textColor: ColorValue;
+    };
     panel: {
       children: { padding: { top: PxValue; bottom: PxValue } };
       padding: { top: PxValue };
     };
-    title: { fontWeight: FontWeightValue };
     photo: { size: PxValue };
+    portionCost: { margin: { top: PxValue } };
+    title: { fontWeight: FontWeightValue };
   };
 }
 

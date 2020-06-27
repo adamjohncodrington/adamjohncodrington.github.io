@@ -1,6 +1,7 @@
 # TO DO LIST
 
-- move all remaining instances of `px` to theme
+- define `SECTION_ : IPageSection` individually before supplying to an array
+- move final remaining instances of `px` to theme
 - finalise values for `breakpoints`
 - make all `.svg` files render as `SvgIcon` components
 - remove hard-coded recipe image width + implement react-disclosure/react-accessible-accordion?
