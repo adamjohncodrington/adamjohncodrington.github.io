@@ -84,6 +84,13 @@ const THEME_RECIPE_CARD: IThemeRecipeCard = {
   }
 };
 
+const THEME_VINYL_CARD: IThemeVinylCard = {
+  vinylCard: {
+    artwork: { margin: { right: "10px" }, size: "100px" },
+    notLastChild: { margin: { bottom: "5px" } }
+  }
+};
+
 export const THEME: ITheme = {
   ...THEME_BREAKPOINTS,
   ...THEME_COUNTED_LIST_ITEM,
@@ -94,6 +101,7 @@ export const THEME: ITheme = {
   ...THEME_PAGE_SECTION,
   ...THEME_PAGE_SHELL,
   ...THEME_RECIPE_CARD,
+  ...THEME_VINYL_CARD,
 
   fadedOpacity: 0.5,
   fontFamily,

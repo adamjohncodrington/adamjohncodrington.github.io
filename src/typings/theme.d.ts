@@ -88,6 +88,13 @@ interface IThemeRecipeCard {
   };
 }
 
+interface IThemeVinylCard {
+  vinylCard: {
+    artwork: { margin: { right: PxValue }; size: PxValue };
+    notLastChild: { margin: { bottom: PxValue } };
+  };
+}
+
 interface ITheme
   extends IThemeBreakpoints,
     IThemeCountedListItem,
@@ -97,7 +104,8 @@ interface ITheme
     IThemeRecipeCard,
     IThemePageHeader,
     IThemePageShell,
-    IThemePageSection {
+    IThemePageSection,
+    IThemeVinylCard {
   fadedOpacity: number;
   fontFamily: IFontFamily;
   listItemGroupVerticalSpacing: PxValue;

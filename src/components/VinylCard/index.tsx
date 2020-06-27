@@ -1,23 +1,34 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useContext } from "react";
+import styled, { css, ThemeContext } from "styled-components";
 
-import { FlexRow, SquareImage } from "primitives";
+import { A, FlexRow, SquareImage } from "primitives";
 import { moveTheSuffixToPrefix } from "@utils";
 
 import { CardTitleBold, CardSubtitleBold } from "../styles";
 
-const TextContainer = styled.div`
-  margin-left: 10px;
-  flex: 1;
+const VinylCardContainer = FlexRow;
 
-  > *:not(:last-child) {
-    padding-bottom: 5px;
-  }
-`;
+const VinylCardLink = styled(A)(
+  ({ theme: { vinylCard } }: IThemeProp) =>
+    css`
+      margin-right: ${vinylCard.artwork.margin.right};
+    `
+);
 
-const Artwork = styled(SquareImage)`
+const VinylCardArtwork = styled(SquareImage)`
   display: block;
 `;
+
+const VinylCardTextContainer = styled.div(
+  ({ theme: { vinylCard } }: IThemeProp) =>
+    css`
+      flex: 1;
+
+      > *:not(:last-child) {
+        margin-bottom: ${vinylCard.notLastChild.margin.bottom};
+      }
+    `
+);
 
 export const VinylCard: React.FC<IVinylCard> = ({
   artist: { name },
@@ -26,21 +37,25 @@ export const VinylCard: React.FC<IVinylCard> = ({
   artwork,
   appleMusic
 }) => {
+  const theme: ITheme = useContext(ThemeContext);
   const artist: string = moveTheSuffixToPrefix(name);
-  const artworkSize: string = "100px";
 
   return (
-    <FlexRow data-test="vinyl-card">
-      <a href={appleMusic}>
-        <Artwork dataTest="vinyl-artwork" size={artworkSize} imgSrc={artwork} />
-      </a>
+    <VinylCardContainer data-test="vinyl-card">
+      <VinylCardLink href={appleMusic}>
+        <VinylCardArtwork
+          dataTest="vinyl-artwork"
+          size={theme.vinylCard.artwork.size}
+          imgSrc={artwork}
+        />
+      </VinylCardLink>
 
-      <TextContainer>
+      <VinylCardTextContainer>
         <CardTitleBold>{title}</CardTitleBold>
         <CardSubtitleBold>{artist}</CardSubtitleBold>
 
         <div>{year}</div>
-      </TextContainer>
-    </FlexRow>
+      </VinylCardTextContainer>
+    </VinylCardContainer>
   );
 };

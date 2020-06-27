@@ -1,6 +1,11 @@
 import styled, { css } from "styled-components";
 
-import { H3, FlexColumn } from "primitives";
+import {
+  DivWithCentredText,
+  H3,
+  FlexColumn,
+  SeventyFivePercentSpan
+} from "primitives";
 import { CSS } from "@styles";
 
 interface IRecipeCardTitle extends IThemeProp {
@@ -56,3 +61,7 @@ export const DietSymbol = styled.div(
     `}
   `
 );
+
+export const RecipeCardPortionCost = SeventyFivePercentSpan;
+
+export const RecipeCardPhotoContainer = DivWithCentredText;

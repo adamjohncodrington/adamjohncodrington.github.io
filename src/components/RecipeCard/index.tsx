@@ -1,12 +1,7 @@
 import React, { useContext, ReactElement } from "react";
 import { ThemeContext } from "styled-components";
 
-import {
-  FlexRow,
-  DivWithCentredText,
-  SeventyFivePercentSpan,
-  SquareImage
-} from "primitives";
+import { FlexRow, SquareImage } from "primitives";
 import { getIngredientsHeader, numberToCurrencyString } from "@utils";
 
 import { Disclosure } from "../Disclosure";
@@ -21,6 +16,8 @@ import {
   DietSymbol,
   RecipeCardTitle,
   RecipeCardPanel,
+  RecipeCardPortionCost,
+  RecipeCardPhotoContainer,
   PaddedFlexColumn
 } from "./styles";
 
@@ -78,9 +75,9 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
         />
 
         {image && (
-          <DivWithCentredText>
+          <RecipeCardPhotoContainer>
             <SquareImage imgSrc={image} size={theme.recipeCard.photo.size} />
-          </DivWithCentredText>
+          </RecipeCardPhotoContainer>
         )}
 
         {totalCost && (
@@ -92,12 +89,12 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
             </span>
 
             {portionCost && makes && (
-              <SeventyFivePercentSpan>
+              <RecipeCardPortionCost>
                 <strong>{numberToCurrencyString(portionCost, 1)}</strong>
                 <span>
                   {makes.measurement ? ` per ${makes.measurement}` : " each"}
                 </span>
-              </SeventyFivePercentSpan>
+              </RecipeCardPortionCost>
             )}
           </PaddedFlexColumn>
         )}
