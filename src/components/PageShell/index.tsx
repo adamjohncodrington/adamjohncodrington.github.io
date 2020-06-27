@@ -1,10 +1,14 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { PageHeader } from "../PageHeader";
 
-const StyledPageShell = styled.section`
-  padding: ${props => props.theme.page.shell.padding};
+const StyledPageShell = styled.main`
+  ${({ theme: { navBar, page } }: IThemeProp) => css`
+    padding: ${page.shell.padding};
+    height: calc(100vh - ${navBar.iconSize} - 2 * ${navBar.verticalPadding});
+    overflow-y: auto;
+  `}
 `;
 
 interface PageShellProps {

@@ -1,23 +1,29 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 const StyledNav = styled.nav`
-  display: grid;
-  grid-auto-flow: column;
-  background: black;
-  padding: 10px 0;
+  ${({
+    theme: {
+      navBar: { iconSize, verticalPadding }
+    }
+  }: IThemeProp) => css`
+    display: grid;
+    grid-auto-flow: column;
+    background: black;
+    padding: ${verticalPadding} 0;
 
-  a {
-    display: flex;
-    justify-content: center;
-  }
+    a {
+      display: flex;
+      justify-content: center;
+    }
 
-  svg {
-    fill: white;
-    width: 50px;
-    height: 50px;
-  }
+    svg {
+      fill: white;
+      width: ${iconSize};
+      height: ${iconSize};
+    }
+  `}
 `;
 
 interface INavBar {

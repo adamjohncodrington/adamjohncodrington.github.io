@@ -6,24 +6,24 @@ const countMarginLeft: PxValue = "5px";
 
 const BORDER_GRAY_THIN: IBorder = `1px solid ${COLORS.gray}`;
 
-const THEME_page: ITheme_Page = {
+const page: ITheme_Page = {
   count: { padding: `12px 0 0 ${countMarginLeft}` },
   header: { margin: { bottom: "30px" } },
   icon: { margin: { top: "15px" }, size: "60px" },
   shell: { padding: "15px 20px 25px" }
 };
 
-const THEME_countedList: ITheme_CountedList = {
+const countedList: ITheme_CountedList = {
   count: { width: "25px" },
   padding: { vertical: "5px" }
 };
 
-const THEME_eventCardList: ITheme_EventCardList = {
+const eventCardList: ITheme_EventCardList = {
   padding: { vertical: "10px" },
   finalEventCardPaddingBottom: "5px"
 };
 
-const THEME_pageSection: ITheme_PageSection = {
+const section: ITheme_PageSection = {
   background: COLORS.gainsboro,
   borderRadius: "10px",
   boxShadow: `0 1px 2px ${rgba(COLORS.gray, 0.5)}`,
@@ -35,7 +35,7 @@ const THEME_pageSection: ITheme_PageSection = {
   transition: "all 0.4s ease"
 };
 
-const THEME_recipe: ITheme_Recipes = {
+const recipe: ITheme_Recipes = {
   image: { size: "300px" },
   dietIcon: { margin: { top: "4px" }, size: "24px" },
   title: { padding: { vertical: "15px" } },
@@ -43,17 +43,22 @@ const THEME_recipe: ITheme_Recipes = {
   last: { padding: { bottom: "20px" } }
 };
 
-const THEME_breakpoints: IBreakpoints = {
+const breakpoints: IBreakpoints = {
   tablet: { minWidth: "768px" },
   phone: { maxWidth: "480px" }
 };
 
-const THEME_pageSectionPanelList = {
+const pageSectionPanelList = {
   borderBottom: BORDER_GRAY_THIN
 };
 
 export const fontFamily: IFontFamily = "-apple-system, Helvetica, sans-serif";
 export const scrollbarSize: IScrollbarSize = "0.7rem";
+
+const navBar: ITheme_NavBar = {
+  verticalPadding: "10px",
+  iconSize: "50px"
+};
 
 export const THEME: ITheme = {
   // Surface level
@@ -64,12 +69,12 @@ export const THEME: ITheme = {
   textColor: COLORS.black,
 
   // Nested level
-  pageSectionPanelList: THEME_pageSectionPanelList,
-
-  breakpoints: THEME_breakpoints,
-  countedList: THEME_countedList,
-  eventCardList: THEME_eventCardList,
-  recipe: THEME_recipe,
-  section: THEME_pageSection,
-  page: THEME_page
+  pageSectionPanelList,
+  breakpoints,
+  countedList,
+  eventCardList,
+  recipe,
+  navBar,
+  section,
+  page
 };

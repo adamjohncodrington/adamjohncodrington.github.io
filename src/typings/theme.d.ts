@@ -72,7 +72,12 @@ type IBreakpoints = {
   phone: { maxWidth: PxValue };
 };
 
-type ITheme = {
+interface ITheme_NavBar {
+  iconSize: PxValue;
+  verticalPadding: PxValue;
+}
+
+interface ITheme {
   // Surface level
   fadedOpacity: number;
   fontFamily: IFontFamily;
@@ -81,6 +86,7 @@ type ITheme = {
   textColor: ColorValue;
 
   // Nested level
+  navBar: ITheme_NavBar;
   pageSectionPanelList: ITheme_PageSectionPanelList;
   breakpoints: IBreakpoints;
   recipe: ITheme_Recipes;
@@ -88,7 +94,7 @@ type ITheme = {
   page: ITheme_Page;
   section: ITheme_PageSection;
   countedList: ITheme_CountedList;
-};
+}
 
 interface IThemeProp {
   theme: ITheme;
