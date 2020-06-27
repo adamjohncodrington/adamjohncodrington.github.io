@@ -5,13 +5,13 @@ interface IStyledImage {
   size: string;
 }
 
-const StyledImage = styled.img`
-  ${({ size }: IStyledImage) => css`
+const StyledImage = styled.img(
+  ({ size }: IStyledImage) => css`
     height: ${size};
     width: ${size};
     margin: 0;
-  `}
-`;
+  `
+);
 
 interface ISquareImage {
   dataTest?: string;

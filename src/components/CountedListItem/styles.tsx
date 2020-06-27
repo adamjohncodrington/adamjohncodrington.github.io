@@ -11,8 +11,8 @@ interface ICountedListItemText extends IThemeProp {
   faded: boolean;
 }
 
-export const CountedListItemText = styled.span`
-  ${({ favourite, star, faded, theme }: ICountedListItemText) => css`
+export const CountedListItemText = styled.span(
+  ({ favourite, star, faded, theme }: ICountedListItemText) => css`
     flex: 1;
 
     ${favourite && CSS.PSEUDO_ELEMENT_HEART}
@@ -23,20 +23,20 @@ export const CountedListItemText = styled.span`
         opacity: ${theme.fadedOpacity};
       `
     }
-  `}
-`;
+  `
+);
 
-export const CountedListItemPastCount = styled.span`
-  ${({ theme: { countedListItem } }: IThemeProp) => css`
+export const CountedListItemPastCount = styled.span(
+  ({ theme: { countedListItem } }: IThemeProp) => css`
     font-weight: bold;
     text-align: right;
     width: ${countedListItem.count.width};
     margin-left: ${countedListItem.count.margin.left};
-  `}
-`;
+  `
+);
 
-export const CountedListItemFutureCount = styled(CountedListItemPastCount)`
-  ${({ theme: { fadedOpacity } }: IThemeProp) => css`
+export const CountedListItemFutureCount = styled(CountedListItemPastCount)(
+  ({ theme: { fadedOpacity } }: IThemeProp) => css`
     opacity: ${fadedOpacity};
-  `}
-`;
+  `
+);

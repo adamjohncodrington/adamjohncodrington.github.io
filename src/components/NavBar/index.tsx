@@ -4,8 +4,8 @@ import styled, { css } from "styled-components";
 
 import { CSS } from "@styles";
 
-const StyledNav = styled.nav`
-  ${({ theme: { navBar } }: IThemeProp) => css`
+const StyledNav = styled.nav(
+  ({ theme: { navBar } }: IThemeProp) => css`
     ${CSS.GRID_COLUMN_EQUAL_WIDTHS}
 
     background: ${navBar.background};
@@ -27,8 +27,8 @@ const StyledNav = styled.nav`
         height: ${navBar.icon.size};
       }
     }
-  `}
-`;
+  `
+);
 
 interface INavBar {
   pages: Array<IPage>;

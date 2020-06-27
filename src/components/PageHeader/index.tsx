@@ -3,20 +3,20 @@ import styled, { css } from "styled-components";
 
 import { H1 } from "primitives";
 
-const PageHeaderContainer = styled.div`
-  ${({ theme: { pageHeader } }: IThemeProp) => css`
+const PageHeaderContainer = styled.div(
+  ({ theme: { pageHeader } }: IThemeProp) => css`
     display: flex;
     justify-content: center;
     text-transform: lowercase;
     margin-bottom: ${pageHeader.margin.bottom};
-  `}
-`;
+  `
+);
 
-const PageHeaderCount = styled.span`
-  ${({ theme: { pageHeader } }: IThemeProp) => css`
+const PageHeaderCount = styled.span(
+  ({ theme: { pageHeader } }: IThemeProp) => css`
     padding: ${pageHeader.count.padding.all};
-  `}
-`;
+  `
+);
 
 interface IPageHeader {
   titleText: string;

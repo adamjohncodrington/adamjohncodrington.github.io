@@ -16,13 +16,13 @@ const ItalicBoldFlexRow = styled(FlexRow)`
   }
 `;
 
-const StyledFlexColumn = styled(FlexColumn)`
-  ${({ theme: { eventCard } }: IThemeProp) => css`
+const StyledFlexColumn = styled(FlexColumn)(
+  ({ theme: { eventCard } }: IThemeProp) => css`
     > *:not(:first-child) {
       padding-top: ${eventCard.notFirstChild.padding.top};
     }
-  `}
-`;
+  `
+);
 
 export const EventCard: React.FC<IEventCard> = ({
   title,

@@ -118,7 +118,6 @@ export const BOLOGNESE: IRecipeCard = {
   favourite: true,
   makes,
   serveWith,
-  newRecipe: true,
   diet,
   method,
   image,

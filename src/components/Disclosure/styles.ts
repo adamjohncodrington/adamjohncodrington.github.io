@@ -6,8 +6,8 @@ interface IPanelContainer extends IThemeProp {
   bodyHeight: IBodyHeight;
 }
 
-export const PanelContainer = styled.div`
-  ${({ bodyHeight, theme: { disclosure } }: IPanelContainer) =>
+export const PanelContainer = styled.div(
+  ({ bodyHeight, theme: { disclosure } }: IPanelContainer) =>
     css`
       transition: ${disclosure.transition};
       overflow: hidden;
@@ -20,8 +20,8 @@ export const PanelContainer = styled.div`
       &.panel-visible {
         max-height: ${bodyHeight}px;
       }
-    `}
-`;
+    `
+);
 
 export const ClickableDiv = styled.div`
   cursor: pointer;

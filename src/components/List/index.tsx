@@ -3,20 +3,17 @@ import styled, { css } from "styled-components";
 
 import { Ul, Li } from "primitives";
 
-interface StyledLiProps extends IThemeProp {
+interface IStyledLi extends IThemeProp {
   addPaddingTop?: boolean;
 }
 
-const StyledLi = styled(Li)`
-  ${({
-    addPaddingTop,
-    theme: { listItemGroupVerticalSpacing }
-  }: StyledLiProps) =>
+const StyledLi = styled(Li)(
+  ({ addPaddingTop, theme: { listItemGroupVerticalSpacing } }: IStyledLi) =>
     addPaddingTop &&
     css`
       padding-top: ${listItemGroupVerticalSpacing};
-    `}
-`;
+    `
+);
 
 interface ListProps {
   title: string;

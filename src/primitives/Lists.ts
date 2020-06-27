@@ -1,15 +1,15 @@
 import styled, { css } from "styled-components";
 
-interface StyledUlProps {
+interface IUl {
   showBullets?: boolean;
 }
 
-export const Ul = styled.ul`
-  margin: 0;
-  padding: 0;
+export const Ul = styled.ul(
+  ({ showBullets }: IUl) => css`
+    margin: 0;
+    padding: 0;
 
-  ${({ showBullets }: StyledUlProps) =>
-    showBullets
+    ${showBullets
       ? css`
           list-style-type: square;
           list-style-position: inside;
@@ -17,6 +17,7 @@ export const Ul = styled.ul`
       : css`
           list-style-type: none;
         `}
-`;
+  `
+);
 
 export const Li = styled.li``;

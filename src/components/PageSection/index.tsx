@@ -5,8 +5,8 @@ import { Disclosure } from "../Disclosure";
 import { PageSectionHeader } from "../PageSectionHeader";
 import { PageSectionPanel } from "../PageSectionPanel";
 
-const PageSectionContainer = styled.section`
-  ${({
+const PageSectionContainer = styled.section(
+  ({
     theme: {
       pageSection: { background, boxShadow, borderRadius, padding, margin }
     }
@@ -16,8 +16,8 @@ const PageSectionContainer = styled.section`
     border-radius: ${borderRadius};
     padding: 0 ${padding.horizontal};
     margin-bottom: ${margin.bottom};
-  `}
-`;
+  `
+);
 
 export const PageSection: React.FC<IPageSection> = ({
   title,
