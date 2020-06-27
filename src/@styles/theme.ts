@@ -6,10 +6,6 @@ const countMarginLeft: PxValue = "5px";
 
 const BORDER_GRAY_THIN: IBorder = `1px solid ${COLORS.gray}`;
 
-const THEME_homePage: ITheme_Homepage = {
-  icon: { padding: "1.5vmin", size: { desktop: "25vmin", phone: "42vmin" } }
-};
-
 const THEME_page: ITheme_Page = {
   count: { padding: `12px 0 0 ${countMarginLeft}` },
   header: { margin: { bottom: "30px" } },
@@ -74,7 +70,6 @@ export const THEME: ITheme = {
   countedList: THEME_countedList,
   eventCardList: THEME_eventCardList,
   recipe: THEME_recipe,
-  homePage: THEME_homePage,
   section: THEME_pageSection,
   page: THEME_page
 };

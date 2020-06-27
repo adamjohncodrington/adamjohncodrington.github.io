@@ -26,13 +26,6 @@ type IBorderRadius = PxValue;
 type IFontFamily = string;
 type IScrollbarSize = RemValue;
 
-interface ITheme_Homepage {
-  icon: {
-    padding: VminVmaxValue;
-    size: { desktop: VminVmaxValue; phone: VminVmaxValue };
-  };
-}
-
 interface ITheme_CountedList {
   count: { width: PxValue };
   padding: { vertical: PaddingValue };
@@ -91,7 +84,6 @@ type ITheme = {
   pageSectionPanelList: ITheme_PageSectionPanelList;
   breakpoints: IBreakpoints;
   recipe: ITheme_Recipes;
-  homePage: ITheme_Homepage;
   eventCardList: ITheme_EventCardList;
   page: ITheme_Page;
   section: ITheme_PageSection;
