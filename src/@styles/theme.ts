@@ -18,14 +18,7 @@ const THEME_DISCLOSURE: IThemeDisclosure = {
 
 const THEME_EVENT_CARD: IThemeEventCard = {
   eventCard: {
-    companySymbol: {
-      color: "#777",
-      spaceBetweenSymbols: "5px"
-    },
-    countdownNote: {
-      horizontalGap: "5px",
-      note: { padding: { top: "3px" } }
-    },
+    companySymbol: { color: COLORS.boulder, spaceBetweenSymbols: "5px" },
     notFirstChild: { margin: { top: "5px" } }
   }
 };
@@ -36,7 +29,7 @@ const THEME_NAV_BAR: IThemeNavBar = {
     icon: {
       color: COLORS.white,
       size: "40px",
-      hoverColor: "#aaa",
+      defaultHoverColor: "#aaa",
       hoverShrinkSize: "0"
     },
     padding: { vertical: "10px" }

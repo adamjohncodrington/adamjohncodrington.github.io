@@ -8,8 +8,8 @@ import { RoundedSymbol } from "../RoundedSymbol";
 import { CardTitleBold, CardSubtitleBold } from "../styles";
 
 import {
-  EventCardCountdownNoteContainer,
   EventCardNote,
+  EventCardCountdown,
   EventCardMainContainer,
   EventCardCompanyContainer,
   EventCardDates
@@ -49,15 +49,15 @@ export const EventCard: React.FC<IEventCard> = ({
       </EventCardDates>
 
       {daysUntilEvent >= 0 && (
-        <EventCardCountdownNoteContainer data-test="event-card-countdown-note-container">
-          <strong data-test="event-card-countdown">
+        <>
+          <EventCardCountdown data-test="event-card-countdown">
             {getCountdownText(daysUntilEvent)}
-          </strong>
+          </EventCardCountdown>
 
           {note && (
             <EventCardNote data-test="event-card-note">{`(${note})`}</EventCardNote>
           )}
-        </EventCardCountdownNoteContainer>
+        </>
       )}
     </EventCardMainContainer>
   );
@@ -68,8 +68,11 @@ export const EventCard: React.FC<IEventCard> = ({
     <EventCardCompanyContainer>
       {company
         .sort((a: IFriend, b: IFriend) => (a.initials > b.initials ? 1 : -1))
-        .map(({ initials }: IFriend) => (
-          <RoundedSymbol color={theme.eventCard.companySymbol.color}>
+        .map(({ initials }: IFriend, index: number) => (
+          <RoundedSymbol
+            key={index}
+            color={theme.eventCard.companySymbol.color}
+          >
             {initials}
           </RoundedSymbol>
         ))}

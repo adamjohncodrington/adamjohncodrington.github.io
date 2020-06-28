@@ -6,6 +6,6 @@ interface IDiets {
 }
 
 export const DIETS: IDiets = {
-  VEGAN: { abbreviation: "Ve", color: COLORS.darkGreen },
-  VEGETARIAN: { abbreviation: "V", color: COLORS.green }
+  VEGAN: { abbreviation: "Ve", color: COLORS.camarone },
+  VEGETARIAN: { abbreviation: "V", color: COLORS.japaneseLaurel }
 };

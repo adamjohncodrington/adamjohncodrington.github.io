@@ -4,10 +4,6 @@ import { calculateRecipeCost } from "@utils";
 const ingredients: Array<Array<IRecipeIngredient>> = [
   [
     {
-      ingredient: INGREDIENTS.EGGS,
-      quantity: 1
-    },
-    {
       ingredient: INGREDIENTS.FLOUR_SELF_RAISING,
       quantity: 175,
       measurement: MEASUREMENTS.GRAM
@@ -22,6 +18,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
       quantity: 40,
       measurement: MEASUREMENTS.GRAM
     },
+    { ingredient: INGREDIENTS.EGGS, quantity: 1 },
     {
       ingredient: INGREDIENTS.MILK,
       quantity: 200,
@@ -50,14 +47,14 @@ const method: Array<string> = [
   "whisk all ingredients except blueberries",
   "fold blueberries into pancake batter",
   "brush frying pan with sunflower oil and heat",
-  "drop dessertspoonfuls of batter onto frying pan",
+  "fry dessertspoonfuls of batter on a medium-low heat",
   "flip pancakes once bases are golden brown",
-  "remove from heat and serve"
+  "remove from heat once both sides are golden"
 ];
 
 const title: string = "Blueberry Pancakes";
 const diet: IRecipeDiet = DIETS.VEGETARIAN;
-const makes: IRecipeMakes = { quantity: 15 };
+const makes: IRecipeMakes = { quantity: 13 };
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;

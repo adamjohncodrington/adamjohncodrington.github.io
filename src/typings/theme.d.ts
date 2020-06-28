@@ -20,14 +20,7 @@ interface IThemeDisclosure {
 
 interface IThemeEventCard {
   eventCard: {
-    companySymbol: {
-      color: ColorValue;
-      spaceBetweenSymbols: PxValue;
-    };
-    countdownNote: {
-      horizontalGap: PxValue;
-      note: { padding: { top: PxValue } };
-    };
+    companySymbol: { color: ColorValue; spaceBetweenSymbols: PxValue };
     notFirstChild: { margin: { top: PxValue } };
   };
 }
@@ -37,7 +30,7 @@ interface IThemeNavBar {
     background: ColorValue;
     icon: {
       color: ColorValue;
-      hoverColor: ColorValue;
+      defaultHoverColor: ColorValue;
       hoverShrinkSize: PxValue;
       size: PxValue;
     };

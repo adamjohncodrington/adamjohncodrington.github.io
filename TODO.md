@@ -3,9 +3,10 @@
 - implement `align-items: baseline` on Event Card disclaimer???? <https://css-tricks.com/snippets/css/a-guide-to-flexbox/>?
 - strongly type all `@constants` objects
 - make `Theatre` use `date` instead of `dates`, move countdown logic to individual cards rather than `EventCard` and make it have `dateText` instead
-- rewrite `mapToCountedList`...
+- rewrite `mapToCountedList`
 - make all `.svg` files render as `SvgIcon` components
 - remove hard-coded recipe image width + implement react-disclosure/react-accessible-accordion?
+- refine color palette
 
 ## Refactoring
 
@@ -32,3 +33,7 @@
 ## Testing
 
 - add more unit tests
+
+## Fix
+
+- prevent `Router` from allowing you to go back between pages

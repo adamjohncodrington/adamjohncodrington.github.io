@@ -24,7 +24,6 @@ const CSS_RECIPE_CARDS = ({
     }
   }
 }: IThemeProp) => css`
-  ${CSS_COMMON}
   > * {
     padding: ${recipeCards.padding.vertical} 0;
   }
@@ -36,6 +35,8 @@ const CSS_RECIPE_CARDS = ({
   > *:last-child {
     padding-bottom: ${recipeCards.lastRecipeCard.padding.bottom};
   }
+
+  ${CSS_COMMON}
 `;
 
 const CSS_COUNTED_LIST = ({
@@ -45,12 +46,13 @@ const CSS_COUNTED_LIST = ({
     }
   }
 }: IThemeProp) => css`
-  ${CSS_COMMON}
   padding-bottom: ${padding.bottom};
 
   > * {
     padding: ${countedListItems.padding.vertical} 0;
   }
+
+  ${CSS_COMMON}
 `;
 
 const CSS_REGULAR_CARDS = ({
@@ -60,7 +62,6 @@ const CSS_REGULAR_CARDS = ({
     }
   }
 }: IThemeProp) => css`
-  ${CSS_COMMON}
   padding-bottom: ${padding.bottom};
 
   > * {
@@ -74,6 +75,8 @@ const CSS_REGULAR_CARDS = ({
   > *:last-child {
     padding-bottom: ${regularCards.lastRegularCard.padding.bottom};
   }
+
+  ${CSS_COMMON}
 `;
 
 export const PageSectionPanelList = styled(

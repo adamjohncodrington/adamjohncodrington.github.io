@@ -34,7 +34,6 @@ const SECTION_UP_NEXT_GIGS: IPageSection = {
   title: PAGE_SECTION_TITLES.UP_NEXT,
   icon: SVG_ICON_STRINGS.NOTEPAD,
   data: { gigCards: FACTORY.UP_NEXT },
-  autoExpandAlways: true,
   count: FACTORY.UP_NEXT.length
 };
 
@@ -49,9 +48,7 @@ const SECTIONS_YEARS: Array<IPageSection> = DATA.SPLIT_BY_YEAR.map(
   (year: Array<IGigCard>): IPageSection => ({
     title: year[0].dates[0].getFullYear().toString(),
     count: year.length,
-    data: {
-      gigCards: year.filter((item: IGigCard) => !isInFuture(item.dates))
-    }
+    data: { gigCards: year.filter((item: IGigCard) => !isInFuture(item.dates)) }
   })
 );
 

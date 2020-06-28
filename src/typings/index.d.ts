@@ -12,12 +12,6 @@ interface IFriend extends INameFavourite {
   theatre?: boolean;
 }
 
-interface PageSectionData {
-  recipes?: Array<IRecipeCard>;
-  countedList?: Array<ICountedListEntry>;
-  eventCards?: Array<IEventCard>;
-}
-
 interface ICountedListItem {
   text: string;
   doNotIncludeInList?: boolean;
@@ -80,6 +74,7 @@ interface IPage {
   sections: Array<IPageSection>;
   count?: number;
   hide?: boolean;
+  color?: ColorValue;
 }
 
 type IconsStringObject = { [iconName: string]: IImageSrc };
