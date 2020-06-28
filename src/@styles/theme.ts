@@ -84,13 +84,7 @@ const THEME_PAGE_LAYOUT: IThemePageLayout = {
 
 const THEME_RECIPE_CARD: IThemeRecipeCard = {
   recipeCard: {
-    dietSymbol: {
-      borderRadius: "25%",
-      fontSize: "80%",
-      margin: { top: "4px" },
-      size: "26px",
-      textColor: COLORS.white
-    },
+    dietSymbol: { margin: { top: "4px" } },
     panel: {
       children: { padding: { top: "15px" } },
       padding: { top: "5px" }
@@ -98,6 +92,15 @@ const THEME_RECIPE_CARD: IThemeRecipeCard = {
     photo: { size: "300px" },
     portionCost: { margin: { top: "3px" } },
     title: { fontWeight: "300" }
+  }
+};
+
+const THEME_ROUNDED_SYMBOL: IThemeRoundedSymbol = {
+  roundedSymbol: {
+    borderRadius: "25%",
+    fontSize: "80%",
+    size: "26px",
+    textColor: COLORS.white
   }
 };
 
@@ -117,6 +120,7 @@ export const THEME: ITheme = {
   ...THEME_PAGE_HEADER,
   ...THEME_PAGE_LAYOUT,
   ...THEME_PAGE_SECTION,
+  ...THEME_ROUNDED_SYMBOL,
   ...THEME_RECIPE_CARD,
   ...THEME_VINYL_CARD,
 

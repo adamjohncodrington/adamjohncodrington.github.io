@@ -6,6 +6,7 @@ import { getIngredientsHeader, numberToCurrencyString } from "@utils";
 
 import { Disclosure } from "../Disclosure";
 import { List } from "../List";
+import { RoundedSymbol } from "../RoundedSymbol";
 
 import {
   mapMethodToListItems,
@@ -13,7 +14,6 @@ import {
   mapIngredientsToListItems
 } from "./factory";
 import {
-  RecipeCardDietSymbol,
   RecipeCardTitle,
   RecipeCardPanel,
   RecipeCardPortionCost,
@@ -44,12 +44,7 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
   const RecipeCardHeader: ReactElement = (
     <FlexRow>
       <RecipeCardTitle favourite={favourite}>{title}</RecipeCardTitle>
-      <RecipeCardDietSymbol
-        size={theme.recipeCard.dietSymbol.size}
-        color={diet.color}
-      >
-        {diet.abbreviation}
-      </RecipeCardDietSymbol>
+      <RoundedSymbol color={diet.color}>{diet.abbreviation}</RoundedSymbol>
     </FlexRow>
   );
 

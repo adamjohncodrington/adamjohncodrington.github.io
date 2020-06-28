@@ -30,28 +30,6 @@ export const RecipeCardCostsContainer = styled(FlexColumn)`
   text-align: center;
 `;
 
-interface IDietSymbol extends IThemeProp {
-  color: string;
-  size: string;
-}
-
-export const RecipeCardDietSymbol = styled.div(
-  ({ size, color, theme: { recipeCard } }: IDietSymbol) => css`
-    text-align: center;
-    border-radius: ${recipeCard.dietSymbol.borderRadius};
-    height: ${size};
-    color: ${recipeCard.dietSymbol.textColor};
-    width: ${size};
-    line-height: ${size};
-    font-size: ${recipeCard.dietSymbol.fontSize};
-
-    ${color &&
-    css`
-      background: ${color};
-    `}
-  `
-);
-
 export const RecipeCardPortionCost = styled.span(
   ({ theme: { recipeCard } }: IThemeProp) => css`
     margin-top: ${recipeCard.portionCost.margin.top};

@@ -86,11 +86,7 @@ interface IThemePageLayout {
 interface IThemeRecipeCard {
   recipeCard: {
     dietSymbol: {
-      borderRadius: PercentageValue;
-      fontSize: PercentageValue;
       margin: { top: PxValue };
-      size: PxValue;
-      textColor: ColorValue;
     };
     panel: {
       children: { padding: { top: PxValue } };
@@ -99,6 +95,15 @@ interface IThemeRecipeCard {
     photo: { size: PxValue };
     portionCost: { margin: { top: PxValue } };
     title: { fontWeight: FontWeightValue };
+  };
+}
+
+interface IThemeRoundedSymbol {
+  roundedSymbol: {
+    borderRadius: PercentageValue;
+    fontSize: PercentageValue;
+    size: PxValue;
+    textColor: ColorValue;
   };
 }
 
@@ -115,10 +120,11 @@ interface ITheme
     IThemeDisclosure,
     IThemeEventCard,
     IThemeNavBar,
-    IThemeRecipeCard,
     IThemePageHeader,
     IThemePageLayout,
     IThemePageSection,
+    IThemeRecipeCard,
+    IThemeRoundedSymbol,
     IThemeVinylCard {
   fadedOpacity: number;
   fontFamily: IFontFamily;
