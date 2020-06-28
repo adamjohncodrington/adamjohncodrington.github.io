@@ -16,7 +16,7 @@ export const EventCardCountdownNoteContainer = styled(FlexRow)(
 
 export const EventCardNote = styled.div(() => CSS.FONT_SIZE_75_PERCENT);
 
-export const EventCardContainer = styled(FlexColumn)(
+export const EventCardMainContainer = styled(FlexColumn)(
   ({ theme: { eventCard } }: IThemeProp) => css`
     > *:not(:first-child) {
       margin-top: ${eventCard.notFirstChild.margin.top};
@@ -25,3 +25,16 @@ export const EventCardContainer = styled(FlexColumn)(
 );
 
 export const EventCardDates = styled.div(() => CSS.FONT_SIZE_75_PERCENT);
+
+export const EventCardCompanyContainer = styled.div`
+  display: flex;
+
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: flex-end;
+
+  > * {
+    margin-left: 5px;
+    margin-bottom: 5px;
+  }
+`;

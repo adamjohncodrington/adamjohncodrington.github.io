@@ -57,8 +57,9 @@ export const PageSectionsLayout: React.FC<IPageSectionsLayout> = ({
 
   return (
     <GridColumnDiv
-      data-test="page-sections"
       columnGap={theme.pageLayout.columnGap}
+      data-test="page-sections"
+      equalWidthColumns={true}
     >
       {pageSectionColumns.map(
         (pageSectionColumn: Array<IPageSection>, index: number) => (

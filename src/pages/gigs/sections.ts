@@ -34,6 +34,7 @@ const SECTION_UP_NEXT_GIGS: IPageSection = {
   title: PAGE_SECTION_TITLES.UP_NEXT,
   icon: SVG_ICON_STRINGS.NOTEPAD,
   data: { gigCards: FACTORY.UP_NEXT },
+  autoExpandAlways: true,
   count: FACTORY.UP_NEXT.length
 };
 

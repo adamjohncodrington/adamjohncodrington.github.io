@@ -18,6 +18,10 @@ const THEME_DISCLOSURE: IThemeDisclosure = {
 
 const THEME_EVENT_CARD: IThemeEventCard = {
   eventCard: {
+    companySymbol: {
+      color: "#777",
+      spaceBetweenSymbols: "5px"
+    },
     countdownNote: {
       horizontalGap: "5px",
       note: { padding: { top: "3px" } }
@@ -98,7 +102,7 @@ const THEME_RECIPE_CARD: IThemeRecipeCard = {
 const THEME_ROUNDED_SYMBOL: IThemeRoundedSymbol = {
   roundedSymbol: {
     borderRadius: "25%",
-    fontSize: "80%",
+    fontSize: "75%",
     size: "26px",
     textColor: COLORS.white
   }

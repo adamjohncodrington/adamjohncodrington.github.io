@@ -108,7 +108,7 @@ export const FRIENDS: IFRIENDS = {
   // P
   PATRICIA: { name: "Patricia Diaconescu", initials: "PD" },
   POOJA: { name: "Pooja Dhir", initials: "PD", travel: true },
-  POPPY: { name: "Poppy Smith", initials: "PS", gigs: true },
+  POPPY: { name: "Poppy Smith", initials: "PS" },
   // R
   ROB_G: { name: "Robert Gall", initials: "RG" },
   RYAN: { name: "Ryan Mills", initials: "RM", gigs: true, travel: true },

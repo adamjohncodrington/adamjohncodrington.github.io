@@ -20,6 +20,10 @@ interface IThemeDisclosure {
 
 interface IThemeEventCard {
   eventCard: {
+    companySymbol: {
+      color: ColorValue;
+      spaceBetweenSymbols: PxValue;
+    };
     countdownNote: {
       horizontalGap: PxValue;
       note: { padding: { top: PxValue } };
