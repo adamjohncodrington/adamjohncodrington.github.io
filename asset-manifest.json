@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/static/js/main.fe0f0e63.chunk.js",
-    "main.js.map": "/static/js/main.fe0f0e63.chunk.js.map",
+    "main.js": "/static/js/main.454efaa7.chunk.js",
+    "main.js.map": "/static/js/main.454efaa7.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.27f1f56c.js",
     "runtime-main.js.map": "/static/js/runtime-main.27f1f56c.js.map",
-    "static/js/2.491a762e.chunk.js": "/static/js/2.491a762e.chunk.js",
-    "static/js/2.491a762e.chunk.js.map": "/static/js/2.491a762e.chunk.js.map",
+    "static/js/2.7f0bfd14.chunk.js": "/static/js/2.7f0bfd14.chunk.js",
+    "static/js/2.7f0bfd14.chunk.js.map": "/static/js/2.7f0bfd14.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.b2d9f0cba230fba37afb0120e7d0bad6.js": "/precache-manifest.b2d9f0cba230fba37afb0120e7d0bad6.js",
+    "precache-manifest.60505419080280aa1b685d925d8459eb.js": "/precache-manifest.60505419080280aa1b685d925d8459eb.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.491a762e.chunk.js.LICENSE.txt": "/static/js/2.491a762e.chunk.js.LICENSE.txt",
+    "static/js/2.7f0bfd14.chunk.js.LICENSE.txt": "/static/js/2.7f0bfd14.chunk.js.LICENSE.txt",
     "static/media/1975_a-brief-inquiry-into-online-relationships.jpg": "/static/media/1975_a-brief-inquiry-into-online-relationships.450622e7.jpg",
     "static/media/adele_19.jpg": "/static/media/adele_19.e2cf5b85.jpg",
     "static/media/allie-x_super-sunset.jpg": "/static/media/allie-x_super-sunset.e4ba903d.jpg",
@@ -69,6 +69,7 @@
     "static/media/peace_sign.svg": "/static/media/peace_sign.045db1fc.svg",
     "static/media/people.svg": "/static/media/people.af13270c.svg",
     "static/media/piri_piri.jpg": "/static/media/piri_piri.42719ce5.jpg",
+    "static/media/potato_salad.jpg": "/static/media/potato_salad.446dfdbb.jpg",
     "static/media/pvris_all-we-know-of-heaven-all-we-need-of-hell.jpg": "/static/media/pvris_all-we-know-of-heaven-all-we-need-of-hell.4a601a47.jpg",
     "static/media/ratatouille.jpg": "/static/media/ratatouille.971440f9.jpg",
     "static/media/rihanna_rated-r.jpg": "/static/media/rihanna_rated-r.00ea61a4.jpg",
@@ -91,7 +92,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.27f1f56c.js",
-    "static/js/2.491a762e.chunk.js",
-    "static/js/main.fe0f0e63.chunk.js"
+    "static/js/2.7f0bfd14.chunk.js",
+    "static/js/main.454efaa7.chunk.js"
   ]
 }
