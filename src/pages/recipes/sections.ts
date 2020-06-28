@@ -1,16 +1,16 @@
 import { DATA } from "./data";
 
 const SECTIONS_RECIPE_GROUPS: Array<IPageSection> = DATA.CATEGORISED.map(
-  ({ title, recipes }: IRecipeGroup) => ({
+  ({ title, recipes }: IRecipeGroup): IPageSection => ({
     title: title,
     data: { recipeCards: recipes },
-    isStatic: true
+    staticAlways: true
   })
 );
 
 const SECTION_COMING_SOON: IPageSection = {
   title: "Coming Soon",
-  initiallyExpandedIf2Columns: true,
+  autoExpandAlways: true,
   data: { countedListItems: DATA.COMING_SOON }
 };
 

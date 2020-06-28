@@ -1,29 +1,18 @@
 import React, { ReactElement } from "react";
 
-import { useMediaQueries } from "@utils";
-
 import { PanelContainer, ClickableDiv } from "./styles";
 
 export type IBodyHeight = number | null;
 
-interface IDisclosure extends IPageSectionDisclosure {
-  headerComponent: React.ReactNode;
-}
-
 export const Disclosure: React.FC<IDisclosure> = ({
-  headerComponent,
+  Header,
   children,
-  initiallyExpandedAlways = false,
-  initiallyExpandedIf2Columns = false,
-  onlyHeaderClickable = false,
-  isStatic = false
+  autoExpand,
+  isStatic,
+  onlyHeaderClickable
 }) => {
-  const { displayPageSectionsIn2Columns } = useMediaQueries();
-
   const [panelIsVisible, switchPanelVisibility] = React.useState<boolean>(
-    initiallyExpandedAlways ||
-      (displayPageSectionsIn2Columns && initiallyExpandedIf2Columns) ||
-      isStatic
+    !!(autoExpand || isStatic)
   );
   const [panelContainerHeight, setPanelContainerHeight] = React.useState<
     IBodyHeight
@@ -60,19 +49,19 @@ export const Disclosure: React.FC<IDisclosure> = ({
 
   return isStatic ? (
     <>
-      {headerComponent}
+      {Header}
       {children}
     </>
   ) : onlyHeaderClickable ? (
     <>
       <ClickableDiv data-test={dataTestClickableDiv} onClick={onClick}>
-        {headerComponent}
+        {Header}
       </ClickableDiv>
       {Panel}
     </>
   ) : (
     <ClickableDiv data-test={dataTestClickableDiv} onClick={onClick}>
-      {headerComponent}
+      {Header}
       {Panel}
     </ClickableDiv>
   );

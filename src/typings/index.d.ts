@@ -35,7 +35,7 @@ interface IEventCard {
   body?: string;
   dates: Array<Date>;
   company: Array<IFriend>;
-  disclaimer?: string;
+  note?: string;
 }
 
 interface IPageSectionDataTypes {
@@ -47,11 +47,21 @@ interface IPageSectionDataTypes {
   vinylCards?: Array<IVinylCard>;
 }
 
-interface IPageSectionDisclosure {
-  initiallyExpandedIf2Columns?: boolean;
-  initiallyExpandedAlways?: boolean;
-  isStatic?: boolean;
+interface IOnlyHeaderClicable {
   onlyHeaderClickable?: boolean;
+}
+
+interface IDisclosure extends IOnlyHeaderClicable {
+  Header: React.ReactElement;
+  autoExpand?: boolean;
+  isStatic?: boolean;
+}
+
+interface IPageSectionDisclosure extends IOnlyHeaderClicable {
+  autoExpandAlways?: boolean;
+  autoExpandIf2Columns?: boolean;
+  staticAlways?: boolean;
+  staticIf2Columns?: boolean;
 }
 
 interface IPageSection extends IPageSectionDisclosure {

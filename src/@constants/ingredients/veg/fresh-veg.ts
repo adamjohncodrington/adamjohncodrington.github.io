@@ -78,6 +78,10 @@ export const VEG_FRESH: IInventoryIngredientsObject = {
     displayText: "baking potato",
     knownCost: { quantity: 1, price: 0.4 }
   },
+  POTATO_JERSEY_ROYAL: {
+    displayText: "Jersey Royal baby potatoes",
+    knownCost: { quantity: 500, measurement: MEASUREMENTS.GRAM, price: 1.5 }
+  },
   POTATO_SWEET: {
     displayText: "sweet potato",
     knownCost: { quantity: 1, price: 0.5 }

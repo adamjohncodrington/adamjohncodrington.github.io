@@ -1,25 +1,28 @@
 import React from "react";
+import styled, { css } from "styled-components";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
-import { SHOW_MEDIA_QUERY_BOOLEANS_AS_STRINGS } from "@config";
-import {
-  PageShell,
-  PageSectionsLayout,
-  MediaQueryChecks,
-  NavBar
-} from "components";
+import { PageHeader, PageSectionsLayout, NavBar } from "components";
 import { PAGES } from "pages";
+
+const PageShell = styled.main(
+  ({ theme: { navBar, pageLayout } }: IThemeProp) => css`
+    padding: ${pageLayout.padding.all};
+    height: calc(100vh - ${navBar.icon.size} - 2 * ${navBar.padding.vertical});
+    overflow-y: auto;
+  `
+);
 
 export const App: React.FC = () => (
   <BrowserRouter>
-    <NavBar pages={PAGES} />
-
-    {SHOW_MEDIA_QUERY_BOOLEANS_AS_STRINGS && <MediaQueryChecks />}
-
     <Switch>
       {PAGES.map(({ title, path, count, sections }: IPage, index: number) => (
         <Route key={index} path={path}>
-          <PageShell title={title} count={count}>
+          <NavBar pages={PAGES} />
+
+          <PageShell data-test="page-content">
+            <PageHeader titleText={title} count={count} />
+
             <PageSectionsLayout pageSections={sections} />
           </PageShell>
         </Route>

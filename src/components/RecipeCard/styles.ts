@@ -1,11 +1,6 @@
 import styled, { css } from "styled-components";
 
-import {
-  DivWithCentredText,
-  H3,
-  FlexColumn,
-  SeventyFivePercentSpan
-} from "primitives";
+import { H3, FlexColumn } from "primitives";
 import { CSS } from "@styles";
 
 interface IRecipeCardTitle extends IThemeProp {
@@ -27,7 +22,6 @@ export const RecipeCardPanel = styled.div(
 
     > * {
       padding-top: ${recipeCard.panel.children.padding.top};
-      padding-bottom: ${recipeCard.panel.children.padding.bottom};
     }
   `
 );
@@ -43,9 +37,10 @@ interface IDietSymbol extends IThemeProp {
 
 export const RecipeCardDietSymbol = styled.div(
   ({ size, color, theme: { recipeCard } }: IDietSymbol) => css`
-    border-radius: ${recipeCard.dietSymbol.borderRadius};
     text-align: center;
+    border-radius: ${recipeCard.dietSymbol.borderRadius};
     height: ${size};
+    color: ${recipeCard.dietSymbol.textColor};
     width: ${size};
     line-height: ${size};
     font-size: ${recipeCard.dietSymbol.fontSize};
@@ -53,15 +48,17 @@ export const RecipeCardDietSymbol = styled.div(
     ${color &&
     css`
       background: ${color};
-      color: ${recipeCard.dietSymbol.textColor};
     `}
   `
 );
 
-export const RecipeCardPortionCost = styled(SeventyFivePercentSpan)(
+export const RecipeCardPortionCost = styled.span(
   ({ theme: { recipeCard } }: IThemeProp) => css`
     margin-top: ${recipeCard.portionCost.margin.top};
+    ${CSS.FONT_SIZE_75_PERCENT}
   `
 );
 
-export const RecipeCardPhotoContainer = DivWithCentredText;
+export const RecipeCardPhotoContainer = styled.div`
+  text-align: center;
+`;

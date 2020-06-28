@@ -54,10 +54,7 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
   );
 
   return (
-    <Disclosure
-      initiallyExpandedAlways={newRecipe}
-      headerComponent={RecipeCardHeader}
-    >
+    <Disclosure autoExpand={newRecipe} Header={RecipeCardHeader}>
       <RecipeCardPanel>
         <List
           title={ingredientsHeader}

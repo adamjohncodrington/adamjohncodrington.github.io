@@ -1,6 +1,8 @@
 # TO DO LIST
 
-- define `SECTION_ : IPageSection` individually before supplying to an array
+- strongly type all `@constants` objects
+- make `Theatre` use `date` instead of `dates`, move countdown logic to individual cards rather than `EventCard` and make it have `dateText` instead
+- rewrite `mapToCountedList`...
 - move final remaining instances of `px` to theme
 - finalise values for `breakpoints`
 - make all `.svg` files render as `SvgIcon` components

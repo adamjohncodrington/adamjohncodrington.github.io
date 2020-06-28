@@ -1,5 +1,9 @@
 import { css } from "styled-components";
 
+const FONT_SIZE_75_PERCENT = css`
+  font-size: 75%;
+`;
+
 const PSEUDO_ELEMENT_HEART = css`
   ::before {
     content: "♥ ";
@@ -28,6 +32,7 @@ const GRID_COLUMN_EQUAL_WIDTHS = css`
 `;
 
 export const CSS = {
+  FONT_SIZE_75_PERCENT,
   GRID_COLUMN,
   GRID_COLUMN_EQUAL_WIDTHS,
   PSEUDO_ELEMENT_HEART,

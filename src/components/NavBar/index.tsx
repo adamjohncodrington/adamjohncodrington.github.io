@@ -18,6 +18,7 @@ const StyledNav = styled.nav(
       :hover {
         svg {
           border: ${navBar.icon.hoverShrinkSize} solid transparent;
+          fill: ${navBar.icon.hoverColor}
         }
       }
 

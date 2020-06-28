@@ -1,28 +1,15 @@
 import React from "react";
-import styled, { css } from "styled-components";
 
-import { FlexColumn, FlexRow, SeventyFivePercentSpan } from "primitives";
 import { datesArrayToString } from "@utils";
 
 import { CardTitleBold, CardSubtitleBold } from "../styles";
+import {
+  EventCardCountdownNoteContainer,
+  EventCardNote,
+  EventCardContainer,
+  EventCardDates
+} from "./styles";
 import { getCountdownText, daysToGo } from "./utils";
-
-const ItalicBoldFlexRow = styled(FlexRow)`
-  font-style: italic;
-
-  > *:not(:first-child) {
-    margin-top: 3px;
-    margin-left: 5px;
-  }
-`;
-
-const StyledFlexColumn = styled(FlexColumn)(
-  ({ theme: { eventCard } }: IThemeProp) => css`
-    > *:not(:first-child) {
-      padding-top: ${eventCard.notFirstChild.padding.top};
-    }
-  `
-);
 
 export const EventCard: React.FC<IEventCard> = ({
   title,
@@ -30,12 +17,17 @@ export const EventCard: React.FC<IEventCard> = ({
   favourite,
   body,
   dates,
-  disclaimer
+  note,
+  company
 }) => {
   const daysUntilEvent: number = daysToGo(dates);
 
+  const friendsInitials: Array<string> = company.map(
+    (friend: IFriend) => friend.initials
+  );
+
   return (
-    <StyledFlexColumn data-test="event-card-container">
+    <EventCardContainer data-test="event-card-container">
       <div data-test="event-card-title-and-subtitle">
         <CardTitleBold data-test="event-card-title" favourite={favourite}>
           {title}
@@ -50,19 +42,21 @@ export const EventCard: React.FC<IEventCard> = ({
 
       {body && <span data-test="event-card-body">{body}</span>}
 
-      <SeventyFivePercentSpan data-test="event-card-date">
+      <EventCardDates data-test="event-card-date(s)">
         {datesArrayToString(dates)}
-      </SeventyFivePercentSpan>
+      </EventCardDates>
 
       {daysUntilEvent >= 0 && (
-        <ItalicBoldFlexRow>
-          <strong>{getCountdownText(daysUntilEvent)}</strong>
+        <EventCardCountdownNoteContainer data-test="event-card-countdown-note-container">
+          <strong data-test="event-card-countdown">
+            {getCountdownText(daysUntilEvent)}
+          </strong>
 
-          {disclaimer && (
-            <SeventyFivePercentSpan>({disclaimer})</SeventyFivePercentSpan>
+          {note && (
+            <EventCardNote data-test="event-card-note">{`(${note})`}</EventCardNote>
           )}
-        </ItalicBoldFlexRow>
+        </EventCardCountdownNoteContainer>
       )}
-    </StyledFlexColumn>
+    </EventCardContainer>
   );
 };

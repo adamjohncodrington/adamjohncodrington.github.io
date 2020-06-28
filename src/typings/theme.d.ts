@@ -19,7 +19,13 @@ interface IThemeDisclosure {
 }
 
 interface IThemeEventCard {
-  eventCard: { notFirstChild: { padding: { top: PxValue } } };
+  eventCard: {
+    countdownNote: {
+      horizontalGap: PxValue;
+      note: { padding: { top: PxValue } };
+    };
+    notFirstChild: { margin: { top: PxValue } };
+  };
 }
 
 interface IThemeNavBar {
@@ -73,8 +79,8 @@ interface IThemePageSection {
   };
 }
 
-interface IThemePageShell {
-  pageShell: { padding: { all: PxValue } };
+interface IThemePageLayout {
+  pageLayout: { columnGap: PxValue; padding: { all: PxValue } };
 }
 
 interface IThemeRecipeCard {
@@ -87,7 +93,7 @@ interface IThemeRecipeCard {
       textColor: ColorValue;
     };
     panel: {
-      children: { padding: { top: PxValue; bottom: PxValue } };
+      children: { padding: { top: PxValue } };
       padding: { top: PxValue };
     };
     photo: { size: PxValue };
@@ -111,7 +117,7 @@ interface ITheme
     IThemeNavBar,
     IThemeRecipeCard,
     IThemePageHeader,
-    IThemePageShell,
+    IThemePageLayout,
     IThemePageSection,
     IThemeVinylCard {
   fadedOpacity: number;

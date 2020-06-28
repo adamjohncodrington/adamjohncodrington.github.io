@@ -17,7 +17,13 @@ const THEME_DISCLOSURE: IThemeDisclosure = {
 };
 
 const THEME_EVENT_CARD: IThemeEventCard = {
-  eventCard: { notFirstChild: { padding: { top: "3px" } } }
+  eventCard: {
+    countdownNote: {
+      horizontalGap: "5px",
+      note: { padding: { top: "3px" } }
+    },
+    notFirstChild: { margin: { top: "5px" } }
+  }
 };
 
 const THEME_NAV_BAR: IThemeNavBar = {
@@ -27,7 +33,7 @@ const THEME_NAV_BAR: IThemeNavBar = {
       color: COLORS.white,
       size: "40px",
       hoverColor: "#aaa",
-      hoverShrinkSize: "3px"
+      hoverShrinkSize: "0"
     },
     padding: { vertical: "10px" }
   }
@@ -55,7 +61,7 @@ const THEME_PAGE_SECTION: IThemePageSection = {
       countedListItems: { padding: { vertical: "5px" } },
       padding: { bottom: "5px" },
       recipeCards: {
-        firstRecipeCard: { padding: { top: "10px" } },
+        firstRecipeCard: { padding: { top: "15px" } },
         lastRecipeCard: { padding: { bottom: "20px" } },
         padding: { vertical: "15px" }
       },
@@ -68,8 +74,12 @@ const THEME_PAGE_SECTION: IThemePageSection = {
   }
 };
 
-const THEME_PAGE_SHELL: IThemePageShell = {
-  pageShell: { padding: { all: "15px 20px 25px" } }
+const pageLayoutHorizontalSpacing: PxValue = "20px";
+const THEME_PAGE_LAYOUT: IThemePageLayout = {
+  pageLayout: {
+    columnGap: pageLayoutHorizontalSpacing,
+    padding: { all: `15px ${pageLayoutHorizontalSpacing} 25px` }
+  }
 };
 
 const THEME_RECIPE_CARD: IThemeRecipeCard = {
@@ -82,11 +92,11 @@ const THEME_RECIPE_CARD: IThemeRecipeCard = {
       textColor: COLORS.white
     },
     panel: {
-      children: { padding: { top: "10px", bottom: "5px" } },
+      children: { padding: { top: "15px" } },
       padding: { top: "5px" }
     },
     photo: { size: "300px" },
-    portionCost: { margin: { top: "5px" } },
+    portionCost: { margin: { top: "3px" } },
     title: { fontWeight: "300" }
   }
 };
@@ -105,8 +115,8 @@ export const THEME: ITheme = {
   ...THEME_EVENT_CARD,
   ...THEME_NAV_BAR,
   ...THEME_PAGE_HEADER,
+  ...THEME_PAGE_LAYOUT,
   ...THEME_PAGE_SECTION,
-  ...THEME_PAGE_SHELL,
   ...THEME_RECIPE_CARD,
   ...THEME_VINYL_CARD,
 

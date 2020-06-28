@@ -21,6 +21,10 @@ export const SAUCES: IInventoryIngredientsObject = {
     displayText: "tomato ketchup",
     knownCost: { quantity: 570, measurement: MEASUREMENTS.GRAM, price: 2 }
   },
+  MAYONNAISE: {
+    displayText: "mayonnaise",
+    knownCost: { quantity: 430, measurement: MEASUREMENTS.MILLILITRE, price: 2 }
+  },
   SRIRACHA: {
     displayText: "sriracha",
     knownCost: {

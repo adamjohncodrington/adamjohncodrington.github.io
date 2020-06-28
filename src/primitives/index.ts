@@ -1,5 +1,4 @@
 export { A } from "./A";
-export { DivWithCentredText } from "./Div";
 export {
   FlexColumn,
   FlexLiGrow,
@@ -13,4 +12,3 @@ export { H1, H2, H3 } from "./Headings";
 export { Link } from "./Link";
 export { Ul, Li } from "./Lists";
 export { SquareImage } from "./SquareImage";
-export { SeventyFivePercentSpan } from "./Spans";

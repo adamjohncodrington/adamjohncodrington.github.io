@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { ThemeContext } from "styled-components";
 
 import { Ul, Li, GridColumnDiv } from "primitives";
 import { replaceSpacesWithDashes, useMediaQueries } from "@utils";
@@ -12,6 +13,9 @@ interface IPageSectionsLayout {
 export const PageSectionsLayout: React.FC<IPageSectionsLayout> = ({
   pageSections
 }) => {
+  const theme: ITheme = useContext(ThemeContext);
+  const { pageUses2Columns } = useMediaQueries();
+
   const validPageSections: Array<IPageSection> = pageSections.filter(
     ({
       data: {
@@ -36,8 +40,6 @@ export const PageSectionsLayout: React.FC<IPageSectionsLayout> = ({
     }
   );
 
-  const { displayPageSectionsIn2Columns } = useMediaQueries();
-
   const validPageSectionCount: number = validPageSections.length;
 
   const pageSectionsCol1: Array<IPageSection> = validPageSections.filter(
@@ -49,14 +51,15 @@ export const PageSectionsLayout: React.FC<IPageSectionsLayout> = ({
       !pageSectionsCol1.includes(pageSection)
   );
 
-  const pageSectionColumns: Array<Array<
-    IPageSection
-  >> = displayPageSectionsIn2Columns
+  const pageSectionColumns: Array<Array<IPageSection>> = pageUses2Columns
     ? [pageSectionsCol1, pageSectionsCol2]
     : [validPageSections];
 
   return (
-    <GridColumnDiv data-test="page-sections" columnGap="20px">
+    <GridColumnDiv
+      data-test="page-sections"
+      columnGap={theme.pageLayout.columnGap}
+    >
       {pageSectionColumns.map(
         (pageSectionColumn: Array<IPageSection>, index: number) => (
           <Ul key={index} data-test={"page-column-" + (index + 1)}>

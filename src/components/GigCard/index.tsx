@@ -44,7 +44,7 @@ export const GigCard: React.FC<IGigCard> = ({
       favourite={favourite}
       company={company}
       dates={dates}
-      disclaimer={ticketType}
+      note={ticketType}
     />
   );
 };
