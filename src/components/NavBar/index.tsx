@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
+import { USE_COLORS_IN_NAV_BAR } from "@config";
 import { CSS } from "@styles";
 
 const StyledNav = styled.nav(
@@ -31,7 +32,8 @@ const StyledLink = styled(Link)(
     :hover {
       svg {
         border: ${navBar.icon.hoverShrinkSize} solid transparent;
-        fill: ${color || navBar.icon.defaultHoverColor};
+        fill: ${(USE_COLORS_IN_NAV_BAR && color) ||
+        navBar.icon.defaultHoverColor};
       }
     }
   `
