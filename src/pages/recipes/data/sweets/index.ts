@@ -5,6 +5,7 @@ import { COOKIES } from "./cookies";
 import { CRUMBLE } from "./crumble";
 import { FLAPJACKS } from "./flapjacks";
 import { LEMON_DRIZZLE } from "./lemon-drizzle";
+import { PORRIDGE } from "./porridge";
 import { SCONES } from "./scones";
 
 export const SWEETS: IRecipeGroup = {
@@ -17,6 +18,7 @@ export const SWEETS: IRecipeGroup = {
     CRUMBLE,
     FLAPJACKS,
     LEMON_DRIZZLE,
+    PORRIDGE,
     SCONES
   ]
 };

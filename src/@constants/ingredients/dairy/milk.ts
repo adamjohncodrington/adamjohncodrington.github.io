@@ -9,9 +9,9 @@ export const MILK: IInventoryIngredientsObject = {
     displayText: "unsweetened almond milk",
     knownCost: { quantity: 750, measurement: MEASUREMENTS.MILLILITRE, price: 2 }
   },
-  MILK_OAT: {
-    displayText: "Oatly",
-    knownCost: { quantity: 1, measurement: MEASUREMENTS.LITRE, price: 1.8 }
+  MILK_OATLY_BARISTA: {
+    displayText: "Oatly Barista",
+    knownCost: { quantity: 1, measurement: MEASUREMENTS.LITRE, price: 1.85 }
   },
   MILK: {
     displayText: "milk",
