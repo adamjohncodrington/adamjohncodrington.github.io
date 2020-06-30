@@ -171,15 +171,6 @@ const THEME_PARKS_LIST_ITEMS: Array<ICountedListItem> = themeParks.map(
   })
 );
 
-const attractionsNotVisited: Array<ICountedListItem> = CITIES_LIST_ITEMS.filter(
-  ({
-    pastCount,
-    futureCount,
-    countInfoIrrelevant
-  }: ICountedListItem): boolean =>
-    pastCount === 0 && futureCount === 0 && !countInfoIrrelevant
-);
-
 const islandsThatAreCountries: Array<ICountry> = countries.filter(
   ({ island }: ICountry): boolean => !!island
 );
