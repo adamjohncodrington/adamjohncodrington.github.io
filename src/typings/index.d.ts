@@ -12,14 +12,19 @@ interface IFriend extends INameFavourite {
   theatre?: boolean;
 }
 
-interface ICountedListItem {
+interface IFuturePastCount {
+  futureCount: number;
+  pastCount: number;
+}
+
+interface ICountedListItem extends IFuturePastCount {
   text: string;
   doNotIncludeInList?: boolean;
   favourite?: boolean;
   star?: boolean;
-  futureCount: number;
-  pastCount: number;
   countInfoIrrelevant?: boolean;
+  noLongerExists?: boolean;
+  isLeaderboardItem?: boolean;
 }
 
 interface IEventCard {

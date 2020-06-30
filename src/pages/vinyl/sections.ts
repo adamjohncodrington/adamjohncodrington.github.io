@@ -5,7 +5,8 @@ const SECTION_COLLECTION: IPageSection = {
   data: { vinylCards: DATA.COLLECTION },
   count: DATA.COLLECTION.length,
   onlyHeaderClickable: true,
-  autoExpandAlways: true
+  autoExpandAlways: true,
+  staticIf2Columns: true
 };
 
 const SECTION_WISHLIST: IPageSection = {
@@ -13,7 +14,8 @@ const SECTION_WISHLIST: IPageSection = {
   data: { vinylCards: DATA.WISH_LIST },
   count: DATA.WISH_LIST.length,
   onlyHeaderClickable: true,
-  autoExpandIf2Columns: true
+  autoExpandIf2Columns: true,
+  staticIf2Columns: true
 };
 
 export const sections: Array<IPageSection> = [

@@ -8,7 +8,8 @@ import { isInFuture } from "@utils";
 const SECTION_BUCKET_LIST: IPageSection = {
   title: PAGE_SECTION_TITLES.BUCKET_LIST,
   icon: SVG_ICON_STRINGS.STARS,
-  data: { countedListItems: FACTORY.BUCKET_LIST }
+  data: { countedListItems: FACTORY.BUCKET_LIST },
+  count: FACTORY.BUCKET_LIST.length
 };
 
 const SECTION_FESTIVALS: IPageSection = {

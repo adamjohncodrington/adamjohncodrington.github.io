@@ -2,17 +2,17 @@ import { isInFuture } from "./basic/isInFuture";
 
 interface IGetPageSectionItemCounts {
   itemToCount: any;
-  data: Array<any>;
+  dataToCompareAgainst: Array<any>;
 }
 
 export const getPageSectionItemCounts = ({
   itemToCount,
-  data
+  dataToCompareAgainst
 }: IGetPageSectionItemCounts) => {
   let pastCount: number = 0;
   let futureCount: number = 0;
 
-  data.forEach((dataItem: any) => {
+  dataToCompareAgainst.forEach((dataItem: any) => {
     if (
       // MUSICIAN
       dataItem.headline === itemToCount ||

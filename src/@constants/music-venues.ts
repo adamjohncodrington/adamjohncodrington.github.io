@@ -1,3 +1,5 @@
+type IMusicVenues = { [musicVenue: string]: IMusicVenue };
+
 const MUSIC_VENUES_LONDON: IMusicVenues = {
   // A
   ALEXANDRA_PALACE: { name: "Alexandra Palace" },

@@ -26,12 +26,23 @@ export const CountedListItemText = styled.span(
   `
 );
 
+interface ICountedListItemPastCount extends IThemeProp {
+  isLeaderboardItem?: boolean;
+}
+
 export const CountedListItemPastCount = styled.span(
-  ({ theme: { countedListItem } }: IThemeProp) => css`
+  ({
+    isLeaderboardItem,
+    theme: { countedListItem }
+  }: ICountedListItemPastCount) => css`
     font-weight: bold;
     text-align: right;
     width: ${countedListItem.count.width};
-    margin-left: ${countedListItem.count.margin.left};
+    margin-left: ${isLeaderboardItem
+      ? css`
+          calc(3 * ${countedListItem.count.margin.left})
+        `
+      : countedListItem.count.margin.left};
   `
 );
 

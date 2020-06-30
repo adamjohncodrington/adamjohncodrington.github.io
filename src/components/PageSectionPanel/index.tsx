@@ -12,7 +12,12 @@ import { VinylCard } from "../VinylCard";
 
 import { PageSectionPanelList } from "./styles";
 
-export const PageSectionPanel: React.FC<IPageSectionDataTypes> = ({
+interface IPageSectionPanel extends IPageSectionDataTypes {
+  isLeaderboard?: boolean;
+}
+
+export const PageSectionPanel: React.FC<IPageSectionPanel> = ({
+  isLeaderboard,
   countedListItems,
   gigCards,
   recipeCards,

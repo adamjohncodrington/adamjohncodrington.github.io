@@ -1,7 +1,12 @@
 # TO DO LIST
 
+- remove recent `@ts-ignore` additions
+- make a `factory` folder for each `page` to keep files small
+- remove final remaining instances of type `any`
+
 ## Refactoring
 
+- rename `getPageSectionItemCounts` function to not refer to `PageSection` specifically
 - make `Theatre` use `date` instead of `dates`, move countdown logic to individual cards rather than `EventCard` and make it have `dateText` instead
 - remove hard-coded recipe image width + implement react-disclosure/react-accessible-accordion?
 - make all `.svg` files render as `SvgIcon` components
@@ -28,4 +33,3 @@
 
 - rewrite `mapToCountedList`
 - strongly type all `@constants` objects
-- remove all remaining instances of type: `any`

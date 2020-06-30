@@ -18,6 +18,20 @@ export const VINYL_WISH_LIST: Array<IVinylCard> = [
     artwork: PHOTOS_VINYL.CHARLI_XCX.HOW_IM_FEELING_NOW
   },
   {
+    artist: MUSICIANS.NATALIA_KILLS,
+    title: "Perfectionist",
+    year: 2011,
+    appleMusic: "https://music.apple.com/gb/album/perfectionist/1443164533",
+    artwork: PHOTOS_VINYL.NATALIA_KILLS.PERFECTIONIST
+  },
+  {
+    artist: MUSICIANS.RYN_WEAVER,
+    title: "The Fool",
+    year: 2015,
+    appleMusic: "https://music.apple.com/gb/album/the-fool/1442781012",
+    artwork: PHOTOS_VINYL.RYN_WEAVER.THE_FOOL
+  },
+  {
     artist: MUSICIANS.DUA_LIPA,
     title: "Future Nostalgia",
     appleMusic: "https://music.apple.com/gb/album/future-nostalgia/1495799403",

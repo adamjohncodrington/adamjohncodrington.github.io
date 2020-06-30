@@ -1,87 +1,233 @@
-import { FRIENDS as friends, LOCATIONS } from "@constants";
-import { isInFuture } from "@utils";
+import { FRIENDS, LOCATIONS } from "@constants";
+import {
+  isInFuture,
+  formatCountedListItems,
+  getPageSectionItemCounts
+} from "@utils";
 
-import { mapToCountedList, generatePropertyArrayFromObject } from "../factory";
 import { DATA } from "./data";
 
-const { ALL, BUCKET_LIST } = DATA;
+const UP_NEXT: Array<ITravelCard> = DATA.ALL.filter(item =>
+  isInFuture(item.dates)
+);
 
-const FAVOURITES: Array<ITravelCard> = ALL.filter(item => item.favourite);
-const UP_NEXT: Array<ITravelCard> = ALL.filter(item => isInFuture(item.dates));
+const totalTripsAbroadEver: number = DATA.ALL.filter(item => !item.notAbroad)
+  .length;
+const tripsInTheFuture: number = UP_NEXT.length;
+const totalAbroadTripsSoFar: number = totalTripsAbroadEver - tripsInTheFuture;
 
-export const totalAbroadTripsSoFar: number =
-  ALL.filter(item => !item.notAbroad).length - UP_NEXT.length;
+const FRIENDS_LIST_ITEMS: Array<ICountedListItem> = Object.values(FRIENDS)
+  .filter(({ travel }: IFriend): boolean => !!travel)
+  .map(
+    (friend: IFriend): ICountedListItem => ({
+      text: friend.name,
+      ...getPageSectionItemCounts({
+        itemToCount: friend,
+        dataToCompareAgainst: DATA.ALL
+      })
+    })
+  );
 
-const countries: Array<any> = Object.values(LOCATIONS);
+const countries: Array<ICountry> = Object.values(LOCATIONS);
 
-const cities: Array<ICity> = generatePropertyArrayFromObject({
-  object: LOCATIONS,
-  childLevelProperty: "cities"
-});
+const countriesCounted: Array<ICountryCounted> = countries.map(
+  (country: ICountry): ICountryCounted => ({
+    ...country,
+    ...getPageSectionItemCounts({
+      itemToCount: country,
+      dataToCompareAgainst: DATA.ALL
+    })
+  })
+);
 
-const islands: Array<IIsland> = generatePropertyArrayFromObject({
-  object: LOCATIONS,
-  childLevelProperty: "islands",
-  topLevelProperty: "island"
-});
+const COUNTRIES_LIST_ITEMS: Array<ICountedListItem> = countriesCounted.map(
+  ({ name, pastCount, futureCount }: ICountryCounted): ICountedListItem => ({
+    text: name,
+    pastCount,
+    futureCount
+  })
+);
 
-const attractions: Array<IAttraction> = generatePropertyArrayFromObject({
-  object: LOCATIONS,
-  childLevelProperty: "attractions"
-});
+const countriesNotVisited: Array<ICountryCounted> = countriesCounted.filter(
+  ({ pastCount, futureCount }: ICountryCounted): boolean =>
+    pastCount === 0 && futureCount === 0
+);
+
+const countriesForBucketList: Array<ICountryCounted> = countriesNotVisited.filter(
+  ({ excludeFromBucketList }: ICountryCounted): boolean =>
+    !excludeFromBucketList
+);
+
+const BUCKET_LIST_COUNTRIES: Array<ICountedListItem> = countriesForBucketList.map(
+  ({ name, pastCount, futureCount }: ICountryCounted): ICountedListItem => ({
+    text: name,
+    pastCount,
+    futureCount,
+    countInfoIrrelevant: true
+  })
+);
+
+//@ts-ignore
+const cities: Array<ICity> = [].concat.apply(
+  [],
+  //@ts-ignore
+  countries
+    .filter(({ cities }: ICountry): boolean => !!cities)
+    //@ts-ignore
+    .map(({ cities }: ICountry): ICity => Object.values(cities))
+);
+
+const citiesCounted: Array<ICityCounted> = cities.map(
+  (city: ICity): ICityCounted => ({
+    ...city,
+    ...getPageSectionItemCounts({
+      itemToCount: city,
+      dataToCompareAgainst: DATA.ALL
+    })
+  })
+);
+
+const CITIES_LIST_ITEMS: Array<ICountedListItem> = citiesCounted.map(
+  ({
+    name,
+    capital,
+    pastCount,
+    insignificant,
+    futureCount
+  }: ICityCounted): ICountedListItem => ({
+    text: name,
+    star: capital,
+    countInfoIrrelevant: insignificant,
+    pastCount,
+    futureCount
+  })
+);
+
+const citiesNotVisited: Array<ICityCounted> = citiesCounted.filter(
+  ({ pastCount, futureCount }: ICityCounted): boolean =>
+    pastCount === 0 && futureCount === 0
+);
+
+const citiesForBucketList: Array<ICityCounted> = citiesNotVisited.filter(
+  ({ excludeFromBucketList, insignificant }: ICityCounted): boolean =>
+    !excludeFromBucketList && !insignificant
+);
+
+const BUCKET_LIST_CITIES: Array<ICountedListItem> = citiesForBucketList.map(
+  ({
+    name,
+    capital,
+    pastCount,
+    futureCount
+  }: ICityCounted): ICountedListItem => ({
+    text: name,
+    star: capital,
+    pastCount,
+    futureCount,
+    countInfoIrrelevant: true
+  })
+);
+
+const BUCKET_LIST_ITEMS: Array<ICountedListItem> = [
+  ...BUCKET_LIST_COUNTRIES,
+  ...BUCKET_LIST_CITIES
+];
+
+//@ts-ignore
+const attractions: Array<IAttraction> = [].concat.apply(
+  [],
+  //@ts-ignore
+  countries
+    .filter(({ attractions }: ICountry): boolean => !!attractions)
+    //@ts-ignore
+    .map(({ attractions }: ICountry): ICity => Object.values(attractions))
+);
 
 const themeParks: Array<IAttraction> = attractions.filter(
-  item => item.themePark
+  ({ themePark }: IAttraction): boolean => !!themePark
 );
+
 const highlights: Array<IAttraction> = attractions.filter(
-  item => item.highlight
+  ({ highlight }: IAttraction): boolean => !!highlight
 );
 
-const mapToCountedListWrapper = (params: any): Array<ICountedListItem> =>
-  mapToCountedList({
-    ...params,
-    allData: ALL,
-    favouritedData: FAVOURITES
-  });
+const HIGHLIGHTS_LIST_ITEMS: Array<ICountedListItem> = highlights.map(
+  (highlight: IAttraction): ICountedListItem => ({
+    text: highlight.name,
+    ...getPageSectionItemCounts({
+      itemToCount: highlight,
+      dataToCompareAgainst: DATA.ALL
+    })
+  })
+);
 
-const bucketList: Array<ICountedListItem> = mapToCountedListWrapper({
-  bucketListMode: true,
-  items: BUCKET_LIST
-});
+const THEME_PARKS_LIST_ITEMS: Array<ICountedListItem> = themeParks.map(
+  (themePark: IAttraction): ICountedListItem => ({
+    text: themePark.name,
+    ...getPageSectionItemCounts({
+      itemToCount: themePark,
+      dataToCompareAgainst: DATA.ALL
+    })
+  })
+);
 
-const CITIES: Array<ICountedListItem> = mapToCountedListWrapper({
-  items: cities
-});
+const attractionsNotVisited: Array<ICountedListItem> = CITIES_LIST_ITEMS.filter(
+  ({
+    pastCount,
+    futureCount,
+    countInfoIrrelevant
+  }: ICountedListItem): boolean =>
+    pastCount === 0 && futureCount === 0 && !countInfoIrrelevant
+);
 
-const THEME_PARKS: Array<ICountedListItem> = mapToCountedListWrapper({
-  items: themeParks
-});
+const islandsThatAreCountries: Array<ICountry> = countries.filter(
+  ({ island }: ICountry): boolean => !!island
+);
+//@ts-ignore
+const islandsThatAreNotCountries: Array<IIsland> = [].concat.apply(
+  [],
+  //@ts-ignore
+  countries
+    .filter(({ islands }: ICountry): boolean => !!islands)
+    //@ts-ignore
+    .map(({ islands }: ICountry): IIsland => Object.values(islands))
+);
+const islandsAll: Array<IIsland> = [
+  ...islandsThatAreCountries,
+  ...islandsThatAreNotCountries
+];
 
-const HIGHLIGHTS: Array<ICountedListItem> = mapToCountedListWrapper({
-  items: highlights
-});
+const ISLANDS_LIST_ITEMS: Array<ICountedListItem> = islandsAll.map(
+  (island: IIsland): ICountedListItem => ({
+    text: island.name,
+    countInfoIrrelevant: island.insignificant,
+    ...getPageSectionItemCounts({
+      itemToCount: island,
+      dataToCompareAgainst: DATA.ALL
+    })
+  })
+);
 
-const ISLANDS: Array<ICountedListItem> = mapToCountedListWrapper({
-  items: islands
-});
-
-const COUNTRIES: Array<ICountedListItem> = mapToCountedListWrapper({
-  items: countries
-});
-
-const FRIENDS: Array<ICountedListItem> = mapToCountedListWrapper({
-  items: friends,
-  sortByPastAndFutureCount: true,
-  filter: "travel"
-});
-
+//TODO: strongly-type this export
 export const FACTORY = {
-  BUCKET_LIST: bucketList,
-  HIGHLIGHTS,
-  ISLANDS,
-  COUNTRIES,
-  FRIENDS,
+  pageCount: totalAbroadTripsSoFar,
+
+  BUCKET_LIST: formatCountedListItems({
+    countedListItems: BUCKET_LIST_ITEMS,
+    isBucketList: true
+  }),
+  HIGHLIGHTS: formatCountedListItems({
+    countedListItems: HIGHLIGHTS_LIST_ITEMS
+  }),
+  ISLANDS: formatCountedListItems({ countedListItems: ISLANDS_LIST_ITEMS }),
+  COUNTRIES: formatCountedListItems({ countedListItems: COUNTRIES_LIST_ITEMS }),
+  FRIENDS: formatCountedListItems({
+    countedListItems: FRIENDS_LIST_ITEMS,
+    isLeaderboard: true
+  }),
   UP_NEXT,
-  THEME_PARKS,
-  CITIES
+  THEME_PARKS: formatCountedListItems({
+    countedListItems: THEME_PARKS_LIST_ITEMS
+  }),
+  CITIES: formatCountedListItems({ countedListItems: CITIES_LIST_ITEMS })
 };

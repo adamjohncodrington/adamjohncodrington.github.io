@@ -1,6 +1,18 @@
 const KEY_WEST = { name: "Key West" };
 
 export const LOCATIONS: IAllCountries = {
+  // A
+  ARGENTINA: {
+    name: "Argentina",
+    excludeFromBucketList: true,
+    cities: { BUENOS_AIRES: { name: "Buenos Aires", capital: true } }
+  },
+  AUSTRALIA: { name: "Australia" },
+  AUSTRIA: {
+    name: "Austria",
+    excludeFromBucketList: true,
+    cities: { VIENNA: { name: "Vienna", capital: true } }
+  },
   // B
   BARBADOS: {
     name: "Barbados",
@@ -15,20 +27,24 @@ export const LOCATIONS: IAllCountries = {
       BELFRY_OF_BRUGES: { name: "Belfry of Bruges" }
     }
   },
-  // BELIZE: {
-  //   name: "Belize",
-  //   cities: {
-  //     BELIZE_CITY: { name: "Belize City" },
-  //     capital: true
-  //   },
-  //   islands: {
-  //     AMBERGRIS_CAYE: { name: "Ambergris Caye" },
-  //     CAYE_CAULKER: { name: "Caye Caulker" }
-  //   },
-  //   attractions: {
-  //     BARRIER_REEF: { name: "Belize Barrier Reef", highlight: true }
-  //   }
-  // },
+  BELIZE: {
+    name: "Belize",
+    attractions: {
+      BARRIER_REEF: { name: "Belize Barrier Reef", highlight: true }
+    },
+    cities: {
+      BELIZE_CITY: {
+        name: "Belize City",
+        capital: true,
+        excludeFromBucketList: true
+      }
+    },
+    islands: {
+      AMBERGRIS_CAYE: { name: "Ambergris Caye" },
+      CAYE_CAULKER: { name: "Caye Caulker" }
+    }
+  },
+  BOLIVIA: { name: "Bolivia" },
   BRAZIL: {
     name: "Brazil",
     cities: { RIO_DE_JANEIRO: { name: "Rio de Janeiro" } },
@@ -60,20 +76,21 @@ export const LOCATIONS: IAllCountries = {
     cities: { NIAGARA_FALLS: { name: "Niagara Falls" } },
     attractions: { NIAGARA_FALLS: { name: "Niagara Falls", highlight: true } }
   },
-  // COSTA_RICA: {
-  //   name: "Costa Rica",
-  //   cities: {
-  //     SAN_JOSE: { name: "San Jose", capital: true }
-  //   },
-  //   towns: {
-  //     MONTEVERDE: { name: "Monteverde" },
-  //     PUERTO_VIEJO: { name: "Puerto Viejo" }
-  //   },
-  //   attractions: {
-  //     CORCOVADO: { name: "Corcovado National Park", highlight: true },
-  //     JAGUAR_RESCUE_CENTER: { name: "Jaguar Rescue Center" }
-  //   }
-  // },
+  COLOMBIA: { name: "Colombia" },
+  COSTA_RICA: {
+    name: "Costa Rica",
+    attractions: {
+      CORCOVADO: { name: "Corcovado National Park", highlight: true },
+      JAGUAR_RESCUE_CENTER: { name: "Jaguar Rescue Center" }
+    },
+    cities: {
+      SAN_JOSE: { name: "San Jose", capital: true, excludeFromBucketList: true }
+    },
+    towns: {
+      MONTEVERDE: { name: "Monteverde" },
+      PUERTO_VIEJO: { name: "Puerto Viejo" }
+    }
+  },
   CROATIA: {
     name: "Croatia",
     cities: { DUBROVNIK: { name: "Dubrovnik" } },
@@ -196,6 +213,7 @@ export const LOCATIONS: IAllCountries = {
     }
   },
   // I
+  INDONESIA: { name: "Indonesia" },
   IRELAND: {
     name: "Ireland",
     attractions: {
@@ -211,6 +229,7 @@ export const LOCATIONS: IAllCountries = {
       SICILY: { name: "Sicily" }
     },
     cities: {
+      FLORENCE: { name: "Florence" },
       NAPLES: { name: "Naples" },
       MILAN: { name: "Milan" },
       ROME: { name: "Rome", capital: true },
@@ -230,6 +249,8 @@ export const LOCATIONS: IAllCountries = {
       ETNA: { name: "Mount Etna" }
     }
   },
+  // J
+  JAPAN: { name: "Japan" },
   // L
   LAOS: {
     name: "Laos",
@@ -243,6 +264,8 @@ export const LOCATIONS: IAllCountries = {
       BUDDHA_PARK: { name: "Buddha Park" }
     }
   },
+  // M
+  MEXICO: { name: "Mexico" },
   // N
   NETHERLANDS: {
     name: "Netherlands",
@@ -256,6 +279,7 @@ export const LOCATIONS: IAllCountries = {
       GRONINGEN_MUSEUM: { name: "Groninger Museum" }
     }
   },
+  NEW_ZEALAND: { name: "New Zealand" },
   NORWAY: {
     name: "Norway",
     cities: { OSLO: { name: "Oslo", capital: true } },
@@ -286,6 +310,7 @@ export const LOCATIONS: IAllCountries = {
     towns: { MANCORA: { name: "Mancora" }, PARACAS: { name: "Paracas" } },
     villages: { HUACACHINA: { name: "Huacachina" } }
   },
+  PHILLIPINES: { name: "Phillipines" },
   POLAND: {
     name: "Poland",
     cities: { KRAKOW: { name: "Kraków" } },
@@ -299,7 +324,8 @@ export const LOCATIONS: IAllCountries = {
     name: "Portugal",
     cities: {
       LISBON: { name: "Lisbon", capital: true },
-      PORTIMAO: { name: "Portimão" }
+      PORTIMAO: { name: "Portimão" },
+      PORTO: { name: "Porto" }
     },
     attractions: {
       ZOOMARINE: { name: "Zoomarine Algarve" },
@@ -319,7 +345,8 @@ export const LOCATIONS: IAllCountries = {
     name: "Spain",
     cities: {
       BARCELONA: { name: "Barcelona" },
-      MADRID: { name: "Madrid", capital: true }
+      MADRID: { name: "Madrid", capital: true },
+      VALENCIA: { name: "Valencia" }
     },
     attractions: {
       CIUTADELLA_PARK: { name: "Ciutadella Park" },
@@ -335,7 +362,13 @@ export const LOCATIONS: IAllCountries = {
       LANZAROTE: { name: "Lanzarote" }
     }
   },
+  SWEDEN: {
+    name: "Sweden",
+    excludeFromBucketList: true,
+    cities: { STOCKHOLM: { name: "Stockholm", capital: true } }
+  },
   // T
+  TANZANIA: { name: "Tanzania" },
   THAILAND: {
     name: "Thailand",
     cities: {
@@ -444,6 +477,7 @@ export const LOCATIONS: IAllCountries = {
       CAMBRIDGE: { name: "Cambridge", insignificant: true },
       COVENTRY: { name: "Coventry", insignificant: true },
       DERBY: { name: "Derby", insignificant: true },
+      EDINBURGH: { name: "Edinburgh" },
       HULL: { name: "Hull", insignificant: true },
       LEEDS: { name: "Leeds", insignificant: true },
       LEICESTER: { name: "Leicester", insignificant: true },
@@ -476,7 +510,6 @@ export const LOCATIONS: IAllCountries = {
   },
   USA: {
     name: "United States",
-
     attractions: {
       ALCATRAZ_PRISON: {
         name: "Alcatraz Federal Penitentiary",
@@ -494,7 +527,6 @@ export const LOCATIONS: IAllCountries = {
       WORLD_TRADE_CENTER: { name: "World Trade Center" },
       GOLDEN_GATE_BRIDGE: { name: "Golden Gate Bridge", highlight: true },
       CENTRAL_PARK: { name: "Central Park", highlight: true },
-      // CLEARWATER_BEACH: { name: "Clearwater Beach" },
       VENICE_BEACH: { name: "Venice Beach" },
       DISNEYLAND_CALIFORNIA_ADVENTURE: {
         name: "Disneyland California Adventure",
@@ -559,5 +591,11 @@ export const LOCATIONS: IAllCountries = {
       MASSACHUSETTS: { name: "Massachusetts" },
       VIRGINIA: { name: "Virginia" }
     }
+  },
+  // Z
+  ZIMBABWE: {
+    name: "Zimbabwe",
+    excludeFromBucketList: true,
+    attractions: { VICTORIA_FALLS: { name: "Victoria Falls" } }
   }
 };

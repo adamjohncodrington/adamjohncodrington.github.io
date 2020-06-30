@@ -8,6 +8,13 @@ import {
 
 export const GIGS_2021: Array<IGigCard> = [
   {
+    headline: MUSICIANS.JESSIE_WARE,
+    venue: MUSIC_VENUES.BRIXTON_ACADEMY,
+    dates: [new Date("2021-04-26")],
+    company: [FRIENDS.DARREN],
+    ticketType: TICKET_TYPES.TICKETWEB
+  },
+  {
     festival: FESTIVALS.MIGHTY_HOOPLA,
     venue: MUSIC_VENUES.BROCKWELL_PARK,
     dates: [new Date("2021-06-05")],

@@ -73,6 +73,10 @@ export const PHOTOS_VINYL: VinylPhotosObject = {
   // M
   MARINA: { ELECTRA_HEART: requireVinyl("marina", "electra-heart") },
   MUNA: { ABOUT_U: requireVinyl("muna", "about-u") },
+  // N
+  NATALIA_KILLS: {
+    PERFECTIONIST: requireVinyl("natalia-kills", "perfectionist")
+  },
   // P
   PANIC_AT_THE_DISCO: {
     A_FEVER_YOU_CANT_SWEAT_OUT: requireVinyl(
@@ -89,6 +93,7 @@ export const PHOTOS_VINYL: VinylPhotosObject = {
   },
   // R
   RIHANNA: { RATED_R: requireVinyl("rihanna", "rated-r") },
+  RYN_WEAVER: { THE_FOOL: requireVinyl("ryn-weaver", "the-fool") },
   // S
   SOPHIE: {
     OIL_OF_EVERY_PEARLS_UNINSIDES: requireVinyl(

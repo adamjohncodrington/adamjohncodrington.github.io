@@ -1,59 +1,102 @@
 import {
-  MUSIC_VENUES,
-  FRIENDS as friends,
-  MUSICIANS as musicians,
-  FESTIVALS as festivals
+  MUSIC_VENUES as VENUES,
+  FRIENDS,
+  MUSICIANS,
+  FESTIVALS
 } from "@constants";
-import { isInFuture } from "@utils";
+import {
+  isInFuture,
+  formatCountedListItems,
+  getPageSectionItemCounts,
+  itemIsFavourited
+} from "@utils";
 
-import { mapToCountedList } from "../factory";
 import { DATA } from "./data";
 
-const { ALL } = DATA;
-
-const FAVOURITES: Array<IGigCard> = ALL.filter(item => item.favourite);
-const UP_NEXT: Array<IGigCard> = ALL.filter((gig: IGigCard) =>
-  isInFuture(gig.dates)
+const FAVOURITES: Array<IGigCard> = DATA.ALL.filter(
+  ({ favourite }: IGigCard) => favourite
 );
 
-export const totalGigsSoFar: number = ALL.length - UP_NEXT.length;
+const UP_NEXT: Array<IGigCard> = DATA.ALL.filter(({ dates }: IGigCard) =>
+  isInFuture(dates)
+);
 
-const mapToCountedListWrapper = (params: any) =>
-  mapToCountedList({
-    ...params,
-    allData: ALL,
-    favouritedData: FAVOURITES
-  });
+const totalGigsPastAndPresent: number = DATA.ALL.length;
+const totalFutureGigs: number = UP_NEXT.length;
+const totalGigsSoFar: number = totalGigsPastAndPresent - totalFutureGigs;
 
-const BUCKET_LIST: Array<ICountedListItem> = mapToCountedListWrapper({
-  bucketListMode: true,
-  items: musicians
-});
+const FESTIVALS_LIST_ITEMS: Array<ICountedListItem> = Object.values(FESTIVALS)
+  .filter(({ festival }: IFestival): boolean => !!festival)
+  .map(
+    (festival: IFestival): ICountedListItem => ({
+      text: festival.name,
+      ...getPageSectionItemCounts({
+        itemToCount: festival,
+        dataToCompareAgainst: DATA.ALL
+      })
+    })
+  );
 
-const FESTIVALS: Array<ICountedListItem> = mapToCountedListWrapper({
-  items: festivals,
-  filter: "festival"
-});
+const VENUES_LIST_ITEMS: Array<ICountedListItem> = Object.values(VENUES).map(
+  (venue: IMusicVenue): ICountedListItem => ({
+    text: venue.name,
+    favourite: venue.favourite,
+    ...getPageSectionItemCounts({
+      itemToCount: venue,
+      dataToCompareAgainst: DATA.ALL
+    })
+  })
+);
 
-const FRIENDS: Array<ICountedListItem> = mapToCountedListWrapper({
-  items: friends,
-  filter: "gigs",
-  sortByPastAndFutureCount: true
-});
+const MUSICIANS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
+  MUSICIANS
+).map(
+  (musician: IMusician): ICountedListItem => ({
+    text: musician.name,
+    favourite:
+      musician.favourite ||
+      itemIsFavourited({
+        itemToInspect: musician,
+        favouritedData: FAVOURITES
+      }),
+    ...getPageSectionItemCounts({
+      itemToCount: musician,
+      dataToCompareAgainst: DATA.ALL
+    }),
+    noLongerExists: musician.noLongerExists
+  })
+);
 
-const MUSICIANS: Array<ICountedListItem> = mapToCountedListWrapper({
-  items: musicians
-});
+const BUCKET_LIST_ITEMS: Array<ICountedListItem> = MUSICIANS_LIST_ITEMS.filter(
+  ({ pastCount, futureCount }: ICountedListItem): boolean =>
+    pastCount === 0 && futureCount === 0
+);
 
-const VENUES: Array<ICountedListItem> = mapToCountedListWrapper({
-  items: MUSIC_VENUES
-});
+const FRIENDS_LIST_ITEMS: Array<ICountedListItem> = Object.values(FRIENDS)
+  .filter(({ gigs }: IFriend): boolean => !!gigs)
+  .map(
+    (friend: IFriend): ICountedListItem => ({
+      text: friend.name,
+      ...getPageSectionItemCounts({
+        itemToCount: friend,
+        dataToCompareAgainst: DATA.ALL
+      })
+    })
+  );
 
 export const FACTORY = {
-  BUCKET_LIST,
-  MUSICIANS,
-  FESTIVALS,
-  FRIENDS,
+  pageCount: totalGigsSoFar,
+
+  BUCKET_LIST: formatCountedListItems({
+    countedListItems: BUCKET_LIST_ITEMS,
+    isBucketList: true
+  }),
+  MUSICIANS: formatCountedListItems({ countedListItems: MUSICIANS_LIST_ITEMS }),
+  FESTIVALS: formatCountedListItems({ countedListItems: FESTIVALS_LIST_ITEMS }),
+  FRIENDS: formatCountedListItems({
+    countedListItems: FRIENDS_LIST_ITEMS,
+    isLeaderboard: true
+  }),
   UP_NEXT,
-  VENUES
+  VENUES: formatCountedListItems({ countedListItems: VENUES_LIST_ITEMS })
 };

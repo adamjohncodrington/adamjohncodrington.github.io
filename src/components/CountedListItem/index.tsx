@@ -13,7 +13,8 @@ export const CountedListItem: React.FC<ICountedListItem> = ({
   star,
   futureCount,
   pastCount,
-  countInfoIrrelevant
+  countInfoIrrelevant,
+  isLeaderboardItem
 }) => {
   const showFutureCount: boolean = futureCount > 0 && pastCount > 0;
   const showPastCount: boolean =
@@ -34,7 +35,9 @@ export const CountedListItem: React.FC<ICountedListItem> = ({
       )}
 
       {!countInfoIrrelevant && showPastCount && (
-        <CountedListItemPastCount>{pastCount}</CountedListItemPastCount>
+        <CountedListItemPastCount isLeaderboardItem={isLeaderboardItem}>
+          {pastCount}
+        </CountedListItemPastCount>
       )}
     </CountedListItemContainer>
   );

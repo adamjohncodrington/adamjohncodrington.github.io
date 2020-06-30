@@ -1,10 +1,18 @@
+interface ITicketTypes {
+  AXS_MOBILE_APP: string;
+  DICE: string;
+  GIGS_AND_TOURS_POSTAL: string;
+  KABOODLE_ETICKET: string;
+  SEE_TICKETS_PRINT_AT_HOME: string;
+  TICKETWEB: string;
+  TICKETMASTER_ETICKET: string;
+}
+
 export const TICKET_TYPES: ITicketTypes = {
   // A
   AXS_MOBILE_APP: "AXS app ticket",
   // D
   DICE: "Dice mobile ticket",
-  // F
-  FESTICKET_PDF: "Festicket e-Ticket PDF",
   // G
   GIGS_AND_TOURS_POSTAL: "Gigs and Tours postal ticket",
   // K

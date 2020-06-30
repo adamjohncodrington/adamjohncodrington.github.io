@@ -10,7 +10,7 @@ const SECTIONS_RECIPE_GROUPS: Array<IPageSection> = DATA.CATEGORISED.map(
 
 const SECTION_COMING_SOON: IPageSection = {
   title: "Coming Soon",
-  autoExpandAlways: true,
+  staticIf2Columns: true,
   data: { countedListItems: DATA.COMING_SOON }
 };
 

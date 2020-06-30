@@ -8,3 +8,4 @@ export { concatenateQuantityAndMeasurement } from "./concatenateQuantityAndMeasu
 export { getPageSectionItemCounts } from "./getPageSectionItemCounts";
 export { recipeMethodEntries } from "./recipeMethodEntries";
 export { itemIsFavourited } from "./itemIsFavourited";
+export { formatCountedListItems } from "./formatCountedListItems";
