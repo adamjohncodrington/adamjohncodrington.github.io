@@ -50,7 +50,6 @@ const totalCost: number = calculateRecipeCost(ingredients, title);
 
 export const PORRIDGE: IRecipeCard = {
   title,
-  favourite: true,
   ingredients,
   serveWith,
   totalCost,
