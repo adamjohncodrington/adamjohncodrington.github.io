@@ -3,10 +3,7 @@ import {
   isInFuture,
   formatCountedListItems,
   itemIsFavourited,
-  getActorCounts,
-  getFriendTheatreCounts,
-  getTheatreCounts,
-  getPlayCounts
+  getItemCounts
 } from "@utils";
 
 import { DATA } from "./data";
@@ -21,17 +18,14 @@ const FRIENDS_LIST_ITEMS: Array<ICountedListItem> = Object.values(FRIENDS)
   .map(
     (friend: IFriend): ICountedListItem => ({
       text: friend.name,
-      ...getFriendTheatreCounts({ friend, theatreCards: DATA.ALL })
+      ...getItemCounts({ item: { friend }, data: { theatreCards: DATA.ALL } })
     })
   );
 
 const VENUES_LIST_ITEMS: Array<ICountedListItem> = Object.values(VENUES).map(
   (theatre: ITheatreVenue): ICountedListItem => ({
     text: theatre.name,
-    ...getTheatreCounts({
-      theatre,
-      theatreCards: DATA.ALL
-    })
+    ...getItemCounts({ item: { theatre }, data: { theatreCards: DATA.ALL } })
   })
 );
 
@@ -42,7 +36,7 @@ const PLAYS_LIST_ITEMS: Array<ICountedListItem> = Object.values(PLAYS).map(
       itemToInspect: play,
       favouritedData: FAVOURITES
     }),
-    ...getPlayCounts({ play, theatreCards: DATA.ALL })
+    ...getItemCounts({ item: { play }, data: { theatreCards: DATA.ALL } })
   })
 );
 
@@ -50,7 +44,7 @@ const ACTORS_LIST_ITEMS: Array<ICountedListItem> = Object.values(ACTORS).map(
   (actor: IActor): ICountedListItem => ({
     text: actor.name,
     favourite: actor.favourite,
-    ...getActorCounts({ actor, theatreCards: DATA.ALL })
+    ...getItemCounts({ item: { actor }, data: { theatreCards: DATA.ALL } })
   })
 );
 

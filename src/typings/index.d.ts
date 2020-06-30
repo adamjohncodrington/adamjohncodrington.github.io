@@ -12,12 +12,12 @@ interface IFriend extends INameFavourite {
   theatre?: boolean;
 }
 
-interface IFuturePastCounts {
+interface IPastAndFutureCounts {
   futureCount: number;
   pastCount: number;
 }
 
-interface ICountedListItem extends IFuturePastCounts {
+interface ICountedListItem extends IPastAndFutureCounts {
   text: string;
   doNotIncludeInList?: boolean;
   favourite?: boolean;

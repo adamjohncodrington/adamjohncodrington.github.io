@@ -8,10 +8,7 @@ import {
   isInFuture,
   formatCountedListItems,
   itemIsFavourited,
-  getMusicianCounts,
-  getFestivalCounts,
-  getMusicVenueCounts,
-  getFriendGigCounts
+  getItemCounts
 } from "@utils";
 
 import { DATA } from "./data";
@@ -33,7 +30,7 @@ const FESTIVALS_LIST_ITEMS: Array<ICountedListItem> = Object.values(FESTIVALS)
   .map(
     (festival: IFestival): ICountedListItem => ({
       text: festival.name,
-      ...getFestivalCounts({ festival, gigCards: DATA.ALL })
+      ...getItemCounts({ item: { festival }, data: { gigCards: DATA.ALL } })
     })
   );
 
@@ -41,7 +38,10 @@ const VENUES_LIST_ITEMS: Array<ICountedListItem> = Object.values(VENUES).map(
   (venue: IMusicVenue): ICountedListItem => ({
     text: venue.name,
     favourite: venue.favourite,
-    ...getMusicVenueCounts({ musicVenue: venue, gigCards: DATA.ALL })
+    ...getItemCounts({
+      item: { musicVenue: venue },
+      data: { gigCards: DATA.ALL }
+    })
   })
 );
 
@@ -56,7 +56,7 @@ const MUSICIANS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
         itemToInspect: musician,
         favouritedData: FAVOURITES
       }),
-    ...getMusicianCounts({ musician, gigCards: DATA.ALL }),
+    ...getItemCounts({ item: { musician }, data: { gigCards: DATA.ALL } }),
     noLongerExists: musician.noLongerExists
   })
 );
@@ -71,7 +71,7 @@ const FRIENDS_LIST_ITEMS: Array<ICountedListItem> = Object.values(FRIENDS)
   .map(
     (friend: IFriend): ICountedListItem => ({
       text: friend.name,
-      ...getFriendGigCounts({ friend, gigCards: DATA.ALL })
+      ...getItemCounts({ item: { friend }, data: { gigCards: DATA.ALL } })
     })
   );
 
