@@ -10,7 +10,7 @@ export const TheatreCard: React.FC<ITheatreCard> = ({
   favourite,
   company,
   theatre,
-  dates
+  date
 }) => {
   const title: string = moveTheSuffixToPrefix(play.name);
 
@@ -22,6 +22,8 @@ export const TheatreCard: React.FC<ITheatreCard> = ({
       )
     });
 
+  const dateText: string = date.toString();
+
   const body: string = theatre.name;
 
   return (
@@ -31,7 +33,7 @@ export const TheatreCard: React.FC<ITheatreCard> = ({
       body={body}
       favourite={favourite}
       company={company}
-      dates={dates}
+      dateText={dateText}
     />
   );
 };

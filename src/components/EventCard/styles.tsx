@@ -17,7 +17,7 @@ export const EventCardMainContainer = styled(FlexColumn)(
   `
 );
 
-export const EventCardDates = styled.div(() => CSS.FONT_SIZE_75_PERCENT);
+export const EventCardDateText = styled.div(() => CSS.FONT_SIZE_75_PERCENT);
 
 export const EventCardCompanyContainer = styled(FlexRow)(
   ({ theme: { eventCard } }: IThemeProp) => css`

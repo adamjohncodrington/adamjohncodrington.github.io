@@ -4,6 +4,8 @@
 - make a `factory` folder for each `page` to keep files small
 - remove final remaining instances of type `any`
 - add attractions to bucket-list, re-write gigs bucket list logic?
+- refactor `datesArrayToString` to be `dateToString` + `datesToString`
+
 
 ## Refactoring
 

@@ -49,7 +49,9 @@ const SECTIONS_YEARS: Array<IPageSection> = DATA.SPLIT_BY_YEAR.map(
   (year: Array<IGigCard>): IPageSection => ({
     title: year[0].dates[0].getFullYear().toString(),
     count: year.length,
-    data: { gigCards: year.filter((item: IGigCard) => !isInFuture(item.dates)) }
+    data: {
+      gigCards: year.filter(({ dates }: IGigCard) => !isInFuture(dates[0]))
+    }
   })
 );
 

@@ -1,16 +1,19 @@
 import { ACTORS, FRIENDS, PLAYS, THEATRE_VENUES as VENUES } from "@constants";
 import {
   isInFuture,
-  getPageSectionItemCounts,
   formatCountedListItems,
-  itemIsFavourited
+  itemIsFavourited,
+  getActorCounts,
+  getFriendTheatreCounts,
+  getTheatreCounts,
+  getPlayCounts
 } from "@utils";
 
 import { DATA } from "./data";
 
 const FAVOURITES: Array<ITheatreCard> = DATA.ALL.filter(item => item.favourite);
 const UP_NEXT: Array<ITheatreCard> = DATA.ALL.filter(theatreTrip =>
-  isInFuture(theatreTrip.dates)
+  isInFuture(theatreTrip.date)
 );
 
 const FRIENDS_LIST_ITEMS: Array<ICountedListItem> = Object.values(FRIENDS)
@@ -18,19 +21,16 @@ const FRIENDS_LIST_ITEMS: Array<ICountedListItem> = Object.values(FRIENDS)
   .map(
     (friend: IFriend): ICountedListItem => ({
       text: friend.name,
-      ...getPageSectionItemCounts({
-        itemToCount: friend,
-        dataToCompareAgainst: DATA.ALL
-      })
+      ...getFriendTheatreCounts({ friend, theatreCards: DATA.ALL })
     })
   );
 
 const VENUES_LIST_ITEMS: Array<ICountedListItem> = Object.values(VENUES).map(
-  (venue: ITheatreVenue): ICountedListItem => ({
-    text: venue.name,
-    ...getPageSectionItemCounts({
-      itemToCount: venue,
-      dataToCompareAgainst: DATA.ALL
+  (theatre: ITheatreVenue): ICountedListItem => ({
+    text: theatre.name,
+    ...getTheatreCounts({
+      theatre,
+      theatreCards: DATA.ALL
     })
   })
 );
@@ -42,10 +42,7 @@ const PLAYS_LIST_ITEMS: Array<ICountedListItem> = Object.values(PLAYS).map(
       itemToInspect: play,
       favouritedData: FAVOURITES
     }),
-    ...getPageSectionItemCounts({
-      itemToCount: play,
-      dataToCompareAgainst: DATA.ALL
-    })
+    ...getPlayCounts({ play, theatreCards: DATA.ALL })
   })
 );
 
@@ -53,10 +50,7 @@ const ACTORS_LIST_ITEMS: Array<ICountedListItem> = Object.values(ACTORS).map(
   (actor: IActor): ICountedListItem => ({
     text: actor.name,
     favourite: actor.favourite,
-    ...getPageSectionItemCounts({
-      itemToCount: actor,
-      dataToCompareAgainst: DATA.ALL
-    })
+    ...getActorCounts({ actor, theatreCards: DATA.ALL })
   })
 );
 

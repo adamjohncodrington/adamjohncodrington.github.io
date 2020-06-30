@@ -39,12 +39,10 @@ const SECTION_UP_NEXT_THEATRE: IPageSection = {
 
 const SECTIONS_YEARS: Array<IPageSection> = DATA.SPLIT_BY_YEAR.map(
   (year: Array<ITheatreCard>): IPageSection => ({
-    title: year[0].dates[0].getFullYear().toString(),
+    title: year[0].date.getFullYear().toString(),
     count: year.length,
     data: {
-      theatreCards: year.filter(
-        (theatreVisit: ITheatreCard) => !isInFuture(theatreVisit.dates)
-      )
+      theatreCards: year.filter(({ date }: ITheatreCard) => !isInFuture(date))
     }
   })
 );

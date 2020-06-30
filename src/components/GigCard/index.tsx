@@ -1,6 +1,13 @@
 import React from "react";
 
-import { arrayToString, moveTheSuffixToPrefix } from "@utils";
+import {
+  arrayToString,
+  moveTheSuffixToPrefix,
+  getCountdownText,
+  datesArrayToString,
+  isInFuture,
+  daysToGo
+} from "@utils";
 
 import { EventCard } from "../EventCard";
 
@@ -34,6 +41,12 @@ export const GigCard: React.FC<IGigCard> = ({
         )
       });
 
+  const dateText: string = datesArrayToString(dates);
+
+  //@ts-ignore
+  const countdownText: string =
+    isInFuture(dates[0]) && getCountdownText(daysToGo(dates));
+
   const body: string = moveTheSuffixToPrefix(venue.name);
 
   return (
@@ -43,7 +56,8 @@ export const GigCard: React.FC<IGigCard> = ({
       body={body}
       favourite={favourite}
       company={company}
-      dates={dates}
+      dateText={dateText}
+      countdownText={countdownText}
       note={ticketType}
     />
   );

@@ -1,32 +1,30 @@
 import React, { ReactElement, useContext } from "react";
 import { ThemeContext } from "styled-components";
 
-import { datesArrayToString } from "@utils";
 import { GridColumnDiv } from "primitives";
 
 import { RoundedSymbol } from "../RoundedSymbol";
 import { CardTitleBold, CardSubtitleBold } from "../styles";
-
 import {
   EventCardNote,
   EventCardCountdown,
   EventCardMainContainer,
   EventCardCompanyContainer,
-  EventCardDates
+  EventCardDateText
 } from "./styles";
-import { getCountdownText, daysToGo } from "./utils";
 
 export const EventCard: React.FC<IEventCard> = ({
   title,
   subtitle,
   favourite,
   body,
-  dates,
+  dateText,
   note,
+  countdownText,
   company
 }) => {
   const theme: ITheme = useContext(ThemeContext);
-  const daysUntilEvent: number = daysToGo(dates);
+  // const daysUntilEvent: number = daysToGo(dates);
 
   const EventCardMain: ReactElement = (
     <EventCardMainContainer data-test="event-card-container">
@@ -44,14 +42,14 @@ export const EventCard: React.FC<IEventCard> = ({
 
       {body && <span data-test="event-card-body">{body}</span>}
 
-      <EventCardDates data-test="event-card-date(s)">
-        {datesArrayToString(dates)}
-      </EventCardDates>
+      <EventCardDateText data-test="event-card-date-text">
+        {dateText}
+      </EventCardDateText>
 
-      {daysUntilEvent >= 0 && (
+      {countdownText && (
         <>
           <EventCardCountdown data-test="event-card-countdown">
-            {getCountdownText(daysUntilEvent)}
+            {countdownText}
           </EventCardCountdown>
 
           {note && (

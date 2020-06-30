@@ -11,7 +11,7 @@ interface ITheatreCard {
   play: IPlay;
   theatre: ITheatreVenue;
   company: Array<IFriend>;
-  dates: Array<Date>;
+  date: Date;
   favourite?: boolean;
   cast?: Array<IActor>;
 }

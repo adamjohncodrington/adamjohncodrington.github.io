@@ -2,13 +2,14 @@ import { FRIENDS, LOCATIONS } from "@constants";
 import {
   isInFuture,
   formatCountedListItems,
-  getPageSectionItemCounts
+  getPageSectionItemCounts,
+  getFriendTravelCounts
 } from "@utils";
 
 import { DATA } from "./data";
 
-const UP_NEXT: Array<ITravelCard> = DATA.ALL.filter(item =>
-  isInFuture(item.dates)
+const UP_NEXT: Array<ITravelCard> = DATA.ALL.filter(
+  ({ dates }: ITravelCard): boolean => isInFuture(dates[0])
 );
 
 const totalTripsAbroadEver: number = DATA.ALL.filter(item => !item.notAbroad)
@@ -21,10 +22,7 @@ const FRIENDS_LIST_ITEMS: Array<ICountedListItem> = Object.values(FRIENDS)
   .map(
     (friend: IFriend): ICountedListItem => ({
       text: friend.name,
-      ...getPageSectionItemCounts({
-        itemToCount: friend,
-        dataToCompareAgainst: DATA.ALL
-      })
+      ...getFriendTravelCounts({ friend, travelCards: DATA.ALL })
     })
   );
 

@@ -1,10 +1,10 @@
-export const isInFuture = (dates: Array<Date>): boolean => {
+export const isInFuture = (date: Date): boolean => {
   const yesterday = (): number => {
     const today: Date = new Date();
     return today.setDate(today.getDate() - 1);
   };
 
-  const dateToCompare: number = dates[0].valueOf();
+  const dateToCompare: number = date.valueOf();
 
   return dateToCompare > yesterday();
 };

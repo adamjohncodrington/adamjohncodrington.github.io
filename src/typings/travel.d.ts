@@ -28,7 +28,7 @@ interface IAttraction extends ILocation {
   themePark?: boolean;
   highlight?: boolean;
 }
-interface IAttractionCounted extends IAttraction, IFuturePastCount {}
+interface IAttractionCounted extends IAttraction, IFuturePastCounts {}
 
 type IAttractionsObject = { [attraction: string]: IAttraction };
 type IAttractions = { attractions: IAttractionsObject };
@@ -41,7 +41,7 @@ interface ICity extends ILocation {
   capital?: boolean;
 }
 
-interface ICityCounted extends ICity, IFuturePastCount {}
+interface ICityCounted extends ICity, IFuturePastCounts {}
 
 type ICitiesObject = { [city: string]: ICity };
 type ICities = { cities: ICitiesObject };
@@ -64,7 +64,7 @@ interface ICountry extends ILocation {
   villages?: IVillagesObject;
 }
 
-interface ICountryCounted extends ICountry, IFuturePastCount {}
+interface ICountryCounted extends ICountry, IFuturePastCounts {}
 
 interface ICountry_A extends ILocation, IAttractions {}
 interface ICountry_C extends ILocation, ICities {}
