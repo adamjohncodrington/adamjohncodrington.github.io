@@ -482,7 +482,7 @@ export const LOCATIONS: IAllCountries = {
       LEEDS: { name: "Leeds", insignificant: true },
       LEICESTER: { name: "Leicester", insignificant: true },
       LINCOLN: { name: "Lincoln", insignificant: true },
-      LONDON: { name: "London", insignificant: true },
+      LONDON: { name: "London", capital: true, insignificant: true },
       LIVERPOOL: { name: "Liverpool", insignificant: true },
       MANCHESTER: { name: "Manchester", insignificant: true },
       NEWCASTLE: { name: "Newcastle", insignificant: true },
