@@ -2,11 +2,7 @@ import { FRIENDS, LOCATIONS } from "@constants";
 
 export const TRAVEL_2004: Array<ITravelCard> = [
   {
-    title: [
-      LOCATIONS.USA.states.NEW_YORK,
-      LOCATIONS.CANADA.cities.NIAGARA_FALLS,
-      LOCATIONS.USA.states.MASSACHUSETTS
-    ],
+    title: [LOCATIONS.USA],
     subtitle: [
       LOCATIONS.USA.cities.NEW_YORK_CITY,
       LOCATIONS.CANADA.cities.NIAGARA_FALLS,
