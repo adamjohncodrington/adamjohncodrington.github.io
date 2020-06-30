@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.52d5b2ce.chunk.js",
-    "main.js.map": "/static/js/main.52d5b2ce.chunk.js.map",
+    "main.js": "/static/js/main.dff6b839.chunk.js",
+    "main.js.map": "/static/js/main.dff6b839.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.27f1f56c.js",
     "runtime-main.js.map": "/static/js/runtime-main.27f1f56c.js.map",
     "static/js/2.7f0bfd14.chunk.js": "/static/js/2.7f0bfd14.chunk.js",
     "static/js/2.7f0bfd14.chunk.js.map": "/static/js/2.7f0bfd14.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.44ebf5580fd7778805500b20e707aeac.js": "/precache-manifest.44ebf5580fd7778805500b20e707aeac.js",
+    "precache-manifest.11baedff55221408d63198a00f56c8e3.js": "/precache-manifest.11baedff55221408d63198a00f56c8e3.js",
     "service-worker.js": "/service-worker.js",
     "static/js/2.7f0bfd14.chunk.js.LICENSE.txt": "/static/js/2.7f0bfd14.chunk.js.LICENSE.txt",
     "static/media/1975_a-brief-inquiry-into-online-relationships.jpg": "/static/media/1975_a-brief-inquiry-into-online-relationships.450622e7.jpg",
@@ -62,6 +62,7 @@
     "static/media/masks.svg": "/static/media/masks.d8da85e9.svg",
     "static/media/microphone.svg": "/static/media/microphone.45f98fc5.svg",
     "static/media/muna_about-u.jpg": "/static/media/muna_about-u.a9a59d8a.jpg",
+    "static/media/natalia-kills_perfectionist.jpg": "/static/media/natalia-kills_perfectionist.9a12b633.jpg",
     "static/media/notepad.svg": "/static/media/notepad.4eca818e.svg",
     "static/media/palm_tree.svg": "/static/media/palm_tree.4f07f732.svg",
     "static/media/panic-at-the-disco_a-fever-you-cant-sweat-out.jpg": "/static/media/panic-at-the-disco_a-fever-you-cant-sweat-out.6809f186.jpg",
@@ -75,6 +76,7 @@
     "static/media/rihanna_rated-r.jpg": "/static/media/rihanna_rated-r.00ea61a4.jpg",
     "static/media/rogan_josh.jpg": "/static/media/rogan_josh.904346f2.jpg",
     "static/media/roller_coaster.svg": "/static/media/roller_coaster.6bcd9568.svg",
+    "static/media/ryn-weaver_the-fool.jpg": "/static/media/ryn-weaver_the-fool.bfb6310a.jpg",
     "static/media/shepherds_pie.jpg": "/static/media/shepherds_pie.d49c0165.jpg",
     "static/media/sophie_oil-of-every-pearls-uninsides.jpg": "/static/media/sophie_oil-of-every-pearls-uninsides.18bc11af.jpg",
     "static/media/stadium.svg": "/static/media/stadium.5bff58bb.svg",
@@ -93,6 +95,6 @@
   "entrypoints": [
     "static/js/runtime-main.27f1f56c.js",
     "static/js/2.7f0bfd14.chunk.js",
-    "static/js/main.52d5b2ce.chunk.js"
+    "static/js/main.dff6b839.chunk.js"
   ]
 }

@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "67b4baa1bf80de7657cce5a49cdc52a9",
+    "revision": "ae5ed5b80a7ce9179712eea62e855da3",
     "url": "/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.7f0bfd14.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "59c38d10d593a998fe08",
-    "url": "/static/js/main.52d5b2ce.chunk.js"
+    "revision": "eed46a20f13f253975a9",
+    "url": "/static/js/main.dff6b839.chunk.js"
   },
   {
     "revision": "3cf57b419839acabd216",
@@ -228,6 +228,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/muna_about-u.a9a59d8a.jpg"
   },
   {
+    "revision": "9a12b6339a7527e4b2d469e0f6439e13",
+    "url": "/static/media/natalia-kills_perfectionist.9a12b633.jpg"
+  },
+  {
     "revision": "4eca818e3bf5d99cae9b0fc8d9bb7722",
     "url": "/static/media/notepad.4eca818e.svg"
   },
@@ -278,6 +282,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6bcd95684afbb98c3741738c34f1a1a7",
     "url": "/static/media/roller_coaster.6bcd9568.svg"
+  },
+  {
+    "revision": "bfb6310a3e896a18fe0c1ad645568d7b",
+    "url": "/static/media/ryn-weaver_the-fool.bfb6310a.jpg"
   },
   {
     "revision": "d49c016590c22f5828cc3a23cddce95f",
