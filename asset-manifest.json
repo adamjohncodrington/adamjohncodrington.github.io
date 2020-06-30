@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.7b56718d.chunk.js",
-    "main.js.map": "/static/js/main.7b56718d.chunk.js.map",
+    "main.js": "/static/js/main.c6cb9401.chunk.js",
+    "main.js.map": "/static/js/main.c6cb9401.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.27f1f56c.js",
     "runtime-main.js.map": "/static/js/runtime-main.27f1f56c.js.map",
     "static/js/2.7f0bfd14.chunk.js": "/static/js/2.7f0bfd14.chunk.js",
     "static/js/2.7f0bfd14.chunk.js.map": "/static/js/2.7f0bfd14.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.78c7c4cd76f1931a9b66b2a9778a9c97.js": "/precache-manifest.78c7c4cd76f1931a9b66b2a9778a9c97.js",
+    "precache-manifest.169b4145c9bebf78b3e19b84b17b68ae.js": "/precache-manifest.169b4145c9bebf78b3e19b84b17b68ae.js",
     "service-worker.js": "/service-worker.js",
     "static/js/2.7f0bfd14.chunk.js.LICENSE.txt": "/static/js/2.7f0bfd14.chunk.js.LICENSE.txt",
     "static/media/1975_a-brief-inquiry-into-online-relationships.jpg": "/static/media/1975_a-brief-inquiry-into-online-relationships.450622e7.jpg",
@@ -70,6 +70,7 @@
     "static/media/peace_sign.svg": "/static/media/peace_sign.045db1fc.svg",
     "static/media/people.svg": "/static/media/people.af13270c.svg",
     "static/media/piri_piri.jpg": "/static/media/piri_piri.42719ce5.jpg",
+    "static/media/porridge.jpg": "/static/media/porridge.ae9582d1.jpg",
     "static/media/potato_salad.jpg": "/static/media/potato_salad.446dfdbb.jpg",
     "static/media/pvris_all-we-know-of-heaven-all-we-need-of-hell.jpg": "/static/media/pvris_all-we-know-of-heaven-all-we-need-of-hell.4a601a47.jpg",
     "static/media/ratatouille.jpg": "/static/media/ratatouille.971440f9.jpg",
@@ -95,6 +96,6 @@
   "entrypoints": [
     "static/js/runtime-main.27f1f56c.js",
     "static/js/2.7f0bfd14.chunk.js",
-    "static/js/main.7b56718d.chunk.js"
+    "static/js/main.c6cb9401.chunk.js"
   ]
 }
