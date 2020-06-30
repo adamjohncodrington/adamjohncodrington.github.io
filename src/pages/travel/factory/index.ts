@@ -31,10 +31,7 @@ interface ITravelFactory {
 }
 
 export const FACTORY: ITravelFactory = {
-  BUCKET_LIST: formatCountedListItems({
-    countedListItems: BUCKET_LIST_ITEMS,
-    isBucketList: true
-  }),
+  BUCKET_LIST: formatCountedListItems({ countedListItems: BUCKET_LIST_ITEMS }),
   CITIES: formatCountedListItems({ countedListItems: CITIES_LIST_ITEMS }),
   COUNTRIES: formatCountedListItems({ countedListItems: COUNTRIES_LIST_ITEMS }),
   FRIENDS: formatCountedListItems({

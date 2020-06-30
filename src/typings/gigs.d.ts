@@ -6,6 +6,8 @@ interface IMusician extends INameFavourite {
 }
 type IMusicians = { [musician: string]: IMusician };
 
+interface IMusicianCounted extends IMusician, IPastAndFutureCounts {}
+
 interface IMusicVenue extends INameFavourite {
   insignificant?: boolean;
 }

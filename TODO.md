@@ -1,8 +1,8 @@
 # TO DO LIST
 
-- remove recent `@ts-ignore` additions
-- make a `factory` folder for each `page` to keep files small
+- remove all recent `@ts-ignore` additions
 - remove final remaining instances of type `any`
+- make a `factory` folder within `gigs`
 - add attractions to bucket-list, re-write gigs bucket list logic?
 - refactor `datesArrayToString` to be `dateToString` + `datesToString`
 
