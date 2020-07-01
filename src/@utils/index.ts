@@ -9,5 +9,4 @@ export { generateIngredientListItem } from "./generateIngredientListItem";
 export { concatenateQuantityAndMeasurement } from "./concatenateQuantityAndMeasurement";
 export { getItemCounts, getPageSectionItemCounts } from "./getItemCounts";
 export { recipeMethodEntries } from "./recipeMethodEntries";
-export { itemIsFavourited } from "./itemIsFavourited";
 export { formatCountedListItems } from "./formatCountedListItems";

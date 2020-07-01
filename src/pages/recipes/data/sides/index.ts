@@ -1,20 +1,7 @@
-import { BAKED_BEANS } from "./baked-beans";
-import { BANG_BANG_CAULIFLOWER } from "./bang-bang-cauliflower";
-import { CRISPY_KALE } from "./crispy-kale";
-import { MASHED_POTATO } from "./mashed-potato";
-import { POTATO_SALAD } from "./potato-salad";
-import { RATATOUILLE } from "./ratatouille";
-import { TOFU_SCRAMBLE } from "./tofu-scramble";
-
-export const SIDES: IRecipeGroup = {
-  title: "Sides",
-  recipes: [
-    BAKED_BEANS,
-    BANG_BANG_CAULIFLOWER,
-    CRISPY_KALE,
-    MASHED_POTATO,
-    POTATO_SALAD,
-    RATATOUILLE,
-    TOFU_SCRAMBLE
-  ]
-};
+export { BAKED_BEANS } from "./baked-beans";
+export { BANG_BANG_CAULIFLOWER } from "./bang-bang-cauliflower";
+export { CRISPY_KALE } from "./crispy-kale";
+export { MASHED_POTATO } from "./mashed-potato";
+export { POTATO_SALAD } from "./potato-salad";
+export { RATATOUILLE } from "./ratatouille";
+export { TOFU_SCRAMBLE } from "./tofu-scramble";

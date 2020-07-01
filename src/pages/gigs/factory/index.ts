@@ -1,20 +1,12 @@
-import { isInFuture, formatCountedListItems } from "@utils";
-
-import { DATA } from "../data";
+import { formatCountedListItems } from "@utils";
 
 import { BUCKET_LIST_ITEMS } from "./bucket-list";
 import { FRIENDS_LIST_ITEMS } from "./friends";
 import { FESTIVALS_LIST_ITEMS } from "./festivals";
 import { MUSICIANS_LIST_ITEMS } from "./musicians";
+import { pageCount } from "./page-count";
+import { UP_NEXT } from "./up-next";
 import { VENUES_LIST_ITEMS } from "./venues";
-
-const UP_NEXT: Array<IGigCard> = DATA.ALL.filter(({ dates }: IGigCard) =>
-  isInFuture(dates[0])
-);
-
-const totalGigsPastAndPresent: number = DATA.ALL.length;
-const totalFutureGigs: number = UP_NEXT.length;
-const totalGigsSoFar: number = totalGigsPastAndPresent - totalFutureGigs;
 
 interface IGigsFactory {
   BUCKET_LIST: Array<ICountedListItem>;
@@ -36,6 +28,5 @@ export const FACTORY: IGigsFactory = {
   MUSICIANS: formatCountedListItems({ countedListItems: MUSICIANS_LIST_ITEMS }),
   UP_NEXT,
   VENUES: formatCountedListItems({ countedListItems: VENUES_LIST_ITEMS }),
-
-  pageCount: totalGigsSoFar
+  pageCount
 };

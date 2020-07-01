@@ -7,16 +7,16 @@ import { FAVOURITES } from "./favourites";
 
 interface IMusicianIsFavourited {
   musician: IMusician;
-  favouritedData: Array<IGigCard>;
+  favouritedGigCards: Array<IGigCard>;
 }
 
 const musicianHasFavouritedGig = ({
   musician,
-  favouritedData
+  favouritedGigCards
 }: IMusicianIsFavourited): boolean => {
   let itemIsFavourited: boolean = false;
 
-  favouritedData.forEach(({ headline }: IGigCard) => {
+  favouritedGigCards.forEach(({ headline }: IGigCard) => {
     if (headline && headline.name === musician.name) itemIsFavourited = true;
   });
 
@@ -36,7 +36,7 @@ export const MUSICIANS_LIST_ITEMS: Array<ICountedListItem> = musiciansCounted.ma
   (musician: IMusicianCounted): ICountedListItem => ({
     text: musician.name,
     favourite:
-      musicianHasFavouritedGig({ musician, favouritedData: FAVOURITES }) ||
+      musicianHasFavouritedGig({ musician, favouritedGigCards: FAVOURITES }) ||
       musician.favourite,
     pastCount: musician.pastCount,
     futureCount: musician.futureCount,
