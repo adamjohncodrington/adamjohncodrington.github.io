@@ -13,6 +13,7 @@ const recipesComingSoon: Array<string> = [
   "chilli sin carne",
   "passionfruit cheesecake",
   "victoria sponge",
+  "margaritas",
   "roast potatoes",
   "thai green curry",
   "dahl"
