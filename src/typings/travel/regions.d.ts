@@ -1,3 +1,5 @@
+interface IRegion extends ILocation {}
+
 interface IRegionsUSA {
   CAPE_COD: IRegion;
   FLORIDA_KEYS: IRegion;

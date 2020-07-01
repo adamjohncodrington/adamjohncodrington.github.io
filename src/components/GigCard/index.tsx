@@ -43,9 +43,9 @@ export const GigCard: React.FC<IGigCard> = ({
 
   const dateText: string = datesArrayToString(dates);
 
-  //@ts-ignore
-  const countdownText: string =
-    isInFuture(dates[0]) && getCountdownText(daysToGo(dates));
+  const countdownText: string | undefined = isInFuture(dates[0])
+    ? getCountdownText(daysToGo(dates))
+    : undefined;
 
   const body: string = moveTheSuffixToPrefix(venue.name);
 

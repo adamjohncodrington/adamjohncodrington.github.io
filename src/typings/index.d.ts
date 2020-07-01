@@ -27,17 +27,6 @@ interface ICountedListItem extends IPastAndFutureCounts {
   isLeaderboardItem?: boolean;
 }
 
-interface IEventCard {
-  title: string;
-  subtitle?: string;
-  favourite?: boolean;
-  body?: string;
-  company: Array<IFriend>;
-  dateText: string;
-  countdownText?: string;
-  note?: string;
-}
-
 interface IPageSectionDataTypes {
   countedListItems?: Array<ICountedListItem>;
   gigCards?: Array<IGigCard>;

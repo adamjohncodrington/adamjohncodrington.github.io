@@ -3,7 +3,6 @@ import { getItemCounts } from "@utils";
 
 import { DATA } from "../data";
 
-//@ts-ignore
 export const countries: Array<ICountryTemplate> = Object.values(COUNTRIES);
 
 export const countriesCounted: Array<ICountryCounted> = countries.map(

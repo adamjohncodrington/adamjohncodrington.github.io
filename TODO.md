@@ -4,8 +4,6 @@
 
 ## TypeScript
 
-- remove all recent `@ts-ignore` additions
-- define a `cities` constant file instead?
 - remove all instances of `{ [` in types === strongly type all `@constants` objects
 
 ## Refactoring

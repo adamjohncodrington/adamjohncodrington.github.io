@@ -1,3 +1,5 @@
+interface ITown extends ILocation {}
+
 interface ITownsUK {
   DONCASTER: ITown;
   HARROGATE: ITown;

@@ -2,10 +2,10 @@ interface ICountryTemplate extends ILocation {
   attractions?: IAttractionsObject;
   cities?: ICitiesObject;
   islands?: IIslandsObject;
-  regions?: IRegionsObject;
-  states?: IStatesObject;
-  towns?: ITownsObject;
-  villages?: IVillagesObject;
+  regions?: { [region: string]: IRegion };
+  states?: { [state: string]: IState };
+  towns?: { [town: string]: ITown };
+  villages?: { [village: string]: IVillage };
 }
 
 interface ICountryCounted extends ICountryTemplate, IPastAndFutureCounts {}
