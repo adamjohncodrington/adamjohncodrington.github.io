@@ -3,7 +3,7 @@ import { FRIENDS, FESTIVALS, MUSICIANS, MUSIC_VENUES } from "@constants";
 export const GIGS_2019: Array<IGigCard> = [
   {
     headline: MUSICIANS["1975_THE"],
-    venue: MUSIC_VENUES.THE_O2,
+    venue: MUSIC_VENUES.O2_THE,
     dates: [new Date("2019-01-19")],
     company: [FRIENDS.JERRY_EDWARDS]
   },
@@ -68,7 +68,7 @@ export const GIGS_2019: Array<IGigCard> = [
   },
   {
     headline: MUSICIANS.G_FLIP,
-    venue: MUSIC_VENUES.THE_GARAGE,
+    venue: MUSIC_VENUES.GARAGE_THE,
     dates: [new Date("2019-05-15")],
     company: [FRIENDS.JERRY_EDWARDS]
   },

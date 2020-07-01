@@ -44,7 +44,7 @@ export const THEATRE_2018: Array<ITheatreCard> = [
     favourite: true
   },
   {
-    play: PLAYS.INHERITANCE,
+    play: PLAYS.INHERITANCE_THE,
     theatre: THEATRE_VENUES.NOEL_COWARD,
     date: new Date("2018-10-27"),
     company: [FRIENDS.MUM],

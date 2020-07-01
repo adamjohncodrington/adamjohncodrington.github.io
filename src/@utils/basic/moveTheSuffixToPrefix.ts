@@ -1,8 +1,8 @@
 export const moveTheSuffixToPrefix = (string: string): string => {
-  const THE_SUFFIX = ", The";
+  const theSuffix = ", The";
 
-  if (string.slice(-5) === THE_SUFFIX)
-    return `The ${string.substring(0, string.length - THE_SUFFIX.length)}`;
+  if (string.slice(-5) === theSuffix)
+    return `The ${string.substring(0, string.length - theSuffix.length)}`;
 
   return string;
 };

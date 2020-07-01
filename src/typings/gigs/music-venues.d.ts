@@ -11,7 +11,7 @@ interface IMusicVenuesLondon {
   CORSICA_STUDIOS: IMusicVenue;
   COURTYARD_THEATRE: IMusicVenue;
   DINGWALLS: IMusicVenue;
-  THE_GARAGE: IMusicVenue;
+  GARAGE_THE: IMusicVenue;
   EARTH: IMusicVenue;
   EGG: IMusicVenue;
   ELECTRIC_BRIXTON: IMusicVenue;
@@ -34,7 +34,7 @@ interface IMusicVenuesLondon {
   OMEARA: IMusicVenue;
   OSLO_HACKNEY: IMusicVenue;
   OVAL_SPACE: IMusicVenue;
-  THE_O2: IMusicVenue;
+  O2_THE: IMusicVenue;
   PRINTWORKS: IMusicVenue;
   QUEEN_OF_HOXTON: IMusicVenue;
   RIDGEWAY_PARK: IMusicVenue;

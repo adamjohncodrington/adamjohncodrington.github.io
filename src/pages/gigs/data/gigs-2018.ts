@@ -4,7 +4,7 @@ export const GIGS_2018: Array<IGigCard> = [
   {
     headline: MUSICIANS.KYGO,
     support: [MUSICIANS.GRYFFIN, MUSICIANS.SEEB],
-    venue: MUSIC_VENUES.THE_O2,
+    venue: MUSIC_VENUES.O2_THE,
     dates: [new Date("2018-02-25")],
     company: [FRIENDS.TONYA_FRANCE]
   },
@@ -126,7 +126,7 @@ export const GIGS_2018: Array<IGigCard> = [
   },
   {
     headline: MUSICIANS.FLORENCE_AND_THE_MACHINE,
-    venue: MUSIC_VENUES.THE_O2,
+    venue: MUSIC_VENUES.O2_THE,
     dates: [new Date("2018-11-21")],
     company: [FRIENDS.EMMA_CODRINGTON, FRIENDS.MEGAN_BLACKBURN]
   },

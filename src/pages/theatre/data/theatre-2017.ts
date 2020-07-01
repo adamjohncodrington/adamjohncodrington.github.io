@@ -31,7 +31,7 @@ export const THEATRE_2017: Array<ITheatreCard> = [
     ]
   },
   {
-    play: PLAYS.FERRYMAN,
+    play: PLAYS.FERRYMAN_THE,
     favourite: true,
     theatre: THEATRE_VENUES.GIELGUD,
     date: new Date("2017-11-26"),

@@ -38,7 +38,7 @@ export const THEATRE_2019: Array<ITheatreCard> = [
     ]
   },
   {
-    play: PLAYS.SON,
+    play: PLAYS.SON_THE,
     cast: [ACTORS.LAURIE_KYNASTON],
     theatre: THEATRE_VENUES.DUKE_OF_YORKS,
     date: new Date("2019-09-28"),

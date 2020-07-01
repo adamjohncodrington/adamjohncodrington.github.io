@@ -14,7 +14,7 @@ const MUSIC_VENUES_LONDON: IMusicVenuesLondon = {
   COURTYARD_THEATRE: { name: "Courtyard Theatre" },
   // D
   DINGWALLS: { name: "Dingwalls" },
-  THE_GARAGE: { name: "Garage, The" },
+  GARAGE_THE: { name: "Garage, The" },
   // E
   EARTH: { name: "EartH" },
   EGG: { name: "Egg" },
@@ -45,7 +45,7 @@ const MUSIC_VENUES_LONDON: IMusicVenuesLondon = {
   OMEARA: { name: "Omeara" },
   OSLO_HACKNEY: { name: "Oslo Hackney" },
   OVAL_SPACE: { name: "Oval Space" },
-  THE_O2: { name: "O2, The" },
+  O2_THE: { name: "O2, The" },
   // P
   PRINTWORKS: { name: "Printworks", favourite: true },
   // Q

@@ -22,7 +22,7 @@ export const GIGS_2020: Array<IGigCard> = [
   },
   {
     headline: MUSICIANS.NASTY_CHERRY,
-    venue: MUSIC_VENUES.THE_GARAGE,
+    venue: MUSIC_VENUES.GARAGE_THE,
     dates: [new Date("2020-03-03")],
     company: [FRIENDS.DARREN_TAYLOR, FRIENDS.MEGAN_BLACKBURN],
     ticketType: TICKET_TYPES.SEE_TICKETS_PRINT_AT_HOME

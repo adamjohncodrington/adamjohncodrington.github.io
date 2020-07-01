@@ -11,12 +11,12 @@ export const PLAYS: IPlays = {
   // E
   EVERYBODYS_TALKING_ABOUT_JAMIE: { name: "Everybody's Talking About Jamie" },
   // F
-  FERRYMAN: { name: "Ferryman, The" },
+  FERRYMAN_THE: { name: "Ferryman, The" },
   FROZEN: { name: "Frozen" },
   // H
   HOME_IM_DARLING: { name: "Home, I'm Darling" },
   // I
-  INHERITANCE: { name: "Inheritance, The" },
+  INHERITANCE_THE: { name: "Inheritance, The" },
   // K
   KINKY_BOOTS: { name: "Kinky Boots" },
   // L
@@ -27,7 +27,7 @@ export const PLAYS: IPlays = {
   MATILDA: { name: "Matilda" },
   MIDSUMMER_NIGHTS_DREAM: { name: "A Midsummer Night's Dream" },
   // S
-  SON: { name: "Son, The" },
+  SON_THE: { name: "Son, The" },
   // T
   THAT_GIRL: { name: "That Girl" },
   // U
