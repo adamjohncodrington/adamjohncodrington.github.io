@@ -1,4 +1,4 @@
-import { getPageSectionItemCounts } from "@utils";
+import { getItemCounts } from "@utils";
 
 import { DATA } from "../data";
 
@@ -25,9 +25,6 @@ export const ISLANDS_LIST_ITEMS: Array<ICountedListItem> = islandsAll.map(
   (island: IIsland): ICountedListItem => ({
     text: island.name,
     countInfoIrrelevant: island.insignificant,
-    ...getPageSectionItemCounts({
-      itemToCount: island,
-      dataToCompareAgainst: DATA.ALL
-    })
+    ...getItemCounts({ item: { island }, data: { travelCards: DATA.ALL } })
   })
 );

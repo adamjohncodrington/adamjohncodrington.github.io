@@ -7,6 +7,6 @@ export { getCountdownText } from "./getCountdownText";
 export { getIngredientsHeader } from "./getIngredientsHeader";
 export { generateIngredientListItem } from "./generateIngredientListItem";
 export { concatenateQuantityAndMeasurement } from "./concatenateQuantityAndMeasurement";
-export { getItemCounts, getPageSectionItemCounts } from "./getItemCounts";
+export { getItemCounts } from "./getItemCounts";
 export { recipeMethodEntries } from "./recipeMethodEntries";
 export { formatCountedListItems } from "./formatCountedListItems";

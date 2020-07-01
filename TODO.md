@@ -1,13 +1,14 @@
 # TO DO LIST
 
-- remove all `THE_` instances
-- remove all instances of `{ [` in types
 - remove all recent `@ts-ignore` additions
 - remove final remaining instances of type `any`
-- make a `factory` folder within `gigs`
-- add attractions to bucket-list, re-write gigs bucket list logic?
 - refactor `datesArrayToString` to be `dateToString` + `datesToString`
+
+## TypeScript
+
 - define a `cities` constant file instead?
+- remove all instances of `{ [` in types
+- strongly type all `@constants` objects
 
 ## Refactoring
 
@@ -35,7 +36,3 @@
 - reduce whitespace between bullet points and list text?
 - prevent wrapping of `li` text beneath the bullet point
 
-## TypeScript
-
-- rewrite `mapToCountedList`
-- strongly type all `@constants` objects

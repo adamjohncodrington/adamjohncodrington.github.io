@@ -47,9 +47,9 @@ const SECTION_ISLANDS: IPageSection = {
 const SECTION_THEME_PARKS: IPageSection = {
   title: "Theme Parks",
   icon: SVG_ICON_STRINGS.ROLLER_COASTER,
+  hide: true,
   data: { countedListItems: FACTORY.THEME_PARKS },
-  count: FACTORY.THEME_PARKS.length,
-  hide: true
+  count: FACTORY.THEME_PARKS.length
 };
 
 const SECTION_UP_NEXT_TRAVEL: IPageSection = {

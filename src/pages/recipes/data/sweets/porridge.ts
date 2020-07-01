@@ -38,7 +38,7 @@ const serveWith: Array<Array<IRecipeIngredient>> = [
 const method: Array<string> = [
   "transfer measured oats, water and Oatly to saucepan",
   "heat moderately and continuously stir so it never sticks to the pan",
-  "if you're using any frozen berries, add these once it begins to thicken, stir a bit, then remove from heat"
+  "if you're using frozen berries, add these once it begins to thicken, stir a bit, then remove from heat"
 ];
 
 const title: string = "Porridge";

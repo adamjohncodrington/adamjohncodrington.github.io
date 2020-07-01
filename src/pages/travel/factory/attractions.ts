@@ -1,4 +1,4 @@
-import { getPageSectionItemCounts } from "@utils";
+import { getItemCounts } from "@utils";
 
 import { DATA } from "../data";
 
@@ -27,9 +27,9 @@ const highlights: Array<IAttraction> = attractions.filter(
 export const HIGHLIGHTS_LIST_ITEMS: Array<ICountedListItem> = highlights.map(
   (highlight: IAttraction): ICountedListItem => ({
     text: highlight.name,
-    ...getPageSectionItemCounts({
-      itemToCount: highlight,
-      dataToCompareAgainst: DATA.ALL
+    ...getItemCounts({
+      item: { attraction: highlight },
+      data: { travelCards: DATA.ALL }
     })
   })
 );
@@ -37,9 +37,9 @@ export const HIGHLIGHTS_LIST_ITEMS: Array<ICountedListItem> = highlights.map(
 export const THEME_PARKS_LIST_ITEMS: Array<ICountedListItem> = themeParks.map(
   (themePark: IAttraction): ICountedListItem => ({
     text: themePark.name,
-    ...getPageSectionItemCounts({
-      itemToCount: themePark,
-      dataToCompareAgainst: DATA.ALL
+    ...getItemCounts({
+      item: { attraction: themePark },
+      data: { travelCards: DATA.ALL }
     })
   })
 );
