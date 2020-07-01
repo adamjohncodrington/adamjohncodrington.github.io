@@ -1,5 +1,9 @@
 # TO DO LIST
 
+## TypeScript
+
+- strongly-type ingredients/inventory
+
 ## New features
 
 - friends section reveals which gigs you saw with them

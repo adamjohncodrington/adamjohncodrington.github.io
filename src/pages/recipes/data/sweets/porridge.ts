@@ -19,26 +19,30 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
       ingredient: INGREDIENTS.MILK_OATLY_BARISTA,
       quantity: 100,
       measurement: MEASUREMENTS.MILLILITRE
+    },
+    {
+      ingredient: INGREDIENTS.CINNAMON_GROUND,
+      quantity: 0.25,
+      measurement: MEASUREMENTS.TEASPOON
+    },
+    {
+      ingredient: INGREDIENTS.RASPBERRIES_FROZEN,
+      quantity: 75,
+      measurement: MEASUREMENTS.GRAM
     }
   ]
 ];
 
 const serveWith: Array<Array<IRecipeIngredient>> = [
-  [{ ingredient: INGREDIENTS.RASPBERRIES_FROZEN }],
-  [
-    {
-      ingredient: INGREDIENTS.CINNAMON_GROUND,
-      quantity: 0.25,
-      measurement: MEASUREMENTS.TEASPOON
-    }
-  ],
+  [],
   [{ ingredient: INGREDIENTS.NECTAR_AGAVE }]
 ];
 
 const method: Array<string> = [
   "transfer measured oats, water and Oatly to saucepan",
   "heat moderately and continuously stir so it never sticks to the pan",
-  "if you're using frozen berries, add these once it begins to thicken, stir a bit, then remove from heat"
+  "add frozen raspberries and cinnamon shortly after",
+  "once it is creamy and thick, remove from heat"
 ];
 
 const title: string = "Porridge";
