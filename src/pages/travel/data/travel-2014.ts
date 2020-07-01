@@ -1,36 +1,36 @@
-import { FRIENDS, LOCATIONS } from "@constants";
+import { FRIENDS, COUNTRIES } from "@constants";
 
 export const TRAVEL_2014: Array<ITravelCard> = [
   {
-    title: [LOCATIONS.BARBADOS],
+    title: [COUNTRIES.BARBADOS],
     dates: [new Date("2014-06-16"), new Date("2014-06-24")],
     company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON],
-    hidden: [LOCATIONS.BARBADOS.attractions.HARRISONS_CAVE]
+    hidden: [COUNTRIES.BARBADOS.attractions.HARRISONS_CAVE]
   },
   {
-    title: [LOCATIONS.THAILAND, LOCATIONS.LAOS],
+    title: [COUNTRIES.THAILAND, COUNTRIES.LAOS],
     subtitle: [
-      LOCATIONS.THAILAND.cities.BANGKOK,
-      LOCATIONS.THAILAND.islands.KOH_PHANGAN,
-      LOCATIONS.THAILAND.islands.KOH_TAO,
-      LOCATIONS.THAILAND.islands.KOH_PHI_PHI,
-      LOCATIONS.THAILAND.cities.CHIANG_MAI,
-      LOCATIONS.THAILAND.towns.PAI,
-      LOCATIONS.LAOS.cities.LUANG_PRABANG,
-      LOCATIONS.LAOS.cities.VIENTIANE
+      COUNTRIES.THAILAND.cities.BANGKOK,
+      COUNTRIES.THAILAND.islands.KOH_PHANGAN,
+      COUNTRIES.THAILAND.islands.KOH_TAO,
+      COUNTRIES.THAILAND.islands.KOH_PHI_PHI,
+      COUNTRIES.THAILAND.cities.CHIANG_MAI,
+      COUNTRIES.THAILAND.towns.PAI,
+      COUNTRIES.LAOS.cities.LUANG_PRABANG,
+      COUNTRIES.LAOS.cities.VIENTIANE
     ],
     hidden: [
-      LOCATIONS.THAILAND.attractions.SKY_BAR,
-      LOCATIONS.THAILAND.attractions.GRAND_PALACE,
-      LOCATIONS.THAILAND.attractions.TIGER_KINGDOM,
-      LOCATIONS.THAILAND.attractions.WHITE_TEMPLE,
-      LOCATIONS.LAOS.attractions.BUDDHA_PARK,
-      LOCATIONS.LAOS.attractions.ELEPHANT_VILLAGE,
-      LOCATIONS.THAILAND.attractions.MAYA_BAY,
-      LOCATIONS.THAILAND.towns.KRABI,
-      LOCATIONS.THAILAND.attractions.PAI_CANYON,
-      LOCATIONS.THAILAND.cities.CHIANG_RAI,
-      LOCATIONS.LAOS.attractions.KUANG_SI_FALLS
+      COUNTRIES.THAILAND.attractions.SKY_BAR,
+      COUNTRIES.THAILAND.attractions.GRAND_PALACE,
+      COUNTRIES.THAILAND.attractions.TIGER_KINGDOM,
+      COUNTRIES.THAILAND.attractions.WHITE_TEMPLE,
+      COUNTRIES.LAOS.attractions.BUDDHA_PARK,
+      COUNTRIES.LAOS.attractions.ELEPHANT_VILLAGE,
+      COUNTRIES.THAILAND.attractions.MAYA_BAY,
+      COUNTRIES.THAILAND.towns.KRABI,
+      COUNTRIES.THAILAND.attractions.PAI_CANYON,
+      COUNTRIES.THAILAND.cities.CHIANG_RAI,
+      COUNTRIES.LAOS.attractions.KUANG_SI_FALLS
     ],
     dates: [new Date("2014-07-07"), new Date("2014-08-04")],
     company: [FRIENDS.TONYA_FRANCE]

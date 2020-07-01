@@ -1,1 +1,1 @@
-export const PHILLIPINES: ILocation = { name: "Phillipines" };
+export const PHILLIPINES: IPhillipines = { name: "Phillipines" };

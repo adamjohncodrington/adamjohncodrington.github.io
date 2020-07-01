@@ -1,16 +1,16 @@
-import { FRIENDS, LOCATIONS } from "@constants";
+import { FRIENDS, COUNTRIES } from "@constants";
 
 export const TRAVEL_2015: Array<ITravelCard> = [
   {
-    title: [LOCATIONS.FRANCE.cities.PARIS],
-    subtitle: [LOCATIONS.FRANCE],
+    title: [COUNTRIES.FRANCE.cities.PARIS],
+    subtitle: [COUNTRIES.FRANCE],
     hidden: [
-      LOCATIONS.FRANCE.attractions.SACRE_COEUR,
-      LOCATIONS.FRANCE.attractions.LOUVRE,
-      LOCATIONS.FRANCE.attractions.ARC_DE_TRIOMPHE,
-      LOCATIONS.FRANCE.attractions.NOTRE_DAME,
-      LOCATIONS.FRANCE.attractions.EIFFEL_TOWER,
-      LOCATIONS.FRANCE.attractions.NOTRE_DAME
+      COUNTRIES.FRANCE.attractions.SACRE_COEUR,
+      COUNTRIES.FRANCE.attractions.LOUVRE,
+      COUNTRIES.FRANCE.attractions.ARC_DE_TRIOMPHE,
+      COUNTRIES.FRANCE.attractions.NOTRE_DAME,
+      COUNTRIES.FRANCE.attractions.EIFFEL_TOWER,
+      COUNTRIES.FRANCE.attractions.NOTRE_DAME
     ],
     dates: [new Date("2015-03-21"), new Date("2015-03-24")],
     company: [
@@ -23,11 +23,11 @@ export const TRAVEL_2015: Array<ITravelCard> = [
     ]
   },
   {
-    title: [LOCATIONS.UGANDA],
-    subtitle: [LOCATIONS.UGANDA.cities.JINJA],
+    title: [COUNTRIES.UGANDA],
+    subtitle: [COUNTRIES.UGANDA.cities.JINJA],
     hidden: [
-      LOCATIONS.UGANDA.attractions.NILE_SOURCE,
-      LOCATIONS.UGANDA.attractions.RAFTING_NALUBALE
+      COUNTRIES.UGANDA.attractions.NILE_SOURCE,
+      COUNTRIES.UGANDA.attractions.RAFTING_NALUBALE
     ],
     dates: [new Date("2015-08-04"), new Date("2015-09-05")],
     company: [
@@ -48,29 +48,29 @@ export const TRAVEL_2015: Array<ITravelCard> = [
   {
     title: [{ name: "interrailing" }],
     subtitle: [
-      LOCATIONS.GERMANY.cities.BERLIN,
-      LOCATIONS.CZECH_REPUBLIC.cities.PRAGUE,
-      LOCATIONS.POLAND.cities.KRAKOW,
-      LOCATIONS.HUNGARY.cities.BUDAPEST
+      COUNTRIES.GERMANY.cities.BERLIN,
+      COUNTRIES.CZECH_REPUBLIC.cities.PRAGUE,
+      COUNTRIES.POLAND.cities.KRAKOW,
+      COUNTRIES.HUNGARY.cities.BUDAPEST
     ],
     hidden: [
-      LOCATIONS.GERMANY,
-      LOCATIONS.GERMANY.attractions.BERLIN_WALL,
-      LOCATIONS.GERMANY.attractions.BRANDENBURG_GATE,
-      LOCATIONS.GERMANY.attractions.EAST_SIDE_GALLERY,
-      LOCATIONS.GERMANY.attractions.HOLOCAUST_MEMORIAL,
-      LOCATIONS.GERMANY.attractions.REICHSTAG,
-      LOCATIONS.CZECH_REPUBLIC,
-      LOCATIONS.CZECH_REPUBLIC.attractions.JOHN_LENNON_WALL,
-      LOCATIONS.CZECH_REPUBLIC.attractions.VYSEHRAD,
-      LOCATIONS.POLAND,
-      LOCATIONS.POLAND.towns.WIELICZKA,
-      LOCATIONS.POLAND.attractions.WIELICZKA_SALT_MINE,
-      LOCATIONS.POLAND.attractions.AUSCHWITZ_BIRKENAU,
-      LOCATIONS.HUNGARY,
-      LOCATIONS.HUNGARY.attractions.CITADELLA,
-      LOCATIONS.HUNGARY.attractions.PARLIAMENT_BUILDING,
-      LOCATIONS.HUNGARY.attractions.THERMAL_BATH_SZECHENYI
+      COUNTRIES.GERMANY,
+      COUNTRIES.GERMANY.attractions.BERLIN_WALL,
+      COUNTRIES.GERMANY.attractions.BRANDENBURG_GATE,
+      COUNTRIES.GERMANY.attractions.EAST_SIDE_GALLERY,
+      COUNTRIES.GERMANY.attractions.HOLOCAUST_MEMORIAL,
+      COUNTRIES.GERMANY.attractions.REICHSTAG,
+      COUNTRIES.CZECH_REPUBLIC,
+      COUNTRIES.CZECH_REPUBLIC.attractions.JOHN_LENNON_WALL,
+      COUNTRIES.CZECH_REPUBLIC.attractions.VYSEHRAD,
+      COUNTRIES.POLAND,
+      COUNTRIES.POLAND.towns.WIELICZKA,
+      COUNTRIES.POLAND.attractions.WIELICZKA_SALT_MINE,
+      COUNTRIES.POLAND.attractions.AUSCHWITZ_BIRKENAU,
+      COUNTRIES.HUNGARY,
+      COUNTRIES.HUNGARY.attractions.CITADELLA,
+      COUNTRIES.HUNGARY.attractions.PARLIAMENT_BUILDING,
+      COUNTRIES.HUNGARY.attractions.THERMAL_BATH_SZECHENYI
     ],
     dates: [new Date("2015-09-10"), new Date("2015-09-24")],
     company: [FRIENDS.SIAN_RODWAY_SMITH]

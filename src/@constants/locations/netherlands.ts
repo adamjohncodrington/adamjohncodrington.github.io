@@ -1,12 +1,16 @@
-export const NETHERLANDS = {
+const cities: ICitiesNetherlands = {
+  AMSTERDAM: { name: "Amsterdam", capital: true },
+  GRONINGEN: { name: "Groningen" }
+};
+
+const attractions: IAttractionsNetherlands = {
+  STEDELIJK_MUSEUM: { name: "Stedelijk Museum Amsterdam" },
+  SEX_MUSEUM: { name: "Venustempel Sex Museum" },
+  GRONINGEN_MUSEUM: { name: "Groninger Museum" }
+};
+
+export const NETHERLANDS: INetherlands = {
   name: "Netherlands",
-  cities: {
-    AMSTERDAM: { name: "Amsterdam", capital: true },
-    GRONINGEN: { name: "Groningen" }
-  },
-  attractions: {
-    STEDELIJK_MUSEUM: { name: "Stedelijk Museum Amsterdam" },
-    SEX_MUSEUM: { name: "Venustempel Sex Museum" },
-    GRONINGEN_MUSEUM: { name: "Groninger Museum" }
-  }
+  cities,
+  attractions
 };

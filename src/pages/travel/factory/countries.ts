@@ -1,9 +1,10 @@
-import { LOCATIONS } from "@constants";
+import { COUNTRIES } from "@constants";
 import { getItemCounts } from "@utils";
 
 import { DATA } from "../data";
 
-export const countries: Array<ICountryTemplate> = Object.values(LOCATIONS);
+//@ts-ignore
+export const countries: Array<ICountryTemplate> = Object.values(COUNTRIES);
 
 export const countriesCounted: Array<ICountryCounted> = countries.map(
   (country: ICountryTemplate): ICountryCounted => ({

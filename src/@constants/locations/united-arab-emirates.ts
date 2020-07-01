@@ -1,8 +1,8 @@
-export const UAE = {
-  name: "United Arab Emirates",
-  cities: { DUBAI: { name: "Dubai" } },
-  attractions: {
-    AQUAVENTURE: { name: "Aquaventure Waterpark", themePark: true },
-    BURJ_KHALIFA: { name: "Burj Khalifa" }
-  }
+const cities: ICitiesUAE = { DUBAI: { name: "Dubai" } };
+
+const attractions: IAttractionsUAE = {
+  AQUAVENTURE: { name: "Aquaventure Waterpark", themePark: true },
+  BURJ_KHALIFA: { name: "Burj Khalifa" }
 };
+
+export const UAE: IUAE = { name: "United Arab Emirates", cities, attractions };

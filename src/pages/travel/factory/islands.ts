@@ -1,21 +1,15 @@
+import { ISLANDS } from "@constants";
 import { getItemCounts } from "@utils";
 
 import { DATA } from "../data";
-
 import { countries } from "./countries";
 
 const islandsThatAreCountries: Array<ICountryTemplate> = countries.filter(
   ({ island }: ICountryTemplate): boolean => !!island
 );
-//@ts-ignore
-const islandsThatAreNotCountries = [].concat.apply(
-  [],
-  //@ts-ignore
-  countries
-    .filter(({ islands }) => !!islands)
-    //@ts-ignore
-    .map(({ islands }) => Object.values(islands))
-);
+
+const islandsThatAreNotCountries: Array<IIsland> = Object.values(ISLANDS);
+
 const islandsAll: Array<IIsland> = [
   ...islandsThatAreCountries,
   ...islandsThatAreNotCountries

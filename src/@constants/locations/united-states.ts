@@ -1,10 +1,7 @@
-const KEY_WEST = { name: "Key West" };
+const KEY_WEST: ILocation = { name: "Key West" };
 
-const attractions = {
-  ALCATRAZ_PRISON: {
-    name: "Alcatraz Federal Penitentiary",
-    highlight: true
-  },
+const attractions: IAttractionsUSA = {
+  ALCATRAZ_PRISON: { name: "Alcatraz Federal Penitentiary", highlight: true },
   FISHERMANS_WHARF: { name: "Fisherman's Wharf" },
   FARMERS_MARKET: { name: "Farmers Market" },
   HOLLYWOOD_WALK_OF_FAME: { name: "Hollywood Walk of Fame" },
@@ -23,10 +20,7 @@ const attractions = {
     themePark: true
   },
   DISNEY_MGM_STUDIOS: { name: "Disney-MGM Studios", themePark: true },
-  DISNEY_ANIMAL_KINGDOM: {
-    name: "Disney's Animal Kingdom",
-    themePark: true
-  },
+  DISNEY_ANIMAL_KINGDOM: { name: "Disney's Animal Kingdom", themePark: true },
   DISNEY_EPCOT: { name: "Epcot", themePark: true },
   WET_N_WILD_ORLANDO: { name: "Wet 'n Wild Orlando", themePark: true },
   BLIZZARD_BEACH: { name: "Blizzard Beach Water Park", themePark: true },
@@ -55,7 +49,7 @@ const attractions = {
   SIX_FLAGS_NEW_ENGLAND: { name: "Six Flags New England", themePark: true }
 };
 
-const cities = {
+const cities: ICitiesUSA = {
   BOSTON_MASSACHUSETTS: { name: "Boston" },
   KEY_WEST,
   LAS_VEGAS: { name: "Las Vegas" },
@@ -64,29 +58,29 @@ const cities = {
   NEW_YORK_CITY: { name: "New York City" },
   SAN_FRANCISCO: { name: "San Francisco" },
   SPRINGFIELD_MASSACHUSETTS: { name: "Springfield" },
-  WASH_MORETONINGTON_DC: { name: "Washington DC", capital: true }
+  WASHINGTON_DC: { name: "Washington DC", capital: true }
 };
 
-const islands = {
+const islands: IIslandsUSA = {
   KEY_WEST,
   ALCATRAZ: { name: "Alcatraz" },
   MARTHAS_VINEYARD: { name: "Martha's Vineyard" }
 };
 
-const regions = {
+const regions: IRegionsUSA = {
   CAPE_COD: { name: "Cape Cod" },
   FLORIDA_KEYS: { name: "Florida Keys" },
   ISLAMORADA: { name: "Islamorada" }
 };
 
-const states = {
+const states: IStatesUSA = {
   FLORIDA: { name: "Florida" },
   NEW_YORK: { name: "New York" },
   MASSACHUSETTS: { name: "Massachusetts" },
   VIRGINIA: { name: "Virginia" }
 };
 
-export const USA = {
+export const USA: IUSA = {
   name: "United States",
   attractions,
   cities,

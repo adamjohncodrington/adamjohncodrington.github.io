@@ -1,1 +1,1 @@
-export const INDONESIA = { name: "Indonesia" };
+export const INDONESIA: IIndonesia = { name: "Indonesia" };

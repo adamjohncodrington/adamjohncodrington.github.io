@@ -1,72 +1,72 @@
-import { FRIENDS, LOCATIONS } from "@constants";
+import { FRIENDS, COUNTRIES } from "@constants";
 
 export const TRAVEL_2016: Array<ITravelCard> = [
   {
-    title: [LOCATIONS.IRELAND.cities.DUBLIN],
-    subtitle: [LOCATIONS.IRELAND],
+    title: [COUNTRIES.IRELAND.cities.DUBLIN],
+    subtitle: [COUNTRIES.IRELAND],
     dates: [new Date("2016-02-05"), new Date("2016-02-07")],
     company: [FRIENDS.SIAN_RODWAY_SMITH],
     hidden: [
-      LOCATIONS.IRELAND.attractions.DUBLIN_PRISON,
-      LOCATIONS.IRELAND.attractions.ST_STEPHENS_GREEN_PARK,
-      LOCATIONS.IRELAND.attractions.GUINNESS_STOREHOUSE
+      COUNTRIES.IRELAND.attractions.DUBLIN_PRISON,
+      COUNTRIES.IRELAND.attractions.ST_STEPHENS_GREEN_PARK,
+      COUNTRIES.IRELAND.attractions.GUINNESS_STOREHOUSE
     ]
   },
   {
-    title: [LOCATIONS.PORTUGAL.towns.TAVIRA],
-    subtitle: [LOCATIONS.PORTUGAL],
+    title: [COUNTRIES.PORTUGAL.towns.TAVIRA],
+    subtitle: [COUNTRIES.PORTUGAL],
     dates: [new Date("2016-06-09"), new Date("2016-06-16")],
     company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON]
   },
   {
-    title: [LOCATIONS.ECUADOR, LOCATIONS.PERU],
+    title: [COUNTRIES.ECUADOR, COUNTRIES.PERU],
     subtitle: [
-      LOCATIONS.ECUADOR.cities.QUITO,
-      LOCATIONS.ECUADOR.cities.OTAVALO,
-      LOCATIONS.ECUADOR.attractions.COTOPAXI,
-      LOCATIONS.ECUADOR.cities.BANOS,
-      LOCATIONS.ECUADOR.islands.GALAPAGOS,
-      LOCATIONS.PERU.towns.MANCORA,
-      LOCATIONS.PERU.cities.HUARAZ,
-      LOCATIONS.PERU.cities.LIMA,
-      LOCATIONS.PERU.towns.PARACAS,
-      LOCATIONS.PERU.villages.HUACACHINA,
-      LOCATIONS.PERU.cities.AREQUIPA,
-      LOCATIONS.PERU.attractions.COLCA_CANYON,
-      LOCATIONS.PERU.cities.CUSCO,
-      LOCATIONS.PERU.attractions.MANU,
-      LOCATIONS.PERU.attractions.RAINBOW_MOUNTAIN,
-      LOCATIONS.PERU.attractions.MACHU_PICCHU
+      COUNTRIES.ECUADOR.cities.QUITO,
+      COUNTRIES.ECUADOR.cities.OTAVALO,
+      COUNTRIES.ECUADOR.attractions.COTOPAXI,
+      COUNTRIES.ECUADOR.cities.BANOS,
+      COUNTRIES.ECUADOR.islands.GALAPAGOS,
+      COUNTRIES.PERU.towns.MANCORA,
+      COUNTRIES.PERU.cities.HUARAZ,
+      COUNTRIES.PERU.cities.LIMA,
+      COUNTRIES.PERU.towns.PARACAS,
+      COUNTRIES.PERU.villages.HUACACHINA,
+      COUNTRIES.PERU.cities.AREQUIPA,
+      COUNTRIES.PERU.attractions.COLCA_CANYON,
+      COUNTRIES.PERU.cities.CUSCO,
+      COUNTRIES.PERU.attractions.MANU,
+      COUNTRIES.PERU.attractions.RAINBOW_MOUNTAIN,
+      COUNTRIES.PERU.attractions.MACHU_PICCHU
     ],
     hidden: [
-      LOCATIONS.ECUADOR.attractions.EQUATOR_MONUMENT,
-      LOCATIONS.ECUADOR.attractions.OTAVALO_MARKET,
-      LOCATIONS.ECUADOR.attractions.PAILON_DEL_DIABLO,
-      LOCATIONS.ECUADOR.cities.GUAYAQUIL,
-      LOCATIONS.ECUADOR.attractions.TORTOISE_PARK,
-      LOCATIONS.PERU.attractions.HUASCARAN_PARK,
-      LOCATIONS.PERU.attractions.LAGUNA_69,
-      LOCATIONS.PERU.attractions.HUACACHINA,
-      LOCATIONS.PERU.attractions.JUNGLE_ZIPLINE
+      COUNTRIES.ECUADOR.attractions.EQUATOR_MONUMENT,
+      COUNTRIES.ECUADOR.attractions.OTAVALO_MARKET,
+      COUNTRIES.ECUADOR.attractions.PAILON_DEL_DIABLO,
+      COUNTRIES.ECUADOR.cities.GUAYAQUIL,
+      COUNTRIES.ECUADOR.attractions.TORTOISE_PARK,
+      COUNTRIES.PERU.attractions.HUASCARAN_PARK,
+      COUNTRIES.PERU.attractions.LAGUNA_69,
+      COUNTRIES.PERU.attractions.HUACACHINA,
+      COUNTRIES.PERU.attractions.JUNGLE_ZIPLINE
     ],
     dates: [new Date("2016-10-03"), new Date("2016-11-10")],
     company: [FRIENDS.SARAH_WHITAKER, FRIENDS.SIAN_RODWAY_SMITH]
   },
   {
     title: [
-      LOCATIONS.BRAZIL.cities.RIO_DE_JANEIRO,
-      LOCATIONS.BRAZIL.islands.ILHA_GRANDE
+      COUNTRIES.BRAZIL.cities.RIO_DE_JANEIRO,
+      COUNTRIES.BRAZIL.islands.ILHA_GRANDE
     ],
     hidden: [
-      LOCATIONS.BRAZIL.attractions.HANG_GLIDING,
-      LOCATIONS.BRAZIL.attractions.MODERN_ART_MUSEUM_RIO,
-      LOCATIONS.BRAZIL.attractions.COPACABANA_BEACH,
-      LOCATIONS.BRAZIL.attractions.ROCINHA_FAVELA,
-      LOCATIONS.BRAZIL.attractions.PICO_DO_PAPAGAIO,
-      LOCATIONS.BRAZIL.attractions.SELARON_STEPS,
-      LOCATIONS.BRAZIL.attractions.CHRIST_THE_REDEEMER
+      COUNTRIES.BRAZIL.attractions.HANG_GLIDING,
+      COUNTRIES.BRAZIL.attractions.MODERN_ART_MUSEUM_RIO,
+      COUNTRIES.BRAZIL.attractions.COPACABANA_BEACH,
+      COUNTRIES.BRAZIL.attractions.ROCINHA_FAVELA,
+      COUNTRIES.BRAZIL.attractions.PICO_DO_PAPAGAIO,
+      COUNTRIES.BRAZIL.attractions.SELARON_STEPS,
+      COUNTRIES.BRAZIL.attractions.CHRIST_THE_REDEEMER
     ],
-    subtitle: [LOCATIONS.BRAZIL],
+    subtitle: [COUNTRIES.BRAZIL],
     dates: [new Date("2016-12-01"), new Date("2016-12-11")],
     company: [FRIENDS.SIAN_RODWAY_SMITH]
   }

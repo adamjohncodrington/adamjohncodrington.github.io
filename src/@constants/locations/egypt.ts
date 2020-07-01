@@ -1,13 +1,13 @@
-export const EGYPT = {
-  name: "Egypt",
-  cities: {
-    CAIRO: { name: "Cairo", capital: true },
-    SHARM_EL_SHEIKH: { name: "Sharm El Sheikh" }
-  },
-  attractions: {
-    GIZA_PYRAMIDS_SPHINX: {
-      name: "Giza Pyramids & Great Sphinx",
-      highlight: true
-    }
+const cities: ICitiesEgypt = {
+  CAIRO: { name: "Cairo", capital: true },
+  SHARM_EL_SHEIKH: { name: "Sharm El Sheikh" }
+};
+
+const attractions: IAttractionsEgypt = {
+  GIZA_PYRAMIDS_SPHINX: {
+    name: "Giza Pyramids & Great Sphinx",
+    highlight: true
   }
 };
+
+export const EGYPT: IEgypt = { name: "Egypt", cities, attractions };

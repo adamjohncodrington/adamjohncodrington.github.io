@@ -1,1 +1,1 @@
-export const TANZANIA: ILocation = { name: "Tanzania" };
+export const TANZANIA: ITanzania = { name: "Tanzania" };

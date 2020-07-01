@@ -1,1 +1,1 @@
-export const BOLIVIA = { name: "Bolivia" };
+export const BOLIVIA: IBolivia = { name: "Bolivia" };

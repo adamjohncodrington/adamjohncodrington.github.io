@@ -39,12 +39,11 @@ import { TANZANIA } from "./tanzania";
 import { THAILAND } from "./thailand";
 import { UGANDA } from "./uganda";
 import { UAE } from "./united-arab-emirates";
-import { ZIMBABWE } from "./zimbabwe";
-
 import { UK } from "./united-kingdom";
 import { USA } from "./united-states";
+import { ZIMBABWE } from "./zimbabwe";
 
-export const LOCATIONS = {
+export const COUNTRIES: ICountries = {
   ARGENTINA,
   AUSTRALIA,
   AUSTRIA,
@@ -89,4 +88,82 @@ export const LOCATIONS = {
   UK,
   USA,
   ZIMBABWE
+};
+
+export const CITIES: ICities = {
+  ...ARGENTINA.cities,
+  ...AUSTRIA.cities,
+  ...BELGIUM.cities,
+  ...BELIZE.cities,
+  ...BRAZIL.cities,
+  ...CANADA.cities,
+  ...COSTA_RICA.cities,
+  ...CUBA.cities,
+  ...CROATIA.cities,
+  ...CYPRUS.cities,
+  ...CZECH_REPUBLIC.cities,
+  ...DENMARK.cities,
+  ...ECUADOR.cities,
+  ...EGYPT.cities,
+  ...FRANCE.cities,
+  ...GERMANY.cities,
+  ...HUNGARY.cities,
+  ...IRELAND.cities,
+  ...ITALY.cities,
+  ...LAOS.cities,
+  ...NETHERLANDS.cities,
+  ...NORWAY.cities,
+  ...PERU.cities,
+  ...POLAND.cities,
+  ...PORTUGAL.cities,
+  ...SPAIN.cities,
+  ...SWEDEN.cities,
+  ...THAILAND.cities,
+  ...UGANDA.cities,
+  ...UAE.cities,
+  ...UK.cities,
+  ...USA.cities
+};
+
+export const ATTRACTIONS: IAttractions = {
+  ...BARBADOS.attractions,
+  ...BELGIUM.attractions,
+  ...BELIZE.attractions,
+  ...BRAZIL.attractions,
+  ...CANADA.attractions,
+  ...COSTA_RICA.attractions,
+  ...CROATIA.attractions,
+  ...CYPRUS.attractions,
+  ...CZECH_REPUBLIC.attractions,
+  ...DENMARK.attractions,
+  ...ECUADOR.attractions,
+  ...EGYPT.attractions,
+  ...FRANCE.attractions,
+  ...GERMANY.attractions,
+  ...HUNGARY.attractions,
+  ...IRELAND.attractions,
+  ...ITALY.attractions,
+  ...LAOS.attractions,
+  ...NETHERLANDS.attractions,
+  ...PERU.attractions,
+  ...POLAND.attractions,
+  ...PORTUGAL.attractions,
+  ...SPAIN.attractions,
+  ...THAILAND.attractions,
+  ...UGANDA.attractions,
+  ...UAE.attractions,
+  ...UK.attractions,
+  ...USA.attractions,
+  ...ZIMBABWE.attractions
+};
+
+export const ISLANDS: IIslands = {
+  ...SPAIN.islands,
+  ...USA.islands,
+  ...BRAZIL.islands,
+  ...BELIZE.islands,
+  ...ECUADOR.islands,
+  ...NORWAY.islands,
+  ...GREECE.islands,
+  ...THAILAND.islands
 };

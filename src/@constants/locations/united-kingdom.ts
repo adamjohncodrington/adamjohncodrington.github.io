@@ -1,4 +1,4 @@
-const attractions = {
+const attractions: IAttractionsUK = {
   ALTON_TOWERS: { name: "Alton Towers", insignificant: true, themePark: true },
   BLACKPOOL_PLEASURE_BEACH: {
     name: "Blackpool Pleasure Beach",
@@ -39,11 +39,11 @@ const attractions = {
   HADRIANS_WALL: { name: "Hadrian's Wall", insignificant: true }
 };
 
-const islands = {
+const islands: IIslandsUK = {
   ANGLESEY: { name: "Anglesey", insignificant: true }
 };
 
-const cities = {
+const cities: ICitiesUK = {
   BATH: { name: "Bath", insignificant: true },
   BLACKPOOL: { name: "Blackpool", insignificant: true },
   BRIGHTON: { name: "Brighton", insignificant: true },
@@ -69,9 +69,9 @@ const cities = {
   YORK: { name: "York", insignificant: true }
 };
 
-const regions = { CORNWALL: { name: "Cornwall" } };
+const regions: IRegionsUK = { CORNWALL: { name: "Cornwall" } };
 
-const towns = {
+const towns: ITownsUK = {
   DONCASTER: { name: "Doncaster", insignificant: true },
   HARROGATE: { name: "Harrogate", insignificant: true },
   ILKLEY: { name: "Ilkley", insignificant: true },
@@ -85,7 +85,7 @@ const towns = {
   SCARBOROUGH: { name: "Scarborough", insignificant: true }
 };
 
-export const UK = {
+export const UK: IUK = {
   name: "United Kingdom",
   insignificant: true,
   attractions,

@@ -1,5 +1,7 @@
-export const CANADA = {
-  name: "Canada",
-  cities: { NIAGARA_FALLS: { name: "Niagara Falls" } },
-  attractions: { NIAGARA_FALLS: { name: "Niagara Falls", highlight: true } }
+const cities: ICitiesCanada = { NIAGARA_FALLS: { name: "Niagara Falls" } };
+
+const attractions: IAttractionsCanada = {
+  NIAGARA_FALLS: { name: "Niagara Falls", highlight: true }
 };
+
+export const CANADA: ICanada = { name: "Canada", cities, attractions };

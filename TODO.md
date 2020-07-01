@@ -1,5 +1,7 @@
 # TO DO LIST
 
+- add oslo sauna to attractions/highlights
+
 ## TypeScript
 
 - remove all recent `@ts-ignore` additions

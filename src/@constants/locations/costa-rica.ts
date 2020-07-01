@@ -1,18 +1,18 @@
-const attractions = {
+const attractions: IAttractionsCostaRica = {
   CORCOVADO: { name: "Corcovado National Park", highlight: true },
   JAGUAR_RESCUE_CENTER: { name: "Jaguar Rescue Center" }
 };
 
-const cities = {
+const cities: ICitiesCostaRica = {
   SAN_JOSE: { name: "San Jose", capital: true, excludeFromBucketList: true }
 };
 
-const towns = {
+const towns: ITownsCostaRica = {
   MONTEVERDE: { name: "Monteverde" },
   PUERTO_VIEJO: { name: "Puerto Viejo" }
 };
 
-export const COSTA_RICA = {
+export const COSTA_RICA: ICostaRica = {
   name: "Costa Rica",
   attractions,
   cities,

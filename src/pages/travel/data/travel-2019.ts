@@ -1,12 +1,12 @@
-import { FRIENDS, LOCATIONS } from "@constants";
+import { FRIENDS, COUNTRIES } from "@constants";
 
 export const TRAVEL_2019: Array<ITravelCard> = [
   {
-    title: [LOCATIONS.NETHERLANDS.cities.AMSTERDAM],
-    subtitle: [LOCATIONS.NETHERLANDS],
+    title: [COUNTRIES.NETHERLANDS.cities.AMSTERDAM],
+    subtitle: [COUNTRIES.NETHERLANDS],
     hidden: [
-      LOCATIONS.NETHERLANDS.attractions.SEX_MUSEUM,
-      LOCATIONS.NETHERLANDS.attractions.STEDELIJK_MUSEUM
+      COUNTRIES.NETHERLANDS.attractions.SEX_MUSEUM,
+      COUNTRIES.NETHERLANDS.attractions.STEDELIJK_MUSEUM
     ],
     dates: [new Date("2019-02-01"), new Date("2019-02-04")],
     company: [
@@ -17,30 +17,30 @@ export const TRAVEL_2019: Array<ITravelCard> = [
     ]
   },
   {
-    title: [LOCATIONS.PORTUGAL.cities.LISBON],
-    subtitle: [LOCATIONS.PORTUGAL],
-    hidden: [LOCATIONS.PORTUGAL.attractions.OCENARIO_DE_LISBOA],
+    title: [COUNTRIES.PORTUGAL.cities.LISBON],
+    subtitle: [COUNTRIES.PORTUGAL],
+    hidden: [COUNTRIES.PORTUGAL.attractions.OCENARIO_DE_LISBOA],
     dates: [new Date("2019-02-08"), new Date("2019-02-10")],
     company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON]
   },
   {
-    title: [LOCATIONS.BELGIUM.cities.BRUGES],
-    subtitle: [LOCATIONS.BELGIUM],
-    hidden: [LOCATIONS.BELGIUM.attractions.BELFRY_OF_BRUGES],
+    title: [COUNTRIES.BELGIUM.cities.BRUGES],
+    subtitle: [COUNTRIES.BELGIUM],
+    hidden: [COUNTRIES.BELGIUM.attractions.BELFRY_OF_BRUGES],
     dates: [new Date("2019-05-17"), new Date("2019-05-19")],
     company: [FRIENDS.JAMIE_HALKET]
   },
   {
-    title: [LOCATIONS.ITALY.cities.CATANIA],
-    subtitle: [LOCATIONS.ITALY.regions.SICILY],
-    hidden: [LOCATIONS.ITALY, LOCATIONS.ITALY.attractions.ETNA],
+    title: [COUNTRIES.ITALY.cities.CATANIA],
+    subtitle: [COUNTRIES.ITALY.regions.SICILY],
+    hidden: [COUNTRIES.ITALY, COUNTRIES.ITALY.attractions.ETNA],
     dates: [new Date("2019-07-10"), new Date("2019-07-15")],
     company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON]
   },
   {
-    title: [LOCATIONS.FRANCE.cities.NICE],
-    subtitle: [LOCATIONS.FRANCE],
-    hidden: [LOCATIONS.FRANCE.cities.MONACO],
+    title: [COUNTRIES.FRANCE.cities.NICE],
+    subtitle: [COUNTRIES.FRANCE],
+    hidden: [COUNTRIES.FRANCE.cities.MONACO],
     dates: [new Date("2019-06-08"), new Date("2019-06-14")],
     company: [FRIENDS.SIAN_RODWAY_SMITH]
   }

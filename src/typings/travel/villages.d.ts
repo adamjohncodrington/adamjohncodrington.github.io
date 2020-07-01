@@ -1,0 +1,3 @@
+interface IVillagesPeru {
+  HUACACHINA: IVillage;
+}

@@ -1,20 +1,9 @@
+import { ATTRACTIONS } from "@constants";
 import { getItemCounts } from "@utils";
 
 import { DATA } from "../data";
 
-import { countries } from "./countries";
-
-//@ts-ignore
-const attractions = [].concat.apply(
-  [],
-  //@ts-ignore
-  countries
-    .filter(({ attractions }) => !!attractions)
-    .map(
-      //@ts-ignore
-      ({ attractions }) => Object.values(attractions)
-    )
-);
+const attractions: Array<IAttraction> = Object.values(ATTRACTIONS);
 
 const themeParks: Array<IAttraction> = attractions.filter(
   ({ themePark }: IAttraction): boolean => !!themePark

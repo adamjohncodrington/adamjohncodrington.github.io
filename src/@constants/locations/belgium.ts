@@ -1,8 +1,11 @@
-export const BELGIUM = {
-  name: "Belgium",
-  cities: { BRUGES: { name: "Bruges" }, YPRES: { name: "Ypres" } },
-  attractions: {
-    BATTLEFIELDS: { name: "Battlefields" },
-    BELFRY_OF_BRUGES: { name: "Belfry of Bruges" }
-  }
+const cities: ICitiesBeligum = {
+  BRUGES: { name: "Bruges" },
+  YPRES: { name: "Ypres" }
 };
+
+const attractions: IAttractionsBelgium = {
+  BATTLEFIELDS: { name: "Battlefields" },
+  BELFRY_OF_BRUGES: { name: "Belfry of Bruges" }
+};
+
+export const BELGIUM: IBelgium = { name: "Belgium", cities, attractions };

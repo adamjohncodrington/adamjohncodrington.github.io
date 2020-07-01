@@ -2,7 +2,7 @@ export { ACTORS } from "./actors";
 export { DIETS } from "./diets";
 export { FESTIVALS } from "./festivals";
 export { FRIENDS } from "./friends";
-export { LOCATIONS } from "./locations";
+export { COUNTRIES, CITIES, ATTRACTIONS, ISLANDS } from "./locations";
 export { MEASUREMENTS, SAINSBURYS_SEASONING_COST } from "./measurements";
 export { MUSICIANS } from "./musicians";
 export { MUSIC_VENUES } from "./music-venues";

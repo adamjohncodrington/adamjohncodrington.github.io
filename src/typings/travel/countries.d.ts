@@ -10,90 +10,256 @@ interface ICountryTemplate extends ILocation {
 
 interface ICountryCounted extends ICountryTemplate, IPastAndFutureCounts {}
 
-interface ICountry_A extends ILocation, IAttractions {}
-interface ICountry_C extends ILocation, ICities {}
-interface ICountry_AC extends ILocation, IAttractions, ICities {}
-interface ICountry_ACI extends ILocation, IAttractions, ICities, IIslands {}
-interface ICountry_ACIRS
-  extends ILocation,
-    IAttractions,
-    ICities,
-    IIslands,
-    IRegions,
-    IStates {}
-interface ICountry_ACIT
-  extends ILocation,
-    IAttractions,
-    ICities,
-    IIslands,
-    ITowns {}
-interface ICountry_ACRT
-  extends ILocation,
-    IAttractions,
-    ICities,
-    IRegions,
-    ITowns {}
-interface ICountry_ACT extends ILocation, IAttractions, ICities, ITowns {}
-interface ICountry_ACTV
-  extends ILocation,
-    IAttractions,
-    ICities,
-    ITowns,
-    IVillages {}
-interface ICountry_ACITR
-  extends ILocation,
-    IAttractions,
-    ICities,
-    IIslands,
-    ITowns,
-    IRegions {}
-interface ICountry_CI extends ILocation, ICities, IIslands {}
-interface ICountry_CT extends ILocation, ICities, ITowns {}
-interface ICountry_IR extends ILocation, IIslands, IRegions {}
+interface IIndonesia extends ILocation {}
 
-interface IAllCountries {
-  ARGENTINA: ICountry_C;
-  AUSTRALIA: ILocation;
-  AUSTRIA: ICountry_C;
-  BARBADOS: ICountry_A;
-  BELGIUM: ICountry_AC;
-  BELIZE: ICountry_ACI;
-  BOLIVIA: ILocation;
-  BRAZIL: ICountry_ACI;
-  CANADA: ICountry_AC;
-  COLOMBIA: ILocation;
-  COSTA_RICA: ICountry_ACT;
-  CROATIA: ICountry_AC;
-  CUBA: ICountry_CT;
-  CYPRUS: ICountry_AC;
-  CZECH_REPUBLIC: ICountry_AC;
-  DENMARK: ICountry_AC;
-  ECUADOR: ICountry_ACI;
-  EGYPT: ICountry_AC;
-  FRANCE: ICountry_AC;
-  GERMANY: ICountry_AC;
-  GREECE: ICountry_IR;
-  HUNGARY: ICountry_AC;
-  INDONESIA: ILocation;
-  IRELAND: ICountry_AC;
-  ITALY: ICountry_ACRT;
-  JAPAN: ILocation;
-  LAOS: ICountry_AC;
-  MEXICO: ILocation;
-  NETHERLANDS: ICountry_AC;
-  NEW_ZEALAND: ILocation;
-  NORWAY: ICountry_CI;
-  PERU: ICountry_ACTV;
-  PHILLIPINES: ILocation;
-  POLAND: ICountry_ACT;
-  PORTUGAL: ICountry_ACT;
-  SPAIN: ICountry_ACI;
-  SWEDEN: ICountry_C;
-  TANZANIA: ILocation;
-  THAILAND: ICountry_ACIT;
-  UGANDA: ICountry_AC;
-  UAE: ICountry_AC;
-  UK: ICountry_ACITR;
-  USA: ICountry_ACIRS;
-  ZIMBABWE: ICountry_A;
+interface IIreland extends ILocation {
+  attractions: IAttractionsIreland;
+  cities: ICitiesIreland;
+}
+
+interface IZimbabwe extends ILocation {
+  attractions: IAttractionsZimbabwe;
+}
+
+interface IUSA extends ILocation {
+  attractions: IAttractionsUSA;
+  cities: ICitiesUSA;
+  islands: IIslandsUSA;
+  regions: IRegionsUSA;
+  states: IStatesUSA;
+}
+
+interface IUAE extends ILocation {
+  cities: ICitiesUAE;
+  attractions: IAttractionsUAE;
+}
+
+interface IUganda extends ILocation {
+  cities: ICitiesUganda;
+  attractions: IAttractionsUganda;
+}
+
+interface IUK extends ILocation {
+  attractions: IAttractionsUK;
+  islands: IIslandsUK;
+  cities: ICitiesUK;
+  towns: ITownsUK;
+  regions: IRegionsUK;
+}
+
+interface IThailand extends ILocation {
+  cities: ICitiesThailand;
+  attractions: IAttractionsThailand;
+  towns: ITownsThailand;
+  islands: IIslandsThailand;
+}
+
+interface IPhillipines extends ILocation {}
+
+interface ISweden extends ILocation {
+  cities: ICitiesSweden;
+}
+
+interface ISpain extends ILocation {
+  cities: ICitiesSpain;
+  attractions: IAttractionsSpain;
+  islands: IIslandsSpain;
+}
+
+interface IPoland extends ILocation {
+  cities: ICitiesPoland;
+  attractions: IAttractionsPoland;
+  towns: ITownsPoland;
+}
+
+interface ICzechRepublic extends ILocation {
+  cities: ICitiesCzechRepublic;
+  attractions: IAttractionsCzechRepublic;
+}
+
+interface IArgentina extends ILocation {
+  cities: ICitiesArgentina;
+}
+
+interface IAustralia extends ILocation {}
+
+interface INewZealand extends ILocation {}
+
+interface ITanzania extends ILocation {}
+
+interface IDenmark extends ILocation {
+  cities: ICitiesDenmark;
+  attractions: IAttractionsDenmark;
+}
+
+interface IHungary extends ILocation {
+  cities: ICitiesHungary;
+  attractions: IAttractionsHungary;
+}
+
+interface IFrance extends ILocation {
+  cities: ICitiesFrance;
+  attractions: IAttractionsFrance;
+}
+
+interface IEcuador extends ILocation {
+  cities: ICitiesEcuador;
+  attractions: IAttractionsEcuador;
+  islands: IIslandsEcuador;
+}
+
+interface IAustria extends ILocation {
+  cities: ICitiesAustria;
+}
+
+interface IColombia extends ILocation {}
+
+interface ICanada extends ILocation {
+  cities: ICitiesCanada;
+  attractions: IAttractionsCanada;
+}
+
+interface IBarbados extends ILocation {
+  attractions: IAttractionsBarbados;
+}
+
+interface IEgypt extends ILocation {
+  cities: ICitiesEgypt;
+  attractions: IAttractionsEgypt;
+}
+
+interface IBolivia extends ILocation {}
+
+interface IBelize extends ILocation {
+  attractions: IAttractionsBelize;
+  cities: ICitiesBelize;
+  islands: IIslandsBelize;
+}
+
+interface ICuba extends ILocation {
+  cities: ICitiesCuba;
+  towns: ITownsCuba;
+}
+
+interface IBrazil extends ILocation {
+  cities: ICitiesBrazil;
+  attractions: IAttractionsBrazil;
+  islands: IIslandsBrazil;
+}
+
+interface ICroatia extends ILocation {
+  cities: ICitiesCroatia;
+  attractions: IAttractionsCroatia;
+}
+
+interface ICostaRica extends ILocation {
+  attractions: IAttractionsCostaRica;
+  cities: ICitiesCostaRica;
+  towns: ITownsCostaRica;
+}
+
+interface ICyprus extends ILocation {
+  cities: ICitiesCyprus;
+  attractions: IAttractionsCyprus;
+}
+
+interface IBelgium extends ILocation {
+  cities: ICitiesBeligum;
+  attractions: IAttractionsBelgium;
+}
+
+interface IGermany extends ILocation {
+  cities: ICitiesGermany;
+  attractions: IAttractionsGermany;
+}
+
+interface IPortugal extends ILocation {
+  cities: ICitiesPortugal;
+  attractions: IAttractionsPortugal;
+  towns: ITownsPortugal;
+}
+
+interface IMexico extends ILocation {}
+
+interface IGreece extends ILocation {
+  islands: IIslandsGreece;
+  regions: IRegionsGreece;
+}
+
+interface INorway extends ILocation {
+  cities: ICitiesNorway;
+  islands: IIslandsNorway;
+}
+
+interface IItaly extends ILocation {
+  regions: IRegionsItaly;
+  cities: ICitiesItaly;
+  towns: ITownsItaly;
+  attractions: IAttractionsItaly;
+}
+
+interface ILaos extends ILocation {
+  cities: ICitiesLaos;
+  attractions: IAttractionsLaos;
+}
+
+interface INetherlands extends ILocation {
+  cities: ICitiesNetherlands;
+  attractions: IAttractionsNetherlands;
+}
+
+interface IJapan extends ILocation {}
+
+interface IPeru extends ILocation {
+  cities: ICitiesPeru;
+  attractions: IAttractionsPeru;
+  towns: ITownsPeru;
+  villages: IVillagesPeru;
+}
+
+interface ICountries {
+  ARGENTINA: IArgentina;
+  AUSTRALIA: IAustralia;
+  AUSTRIA: IAustria;
+  BARBADOS: IBarbados;
+  BELGIUM: IBelgium;
+  BELIZE: IBelize;
+  BOLIVIA: IBolivia;
+  BRAZIL: IBrazil;
+  CANADA: ICanada;
+  COLOMBIA: IColombia;
+  COSTA_RICA: ICostaRica;
+  CROATIA: ICroatia;
+  CUBA: ICuba;
+  CYPRUS: ICyprus;
+  CZECH_REPUBLIC: ICzechRepublic;
+  DENMARK: IDenmark;
+  ECUADOR: IEcuador;
+  EGYPT: IEgypt;
+  FRANCE: IFrance;
+  GERMANY: IGermany;
+  GREECE: IGreece;
+  HUNGARY: IHungary;
+  INDONESIA: IIndonesia;
+  IRELAND: IIreland;
+  ITALY: IItaly;
+  JAPAN: IJapan;
+  LAOS: ILaos;
+  MEXICO: IMexico;
+  NETHERLANDS: INetherlands;
+  NEW_ZEALAND: INewZealand;
+  NORWAY: INorway;
+  PERU: IPeru;
+  PHILLIPINES: IPhillipines;
+  POLAND: IPoland;
+  PORTUGAL: IPortugal;
+  SPAIN: ISpain;
+  SWEDEN: ISweden;
+  TANZANIA: ITanzania;
+  THAILAND: IThailand;
+  UGANDA: IUganda;
+  UAE: IUAE;
+  UK: IUK;
+  USA: IUSA;
+  ZIMBABWE: IZimbabwe;
 }

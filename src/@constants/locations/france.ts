@@ -1,10 +1,10 @@
-const cities = {
+const cities: ICitiesFrance = {
   MONACO: { name: "Monaco" },
   NICE: { name: "Nice" },
   PARIS: { name: "Paris", capital: true }
 };
 
-const attractions = {
+const attractions: IAttractionsFrance = {
   SACRE_COEUR: { name: "Sacré-Cœur" },
   LOUVRE: { name: "Louvre" },
   ARC_DE_TRIOMPHE: { name: "Arc de Triomphe" },
@@ -16,8 +16,4 @@ const attractions = {
   PARC_ASTERIX: { name: "Parc Astérix", themePark: true }
 };
 
-export const FRANCE = {
-  name: "France",
-  cities,
-  attractions
-};
+export const FRANCE: IFrance = { name: "France", cities, attractions };

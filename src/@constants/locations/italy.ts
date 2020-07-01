@@ -1,6 +1,6 @@
-const regions = { SICILY: { name: "Sicily" } };
+const regions: IRegionsItaly = { SICILY: { name: "Sicily" } };
 
-const cities = {
+const cities: ICitiesItaly = {
   FLORENCE: { name: "Florence" },
   NAPLES: { name: "Naples" },
   MILAN: { name: "Milan" },
@@ -11,12 +11,12 @@ const cities = {
   POMPEII: { name: "Pompeii" }
 };
 
-export const towns = {
+const towns: ITownsItaly = {
   JESOLO: { name: "Jesolo" },
   SORRENTO: { name: "Sorrento" }
 };
 
-export const attractions = {
+const attractions: IAttractionsItaly = {
   ARCO_DELLA_PACE: { name: "Arco della Pace" },
   SEMPIONE_PARK: { name: "Sempione Park" },
   MILAN_MALL: { name: "Galleria Vittorio Emanuele II" },
@@ -26,7 +26,7 @@ export const attractions = {
   ETNA: { name: "Mount Etna" }
 };
 
-export const ITALY = {
+export const ITALY: IItaly = {
   name: "Italy",
   regions,
   cities,

@@ -1,13 +1,3 @@
-interface ITravelCard {
-  title: Array<ILocation>;
-  subtitle?: Array<ILocation>;
-  favourite?: boolean;
-  hidden?: Array<ILocation>;
-  dates: Array<Date>;
-  notAbroad?: boolean;
-  company: Array<IFriend>;
-}
-
 interface ILocation extends INameFavourite {
   island?: boolean;
   insignificant?: boolean;
@@ -15,10 +5,6 @@ interface ILocation extends INameFavourite {
   foreignName?: string;
   excludeFromBucketList?: boolean;
 }
-
-type IIsland = ILocation;
-type IIslandsObject = { [island: string]: IIsland };
-type IIslands = { islands: IIslandsObject };
 
 type ITown = ILocation;
 type ITownsObject = { [town: string]: ITown };

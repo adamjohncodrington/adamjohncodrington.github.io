@@ -1,28 +1,28 @@
-import { FRIENDS, LOCATIONS } from "@constants";
+import { FRIENDS, COUNTRIES } from "@constants";
 
 export const TRAVEL_2007: Array<ITravelCard> = [
   {
     title: [
-      LOCATIONS.USA.cities.SAN_FRANCISCO,
-      LOCATIONS.USA.cities.LOS_ANGELES
+      COUNTRIES.USA.cities.SAN_FRANCISCO,
+      COUNTRIES.USA.cities.LOS_ANGELES
     ],
-    subtitle: [LOCATIONS.USA],
+    subtitle: [COUNTRIES.USA],
     hidden: [
-      LOCATIONS.USA.attractions.GOLDEN_GATE_BRIDGE,
-      LOCATIONS.USA.attractions.FISHERMANS_WHARF,
-      LOCATIONS.USA.attractions.ALCATRAZ_PRISON,
-      LOCATIONS.USA.attractions.KNOTTS_BERRY_FARM,
-      LOCATIONS.USA.attractions.HOLLYWOOD_WALK_OF_FAME,
-      LOCATIONS.USA.islands.ALCATRAZ,
-      LOCATIONS.USA.attractions.DISNEYLAND_CALIFORNIA_ADVENTURE
+      COUNTRIES.USA.attractions.GOLDEN_GATE_BRIDGE,
+      COUNTRIES.USA.attractions.FISHERMANS_WHARF,
+      COUNTRIES.USA.attractions.ALCATRAZ_PRISON,
+      COUNTRIES.USA.attractions.KNOTTS_BERRY_FARM,
+      COUNTRIES.USA.attractions.HOLLYWOOD_WALK_OF_FAME,
+      COUNTRIES.USA.islands.ALCATRAZ,
+      COUNTRIES.USA.attractions.DISNEYLAND_CALIFORNIA_ADVENTURE
     ],
     dates: [new Date("2007-07-24"), new Date("2007-08-05")],
     company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON]
   },
   {
-    title: [LOCATIONS.UK.regions.CORNWALL],
+    title: [COUNTRIES.UK.regions.CORNWALL],
     notAbroad: true,
-    subtitle: [LOCATIONS.UK],
+    subtitle: [COUNTRIES.UK],
     dates: [new Date("2007-08-11"), new Date("2007-08-18")],
     company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON]
   }

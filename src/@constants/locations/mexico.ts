@@ -1,1 +1,1 @@
-export const MEXICO: ILocation = { name: "Mexico" };
+export const MEXICO: IMexico = { name: "Mexico" };

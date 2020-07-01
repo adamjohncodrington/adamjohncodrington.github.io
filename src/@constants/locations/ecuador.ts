@@ -1,11 +1,11 @@
-const cities = {
+const cities: ICitiesEcuador = {
   BANOS: { name: "Baños" },
   GUAYAQUIL: { name: "Guayaquil" },
   OTAVALO: { name: "Otavalo" },
   QUITO: { name: "Quito", capital: true }
 };
 
-export const attractions = {
+const attractions: IAttractionsEcuador = {
   EQUATOR_MONUMENT: {
     name: "Equator Monument",
     foreignName: "Ciudad Mitad del Mundo"
@@ -19,9 +19,11 @@ export const attractions = {
   COTOPAXI: { name: "Cotopaxi Volcano", highlight: true }
 };
 
-export const islands = { GALAPAGOS: { name: "Galápagos Islands" } };
+const islands: IIslandsEcuador = {
+  GALAPAGOS: { name: "Galápagos Islands" }
+};
 
-export const ECUADOR = {
+export const ECUADOR: IEcuador = {
   name: "Ecuador",
   cities,
   attractions,

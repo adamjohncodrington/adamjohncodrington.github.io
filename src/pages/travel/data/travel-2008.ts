@@ -1,28 +1,28 @@
-import { FRIENDS, LOCATIONS } from "@constants";
+import { FRIENDS, COUNTRIES } from "@constants";
 
 export const TRAVEL_2008: Array<ITravelCard> = [
   {
-    title: [LOCATIONS.ITALY.cities.ROME, LOCATIONS.ITALY.cities.VATICAN],
-    subtitle: [LOCATIONS.ITALY],
+    title: [COUNTRIES.ITALY.cities.ROME, COUNTRIES.ITALY.cities.VATICAN],
+    subtitle: [COUNTRIES.ITALY],
     hidden: [
-      LOCATIONS.ITALY.attractions.COLOSSEUM,
-      LOCATIONS.ITALY.attractions.TREVI_FOUNTAIN
+      COUNTRIES.ITALY.attractions.COLOSSEUM,
+      COUNTRIES.ITALY.attractions.TREVI_FOUNTAIN
     ],
     dates: [new Date("2008-02-08"), new Date("2008-02-10")],
     company: [FRIENDS.EMMA_CODRINGTON, FRIENDS.DAD]
   },
   {
-    title: [LOCATIONS.FRANCE.cities.PARIS],
-    subtitle: [LOCATIONS.FRANCE],
+    title: [COUNTRIES.FRANCE.cities.PARIS],
+    subtitle: [COUNTRIES.FRANCE],
     hidden: [
-      LOCATIONS.FRANCE.attractions.AIR_SPACE_MUSEUM,
-      LOCATIONS.FRANCE.attractions.ARC_DE_TRIOMPHE,
-      LOCATIONS.FRANCE.attractions.EIFFEL_TOWER,
-      LOCATIONS.FRANCE.attractions.LOUVRE,
-      LOCATIONS.FRANCE.attractions.SCIENCE_MUSEUM,
-      LOCATIONS.FRANCE.attractions.SACRE_COEUR,
-      LOCATIONS.FRANCE.attractions.PARC_ASTERIX,
-      LOCATIONS.FRANCE.attractions.AIR_SPACE_MUSEUM
+      COUNTRIES.FRANCE.attractions.AIR_SPACE_MUSEUM,
+      COUNTRIES.FRANCE.attractions.ARC_DE_TRIOMPHE,
+      COUNTRIES.FRANCE.attractions.EIFFEL_TOWER,
+      COUNTRIES.FRANCE.attractions.LOUVRE,
+      COUNTRIES.FRANCE.attractions.SCIENCE_MUSEUM,
+      COUNTRIES.FRANCE.attractions.SACRE_COEUR,
+      COUNTRIES.FRANCE.attractions.PARC_ASTERIX,
+      COUNTRIES.FRANCE.attractions.AIR_SPACE_MUSEUM
     ],
     dates: [new Date("2008-04-15"), new Date("2008-04-19")],
     company: [
@@ -37,26 +37,23 @@ export const TRAVEL_2008: Array<ITravelCard> = [
     ]
   },
   {
-    title: [
-      LOCATIONS.USA.cities.WASH_MORETONINGTON_DC,
-      LOCATIONS.USA.states.VIRGINIA
-    ],
-    subtitle: [LOCATIONS.USA],
+    title: [COUNTRIES.USA.cities.WASHINGTON_DC, COUNTRIES.USA.states.VIRGINIA],
+    subtitle: [COUNTRIES.USA],
     hidden: [
-      LOCATIONS.USA.cities.VIRGINIA_BEACH,
-      LOCATIONS.USA.attractions.WASH_MORETONINGTON_MONUMENT,
-      LOCATIONS.USA.attractions.SIX_FLAGS_AMERICA,
-      LOCATIONS.USA.attractions.LINCOLN_MEMORIAL,
-      LOCATIONS.USA.attractions.CAPITOL_BUILDING,
-      LOCATIONS.USA.attractions.WHITE_HOUSE,
-      LOCATIONS.USA.attractions.BUSCH_GARDENS_WILLIAMSBURG
+      COUNTRIES.USA.cities.VIRGINIA_BEACH,
+      COUNTRIES.USA.attractions.WASH_MORETONINGTON_MONUMENT,
+      COUNTRIES.USA.attractions.SIX_FLAGS_AMERICA,
+      COUNTRIES.USA.attractions.LINCOLN_MEMORIAL,
+      COUNTRIES.USA.attractions.CAPITOL_BUILDING,
+      COUNTRIES.USA.attractions.WHITE_HOUSE,
+      COUNTRIES.USA.attractions.BUSCH_GARDENS_WILLIAMSBURG
     ],
     dates: [new Date("2008-07-13"), new Date("2008-07-24")],
     company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON]
   },
   {
-    title: [LOCATIONS.PORTUGAL.towns.VILAMOURA],
-    subtitle: [LOCATIONS.PORTUGAL],
+    title: [COUNTRIES.PORTUGAL.towns.VILAMOURA],
+    subtitle: [COUNTRIES.PORTUGAL],
     dates: [new Date("2008-08-07"), new Date("2008-08-14")],
     company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON]
   }
