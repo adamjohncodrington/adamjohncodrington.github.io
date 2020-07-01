@@ -41,7 +41,7 @@ export const TRAVEL_2008: Array<ITravelCard> = [
     subtitle: [COUNTRIES.USA],
     hidden: [
       COUNTRIES.USA.cities.VIRGINIA_BEACH,
-      COUNTRIES.USA.attractions.WASH_MORETONINGTON_MONUMENT,
+      COUNTRIES.USA.attractions.WASHINGTON_MONUMENT,
       COUNTRIES.USA.attractions.SIX_FLAGS_AMERICA,
       COUNTRIES.USA.attractions.LINCOLN_MEMORIAL,
       COUNTRIES.USA.attractions.CAPITOL_BUILDING,

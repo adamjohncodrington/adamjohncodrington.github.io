@@ -1,6 +1,6 @@
 import { MEASUREMENTS } from "../../measurements";
 
-export const SAUCES: IInventoryIngredientsObject = {
+export const SAUCES: ISauces = {
   LIQUID_SMOKE: {
     displayText: "liquid smoke",
     knownCost: {

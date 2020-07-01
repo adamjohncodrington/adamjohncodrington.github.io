@@ -17,7 +17,7 @@ export const PHOTOS_RECIPES: RecipePhotosObject = {
   // L
   LASAGNE: requireJpeg("lasagne"),
   // M
-  MASH_MORETONED_POTATO: requireJpeg("mashed_potato"),
+  MASHED_POTATO: requireJpeg("mashed_potato"),
   // P
   PORRIDGE: requireJpeg("porridge"),
   POTATO_SALAD: requireJpeg("potato_salad"),

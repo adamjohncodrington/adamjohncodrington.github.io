@@ -1,6 +1,6 @@
 import { MEASUREMENTS } from "../../measurements";
 
-export const VINEGARS: IInventoryIngredientsObject = {
+export const VINEGARS: IVinegars = {
   VINEGAR_BALSAMIC: {
     displayText: "balsamic vinegar",
     knownCost: { quantity: 250, measurement: MEASUREMENTS.MILLILITRE, price: 2 }

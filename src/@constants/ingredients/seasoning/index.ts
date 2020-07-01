@@ -7,7 +7,7 @@ import { SALT } from "./salt";
 import { SAUCES } from "./sauces";
 import { VINEGARS } from "./vinegars";
 
-export const SEASONING: IInventoryIngredientsObject = {
+export const SEASONING: ISeasoning = {
   ...DRIED_SEASONING,
   ...OILS,
   ...PASTES,

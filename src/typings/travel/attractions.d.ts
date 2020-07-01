@@ -26,7 +26,7 @@ interface IAttractionsUSA {
   HOLLYWOOD_WALK_OF_FAME: IAttraction;
   WHITE_HOUSE: IAttraction;
   CAPITOL_BUILDING: IAttraction;
-  WASH_MORETONINGTON_MONUMENT: IAttraction;
+  WASHINGTON_MONUMENT: IAttraction;
   LINCOLN_MEMORIAL: IAttraction;
   TIMES_SQUARE: IAttraction;
   BROOKLYN_BRIDGE: IAttraction;

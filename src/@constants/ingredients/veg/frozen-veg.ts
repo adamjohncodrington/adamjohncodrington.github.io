@@ -1,6 +1,6 @@
 import { MEASUREMENTS } from "../../measurements";
 
-export const VEG_FROZEN: IInventoryIngredientsObject = {
+export const VEG_FROZEN: IVegFrozen = {
   PETITS_POIS_FROZEN: {
     displayText: "frozen petits pois",
     knownCost: { quantity: 910, measurement: MEASUREMENTS.GRAM, price: 1.5 }

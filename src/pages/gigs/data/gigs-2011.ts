@@ -2,7 +2,7 @@ import { FRIENDS, MUSICIANS, MUSIC_VENUES } from "@constants";
 
 export const GIGS_2011: Array<IGigCard> = [
   {
-    headline: MUSICIANS.KATE_NASH_MORETON,
+    headline: MUSICIANS.KATE_NASH,
     support: [MUSICIANS.BRIGITTE_APHRODITE],
     venue: MUSIC_VENUES.ROCK_CITY,
     company: [FRIENDS.TONYA_FRANCE, FRIENDS.KIRSTEN_JACKSON],

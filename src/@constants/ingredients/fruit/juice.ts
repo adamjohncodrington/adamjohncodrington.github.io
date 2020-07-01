@@ -1,6 +1,6 @@
 import { MEASUREMENTS } from "../../measurements";
 
-export const JUICE = {
+export const JUICE: IJuice = {
   LEMON_JUICE: {
     displayText: "lemon juice",
     knownCost: {

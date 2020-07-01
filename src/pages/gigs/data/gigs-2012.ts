@@ -21,7 +21,7 @@ export const GIGS_2012: Array<IGigCard> = [
     dates: [new Date("2012-04-23")]
   },
   {
-    headline: MUSICIANS.KATE_NASH_MORETON,
+    headline: MUSICIANS.KATE_NASH,
     venue: MUSIC_VENUES.BODEGA,
     company: [
       FRIENDS.TONYA_FRANCE,

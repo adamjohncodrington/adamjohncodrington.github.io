@@ -2,7 +2,10 @@
 
 ## TypeScript
 
-- strongly-type ingredients/inventory
+- strongly-type thse:
+  - type IconsStringObject = { [iconName: string]: IImageSrc };
+  - type RecipePhotosObject = { [recipe: string]: IImageSrc };
+  - type VinylPhotosObject = { [artist: string]: { [album: string]: IImageSrc } };
 
 ## New features
 

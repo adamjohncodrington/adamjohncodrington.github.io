@@ -1,7 +1,7 @@
 import { MEASUREMENTS } from "../../measurements";
 
-export const NUTS: IInventoryIngredientsObject = {
-  NUTS_CASH_MORETONEWS: {
+export const NUTS: INuts = {
+  NUTS_CASHEWS: {
     displayText: "cashew nuts",
     knownCost: { quantity: 200, measurement: MEASUREMENTS.GRAM, price: 3 }
   },

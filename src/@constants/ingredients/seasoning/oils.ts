@@ -1,6 +1,6 @@
 import { MEASUREMENTS } from "../../measurements";
 
-export const OILS: IInventoryIngredientsObject = {
+export const OILS: IOils = {
   OIL_OLIVE: {
     displayText: "olive oil",
     knownCost: { quantity: 500, measurement: MEASUREMENTS.MILLILITRE, price: 3 }

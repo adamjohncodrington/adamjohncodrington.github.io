@@ -1,6 +1,6 @@
 import { MEASUREMENTS } from "../../measurements";
 
-export const SUGAR: IInventoryIngredientsObject = {
+export const SUGAR: ISugar = {
   SUGAR_BROWN: {
     displayText: "brown sugar (light or dark)",
     knownCost: { quantity: 500, measurement: MEASUREMENTS.GRAM, price: 1.4 }

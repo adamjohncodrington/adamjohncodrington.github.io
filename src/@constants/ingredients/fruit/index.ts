@@ -3,7 +3,7 @@ import { FRUIT_FRESH } from "./fresh-fruit";
 import { FRUIT_FROZEN } from "./frozen-fruit";
 import { JUICE } from "./juice";
 
-export const FRUIT = {
+export const FRUIT: IFruit = {
   ...FRUIT_DRIED,
   ...FRUIT_FRESH,
   ...FRUIT_FROZEN,

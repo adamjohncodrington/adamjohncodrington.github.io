@@ -148,12 +148,12 @@ interface IMusicians {
   JOY_ORBISON: IMusician;
   JOSEF_SALVAT: IMusician;
   JULIA_MICHAELS: IMusician;
-  JULIO_BASH_MORETONMORE: IMusician;
+  JULIO_BASHMORE: IMusician;
   JUSTIN_BIEBER: IMusician;
   JUSTIN_MARTIN: IMusician;
   KAH_LO: IMusician;
   KANYE_WEST: IMusician;
-  KATE_NASH_MORETON: IMusician;
+  KATE_NASH: IMusician;
   KATY_PERRY: IMusician;
   KAYTRANADA: IMusician;
   KESHA: IMusician;
@@ -210,7 +210,7 @@ interface IMusicians {
   NAO: IMusician;
   NASTY_CHERRY: IMusician;
   NATALIA_KILLS: IMusician;
-  NATASH_MORETONA_BEDINGFIELD: IMusician;
+  NATASHA_BEDINGFIELD: IMusician;
   NAVVY: IMusician;
   NICKI_MINAJ: IMusician;
   NOEL_GALLAGHERS_HIGH_FLYING_BIRDS: IMusician;
@@ -245,7 +245,7 @@ interface IMusicians {
   SABRINA_CLAUDIO: IMusician;
   SAINT_JHN: IMusician;
   SAM_SMITH: IMusician;
-  SASH_MORETONA_SLOAN: IMusician;
+  SASHA_SLOAN: IMusician;
   SBTRKT: IMusician;
   SEEB: IMusician;
   SEGA_BODEGA: IMusician;

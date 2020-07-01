@@ -7,7 +7,7 @@ const { preheatOven } = recipeMethodEntries();
 const ingredients: Array<Array<IRecipeIngredient>> = [
   [
     {
-      ingredient: INGREDIENTS.BUTTERNUT_SQUASH_MORETON,
+      ingredient: INGREDIENTS.BUTTERNUT_SQUASH,
       quantity: 1
     },
     {

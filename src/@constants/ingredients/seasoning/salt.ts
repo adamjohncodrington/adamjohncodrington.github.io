@@ -1,6 +1,6 @@
 import { MEASUREMENTS } from "../../measurements";
 
-export const SALT: IInventoryIngredientsObject = {
+export const SALT: ISalts = {
   SALT_BLACK: {
     displayText: "black salt (kala namak)",
     knownCost: { quantity: 100, measurement: MEASUREMENTS.GRAM, price: 2.9 }

@@ -1,6 +1,6 @@
 import { MEASUREMENTS } from "../../measurements";
 
-export const VEG_FRESH: IInventoryIngredientsObject = {
+export const VEG_FRESH: IVegFresh = {
   ASPARAGUS: { displayText: "asparagus" },
   AUBERGINE: {
     displayText: "aubergine",
@@ -11,7 +11,7 @@ export const VEG_FRESH: IInventoryIngredientsObject = {
     knownCost: { quantity: 200, measurement: MEASUREMENTS.GRAM, price: 1 }
   },
   BROCCOLI: { displayText: "broccoli", knownCost: { quantity: 1, price: 0.7 } },
-  BUTTERNUT_SQUASH_MORETON: {
+  BUTTERNUT_SQUASH: {
     displayText: "butternut squash",
     knownCost: { quantity: 1, price: 1.5 }
   },

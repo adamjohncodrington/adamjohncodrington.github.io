@@ -1,6 +1,6 @@
 import { MEASUREMENTS } from "../../measurements";
 
-export const FLOUR: IInventoryIngredientsObject = {
+export const FLOUR: IFlour = {
   CORNFLOUR: {
     displayText: "cornflour",
     knownCost: { quantity: 500, measurement: MEASUREMENTS.GRAM, price: 1.3 }

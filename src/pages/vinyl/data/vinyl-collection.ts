@@ -67,11 +67,11 @@ export const VINYL_COLLECTION: Array<IVinylCard> = [
   },
 
   {
-    artist: MUSICIANS.KATE_NASH_MORETON,
+    artist: MUSICIANS.KATE_NASH,
     title: "Made of Bricks",
     appleMusicUrl:
       "https://music.apple.com/gb/album/made-of-bricks-bonus-track-version/1440791847",
-    artwork: PHOTOS_VINYL.KATE_NASH_MORETON.MADE_OF_BRICKS,
+    artwork: PHOTOS_VINYL.KATE_NASH.MADE_OF_BRICKS,
     year: 2007
   },
   {

@@ -7,7 +7,7 @@ const attractions: IAttractionsUSA = {
   HOLLYWOOD_WALK_OF_FAME: { name: "Hollywood Walk of Fame" },
   WHITE_HOUSE: { name: "White House" },
   CAPITOL_BUILDING: { name: "Capitol Building" },
-  WASH_MORETONINGTON_MONUMENT: { name: "Washington Monument" },
+  WASHINGTON_MONUMENT: { name: "Washington Monument" },
   LINCOLN_MEMORIAL: { name: "Lincoln Memorial" },
   TIMES_SQUARE: { name: "Times Square" },
   BROOKLYN_BRIDGE: { name: "Brooklyn Bridge" },

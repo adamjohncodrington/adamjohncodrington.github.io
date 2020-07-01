@@ -1,6 +1,6 @@
 import { MEASUREMENTS } from "../../measurements";
 
-export const MILK: IInventoryIngredientsObject = {
+export const MILK: IMilk = {
   MILK_COCONUT_CANNED: {
     displayText: "coconut milk",
     knownCost: { quantity: 1, measurement: MEASUREMENTS.CAN, price: 1 }

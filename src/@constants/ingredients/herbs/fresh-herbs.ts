@@ -1,6 +1,6 @@
 import { MEASUREMENTS } from "../../measurements";
 
-export const HERBS_FRESH: IInventoryIngredientsObject = {
+export const HERBS_FRESH: IHerbsFresh = {
   BASIL_FRESH: {
     displayText: "fresh basil",
     knownCost: {
@@ -28,7 +28,5 @@ export const HERBS_FRESH: IInventoryIngredientsObject = {
       payFullAmountAlways: true
     }
   },
-  SAGE_FRESH: {
-    displayText: "fresh sage"
-  }
+  SAGE_FRESH: { displayText: "fresh sage" }
 };

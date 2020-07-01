@@ -1,6 +1,6 @@
 import { MEASUREMENTS, SAINSBURYS_SEASONING_COST } from "../../measurements";
 
-export const DRIED_SEASONING: IInventoryIngredientsObject = {
+export const DRIED_SEASONING: ISeasoningDried = {
   PAPRIKA: {
     displayText: "paprika",
     knownCost: SAINSBURYS_SEASONING_COST

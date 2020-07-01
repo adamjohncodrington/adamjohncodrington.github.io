@@ -4,7 +4,7 @@ import { FLOUR } from "./flour";
 import { SUGAR } from "./sugar";
 import { SYRUPS } from "./syrups";
 
-export const BAKING: IInventoryIngredientsObject = {
+export const BAKING: IBaking = {
   ...FLOUR,
   ...SUGAR,
   ...SYRUPS,
@@ -24,5 +24,9 @@ export const BAKING: IInventoryIngredientsObject = {
   COCOA_POWDER: {
     displayText: "cocoa powder",
     knownCost: { quantity: 190, measurement: MEASUREMENTS.GRAM, price: 2.75 }
+  },
+  OATS: {
+    displayText: "oats",
+    knownCost: { quantity: 2000, measurement: MEASUREMENTS.GRAM, price: 3 }
   }
 };

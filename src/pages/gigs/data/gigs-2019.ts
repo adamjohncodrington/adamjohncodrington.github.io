@@ -61,7 +61,7 @@ export const GIGS_2019: Array<IGigCard> = [
     company: [FRIENDS.DARREN_TAYLOR]
   },
   {
-    headline: MUSICIANS.SASH_MORETONA_SLOAN,
+    headline: MUSICIANS.SASHA_SLOAN,
     venue: MUSIC_VENUES.DINGWALLS,
     dates: [new Date("2019-05-07")],
     company: [FRIENDS.DARREN_TAYLOR]

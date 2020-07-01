@@ -31,7 +31,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
       measurement: MEASUREMENTS.GRAM
     },
     {
-      ingredient: INGREDIENTS.NUTS_CASH_MORETONEWS,
+      ingredient: INGREDIENTS.NUTS_CASHEWS,
       quantity: 100,
       measurement: MEASUREMENTS.GRAM
     },
