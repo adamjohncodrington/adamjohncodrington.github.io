@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.ec9d43cf.chunk.js",
-    "main.js.map": "/static/js/main.ec9d43cf.chunk.js.map",
+    "main.js": "/static/js/main.8cd02bac.chunk.js",
+    "main.js.map": "/static/js/main.8cd02bac.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.27f1f56c.js",
     "runtime-main.js.map": "/static/js/runtime-main.27f1f56c.js.map",
     "static/js/2.bd155d79.chunk.js": "/static/js/2.bd155d79.chunk.js",
     "static/js/2.bd155d79.chunk.js.map": "/static/js/2.bd155d79.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.2a92af03d2ed4e3d471e295a462c6e7d.js": "/precache-manifest.2a92af03d2ed4e3d471e295a462c6e7d.js",
+    "precache-manifest.6f516bf3a68a45adf1e8a795f5f44137.js": "/precache-manifest.6f516bf3a68a45adf1e8a795f5f44137.js",
     "service-worker.js": "/service-worker.js",
     "static/js/2.bd155d79.chunk.js.LICENSE.txt": "/static/js/2.bd155d79.chunk.js.LICENSE.txt",
     "static/media/1975_a-brief-inquiry-into-online-relationships.jpg": "/static/media/1975_a-brief-inquiry-into-online-relationships.450622e7.jpg",
@@ -96,6 +96,6 @@
   "entrypoints": [
     "static/js/runtime-main.27f1f56c.js",
     "static/js/2.bd155d79.chunk.js",
-    "static/js/main.ec9d43cf.chunk.js"
+    "static/js/main.8cd02bac.chunk.js"
   ]
 }
