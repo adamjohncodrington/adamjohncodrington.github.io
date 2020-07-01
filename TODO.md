@@ -4,25 +4,21 @@
 
 - remove all recent `@ts-ignore` additions
 - define a `cities` constant file instead?
-- remove all instances of `{ [` in types
-- strongly type all `@constants` objects
+- remove all instances of `{ [` in types === strongly type all `@constants` objects
 
 ## Refactoring
 
 - refactor `datesArrayToString` to be `dateToString` + `datesToString`
-- rename `getPageSectionItemCounts` function to not refer to `PageSection` specifically
-- make `Theatre` use `date` instead of `dates`, move countdown logic to individual cards rather than `EventCard` and make it have `dateText` instead
 - remove hard-coded recipe image width + implement react-disclosure/react-accessible-accordion?
 - make all `.svg` files render as `SvgIcon` components
-- rationalise `data-test` attributes
-- finalise values for `breakpoints`?
+- copy across JHC `breakpoints`?
 - review semantics of page structure, landmarks, accessibility, etc.
 - recipe method array should be `ol` not `ul`?
+- rationalise `data-test` attributes
 
 ## Features
 
 - friends section reveals which gigs you saw with them
-- recipes: margaritas, roast potatoes
 - make Nav Bar colors persist for active page
 - prevent `Router` from allowing you to go back between pages
 - add sorting to vinyls collection and wish list?
