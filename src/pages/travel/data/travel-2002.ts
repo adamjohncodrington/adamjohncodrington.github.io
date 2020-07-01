@@ -16,6 +16,6 @@ export const TRAVEL_2002: Array<ITravelCard> = [
       LOCATIONS.USA.attractions.SEAWORLD_ORLANDO
     ],
     dates: [new Date("2002-05-23"), new Date("2002-06-12")],
-    company: [FRIENDS.DAD, FRIENDS.MUM, FRIENDS.EMMA]
+    company: [FRIENDS.DAD, FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON]
   }
 ];

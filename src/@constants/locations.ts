@@ -443,7 +443,7 @@ export const LOCATIONS: IAllCountries = {
       CALKE_ABBEY: { name: "Calke Abbey", insignificant: true },
       BATTERSEA_PARK: { name: "Battersea Park", insignificant: true },
       CRYSTAL_PALACE_PARK: { name: "Crystal Palace Park", insignificant: true },
-      QUEEN_ELIZABETH_OLYMPIC_PARK: {
+      QUEEN_ELIZABETH_OAKESLYMPIC_PARK: {
         name: "Queen Elizabeth Olympic Park",
         insignificant: true
       },
@@ -520,7 +520,7 @@ export const LOCATIONS: IAllCountries = {
       HOLLYWOOD_WALK_OF_FAME: { name: "Hollywood Walk of Fame" },
       WHITE_HOUSE: { name: "White House" },
       CAPITOL_BUILDING: { name: "Capitol Building" },
-      WASHINGTON_MONUMENT: { name: "Washington Monument" },
+      WASH_MORETONINGTON_MONUMENT: { name: "Washington Monument" },
       LINCOLN_MEMORIAL: { name: "Lincoln Memorial" },
       TIMES_SQUARE: { name: "Times Square" },
       BROOKLYN_BRIDGE: { name: "Brooklyn Bridge" },
@@ -573,7 +573,7 @@ export const LOCATIONS: IAllCountries = {
       NEW_YORK_CITY: { name: "New York City" },
       SAN_FRANCISCO: { name: "San Francisco" },
       SPRINGFIELD_MASSACHUSETTS: { name: "Springfield" },
-      WASHINGTON_DC: { name: "Washington DC", capital: true }
+      WASH_MORETONINGTON_DC: { name: "Washington DC", capital: true }
     },
     islands: {
       KEY_WEST,

@@ -54,7 +54,9 @@ export const PHOTOS_VINYL: VinylPhotosObject = {
   // J
   JON_HOPKINS: { SINGULARITY: requireVinyl("jon-hopkins", "singularity") },
   // K
-  KATE_NASH: { MADE_OF_BRICKS: requireVinyl("kate-nash", "made-of-bricks") },
+  KATE_NASH_MORETON: {
+    MADE_OF_BRICKS: requireVinyl("kate-nash", "made-of-bricks")
+  },
   KATY_PERRY: {
     ONE_OF_THE_BOYS: requireVinyl("katy-perry", "one-of-the-boys")
   },

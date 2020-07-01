@@ -29,7 +29,7 @@ gradually whisk in milk
 stir constantly on medium heat until thickened
 remove sauce from heat
 reheatOven(180)
-remove any skin from fish fillets, dice
+remove skin from fish fillets, dice
 finely chop the chives
 stir in fish, chives, mustard, sweetcorn, petits pois, salt, pepper
 transfer filling to ovenproof dishes

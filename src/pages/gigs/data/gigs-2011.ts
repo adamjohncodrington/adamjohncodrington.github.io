@@ -2,17 +2,22 @@ import { FRIENDS, MUSICIANS, MUSIC_VENUES } from "@constants";
 
 export const GIGS_2011: Array<IGigCard> = [
   {
-    headline: MUSICIANS.KATE_NASH,
+    headline: MUSICIANS.KATE_NASH_MORETON,
     support: [MUSICIANS.BRIGITTE_APHRODITE],
     venue: MUSIC_VENUES.ROCK_CITY,
-    company: [FRIENDS.TONYA, FRIENDS.KIRSTEN],
+    company: [FRIENDS.TONYA_FRANCE, FRIENDS.KIRSTEN_JACKSON],
     dates: [new Date("2011-03-22")],
     favourite: true
   },
   {
     headline: MUSICIANS.KATY_PERRY,
     venue: MUSIC_VENUES.ARENA_NOTTINGHAM,
-    company: [FRIENDS.JESS, FRIENDS.BLAINE, FRIENDS.ELLIE_S, FRIENDS.POOJA],
+    company: [
+      FRIENDS.JESS_SMITH,
+      FRIENDS.BLAINE_PEARSON,
+      FRIENDS.ELLIE_SPANOVIC,
+      FRIENDS.POOJA_DHIR
+    ],
     dates: [new Date("2011-03-30")]
   },
   {
@@ -26,7 +31,7 @@ export const GIGS_2011: Array<IGigCard> = [
     headline: MUSICIANS.ADELE,
     support: [MUSICIANS.AMOS_LEE],
     venue: MUSIC_VENUES.DE_MONTFORT_HALL,
-    company: [FRIENDS.EMMA, FRIENDS.MUM],
+    company: [FRIENDS.EMMA_CODRINGTON, FRIENDS.MUM],
     dates: [new Date("2011-09-13")]
   }
 ];

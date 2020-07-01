@@ -5,7 +5,7 @@ export const THEATRE_2018: Array<ITheatreCard> = [
     play: PLAYS.FROZEN,
     theatre: THEATRE_VENUES.ROYAL_HAYMARKET,
     date: new Date("2018-04-14"),
-    company: [FRIENDS.MUM, FRIENDS.EMMA],
+    company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON],
     cast: [ACTORS.SURANNE_JONES, ACTORS.NINA_SOSANYA, ACTORS.JASON_WATKINS]
   },
   {
@@ -13,14 +13,14 @@ export const THEATRE_2018: Array<ITheatreCard> = [
     cast: [ACTORS.JOHN_MCCREA],
     theatre: THEATRE_VENUES.APOLLO,
     date: new Date("2018-05-12"),
-    company: [FRIENDS.SIAN]
+    company: [FRIENDS.SIAN_RODWAY_SMITH]
   },
   {
     play: PLAYS.CONSENT,
     cast: [ACTORS.SIAN_CLIFFORD, ACTORS.ADAM_JAMES, ACTORS.LEE_INGLEBY],
     theatre: THEATRE_VENUES.HAROLD_PINTER,
     date: new Date("2018-06-30"),
-    company: [FRIENDS.MUM, FRIENDS.EMMA]
+    company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON]
   },
   {
     play: PLAYS.THAT_GIRL,
@@ -29,10 +29,10 @@ export const THEATRE_2018: Array<ITheatreCard> = [
     date: new Date("2018-09-05"),
     company: [
       FRIENDS.JHC,
-      FRIENDS.JOE,
-      FRIENDS.JAMIE,
-      FRIENDS.LEWIS,
-      FRIENDS.DOM
+      FRIENDS.JOE_EDWARDS,
+      FRIENDS.JAMIE_HALKET,
+      FRIENDS.LEWIS_STEADMAN,
+      FRIENDS.DOM_COYNE
     ]
   },
   {
@@ -40,7 +40,7 @@ export const THEATRE_2018: Array<ITheatreCard> = [
     theatre: THEATRE_VENUES.TRAFALGAR_STUDIOS,
     cast: [ACTORS.MILLY_THOMAS],
     date: new Date("2018-10-08"),
-    company: [FRIENDS.MUM, FRIENDS.EMMA],
+    company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON],
     favourite: true
   },
   {

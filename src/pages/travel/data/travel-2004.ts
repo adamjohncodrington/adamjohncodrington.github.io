@@ -22,6 +22,6 @@ export const TRAVEL_2004: Array<ITravelCard> = [
       LOCATIONS.USA.attractions.SIX_FLAGS_NEW_ENGLAND
     ],
     dates: [new Date("2004-07-30"), new Date("2004-08-17")],
-    company: [FRIENDS.MUM, FRIENDS.EMMA, FRIENDS.DAD]
+    company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON, FRIENDS.DAD]
   }
 ];

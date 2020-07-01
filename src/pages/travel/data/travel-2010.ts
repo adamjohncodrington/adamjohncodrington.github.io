@@ -9,13 +9,13 @@ export const TRAVEL_2010: Array<ITravelCard> = [
       LOCATIONS.UAE.attractions.BURJ_KHALIFA
     ],
     dates: [new Date("2010-07-26"), new Date("2010-08-03")],
-    company: [FRIENDS.DAD, FRIENDS.EMMA]
+    company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON]
   },
   {
     title: [LOCATIONS.PORTUGAL.towns.FERRAGUDO],
     subtitle: [LOCATIONS.PORTUGAL],
     dates: [new Date("2010-08-13"), new Date("2010-08-18")],
-    company: [FRIENDS.MUM, FRIENDS.EMMA],
+    company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON],
     hidden: [LOCATIONS.PORTUGAL.cities.PORTIMAO]
   }
 ];

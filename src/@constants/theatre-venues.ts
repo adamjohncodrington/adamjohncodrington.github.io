@@ -1,4 +1,4 @@
-const LONDON: ITheatreVenues = {
+const LONDON: ITheatreVenuesLondon = {
   // A
   ADELPHI: { name: "Adelphi Theatre" },
   APOLLO: { name: "Apollo Theatre" },
@@ -32,7 +32,7 @@ const LONDON: ITheatreVenues = {
   WHITE_BEAR: { name: "White Bear Theatre" }
 };
 
-const STRATFORD: ITheatreVenues = {
+const STRATFORD: ITheatreVenuesStratford = {
   ROYAL_SHAKESPEARE: { name: "Royal Shakespeare Theatre" }
 };
 

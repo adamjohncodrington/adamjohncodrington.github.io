@@ -14,12 +14,12 @@ export const TRAVEL_2015: Array<ITravelCard> = [
     ],
     dates: [new Date("2015-03-21"), new Date("2015-03-24")],
     company: [
-      FRIENDS.POOJA,
-      FRIENDS.SONYA,
-      FRIENDS.CARMEN,
-      FRIENDS.TONYA,
-      FRIENDS.GRACE,
-      FRIENDS.ELLIE_G
+      FRIENDS.POOJA_DHIR,
+      FRIENDS.SONYA_PARDI,
+      FRIENDS.CARMEN_DALGLISH,
+      FRIENDS.TONYA_FRANCE,
+      FRIENDS.GRACE_HULME,
+      FRIENDS.ELLIE_GURKIN
     ]
   },
   {
@@ -31,18 +31,18 @@ export const TRAVEL_2015: Array<ITravelCard> = [
     ],
     dates: [new Date("2015-08-04"), new Date("2015-09-05")],
     company: [
-      FRIENDS.AMY_C,
-      FRIENDS.HEATHER_C,
-      FRIENDS.OSCAR,
-      FRIENDS.LEAH,
-      FRIENDS.ELINORE_G,
-      FRIENDS.ELISE,
-      FRIENDS.SARAH_WA,
-      FRIENDS.HEATHER_C,
-      FRIENDS.LEAH,
-      FRIENDS.ROB_G,
-      FRIENDS.KATE_B,
-      FRIENDS.COURTNEY
+      FRIENDS.AMY_CALCUTT,
+      FRIENDS.HEATHER_CHILES,
+      FRIENDS.OSCAR_MURRAY,
+      FRIENDS.LEAH_SLATER_RADWAY,
+      FRIENDS.ELINORE_GILLESPIE,
+      FRIENDS.ELISE_MORLEY,
+      FRIENDS.SARAH_WALKER,
+      FRIENDS.HEATHER_CHILES,
+      FRIENDS.LEAH_SLATER_RADWAY,
+      FRIENDS.ROB_GALL,
+      FRIENDS.KATE_BOWMAR,
+      FRIENDS.COURTNEY_LAWSON
     ]
   },
   {
@@ -73,6 +73,6 @@ export const TRAVEL_2015: Array<ITravelCard> = [
       LOCATIONS.HUNGARY.attractions.THERMAL_BATH_SZECHENYI
     ],
     dates: [new Date("2015-09-10"), new Date("2015-09-24")],
-    company: [FRIENDS.SIAN]
+    company: [FRIENDS.SIAN_RODWAY_SMITH]
   }
 ];

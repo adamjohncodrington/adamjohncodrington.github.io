@@ -6,7 +6,12 @@ export const TRAVEL_2020: Array<ITravelCard> = [
     subtitle: [LOCATIONS.NORWAY],
     hidden: [LOCATIONS.NORWAY.islands.HOVEDOYA],
     dates: [new Date("2020-02-27"), new Date("2020-03-01")],
-    company: [FRIENDS.RYAN, FRIENDS.CAITLIN, FRIENDS.TOM, FRIENDS.TONYA]
+    company: [
+      FRIENDS.RYAN_MILLS,
+      FRIENDS.CAITLIN_MCCAIG,
+      FRIENDS.TOM_CHINDA_COUTTS,
+      FRIENDS.TONYA_FRANCE
+    ]
   }
   // {
   //   title: [LOCATIONS.BELIZE, LOCATIONS.COSTA_RICA],
@@ -24,13 +29,13 @@ export const TRAVEL_2020: Array<ITravelCard> = [
   //     LOCATIONS.COSTA_RICA.attractions.JAGUAR_RESCUE_CENTER
   //   ],
   //   dates: [new Date("2020-05-14"), new Date("2020-06-01")],
-  //   company: FRIENDS.SIAN
+  //   company: FRIENDS.SIAN_RODWAY_SMITH
   // },
   // {
   //   title: LOCATIONS.SPAIN.cities.MADRID,
   //   subtitle: LOCATIONS.SPAIN,
   //   hidden: [LOCATIONS.SPAIN.attractions.PARQUE_WARNER],
   //   dates: [new Date("2020-07-07"), new Date("2020-07-10")],
-  //   company: FRIENDS.DAN
+  //   company: FRIENDS.DAN_SPARROW
   // }
 ];

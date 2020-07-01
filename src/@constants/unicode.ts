@@ -1,4 +1,15 @@
-export const UNICODE: { [character: string]: string } = {
+interface IUnicode {
+  JALAPENOS: string;
+  TOMATO_PUREE: string;
+  QUARTER: string;
+  THIRD: string;
+  HALF: string;
+  TWO_THIRDS: string;
+  THREE_QUARTERS: string;
+  DEGREES_CELCIUS: string;
+}
+
+export const UNICODE: IUnicode = {
   // INGREDIENTS
   JALAPENOS: "jalape\u00f1os",
   TOMATO_PUREE: "tomato pur\u00e9e",

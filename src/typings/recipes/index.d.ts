@@ -1,6 +1,3 @@
-type IImageSrc = string;
-type IRecipeImage = IImageSrc;
-
 interface IIngredientCost {
   price: number;
   quantity?: number;
@@ -37,21 +34,6 @@ interface IRecipeMakes {
 interface IRecipeDiet {
   abbreviation: string;
   color: string;
-}
-
-interface IRecipeCard {
-  title: string;
-  makes?: IRecipeMakes;
-  image?: IRecipeImage;
-  serveWith?: Array<Array<IServeWithItem>>;
-  ingredients: Array<Array<IRecipeIngredient>>;
-  diet: IRecipeDiet;
-  method: Array<string>;
-  favourite?: boolean;
-  newRecipe?: boolean;
-  hide?: boolean;
-  totalCost?: number;
-  portionCost?: number;
 }
 
 interface IRecipeGroup {

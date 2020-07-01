@@ -6,11 +6,11 @@ export const TRAVEL_2017: Array<ITravelCard> = [
     subtitle: [LOCATIONS.ITALY],
     dates: [new Date("2017-05-12"), new Date("2017-05-14")],
     company: [
-      FRIENDS.AISHA,
-      FRIENDS.JOE,
-      FRIENDS.JAMIE,
-      FRIENDS.PATRICIA,
-      FRIENDS.JAZZ,
+      FRIENDS.AISHA_SAEED,
+      FRIENDS.JOE_EDWARDS,
+      FRIENDS.JAMIE_HALKET,
+      FRIENDS.PATRICIA_DIACONESCU,
+      FRIENDS.JAZZ_THIND,
       FRIENDS.JHC
     ],
     hidden: [
@@ -24,11 +24,11 @@ export const TRAVEL_2017: Array<ITravelCard> = [
     subtitle: [LOCATIONS.SPAIN],
     dates: [new Date("2017-06-15"), new Date("2017-06-18")],
     company: [
-      FRIENDS.SIAN,
-      FRIENDS.LINDSEY_S,
-      FRIENDS.BETH_O,
-      FRIENDS.ELLIE_F,
-      FRIENDS.HARRIET_K
+      FRIENDS.SIAN_RODWAY_SMITH,
+      FRIENDS.LINDSEY_SKELTON,
+      FRIENDS.BETH_OAKES,
+      FRIENDS.ELLIE_FORMAN,
+      FRIENDS.HARRIET_KESTERTON
     ],
     hidden: [
       LOCATIONS.SPAIN.attractions.PARK_GUELL,
@@ -39,7 +39,7 @@ export const TRAVEL_2017: Array<ITravelCard> = [
     title: [LOCATIONS.SPAIN.islands.TENERIFE],
     subtitle: [LOCATIONS.SPAIN],
     dates: [new Date("2017-06-15"), new Date("2017-06-18")],
-    company: [FRIENDS.LUKE_S],
+    company: [FRIENDS.LUKE_STERN],
     hidden: [LOCATIONS.SPAIN.attractions.SIAM_PARK]
   }
 ];

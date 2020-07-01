@@ -5,7 +5,7 @@ export const GIGS_2016: Array<IGigCard> = [
     headline: MUSICIANS.HALSEY,
     support: [MUSICIANS.BORNS],
     venue: MUSIC_VENUES.ACADEMY_MANCHESTER,
-    company: [FRIENDS.DAN],
+    company: [FRIENDS.DAN_SPARROW],
     dates: [new Date("2016-02-22")]
   },
   {
@@ -18,13 +18,13 @@ export const GIGS_2016: Array<IGigCard> = [
   {
     headline: MUSICIANS.TROYE_SIVAN,
     venue: MUSIC_VENUES.ACADEMY_MANCHESTER,
-    company: [FRIENDS.DAN],
+    company: [FRIENDS.DAN_SPARROW],
     dates: [new Date("2016-04-18")]
   },
   {
     headline: MUSICIANS.TOURIST,
     venue: MUSIC_VENUES.DEAF_INSTITUTE,
-    company: [FRIENDS.DAN],
+    company: [FRIENDS.DAN_SPARROW],
     dates: [new Date("2016-05-10")]
   },
   {
@@ -40,7 +40,7 @@ export const GIGS_2016: Array<IGigCard> = [
       MUSICIANS.MACEO_PLEX,
       MUSICIANS.ALESSIA_CARA,
       MUSICIANS.TOM_ODELL,
-      MUSICIANS[1975],
+      MUSICIANS["1975_THE"],
       MUSICIANS.WILL_YOUNG,
       MUSICIANS.ADELE,
       MUSICIANS.RALEIGH_RITCHIE,
@@ -50,19 +50,19 @@ export const GIGS_2016: Array<IGigCard> = [
     ],
     venue: MUSIC_VENUES.WORTHY_FARM,
     company: [
-      FRIENDS.TONYA,
-      FRIENDS.ELLIE_G,
-      FRIENDS.GRACE,
-      FRIENDS.CAITLIN,
-      FRIENDS.ELLIE_P,
-      FRIENDS.THOM
+      FRIENDS.TONYA_FRANCE,
+      FRIENDS.ELLIE_GURKIN,
+      FRIENDS.GRACE_HULME,
+      FRIENDS.CAITLIN_MCCAIG,
+      FRIENDS.ELLIE_PEARCE,
+      FRIENDS.THOM_STEPHANAKIS
     ],
     dates: [new Date("2016-06-24"), new Date("2016-06-26")]
   },
   {
     headline: MUSICIANS.BEYONCE,
     venue: MUSIC_VENUES.WEMBLEY_STADIUM,
-    company: [FRIENDS.EMMA],
+    company: [FRIENDS.EMMA_CODRINGTON],
     dates: [new Date("2016-07-03")],
     favourite: true
   },
@@ -80,12 +80,12 @@ export const GIGS_2016: Array<IGigCard> = [
     ],
     venue: MUSIC_VENUES.VICTORIA_PARK,
     company: [
-      FRIENDS.TONYA,
-      FRIENDS.TOM,
-      FRIENDS.RYAN,
-      FRIENDS.LAURA,
-      FRIENDS.LUKE_J,
-      FRIENDS.ALICE_R
+      FRIENDS.TONYA_FRANCE,
+      FRIENDS.TOM_CHINDA_COUTTS,
+      FRIENDS.RYAN_MILLS,
+      FRIENDS.LAURA_CAPECE_GALEOTA,
+      FRIENDS.LUKE_JONES,
+      FRIENDS.ALICE_RODER
     ],
     dates: [new Date("2016-07-15")]
   },
@@ -94,7 +94,7 @@ export const GIGS_2016: Array<IGigCard> = [
     lineup: [MUSICIANS.MK],
     venue: MUSIC_VENUES.MOTION,
     dates: [new Date("2016-07-30")],
-    company: [FRIENDS.CHELSEA, FRIENDS.SARAH_W]
+    company: [FRIENDS.CHELSEA_CUNNINGHAM, FRIENDS.SARAH_WHITAKER]
   },
   {
     festival: FESTIVALS.BRIGHTON_PRIDE,
@@ -105,12 +105,12 @@ export const GIGS_2016: Array<IGigCard> = [
     ],
     venue: MUSIC_VENUES.PRESTON_PARK,
     company: [
-      FRIENDS.ELLIE_G,
-      FRIENDS.POOJA,
-      FRIENDS.GRACE,
-      FRIENDS.SIAN,
-      FRIENDS.TONYA,
-      FRIENDS.ALICE_R
+      FRIENDS.ELLIE_GURKIN,
+      FRIENDS.POOJA_DHIR,
+      FRIENDS.GRACE_HULME,
+      FRIENDS.SIAN_RODWAY_SMITH,
+      FRIENDS.TONYA_FRANCE,
+      FRIENDS.ALICE_RODER
     ],
     dates: [new Date("2016-08-06")]
   },
@@ -127,20 +127,20 @@ export const GIGS_2016: Array<IGigCard> = [
       MUSICIANS.JUSTIN_BIEBER
     ],
     venue: MUSIC_VENUES.WESTON_PARK,
-    company: [FRIENDS.SARAH_W, FRIENDS.CHELSEA],
+    company: [FRIENDS.SARAH_WHITAKER, FRIENDS.CHELSEA_CUNNINGHAM],
     dates: [new Date("2016-08-21")]
   },
   {
     festival: FESTIVALS.WAREHOUSE_PROJECT,
     lineup: [MUSICIANS.DUSKY, MUSICIANS.DANIEL_AVERY],
     venue: MUSIC_VENUES.STORE_STREET,
-    company: [FRIENDS.DAN],
+    company: [FRIENDS.DAN_SPARROW],
     dates: [new Date("2016-09-30")]
   },
   {
     headline: MUSICIANS.ROOSEVELT,
     venue: MUSIC_VENUES.XOYO,
-    company: [FRIENDS.TONYA],
+    company: [FRIENDS.TONYA_FRANCE],
     dates: [new Date("2016-11-24")]
   }
 ];

@@ -11,7 +11,7 @@ export const GIGS_2021: Array<IGigCard> = [
     headline: MUSICIANS.JESSIE_WARE,
     venue: MUSIC_VENUES.BRIXTON_ACADEMY,
     dates: [new Date("2021-04-26")],
-    company: [FRIENDS.DARREN],
+    company: [FRIENDS.DARREN_TAYLOR],
     ticketType: TICKET_TYPES.TICKETWEB
   },
   {
@@ -19,27 +19,27 @@ export const GIGS_2021: Array<IGigCard> = [
     venue: MUSIC_VENUES.BROCKWELL_PARK,
     dates: [new Date("2021-06-05")],
     company: [
-      FRIENDS.TONYA,
-      FRIENDS.MARIA,
-      FRIENDS.TOM,
-      FRIENDS.RYAN,
-      FRIENDS.DARREN,
-      FRIENDS.SIAN,
-      FRIENDS.CAITLIN,
-      FRIENDS.DAN
+      FRIENDS.TONYA_FRANCE,
+      FRIENDS.MARIA_TAYLOR,
+      FRIENDS.TOM_CHINDA_COUTTS,
+      FRIENDS.RYAN_MILLS,
+      FRIENDS.DARREN_TAYLOR,
+      FRIENDS.SIAN_RODWAY_SMITH,
+      FRIENDS.CAITLIN_MCCAIG,
+      FRIENDS.DAN_SPARROW
     ],
     ticketType: TICKET_TYPES.KABOODLE_ETICKET
   },
   {
-    headline: MUSICIANS[1975],
+    headline: MUSICIANS["1975_THE"],
     venue: MUSIC_VENUES.FINSBURY_PARK,
     dates: [new Date("2021-07-10")],
     company: [
-      FRIENDS.DAN,
-      FRIENDS.LEWIS,
-      FRIENDS.JERRY,
-      FRIENDS.CAITLIN,
-      FRIENDS.COBY_B
+      FRIENDS.DAN_SPARROW,
+      FRIENDS.LEWIS_STEADMAN,
+      FRIENDS.JERRY_EDWARDS,
+      FRIENDS.CAITLIN_MCCAIG,
+      FRIENDS.COBY_BLACKBURN
     ],
     ticketType: TICKET_TYPES.TICKETMASTER_ETICKET
   },
@@ -47,6 +47,10 @@ export const GIGS_2021: Array<IGigCard> = [
     headline: MUSICIANS.LADY_GAGA,
     venue: MUSIC_VENUES.TOTTENHAM_HOTSPUR_STADIUM,
     dates: [new Date("2021-07-30")],
-    company: [FRIENDS.RYAN, FRIENDS.DAN, FRIENDS.TOM]
+    company: [
+      FRIENDS.RYAN_MILLS,
+      FRIENDS.DAN_SPARROW,
+      FRIENDS.TOM_CHINDA_COUTTS
+    ]
   }
 ];

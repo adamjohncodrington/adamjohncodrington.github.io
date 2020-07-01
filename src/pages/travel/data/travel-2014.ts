@@ -4,7 +4,7 @@ export const TRAVEL_2014: Array<ITravelCard> = [
   {
     title: [LOCATIONS.BARBADOS],
     dates: [new Date("2014-06-16"), new Date("2014-06-24")],
-    company: [FRIENDS.DAD, FRIENDS.EMMA],
+    company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON],
     hidden: [LOCATIONS.BARBADOS.attractions.HARRISONS_CAVE]
   },
   {
@@ -33,6 +33,6 @@ export const TRAVEL_2014: Array<ITravelCard> = [
       LOCATIONS.LAOS.attractions.KUANG_SI_FALLS
     ],
     dates: [new Date("2014-07-07"), new Date("2014-08-04")],
-    company: [FRIENDS.TONYA]
+    company: [FRIENDS.TONYA_FRANCE]
   }
 ];

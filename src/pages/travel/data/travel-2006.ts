@@ -13,7 +13,7 @@ export const TRAVEL_2006: Array<ITravelCard> = [
       LOCATIONS.USA.attractions.WET_N_WILD_ORLANDO
     ],
     dates: [new Date("2006-07-25"), new Date("2006-08-05")],
-    company: [FRIENDS.DAD, FRIENDS.EMMA]
+    company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON]
   },
   {
     title: [LOCATIONS.ITALY.towns.SORRENTO, LOCATIONS.ITALY.cities.POMPEII],
@@ -25,10 +25,10 @@ export const TRAVEL_2006: Array<ITravelCard> = [
     dates: [new Date("2006-08-18"), new Date("2006-08-25")],
     company: [
       FRIENDS.MUM,
-      FRIENDS.EMMA,
-      FRIENDS.LOUISE,
-      FRIENDS.MEGAN,
-      FRIENDS.CAMERON
+      FRIENDS.EMMA_CODRINGTON,
+      FRIENDS.LOUISE_BLACKBURN,
+      FRIENDS.MEGAN_BLACKBURN,
+      FRIENDS.CAMERON_BLACKBURN
     ]
   }
 ];

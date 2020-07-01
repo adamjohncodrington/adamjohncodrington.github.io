@@ -6,7 +6,7 @@ export const SAINSBURYS_SEASONING_COST: IIngredientCost = {
   price: 1
 };
 
-export const MEASUREMENTS: { [measurement: string]: string } = {
+export const MEASUREMENTS: IMeasurements = {
   // WEIGHT
   GRAM: "g",
   KILOGRAM: "kg",

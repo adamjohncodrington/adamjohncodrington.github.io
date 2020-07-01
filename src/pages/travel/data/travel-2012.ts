@@ -15,6 +15,6 @@ export const TRAVEL_2012: Array<ITravelCard> = [
     title: [LOCATIONS.ITALY.towns.JESOLO, LOCATIONS.ITALY.cities.VENICE],
     subtitle: [LOCATIONS.ITALY],
     dates: [new Date("2012-08-20"), new Date("2012-08-26")],
-    company: [FRIENDS.MUM, FRIENDS.EMMA]
+    company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON]
   }
 ];

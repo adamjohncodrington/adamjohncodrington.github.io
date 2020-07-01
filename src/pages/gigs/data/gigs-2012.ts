@@ -5,7 +5,7 @@ export const GIGS_2012: Array<IGigCard> = [
     headline: MUSICIANS.SBTRKT,
     support: [MUSICIANS.DISCLOSURE],
     venue: MUSIC_VENUES.ROCK_CITY,
-    company: [FRIENDS.TONYA],
+    company: [FRIENDS.TONYA_FRANCE],
     dates: [new Date("2012-02-28")]
   },
   {
@@ -17,26 +17,30 @@ export const GIGS_2012: Array<IGigCard> = [
   {
     headline: MUSICIANS.LITTLE_COMETS,
     venue: MUSIC_VENUES.COCKPIT_LEEDS,
-    company: [FRIENDS.EMMA],
+    company: [FRIENDS.EMMA_CODRINGTON],
     dates: [new Date("2012-04-23")]
   },
   {
-    headline: MUSICIANS.KATE_NASH,
+    headline: MUSICIANS.KATE_NASH_MORETON,
     venue: MUSIC_VENUES.BODEGA,
-    company: [FRIENDS.TONYA, FRIENDS.SONYA, FRIENDS.KIRSTEN],
+    company: [
+      FRIENDS.TONYA_FRANCE,
+      FRIENDS.SONYA_PARDI,
+      FRIENDS.KIRSTEN_JACKSON
+    ],
     dates: [new Date("2012-06-22")]
   },
   {
     headline: MUSICIANS.MARINA,
     venue: MUSIC_VENUES.INSTITUTE_BIRMINGHAM,
-    company: [FRIENDS.MUM, FRIENDS.EMMA],
+    company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON],
     dates: [new Date("2012-06-29")],
     favourite: true
   },
   {
     headline: MUSICIANS.LADY_GAGA,
     venue: MUSIC_VENUES.TWICKENHAM_STADIUM,
-    company: [FRIENDS.EMMA],
+    company: [FRIENDS.EMMA_CODRINGTON],
     dates: [new Date("2012-09-08")],
     favourite: true
   },
@@ -44,17 +48,17 @@ export const GIGS_2012: Array<IGigCard> = [
     headline: MUSICIANS.NICKI_MINAJ,
     support: [MUSICIANS.MISHA_B, MUSICIANS.TYGA],
     venue: MUSIC_VENUES.ARENA_NOTTINGHAM,
-    company: [FRIENDS.ELLIE_S, FRIENDS.BLAINE],
+    company: [FRIENDS.ELLIE_SPANOVIC, FRIENDS.BLAINE_PEARSON],
     dates: [new Date("2012-10-21")]
   },
   {
     headline: MUSICIANS.LITTLE_COMETS,
     venue: MUSIC_VENUES.RESCUE_ROOMS,
-    company: [FRIENDS.SARAH_W, FRIENDS.BETH_SH],
+    company: [FRIENDS.SARAH_WHITAKER, FRIENDS.BETH_SHEARS],
     dates: [new Date("2012-10-31")]
   },
   {
-    headline: MUSICIANS.THE_KILLERS,
+    headline: MUSICIANS.KILLERS_THE,
     venue: MUSIC_VENUES.SHEFFIELD_ARENA,
     company: [FRIENDS.DAD],
     dates: [new Date("2012-11-08")]
@@ -62,14 +66,14 @@ export const GIGS_2012: Array<IGigCard> = [
   {
     headline: MUSICIANS.BEN_HOWARD,
     venue: MUSIC_VENUES.ROCK_CITY,
-    company: [FRIENDS.STEVE_R],
+    company: [FRIENDS.STEVE_RICHARDS],
     dates: [new Date("2012-11-22")]
   },
   {
     headline: MUSICIANS.ELLIE_GOULDING,
     venue: MUSIC_VENUES.ROCK_CITY,
     favourite: true,
-    company: [FRIENDS.BLAINE, FRIENDS.JESS, FRIENDS.ELLIE_G],
+    company: [FRIENDS.BLAINE_PEARSON, FRIENDS.JESS_SMITH, FRIENDS.ELLIE_GURKIN],
     dates: [new Date("2012-12-11")]
   }
 ];

@@ -1,4 +1,4 @@
-type IFilter = string;
+type IImageSrc = string;
 
 interface INameFavourite {
   name: string;

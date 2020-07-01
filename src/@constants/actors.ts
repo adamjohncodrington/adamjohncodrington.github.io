@@ -12,7 +12,7 @@ export const ACTORS: IActors = {
   // G
   GWENDOLINE_CHRISITE: { name: "Gwendoline Christie" },
   // H
-  HAMMED_ANIMASHAUN: { name: "Hammed Animashaun" },
+  HAMMED_ANIMASH_MORETONAUN: { name: "Hammed Animashaun" },
   HATTY_JONES: { name: "Hatty Jones" },
   // J
   JASON_WATKINS: { name: "Jason Watkins" },

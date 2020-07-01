@@ -17,13 +17,13 @@ export const TRAVEL_2007: Array<ITravelCard> = [
       LOCATIONS.USA.attractions.DISNEYLAND_CALIFORNIA_ADVENTURE
     ],
     dates: [new Date("2007-07-24"), new Date("2007-08-05")],
-    company: [FRIENDS.DAD, FRIENDS.EMMA]
+    company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON]
   },
   {
     title: [LOCATIONS.UK.regions.CORNWALL],
     notAbroad: true,
     subtitle: [LOCATIONS.UK],
     dates: [new Date("2007-08-11"), new Date("2007-08-18")],
-    company: [FRIENDS.MUM, FRIENDS.EMMA]
+    company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON]
   }
 ];

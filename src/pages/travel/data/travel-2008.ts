@@ -9,7 +9,7 @@ export const TRAVEL_2008: Array<ITravelCard> = [
       LOCATIONS.ITALY.attractions.TREVI_FOUNTAIN
     ],
     dates: [new Date("2008-02-08"), new Date("2008-02-10")],
-    company: [FRIENDS.EMMA, FRIENDS.DAD]
+    company: [FRIENDS.EMMA_CODRINGTON, FRIENDS.DAD]
   },
   {
     title: [LOCATIONS.FRANCE.cities.PARIS],
@@ -27,21 +27,24 @@ export const TRAVEL_2008: Array<ITravelCard> = [
     dates: [new Date("2008-04-15"), new Date("2008-04-19")],
     company: [
       FRIENDS.CFS,
-      FRIENDS.BLAINE,
-      FRIENDS.ELLIE_S,
-      FRIENDS.NAV,
-      FRIENDS.ANNIE_B,
-      FRIENDS.JUNAID,
-      FRIENDS.GEMMA,
-      FRIENDS.SARAH_W
+      FRIENDS.BLAINE_PEARSON,
+      FRIENDS.ELLIE_SPANOVIC,
+      FRIENDS.NAV_BHOGAL,
+      FRIENDS.ANNIE_BUTCHER,
+      FRIENDS.JUNAID_KHAN,
+      FRIENDS.GEMMA_GILDERTHORP,
+      FRIENDS.SARAH_WHITAKER
     ]
   },
   {
-    title: [LOCATIONS.USA.cities.WASHINGTON_DC, LOCATIONS.USA.states.VIRGINIA],
+    title: [
+      LOCATIONS.USA.cities.WASH_MORETONINGTON_DC,
+      LOCATIONS.USA.states.VIRGINIA
+    ],
     subtitle: [LOCATIONS.USA],
     hidden: [
       LOCATIONS.USA.cities.VIRGINIA_BEACH,
-      LOCATIONS.USA.attractions.WASHINGTON_MONUMENT,
+      LOCATIONS.USA.attractions.WASH_MORETONINGTON_MONUMENT,
       LOCATIONS.USA.attractions.SIX_FLAGS_AMERICA,
       LOCATIONS.USA.attractions.LINCOLN_MEMORIAL,
       LOCATIONS.USA.attractions.CAPITOL_BUILDING,
@@ -49,12 +52,12 @@ export const TRAVEL_2008: Array<ITravelCard> = [
       LOCATIONS.USA.attractions.BUSCH_GARDENS_WILLIAMSBURG
     ],
     dates: [new Date("2008-07-13"), new Date("2008-07-24")],
-    company: [FRIENDS.DAD, FRIENDS.EMMA]
+    company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON]
   },
   {
     title: [LOCATIONS.PORTUGAL.towns.VILAMOURA],
     subtitle: [LOCATIONS.PORTUGAL],
     dates: [new Date("2008-08-07"), new Date("2008-08-14")],
-    company: [FRIENDS.MUM, FRIENDS.EMMA]
+    company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON]
   }
 ];

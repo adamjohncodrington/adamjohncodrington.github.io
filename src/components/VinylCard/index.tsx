@@ -35,14 +35,14 @@ export const VinylCard: React.FC<IVinylCard> = ({
   title,
   year,
   artwork,
-  appleMusic
+  appleMusicUrl
 }) => {
   const theme: ITheme = useContext(ThemeContext);
   const artist: string = moveTheSuffixToPrefix(name);
 
   return (
     <VinylCardContainer data-test="vinyl-card">
-      <VinylCardLink href={appleMusic}>
+      <VinylCardLink href={appleMusicUrl}>
         <VinylCardArtwork
           dataTest="vinyl-artwork"
           size={theme.vinylCard.artwork.size}

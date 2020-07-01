@@ -11,7 +11,7 @@ export const VEG_FRESH: IInventoryIngredientsObject = {
     knownCost: { quantity: 200, measurement: MEASUREMENTS.GRAM, price: 1 }
   },
   BROCCOLI: { displayText: "broccoli", knownCost: { quantity: 1, price: 0.7 } },
-  BUTTERNUT_SQUASH: {
+  BUTTERNUT_SQUASH_MORETON: {
     displayText: "butternut squash",
     knownCost: { quantity: 1, price: 1.5 }
   },

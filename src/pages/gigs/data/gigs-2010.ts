@@ -6,13 +6,13 @@ export const GIGS_2010: Array<IGigCard> = [
     support: [MUSICIANS.WE_THE_KINGS, MUSICIANS.FOREVER_THE_SICKEST_KIDS],
     venue: MUSIC_VENUES.ACADEMY_BIRMINGHAM,
     dates: [new Date("2010-03-09")],
-    company: [FRIENDS.MUM, FRIENDS.EMMA, FRIENDS.MEGAN]
+    company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON, FRIENDS.MEGAN_BLACKBURN]
   },
   {
     headline: MUSICIANS.FLORENCE_AND_THE_MACHINE,
-    support: [MUSICIANS.DRUMS],
+    support: [MUSICIANS.DRUMS_THE],
     venue: MUSIC_VENUES.WOLVERHAMPTON_CIVIC_HALL,
-    company: [FRIENDS.DAD, FRIENDS.EMMA, FRIENDS.MUM],
+    company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON, FRIENDS.MUM],
     dates: [new Date("2010-05-10")]
   },
   {
@@ -39,7 +39,7 @@ export const GIGS_2010: Array<IGigCard> = [
     headline: MUSICIANS.PARAMORE,
     support: [MUSICIANS.B_O_B],
     venue: MUSIC_VENUES.SHEFFIELD_ARENA,
-    company: [FRIENDS.EMMA, FRIENDS.MEGAN, FRIENDS.MUM],
+    company: [FRIENDS.EMMA_CODRINGTON, FRIENDS.MEGAN_BLACKBURN, FRIENDS.MUM],
     dates: [new Date("2010-11-11")]
   }
 ];

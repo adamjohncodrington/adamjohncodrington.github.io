@@ -1,11 +1,13 @@
 # TO DO LIST
 
+- remove all `THE_` instances
+- remove all instances of `{ [` in types
 - remove all recent `@ts-ignore` additions
 - remove final remaining instances of type `any`
 - make a `factory` folder within `gigs`
 - add attractions to bucket-list, re-write gigs bucket list logic?
 - refactor `datesArrayToString` to be `dateToString` + `datesToString`
-
+- define a `cities` constant file instead?
 
 ## Refactoring
 
@@ -20,6 +22,7 @@
 
 ## Features
 
+- friends section reveals which gigs you saw with them
 - recipes: margaritas, roast potatoes
 - make Nav Bar colors persist for active page
 - prevent `Router` from allowing you to go back between pages

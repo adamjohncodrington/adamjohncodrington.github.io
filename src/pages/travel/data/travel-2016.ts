@@ -5,7 +5,7 @@ export const TRAVEL_2016: Array<ITravelCard> = [
     title: [LOCATIONS.IRELAND.cities.DUBLIN],
     subtitle: [LOCATIONS.IRELAND],
     dates: [new Date("2016-02-05"), new Date("2016-02-07")],
-    company: [FRIENDS.SIAN],
+    company: [FRIENDS.SIAN_RODWAY_SMITH],
     hidden: [
       LOCATIONS.IRELAND.attractions.DUBLIN_PRISON,
       LOCATIONS.IRELAND.attractions.ST_STEPHENS_GREEN_PARK,
@@ -16,7 +16,7 @@ export const TRAVEL_2016: Array<ITravelCard> = [
     title: [LOCATIONS.PORTUGAL.towns.TAVIRA],
     subtitle: [LOCATIONS.PORTUGAL],
     dates: [new Date("2016-06-09"), new Date("2016-06-16")],
-    company: [FRIENDS.DAD, FRIENDS.EMMA]
+    company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON]
   },
   {
     title: [LOCATIONS.ECUADOR, LOCATIONS.PERU],
@@ -50,7 +50,7 @@ export const TRAVEL_2016: Array<ITravelCard> = [
       LOCATIONS.PERU.attractions.JUNGLE_ZIPLINE
     ],
     dates: [new Date("2016-10-03"), new Date("2016-11-10")],
-    company: [FRIENDS.SARAH_W, FRIENDS.SIAN]
+    company: [FRIENDS.SARAH_WHITAKER, FRIENDS.SIAN_RODWAY_SMITH]
   },
   {
     title: [
@@ -68,6 +68,6 @@ export const TRAVEL_2016: Array<ITravelCard> = [
     ],
     subtitle: [LOCATIONS.BRAZIL],
     dates: [new Date("2016-12-01"), new Date("2016-12-11")],
-    company: [FRIENDS.SIAN]
+    company: [FRIENDS.SIAN_RODWAY_SMITH]
   }
 ];
