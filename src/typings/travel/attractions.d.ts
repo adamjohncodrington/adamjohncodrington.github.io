@@ -5,6 +5,10 @@ interface IAttraction extends ILocation {
 
 interface IAttractionCounted extends IAttraction, IPastAndFutureCounts {}
 
+interface IAttractionsNorway {
+  OSLO_FJORD_SAUNA: IAttraction;
+}
+
 interface IAttractionsIreland {
   ST_STEPHENS_GREEN_PARK: IAttraction;
   DUBLIN_PRISON: IAttraction;
@@ -250,6 +254,7 @@ interface IAttractions
     IAttractionsFrance,
     IAttractionsHungary,
     IAttractionsItaly,
+    IAttractionsNorway,
     IAttractionsBrazil,
     IAttractionsNetherlands,
     IAttractionsUK,

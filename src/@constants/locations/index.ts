@@ -145,6 +145,7 @@ export const ATTRACTIONS: IAttractions = {
   ...ITALY.attractions,
   ...LAOS.attractions,
   ...NETHERLANDS.attractions,
+  ...NORWAY.attractions,
   ...PERU.attractions,
   ...POLAND.attractions,
   ...PORTUGAL.attractions,

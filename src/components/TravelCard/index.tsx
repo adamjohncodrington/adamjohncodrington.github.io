@@ -1,6 +1,6 @@
 import React from "react";
 
-import { arrayToString, datesArrayToString } from "@utils";
+import { arrayToString, datesToString } from "@utils";
 
 import { EventCard } from "../EventCard";
 
@@ -22,7 +22,7 @@ export const TravelCard: React.FC<ITravelCard> = ({
       stringArray: subtitle.map(({ name }: ILocation) => name)
     });
 
-  const dateText: string = datesArrayToString(dates);
+  const dateText: string = datesToString(dates);
 
   return (
     <EventCard

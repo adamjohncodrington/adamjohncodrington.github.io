@@ -1,6 +1,6 @@
 import React from "react";
 
-import { arrayToString, moveTheSuffixToPrefix } from "@utils";
+import { arrayToString, dateToString, moveTheSuffixToPrefix } from "@utils";
 
 import { EventCard } from "../EventCard";
 
@@ -22,7 +22,7 @@ export const TheatreCard: React.FC<ITheatreCard> = ({
       )
     });
 
-  const dateText: string = date.toString();
+  const dateText: string = dateToString(date);
 
   const body: string = theatre.name;
 

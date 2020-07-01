@@ -4,7 +4,8 @@ import {
   arrayToString,
   moveTheSuffixToPrefix,
   getCountdownText,
-  datesArrayToString,
+  dateToString,
+  datesToString,
   isInFuture,
   daysToGo
 } from "@utils";
@@ -41,7 +42,8 @@ export const GigCard: React.FC<IGigCard> = ({
         )
       });
 
-  const dateText: string = datesArrayToString(dates);
+  const dateText: string =
+    dates.length === 2 ? datesToString(dates) : dateToString(dates[0]);
 
   const countdownText: string | undefined = isInFuture(dates[0])
     ? getCountdownText(daysToGo(dates))

@@ -187,6 +187,7 @@ interface IGreece extends ILocation {
 }
 
 interface INorway extends ILocation {
+  attractions: IAttractionsNorway;
   cities: ICitiesNorway;
   islands: IIslandsNorway;
 }

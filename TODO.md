@@ -1,31 +1,26 @@
 # TO DO LIST
 
-- add oslo sauna to attractions/highlights
+## New features
 
-## TypeScript
+- friends section reveals which gigs you saw with them
+- add sorting to vinyls collection and wish list?
+- add photos to `Travel`?
 
-- remove all instances of `{ [` in types === strongly type all `@constants` objects
+## Enhancements
+
+- refine Nav Bar (colors persist for active page, mobile behaviour)
+- prevent `Router` from allowing you to go back between pages
+
+## Styling
+
+- reduce whitespace between bullet points and list text?
+- refine color palette
+- prevent wrapping of `li` text beneath the bullet point
 
 ## Refactoring
 
-- refactor `datesArrayToString` to be `dateToString` + `datesToString`
 - remove hard-coded recipe image width + implement react-disclosure/react-accessible-accordion?
 - make all `.svg` files render as `SvgIcon` components
 - review semantics of page structure, landmarks, accessibility, etc.
 - recipe method array should be `ol` not `ul`?
 - rationalise `data-test` attributes
-
-## Features
-
-- friends section reveals which gigs you saw with them
-- make Nav Bar colors persist for active page
-- prevent `Router` from allowing you to go back between pages
-- add sorting to vinyls collection and wish list?
-- add photos to `Travel`?
-
-## Styling
-
-- refine color palette
-- reduce whitespace between bullet points and list text?
-- prevent wrapping of `li` text beneath the bullet point
-

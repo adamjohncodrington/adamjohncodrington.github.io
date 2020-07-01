@@ -4,7 +4,10 @@ export const TRAVEL_2020: Array<ITravelCard> = [
   {
     title: [COUNTRIES.NORWAY.cities.OSLO],
     subtitle: [COUNTRIES.NORWAY],
-    hidden: [COUNTRIES.NORWAY.islands.HOVEDOYA],
+    hidden: [
+      COUNTRIES.NORWAY.islands.HOVEDOYA,
+      COUNTRIES.NORWAY.attractions.OSLO_FJORD_SAUNA
+    ],
     dates: [new Date("2020-02-27"), new Date("2020-03-01")],
     company: [
       FRIENDS.RYAN_MILLS,
