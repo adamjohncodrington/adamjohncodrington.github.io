@@ -1,3 +1,15 @@
+interface IIngredientCost {
+  price: number;
+  quantity?: number;
+  measurement?: string;
+  payFullAmountAlways?: boolean;
+}
+
+interface IInventoryIngredient {
+  displayText: string;
+  knownCost?: IIngredientCost;
+}
+
 interface IFlour {
   CORNFLOUR: IInventoryIngredient;
   FLOUR_PLAIN: IInventoryIngredient;

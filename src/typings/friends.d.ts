@@ -1,3 +1,10 @@
+interface IFriend extends INameFavourite {
+  initials: string;
+  gigs?: boolean;
+  travel?: boolean;
+  theatre?: boolean;
+}
+
 interface IFriendGroups {
   CFS: IFriend;
   JHC: IFriend;
