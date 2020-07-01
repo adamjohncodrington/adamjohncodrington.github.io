@@ -1,17 +1,15 @@
 # TO DO LIST
 
-- remove all recent `@ts-ignore` additions
-- remove final remaining instances of type `any`
-- refactor `datesArrayToString` to be `dateToString` + `datesToString`
-
 ## TypeScript
 
+- remove all recent `@ts-ignore` additions
 - define a `cities` constant file instead?
 - remove all instances of `{ [` in types
 - strongly type all `@constants` objects
 
 ## Refactoring
 
+- refactor `datesArrayToString` to be `dateToString` + `datesToString`
 - rename `getPageSectionItemCounts` function to not refer to `PageSection` specifically
 - make `Theatre` use `date` instead of `dates`, move countdown logic to individual cards rather than `EventCard` and make it have `dateText` instead
 - remove hard-coded recipe image width + implement react-disclosure/react-accessible-accordion?
