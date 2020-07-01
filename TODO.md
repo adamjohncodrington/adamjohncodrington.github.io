@@ -2,7 +2,7 @@
 
 ## Testing
 
-- add tests for all utils
+- add tests for more utils
 
 ## TypeScript
 
@@ -14,13 +14,12 @@
 ## New features
 
 - friends section reveals which gigs you saw with them
-- add sorting to vinyls collection and wish list?
 - add photos to `Travel`?
 
 ## Enhancements
 
 - refine Nav Bar (colors persist for active page, mobile behaviour)
-- prevent `Router` from allowing you to go back between pages
+- prevent `Router` from allowing you to go back between pages?
 
 ## Styling
 
@@ -30,8 +29,8 @@
 
 ## Refactoring
 
-- remove hard-coded recipe image width + implement react-disclosure/react-accessible-accordion?
 - make all `.svg` files render as `SvgIcon` components
+- remove hard-coded recipe image width + implement react-disclosure/react-accessible-accordion?
 - review semantics of page structure, landmarks, accessibility, etc.
 - recipe method array should be `ol` not `ul`?
 - rationalise `data-test` attributes
