@@ -8,7 +8,7 @@ interface IUseMediaQueries {
 
 export const useMediaQueries = (): IUseMediaQueries => {
   const pageUses2Columns: boolean = useMediaQuery({
-    minWidth: BREAKPOINTS.tabletSmall.minWidth
+    minWidth: BREAKPOINTS.tablet.minWidth
   });
 
   return { pageUses2Columns };

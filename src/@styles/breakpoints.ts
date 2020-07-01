@@ -1,17 +1,29 @@
+interface IBreakpoint {
+  maxWidth?: PxValue;
+  minWidth?: PxValue;
+  maxHeight?: PxValue;
+  minHeight?: PxValue;
+}
+
 interface IBreakpoints {
-  phoneSmall: { maxWidth: PxValue };
-  phoneLarge: { minWidth: PxValue; maxWidth: PxValue };
-  tabletSmall: { minWidth: PxValue; maxWidth: PxValue };
-  tabletLarge: { minWidth: PxValue; maxWidth: PxValue };
-  laptop: { minWidth: PxValue; maxWidth: PxValue };
-  desktop: { minWidth: PxValue };
+  phoneSmall: IBreakpoint;
+  phoneLarge: IBreakpoint;
+  tablet: IBreakpoint;
+  laptop: IBreakpoint;
+  desktop: IBreakpoint;
+  largeDesktop: IBreakpoint;
 }
 
 export const BREAKPOINTS: IBreakpoints = {
-  phoneSmall: { maxWidth: "360px" },
-  phoneLarge: { minWidth: "361px", maxWidth: "767px" },
-  tabletSmall: { minWidth: "768px", maxWidth: "1000px" },
-  tabletLarge: { minWidth: "1001px", maxWidth: "1279px" },
-  laptop: { minWidth: "1280px", maxWidth: "1480px" },
-  desktop: { minWidth: "1481px" }
+  phoneSmall: { maxWidth: "576px", maxHeight: "568px" },
+  phoneLarge: {
+    minWidth: "577px",
+    maxWidth: "767px",
+    minHeight: "569px",
+    maxHeight: "667px"
+  },
+  tablet: { minWidth: "768px", maxWidth: "980px" },
+  laptop: { minWidth: "981px", maxWidth: "1280px", maxHeight: "720px" },
+  desktop: { minWidth: "1281px", maxWidth: "1689px", minHeight: "721px" },
+  largeDesktop: { minWidth: "1690px" }
 };

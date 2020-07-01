@@ -11,7 +11,6 @@
 - refactor `datesArrayToString` to be `dateToString` + `datesToString`
 - remove hard-coded recipe image width + implement react-disclosure/react-accessible-accordion?
 - make all `.svg` files render as `SvgIcon` components
-- copy across JHC `breakpoints`?
 - review semantics of page structure, landmarks, accessibility, etc.
 - recipe method array should be `ol` not `ul`?
 - rationalise `data-test` attributes
