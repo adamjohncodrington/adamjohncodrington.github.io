@@ -1,5 +1,9 @@
 # TO DO LIST
 
+## Testing
+
+- add tests for all utils
+
 ## TypeScript
 
 - strongly-type thse:
