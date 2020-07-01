@@ -39,13 +39,7 @@ export const VINYL_WISH_LIST: Array<IVinylCard> = [
     year: 2020,
     artwork: PHOTOS_VINYL.DUA_LIPA.FUTURE_NOSTALGIA
   },
-  {
-    artist: MUSICIANS.MARINA,
-    title: "Electra Heart",
-    appleMusicUrl: "https://music.apple.com/gb/album/electra-heart/612448612",
-    year: 2012,
-    artwork: PHOTOS_VINYL.MARINA.ELECTRA_HEART
-  },
+
   {
     artist: MUSICIANS.BEYONCE,
     title: "Lemonade",

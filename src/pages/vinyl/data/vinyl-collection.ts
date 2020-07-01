@@ -31,6 +31,13 @@ export const VINYL_COLLECTION: Array<IVinylCard> = [
     year: 2009
   },
   {
+    artist: MUSICIANS.MARINA,
+    title: "Electra Heart",
+    appleMusicUrl: "https://music.apple.com/gb/album/electra-heart/612448612",
+    year: 2012,
+    artwork: PHOTOS_VINYL.MARINA.ELECTRA_HEART
+  },
+  {
     artist: MUSICIANS.BANKS,
     artwork: PHOTOS_VINYL.BANKS.III,
     appleMusicUrl: "https://music.apple.com/gb/album/iii/1467547466",
