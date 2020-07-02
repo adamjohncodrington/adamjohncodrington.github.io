@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "393db82a0812a4c111e17d99727bbdf9",
+    "revision": "3090216a5b3b201c4dc19035e651ce89",
     "url": "/index.html"
   },
   {
-    "revision": "e0b0a854051a89d0151b",
-    "url": "/static/js/2.bd155d79.chunk.js"
+    "revision": "5a2d91292275b3bd0c00",
+    "url": "/static/js/2.a515d7e7.chunk.js"
   },
   {
     "revision": "4bf00ea42f5dad8ab33d5f32afec9baf",
-    "url": "/static/js/2.bd155d79.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.a515d7e7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0957d97b2a847c66b23f",
-    "url": "/static/js/main.8cd02bac.chunk.js"
+    "revision": "053aa4902fa5cc2f0a1c",
+    "url": "/static/js/main.009d7c73.chunk.js"
   },
   {
     "revision": "3cf57b419839acabd216",
@@ -21,7 +21,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "450622e77702d75f917776fd3fe97902",
-    "url": "/static/media/1975_a-brief-inquiry-into-online-relationships.450622e7.jpg"
+    "url": "/static/media/1975-the_a-brief-inquiry-into-online-relationships.450622e7.jpg"
   },
   {
     "revision": "e2cf5b85fc9309312483d762d1a97743",
@@ -49,11 +49,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "b17978e3563daf52df27a1714692dc47",
-    "url": "/static/media/baked_beans.b17978e3.jpg"
+    "url": "/static/media/baked-beans.b17978e3.jpg"
   },
   {
     "revision": "ae9fd9b6339c0f20b9f7aff4d58291e4",
-    "url": "/static/media/banana_cake.ae9fd9b6.jpg"
+    "url": "/static/media/banana-cake.ae9fd9b6.jpg"
+  },
+  {
+    "revision": "4af35ae2fb1b13c518c3603b7df23033",
+    "url": "/static/media/bang-bang-cauliflower.4af35ae2.jpg"
   },
   {
     "revision": "b72779a494cacd04e25fddc238ec498a",
@@ -66,6 +70,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "50a3a82a3c9f849b95dc4f59e40afea7",
     "url": "/static/media/beyonce_lemonade.50a3a82a.jpg"
+  },
+  {
+    "revision": "3c5e560b934c1afba49c805bbd83b6d8",
+    "url": "/static/media/blueberry-pancakes.3c5e560b.jpg"
   },
   {
     "revision": "b9573028ae287fed54dc4dd304ee600f",
@@ -153,7 +161,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "b5419d7e92454199ce92908c4a4f1c68",
-    "url": "/static/media/kale_crispy.b5419d7e.jpg"
+    "url": "/static/media/kale-crispy.b5419d7e.jpg"
   },
   {
     "revision": "667a0a03a522154106cb6148939cd424",
@@ -213,7 +221,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "5c438d6883c7e423f6b2a72dbe30a02b",
-    "url": "/static/media/mashed_potato.5c438d68.jpg"
+    "url": "/static/media/mashed-potato.5c438d68.jpg"
   },
   {
     "revision": "d8da85e9c953b39ee2d6abe63dbf9a8c",
@@ -257,7 +265,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "42719ce5fe52404142e90bac6f2a1067",
-    "url": "/static/media/piri_piri.42719ce5.jpg"
+    "url": "/static/media/piri-piri.42719ce5.jpg"
   },
   {
     "revision": "ae9582d18c33af4d0152dd6c981a351d",
@@ -265,7 +273,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "446dfdbbc6328333c0ab222ac0a251e4",
-    "url": "/static/media/potato_salad.446dfdbb.jpg"
+    "url": "/static/media/potato-salad.446dfdbb.jpg"
   },
   {
     "revision": "4a601a47ac16875143711434d73404cc",
@@ -281,7 +289,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "904346f2606b6c28255a9f4c5b3ec566",
-    "url": "/static/media/rogan_josh.904346f2.jpg"
+    "url": "/static/media/rogan-josh.904346f2.jpg"
   },
   {
     "revision": "6bcd95684afbb98c3741738c34f1a1a7",
@@ -293,7 +301,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "d49c016590c22f5828cc3a23cddce95f",
-    "url": "/static/media/shepherds_pie.d49c0165.jpg"
+    "url": "/static/media/shepherds-pie.d49c0165.jpg"
   },
   {
     "revision": "18bc11aff4a4bccd8ba4307909a14497",
