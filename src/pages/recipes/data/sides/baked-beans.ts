@@ -1,6 +1,6 @@
-import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
+import { INGREDIENTS, MEASUREMENTS, DIETS } from "constant-objects";
 import { PHOTOS_RECIPES } from "resources";
-import { calculateRecipeCost } from "@utils";
+import { calculateRecipeCost } from "utils";
 
 const ingredients: Array<Array<IRecipeIngredient>> = [
   [

@@ -1,6 +1,6 @@
-import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
+import { INGREDIENTS, MEASUREMENTS, DIETS } from "constant-objects";
 
-import { recipeMethodEntries, calculateRecipeCost } from "@utils";
+import { recipeMethodEntries, calculateRecipeCost } from "utils";
 
 const { preheatOven } = recipeMethodEntries();
 

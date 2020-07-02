@@ -1,4 +1,4 @@
-import { LOG_RECIPE_COST_CALCULATIONS } from "@config";
+import { LOG_RECIPE_COST_CALCULATIONS } from "config";
 
 import { numberToCurrencyString } from "../basic";
 import { concatenateQuantityAndMeasurement } from "../concatenateQuantityAndMeasurement";

@@ -1,7 +1,7 @@
-import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
+import { INGREDIENTS, MEASUREMENTS, DIETS } from "constant-objects";
 import { PHOTOS_RECIPES } from "resources";
 
-import { recipeMethodEntries, calculateRecipeCost } from "@utils";
+import { recipeMethodEntries, calculateRecipeCost } from "utils";
 
 const {
   LEAVE_TO_COOL_BEFORE_REMOVING_FROM_LOAF_TIN,

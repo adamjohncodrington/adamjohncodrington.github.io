@@ -1,5 +1,5 @@
-import { FESTIVALS } from "@constants";
-import { getItemCounts } from "@utils";
+import { FESTIVALS } from "constant-objects";
+import { getItemCounts } from "utils";
 
 import { DATA } from "../data";
 

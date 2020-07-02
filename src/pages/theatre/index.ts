@@ -1,5 +1,5 @@
 import { SvgTheatreMasks } from "resources";
-import { PAGE_COLORS } from "@styles";
+import { PAGE_COLORS } from "styles";
 
 import { sections } from "./sections";
 

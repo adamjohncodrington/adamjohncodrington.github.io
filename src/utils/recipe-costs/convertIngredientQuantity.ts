@@ -1,4 +1,4 @@
-import { MEASUREMENTS } from "@constants";
+import { MEASUREMENTS } from "constant-objects";
 
 interface IGetKnownCostQuantity {
   quantity: number;

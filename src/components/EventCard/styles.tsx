@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 import { FlexColumn, FlexRow } from "primitives";
-import { CSS } from "@styles";
+import { CSS } from "styles";
 
 export const EventCardNote = styled.div(() => CSS.FONT_SIZE_75_PERCENT);
 

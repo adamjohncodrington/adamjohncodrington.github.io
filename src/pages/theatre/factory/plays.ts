@@ -1,5 +1,5 @@
-import { PLAYS } from "@constants";
-import { getItemCounts } from "@utils";
+import { PLAYS } from "constant-objects";
+import { getItemCounts } from "utils";
 
 import { DATA } from "../data";
 

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { arrayToString, datesToString } from "@utils";
+import { arrayToString, datesToString } from "utils";
 
 import { EventCard } from "../EventCard";
 

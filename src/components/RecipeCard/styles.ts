@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 import { H3, FlexColumn } from "primitives";
-import { CSS } from "@styles";
+import { CSS } from "styles";
 
 interface IRecipeCardTitle extends IThemeProp {
   favourite?: boolean;

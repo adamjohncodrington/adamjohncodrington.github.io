@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { FONT_SIZES, CSS } from "@styles";
+import { FONT_SIZES, CSS } from "styles";
 
 export const H1 = styled.h1`
   ${CSS.ZERO_MARGIN_AND_PADDING}

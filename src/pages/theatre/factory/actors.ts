@@ -1,5 +1,5 @@
-import { ACTORS } from "@constants";
-import { getItemCounts } from "@utils";
+import { ACTORS } from "constant-objects";
+import { getItemCounts } from "utils";
 
 import { DATA } from "../data";
 

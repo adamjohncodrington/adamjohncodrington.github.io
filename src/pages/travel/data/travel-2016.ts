@@ -1,4 +1,4 @@
-import { FRIENDS, COUNTRIES } from "@constants";
+import { FRIENDS, COUNTRIES } from "constant-objects";
 
 export const TRAVEL_2016: Array<ITravelCard> = [
   {

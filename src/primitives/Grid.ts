@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { CSS } from "@styles";
+import { CSS } from "styles";
 
 interface IGridColumnDiv {
   columnGap?: PxValue;

@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { useMediaQueries } from "@utils";
+import { useMediaQueries } from "utils";
 import { Disclosure } from "../Disclosure";
 import { PageSectionHeader } from "../PageSectionHeader";
 import { PageSectionPanel } from "../PageSectionPanel";

@@ -1,7 +1,7 @@
-import { INGREDIENTS, MEASUREMENTS, UNICODE, DIETS } from "@constants";
+import { INGREDIENTS, MEASUREMENTS, UNICODE, DIETS } from "constant-objects";
 import { PHOTOS_RECIPES } from "resources";
 
-import { recipeMethodEntries, calculateRecipeCost } from "@utils";
+import { recipeMethodEntries, calculateRecipeCost } from "utils";
 
 const { preheatOven } = recipeMethodEntries();
 

@@ -1,4 +1,9 @@
-import { FRIENDS, MUSICIANS, TICKET_TYPES, MUSIC_VENUES } from "@constants";
+import {
+  FRIENDS,
+  MUSICIANS,
+  TICKET_TYPES,
+  MUSIC_VENUES
+} from "constant-objects";
 
 export const GIGS_2020: Array<IGigCard> = [
   {

@@ -1,14 +1,14 @@
 import React, { useContext } from "react";
 import styled, { css, ThemeContext } from "styled-components";
 
-import { A, FlexRow, SquareImage } from "primitives";
-import { moveTheSuffixToPrefix } from "@utils";
+import { Link, FlexRow, SquareImage } from "primitives";
+import { moveTheSuffixToPrefix } from "utils";
 
 import { CardTitleBold, CardSubtitleBold } from "../styles";
 
 const VinylCardContainer = FlexRow;
 
-const VinylCardLink = styled(A)(
+const VinylCardLink = styled(Link)(
   ({ theme: { vinylCard } }: IThemeProp) =>
     css`
       margin-right: ${vinylCard.artwork.margin.right};

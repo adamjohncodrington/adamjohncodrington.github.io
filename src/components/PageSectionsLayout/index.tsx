@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { ThemeContext } from "styled-components";
 
 import { Ul, Li, GridColumnDiv } from "primitives";
-import { replaceSpacesWithDashes, useMediaQueries } from "@utils";
+import { replaceSpacesWithDashes, useMediaQueries } from "utils";
 
 import { PageSection } from "../PageSection";
 

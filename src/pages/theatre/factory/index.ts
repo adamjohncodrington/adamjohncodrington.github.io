@@ -1,4 +1,4 @@
-import { formatCountedListItems } from "@utils";
+import { formatCountedListItems } from "utils";
 
 import { ACTORS_LIST_ITEMS } from "./actors";
 import { FRIENDS_LIST_ITEMS } from "./friends";

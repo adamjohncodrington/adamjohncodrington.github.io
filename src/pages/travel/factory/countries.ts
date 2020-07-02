@@ -1,5 +1,5 @@
-import { COUNTRIES } from "@constants";
-import { getItemCounts } from "@utils";
+import { COUNTRIES } from "constant-objects";
+import { getItemCounts } from "utils";
 
 import { DATA } from "../data";
 

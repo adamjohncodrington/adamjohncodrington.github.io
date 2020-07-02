@@ -1,4 +1,4 @@
-import { UNICODE } from "@constants";
+import { UNICODE } from "constant-objects";
 
 const { QUARTER, HALF, THREE_QUARTERS } = UNICODE;
 

@@ -1,5 +1,5 @@
 import { SvgMicrophone } from "resources";
-import { PAGE_COLORS } from "@styles";
+import { PAGE_COLORS } from "styles";
 
 import { FACTORY } from "./factory";
 import { sections } from "./sections";

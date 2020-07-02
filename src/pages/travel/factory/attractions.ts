@@ -1,5 +1,5 @@
-import { ATTRACTIONS } from "@constants";
-import { getItemCounts } from "@utils";
+import { ATTRACTIONS } from "constant-objects";
+import { getItemCounts } from "utils";
 
 import { DATA } from "../data";
 

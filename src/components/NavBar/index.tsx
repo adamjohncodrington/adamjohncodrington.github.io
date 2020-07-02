@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import styled, { css } from "styled-components";
 
-import { USE_COLORS_IN_NAV_BAR } from "@config";
-import { CSS } from "@styles";
+import { USE_COLORS_IN_NAV_BAR } from "config";
+import { RouterLink } from "primitives";
+import { CSS } from "styles";
 
 const StyledNav = styled.nav(
   ({ theme: { navBar } }: IThemeProp) => css`
@@ -18,7 +18,7 @@ interface IStyledLink extends IThemeProp {
   color?: ColorValue;
 }
 
-const StyledLink = styled(Link)(
+const StyledRouterLink = styled(RouterLink)(
   ({ color, theme: { navBar } }: IStyledLink) => css`
     display: flex;
     justify-content: center;
@@ -46,9 +46,9 @@ interface INavBar {
 export const NavBar: React.FC<INavBar> = ({ pages }) => (
   <StyledNav>
     {pages.map(({ path, SvgIcon, color }: IPage, index: number) => (
-      <StyledLink key={index} to={path} color={color}>
+      <StyledRouterLink key={index} to={path} color={color}>
         <SvgIcon />
-      </StyledLink>
+      </StyledRouterLink>
     ))}
   </StyledNav>
 );

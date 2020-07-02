@@ -1,6 +1,6 @@
 import { useMediaQuery } from "react-responsive";
 
-import { BREAKPOINTS } from "@styles";
+import { BREAKPOINTS } from "styles";
 
 interface IUseMediaQueries {
   pageUses2Columns: boolean;

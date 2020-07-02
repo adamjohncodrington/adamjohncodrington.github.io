@@ -1,4 +1,3 @@
-export { A } from "./A";
 export {
   FlexColumn,
   FlexLiGrow,
@@ -9,6 +8,7 @@ export {
 } from "./Flex";
 export { GridColumnDiv } from "./Grid";
 export { H1, H2, H3 } from "./Headings";
+export { RouterLink } from "./RouterLink";
 export { Link } from "./Link";
 export { Ul, Li } from "./Lists";
 export { SquareImage } from "./SquareImage";

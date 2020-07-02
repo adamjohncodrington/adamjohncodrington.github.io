@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { ThemeProvider } from "styled-components";
 
 import { App } from "app";
-import { THEME, GlobalStyle } from "@styles";
+import { THEME, GlobalStyle } from "styles";
 
 import * as serviceWorker from "./serviceWorker";
 

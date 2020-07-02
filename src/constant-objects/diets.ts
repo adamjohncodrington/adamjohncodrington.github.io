@@ -1,4 +1,4 @@
-import { COLORS } from "@styles";
+import { COLORS } from "styles";
 
 interface IDiets {
   VEGAN: IRecipeDiet;

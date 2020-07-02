@@ -2,7 +2,7 @@ import React, { useContext, ReactElement } from "react";
 import { ThemeContext } from "styled-components";
 
 import { FlexRow, SquareImage } from "primitives";
-import { getIngredientsHeader, numberToCurrencyString } from "@utils";
+import { getIngredientsHeader, numberToCurrencyString } from "utils";
 
 import { Disclosure } from "../Disclosure";
 import { List } from "../List";

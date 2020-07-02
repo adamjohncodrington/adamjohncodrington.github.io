@@ -1,4 +1,4 @@
-import { isInFuture, formatCountedListItems } from "@utils";
+import { isInFuture, formatCountedListItems } from "utils";
 
 import { DATA } from "../data";
 

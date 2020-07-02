@@ -1,4 +1,4 @@
-import { isInFuture } from "@utils";
+import { isInFuture } from "utils";
 
 import { DATA } from "../data";
 

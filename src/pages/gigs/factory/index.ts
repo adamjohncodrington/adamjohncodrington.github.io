@@ -1,4 +1,4 @@
-import { formatCountedListItems } from "@utils";
+import { formatCountedListItems } from "utils";
 
 import { BUCKET_LIST_ITEMS } from "./bucket-list";
 import { FRIENDS_LIST_ITEMS } from "./friends";

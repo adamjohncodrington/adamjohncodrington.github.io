@@ -1,9 +1,9 @@
-import { PAGE_SECTION_TITLES } from "@constants";
+import { PAGE_SECTION_TITLES } from "constant-objects";
 import { SVG_ICON_STRINGS } from "resources";
 
 import { FACTORY } from "./factory";
 import { DATA } from "./data";
-import { isInFuture } from "@utils";
+import { isInFuture } from "utils";
 
 const SECTION_BUCKET_LIST: IPageSection = {
   title: PAGE_SECTION_TITLES.BUCKET_LIST,

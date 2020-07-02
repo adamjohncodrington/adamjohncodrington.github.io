@@ -8,7 +8,7 @@ import {
   datesToString,
   isInFuture,
   daysToGo
-} from "@utils";
+} from "utils";
 
 import { EventCard } from "../EventCard";
 

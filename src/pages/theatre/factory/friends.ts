@@ -1,5 +1,5 @@
-import { FRIENDS } from "@constants";
-import { getItemCounts } from "@utils";
+import { FRIENDS } from "constant-objects";
+import { getItemCounts } from "utils";
 
 import { DATA } from "../data";
 

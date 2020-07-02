@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 import { FlexLiGrow } from "primitives";
-import { CSS } from "@styles";
+import { CSS } from "styles";
 
 export const CountedListItemContainer = styled(FlexLiGrow)``;
 

@@ -1,4 +1,4 @@
-import { MUSICIANS } from "@constants";
+import { MUSICIANS } from "constant-objects";
 import { PHOTOS_VINYL } from "resources";
 
 export const VINYL_WISH_LIST: Array<IVinylCard> = [
