@@ -107,7 +107,7 @@ export const VINYL_COLLECTION: Array<IVinylCard> = [
   {
     artist: MUSICIANS["1975_THE"],
     title: "A Brief Inquiry Into Online Relationships",
-    artwork: PHOTOS_VINYL["1975"].A_BRIEF_INQUIRY_INTO_ONLINE_RELATIONSHIPS,
+    artwork: PHOTOS_VINYL["1975_THE"].A_BRIEF_INQUIRY_INTO_ONLINE_RELATIONSHIPS,
     appleMusicUrl:
       "https://music.apple.com/gb/album/a-brief-inquiry-into-online-relationships/1435546528",
     year: 2018

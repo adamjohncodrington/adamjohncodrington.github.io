@@ -1,5 +1,4 @@
-export const requireJpeg = (photo: string): IImageSrc =>
-  require(`./${photo}.jpg`);
+const requireJpeg = (photo: string): IImageSrc => require(`./${photo}.jpg`);
 
 export const PHOTOS_RECIPES: RecipePhotosObject = {
   // B

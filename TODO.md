@@ -1,5 +1,7 @@
 # TO DO LIST
 
+- make vinyls constant object with a `purchased` flag that automatically adds vinyls to collection or bucket list, strongly type it
+
 ## Testing
 
 - add tests for more utils

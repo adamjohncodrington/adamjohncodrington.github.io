@@ -3,9 +3,9 @@ const requireVinyl = (artist: string, album: string): IImageSrc =>
 
 export const PHOTOS_VINYL: VinylPhotosObject = {
   // 123
-  "1975": {
+  "1975_THE": {
     A_BRIEF_INQUIRY_INTO_ONLINE_RELATIONSHIPS: requireVinyl(
-      "1975",
+      "1975-the",
       "a-brief-inquiry-into-online-relationships"
     )
   },
