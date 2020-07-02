@@ -1,6 +1,6 @@
 import React from "react";
 
-import { PAGE_SECTION_PANEL_TYPES } from "constant-objects";
+import { PAGE_SECTION_PANEL_TYPES } from "@constants";
 import { Li } from "primitives";
 
 import { CountedListItem } from "../CountedListItem";

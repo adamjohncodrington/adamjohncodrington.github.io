@@ -1,4 +1,4 @@
-import { FESTIVALS } from "constant-objects";
+import { FESTIVALS } from "@constants";
 import { getItemCounts } from "utils";
 
 import { DATA } from "../data";

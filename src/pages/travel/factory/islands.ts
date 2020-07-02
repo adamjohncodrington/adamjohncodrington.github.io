@@ -1,4 +1,4 @@
-import { ISLANDS } from "constant-objects";
+import { ISLANDS } from "@constants";
 import { getItemCounts } from "utils";
 
 import { DATA } from "../data";

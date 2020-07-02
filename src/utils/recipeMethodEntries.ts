@@ -1,4 +1,4 @@
-import { UNICODE } from "constant-objects";
+import { UNICODE } from "@constants";
 
 interface IBakeForAbout {
   minutes: number;

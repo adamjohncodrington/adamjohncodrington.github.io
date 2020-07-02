@@ -1,4 +1,4 @@
-import { FRIENDS } from "constant-objects";
+import { FRIENDS } from "@constants";
 import { getItemCounts } from "utils";
 
 import { DATA } from "../data";

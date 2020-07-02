@@ -1,4 +1,4 @@
-import { CITIES } from "constant-objects";
+import { CITIES } from "@constants";
 import { getItemCounts } from "utils";
 
 import { DATA } from "../data";

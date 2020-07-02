@@ -1,4 +1,4 @@
-import { DAYS_OF_THE_WEEK, MONTHS } from "constant-objects";
+import { DAYS_OF_THE_WEEK, MONTHS } from "@constants";
 
 export const dateToString = (date: Date): string => {
   const weekday: number = date.getDay();

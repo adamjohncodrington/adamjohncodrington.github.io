@@ -1,4 +1,4 @@
-import { PLAYS, THEATRE_VENUES, FRIENDS, ACTORS } from "constant-objects";
+import { PLAYS, THEATRE_VENUES, FRIENDS, ACTORS } from "@constants";
 
 export const THEATRE_2020: Array<ITheatreCard> = [
   {

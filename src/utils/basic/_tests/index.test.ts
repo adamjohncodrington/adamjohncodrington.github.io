@@ -1,4 +1,4 @@
-import { UNICODE } from "constant-objects";
+import { UNICODE } from "@constants";
 
 import { arrayToString } from "../arrayToString";
 import { moveTheSuffixToPrefix } from "../moveTheSuffixToPrefix";

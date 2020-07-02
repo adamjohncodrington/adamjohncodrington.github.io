@@ -1,4 +1,4 @@
-import { MEASUREMENTS } from "constant-objects";
+import { MEASUREMENTS } from "@constants";
 
 export const concatenateQuantityAndMeasurement = (
   displayQuantity: string,

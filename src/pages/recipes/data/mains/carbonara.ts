@@ -1,4 +1,4 @@
-import { INGREDIENTS, MEASUREMENTS, DIETS } from "constant-objects";
+import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
 import { PHOTOS_RECIPES } from "resources";
 
 const ingredients: Array<Array<IRecipeIngredient>> = [

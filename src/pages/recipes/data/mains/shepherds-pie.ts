@@ -1,4 +1,4 @@
-import { INGREDIENTS, MEASUREMENTS, UNICODE, DIETS } from "constant-objects";
+import { INGREDIENTS, MEASUREMENTS, UNICODE, DIETS } from "@constants";
 import { PHOTOS_RECIPES } from "resources";
 
 import { recipeMethodEntries } from "utils";

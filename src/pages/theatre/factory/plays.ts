@@ -1,4 +1,4 @@
-import { PLAYS } from "constant-objects";
+import { PLAYS } from "@constants";
 import { getItemCounts } from "utils";
 
 import { DATA } from "../data";

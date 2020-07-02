@@ -1,4 +1,4 @@
-import { PAGE_SECTION_TITLES } from "constant-objects";
+import { PAGE_SECTION_TITLES } from "@constants";
 import { SVG_ICON_STRINGS } from "resources";
 
 import { FACTORY } from "./factory";

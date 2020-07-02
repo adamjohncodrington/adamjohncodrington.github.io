@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 import { Ul } from "primitives";
-import { PAGE_SECTION_PANEL_TYPES } from "constant-objects";
+import { PAGE_SECTION_PANEL_TYPES } from "@constants";
 
 interface IPageSectionPanelList {
   pageSectionPanelType: string;
