@@ -7,4 +7,5 @@ interface IEventCard {
   dateText: string;
   countdownText?: string;
   note?: string;
+  photos?: Array<IImageSrc>;
 }

@@ -1,4 +1,5 @@
 import { FRIENDS, COUNTRIES } from "@constants";
+import { PHOTOS_TRAVEL } from "resources";
 
 export const TRAVEL_2020: Array<ITravelCard> = [
   {
@@ -14,7 +15,8 @@ export const TRAVEL_2020: Array<ITravelCard> = [
       FRIENDS.CAITLIN_MCCAIG,
       FRIENDS.TOM_CHINDA_COUTTS,
       FRIENDS.TONYA_FRANCE
-    ]
+    ],
+    photos: PHOTOS_TRAVEL.OSLO
   }
   // {
   //   title: [COUNTRIES.BELIZE, COUNTRIES.COSTA_RICA],

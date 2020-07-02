@@ -31,3 +31,12 @@ export const EventCardCompanyContainer = styled(FlexRow)(
     }
   `
 );
+
+// export const EventCardPhotosContainer = styled(FlexRow)`
+//   margin-top: 10px;
+//   justify-content: center;
+// `;
+
+export const EventCardPhotosContainer = styled.div(
+  () => CSS.GRID_COLUMN_EQUAL_WIDTHS
+);

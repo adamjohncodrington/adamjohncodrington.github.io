@@ -22,6 +22,7 @@ interface IThemeEventCard {
   eventCard: {
     companySymbol: { color: ColorValue; spaceBetweenSymbols: PxValue };
     notFirstChild: { margin: { top: PxValue } };
+    photo: { size: PxValue };
   };
 }
 

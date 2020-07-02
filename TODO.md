@@ -1,6 +1,7 @@
 # TO DO LIST
 
 - make vinyls constant object with a `purchased` flag that automatically adds vinyls to collection or bucket list, strongly type it
+- break `theme.ts` file into separate files?
 
 ## Testing
 

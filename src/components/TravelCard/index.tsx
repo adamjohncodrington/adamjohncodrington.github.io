@@ -9,7 +9,8 @@ export const TravelCard: React.FC<ITravelCard> = ({
   subtitle,
   favourite,
   company,
-  dates
+  dates,
+  photos
 }) => {
   const TITLE: string = arrayToString({
     stringArray: title.map(({ name }: ILocation) => name),
@@ -31,6 +32,7 @@ export const TravelCard: React.FC<ITravelCard> = ({
       favourite={favourite}
       company={company}
       dateText={dateText}
+      photos={photos}
     />
   );
 };

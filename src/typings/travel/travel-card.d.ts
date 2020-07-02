@@ -6,4 +6,5 @@ interface ITravelCard {
   dates: Array<Date>;
   notAbroad?: boolean;
   company: Array<IFriend>;
+  photos?: Array<IImageSrc>;
 }

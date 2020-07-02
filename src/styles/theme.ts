@@ -19,7 +19,8 @@ const THEME_DISCLOSURE: IThemeDisclosure = {
 const THEME_EVENT_CARD: IThemeEventCard = {
   eventCard: {
     companySymbol: { color: COLORS.boulder, spaceBetweenSymbols: "5px" },
-    notFirstChild: { margin: { top: "5px" } }
+    notFirstChild: { margin: { top: "5px" } },
+    photo: { size: "75px" }
   }
 };
 

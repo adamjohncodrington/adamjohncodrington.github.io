@@ -1,7 +1,8 @@
 import React, { ReactElement, useContext } from "react";
 import { ThemeContext } from "styled-components";
 
-import { GridColumnDiv } from "primitives";
+import { SHOW_EVENT_CARD_PHOTOS } from "config";
+import { GridColumnDiv, SquareImage } from "primitives";
 
 import { RoundedSymbol } from "../RoundedSymbol";
 import { CardTitleBold, CardSubtitleBold } from "../styles";
@@ -10,7 +11,8 @@ import {
   EventCardCountdown,
   EventCardMainContainer,
   EventCardCompanyContainer,
-  EventCardDateText
+  EventCardDateText,
+  EventCardPhotosContainer
 } from "./styles";
 
 export const EventCard: React.FC<IEventCard> = ({
@@ -21,10 +23,10 @@ export const EventCard: React.FC<IEventCard> = ({
   dateText,
   note,
   countdownText,
-  company
+  company,
+  photos
 }) => {
   const theme: ITheme = useContext(ThemeContext);
-  // const daysUntilEvent: number = daysToGo(dates);
 
   const EventCardMain: ReactElement = (
     <EventCardMainContainer data-test="event-card-container">
@@ -77,7 +79,7 @@ export const EventCard: React.FC<IEventCard> = ({
     </EventCardCompanyContainer>
   );
 
-  return (
+  const EventCardWithCompany: ReactElement = (
     <GridColumnDiv
       data-test="event-card-grid-container"
       equalWidthColumns={false}
@@ -85,5 +87,28 @@ export const EventCard: React.FC<IEventCard> = ({
       {EventCardMain}
       {EventCardCompany}
     </GridColumnDiv>
+  );
+
+  if (!photos || !SHOW_EVENT_CARD_PHOTOS) return EventCardWithCompany;
+
+  const EventCardPhotos: ReactElement = (
+    <EventCardPhotosContainer>
+      {photos.map(
+        (photoSrc: IImageSrc, index: number): ReactElement => (
+          <SquareImage
+            key={index}
+            imgSrc={photoSrc}
+            size={theme.eventCard.photo.size}
+          />
+        )
+      )}
+    </EventCardPhotosContainer>
+  );
+
+  return (
+    <>
+      {EventCardWithCompany}
+      {EventCardPhotos}
+    </>
   );
 };
