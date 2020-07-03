@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3090216a5b3b201c4dc19035e651ce89",
+    "revision": "48e595e669e41b1ace021268d16e1375",
     "url": "/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.a515d7e7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "053aa4902fa5cc2f0a1c",
-    "url": "/static/js/main.009d7c73.chunk.js"
+    "revision": "4dc526622f4246ba768a",
+    "url": "/static/js/main.e0585b87.chunk.js"
   },
   {
     "revision": "3cf57b419839acabd216",
@@ -58,6 +58,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "4af35ae2fb1b13c518c3603b7df23033",
     "url": "/static/media/bang-bang-cauliflower.4af35ae2.jpg"
+  },
+  {
+    "revision": "c710ccf4590056e080a5951c5e6c0e2c",
+    "url": "/static/media/banks_goddess.c710ccf4.jpg"
   },
   {
     "revision": "b72779a494cacd04e25fddc238ec498a",
@@ -242,6 +246,22 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "4eca818e3bf5d99cae9b0fc8d9bb7722",
     "url": "/static/media/notepad.4eca818e.svg"
+  },
+  {
+    "revision": "706d5d1a238ca333fa105517e10f23f2",
+    "url": "/static/media/oslo_1.706d5d1a.jpg"
+  },
+  {
+    "revision": "c99b715ca041ad3a61bd7515b0e92932",
+    "url": "/static/media/oslo_2.c99b715c.jpg"
+  },
+  {
+    "revision": "4552776d72a6c33e3d44bd6281acf921",
+    "url": "/static/media/oslo_3.4552776d.jpg"
+  },
+  {
+    "revision": "fe2d268bf3850943a1af0f33fb912bfb",
+    "url": "/static/media/oslo_4.fe2d268b.jpg"
   },
   {
     "revision": "4f07f7324d947faaf84be3d251658418",

@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.009d7c73.chunk.js",
-    "main.js.map": "/static/js/main.009d7c73.chunk.js.map",
+    "main.js": "/static/js/main.e0585b87.chunk.js",
+    "main.js.map": "/static/js/main.e0585b87.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.27f1f56c.js",
     "runtime-main.js.map": "/static/js/runtime-main.27f1f56c.js.map",
     "static/js/2.a515d7e7.chunk.js": "/static/js/2.a515d7e7.chunk.js",
     "static/js/2.a515d7e7.chunk.js.map": "/static/js/2.a515d7e7.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.4d45f03cc7ae891018f34cb5d35f95d6.js": "/precache-manifest.4d45f03cc7ae891018f34cb5d35f95d6.js",
+    "precache-manifest.389fd4e3acc5b2b89d45716f5de57d68.js": "/precache-manifest.389fd4e3acc5b2b89d45716f5de57d68.js",
     "service-worker.js": "/service-worker.js",
     "static/js/2.a515d7e7.chunk.js.LICENSE.txt": "/static/js/2.a515d7e7.chunk.js.LICENSE.txt",
     "static/media/1975-the_a-brief-inquiry-into-online-relationships.jpg": "/static/media/1975-the_a-brief-inquiry-into-online-relationships.450622e7.jpg",
@@ -20,6 +20,7 @@
     "static/media/baked-beans.jpg": "/static/media/baked-beans.b17978e3.jpg",
     "static/media/banana-cake.jpg": "/static/media/banana-cake.ae9fd9b6.jpg",
     "static/media/bang-bang-cauliflower.jpg": "/static/media/bang-bang-cauliflower.4af35ae2.jpg",
+    "static/media/banks_goddess.jpg": "/static/media/banks_goddess.c710ccf4.jpg",
     "static/media/banks_iii.jpg": "/static/media/banks_iii.b72779a4.jpg",
     "static/media/ben-howard_every-kingdom.jpg": "/static/media/ben-howard_every-kingdom.7c15634d.jpg",
     "static/media/beyonce_lemonade.jpg": "/static/media/beyonce_lemonade.50a3a82a.jpg",
@@ -66,6 +67,10 @@
     "static/media/muna_about-u.jpg": "/static/media/muna_about-u.a9a59d8a.jpg",
     "static/media/natalia-kills_perfectionist.jpg": "/static/media/natalia-kills_perfectionist.9a12b633.jpg",
     "static/media/notepad.svg": "/static/media/notepad.4eca818e.svg",
+    "static/media/oslo_1.jpg": "/static/media/oslo_1.706d5d1a.jpg",
+    "static/media/oslo_2.jpg": "/static/media/oslo_2.c99b715c.jpg",
+    "static/media/oslo_3.jpg": "/static/media/oslo_3.4552776d.jpg",
+    "static/media/oslo_4.jpg": "/static/media/oslo_4.fe2d268b.jpg",
     "static/media/palm_tree.svg": "/static/media/palm_tree.4f07f732.svg",
     "static/media/panic-at-the-disco_a-fever-you-cant-sweat-out.jpg": "/static/media/panic-at-the-disco_a-fever-you-cant-sweat-out.6809f186.jpg",
     "static/media/paramore_riot.jpg": "/static/media/paramore_riot.bb10da24.jpg",
@@ -98,6 +103,6 @@
   "entrypoints": [
     "static/js/runtime-main.27f1f56c.js",
     "static/js/2.a515d7e7.chunk.js",
-    "static/js/main.009d7c73.chunk.js"
+    "static/js/main.e0585b87.chunk.js"
   ]
 }
