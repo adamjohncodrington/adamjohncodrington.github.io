@@ -1,5 +1,6 @@
 interface IMusician extends INameFavourite {
   noLongerExists?: boolean;
+  albums?: Array<IVinylCard>;
 }
 
 interface IMusicianCounted extends IMusician, IPastAndFutureCounts {}

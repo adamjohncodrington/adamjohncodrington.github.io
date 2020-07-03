@@ -1,3 +1,5 @@
+const ajc = 123;
+
 export const MUSICIANS: IMusicians = {
   // 123
   "1975_THE": { name: "1975, The" },
