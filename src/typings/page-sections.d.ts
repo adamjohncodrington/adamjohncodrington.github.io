@@ -26,7 +26,7 @@ interface IPageSectionDataTypes {
   recipeCards?: Array<IRecipeCard>;
   theatreCards?: Array<ITheatreCard>;
   travelCards?: Array<ITravelCard>;
-  vinylCards?: Array<IVinylCard>;
+  vinylCards?: Array<IVinylCard | undefined>;
 }
 
 interface IPageSection extends IPageSectionDisclosure {

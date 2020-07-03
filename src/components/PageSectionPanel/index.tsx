@@ -65,11 +65,14 @@ export const PageSectionPanel: React.FC<IPageSectionPanel> = ({
         ))}
 
       {vinylCards &&
-        vinylCards.map((vinylCard: IVinylCard, index: number) => (
-          <Li key={index}>
-            <VinylCard {...vinylCard} />
-          </Li>
-        ))}
+        vinylCards.map(
+          (vinylCard: IVinylCard | undefined, index: number) =>
+            vinylCard && (
+              <Li key={index}>
+                <VinylCard {...vinylCard} />
+              </Li>
+            )
+        )}
 
       {countedListItems &&
         countedListItems.map(

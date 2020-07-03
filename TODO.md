@@ -1,8 +1,5 @@
 # TO DO LIST
 
-- make vinyls constant object with a `purchased` flag that automatically adds vinyls to collection or bucket list, strongly type it
-- break `theme.ts` file into separate files?
-
 ## Testing
 
 - add tests for more utils
@@ -32,7 +29,9 @@
 
 ## Refactoring
 
+- refactor how `CITIES` is generated
 - make all `.svg` files render as `SvgIcon` components
+- break `theme.ts` file into separate files?
 - remove hard-coded recipe image width + implement react-disclosure/react-accessible-accordion?
 - review semantics of page structure, landmarks, accessibility, etc.
 - recipe method array should be `ol` not `ul`?

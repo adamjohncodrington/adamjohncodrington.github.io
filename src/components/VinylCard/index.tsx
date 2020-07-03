@@ -31,14 +31,13 @@ const VinylCardTextContainer = styled.div(
 );
 
 export const VinylCard: React.FC<IVinylCard> = ({
-  artist: { name },
+  artist,
   title,
   year,
   artwork,
   appleMusicUrl
 }) => {
   const theme: ITheme = useContext(ThemeContext);
-  const artist: string = moveTheSuffixToPrefix(name);
 
   return (
     <VinylCardContainer data-test="vinyl-card">
@@ -52,7 +51,7 @@ export const VinylCard: React.FC<IVinylCard> = ({
 
       <VinylCardTextContainer>
         <CardTitleBold>{title}</CardTitleBold>
-        <CardSubtitleBold>{artist}</CardSubtitleBold>
+        <CardSubtitleBold>{moveTheSuffixToPrefix(artist)}</CardSubtitleBold>
 
         <div>{year}</div>
       </VinylCardTextContainer>

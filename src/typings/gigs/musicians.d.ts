@@ -1,12 +1,26 @@
+interface IAlbum {
+  title: string;
+  year: number;
+  artwork: IImageSrc;
+  appleMusicUrl: string;
+  notes?: string;
+  purchased?: boolean;
+  signed?: true;
+}
+
+interface IVinylCard extends IAlbum {
+  artist: string;
+}
+
 interface IMusician extends INameFavourite {
   noLongerExists?: boolean;
-  albums?: Array<IVinylCard>;
+  albums?: Array<IAlbum>;
 }
 
 interface IMusicianCounted extends IMusician, IPastAndFutureCounts {}
 
 interface IMusicians {
-  "1975_THE": IMusician;
+  THE_1975: IMusician;
   "100_GECS": IMusician;
   AURORA: IMusician;
   ACADEMY_IS_THE: IMusician;

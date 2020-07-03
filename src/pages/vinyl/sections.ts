@@ -1,9 +1,9 @@
-import { DATA } from "./data";
+import { FACTORY } from "./factory";
 
 const SECTION_COLLECTION: IPageSection = {
   title: "collection",
-  data: { vinylCards: DATA.COLLECTION },
-  count: DATA.COLLECTION.length,
+  data: { vinylCards: FACTORY.COLLECTION },
+  count: FACTORY.COLLECTION.length,
   onlyHeaderClickable: true,
   autoExpandAlways: true,
   staticIf2Columns: true
@@ -11,8 +11,8 @@ const SECTION_COLLECTION: IPageSection = {
 
 const SECTION_WISHLIST: IPageSection = {
   title: "wish list",
-  data: { vinylCards: DATA.WISH_LIST },
-  count: DATA.WISH_LIST.length,
+  data: { vinylCards: FACTORY.WISH_LIST },
+  count: FACTORY.WISH_LIST.length,
   onlyHeaderClickable: true,
   autoExpandIf2Columns: true,
   staticIf2Columns: true

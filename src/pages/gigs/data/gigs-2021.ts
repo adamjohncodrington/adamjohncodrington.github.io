@@ -31,7 +31,7 @@ export const GIGS_2021: Array<IGigCard> = [
     ticketType: TICKET_TYPES.KABOODLE_ETICKET
   },
   {
-    headline: MUSICIANS["1975_THE"],
+    headline: MUSICIANS.THE_1975,
     venue: MUSIC_VENUES.FINSBURY_PARK,
     dates: [new Date("2021-07-10")],
     company: [

@@ -3,7 +3,7 @@ const requireVinyl = (artist: string, album: string): IImageSrc =>
 
 export const PHOTOS_VINYL: VinylPhotosObject = {
   // 123
-  "1975_THE": {
+  THE_1975: {
     A_BRIEF_INQUIRY_INTO_ONLINE_RELATIONSHIPS: requireVinyl(
       "1975-the",
       "a-brief-inquiry-into-online-relationships"
@@ -25,7 +25,10 @@ export const PHOTOS_VINYL: VinylPhotosObject = {
     THANK_U_NEXT: requireVinyl("ariana-grande", "thank-u-next")
   },
   // B
-  BANKS: { III: requireVinyl("banks", "iii") },
+  BANKS: {
+    GODDESS: requireVinyl("banks", "goddess"),
+    III: requireVinyl("banks", "iii")
+  },
   BEN_HOWARD: { EVERY_KINGDOM: requireVinyl("ben-howard", "every-kingdom") },
   BEYONCE: { LEMONADE: requireVinyl("beyonce", "lemonade") },
   // C
