@@ -1,7 +1,3 @@
-type IImageSrc = string;
+type ISvgIcon = React.FC<React.SVGProps<SVGSVGElement>>;
 
-type IconsStringObject = { [iconName: string]: IImageSrc };
-
-type RecipePhotosObject = { [recipe: string]: IImageSrc };
-
-type VinylPhotosObject = { [artist: string]: { [album: string]: IImageSrc } };
+type IJpgSrc = string;

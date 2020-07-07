@@ -6,7 +6,7 @@ export const DAIRY: IDairy = {
   ...MILK,
 
   BUTTER_VEGAN: {
-    displayText: "dairy-free buttery spread",
+    displayText: "Flora Buttery",
     knownCost: { quantity: 500, measurement: MEASUREMENTS.GRAM, price: 2 }
   },
   CREAM_OAT: {

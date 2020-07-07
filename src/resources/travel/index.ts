@@ -1,15 +1,15 @@
-const requireOsloJpeg = (number: string): IImageSrc =>
+const requireOsloJpg = (number: string): IJpgSrc =>
   require(`./oslo_${number}.jpg`);
 
-const PHOTOS_TRAVEL_OSLO: Array<IImageSrc> = [
-  requireOsloJpeg("1"),
-  requireOsloJpeg("2"),
-  requireOsloJpeg("3"),
-  requireOsloJpeg("4")
+const PHOTOS_TRAVEL_OSLO: Array<IJpgSrc> = [
+  requireOsloJpg("1"),
+  requireOsloJpg("2"),
+  requireOsloJpg("3"),
+  requireOsloJpg("4")
 ];
 
 interface IPhotosTravel {
-  OSLO: Array<IImageSrc>;
+  OSLO: Array<IJpgSrc>;
 }
 
 export const PHOTOS_TRAVEL: IPhotosTravel = {

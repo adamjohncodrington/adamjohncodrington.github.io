@@ -1,5 +1,5 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
-import { PHOTOS_RECIPES } from "resources";
+import { RECIPE_PHOTOS } from "resources";
 
 import { recipeMethodEntries } from "utils";
 
@@ -73,7 +73,7 @@ const method: Array<string> = [
 
 const title: string = "Brownies";
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IImageSrc = PHOTOS_RECIPES.BROWNIES;
+const image: IJpgSrc = RECIPE_PHOTOS.BROWNIES;
 
 export const BROWNIES: IRecipeCard = {
   ingredients,

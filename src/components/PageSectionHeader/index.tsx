@@ -1,59 +1,53 @@
-import React, { useContext } from "react";
-import { ThemeContext } from "styled-components";
+import React from "react";
 
-import { FlexRowGrow, SquareImage } from "primitives";
+import { FlexRowGrow } from "primitives";
 
 import {
   PageSectionHeaderContainer,
   PageSectionTitle,
   PageSectionCount,
-  PageSectionStarredCount
+  PageSectionStarredCount,
+  PageSectionSvgContainer
 } from "./styles";
 
-type PageSectionHeaderProps = {
+interface IPageSectionHeader {
   title: string;
-  icon?: IImageSrc;
   count?: number;
   starCount?: number;
+  SvgIcon?: ISvgIcon;
   dataTest: string;
-};
+}
 
-export const PageSectionHeader: React.FC<PageSectionHeaderProps> = ({
+export const PageSectionHeader: React.FC<IPageSectionHeader> = ({
   title,
-  icon,
+  SvgIcon,
   count,
   starCount,
   dataTest
-}) => {
-  const theme: ITheme = useContext(ThemeContext);
+}) => (
+  <PageSectionHeaderContainer data-test={dataTest}>
+    <FlexRowGrow data-test="section-header-title-and-counts">
+      <PageSectionTitle data-test="section-header-title">
+        {title}
+      </PageSectionTitle>
 
-  return (
-    <PageSectionHeaderContainer data-test={dataTest}>
-      <FlexRowGrow data-test="section-header-title-and-counts">
-        <PageSectionTitle data-test="section-header-title">
-          {title}
-        </PageSectionTitle>
-
-        {count && count > 1 && (
-          <PageSectionCount data-test="section-header-count">
-            {count}
-          </PageSectionCount>
-        )}
-
-        {starCount && starCount > 0 && (
-          <PageSectionStarredCount data-test="section-header-starred-count">
-            {starCount}
-          </PageSectionStarredCount>
-        )}
-      </FlexRowGrow>
-
-      {icon && (
-        <SquareImage
-          data-test="section-header-icon"
-          imgSrc={icon}
-          size={theme.pageSection.icon.size}
-        />
+      {count && count > 1 && (
+        <PageSectionCount data-test="section-header-count">
+          {count}
+        </PageSectionCount>
       )}
-    </PageSectionHeaderContainer>
-  );
-};
+
+      {starCount && starCount > 0 && (
+        <PageSectionStarredCount data-test="section-header-starred-count">
+          {starCount}
+        </PageSectionStarredCount>
+      )}
+    </FlexRowGrow>
+
+    {SvgIcon && (
+      <PageSectionSvgContainer>
+        <SvgIcon data-test="section-header-icon" />
+      </PageSectionSvgContainer>
+    )}
+  </PageSectionHeaderContainer>
+);

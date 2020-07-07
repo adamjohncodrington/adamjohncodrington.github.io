@@ -1,7 +1,7 @@
 interface IPage {
   title: string;
   path: string;
-  SvgIcon: React.FC<React.SVGProps<SVGSVGElement>>;
+  SvgIcon: ISvgIcon;
   sections: Array<IPageSection>;
   count?: number;
   hide?: boolean;

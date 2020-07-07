@@ -51,7 +51,7 @@ const THEME_PAGE_SECTION: IThemePageSection = {
     boxShadow: `0 1px 2px ${rgba(COLORS.gray, 0.5)}`,
     count: { margin: { left: "5px" } },
     header: { padding: { vertical: "12px" } },
-    icon: { padding: { top: "2px" }, size: "34px" },
+    icon: { size: "32px" },
     margin: { bottom: "20px" },
     padding: { horizontal: "12px", bottom: "5px" },
     panelList: {

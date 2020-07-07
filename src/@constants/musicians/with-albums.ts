@@ -1,11 +1,56 @@
-import { PHOTOS_VINYL } from "resources";
+import {
+  Jpg_1975_BriefInquiry,
+  Jpg_Adele_19,
+  Jpg_AllieX_SuperSunset,
+  Jpg_Banks_III,
+  Jpg_Haim_WIMPIII,
+  Jpg_Leon_Leon,
+  Jpg_FkaTwigs_Magdalene,
+  Jpg_Muna_AU,
+  Jpg_TaylorSwift_1989,
+  Jpg_Lorde_PH,
+  Jpg_LanaDelRey_BTD,
+  Jpg_Marina_EH,
+  Jpg_Florence_Lungs,
+  Jpg_ArcticMonkeys_FWN,
+  Jpg_AmyWinehouse_BTB,
+  Jpg_KateNash_MOB,
+  Jpg_CharliXCX_HIFN,
+  Jpg_DuaLipa_FN,
+  Jpg_LennonStella_TTO,
+  Jpg_ArianaGrande_TUN,
+  Jpg_CarolinePolachek_Pang,
+  Jpg_KimPetras_Clarity,
+  Jpg_GeorgeFitzgerald_ATMB,
+  Jpg_JonHopkins_Singularity,
+  Jpg_Lany_MN,
+  Jpg_Sophie_OOEPUI,
+  Jpg_TroyeSivan_Bloom,
+  Jpg_Pvris_AWKOHAWNOH,
+  Jpg_Beyonce_Lemonade,
+  Jpg_Tourist_U,
+  Jpg_Grimes_ArtAngels,
+  Jpg_RynWeaver_Fool,
+  Jpg_BenHoward_EK,
+  Jpg_LadyGaga_BTW,
+  Jpg_Rihanna_RR,
+  Jpg_Lissie_CAT,
+  Jpg_KatyPerry_OOTB,
+  Jpg_Panic_AFYCSO,
+  Jpg_Paramore_Riot,
+  Jpg_SufajnStevens_CAL,
+  Jpg_NataliaKills_P,
+  Jpg_Lane8_Rise,
+  Jpg_Caribou_OurLove,
+  Jpg_EllieGoulding_Halcyon
+} from "resources";
 
 export const ALLIE_X: IMusician = {
   name: "Allie X",
   albums: [
     {
       title: "Super Sunset",
-      artwork: PHOTOS_VINYL.ALLIE_X.SUPER_SUNSET,
+      artwork: Jpg_AllieX_SuperSunset,
       appleMusicUrl: "https://music.apple.com/gb/album/super-sunset/1421851140",
       year: 2018,
       purchased: true,
@@ -18,19 +63,13 @@ export const BANKS: IMusician = {
   name: "Banks",
   albums: [
     {
-      artwork: PHOTOS_VINYL.BANKS.III,
       appleMusicUrl: "https://music.apple.com/gb/album/iii/1467547466",
       title: "III",
+      artwork: Jpg_Banks_III,
       year: 2019,
       purchased: true,
       signed: true
     }
-    // {
-    //   artwork: PHOTOS_VINYL.BANKS.GODDESS,
-    //   appleMusicUrl: "https://music.apple.com/gb/album/goddess/1442651979",
-    //   title: "Goddess",
-    //   year: 2014
-    // }
   ]
 };
 
@@ -38,12 +77,12 @@ export const HAIM: IMusician = {
   name: "HAIM",
   albums: [
     {
-      artwork: PHOTOS_VINYL.HAIM.WOMEN_IN_MUSIC_PT_III,
       title: "Women In Music Pt. III",
       appleMusicUrl:
         "https://music.apple.com/gb/album/women-in-music-pt-iii/1500020581",
       year: 2020,
       purchased: true,
+      artwork: Jpg_Haim_WIMPIII,
       signed: true
     }
   ]
@@ -54,10 +93,10 @@ export const LEON: IMusician = {
   name: leon,
   albums: [
     {
-      artwork: PHOTOS_VINYL.LEON.LEON,
       title: leon,
       appleMusicUrl: "https://music.apple.com/gb/album/l%C3%A9on/1450257286",
       year: 2019,
+      artwork: Jpg_Leon_Leon,
       purchased: true
     }
   ]
@@ -68,9 +107,9 @@ export const FKA_TWIGS: IMusician = {
   albums: [
     {
       title: "Magdalene",
-      artwork: PHOTOS_VINYL.FKA_TWIGS.MAGDALENE,
       appleMusicUrl: "https://music.apple.com/gb/album/magdalene/1477652618",
       year: 2019,
+      artwork: Jpg_FkaTwigs_Magdalene,
       purchased: true
     }
   ]
@@ -81,7 +120,7 @@ export const THE_1975: IMusician = {
   albums: [
     {
       title: "A Brief Inquiry Into Online Relationships",
-      artwork: PHOTOS_VINYL.THE_1975.A_BRIEF_INQUIRY_INTO_ONLINE_RELATIONSHIPS,
+      artwork: Jpg_1975_BriefInquiry,
       appleMusicUrl:
         "https://music.apple.com/gb/album/a-brief-inquiry-into-online-relationships/1435546528",
       year: 2018,
@@ -95,9 +134,9 @@ export const MUNA: IMusician = {
   albums: [
     {
       title: "About U",
+      artwork: Jpg_Muna_AU,
       appleMusicUrl: "https://music.apple.com/gb/album/about-u/1171832662",
       year: 2017,
-      artwork: PHOTOS_VINYL.MUNA.ABOUT_U,
       purchased: true
     }
   ]
@@ -108,9 +147,9 @@ export const TAYLOR_SWIFT: IMusician = {
   albums: [
     {
       title: "1989",
+      artwork: Jpg_TaylorSwift_1989,
       year: 2014,
       appleMusicUrl: "https://music.apple.com/gb/album/1989/1445888258",
-      artwork: PHOTOS_VINYL.TAYLOR_SWIFT["1989"],
       purchased: true
     }
   ]
@@ -123,7 +162,7 @@ export const LORDE: IMusician = {
       title: "Pure Heroine",
       appleMusicUrl: "https://music.apple.com/gb/album/pure-heroine/1440818584",
       year: 2013,
-      artwork: PHOTOS_VINYL.LORDE.PURE_HEROINE,
+      artwork: Jpg_Lorde_PH,
       purchased: true
     }
   ]
@@ -135,9 +174,9 @@ export const LANA_DEL_REY: IMusician = {
   albums: [
     {
       title: "Born to Die",
-      artwork: PHOTOS_VINYL.LANA_DEL_REY.BORN_TO_DIE,
       appleMusicUrl: "https://music.apple.com/gb/album/born-to-die/1440809572",
       year: 2012,
+      artwork: Jpg_LanaDelRey_BTD,
       purchased: true
     }
   ]
@@ -149,9 +188,9 @@ export const MARINA: IMusician = {
     {
       title: "Electra Heart",
       purchased: true,
+      artwork: Jpg_Marina_EH,
       appleMusicUrl: "https://music.apple.com/gb/album/electra-heart/612448612",
-      year: 2012,
-      artwork: PHOTOS_VINYL.MARINA.ELECTRA_HEART
+      year: 2012
     }
   ]
 };
@@ -161,9 +200,9 @@ export const FLORENCE_AND_THE_MACHINE: IMusician = {
   albums: [
     {
       title: "Lungs",
+      artwork: Jpg_Florence_Lungs,
       purchased: true,
       appleMusicUrl: "https://music.apple.com/gb/album/lungs/1440982056",
-      artwork: PHOTOS_VINYL.FLORENCE_AND_THE_MACHINE.LUNGS,
       year: 2009
     }
   ]
@@ -173,8 +212,8 @@ export const ADELE: IMusician = {
   name: "Adele",
   albums: [
     {
-      artwork: PHOTOS_VINYL.ADELE["19"],
       title: "19",
+      artwork: Jpg_Adele_19,
       appleMusicUrl: "https://music.apple.com/gb/album/19/269864356",
       year: 2008,
       purchased: true
@@ -188,10 +227,10 @@ export const ARCTIC_MONKEYS: IMusician = {
     {
       title: "Favourite Worst Nightmare",
       purchased: true,
-      artwork: PHOTOS_VINYL.ARCTIC_MONKEYS.FAVOURITE_WORST_NIGHTMARE,
       appleMusicUrl:
         "https://music.apple.com/gb/album/favourite-worst-nightmare/251126923",
-      year: 2007
+      year: 2007,
+      artwork: Jpg_ArcticMonkeys_FWN
     }
   ]
 };
@@ -202,7 +241,7 @@ export const AMY_WINEHOUSE: IMusician = {
   albums: [
     {
       title: "Back to Black",
-      artwork: PHOTOS_VINYL.AMY_WINEHOUSE.BACK_TO_BLACK,
+      artwork: Jpg_AmyWinehouse_BTB,
       appleMusicUrl:
         "https://music.apple.com/gb/album/back-to-black/1006515289",
       year: 2006,
@@ -216,9 +255,9 @@ export const KATE_NASH: IMusician = {
   albums: [
     {
       title: "Made of Bricks",
+      artwork: Jpg_KateNash_MOB,
       appleMusicUrl:
         "https://music.apple.com/gb/album/made-of-bricks-bonus-track-version/1440791847",
-      artwork: PHOTOS_VINYL.KATE_NASH.MADE_OF_BRICKS,
       year: 2007,
       purchased: true
     }
@@ -231,9 +270,9 @@ export const CHARLI_XCX: IMusician = {
     {
       title: "how i'm feeling now",
       year: 2020,
+      artwork: Jpg_CharliXCX_HIFN,
       appleMusicUrl:
-        "https://music.apple.com/gb/album/how-im-feeling-now/1513162098",
-      artwork: PHOTOS_VINYL.CHARLI_XCX.HOW_IM_FEELING_NOW
+        "https://music.apple.com/gb/album/how-im-feeling-now/1513162098"
     }
   ]
 };
@@ -243,10 +282,10 @@ export const DUA_LIPA: IMusician = {
   albums: [
     {
       title: "Future Nostalgia",
+      artwork: Jpg_DuaLipa_FN,
       appleMusicUrl:
         "https://music.apple.com/gb/album/future-nostalgia/1495799403",
-      year: 2020,
-      artwork: PHOTOS_VINYL.DUA_LIPA.FUTURE_NOSTALGIA
+      year: 2020
     }
   ]
 };
@@ -256,10 +295,10 @@ export const LENNON_STELLA: IMusician = {
   albums: [
     {
       title: "Three. Two. One.",
+      artwork: Jpg_LennonStella_TTO,
       appleMusicUrl:
         "https://music.apple.com/gb/album/three-two-one/1501262697",
-      year: 2020,
-      artwork: PHOTOS_VINYL.LENNON_STELLA.THREE_TWO_ONE
+      year: 2020
     }
   ]
 };
@@ -269,9 +308,9 @@ export const ARIANA_GRANDE: IMusician = {
   albums: [
     {
       title: "thank u, next",
+      artwork: Jpg_ArianaGrande_TUN,
       appleMusicUrl: "https://music.apple.com/gb/album/thank-u-next/1450330588",
-      year: 2019,
-      artwork: PHOTOS_VINYL.ARIANA_GRANDE.THANK_U_NEXT
+      year: 2019
     }
   ]
 };
@@ -281,9 +320,9 @@ export const CAROLINE_POLACHEK: IMusician = {
   albums: [
     {
       title: "Pang",
+      artwork: Jpg_CarolinePolachek_Pang,
       appleMusicUrl: "https://music.apple.com/gb/album/pang/1482421639",
       year: 2019,
-      artwork: PHOTOS_VINYL.CAROLINE_POLACHEK.PANG,
       purchased: true
     }
   ]
@@ -294,9 +333,9 @@ export const KIM_PETRAS: IMusician = {
   albums: [
     {
       title: "Clarity",
+      artwork: Jpg_KimPetras_Clarity,
       year: 2019,
       appleMusicUrl: "https://music.apple.com/gb/album/clarity/1469298192",
-      artwork: PHOTOS_VINYL.KIM_PETRAS.CLARITY,
       purchased: true
     }
   ]
@@ -307,10 +346,10 @@ export const GEORGE_FITZGERALD: IMusician = {
   albums: [
     {
       title: "All That Must Be",
+      artwork: Jpg_GeorgeFitzgerald_ATMB,
       appleMusicUrl:
         "https://music.apple.com/gb/album/all-that-must-be/1322664114",
-      year: 2018,
-      artwork: PHOTOS_VINYL.GEORGE_FITZGERALD.ALL_THAT_MUST_BE
+      year: 2018
     }
   ]
 };
@@ -320,9 +359,9 @@ export const JON_HOPKINS: IMusician = {
   albums: [
     {
       title: "Singularity",
+      artwork: Jpg_JonHopkins_Singularity,
       appleMusicUrl: "https://music.apple.com/gb/album/singularity/1349736537",
-      year: 2018,
-      artwork: PHOTOS_VINYL.JON_HOPKINS.SINGULARITY
+      year: 2018
     }
   ]
 };
@@ -332,10 +371,10 @@ export const LANY: IMusician = {
   albums: [
     {
       title: "Malibu Nights",
+      artwork: Jpg_Lany_MN,
       appleMusicUrl:
         "https://music.apple.com/gb/album/malibu-nights/1435482172",
-      year: 2018,
-      artwork: PHOTOS_VINYL.LANY.MALIBU_NIGHTS
+      year: 2018
     }
   ]
 };
@@ -345,10 +384,10 @@ export const SOPHIE: IMusician = {
   albums: [
     {
       title: "Oil of Every Pearl's Un-Insides",
+      artwork: Jpg_Sophie_OOEPUI,
       appleMusicUrl:
         "https://music.apple.com/gb/album/oil-of-every-pearls-un-insides/1395045797",
-      year: 2018,
-      artwork: PHOTOS_VINYL.SOPHIE.OIL_OF_EVERY_PEARLS_UNINSIDES
+      year: 2018
     }
   ]
 };
@@ -358,9 +397,9 @@ export const TROYE_SIVAN: IMusician = {
   albums: [
     {
       title: "Bloom",
+      artwork: Jpg_TroyeSivan_Bloom,
       appleMusicUrl: "https://music.apple.com/gb/album/bloom/1396292262",
-      year: 2018,
-      artwork: PHOTOS_VINYL.TROYE_SIVAN.BLOOM
+      year: 2018
     }
   ]
 };
@@ -370,9 +409,9 @@ export const PVRIS: IMusician = {
   albums: [
     {
       title: "All We Know of Heaven, All We Need of Hell",
+      artwork: Jpg_Pvris_AWKOHAWNOH,
       appleMusicUrl:
         "https://music.apple.com/gb/album/all-we-know-of-heaven-all-we-need-of-hell/1227528237",
-      artwork: PHOTOS_VINYL.PVRIS.ALL_WE_KNOW_OF_HEAVEN_ALL_WE_NEED_OF_HELL,
       year: 2017
     }
   ]
@@ -383,8 +422,8 @@ export const BEYONCE: IMusician = {
   albums: [
     {
       title: "Lemonade",
+      artwork: Jpg_Beyonce_Lemonade,
       appleMusicUrl: "https://music.apple.com/gb/album/lemonade/1460430561",
-      artwork: PHOTOS_VINYL.BEYONCE.LEMONADE,
       year: 2016
     }
   ]
@@ -396,7 +435,7 @@ export const TOURIST: IMusician = {
     {
       appleMusicUrl: "https://music.apple.com/gb/album/u/1086160489",
       title: "U",
-      artwork: PHOTOS_VINYL.TOURIST.U,
+      artwork: Jpg_Tourist_U,
       year: 2016
     }
   ]
@@ -407,8 +446,8 @@ export const GRIMES: IMusician = {
   albums: [
     {
       title: "Art Angels",
+      artwork: Jpg_Grimes_ArtAngels,
       appleMusicUrl: "https://music.apple.com/gb/album/art-angels/1051022913",
-      artwork: PHOTOS_VINYL.GRIMES.ART_ANGELS,
       year: 2015,
       purchased: true
     }
@@ -421,10 +460,9 @@ export const RYN_WEAVER: IMusician = {
   albums: [
     {
       title: "The Fool",
-
+      artwork: Jpg_RynWeaver_Fool,
       year: 2015,
-      appleMusicUrl: "https://music.apple.com/gb/album/the-fool/1442781012",
-      artwork: PHOTOS_VINYL.RYN_WEAVER.THE_FOOL
+      appleMusicUrl: "https://music.apple.com/gb/album/the-fool/1442781012"
     }
   ]
 };
@@ -433,9 +471,9 @@ export const ELLIE_GOULDING: IMusician = {
   name: "Ellie Goulding",
   albums: [
     {
+      artwork: Jpg_EllieGoulding_Halcyon,
       title: "Halcyon",
       appleMusicUrl: "https://music.apple.com/gb/album/halcyon/1442722757",
-      artwork: PHOTOS_VINYL.ELLIE_GOULDING.HALCYON,
       year: 2012
     }
   ]
@@ -445,9 +483,9 @@ export const BEN_HOWARD: IMusician = {
   name: "Ben Howard",
   albums: [
     {
+      artwork: Jpg_BenHoward_EK,
       appleMusicUrl:
         "https://music.apple.com/gb/album/every-kingdom/1440804636",
-      artwork: PHOTOS_VINYL.BEN_HOWARD.EVERY_KINGDOM,
       title: "Every Kingdom",
       year: 2011
     }
@@ -458,10 +496,10 @@ export const LADY_GAGA: IMusician = {
   name: "Lady Gaga",
   albums: [
     {
+      artwork: Jpg_LadyGaga_BTW,
       title: "Born This Way",
       appleMusicUrl:
         "https://music.apple.com/gb/album/born-this-way-special-edition/1440857161",
-      artwork: PHOTOS_VINYL.LADY_GAGA.BORN_THIS_WAY,
       year: 2011
     }
   ]
@@ -471,9 +509,9 @@ export const RIHANNA: IMusician = {
   name: "Rihanna",
   albums: [
     {
+      artwork: Jpg_Rihanna_RR,
       title: "Rated R",
       appleMusicUrl: "https://music.apple.com/gb/album/rated-r/338914834",
-      artwork: PHOTOS_VINYL.RIHANNA.RATED_R,
       year: 2009
     }
   ]
@@ -483,7 +521,7 @@ export const LISSIE: IMusician = {
   name: "Lissie",
   albums: [
     {
-      artwork: PHOTOS_VINYL.LISSIE.CATCHING_A_TIGER,
+      artwork: Jpg_Lissie_CAT,
       appleMusicUrl:
         "https://music.apple.com/gb/album/catching-a-tiger/372594767",
       title: "Catching a Tiger",
@@ -496,10 +534,10 @@ export const KATY_PERRY: IMusician = {
   name: "Katy Perry",
   albums: [
     {
+      artwork: Jpg_KatyPerry_OOTB,
       title: "One of the Boys",
       appleMusicUrl:
         "https://music.apple.com/gb/album/one-of-the-boys/715853053",
-      artwork: PHOTOS_VINYL.KATY_PERRY.ONE_OF_THE_BOYS,
       year: 2008
     }
   ]
@@ -509,10 +547,10 @@ export const PANIC_AT_THE_DISCO: IMusician = {
   name: "Panic! At the Disco",
   albums: [
     {
+      artwork: Jpg_Panic_AFYCSO,
       title: "A Fever You Can't Sweat Out",
       appleMusicUrl:
         "https://music.apple.com/gb/album/a-fever-you-cant-sweat-out/128167002",
-      artwork: PHOTOS_VINYL.PANIC_AT_THE_DISCO.A_FEVER_YOU_CANT_SWEAT_OUT,
       year: 2005
     }
   ]
@@ -522,9 +560,9 @@ export const PARAMORE: IMusician = {
   name: "Paramore",
   albums: [
     {
+      artwork: Jpg_Paramore_Riot,
       title: "Riot!",
       appleMusicUrl: "https://music.apple.com/gb/album/riot/604804755",
-      artwork: PHOTOS_VINYL.PARAMORE.RIOT,
       year: 2007
     }
   ]
@@ -534,7 +572,7 @@ export const SUFJAN_STEVENS: IMusician = {
   name: "Sufjan Stevens",
   albums: [
     {
-      artwork: PHOTOS_VINYL.SUFJAN_STEVENS.CARRIE_AND_LOWELL,
+      artwork: Jpg_SufajnStevens_CAL,
       appleMusicUrl: "https://music.apple.com/gb/album/carrie-lowell/955572616",
       title: "Carrie & Lowell",
       year: 2015,
@@ -548,11 +586,10 @@ export const NATALIA_KILLS: IMusician = {
   noLongerExists: true,
   albums: [
     {
+      artwork: Jpg_NataliaKills_P,
       title: "Perfectionist",
       year: 2011,
-      appleMusicUrl:
-        "https://music.apple.com/gb/album/perfectionist/1443164533",
-      artwork: PHOTOS_VINYL.NATALIA_KILLS.PERFECTIONIST
+      appleMusicUrl: "https://music.apple.com/gb/album/perfectionist/1443164533"
     }
   ]
 };
@@ -561,10 +598,10 @@ export const LANE_8: IMusician = {
   name: "Lane 8",
   albums: [
     {
+      artwork: Jpg_Lane8_Rise,
       title: "Rise",
       appleMusicUrl: "https://music.apple.com/gb/album/rise/988732595",
-      year: 2015,
-      artwork: PHOTOS_VINYL.LANE_8.RISE
+      year: 2015
     }
   ]
 };
@@ -573,8 +610,8 @@ export const CARIBOU: IMusician = {
   name: "Caribou",
   albums: [
     {
+      artwork: Jpg_Caribou_OurLove,
       appleMusicUrl: "https://music.apple.com/gb/album/our-love/1276611236",
-      artwork: PHOTOS_VINYL.CARIBOU.OUR_LOVE,
       title: "Our Love",
       year: 2014
     }

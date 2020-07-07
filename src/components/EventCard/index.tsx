@@ -94,7 +94,7 @@ export const EventCard: React.FC<IEventCard> = ({
   const EventCardPhotos: ReactElement = (
     <EventCardPhotosContainer>
       {photos.map(
-        (photoSrc: IImageSrc, index: number): ReactElement => (
+        (photoSrc: IJpgSrc, index: number): ReactElement => (
           <SquareImage
             key={index}
             imgSrc={photoSrc}

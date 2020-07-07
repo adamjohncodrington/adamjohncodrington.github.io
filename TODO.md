@@ -4,13 +4,6 @@
 
 - add tests for more utils
 
-## TypeScript
-
-- strongly-type thse:
-  - type IconsStringObject = { [iconName: string]: IImageSrc };
-  - type RecipePhotosObject = { [recipe: string]: IImageSrc };
-  - type VinylPhotosObject = { [artist: string]: { [album: string]: IImageSrc } };
-
 ## New features
 
 - friends section reveals which gigs you saw with them
@@ -30,8 +23,6 @@
 ## Refactoring
 
 - refactor how `CITIES` is generated
-- make all `.svg` files render as `SvgIcon` components
-- break `theme.ts` file into separate files?
 - remove hard-coded recipe image width + implement react-disclosure/react-accessible-accordion?
 - review semantics of page structure, landmarks, accessibility, etc.
 - recipe method array should be `ol` not `ul`?

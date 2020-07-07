@@ -14,12 +14,12 @@ const StyledNav = styled.nav(
   `
 );
 
-interface IStyledLink extends IThemeProp {
+interface IStyledRouterLink extends IThemeProp {
   color?: ColorValue;
 }
 
 const StyledRouterLink = styled(RouterLink)(
-  ({ color, theme: { navBar } }: IStyledLink) => css`
+  ({ color, theme: { navBar } }: IStyledRouterLink) => css`
     display: flex;
     justify-content: center;
 

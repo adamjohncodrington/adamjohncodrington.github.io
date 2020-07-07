@@ -23,3 +23,12 @@ export const PageSectionStarredCount = styled(PageSectionCount)(
     opacity: ${fadedOpacity};
   `
 );
+
+export const PageSectionSvgContainer = styled.div(
+  ({ theme: { pageSection } }: IThemeProp) => css`
+    svg {
+      height: ${pageSection.icon.size};
+      width: ${pageSection.icon.size};
+    }
+  `
+);

@@ -1,5 +1,12 @@
 import { PAGE_SECTION_TITLES } from "@constants";
-import { SVG_ICON_STRINGS } from "resources";
+import {
+  SvgArtist,
+  SvgStars,
+  SvgPeaceSign,
+  SvgFriends,
+  SvgNotepad,
+  SvgStadium
+} from "resources";
 
 import { FACTORY } from "./factory";
 import { DATA } from "./data";
@@ -7,40 +14,41 @@ import { isInFuture } from "utils";
 
 const SECTION_BUCKET_LIST: IPageSection = {
   title: PAGE_SECTION_TITLES.BUCKET_LIST,
-  icon: SVG_ICON_STRINGS.STARS,
+  SvgIcon: SvgStars,
   data: { countedListItems: FACTORY.BUCKET_LIST },
   count: FACTORY.BUCKET_LIST.length
 };
 
 const SECTION_FESTIVALS: IPageSection = {
+  SvgIcon: SvgPeaceSign,
   title: "Festivals",
-  icon: SVG_ICON_STRINGS.PEACE_SIGN,
   data: { countedListItems: FACTORY.FESTIVALS }
 };
 
 const SECTION_ARTISTS: IPageSection = {
   title: "Artists",
-  icon: SVG_ICON_STRINGS.ARTIST,
+  SvgIcon: SvgArtist,
   data: { countedListItems: FACTORY.MUSICIANS },
   count: FACTORY.MUSICIANS.length
 };
 
 const SECTION_FRIENDS_GIGS: IPageSection = {
+  SvgIcon: SvgFriends,
   title: PAGE_SECTION_TITLES.FRIENDS,
-  icon: SVG_ICON_STRINGS.PEOPLE,
+  onlyHeaderClickable: true,
   data: { countedListItems: FACTORY.FRIENDS }
 };
 
 const SECTION_UP_NEXT_GIGS: IPageSection = {
+  SvgIcon: SvgNotepad,
   title: PAGE_SECTION_TITLES.UP_NEXT,
-  icon: SVG_ICON_STRINGS.NOTEPAD,
   data: { gigCards: FACTORY.UP_NEXT },
   count: FACTORY.UP_NEXT.length
 };
 
 const SECTION_VENUES_GIGS: IPageSection = {
+  SvgIcon: SvgStadium,
   title: "Venues",
-  icon: SVG_ICON_STRINGS.STADIUM,
   data: { countedListItems: FACTORY.VENUES },
   count: FACTORY.VENUES.length
 };

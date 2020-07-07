@@ -1,5 +1,5 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
-import { PHOTOS_RECIPES } from "resources";
+import { RECIPE_PHOTOS } from "resources";
 
 import { recipeMethodEntries, calculateRecipeCost } from "utils";
 
@@ -83,7 +83,7 @@ const serveWith: Array<Array<IServeWithItem>> = [
 const title: string = "Bang Bang Cauliflower";
 const makes: IRecipeMakes = { quantity: 2, measurement: MEASUREMENTS.PORTION };
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IImageSrc = PHOTOS_RECIPES.BANG_BANG_CAULIFLOWER;
+const image: IJpgSrc = RECIPE_PHOTOS.BANG_BANG_CAULIFLOWER;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;

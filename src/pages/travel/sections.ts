@@ -1,60 +1,69 @@
 import { PAGE_SECTION_TITLES } from "@constants";
-import { SVG_ICON_STRINGS } from "resources";
+import {
+  SvgStars,
+  SvgFlag,
+  SvgCity,
+  SvgFriends,
+  SvgPalmTree,
+  SvgNotepad,
+  SvgMapPin,
+  SvgRollerCoaster
+} from "resources";
 import { isInFuture } from "utils";
 
 import { DATA } from "./data";
 import { FACTORY } from "./factory";
 
 const SECTION_BUCKET_LIST_TRAVEL: IPageSection = {
+  SvgIcon: SvgStars,
   title: PAGE_SECTION_TITLES.BUCKET_LIST,
-  icon: SVG_ICON_STRINGS.STARS,
   data: { countedListItems: FACTORY.BUCKET_LIST }
 };
 
 const SECTION_CITIES: IPageSection = {
+  SvgIcon: SvgCity,
   title: "Cities",
-  icon: SVG_ICON_STRINGS.CITY,
   data: { countedListItems: FACTORY.CITIES },
   count: FACTORY.CITIES.length,
   starCount: FACTORY.CITIES.filter(city => city.star).length
 };
 
 const SECTION_COUNTRIES: IPageSection = {
+  SvgIcon: SvgFlag,
   title: "Countries",
-  icon: SVG_ICON_STRINGS.FLAG,
   data: { countedListItems: FACTORY.COUNTRIES },
   count: FACTORY.COUNTRIES.length
 };
 
 const SECTION_FRIENDS_TRAVEL: IPageSection = {
+  SvgIcon: SvgFriends,
   title: PAGE_SECTION_TITLES.FRIENDS,
-  icon: SVG_ICON_STRINGS.PEOPLE,
   data: { countedListItems: FACTORY.FRIENDS }
 };
 
 const SECTION_HIGHLIGHTS: IPageSection = {
+  SvgIcon: SvgMapPin,
   title: "Highlights",
-  icon: SVG_ICON_STRINGS.MAP_PIN,
   data: { countedListItems: FACTORY.HIGHLIGHTS }
 };
 
 const SECTION_ISLANDS: IPageSection = {
+  SvgIcon: SvgPalmTree,
   title: "Islands",
-  icon: SVG_ICON_STRINGS.PALM_TREE,
   data: { countedListItems: FACTORY.ISLANDS }
 };
 
 const SECTION_THEME_PARKS: IPageSection = {
+  SvgIcon: SvgRollerCoaster,
   title: "Theme Parks",
-  icon: SVG_ICON_STRINGS.ROLLER_COASTER,
   hide: true,
   data: { countedListItems: FACTORY.THEME_PARKS },
   count: FACTORY.THEME_PARKS.length
 };
 
 const SECTION_UP_NEXT_TRAVEL: IPageSection = {
+  SvgIcon: SvgNotepad,
   title: PAGE_SECTION_TITLES.UP_NEXT,
-  icon: SVG_ICON_STRINGS.NOTEPAD,
   data: { travelCards: FACTORY.UP_NEXT }
 };
 

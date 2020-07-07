@@ -53,10 +53,7 @@ interface IThemePageSection {
     boxShadow: BoxShadowValue;
     count: { margin: { left: PxValue } };
     header: { padding: { vertical: PxValue } };
-    icon: {
-      padding: { top: PxValue };
-      size: PxValue;
-    };
+    icon: { size: PxValue };
     margin: { bottom: PxValue };
     padding: { horizontal: PxValue; bottom: PxValue };
     panelList: {

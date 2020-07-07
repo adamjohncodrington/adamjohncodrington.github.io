@@ -1,4 +1,4 @@
-export * from "./recipes";
+export * from "./album-artwork";
+export * from "./recipe-photos";
 export * from "./svg";
 export * from "./travel";
-export * from "./vinyl";

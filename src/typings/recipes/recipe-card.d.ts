@@ -29,7 +29,7 @@ interface IRecipeMakes {
 interface IRecipeCard {
   title: string;
   makes?: IRecipeMakes;
-  image?: IImageSrc;
+  image?: IJpgSrc;
   ingredients: Array<Array<IRecipeIngredient>>;
   serveWith?: Array<Array<IServeWithItem>>;
   diet: IRecipeDiet;

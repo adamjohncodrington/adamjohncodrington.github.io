@@ -1,38 +1,19 @@
-const requireSvg = (icon: string): IImageSrc => require(`./${icon}.svg`);
-
-export const SVG_ICON_STRINGS: IconsStringObject = {
-  // A
-  ARTIST: requireSvg("artist"),
-  // B
-  BOOK: requireSvg("book"),
-  BRAIN: requireSvg("brain"),
-  // C
-  CAKE: requireSvg("cake"),
-  CAMERA: requireSvg("camera"),
-  CITY: requireSvg("city"),
-  // F
-  FLAG: requireSvg("flag"),
-  // M
-  MAP_PIN: requireSvg("map_pin"),
-  // N
-  NOTEPAD: requireSvg("notepad"),
-  // P
-  PALM_TREE: requireSvg("palm_tree"),
-  PEACE_SIGN: requireSvg("peace_sign"),
-  PEOPLE: requireSvg("people"),
-  // R
-  ROLLER_COASTER: requireSvg("roller_coaster"),
-  // S
-  STADIUM: requireSvg("stadium"),
-  STARS: requireSvg("stars"),
-  // T
-  TENT: requireSvg("tent"),
-  THEATRE: requireSvg("theatre"),
-  TOWN_HALL: requireSvg("town_hall")
-};
-
+export { ReactComponent as SvgArtist } from "./artist.svg";
+export { ReactComponent as SvgBook } from "./book.svg";
+export { ReactComponent as SvgBrain } from "./brain.svg";
+export { ReactComponent as SvgCity } from "./city.svg";
+export { ReactComponent as SvgFlag } from "./flag.svg";
+export { ReactComponent as SvgFriends } from "./people.svg";
+export { ReactComponent as SvgMapPin } from "./map-pin.svg";
 export { ReactComponent as SvgMicrophone } from "./microphone.svg";
+export { ReactComponent as SvgNotepad } from "./notepad.svg";
+export { ReactComponent as SvgPalmTree } from "./palm-tree.svg";
+export { ReactComponent as SvgPeaceSign } from "./peace-sign.svg";
+export { ReactComponent as SvgRollerCoaster } from "./roller-coaster.svg";
+export { ReactComponent as SvgStadium } from "./stadium.svg";
+export { ReactComponent as SvgStars } from "./stars.svg";
 export { ReactComponent as SvgTheatreMasks } from "./masks.svg";
-export { ReactComponent as SvgVinyl } from "./vinyl.svg";
+export { ReactComponent as SvgTheatre } from "./theatre.svg";
 export { ReactComponent as SvgTravel } from "./travel.svg";
-export { ReactComponent as SvgVegBowl } from "./veg_bowl.svg";
+export { ReactComponent as SvgVegBowl } from "./veg-bowl.svg";
+export { ReactComponent as SvgVinyl } from "./vinyl.svg";

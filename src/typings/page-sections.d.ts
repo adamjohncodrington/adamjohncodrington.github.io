@@ -31,7 +31,7 @@ interface IPageSectionDataTypes {
 
 interface IPageSection extends IPageSectionDisclosure {
   title: string;
-  icon?: IImageSrc;
+  SvgIcon?: React.FC<React.SVGProps<SVGSVGElement>>;
   data: IPageSectionDataTypes;
   count?: number;
   starCount?: number;

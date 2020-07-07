@@ -22,7 +22,7 @@ const PageSectionContainer = styled.section(
 
 export const PageSection: React.FC<IPageSection> = ({
   title,
-  icon,
+  SvgIcon,
   data,
   count,
   starCount,
@@ -47,7 +47,7 @@ export const PageSection: React.FC<IPageSection> = ({
             title={title}
             count={count}
             starCount={starCount}
-            icon={icon}
+            SvgIcon={SvgIcon}
             dataTest="section-header-container"
           />
         }
