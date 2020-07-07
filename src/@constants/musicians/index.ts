@@ -46,7 +46,6 @@ export const MUSICIANS: IMusicians = {
   CAMILA_CABELLO: { name: "Camila Cabello" },
   CARLY_RAE_JEPSEN: { name: "Carly Rae Jepsen" },
   CARL_COX: { name: "Carl Cox" },
-  CAROLINE_POLACHEK: { name: "Caroline Polachek" },
   CELESTE: { name: "Celeste" },
   CHARLI_ADAMS: { name: "Charli Adams" },
   CHARLOTTE_CHURCH: { name: "Charlotte Church" },

@@ -276,6 +276,19 @@ export const ARIANA_GRANDE: IMusician = {
   ]
 };
 
+export const CAROLINE_POLACHEK: IMusician = {
+  name: "Caroline Polachek",
+  albums: [
+    {
+      title: "Pang",
+      appleMusicUrl: "https://music.apple.com/gb/album/pang/1482421639",
+      year: 2019,
+      artwork: PHOTOS_VINYL.CAROLINE_POLACHEK.PANG,
+      purchased: true
+    }
+  ]
+};
+
 export const KIM_PETRAS: IMusician = {
   name: "Kim Petras",
   albums: [
@@ -283,7 +296,8 @@ export const KIM_PETRAS: IMusician = {
       title: "Clarity",
       year: 2019,
       appleMusicUrl: "https://music.apple.com/gb/album/clarity/1469298192",
-      artwork: PHOTOS_VINYL.KIM_PETRAS.CLARITY
+      artwork: PHOTOS_VINYL.KIM_PETRAS.CLARITY,
+      purchased: true
     }
   ]
 };
@@ -395,7 +409,8 @@ export const GRIMES: IMusician = {
       title: "Art Angels",
       appleMusicUrl: "https://music.apple.com/gb/album/art-angels/1051022913",
       artwork: PHOTOS_VINYL.GRIMES.ART_ANGELS,
-      year: 2015
+      year: 2015,
+      purchased: true
     }
   ]
 };
@@ -522,7 +537,8 @@ export const SUFJAN_STEVENS: IMusician = {
       artwork: PHOTOS_VINYL.SUFJAN_STEVENS.CARRIE_AND_LOWELL,
       appleMusicUrl: "https://music.apple.com/gb/album/carrie-lowell/955572616",
       title: "Carrie & Lowell",
-      year: 2015
+      year: 2015,
+      purchased: true
     }
   ]
 };

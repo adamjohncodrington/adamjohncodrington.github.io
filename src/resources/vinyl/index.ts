@@ -33,6 +33,7 @@ export const PHOTOS_VINYL: VinylPhotosObject = {
   BEYONCE: { LEMONADE: requireVinyl("beyonce", "lemonade") },
   // C
   CARIBOU: { OUR_LOVE: requireVinyl("caribou", "our-love") },
+  CAROLINE_POLACHEK: { PANG: requireVinyl("caroline-polachek", "pang") },
   CHARLI_XCX: {
     HOW_IM_FEELING_NOW: requireVinyl("charli-xcx", "how-im-feeling-now")
   },
