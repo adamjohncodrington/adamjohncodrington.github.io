@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "48e595e669e41b1ace021268d16e1375",
+    "revision": "9cecf1afde63e9cf22a9fcb2b76825b2",
     "url": "/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.a515d7e7.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4dc526622f4246ba768a",
-    "url": "/static/js/main.e0585b87.chunk.js"
+    "revision": "c960c04eb9c44c0464b2",
+    "url": "/static/js/main.a9d70855.chunk.js"
   },
   {
     "revision": "3cf57b419839acabd216",
@@ -110,6 +110,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c6a86242967f0436820ea6ba39d7967a",
     "url": "/static/media/caribou_our-love.c6a86242.jpg"
+  },
+  {
+    "revision": "94caf10796a60f4bc664c82675ed0831",
+    "url": "/static/media/caroline-polachek_pang.94caf107.jpg"
   },
   {
     "revision": "189d54fe5181c36f382e63c03cf8162e",
