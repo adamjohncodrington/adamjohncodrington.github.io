@@ -3,6 +3,11 @@ interface IPastAndFutureCounts {
   pastCount: number;
 }
 
+interface IDetailItem {
+  text: string;
+  isInFuture: boolean;
+}
+
 interface ICountedListItem extends IPastAndFutureCounts {
   text: string;
   doNotIncludeInList?: boolean;
@@ -11,6 +16,7 @@ interface ICountedListItem extends IPastAndFutureCounts {
   countInfoIrrelevant?: boolean;
   noLongerExists?: boolean;
   isLeaderboardItem?: boolean;
+  details?: Array<IDetailItem>;
 }
 
 interface IPageSectionDisclosure extends IOnlyHeaderClicable {
@@ -31,7 +37,7 @@ interface IPageSectionDataTypes {
 
 interface IPageSection extends IPageSectionDisclosure {
   title: string;
-  SvgIcon?: React.FC<React.SVGProps<SVGSVGElement>>;
+  SvgIcon?: ISvgIcon;
   data: IPageSectionDataTypes;
   count?: number;
   starCount?: number;

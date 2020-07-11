@@ -10,3 +10,4 @@ export { concatenateQuantityAndMeasurement } from "./concatenateQuantityAndMeasu
 export { getItemCounts } from "./getItemCounts";
 export { recipeMethodEntries } from "./recipeMethodEntries";
 export { formatCountedListItems } from "./formatCountedListItems";
+export { stringifyTravelCardTitle } from "./stringifyTravelCardTitle";

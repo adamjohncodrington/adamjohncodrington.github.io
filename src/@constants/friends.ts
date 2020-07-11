@@ -27,7 +27,7 @@ export const FRIENDS: IFriends = {
     gigs: true,
     travel: true
   },
-  CARMEN_DALGLISH: { name: "Carmen Dalglish", initials: "CD", travel: true },
+  CARMEN_DALGLISH: { name: "Carmen Dalglish", initials: "CD" },
   CAMERON_BLACKBURN: { name: "Cameron Blackburn", initials: "CB" },
   CHELSEA_CUNNINGHAM: { name: "Chelsea Cunningham", initials: "CC" },
   CHLOE_WHITE: { name: "Chloé White", initials: "CW" },
@@ -55,7 +55,7 @@ export const FRIENDS: IFriends = {
   ELINORE_GILLESPIE: { name: "Elinore Gillespie", initials: "EG" },
   ELISE_MORLEY: { name: "Elise Morley", initials: "EM" },
   ELLIE_FORMAN: { name: "Ellie Forman", initials: "EF" },
-  ELLIE_GURKIN: { name: "Ellie Gurkin", initials: "EG", travel: true },
+  ELLIE_GURKIN: { name: "Ellie Gurkin", initials: "EG" },
   ELLIE_PEARCE: { name: "Ellie Pearce", initials: "EP" },
   ELLIE_SPANOVIC: { name: "Ellie Spanovic", initials: "ES" },
   EMMA_CODRINGTON: {
@@ -70,7 +70,7 @@ export const FRIENDS: IFriends = {
   // G
   GEMMA_GILDERTHORP: { name: "Gemma Gilderthorp", initials: "GG" },
   GEORGE_LITTLEHALES: { name: "George Littlehales", initials: "GL" },
-  GRACE_HULME: { name: "Grace Hulme", initials: "GH", travel: true },
+  GRACE_HULME: { name: "Grace Hulme", initials: "GH" },
   // H
   HANNA_FROGNER: { name: "Hanna Frogner", initials: "HF" },
   HARRIET_BOYLE: { name: "Harriet Boyle", initials: "HB" },
@@ -125,7 +125,7 @@ export const FRIENDS: IFriends = {
   OSCAR_MURRAY: { name: "Oscar Murray", initials: "OM" },
   // P
   PATRICIA_DIACONESCU: { name: "Patricia Diaconescu", initials: "PD" },
-  POOJA_DHIR: { name: "Pooja Dhir", initials: "PD", travel: true },
+  POOJA_DHIR: { name: "Pooja Dhir", initials: "PD" },
   POPPY_SMITH: { name: "Poppy Smith", initials: "PS" },
   // R
   ROB_GALL: { name: "Robert Gall", initials: "RG" },

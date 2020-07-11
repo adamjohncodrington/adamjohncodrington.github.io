@@ -36,6 +36,8 @@ const SECTION_COUNTRIES: IPageSection = {
 };
 
 const SECTION_FRIENDS_TRAVEL: IPageSection = {
+  autoExpandAlways: true,
+  onlyHeaderClickable: true,
   SvgIcon: SvgFriends,
   title: PAGE_SECTION_TITLES.FRIENDS,
   data: { countedListItems: FACTORY.FRIENDS }

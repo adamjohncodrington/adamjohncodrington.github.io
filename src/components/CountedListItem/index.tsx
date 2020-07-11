@@ -1,10 +1,15 @@
 import React from "react";
 
+import { FlexLiGrow } from "primitives";
+
 import {
-  CountedListItemContainer,
   CountedListItemText,
   CountedListItemPastCount,
-  CountedListItemFutureCount
+  CountedListItemFutureCount,
+  StyledOl,
+  StyledLi,
+  StyledSpan,
+  StyledSummary
 } from "./styles";
 
 export const CountedListItem: React.FC<ICountedListItem> = ({
@@ -14,14 +19,31 @@ export const CountedListItem: React.FC<ICountedListItem> = ({
   futureCount,
   pastCount,
   countInfoIrrelevant,
-  isLeaderboardItem
+  isLeaderboardItem,
+  details
 }) => {
+  if (details)
+    return (
+      <li>
+        <details>
+          <StyledSummary>{text}</StyledSummary>
+          <StyledOl>
+            {details.map(({ text, isInFuture }: IDetailItem, index: number) => (
+              <StyledLi key={index} isInFuture={isInFuture}>
+                <StyledSpan>{text}</StyledSpan>
+              </StyledLi>
+            ))}
+          </StyledOl>
+        </details>
+      </li>
+    );
+
   const showFutureCount: boolean = futureCount > 0 && pastCount > 0;
   const showPastCount: boolean =
     pastCount > 1 || (futureCount > 0 && pastCount > 0);
 
   return (
-    <CountedListItemContainer>
+    <FlexLiGrow>
       <CountedListItemText
         faded={!countInfoIrrelevant && pastCount === 0}
         favourite={favourite}
@@ -39,6 +61,6 @@ export const CountedListItem: React.FC<ICountedListItem> = ({
           {pastCount}
         </CountedListItemPastCount>
       )}
-    </CountedListItemContainer>
+    </FlexLiGrow>
   );
 };

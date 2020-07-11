@@ -1,9 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { FlexLiGrow } from "primitives";
 import { CSS } from "styles";
-
-export const CountedListItemContainer = styled(FlexLiGrow)``;
 
 interface ICountedListItemText extends IThemeProp {
   favourite?: boolean;
@@ -51,3 +48,38 @@ export const CountedListItemFutureCount = styled(CountedListItemPastCount)(
     opacity: ${fadedOpacity};
   `
 );
+
+interface IStyledLi extends IThemeProp {
+  isInFuture: boolean;
+}
+
+export const StyledLi = styled.li(
+  ({ isInFuture, theme: { fadedOpacity } }: IStyledLi) => css`
+    font-size: 85%;
+
+    ${isInFuture &&
+    css`
+      opacity: ${fadedOpacity};
+    `}
+  `
+);
+
+export const StyledSpan = styled.span`
+  padding-left: 5px;
+`;
+
+export const StyledOl = styled.ol`
+  list-style-position: outside;
+  margin: 0;
+  padding-left: 25px;
+  padding-top: 10px;
+  padding-bottom: 5px;
+
+  > li:not(:last-child) {
+    padding-bottom: 2px;
+  }
+`;
+
+export const StyledSummary = styled.summary`
+  cursor: pointer;
+`;

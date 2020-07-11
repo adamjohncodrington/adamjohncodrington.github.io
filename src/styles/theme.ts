@@ -12,10 +12,6 @@ const THEME_COUNTED_LIST_ITEM: IThemeCountedListItem = {
   countedListItem: { count: { margin: { left: "5px" }, width: "20px" } }
 };
 
-const THEME_DISCLOSURE: IThemeDisclosure = {
-  disclosure: { transition: "all 0.4s ease" }
-};
-
 const THEME_EVENT_CARD: IThemeEventCard = {
   eventCard: {
     companySymbol: { color: COLORS.boulder, spaceBetweenSymbols: "5px" },
@@ -67,8 +63,7 @@ const THEME_PAGE_SECTION: IThemePageSection = {
         lastRegularCard: { padding: { bottom: "5px" } },
         padding: { vertical: "10px" }
       }
-    },
-    transition: "all 0.4s ease"
+    }
   }
 };
 
@@ -112,7 +107,6 @@ const THEME_VINYL_CARD: IThemeVinylCard = {
 export const THEME: ITheme = {
   ...THEME_BREAKPOINTS,
   ...THEME_COUNTED_LIST_ITEM,
-  ...THEME_DISCLOSURE,
   ...THEME_EVENT_CARD,
   ...THEME_NAV_BAR,
   ...THEME_PAGE_HEADER,

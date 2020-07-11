@@ -1,5 +1,7 @@
 # TO DO LIST
 
+- `CountedListItem` should be split into `DetailedListItem`
+
 ## Testing
 
 - add tests for more utils

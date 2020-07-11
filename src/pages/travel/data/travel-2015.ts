@@ -46,8 +46,7 @@ export const TRAVEL_2015: Array<ITravelCard> = [
     ]
   },
   {
-    title: [{ name: "interrailing" }],
-    subtitle: [
+    title: [
       COUNTRIES.GERMANY.cities.BERLIN,
       COUNTRIES.CZECH_REPUBLIC.cities.PRAGUE,
       COUNTRIES.POLAND.cities.KRAKOW,

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { arrayToString, datesToString } from "utils";
+import { arrayToString, datesToString, stringifyTravelCardTitle } from "utils";
 
 import { EventCard } from "../EventCard";
 
@@ -12,10 +12,7 @@ export const TravelCard: React.FC<ITravelCard> = ({
   dates,
   photos
 }) => {
-  const TITLE: string = arrayToString({
-    stringArray: title.map(({ name }: ILocation) => name),
-    useAmpersandsForPair: true
-  });
+  const TITLE: string = stringifyTravelCardTitle(title);
 
   const SUBTITLE: string | undefined =
     subtitle &&

@@ -14,10 +14,6 @@ interface IThemeCountedListItem {
   countedListItem: { count: { margin: { left: PxValue }; width: PxValue } };
 }
 
-interface IThemeDisclosure {
-  disclosure: { transition: TransitionValue };
-}
-
 interface IThemeEventCard {
   eventCard: {
     companySymbol: { color: ColorValue; spaceBetweenSymbols: PxValue };
@@ -70,7 +66,6 @@ interface IThemePageSection {
         padding: { vertical: PxValue };
       };
     };
-    transition: TransitionValue;
   };
 }
 
@@ -112,7 +107,6 @@ interface IThemeVinylCard {
 interface ITheme
   extends IThemeBreakpoints,
     IThemeCountedListItem,
-    IThemeDisclosure,
     IThemeEventCard,
     IThemeNavBar,
     IThemePageHeader,
