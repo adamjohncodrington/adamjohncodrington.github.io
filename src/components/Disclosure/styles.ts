@@ -1,5 +1,7 @@
 import styled, { css } from "styled-components";
 
+import { ENABLE_TRANSITIONS } from "config";
+
 import { IBodyHeight } from "./";
 
 interface IPanelContainer extends IThemeProp {
@@ -9,7 +11,6 @@ interface IPanelContainer extends IThemeProp {
 export const PanelContainer = styled.div(
   ({ bodyHeight, theme: { disclosure } }: IPanelContainer) =>
     css`
-      transition: ${disclosure.transition};
       overflow: hidden;
       max-height: 0;
 
@@ -20,6 +21,11 @@ export const PanelContainer = styled.div(
       &.panel-visible {
         max-height: ${bodyHeight}px;
       }
+
+      ${ENABLE_TRANSITIONS &&
+      css`
+        transition: ${disclosure.transition};
+      `}
     `
 );
 
