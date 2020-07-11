@@ -92,7 +92,7 @@ export const FRIENDS: IFriends = {
     gigs: true,
     theatre: true
   },
-  JOE_EDWARDS: { name: "Joe Edwards", initials: "JE", theatre: true },
+  JOE_EDWARDS: { name: "Joe Edwards", initials: "JE" },
   JESS_SMITH: { name: "Jess Smith", initials: "JS" },
   JUNAID_KHAN: { name: "Junaid Khan", initials: "JK" },
   // K

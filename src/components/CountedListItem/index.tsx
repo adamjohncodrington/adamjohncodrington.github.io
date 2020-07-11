@@ -1,6 +1,14 @@
 import React from "react";
 
-import { FlexLiGrow } from "primitives";
+import { FlexRow, FlexLiGrow } from "primitives";
+import {
+  isInFuture,
+  getGigCardTitle,
+  getTravelCardTitle,
+  dateToString,
+  datesToString,
+  getTheatreCardTitle
+} from "utils";
 
 import {
   CountedListItemText,
@@ -8,9 +16,32 @@ import {
   CountedListItemFutureCount,
   StyledOl,
   StyledLi,
-  StyledSpan,
-  StyledSummary
+  StyledSummary,
+  StyledDetails
 } from "./styles";
+
+interface IDetailedListItemDetail {
+  dates: Array<Date>;
+  index: number;
+  text: string;
+}
+
+const DetailedListItemDetail: React.FC<IDetailedListItemDetail> = ({
+  dates,
+  index,
+  text
+}) => {
+  const IS_IN_FUTURE: boolean = isInFuture(dates[0]);
+
+  return (
+    <StyledLi key={index} isInFuture={IS_IN_FUTURE}>
+      <FlexRow>
+        {index}. {text} (
+        {dates.length === 2 ? datesToString(dates) : dateToString(dates[0])})
+      </FlexRow>
+    </StyledLi>
+  );
+};
 
 export const CountedListItem: React.FC<ICountedListItem> = ({
   text,
@@ -25,16 +56,44 @@ export const CountedListItem: React.FC<ICountedListItem> = ({
   if (details)
     return (
       <li>
-        <details>
+        <StyledDetails>
           <StyledSummary>{text}</StyledSummary>
           <StyledOl>
-            {details.map(({ text, isInFuture }: IDetailItem, index: number) => (
-              <StyledLi key={index} isInFuture={isInFuture}>
-                <StyledSpan>{text}</StyledSpan>
-              </StyledLi>
-            ))}
+            {details.gigCards &&
+              details.gigCards.map((gigCard: IGigCard, index: number) => (
+                <DetailedListItemDetail
+                  key={index}
+                  dates={gigCard.dates}
+                  text={getGigCardTitle(gigCard)}
+                  index={index + 1}
+                />
+              ))}
+
+            {details.travelCards &&
+              details.travelCards.map(
+                (travelCard: ITravelCard, index: number) => (
+                  <DetailedListItemDetail
+                    key={index}
+                    dates={travelCard.dates}
+                    text={getTravelCardTitle(travelCard)}
+                    index={index + 1}
+                  />
+                )
+              )}
+
+            {details.theatreCards &&
+              details.theatreCards.map(
+                (theatreCard: ITheatreCard, index: number) => (
+                  <DetailedListItemDetail
+                    key={index}
+                    dates={[theatreCard.date]}
+                    text={getTheatreCardTitle(theatreCard)}
+                    index={index + 1}
+                  />
+                )
+              )}
           </StyledOl>
-        </details>
+        </StyledDetails>
       </li>
     );
 

@@ -33,7 +33,6 @@ const SECTION_ARTISTS: IPageSection = {
 };
 
 const SECTION_FRIENDS_GIGS: IPageSection = {
-  autoExpandAlways: true,
   SvgIcon: SvgFriends,
   title: PAGE_SECTION_TITLES.FRIENDS,
   onlyHeaderClickable: true,
@@ -49,7 +48,6 @@ const SECTION_UP_NEXT_GIGS: IPageSection = {
 
 const SECTION_VENUES_GIGS: IPageSection = {
   SvgIcon: SvgStadium,
-  autoExpandAlways: true,
   title: "Venues",
   data: { countedListItems: FACTORY.VENUES },
   count: FACTORY.VENUES.length

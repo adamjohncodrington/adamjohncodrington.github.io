@@ -1,5 +1,6 @@
 export * from "./basic";
 export * from "./recipe-costs";
+export * from "./get-card-titles";
 export { useMediaQueries } from "./useMediaQueries";
 
 export { daysToGo } from "./daysToGo";
@@ -10,4 +11,3 @@ export { concatenateQuantityAndMeasurement } from "./concatenateQuantityAndMeasu
 export { getItemCounts } from "./getItemCounts";
 export { recipeMethodEntries } from "./recipeMethodEntries";
 export { formatCountedListItems } from "./formatCountedListItems";
-export { stringifyTravelCardTitle } from "./stringifyTravelCardTitle";

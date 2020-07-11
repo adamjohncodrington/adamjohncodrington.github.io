@@ -8,6 +8,12 @@ interface IDetailItem {
   isInFuture: boolean;
 }
 
+interface ICountedListItemDetails {
+  gigCards?: Array<IGigCard>;
+  travelCards?: Array<ITravelCard>;
+  theatreCards?: Array<ITheatreCard>;
+}
+
 interface ICountedListItem extends IPastAndFutureCounts {
   text: string;
   doNotIncludeInList?: boolean;
@@ -16,7 +22,7 @@ interface ICountedListItem extends IPastAndFutureCounts {
   countInfoIrrelevant?: boolean;
   noLongerExists?: boolean;
   isLeaderboardItem?: boolean;
-  details?: Array<IDetailItem>;
+  details?: ICountedListItemDetails;
 }
 
 interface IPageSectionDisclosure extends IOnlyHeaderClicable {

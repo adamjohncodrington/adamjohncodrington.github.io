@@ -7,27 +7,24 @@ import {
   dateToString,
   datesToString,
   isInFuture,
-  daysToGo
+  daysToGo,
+  getGigCardTitle
 } from "utils";
 
 import { EventCard } from "../EventCard";
 
-export const GigCard: React.FC<IGigCard> = ({
-  headline,
-  festival,
-  support,
-  lineup,
-  venue,
-  favourite,
-  company,
-  ticketType,
-  dates
-}) => {
-  const title: string = headline
-    ? moveTheSuffixToPrefix(headline.name)
-    : festival
-    ? festival.name
-    : "GIG CARD TITLE MISSING";
+export const GigCard: React.FC<IGigCard> = gigCard => {
+  const {
+    support,
+    lineup,
+    venue,
+    favourite,
+    company,
+    ticketType,
+    dates
+  } = gigCard;
+
+  const title: string = getGigCardTitle(gigCard);
 
   const subtitle: string | undefined = support
     ? arrayToString({

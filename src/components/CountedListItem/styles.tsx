@@ -57,6 +57,8 @@ export const StyledLi = styled.li(
   ({ isInFuture, theme: { fadedOpacity } }: IStyledLi) => css`
     font-size: 85%;
 
+    // border: 1px dashed green;
+
     ${isInFuture &&
     css`
       opacity: ${fadedOpacity};
@@ -64,14 +66,11 @@ export const StyledLi = styled.li(
   `
 );
 
-export const StyledSpan = styled.span`
-  padding-left: 5px;
-`;
-
 export const StyledOl = styled.ol`
-  list-style-position: outside;
+  list-style-type: none;
+  padding: 0;
   margin: 0;
-  padding-left: 25px;
+
   padding-top: 10px;
   padding-bottom: 5px;
 
@@ -82,4 +81,9 @@ export const StyledOl = styled.ol`
 
 export const StyledSummary = styled.summary`
   cursor: pointer;
+  outline: 0;
+`;
+
+export const StyledDetails = styled.details`
+  outline: 0;
 `;

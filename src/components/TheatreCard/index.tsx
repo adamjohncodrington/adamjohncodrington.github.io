@@ -1,39 +1,24 @@
 import React from "react";
 
-import { arrayToString, dateToString, moveTheSuffixToPrefix } from "utils";
+import {
+  dateToString,
+  getTheatreCardTitle,
+  getTheatreCardSubtitle
+} from "utils";
 
 import { EventCard } from "../EventCard";
 
-export const TheatreCard: React.FC<ITheatreCard> = ({
-  play,
-  cast,
-  favourite,
-  company,
-  theatre,
-  date
-}) => {
-  const title: string = moveTheSuffixToPrefix(play.name);
-
-  const subtitle: string | undefined =
-    cast &&
-    arrayToString({
-      stringArray: cast.map(({ name }: IActor): string =>
-        moveTheSuffixToPrefix(name)
-      )
-    });
-
-  const dateText: string = dateToString(date);
-
-  const body: string = theatre.name;
+export const TheatreCard: React.FC<ITheatreCard> = theatreCard => {
+  const { favourite, company, theatre, date } = theatreCard;
 
   return (
     <EventCard
-      title={title}
-      subtitle={subtitle}
-      body={body}
+      title={getTheatreCardTitle(theatreCard)}
+      subtitle={getTheatreCardSubtitle(theatreCard)}
+      body={theatre.name}
       favourite={favourite}
       company={company}
-      dateText={dateText}
+      dateText={dateToString(date)}
     />
   );
 };

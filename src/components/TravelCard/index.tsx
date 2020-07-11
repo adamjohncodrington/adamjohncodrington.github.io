@@ -1,34 +1,23 @@
 import React from "react";
 
-import { arrayToString, datesToString, stringifyTravelCardTitle } from "utils";
+import {
+  datesToString,
+  getTravelCardTitle,
+  getTravelCardSubtitle
+} from "utils";
 
 import { EventCard } from "../EventCard";
 
-export const TravelCard: React.FC<ITravelCard> = ({
-  title,
-  subtitle,
-  favourite,
-  company,
-  dates,
-  photos
-}) => {
-  const TITLE: string = stringifyTravelCardTitle(title);
-
-  const SUBTITLE: string | undefined =
-    subtitle &&
-    arrayToString({
-      stringArray: subtitle.map(({ name }: ILocation) => name)
-    });
-
-  const dateText: string = datesToString(dates);
+export const TravelCard: React.FC<ITravelCard> = travelCard => {
+  const { favourite, company, dates, photos } = travelCard;
 
   return (
     <EventCard
-      title={TITLE}
-      subtitle={SUBTITLE}
+      title={getTravelCardTitle(travelCard)}
+      subtitle={getTravelCardSubtitle(travelCard)}
       favourite={favourite}
       company={company}
-      dateText={dateText}
+      dateText={datesToString(dates)}
       photos={photos}
     />
   );

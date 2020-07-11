@@ -1,6 +1,7 @@
 # TO DO LIST
 
 - `CountedListItem` should be split into `DetailedListItem`
+- address `MARINA` vs. `Marina and the Diamonds`
 
 ## Testing
 
