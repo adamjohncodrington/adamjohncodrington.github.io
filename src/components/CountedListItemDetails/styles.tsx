@@ -34,3 +34,7 @@ export const StyledMainText = styled.div`
 export const StyledIndex = styled.div`
   min-width: 25px;
 `;
+
+export const StyledDateText = styled.div`
+  margin-left: 10px;
+`;

@@ -2,7 +2,13 @@ import React from "react";
 
 import { FlexRow } from "primitives";
 
-import { StyledLi, StyledOl, StyledMainText, StyledIndex } from "./styles";
+import {
+  StyledLi,
+  StyledOl,
+  StyledMainText,
+  StyledIndex,
+  StyledDateText
+} from "./styles";
 
 export const CountedListItemDetail: React.FC<ICountedListItemDetail> = ({
   index,
@@ -14,7 +20,7 @@ export const CountedListItemDetail: React.FC<ICountedListItemDetail> = ({
     <FlexRow>
       {!!index && <StyledIndex>{index}.</StyledIndex>}
       <StyledMainText>{mainText}</StyledMainText>
-      <StyledIndex>{dateText}</StyledIndex>
+      <StyledDateText>{dateText}</StyledDateText>
     </FlexRow>
   </StyledLi>
 );

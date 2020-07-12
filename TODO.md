@@ -1,11 +1,12 @@
 # TO DO LIST
 
+- tidy up recipe method list bullets
 - move `CountedListItemDetails` style values to theme
 - add details to Travel counted list items
+- address `MARINA` vs. `Marina and the Diamonds`
 
 ## Enhancements
 
-- address `MARINA` vs. `Marina and the Diamonds`
 - refine Nav Bar (colors persist for active page, mobile behaviour)
 - prevent `Router` from allowing you to go back between pages?
 
