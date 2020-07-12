@@ -18,7 +18,6 @@ const SECTION_ACTORS: IPageSection = {
 };
 
 const SECTION_FRIENDS_THEATRE: IPageSection = {
-  onlyHeaderClickable: true,
   title: PAGE_SECTION_TITLES.FRIENDS,
   SvgIcon: SvgFriends,
   data: { countedListItems: FACTORY.FRIENDS }

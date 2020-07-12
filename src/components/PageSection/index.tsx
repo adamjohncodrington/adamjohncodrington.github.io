@@ -29,8 +29,7 @@ export const PageSection: React.FC<IPageSection> = ({
   staticAlways,
   staticIf2Columns,
   autoExpandAlways,
-  autoExpandIf2Columns,
-  onlyHeaderClickable
+  autoExpandIf2Columns
 }) => {
   const { pageUses2Columns } = useMediaQueries();
 
@@ -41,7 +40,6 @@ export const PageSection: React.FC<IPageSection> = ({
         autoExpand={
           autoExpandAlways || (pageUses2Columns && autoExpandIf2Columns)
         }
-        onlyHeaderClickable={onlyHeaderClickable}
         Header={
           <PageSectionHeader
             title={title}

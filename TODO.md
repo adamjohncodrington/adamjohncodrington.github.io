@@ -1,7 +1,8 @@
 # TO DO LIST
 
-- `CountedListItem` should be split into `DetailedListItem`
-- address `MARINA` vs. `Marina and the Diamonds`
+- style `CountedListItemDetails` and move all values to theme
+- make `Worthy Farm` display as `Glastonbury`, `HeatonPark` display as `Parklife`, `Store Street` display as `WHP`, etc.
+- add details to loads of counted list items (including travel)
 
 ## Testing
 
@@ -14,6 +15,7 @@
 
 ## Enhancements
 
+- address `MARINA` vs. `Marina and the Diamonds`
 - refine Nav Bar (colors persist for active page, mobile behaviour)
 - prevent `Router` from allowing you to go back between pages?
 
@@ -26,7 +28,6 @@
 ## Refactoring
 
 - refactor how `CITIES` is generated
-- remove hard-coded recipe image width + implement react-disclosure/react-accessible-accordion?
 - review semantics of page structure, landmarks, accessibility, etc.
 - recipe method array should be `ol` not `ul`?
 - rationalise `data-test` attributes

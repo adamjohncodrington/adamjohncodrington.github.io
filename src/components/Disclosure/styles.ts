@@ -13,6 +13,6 @@ export const PanelContainer = styled.div(
     `
 );
 
-export const ClickableDiv = styled.div`
+export const StyledDiv = styled.div`
   cursor: pointer;
 `;

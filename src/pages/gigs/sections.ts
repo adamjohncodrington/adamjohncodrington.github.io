@@ -35,7 +35,6 @@ const SECTION_ARTISTS: IPageSection = {
 const SECTION_FRIENDS_GIGS: IPageSection = {
   SvgIcon: SvgFriends,
   title: PAGE_SECTION_TITLES.FRIENDS,
-  onlyHeaderClickable: true,
   data: { countedListItems: FACTORY.FRIENDS }
 };
 

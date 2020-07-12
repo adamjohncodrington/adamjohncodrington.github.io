@@ -1,5 +1,5 @@
 import { MUSICIANS } from "@constants";
-import { getItemCounts } from "utils";
+import { getItemCounts, getDatesText, isInFuture } from "utils";
 
 import { DATA } from "../data";
 
@@ -15,11 +15,9 @@ const musicianHasFavouritedGig = ({
   favouritedGigCards
 }: IMusicianIsFavourited): boolean => {
   let itemIsFavourited: boolean = false;
-
   favouritedGigCards.forEach(({ headline }: IGigCard) => {
     if (headline && headline.name === musician.name) itemIsFavourited = true;
   });
-
   return itemIsFavourited;
 };
 
@@ -32,14 +30,51 @@ export const musiciansCounted: Array<IMusicianCounted> = musicians.map(
   })
 );
 
-export const MUSICIANS_LIST_ITEMS: Array<ICountedListItem> = musiciansCounted.map(
-  (musician: IMusicianCounted): ICountedListItem => ({
-    text: musician.name,
-    favourite:
-      musicianHasFavouritedGig({ musician, favouritedGigCards: FAVOURITES }) ||
-      musician.favourite,
-    pastCount: musician.pastCount,
-    futureCount: musician.futureCount,
-    noLongerExists: musician.noLongerExists
-  })
+const getMusicianGigs = (musician: IMusician): Array<IGigCard> => {
+  const musicianGigs: Array<IGigCard> = [];
+  const allGigs: Array<IGigCard> = DATA.ALL;
+  allGigs.forEach((gig: IGigCard): void => {
+    const { headline, support, lineup } = gig;
+    // console.log("-------------");
+    // console.log(musician);
+    // console.log(headline);
+    // console.log(support);
+    // console.log(lineup);
+    if (
+      headline === musician ||
+      (support && support.includes(musician)) ||
+      (lineup && lineup.includes(musician))
+    ) {
+      musicianGigs.push(gig);
+    }
+  });
+  return musicianGigs;
+};
+
+export const MUSICIANS_LIST_ITEMS: Array<ICountedListItem> = musicians.map(
+  (musician: IMusician): ICountedListItem => {
+    const { name, favourite, noLongerExists } = musician;
+    return {
+      text: name,
+      favourite:
+        musicianHasFavouritedGig({
+          musician,
+          favouritedGigCards: FAVOURITES
+        }) || favourite,
+      ...getItemCounts({ item: { musician }, data: { gigCards: DATA.ALL } }),
+
+      noLongerExists,
+      details: getMusicianGigs(musician).map(
+        (
+          { dates, venue }: IGigCard,
+          index: number
+        ): ICountedListItemDetail => ({
+          index,
+          mainText: venue.name,
+          dateText: getDatesText(dates),
+          isInFuture: isInFuture(dates[0])
+        })
+      )
+    };
+  }
 );

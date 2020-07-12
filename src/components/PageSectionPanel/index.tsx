@@ -2,22 +2,27 @@ import React from "react";
 
 import { PAGE_SECTION_PANEL_TYPES } from "@constants";
 import { Li } from "primitives";
+import {
+  getGigCardSubtitle,
+  getGigCardTitle,
+  getTheatreCardSubtitle,
+  getTheatreCardTitle,
+  getTravelCardSubtitle,
+  getTravelCardTitle,
+  moveTheSuffixToPrefix,
+  getCountdownText,
+  getDatesText,
+  getDateText
+} from "utils";
 
 import { CountedListItem } from "../CountedListItem";
-import { GigCard } from "../GigCard";
+import { EventCard } from "../EventCard";
 import { RecipeCard } from "../RecipeCard";
-import { TheatreCard } from "../TheatreCard";
-import { TravelCard } from "../TravelCard";
 import { VinylCard } from "../VinylCard";
 
 import { PageSectionPanelList } from "./styles";
 
-interface IPageSectionPanel extends IPageSectionDataTypes {
-  isLeaderboard?: boolean;
-}
-
-export const PageSectionPanel: React.FC<IPageSectionPanel> = ({
-  isLeaderboard,
+export const PageSectionPanel: React.FC<IPageSectionDataTypes> = ({
   countedListItems,
   gigCards,
   recipeCards,
@@ -44,25 +49,57 @@ export const PageSectionPanel: React.FC<IPageSectionPanel> = ({
         )}
 
       {gigCards &&
-        gigCards.map((gigCard: IGigCard, index: number) => (
-          <Li key={index}>
-            <GigCard {...gigCard} />
-          </Li>
-        ))}
+        gigCards.map((gigCard: IGigCard, index: number) => {
+          const { venue, favourite, company, dates, ticketType } = gigCard;
+          return (
+            <Li key={index}>
+              <EventCard
+                title={getGigCardTitle(gigCard)}
+                subtitle={getGigCardSubtitle(gigCard)}
+                body={moveTheSuffixToPrefix(venue.name)}
+                favourite={favourite}
+                company={company}
+                dateText={getDatesText(dates)}
+                countdownText={getCountdownText(dates[0])}
+                note={ticketType}
+              />
+            </Li>
+          );
+        })}
 
       {theatreCards &&
-        theatreCards.map((theateCard: ITheatreCard, index: number) => (
-          <Li key={index}>
-            <TheatreCard {...theateCard} />
-          </Li>
-        ))}
+        theatreCards.map((theatreCard: ITheatreCard, index: number) => {
+          const { favourite, company, theatre, date } = theatreCard;
+          return (
+            <Li key={index}>
+              <EventCard
+                title={getTheatreCardTitle(theatreCard)}
+                subtitle={getTheatreCardSubtitle(theatreCard)}
+                body={theatre.name}
+                favourite={favourite}
+                company={company}
+                dateText={getDateText(date)}
+              />
+            </Li>
+          );
+        })}
 
       {travelCards &&
-        travelCards.map((travelCard: ITravelCard, index: number) => (
-          <Li key={index}>
-            <TravelCard {...travelCard} />
-          </Li>
-        ))}
+        travelCards.map((travelCard: ITravelCard, index: number) => {
+          const { favourite, company, dates, photos } = travelCard;
+          return (
+            <Li key={index}>
+              <EventCard
+                title={getTravelCardTitle(travelCard)}
+                subtitle={getTravelCardSubtitle(travelCard)}
+                favourite={favourite}
+                company={company}
+                dateText={getDatesText(dates)}
+                photos={photos}
+              />
+            </Li>
+          );
+        })}
 
       {vinylCards &&
         vinylCards.map(

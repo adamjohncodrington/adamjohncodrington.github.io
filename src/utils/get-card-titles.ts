@@ -7,6 +7,20 @@ export const getGigCardTitle = ({ headline, festival }: IGigCard): string =>
     ? festival.name
     : "GIG CARD TITLE MISSING";
 
+export const getGigCardSubtitle = ({ support, lineup }: IGigCard) =>
+  support
+    ? arrayToString({
+        stringArray: support.map(({ name }: IMusician): string =>
+          moveTheSuffixToPrefix(name)
+        )
+      })
+    : lineup &&
+      arrayToString({
+        stringArray: lineup.map(({ name }: IMusician): string =>
+          moveTheSuffixToPrefix(name)
+        )
+      });
+
 export const getTheatreCardTitle = ({ play }: ITheatreCard): string =>
   moveTheSuffixToPrefix(play.name);
 

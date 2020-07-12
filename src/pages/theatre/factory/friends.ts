@@ -1,5 +1,10 @@
 import { FRIENDS } from "@constants";
-import { getItemCounts } from "utils";
+import {
+  getItemCounts,
+  getTheatreCardTitle,
+  getDateText,
+  isInFuture
+} from "utils";
 
 import { DATA } from "../data";
 
@@ -21,6 +26,16 @@ export const FRIENDS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
     (friend: IFriend): ICountedListItem => ({
       text: friend.name,
       ...getItemCounts({ item: { friend }, data: { theatreCards: DATA.ALL } }),
-      details: { theatreCards: getTheatreTripsWithFriend(friend) }
+      details: getTheatreTripsWithFriend(friend).map(
+        (theatreCard: ITheatreCard, index: number): ICountedListItemDetail => {
+          const { date } = theatreCard;
+          return {
+            index,
+            mainText: getTheatreCardTitle(theatreCard),
+            dateText: getDateText(date),
+            isInFuture: isInFuture(date)
+          };
+        }
+      )
     })
   );

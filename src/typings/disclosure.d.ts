@@ -1,8 +1,4 @@
-interface IOnlyHeaderClicable {
-  onlyHeaderClickable?: boolean;
-}
-
-interface IDisclosure extends IOnlyHeaderClicable {
+interface IDisclosure {
   Header: React.ReactElement;
   autoExpand?: boolean;
   isStatic?: boolean;

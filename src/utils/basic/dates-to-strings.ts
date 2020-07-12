@@ -1,6 +1,6 @@
 import { DAYS_OF_THE_WEEK, MONTHS } from "@constants";
 
-export const dateToString = (date: Date): string => {
+export const getDateText = (date: Date): string => {
   const weekday: number = date.getDay();
   const day: number = date.getDate();
   const month: number = date.getMonth();
@@ -9,12 +9,9 @@ export const dateToString = (date: Date): string => {
   return `${DAYS_OF_THE_WEEK[weekday]} ${day} ${MONTHS[month]} ${year}`;
 };
 
-export const datesToString = (dates: Array<Date>): string => {
+export const getDatesText = (dates: Array<Date>): string => {
   if (dates.length === 2)
-    return `${dateToString(dates[0])} to ${dateToString(dates[1])}`;
+    return `${getDateText(dates[0])} to ${getDateText(dates[1])}`;
 
-  const errorText: string =
-    "You passed an incorrect number dates to the datesArrayToString function";
-  alert(errorText);
-  return errorText;
+  return getDateText(dates[0]);
 };
