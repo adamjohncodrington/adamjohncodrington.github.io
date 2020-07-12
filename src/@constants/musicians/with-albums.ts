@@ -412,7 +412,9 @@ export const PVRIS: IMusician = {
       artwork: Jpg_Pvris_AWKOHAWNOH,
       appleMusicUrl:
         "https://music.apple.com/gb/album/all-we-know-of-heaven-all-we-need-of-hell/1227528237",
-      year: 2017
+      year: 2017,
+      purchased: true,
+      signed: true
     }
   ]
 };
