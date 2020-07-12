@@ -19,7 +19,9 @@ export const Disclosure: FC<IDisclosure> = ({
     () =>
       panelIsVisible &&
       css`
-        font-weight: bold;
+        * {
+          font-weight: bold;
+        }
       `
   );
 
