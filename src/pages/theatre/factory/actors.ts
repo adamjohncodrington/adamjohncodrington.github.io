@@ -1,14 +1,51 @@
 import { ACTORS } from "@constants";
-import { getItemCounts } from "utils";
+import {
+  getItemCounts,
+  getTheatreVisitTitle,
+  isInFuture,
+  getDateText
+} from "utils";
 
 import { DATA } from "../data";
+
+const getTheatreVisitsMatchingActor = (actor: IActor): Array<ITheatreVisit> => {
+  const theatreVisitsMatchingActor: Array<ITheatreVisit> = [];
+  const theatreVisits: Array<ITheatreVisit> = DATA.ALL;
+  theatreVisits.forEach((theatreVisit: ITheatreVisit): void => {
+    const { cast } = theatreVisit;
+    if (cast && cast.includes(actor))
+      theatreVisitsMatchingActor.push(theatreVisit);
+  });
+  return theatreVisitsMatchingActor;
+};
+
+const getActorDetails = (actor: IActor): Array<ICountedListItemDetail> => {
+  const theatreVisitsMatchingActor: Array<ITheatreVisit> = getTheatreVisitsMatchingActor(
+    actor
+  );
+  return theatreVisitsMatchingActor.map(
+    (theatreVisit: ITheatreVisit, index: number): ICountedListItemDetail => {
+      const { date } = theatreVisit;
+      return {
+        index: theatreVisitsMatchingActor.length > 1 ? index + 1 : undefined,
+        mainText: getTheatreVisitTitle(theatreVisit),
+        dateText: getDateText(date),
+        isInFuture: isInFuture(date)
+      };
+    }
+  );
+};
 
 export const ACTORS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
   ACTORS
 ).map(
-  (actor: IActor): ICountedListItem => ({
-    text: actor.name,
-    favourite: actor.favourite,
-    ...getItemCounts({ item: { actor }, data: { theatreVisits: DATA.ALL } })
-  })
+  (actor: IActor): ICountedListItem => {
+    const { name, favourite } = actor;
+    return {
+      text: name,
+      favourite,
+      ...getItemCounts({ item: { actor }, data: { theatreVisits: DATA.ALL } }),
+      details: getActorDetails(actor)
+    };
+  }
 );

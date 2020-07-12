@@ -3,3 +3,7 @@ interface IDisclosure {
   autoExpand?: boolean;
   isStatic?: boolean;
 }
+
+interface IClassName {
+  className?: string;
+}

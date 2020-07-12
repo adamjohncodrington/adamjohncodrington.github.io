@@ -8,23 +8,27 @@ import {
 
 import { DATA } from "../data";
 
-const getTheatreTripsWithFriend = (friend: IFriend): Array<ITheatreVisit> => {
-  const theatreTripsWithFriend: Array<ITheatreVisit> = [];
-  const allTheatreTrips: Array<ITheatreVisit> = DATA.ALL;
-  allTheatreTrips.forEach((theatreVisit: ITheatreVisit): void => {
+const getTheatreVisitsMatchingFriend = (
+  friend: IFriend
+): Array<ITheatreVisit> => {
+  const theatreVisitsMatchingFriend: Array<ITheatreVisit> = [];
+  const theatreVisits: Array<ITheatreVisit> = DATA.ALL;
+  theatreVisits.forEach((theatreVisit: ITheatreVisit): void => {
     if (theatreVisit.company.includes(friend))
-      theatreTripsWithFriend.push(theatreVisit);
+      theatreVisitsMatchingFriend.push(theatreVisit);
   });
-  return theatreTripsWithFriend;
+  return theatreVisitsMatchingFriend;
 };
 
 const getFriendDetails = (friend: IFriend): Array<ICountedListItemDetail> => {
-  const friendTheatreTrips = getTheatreTripsWithFriend(friend);
-  return friendTheatreTrips.map(
+  const theatreVisitsMatchingFriend: Array<ITheatreVisit> = getTheatreVisitsMatchingFriend(
+    friend
+  );
+  return theatreVisitsMatchingFriend.map(
     (theatreVisit: ITheatreVisit, index: number): ICountedListItemDetail => {
       const { date } = theatreVisit;
       return {
-        index: friendTheatreTrips.length > 1 ? index + 1 : undefined,
+        index: theatreVisitsMatchingFriend.length > 1 ? index + 1 : undefined,
         mainText: getTheatreVisitTitle(theatreVisit),
         dateText: getDateText(date),
         isInFuture: isInFuture(date)

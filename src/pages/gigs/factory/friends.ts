@@ -3,22 +3,22 @@ import { getItemCounts, getGigTitle, getDatesText, isInFuture } from "utils";
 
 import { DATA } from "../data";
 
-const getGigsWithFriend = (friend: IFriend): Array<IGig> => {
-  const gigsWithFriend: Array<IGig> = [];
-  const allGigs: Array<IGig> = DATA.ALL;
-  allGigs.forEach((gig: IGig): void => {
-    if (gig.company.includes(friend)) gigsWithFriend.push(gig);
+const getGigsMatchingFriend = (friend: IFriend): Array<IGig> => {
+  const gigsMatchingFriend: Array<IGig> = [];
+  const gigs: Array<IGig> = DATA.ALL;
+  gigs.forEach((gig: IGig): void => {
+    if (gig.company.includes(friend)) gigsMatchingFriend.push(gig);
   });
-  return gigsWithFriend;
+  return gigsMatchingFriend;
 };
 
 const getFriendDetails = (friend: IFriend): Array<ICountedListItemDetail> => {
-  const friendGigs = getGigsWithFriend(friend);
-  return friendGigs.map(
+  const gigsMatchingFriend: Array<IGig> = getGigsMatchingFriend(friend);
+  return gigsMatchingFriend.map(
     (gig: IGig, index: number): ICountedListItemDetail => {
       const { dates } = gig;
       return {
-        index: friendGigs.length > 1 ? index + 1 : undefined,
+        index: gigsMatchingFriend.length > 1 ? index + 1 : undefined,
         mainText: getGigTitle(gig),
         dateText: getDatesText(dates),
         isInFuture: isInFuture(dates[0])

@@ -1,5 +1,10 @@
 import { PLAYS } from "@constants";
-import { getItemCounts } from "utils";
+import {
+  getItemCounts,
+  getDateText,
+  isInFuture,
+  moveTheSuffixToPrefix
+} from "utils";
 
 import { DATA } from "../data";
 
@@ -15,12 +20,37 @@ const playIsFavourited = ({
   favouritedTheatreCards
 }: IPlayIsFavourited): boolean => {
   let itemIsFavourited: boolean = false;
-
   favouritedTheatreCards.forEach((theatreVisit: ITheatreVisit) => {
     if (play === theatreVisit.play) itemIsFavourited = true;
   });
-
   return itemIsFavourited;
+};
+
+const getTheatreVisitsMatchingPlay = (play: IPlay): Array<ITheatreVisit> => {
+  const theatreVisitsMatchingPlay: Array<ITheatreVisit> = [];
+  const theatreVisits: Array<ITheatreVisit> = DATA.ALL;
+  theatreVisits.forEach((theatreVisit: ITheatreVisit): void => {
+    if (theatreVisit.play === play)
+      theatreVisitsMatchingPlay.push(theatreVisit);
+  });
+  return theatreVisitsMatchingPlay;
+};
+
+const getPlayDetails = (play: IPlay): Array<ICountedListItemDetail> => {
+  const theatreVisitsMatchingPlay: Array<ITheatreVisit> = getTheatreVisitsMatchingPlay(
+    play
+  );
+  return theatreVisitsMatchingPlay.map(
+    (theatreVisit: ITheatreVisit, index: number): ICountedListItemDetail => {
+      const { date } = theatreVisit;
+      return {
+        index: theatreVisitsMatchingPlay.length > 1 ? index + 1 : undefined,
+        mainText: moveTheSuffixToPrefix(theatreVisit.theatre.name),
+        dateText: getDateText(date),
+        isInFuture: isInFuture(date)
+      };
+    }
+  );
 };
 
 export const PLAYS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
@@ -29,6 +59,7 @@ export const PLAYS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
   (play: IPlay): ICountedListItem => ({
     text: play.name,
     favourite: playIsFavourited({ play, favouritedTheatreCards: FAVOURITES }),
-    ...getItemCounts({ item: { play }, data: { theatreVisits: DATA.ALL } })
+    ...getItemCounts({ item: { play }, data: { theatreVisits: DATA.ALL } }),
+    details: getPlayDetails(play)
   })
 );

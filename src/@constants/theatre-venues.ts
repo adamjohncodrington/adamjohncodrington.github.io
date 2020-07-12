@@ -20,7 +20,7 @@ const LONDON: ITheatreVenuesLondon = {
   NOEL_COWARD: { name: "Noël Coward Theatre" },
   // O
   OLD_RED_LION: { name: "Old Red Lion Theatre" },
-  OLD_VIC: { name: "The Old Vic" },
+  OLD_VIC: { name: "Old Vic, The" },
   // P
   PLAYHOUSE: { name: "Playhouse Theatre" },
   // R

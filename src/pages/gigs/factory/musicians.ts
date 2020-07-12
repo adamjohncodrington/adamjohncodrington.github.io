@@ -35,33 +35,32 @@ export const musiciansCounted: Array<IMusicianCounted> = musicians.map(
   })
 );
 
-const getMusicianGigs = (musician: IMusician): Array<IGig> => {
-  const musicianGigs: Array<IGig> = [];
-  const allGigs: Array<IGig> = DATA.ALL;
-  allGigs.forEach((gig: IGig): void => {
+const getGigsMatchingMusician = (musician: IMusician): Array<IGig> => {
+  const gigsMatchingMusician: Array<IGig> = [];
+  const gigs: Array<IGig> = DATA.ALL;
+  gigs.forEach((gig: IGig): void => {
     const { headline, support, lineup } = gig;
     if (
       headline === musician ||
       (support && support.includes(musician)) ||
       (lineup && lineup.includes(musician))
     ) {
-      musicianGigs.push(gig);
+      gigsMatchingMusician.push(gig);
     }
   });
-  return musicianGigs;
+  return gigsMatchingMusician;
 };
 
 const getMusicianDetails = (
   musician: IMusician
 ): Array<ICountedListItemDetail> => {
-  const musicianGigs: Array<IGig> = getMusicianGigs(musician);
-
-  return musicianGigs.map(
+  const gigsMatchingMusician: Array<IGig> = getGigsMatchingMusician(musician);
+  return gigsMatchingMusician.map(
     (
       { dates, festival, venue }: IGig,
       index: number
     ): ICountedListItemDetail => ({
-      index: musicianGigs.length > 1 ? index + 1 : undefined,
+      index: gigsMatchingMusician.length > 1 ? index + 1 : undefined,
       mainText: festival ? festival.name : moveTheSuffixToPrefix(venue.name),
       dateText: getDatesText(dates),
       isInFuture: isInFuture(dates[0])
@@ -80,7 +79,6 @@ export const MUSICIANS_LIST_ITEMS: Array<ICountedListItem> = musicians.map(
           favouritedGigCards: FAVOURITES
         }) || favourite,
       ...getItemCounts({ item: { musician }, data: { gigs: DATA.ALL } }),
-
       noLongerExists,
       details: getMusicianDetails(musician)
     };

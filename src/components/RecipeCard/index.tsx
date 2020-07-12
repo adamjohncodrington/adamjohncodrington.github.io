@@ -41,8 +41,8 @@ export const RecipeCard: FC<IRecipe> = ({
     ? getIngredientsHeader({ makes, defaultIngredientsHeader })
     : defaultIngredientsHeader;
 
-  const RecipeCardHeader: FC = () => (
-    <FlexRow>
+  const RecipeCardHeader: FC<IClassName> = ({ className }) => (
+    <FlexRow className={className}>
       <RecipeCardTitle favourite={favourite}>{title}</RecipeCardTitle>
       <RoundedSymbol color={diet.color}>{diet.abbreviation}</RoundedSymbol>
     </FlexRow>

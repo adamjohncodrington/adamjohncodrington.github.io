@@ -13,8 +13,7 @@ const StyledImage = styled.img(
   `
 );
 
-interface ISquareImage {
-  className?: string;
+interface ISquareImage extends IClassName {
   dataTest?: string;
   imgSrc: string;
   size: string;

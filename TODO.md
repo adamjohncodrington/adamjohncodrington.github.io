@@ -1,19 +1,7 @@
 # TO DO LIST
 
-- rename `gig` to `gigs`, `theatreVisit` to `theatreVisit`, `trip` to `trip`
-- remove `1.` for artists and venues only ever seen once
-- style `CountedListItemDetails` and move all values to theme
-- make `Worthy Farm` display as `Glastonbury`, `HeatonPark` display as `Parklife`, `Store Street` display as `WHP`, etc.
-- add details to loads of counted list items (including travel)
-
-## Testing
-
-- add tests for more utils
-
-## New features
-
-- friends section reveals which gigs you saw with them
-- add photos to `Travel`?
+- move `CountedListItemDetails` style values to theme
+- add details to Travel counted list items
 
 ## Enhancements
 
@@ -33,3 +21,7 @@
 - review semantics of page structure, landmarks, accessibility, etc.
 - recipe method array should be `ol` not `ul`?
 - rationalise `data-test` attributes
+
+## Testing
+
+- add tests for more utils

@@ -45,11 +45,7 @@ export const CountedListItem: FC<ICountedListItem> = ({
     </>
   );
 
-  interface IDisclosureHeader {
-    className?: string;
-  }
-
-  const DisclosureHeader: FC<IDisclosureHeader> = ({ className }) => (
+  const DisclosureHeader: FC<IClassName> = ({ className }) => (
     <FlexRow className={className}>{TextAndCounts}</FlexRow>
   );
 
