@@ -1,12 +1,11 @@
-import { ISLANDS } from "@constants";
+import { ISLANDS, COUNTRIES } from "@constants";
 import { getItemCounts } from "utils";
 
 import { DATA } from "../data";
-import { countries } from "./countries";
 
-const islandsThatAreCountries: Array<ICountryTemplate> = countries.filter(
-  ({ island }: ICountryTemplate): boolean => !!island
-);
+const islandsThatAreCountries: Array<ICountryTemplate> = Object.values(
+  COUNTRIES
+).filter(({ island }: ICountryTemplate): boolean => !!island);
 
 const islandsThatAreNotCountries: Array<IIsland> = Object.values(ISLANDS);
 

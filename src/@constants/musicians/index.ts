@@ -71,7 +71,7 @@ export const MUSICIANS: IMusicians = {
   DIZZEE_RASCAL: { name: "Dizzee Rascal" },
   DRUMS_THE: { name: "Drums, The" },
   DUKE_DUMONT: { name: "Duke Dumont" },
-  DUSKY: { name: "Dusky" },
+  DUSKY: { name: "Dusky", favourite: true },
   DYLAN: { name: "Dylan" },
   // E
   EARTHEATER: { name: "Eartheater" },

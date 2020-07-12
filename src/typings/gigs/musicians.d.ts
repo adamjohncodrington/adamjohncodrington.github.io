@@ -17,8 +17,6 @@ interface IMusician extends INameFavourite {
   albums?: Array<IAlbum>;
 }
 
-interface IMusicianCounted extends IMusician, IPastAndFutureCounts {}
-
 interface IMusicians {
   THE_1975: IMusician;
   "100_GECS": IMusician;

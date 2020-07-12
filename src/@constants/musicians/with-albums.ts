@@ -47,6 +47,7 @@ import {
 
 export const ALLIE_X: IMusician = {
   name: "Allie X",
+  favourite: true,
   albums: [
     {
       title: "Super Sunset",
@@ -61,6 +62,7 @@ export const ALLIE_X: IMusician = {
 
 export const BANKS: IMusician = {
   name: "Banks",
+  favourite: true,
   albums: [
     {
       appleMusicUrl: "https://music.apple.com/gb/album/iii/1467547466",
@@ -91,6 +93,7 @@ export const HAIM: IMusician = {
 const leon: string = "LÉON";
 export const LEON: IMusician = {
   name: leon,
+  favourite: true,
   albums: [
     {
       title: leon,
@@ -104,6 +107,7 @@ export const LEON: IMusician = {
 
 export const FKA_TWIGS: IMusician = {
   name: "FKA twigs",
+  favourite: true,
   albums: [
     {
       title: "Magdalene",
@@ -117,6 +121,7 @@ export const FKA_TWIGS: IMusician = {
 
 export const THE_1975: IMusician = {
   name: "1975, The",
+  favourite: true,
   albums: [
     {
       title: "A Brief Inquiry Into Online Relationships",
@@ -131,6 +136,7 @@ export const THE_1975: IMusician = {
 
 export const MUNA: IMusician = {
   name: "MUNA",
+  favourite: true,
   albums: [
     {
       title: "About U",
@@ -144,6 +150,7 @@ export const MUNA: IMusician = {
 
 export const TAYLOR_SWIFT: IMusician = {
   name: "Taylor Swift",
+  favourite: true,
   albums: [
     {
       title: "1989",
@@ -157,6 +164,7 @@ export const TAYLOR_SWIFT: IMusician = {
 
 export const LORDE: IMusician = {
   name: "Lorde",
+  favourite: true,
   albums: [
     {
       title: "Pure Heroine",
@@ -197,6 +205,7 @@ export const MARINA: IMusician = {
 
 export const FLORENCE_AND_THE_MACHINE: IMusician = {
   name: "Florence + the Machine",
+  favourite: true,
   albums: [
     {
       title: "Lungs",
@@ -252,6 +261,7 @@ export const AMY_WINEHOUSE: IMusician = {
 
 export const KATE_NASH: IMusician = {
   name: "Kate Nash",
+  favourite: true,
   albums: [
     {
       title: "Made of Bricks",
@@ -266,6 +276,7 @@ export const KATE_NASH: IMusician = {
 
 export const CHARLI_XCX: IMusician = {
   name: "Charli XCX",
+  favourite: true,
   albums: [
     {
       title: "how i'm feeling now",
@@ -317,6 +328,7 @@ export const ARIANA_GRANDE: IMusician = {
 
 export const CAROLINE_POLACHEK: IMusician = {
   name: "Caroline Polachek",
+  favourite: true,
   albums: [
     {
       title: "Pang",
@@ -330,6 +342,7 @@ export const CAROLINE_POLACHEK: IMusician = {
 
 export const KIM_PETRAS: IMusician = {
   name: "Kim Petras",
+  favourite: true,
   albums: [
     {
       title: "Clarity",
@@ -356,6 +369,7 @@ export const GEORGE_FITZGERALD: IMusician = {
 
 export const JON_HOPKINS: IMusician = {
   name: "Jon Hopkins",
+  favourite: true,
   albums: [
     {
       title: "Singularity",
@@ -381,6 +395,7 @@ export const LANY: IMusician = {
 
 export const SOPHIE: IMusician = {
   name: "SOPHIE",
+  favourite: true,
   albums: [
     {
       title: "Oil of Every Pearl's Un-Insides",
@@ -394,6 +409,7 @@ export const SOPHIE: IMusician = {
 
 export const TROYE_SIVAN: IMusician = {
   name: "Troye Sivan",
+  favourite: true,
   albums: [
     {
       title: "Bloom",
@@ -445,6 +461,7 @@ export const TOURIST: IMusician = {
 
 export const GRIMES: IMusician = {
   name: "Grimes",
+  favourite: true,
   albums: [
     {
       title: "Art Angels",
@@ -496,6 +513,7 @@ export const BEN_HOWARD: IMusician = {
 
 export const LADY_GAGA: IMusician = {
   name: "Lady Gaga",
+  favourite: true,
   albums: [
     {
       artwork: Jpg_LadyGaga_BTW,
@@ -521,6 +539,7 @@ export const RIHANNA: IMusician = {
 
 export const LISSIE: IMusician = {
   name: "Lissie",
+  favourite: true,
   albums: [
     {
       artwork: Jpg_Lissie_CAT,
@@ -585,6 +604,7 @@ export const SUFJAN_STEVENS: IMusician = {
 
 export const NATALIA_KILLS: IMusician = {
   name: "Natalia Kills",
+  favourite: true,
   noLongerExists: true,
   albums: [
     {

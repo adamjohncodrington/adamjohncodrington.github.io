@@ -1,11 +1,5 @@
 import { FESTIVALS } from "@constants";
-import {
-  getItemCounts,
-  isInFuture,
-  getDatesText,
-  moveTheSuffixToPrefix,
-  getGigSubtitle
-} from "utils";
+import { getItemCounts, isInFuture, getDatesText, getGigSubtitle } from "utils";
 
 import { DATA } from "../data";
 

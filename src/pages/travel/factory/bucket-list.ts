@@ -1,27 +1,25 @@
-import { citiesCounted } from "./cities";
-import { countriesCounted } from "./countries";
+import { COUNTRIES, CITIES } from "@constants";
+import { getItemCounts } from "utils";
 
-const countriesNotVisited: Array<ICountryCounted> = countriesCounted.filter(
-  ({ pastCount, futureCount }: ICountryCounted): boolean =>
-    pastCount === 0 && futureCount === 0
-);
+import { DATA } from "../data";
 
-const citiesNotVisited: Array<ICityCounted> = citiesCounted.filter(
-  ({ pastCount, futureCount }: ICityCounted): boolean =>
-    pastCount === 0 && futureCount === 0
-);
+const bucketListCountries: Array<ICountryCounted> = Object.values(COUNTRIES)
+  .map(
+    (country: ICountryTemplate): ICountryCounted => ({
+      ...country,
+      ...getItemCounts({ item: { country }, data: { trips: DATA.ALL } })
+    })
+  )
+  .filter(
+    ({
+      pastCount,
+      futureCount,
+      excludeFromBucketList
+    }: ICountryCounted): boolean =>
+      pastCount === 0 && futureCount === 0 && !excludeFromBucketList
+  );
 
-const countriesForBucketList: Array<ICountryCounted> = countriesNotVisited.filter(
-  ({ excludeFromBucketList }: ICountryCounted): boolean =>
-    !excludeFromBucketList
-);
-
-const citiesForBucketList: Array<ICityCounted> = citiesNotVisited.filter(
-  ({ excludeFromBucketList, insignificant }: ICityCounted): boolean =>
-    !excludeFromBucketList && !insignificant
-);
-
-const BUCKET_LIST_COUNTRIES: Array<ICountedListItem> = countriesForBucketList.map(
+const BUCKET_LIST_COUNTRIES: Array<ICountedListItem> = bucketListCountries.map(
   ({ name, pastCount, futureCount }: ICountryCounted): ICountedListItem => ({
     text: name,
     pastCount,
@@ -30,7 +28,27 @@ const BUCKET_LIST_COUNTRIES: Array<ICountedListItem> = countriesForBucketList.ma
   })
 );
 
-const BUCKET_LIST_CITIES: Array<ICountedListItem> = citiesForBucketList.map(
+const bucketListCities: Array<ICityCounted> = Object.values(CITIES)
+  .map(
+    (city: ICity): ICityCounted => ({
+      ...city,
+      ...getItemCounts({ item: { city }, data: { trips: DATA.ALL } })
+    })
+  )
+  .filter(
+    ({
+      pastCount,
+      futureCount,
+      excludeFromBucketList,
+      insignificant
+    }: ICityCounted): boolean =>
+      pastCount === 0 &&
+      futureCount === 0 &&
+      !excludeFromBucketList &&
+      !insignificant
+  );
+
+const BUCKET_LIST_CITIES: Array<ICountedListItem> = bucketListCities.map(
   ({
     name,
     capital,

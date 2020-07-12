@@ -21,6 +21,46 @@ interface IGetItemCounts {
   };
 }
 
+export const musicianMatchExists = (
+  musician: IMusician,
+  { headline, support, lineup }: IGig
+): boolean => {
+  if (headline === musician) return true;
+  if (support && support.includes(musician)) return true;
+  if (lineup && lineup.includes(musician)) return true;
+  return false;
+};
+
+export const countryMatchExists = (
+  country: ICountryTemplate,
+  { title, subtitle, hidden }: ITrip
+): boolean => {
+  if (title && title.includes(country)) return true;
+  if (subtitle && subtitle.includes(country)) return true;
+  if (hidden && hidden.includes(country)) return true;
+  return false;
+};
+
+export const cityMatchExists = (
+  city: ICity,
+  { title, subtitle, hidden }: ITrip
+): boolean => {
+  if (title && title.includes(city)) return true;
+  if (subtitle && subtitle.includes(city)) return true;
+  if (hidden && hidden.includes(city)) return true;
+  return false;
+};
+
+export const attractionMatchExists = (
+  attraction: IAttraction,
+  { title, subtitle, hidden }: ITrip
+): boolean => {
+  if (title && title.includes(attraction)) return true;
+  if (subtitle && subtitle.includes(attraction)) return true;
+  if (hidden && hidden.includes(attraction)) return true;
+  return false;
+};
+
 export const getItemCounts = ({
   data: { gigs, theatreVisits, trips },
   item: {
@@ -50,69 +90,47 @@ export const getItemCounts = ({
 
   gigs &&
     (festival || friend || musician || musicVenue) &&
-    gigs.forEach(
-      ({
-        company,
-        headline,
-        support,
-        dates,
-        lineup,
-        venue,
-        ...rest
-      }: IGig): void => {
-        if (
-          (festival && rest.festival === festival) ||
-          (friend && company.includes(friend)) ||
-          (musicVenue && musicVenue === venue) ||
-          (musician &&
-            (headline === musician ||
-              (support && support.includes(musician)) ||
-              (lineup && lineup.includes(musician))))
-        )
-          incremementPastOrFutureCount(dates[0]);
-      }
-    );
+    gigs.forEach((gig: IGig): void => {
+      const { company, dates, venue } = gig;
+      if (
+        (festival && gig.festival === festival) ||
+        (friend && company.includes(friend)) ||
+        (musicVenue && musicVenue === venue) ||
+        (musician && musicianMatchExists(musician, gig))
+      )
+        incremementPastOrFutureCount(dates[0]);
+    });
 
   trips &&
     (attraction || city || country || friend || island) &&
-    trips.forEach(
-      ({ title, company, subtitle, hidden, dates }: ITrip): void => {
-        if (
-          (attraction &&
-            ((title && title.includes(attraction)) ||
-              (hidden && hidden.includes(attraction)) ||
-              (subtitle && subtitle.includes(attraction)))) ||
-          (country &&
-            ((title && title.includes(country)) ||
-              (hidden && hidden.includes(country)) ||
-              (subtitle && subtitle.includes(country)))) ||
-          (city &&
-            ((title && title.includes(city)) ||
-              (hidden && hidden.includes(city)) ||
-              (subtitle && subtitle.includes(city)))) ||
-          (island &&
-            ((title && title.includes(island)) ||
-              (hidden && hidden.includes(island)) ||
-              (subtitle && subtitle.includes(island)))) ||
-          (friend && company.includes(friend))
-        )
-          incremementPastOrFutureCount(dates[0]);
-      }
-    );
+    trips.forEach((trip: ITrip): void => {
+      const { title, company, subtitle, hidden, dates } = trip;
+
+      if (
+        (attraction && attractionMatchExists(attraction, trip)) ||
+        (country && countryMatchExists(country, trip)) ||
+        (city && cityMatchExists(city, trip)) ||
+        (island &&
+          ((title && title.includes(island)) ||
+            (hidden && hidden.includes(island)) ||
+            (subtitle && subtitle.includes(island)))) ||
+        (friend && company.includes(friend))
+      )
+        incremementPastOrFutureCount(dates[0]);
+    });
 
   theatreVisits &&
     (actor || friend || play || theatre) &&
-    theatreVisits.forEach(
-      ({ cast, company, date, ...rest }: ITheatreVisit): void => {
-        if (
-          (actor && cast && cast.includes(actor)) ||
-          (play && rest.play === play) ||
-          (theatre && rest.theatre === theatre) ||
-          (friend && company.includes(friend))
-        )
-          incremementPastOrFutureCount(date);
-      }
-    );
+    theatreVisits.forEach((theatreVisit: ITheatreVisit): void => {
+      const { cast, company, date } = theatreVisit;
+      if (
+        (actor && cast && cast.includes(actor)) ||
+        (play && theatreVisit.play === play) ||
+        (theatre && theatreVisit.theatre === theatre) ||
+        (friend && company.includes(friend))
+      )
+        incremementPastOrFutureCount(date);
+    });
 
   return { pastCount, futureCount };
 };

@@ -1,29 +1,49 @@
 import { CITIES } from "@constants";
-import { getItemCounts } from "utils";
+import {
+  getItemCounts,
+  cityMatchExists,
+  getTripTitle,
+  getDatesText,
+  isInFuture
+} from "utils";
 
 import { DATA } from "../data";
 
-const cities: Array<ICity> = Object.values(CITIES);
+const getTripsMatchingCity = (city: ICity): Array<ITrip> => {
+  const tripsMatchingCity: Array<ITrip> = [];
+  const trips: Array<ITrip> = DATA.ALL;
+  trips.forEach((trip: ITrip): void => {
+    if (cityMatchExists(city, trip)) tripsMatchingCity.push(trip);
+  });
+  return tripsMatchingCity;
+};
 
-export const citiesCounted: Array<ICityCounted> = cities.map(
-  (city: ICity): ICityCounted => ({
-    ...city,
-    ...getItemCounts({ item: { city }, data: { trips: DATA.ALL } })
-  })
-);
+const getCityDetails = (city: ICity): Array<ICountedListItemDetail> => {
+  const tripsMatchingCity: Array<ITrip> = getTripsMatchingCity(city);
+  return tripsMatchingCity.map(
+    (trip: ITrip, index: number): ICountedListItemDetail => {
+      const { dates } = trip;
+      return {
+        index: tripsMatchingCity.length > 1 ? index + 1 : undefined,
+        mainText: getTripTitle(trip),
+        dateText: getDatesText(dates),
+        isInFuture: isInFuture(dates[0])
+      };
+    }
+  );
+};
 
-export const CITIES_LIST_ITEMS: Array<ICountedListItem> = citiesCounted.map(
-  ({
-    name,
-    capital,
-    pastCount,
-    insignificant,
-    futureCount
-  }: ICityCounted): ICountedListItem => ({
-    text: name,
-    star: capital,
-    countInfoIrrelevant: insignificant,
-    pastCount,
-    futureCount
-  })
+export const CITIES_LIST_ITEMS: Array<ICountedListItem> = Object.values(
+  CITIES
+).map(
+  (city: ICity): ICountedListItem => {
+    const { name, capital, insignificant } = city;
+    return {
+      text: name,
+      star: capital,
+      countInfoIrrelevant: insignificant,
+      ...getItemCounts({ item: { city }, data: { trips: DATA.ALL } }),
+      details: getCityDetails(city)
+    };
+  }
 );
