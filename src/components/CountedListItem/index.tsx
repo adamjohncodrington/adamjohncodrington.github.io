@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React, { FC, ReactElement } from "react";
 
 import { FlexRow, FlexLiGrow } from "primitives";
 
@@ -11,7 +11,7 @@ import {
   CountedListItemFutureCount
 } from "./styles";
 
-export const CountedListItem: React.FC<ICountedListItem> = ({
+export const CountedListItem: FC<ICountedListItem> = ({
   text,
   favourite,
   star,
@@ -45,9 +45,17 @@ export const CountedListItem: React.FC<ICountedListItem> = ({
     </>
   );
 
+  interface IDisclosureHeader {
+    className?: string;
+  }
+
+  const DisclosureHeader: FC<IDisclosureHeader> = ({ className }) => (
+    <FlexRow className={className}>{TextAndCounts}</FlexRow>
+  );
+
   return details && details.length > 0 ? (
     <li>
-      <Disclosure Header={<FlexRow>{TextAndCounts}</FlexRow>}>
+      <Disclosure Header={DisclosureHeader}>
         <CountedListItemDetails details={details} />
       </Disclosure>
     </li>

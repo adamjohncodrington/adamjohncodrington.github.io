@@ -1,7 +1,7 @@
 import { FRIENDS, COUNTRIES } from "@constants";
 import { PHOTOS_TRAVEL } from "resources";
 
-export const TRAVEL_2020: Array<ITravelCard> = [
+export const TRAVEL_2020: Array<ITrip> = [
   {
     title: [COUNTRIES.NORWAY.cities.OSLO],
     subtitle: [COUNTRIES.NORWAY],

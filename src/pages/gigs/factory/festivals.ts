@@ -10,6 +10,6 @@ export const FESTIVALS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
   .map(
     (festival: IFestival): ICountedListItem => ({
       text: festival.name,
-      ...getItemCounts({ item: { festival }, data: { gigCards: DATA.ALL } })
+      ...getItemCounts({ item: { festival }, data: { gigs: DATA.ALL } })
     })
   );

@@ -8,7 +8,7 @@ const cities: Array<ICity> = Object.values(CITIES);
 export const citiesCounted: Array<ICityCounted> = cities.map(
   (city: ICity): ICityCounted => ({
     ...city,
-    ...getItemCounts({ item: { city }, data: { travelCards: DATA.ALL } })
+    ...getItemCounts({ item: { city }, data: { trips: DATA.ALL } })
   })
 );
 

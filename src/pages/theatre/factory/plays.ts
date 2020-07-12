@@ -7,7 +7,7 @@ import { FAVOURITES } from "./favourites";
 
 interface IPlayIsFavourited {
   play: IPlay;
-  favouritedTheatreCards: Array<ITheatreCard>;
+  favouritedTheatreCards: Array<ITheatreVisit>;
 }
 
 const playIsFavourited = ({
@@ -16,8 +16,8 @@ const playIsFavourited = ({
 }: IPlayIsFavourited): boolean => {
   let itemIsFavourited: boolean = false;
 
-  favouritedTheatreCards.forEach((theatreCard: ITheatreCard) => {
-    if (play === theatreCard.play) itemIsFavourited = true;
+  favouritedTheatreCards.forEach((theatreVisit: ITheatreVisit) => {
+    if (play === theatreVisit.play) itemIsFavourited = true;
   });
 
   return itemIsFavourited;
@@ -29,6 +29,6 @@ export const PLAYS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
   (play: IPlay): ICountedListItem => ({
     text: play.name,
     favourite: playIsFavourited({ play, favouritedTheatreCards: FAVOURITES }),
-    ...getItemCounts({ item: { play }, data: { theatreCards: DATA.ALL } })
+    ...getItemCounts({ item: { play }, data: { theatreVisits: DATA.ALL } })
   })
 );

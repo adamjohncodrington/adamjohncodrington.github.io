@@ -65,7 +65,7 @@ const makes: IRecipeMakes = { quantity: 2, measurement: MEASUREMENTS.SERVING };
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
 
-export const CRISPY_KALE: IRecipeCard = {
+export const CRISPY_KALE: IRecipe = {
   title,
   ingredients,
   makes,

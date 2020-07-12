@@ -20,20 +20,20 @@ const CSS_COMMON = ({ theme: { pageSection } }: IThemeProp) => css`
 const CSS_RECIPE_CARDS = ({
   theme: {
     pageSection: {
-      panelList: { recipeCards }
+      panelList: { recipes }
     }
   }
 }: IThemeProp) => css`
   > * {
-    padding: ${recipeCards.padding.vertical} 0;
+    padding: ${recipes.padding.vertical} 0;
   }
 
   > *:first-child {
-    padding-top: ${recipeCards.firstRecipeCard.padding.top};
+    padding-top: ${recipes.firstRecipeCard.padding.top};
   }
 
   > *:last-child {
-    padding-bottom: ${recipeCards.lastRecipeCard.padding.bottom};
+    padding-bottom: ${recipes.lastRecipeCard.padding.bottom};
   }
 
   ${CSS_COMMON}

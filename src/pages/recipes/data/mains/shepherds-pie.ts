@@ -121,7 +121,7 @@ const diet: IRecipeDiet = DIETS.VEGAN;
 const image: IJpgSrc = RECIPE_PHOTOS.SHEPHERDS_PIE;
 const makes: IRecipeMakes = { quantity: 7, measurement: MEASUREMENTS.PORTION };
 
-export const SHEPHERDS_PIE: IRecipeCard = {
+export const SHEPHERDS_PIE: IRecipe = {
   title,
   ingredients,
   makes,

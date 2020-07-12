@@ -61,7 +61,7 @@ const diet: IRecipeDiet = DIETS.VEGAN;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
 
-export const SCONES: IRecipeCard = {
+export const SCONES: IRecipe = {
   ingredients,
   method,
   diet,

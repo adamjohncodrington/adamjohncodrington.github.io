@@ -9,7 +9,7 @@ interface IDetailItem {
 }
 
 interface ICountedListItemDetail {
-  index: number;
+  index?: number;
   mainText: string;
   dateText: string;
   isInFuture: boolean;
@@ -35,11 +35,11 @@ interface IPageSectionDisclosure extends IOnlyHeaderClicable {
 
 interface IPageSectionDataTypes {
   countedListItems?: Array<ICountedListItem>;
-  gigCards?: Array<IGigCard>;
-  recipeCards?: Array<IRecipeCard>;
-  theatreCards?: Array<ITheatreCard>;
-  travelCards?: Array<ITravelCard>;
-  vinylCards?: Array<IVinylCard | undefined>;
+  gigs?: Array<IGig>;
+  recipes?: Array<IRecipe>;
+  theatreVisits?: Array<ITheatreVisit>;
+  trips?: Array<ITrip>;
+  vinyls?: Array<IVinyl | undefined>;
 }
 
 interface IPageSection extends IPageSectionDisclosure {

@@ -112,7 +112,7 @@ const diet: IRecipeDiet = DIETS.VEGAN;
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;
 
-export const BOLOGNESE: IRecipeCard = {
+export const BOLOGNESE: IRecipe = {
   title,
   ingredients,
   favourite: true,

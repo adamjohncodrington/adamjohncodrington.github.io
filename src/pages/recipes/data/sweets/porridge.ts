@@ -51,7 +51,7 @@ const image: IJpgSrc = RECIPE_PHOTOS.PORRIDGE;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
 
-export const PORRIDGE: IRecipeCard = {
+export const PORRIDGE: IRecipe = {
   title,
   ingredients,
   serveWith,

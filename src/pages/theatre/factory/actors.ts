@@ -9,6 +9,6 @@ export const ACTORS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
   (actor: IActor): ICountedListItem => ({
     text: actor.name,
     favourite: actor.favourite,
-    ...getItemCounts({ item: { actor }, data: { theatreCards: DATA.ALL } })
+    ...getItemCounts({ item: { actor }, data: { theatreVisits: DATA.ALL } })
   })
 );

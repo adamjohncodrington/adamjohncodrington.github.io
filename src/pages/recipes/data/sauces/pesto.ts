@@ -68,7 +68,7 @@ const makes: IRecipeMakes = { quantity: 100, measurement: MEASUREMENTS.GRAM };
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
 
-export const PESTO: IRecipeCard = {
+export const PESTO: IRecipe = {
   title,
   ingredients,
   totalCost,

@@ -1,5 +1,5 @@
 interface IDisclosure {
-  Header: React.ReactElement;
+  Header: React.FC;
   autoExpand?: boolean;
   isStatic?: boolean;
 }

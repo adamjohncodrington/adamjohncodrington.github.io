@@ -1,14 +1,14 @@
-import React from "react";
+import React, { FC } from "react";
 
 import { PAGE_SECTION_PANEL_TYPES } from "@constants";
 import { Li } from "primitives";
 import {
-  getGigCardSubtitle,
-  getGigCardTitle,
-  getTheatreCardSubtitle,
-  getTheatreCardTitle,
-  getTravelCardSubtitle,
-  getTravelCardTitle,
+  getGigSubtitle,
+  getGigTitle,
+  getTheatreVisitSubtitle,
+  getTheatreVisitTitle,
+  getTripSubtitle,
+  getTripTitle,
   moveTheSuffixToPrefix,
   getCountdownText,
   getDatesText,
@@ -22,40 +22,40 @@ import { VinylCard } from "../VinylCard";
 
 import { PageSectionPanelList } from "./styles";
 
-export const PageSectionPanel: React.FC<IPageSectionDataTypes> = ({
+export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
   countedListItems,
-  gigCards,
-  recipeCards,
-  theatreCards,
-  travelCards,
-  vinylCards
+  gigs,
+  recipes,
+  theatreVisits,
+  trips,
+  vinyls
 }) => {
-  const pageSectionPanelType: string = !!recipeCards
+  const pageSectionPanelType: string = recipes
     ? PAGE_SECTION_PANEL_TYPES.RECIPE_CARDS
-    : !!countedListItems
+    : countedListItems
     ? PAGE_SECTION_PANEL_TYPES.COUNTED_LIST
     : PAGE_SECTION_PANEL_TYPES.REGULAR_CARDS;
 
   return (
     <PageSectionPanelList pageSectionPanelType={pageSectionPanelType}>
-      {recipeCards &&
-        recipeCards.map(
-          (recipeCard: IRecipeCard, index: number) =>
-            !recipeCard.hide && (
+      {recipes &&
+        recipes.map(
+          (recipe: IRecipe, index: number) =>
+            !recipe.hide && (
               <Li key={index}>
-                <RecipeCard key={index} {...recipeCard} />
+                <RecipeCard key={index} {...recipe} />
               </Li>
             )
         )}
 
-      {gigCards &&
-        gigCards.map((gigCard: IGigCard, index: number) => {
-          const { venue, favourite, company, dates, ticketType } = gigCard;
+      {gigs &&
+        gigs.map((gig: IGig, index: number) => {
+          const { venue, favourite, company, dates, ticketType } = gig;
           return (
             <Li key={index}>
               <EventCard
-                title={getGigCardTitle(gigCard)}
-                subtitle={getGigCardSubtitle(gigCard)}
+                title={getGigTitle(gig)}
+                subtitle={getGigSubtitle(gig)}
                 body={moveTheSuffixToPrefix(venue.name)}
                 favourite={favourite}
                 company={company}
@@ -67,14 +67,14 @@ export const PageSectionPanel: React.FC<IPageSectionDataTypes> = ({
           );
         })}
 
-      {theatreCards &&
-        theatreCards.map((theatreCard: ITheatreCard, index: number) => {
-          const { favourite, company, theatre, date } = theatreCard;
+      {theatreVisits &&
+        theatreVisits.map((theatreVisit: ITheatreVisit, index: number) => {
+          const { favourite, company, theatre, date } = theatreVisit;
           return (
             <Li key={index}>
               <EventCard
-                title={getTheatreCardTitle(theatreCard)}
-                subtitle={getTheatreCardSubtitle(theatreCard)}
+                title={getTheatreVisitTitle(theatreVisit)}
+                subtitle={getTheatreVisitSubtitle(theatreVisit)}
                 body={theatre.name}
                 favourite={favourite}
                 company={company}
@@ -84,14 +84,14 @@ export const PageSectionPanel: React.FC<IPageSectionDataTypes> = ({
           );
         })}
 
-      {travelCards &&
-        travelCards.map((travelCard: ITravelCard, index: number) => {
-          const { favourite, company, dates, photos } = travelCard;
+      {trips &&
+        trips.map((trip: ITrip, index: number) => {
+          const { favourite, company, dates, photos } = trip;
           return (
             <Li key={index}>
               <EventCard
-                title={getTravelCardTitle(travelCard)}
-                subtitle={getTravelCardSubtitle(travelCard)}
+                title={getTripTitle(trip)}
+                subtitle={getTripSubtitle(trip)}
                 favourite={favourite}
                 company={company}
                 dateText={getDatesText(dates)}
@@ -101,12 +101,12 @@ export const PageSectionPanel: React.FC<IPageSectionDataTypes> = ({
           );
         })}
 
-      {vinylCards &&
-        vinylCards.map(
-          (vinylCard: IVinylCard | undefined, index: number) =>
-            vinylCard && (
+      {vinyls &&
+        vinyls.map(
+          (vinyl: IVinyl | undefined, index: number) =>
+            vinyl && (
               <Li key={index}>
-                <VinylCard {...vinylCard} />
+                <VinylCard {...vinyl} />
               </Li>
             )
         )}

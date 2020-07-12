@@ -71,7 +71,7 @@ const diet: IRecipeDiet = DIETS.VEGAN;
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;
 
-export const TOFU_SCRAMBLE: IRecipeCard = {
+export const TOFU_SCRAMBLE: IRecipe = {
   ingredients,
   makes,
   totalCost,

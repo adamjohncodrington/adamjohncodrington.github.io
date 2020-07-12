@@ -75,7 +75,7 @@ const title: string = "Brownies";
 const diet: IRecipeDiet = DIETS.VEGAN;
 const image: IJpgSrc = RECIPE_PHOTOS.BROWNIES;
 
-export const BROWNIES: IRecipeCard = {
+export const BROWNIES: IRecipe = {
   ingredients,
   method,
   diet,

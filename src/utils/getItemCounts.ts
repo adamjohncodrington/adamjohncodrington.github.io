@@ -2,9 +2,9 @@ import { isInFuture } from "./basic";
 
 interface IGetItemCounts {
   data: {
-    gigCards?: Array<IGigCard>;
-    theatreCards?: Array<ITheatreCard>;
-    travelCards?: Array<ITravelCard>;
+    gigs?: Array<IGig>;
+    theatreVisits?: Array<ITheatreVisit>;
+    trips?: Array<ITrip>;
   };
   item: {
     actor?: IActor;
@@ -22,7 +22,7 @@ interface IGetItemCounts {
 }
 
 export const getItemCounts = ({
-  data: { gigCards, theatreCards, travelCards },
+  data: { gigs, theatreVisits, trips },
   item: {
     actor,
     attraction,
@@ -48,9 +48,9 @@ export const getItemCounts = ({
     }
   };
 
-  gigCards &&
+  gigs &&
     (festival || friend || musician || musicVenue) &&
-    gigCards.forEach(
+    gigs.forEach(
       ({
         company,
         headline,
@@ -59,7 +59,7 @@ export const getItemCounts = ({
         lineup,
         venue,
         ...rest
-      }: IGigCard): void => {
+      }: IGig): void => {
         if (
           (festival && rest.festival === festival) ||
           (friend && company.includes(friend)) ||
@@ -73,10 +73,10 @@ export const getItemCounts = ({
       }
     );
 
-  travelCards &&
+  trips &&
     (attraction || city || country || friend || island) &&
-    travelCards.forEach(
-      ({ title, company, subtitle, hidden, dates }: ITravelCard): void => {
+    trips.forEach(
+      ({ title, company, subtitle, hidden, dates }: ITrip): void => {
         if (
           (attraction &&
             ((title && title.includes(attraction)) ||
@@ -100,10 +100,10 @@ export const getItemCounts = ({
       }
     );
 
-  theatreCards &&
+  theatreVisits &&
     (actor || friend || play || theatre) &&
-    theatreCards.forEach(
-      ({ cast, company, date, ...rest }: ITheatreCard): void => {
+    theatreVisits.forEach(
+      ({ cast, company, date, ...rest }: ITheatreVisit): void => {
         if (
           (actor && cast && cast.includes(actor)) ||
           (play && rest.play === play) ||

@@ -1,4 +1,4 @@
-interface ITheatreCard {
+interface ITheatreVisit {
   play: IPlay;
   theatre: ITheatreVenue;
   company: Array<IFriend>;

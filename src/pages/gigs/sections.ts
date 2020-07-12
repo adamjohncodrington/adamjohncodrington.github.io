@@ -41,7 +41,7 @@ const SECTION_FRIENDS_GIGS: IPageSection = {
 const SECTION_UP_NEXT_GIGS: IPageSection = {
   SvgIcon: SvgNotepad,
   title: PAGE_SECTION_TITLES.UP_NEXT,
-  data: { gigCards: FACTORY.UP_NEXT },
+  data: { gigs: FACTORY.UP_NEXT },
   count: FACTORY.UP_NEXT.length
 };
 
@@ -53,11 +53,11 @@ const SECTION_VENUES_GIGS: IPageSection = {
 };
 
 const SECTIONS_YEARS: Array<IPageSection> = DATA.SPLIT_BY_YEAR.map(
-  (year: Array<IGigCard>): IPageSection => ({
+  (year: Array<IGig>): IPageSection => ({
     title: year[0].dates[0].getFullYear().toString(),
     count: year.length,
     data: {
-      gigCards: year.filter(({ dates }: IGigCard) => !isInFuture(dates[0]))
+      gigs: year.filter(({ dates }: IGig) => !isInFuture(dates[0]))
     }
   })
 );

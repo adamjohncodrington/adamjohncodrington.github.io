@@ -8,20 +8,20 @@ interface IRecipeCardTitle extends IThemeProp {
 }
 
 export const RecipeCardTitle = styled(H3)(
-  ({ theme: { recipeCard }, favourite }: IRecipeCardTitle) => css`
+  ({ theme: { recipe }, favourite }: IRecipeCardTitle) => css`
     text-transform: lowercase;
-    font-weight: ${recipeCard.title.fontWeight};
+    font-weight: ${recipe.title.fontWeight};
     flex: 1;
     ${favourite && CSS.PSEUDO_ELEMENT_HEART}
   `
 );
 
 export const RecipeCardPanel = styled.div(
-  ({ theme: { recipeCard } }: IThemeProp) => css`
-    padding-top: ${recipeCard.panel.padding.top};
+  ({ theme: { recipe } }: IThemeProp) => css`
+    padding-top: ${recipe.panel.padding.top};
 
     > * {
-      padding-top: ${recipeCard.panel.children.padding.top};
+      padding-top: ${recipe.panel.children.padding.top};
     }
   `
 );
@@ -31,8 +31,8 @@ export const RecipeCardCostsContainer = styled(FlexColumn)`
 `;
 
 export const RecipeCardPortionCost = styled.span(
-  ({ theme: { recipeCard } }: IThemeProp) => css`
-    margin-top: ${recipeCard.portionCost.margin.top};
+  ({ theme: { recipe } }: IThemeProp) => css`
+    margin-top: ${recipe.portionCost.margin.top};
     ${CSS.FONT_SIZE_75_PERCENT}
   `
 );

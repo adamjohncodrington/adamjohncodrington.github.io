@@ -107,7 +107,7 @@ const image: IJpgSrc = RECIPE_PHOTOS.BANANA_CAKE;
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;
 
-export const BANANA_CAKE: IRecipeCard = {
+export const BANANA_CAKE: IRecipe = {
   title,
   favourite: true,
   ingredients,

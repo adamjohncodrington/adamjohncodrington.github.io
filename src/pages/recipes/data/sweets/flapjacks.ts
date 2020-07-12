@@ -68,7 +68,7 @@ const image: IJpgSrc = RECIPE_PHOTOS.FLAPJACKS;
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;
 
-export const FLAPJACKS: IRecipeCard = {
+export const FLAPJACKS: IRecipe = {
   title,
   ingredients,
   makes,

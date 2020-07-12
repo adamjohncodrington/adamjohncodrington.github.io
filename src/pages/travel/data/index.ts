@@ -23,7 +23,7 @@ import { TRAVEL_2018 } from "./travel-2018";
 import { TRAVEL_2019 } from "./travel-2019";
 import { TRAVEL_2020 } from "./travel-2020";
 
-const ALL: Array<ITravelCard> = [
+const ALL: Array<ITrip> = [
   ...TRAVEL_1997,
   ...TRAVEL_1998,
   ...TRAVEL_1999,
@@ -50,7 +50,7 @@ const ALL: Array<ITravelCard> = [
   ...TRAVEL_2020
 ];
 
-const SPLIT_BY_YEAR: Array<Array<ITravelCard>> = [
+const SPLIT_BY_YEAR: Array<Array<ITrip>> = [
   TRAVEL_1997,
   TRAVEL_1998,
   TRAVEL_1999,

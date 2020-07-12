@@ -120,7 +120,7 @@ const makes: IRecipeMakes = { quantity: 5, measurement: MEASUREMENTS.PORTION };
 const diet: IRecipeDiet = DIETS.VEGAN;
 const image: IJpgSrc = RECIPE_PHOTOS.CARBONARA;
 
-export const CARBONARA: IRecipeCard = {
+export const CARBONARA: IRecipe = {
   title,
   ingredients,
   makes,

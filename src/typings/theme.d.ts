@@ -56,7 +56,7 @@ interface IThemePageSection {
       border: { bottom: PxValue };
       countedListItems: { padding: { vertical: PxValue } };
       padding: { bottom: PxValue };
-      recipeCards: {
+      recipes: {
         firstRecipeCard: { padding: { top: PxValue } };
         lastRecipeCard: { padding: { bottom: PxValue } };
         padding: { vertical: PxValue };
@@ -74,7 +74,7 @@ interface IThemePageLayout {
 }
 
 interface IThemeRecipeCard {
-  recipeCard: {
+  recipe: {
     dietSymbol: {
       margin: { top: PxValue };
     };
@@ -98,7 +98,7 @@ interface IThemeRoundedSymbol {
 }
 
 interface IThemeVinylCard {
-  vinylCard: {
+  vinyl: {
     artwork: { margin: { right: PxValue }; size: PxValue };
     notLastChild: { margin: { bottom: PxValue } };
   };

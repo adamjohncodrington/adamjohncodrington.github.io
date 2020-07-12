@@ -88,7 +88,7 @@ const image: IJpgSrc = RECIPE_PHOTOS.BANG_BANG_CAULIFLOWER;
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;
 
-export const BANG_BANG_CAULIFLOWER: IRecipeCard = {
+export const BANG_BANG_CAULIFLOWER: IRecipe = {
   title,
   ingredients,
   image,

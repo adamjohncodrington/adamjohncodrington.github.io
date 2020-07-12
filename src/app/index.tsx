@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import styled, { css } from "styled-components";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
@@ -13,7 +13,7 @@ const PageShell = styled.main(
   `
 );
 
-export const App: React.FC = () => (
+export const App: FC = () => (
   <BrowserRouter>
     <Switch>
       {PAGES.map(({ title, path, count, sections }: IPage, index: number) => (

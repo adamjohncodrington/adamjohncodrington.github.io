@@ -46,7 +46,7 @@ const image: IJpgSrc = RECIPE_PHOTOS.POTATO_SALAD;
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;
 
-export const POTATO_SALAD: IRecipeCard = {
+export const POTATO_SALAD: IRecipe = {
   ingredients,
   title,
   makes,

@@ -88,7 +88,7 @@ const diet: IRecipeDiet = DIETS.VEGAN;
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;
 
-export const RISOTTO: IRecipeCard = {
+export const RISOTTO: IRecipe = {
   title,
   ingredients,
   makes,

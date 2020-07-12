@@ -8,7 +8,7 @@ interface IAlbum {
   signed?: true;
 }
 
-interface IVinylCard extends IAlbum {
+interface IVinyl extends IAlbum {
   artist: string;
 }
 

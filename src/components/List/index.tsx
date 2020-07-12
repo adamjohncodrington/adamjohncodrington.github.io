@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import styled, { css } from "styled-components";
 
 import { Ul, Li } from "primitives";
@@ -21,11 +21,7 @@ interface ListProps {
   showBullets?: boolean;
 }
 
-export const List: React.FC<ListProps> = ({
-  title,
-  listItems,
-  showBullets
-}) => (
+export const List: FC<ListProps> = ({ title, listItems, showBullets }) => (
   <Ul showBullets={showBullets}>
     <strong>{title}</strong>
 

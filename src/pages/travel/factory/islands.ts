@@ -19,6 +19,6 @@ export const ISLANDS_LIST_ITEMS: Array<ICountedListItem> = islandsAll.map(
   (island: IIsland): ICountedListItem => ({
     text: island.name,
     countInfoIrrelevant: island.insignificant,
-    ...getItemCounts({ item: { island }, data: { travelCards: DATA.ALL } })
+    ...getItemCounts({ item: { island }, data: { trips: DATA.ALL } })
   })
 );

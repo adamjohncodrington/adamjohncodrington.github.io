@@ -15,7 +15,7 @@ import { GIGS_2019 } from "./gigs-2019";
 import { GIGS_2020 } from "./gigs-2020";
 import { GIGS_2021 } from "./gigs-2021";
 
-const ALL: Array<IGigCard> = [
+const ALL: Array<IGig> = [
   ...GIGS_2006,
   ...GIGS_2007,
   ...GIGS_2008,
@@ -34,7 +34,7 @@ const ALL: Array<IGigCard> = [
   ...GIGS_2021
 ];
 
-const SPLIT_BY_YEAR: Array<Array<IGigCard>> = [
+const SPLIT_BY_YEAR: Array<Array<IGig>> = [
   GIGS_2006,
   GIGS_2007,
   GIGS_2008,

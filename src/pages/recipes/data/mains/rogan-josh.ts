@@ -80,7 +80,7 @@ const image: IJpgSrc = RECIPE_PHOTOS.ROGAN_JOSH;
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;
 
-export const ROGAN_JOSH: IRecipeCard = {
+export const ROGAN_JOSH: IRecipe = {
   title,
   ingredients,
   makes,

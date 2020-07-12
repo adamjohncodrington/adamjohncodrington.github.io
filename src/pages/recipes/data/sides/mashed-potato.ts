@@ -39,7 +39,7 @@ const image: IJpgSrc = RECIPE_PHOTOS.MASHED_POTATO;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
 
-export const MASHED_POTATO: IRecipeCard = {
+export const MASHED_POTATO: IRecipe = {
   ingredients,
   title,
   makes,

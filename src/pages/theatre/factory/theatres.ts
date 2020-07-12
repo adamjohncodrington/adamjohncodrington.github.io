@@ -8,6 +8,6 @@ export const THEATRE_VENUES_LIST_ITEMS: Array<ICountedListItem> = Object.values(
 ).map(
   (theatre: ITheatreVenue): ICountedListItem => ({
     text: theatre.name,
-    ...getItemCounts({ item: { theatre }, data: { theatreCards: DATA.ALL } })
+    ...getItemCounts({ item: { theatre }, data: { theatreVisits: DATA.ALL } })
   })
 );

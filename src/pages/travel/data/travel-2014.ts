@@ -1,6 +1,6 @@
 import { FRIENDS, COUNTRIES } from "@constants";
 
-export const TRAVEL_2014: Array<ITravelCard> = [
+export const TRAVEL_2014: Array<ITrip> = [
   {
     title: [COUNTRIES.BARBADOS],
     dates: [new Date("2014-06-16"), new Date("2014-06-24")],

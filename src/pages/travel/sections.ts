@@ -65,17 +65,15 @@ const SECTION_THEME_PARKS: IPageSection = {
 const SECTION_UP_NEXT_TRAVEL: IPageSection = {
   SvgIcon: SvgNotepad,
   title: PAGE_SECTION_TITLES.UP_NEXT,
-  data: { travelCards: FACTORY.UP_NEXT }
+  data: { trips: FACTORY.UP_NEXT }
 };
 
 const SECTIONS_YEARS: Array<IPageSection> = DATA.SPLIT_BY_YEAR.map(
-  (year: Array<ITravelCard>): IPageSection => ({
+  (year: Array<ITrip>): IPageSection => ({
     title: year[0].dates[0].getFullYear().toString(),
     count: year.length,
     data: {
-      travelCards: year.filter(
-        ({ dates }: ITravelCard) => !isInFuture(dates[0])
-      )
+      trips: year.filter(({ dates }: ITrip) => !isInFuture(dates[0]))
     }
   })
 );

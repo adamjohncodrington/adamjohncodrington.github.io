@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { FC, useContext } from "react";
 import { ThemeContext } from "styled-components";
 
 import { Ul, Li, GridColumnDiv } from "primitives";
@@ -10,7 +10,7 @@ interface IPageSectionsLayout {
   pageSections: Array<IPageSection>;
 }
 
-export const PageSectionsLayout: React.FC<IPageSectionsLayout> = ({
+export const PageSectionsLayout: FC<IPageSectionsLayout> = ({
   pageSections
 }) => {
   const theme: ITheme = useContext(ThemeContext);
@@ -18,22 +18,15 @@ export const PageSectionsLayout: React.FC<IPageSectionsLayout> = ({
 
   const validPageSections: Array<IPageSection> = pageSections.filter(
     ({
-      data: {
-        countedListItems,
-        gigCards,
-        recipeCards,
-        theatreCards,
-        travelCards,
-        vinylCards
-      }
+      data: { countedListItems, gigs, recipes, theatreVisits, trips, vinyls }
     }: IPageSection): boolean => {
       const dataExists: boolean = !(
         (countedListItems && countedListItems.length === 0) ||
-        (gigCards && gigCards.length === 0) ||
-        (recipeCards && recipeCards.filter(item => !item.hide).length === 0) ||
-        (theatreCards && theatreCards.length === 0) ||
-        (travelCards && travelCards.length === 0) ||
-        (vinylCards && vinylCards.length === 0)
+        (gigs && gigs.length === 0) ||
+        (recipes && recipes.filter(item => !item.hide).length === 0) ||
+        (theatreVisits && theatreVisits.length === 0) ||
+        (trips && trips.length === 0) ||
+        (vinyls && vinyls.length === 0)
       );
 
       return dataExists;

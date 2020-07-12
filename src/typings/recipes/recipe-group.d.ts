@@ -1,4 +1,4 @@
 interface IRecipeGroup {
   title: string;
-  recipes: Array<IRecipeCard>;
+  recipes: Array<IRecipe>;
 }

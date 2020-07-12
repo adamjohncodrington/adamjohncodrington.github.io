@@ -40,15 +40,15 @@ const SECTION_THEATRES: IPageSection = {
 const SECTION_UP_NEXT_THEATRE: IPageSection = {
   SvgIcon: SvgNotepad,
   title: PAGE_SECTION_TITLES.UP_NEXT,
-  data: { theatreCards: FACTORY.UP_NEXT }
+  data: { theatreVisits: FACTORY.UP_NEXT }
 };
 
 const SECTIONS_YEARS: Array<IPageSection> = DATA.SPLIT_BY_YEAR.map(
-  (year: Array<ITheatreCard>): IPageSection => ({
+  (year: Array<ITheatreVisit>): IPageSection => ({
     title: year[0].date.getFullYear().toString(),
     count: year.length,
     data: {
-      theatreCards: year.filter(({ date }: ITheatreCard) => !isInFuture(date))
+      theatreVisits: year.filter(({ date }: ITheatreVisit) => !isInFuture(date))
     }
   })
 );

@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { FC, useContext } from "react";
 import styled, { css, ThemeContext } from "styled-components";
 
 import { Link, FlexRow, SquareImage } from "primitives";
@@ -9,9 +9,9 @@ import { CardTitleBold, CardSubtitleBold } from "../styles";
 const VinylCardContainer = FlexRow;
 
 const VinylCardLink = styled(Link)(
-  ({ theme: { vinylCard } }: IThemeProp) =>
+  ({ theme: { vinyl } }: IThemeProp) =>
     css`
-      margin-right: ${vinylCard.artwork.margin.right};
+      margin-right: ${vinyl.artwork.margin.right};
     `
 );
 
@@ -20,17 +20,17 @@ const VinylCardArtwork = styled(SquareImage)`
 `;
 
 const VinylCardTextContainer = styled.div(
-  ({ theme: { vinylCard } }: IThemeProp) =>
+  ({ theme: { vinyl } }: IThemeProp) =>
     css`
       flex: 1;
 
       > *:not(:last-child) {
-        margin-bottom: ${vinylCard.notLastChild.margin.bottom};
+        margin-bottom: ${vinyl.notLastChild.margin.bottom};
       }
     `
 );
 
-export const VinylCard: React.FC<IVinylCard> = ({
+export const VinylCard: FC<IVinyl> = ({
   artist,
   title,
   year,
@@ -44,7 +44,7 @@ export const VinylCard: React.FC<IVinylCard> = ({
       <VinylCardLink href={appleMusicUrl}>
         <VinylCardArtwork
           dataTest="vinyl-artwork"
-          size={theme.vinylCard.artwork.size}
+          size={theme.vinyl.artwork.size}
           imgSrc={artwork}
         />
       </VinylCardLink>

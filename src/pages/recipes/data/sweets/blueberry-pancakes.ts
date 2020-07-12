@@ -61,7 +61,7 @@ const image: IJpgSrc = RECIPE_PHOTOS.BLUEBERRY_PANCAKES;
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;
 
-export const BLUEBERRY_PANCAKES: IRecipeCard = {
+export const BLUEBERRY_PANCAKES: IRecipe = {
   title,
   ingredients,
   totalCost,

@@ -11,7 +11,7 @@ interface ITheatreFactory {
   FRIENDS: Array<ICountedListItem>;
   PLAYS: Array<ICountedListItem>;
   VENUES: Array<ICountedListItem>;
-  UP_NEXT: Array<ITheatreCard>;
+  UP_NEXT: Array<ITheatreVisit>;
 }
 
 export const FACTORY: ITheatreFactory = {

@@ -1,6 +1,6 @@
 import { FRIENDS, COUNTRIES } from "@constants";
 
-export const TRAVEL_1999: Array<ITravelCard> = [
+export const TRAVEL_1999: Array<ITrip> = [
   {
     title: [COUNTRIES.FRANCE.attractions.DISNEYLAND_PARIS],
     subtitle: [COUNTRIES.FRANCE],

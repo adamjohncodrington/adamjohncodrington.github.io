@@ -14,7 +14,7 @@ interface IGigsFactory {
   FESTIVALS: Array<ICountedListItem>;
   FRIENDS: Array<ICountedListItem>;
   VENUES: Array<ICountedListItem>;
-  UP_NEXT: Array<IGigCard>;
+  UP_NEXT: Array<IGig>;
   pageCount: number;
 }
 

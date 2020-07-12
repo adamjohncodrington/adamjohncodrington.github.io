@@ -1,5 +1,7 @@
 # TO DO LIST
 
+- rename `gig` to `gigs`, `theatreVisit` to `theatreVisit`, `trip` to `trip`
+- remove `1.` for artists and venues only ever seen once
 - style `CountedListItemDetails` and move all values to theme
 - make `Worthy Farm` display as `Glastonbury`, `HeatonPark` display as `Parklife`, `Store Street` display as `WHP`, etc.
 - add details to loads of counted list items (including travel)

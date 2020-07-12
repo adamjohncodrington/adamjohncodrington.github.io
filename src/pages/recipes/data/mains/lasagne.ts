@@ -132,7 +132,7 @@ const image: IJpgSrc = RECIPE_PHOTOS.LASAGNE;
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;
 
-export const LASAGNE: IRecipeCard = {
+export const LASAGNE: IRecipe = {
   title,
   ingredients,
   makes,

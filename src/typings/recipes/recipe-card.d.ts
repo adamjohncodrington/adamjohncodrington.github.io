@@ -26,7 +26,7 @@ interface IRecipeMakes {
   measurement?: string;
 }
 
-interface IRecipeCard {
+interface IRecipe {
   title: string;
   makes?: IRecipeMakes;
   image?: IJpgSrc;

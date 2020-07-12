@@ -3,7 +3,7 @@ import { DATA } from "./data";
 const SECTIONS_RECIPE_GROUPS: Array<IPageSection> = DATA.CATEGORISED.map(
   ({ title, recipes }: IRecipeGroup): IPageSection => ({
     title: title,
-    data: { recipeCards: recipes },
+    data: { recipes: recipes },
     staticAlways: true
   })
 );

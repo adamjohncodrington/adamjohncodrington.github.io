@@ -9,8 +9,8 @@ import { COUNTRIES_LIST_ITEMS } from "./countries";
 import { FRIENDS_LIST_ITEMS } from "./friends";
 import { ISLANDS_LIST_ITEMS } from "./islands";
 
-const UP_NEXT: Array<ITravelCard> = DATA.ALL.filter(
-  ({ dates }: ITravelCard): boolean => isInFuture(dates[0])
+const UP_NEXT: Array<ITrip> = DATA.ALL.filter(({ dates }: ITrip): boolean =>
+  isInFuture(dates[0])
 );
 
 const totalTripsAbroadEver: number = DATA.ALL.filter(item => !item.notAbroad)
@@ -26,7 +26,7 @@ interface ITravelFactory {
   HIGHLIGHTS: Array<ICountedListItem>;
   ISLANDS: Array<ICountedListItem>;
   THEME_PARKS: Array<ICountedListItem>;
-  UP_NEXT: Array<ITravelCard>;
+  UP_NEXT: Array<ITrip>;
   pageCount: number;
 }
 

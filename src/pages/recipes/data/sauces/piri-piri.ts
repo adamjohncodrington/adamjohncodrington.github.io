@@ -63,7 +63,7 @@ const image: IJpgSrc = RECIPE_PHOTOS.PIRI_PIRI;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
 
-export const PIRI_PIRI: IRecipeCard = {
+export const PIRI_PIRI: IRecipe = {
   title,
   ingredients,
   makes,

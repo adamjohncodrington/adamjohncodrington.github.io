@@ -1,6 +1,6 @@
 import { PLAYS, THEATRE_VENUES, FRIENDS } from "@constants";
 
-export const THEATRE_2016: Array<ITheatreCard> = [
+export const THEATRE_2016: Array<ITheatreVisit> = [
   {
     play: PLAYS.MIDSUMMER_NIGHTS_DREAM,
     theatre: THEATRE_VENUES.ROYAL_SHAKESPEARE,

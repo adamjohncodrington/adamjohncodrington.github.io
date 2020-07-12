@@ -5,10 +5,10 @@ export const StyledOl = styled.ol`
   padding: 0;
   margin: 0;
 
-  padding-top: 5px;
+  padding-top: 7px;
 
   > li:not(:last-child) {
-    padding-bottom: 2px;
+    padding-bottom: 3px;
   }
 `;
 
@@ -26,3 +26,11 @@ export const StyledLi = styled.li(
     `}
   `
 );
+
+export const StyledMainText = styled.div`
+  flex: 1;
+`;
+
+export const StyledIndex = styled.div`
+  min-width: 25px;
+`;

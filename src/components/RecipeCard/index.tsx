@@ -1,4 +1,4 @@
-import React, { useContext, ReactElement } from "react";
+import React, { useContext, FC } from "react";
 import { ThemeContext } from "styled-components";
 
 import { FlexRow, SquareImage } from "primitives";
@@ -21,7 +21,7 @@ import {
   RecipeCardCostsContainer
 } from "./styles";
 
-export const RecipeCard: React.FC<IRecipeCard> = ({
+export const RecipeCard: FC<IRecipe> = ({
   title,
   makes,
   ingredients,
@@ -41,7 +41,7 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
     ? getIngredientsHeader({ makes, defaultIngredientsHeader })
     : defaultIngredientsHeader;
 
-  const RecipeCardHeader: ReactElement = (
+  const RecipeCardHeader: FC = () => (
     <FlexRow>
       <RecipeCardTitle favourite={favourite}>{title}</RecipeCardTitle>
       <RoundedSymbol color={diet.color}>{diet.abbreviation}</RoundedSymbol>
@@ -71,7 +71,7 @@ export const RecipeCard: React.FC<IRecipeCard> = ({
 
         {image && (
           <RecipeCardPhotoContainer>
-            <SquareImage imgSrc={image} size={theme.recipeCard.photo.size} />
+            <SquareImage imgSrc={image} size={theme.recipe.photo.size} />
           </RecipeCardPhotoContainer>
         )}
 

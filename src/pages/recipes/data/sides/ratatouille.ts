@@ -88,7 +88,7 @@ const image: IJpgSrc = RECIPE_PHOTOS.RATATOUILLE;
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;
 
-export const RATATOUILLE: IRecipeCard = {
+export const RATATOUILLE: IRecipe = {
   title,
   ingredients,
   makes,

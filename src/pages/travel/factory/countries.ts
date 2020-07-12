@@ -8,7 +8,7 @@ export const countries: Array<ICountryTemplate> = Object.values(COUNTRIES);
 export const countriesCounted: Array<ICountryCounted> = countries.map(
   (country: ICountryTemplate): ICountryCounted => ({
     ...country,
-    ...getItemCounts({ item: { country }, data: { travelCards: DATA.ALL } })
+    ...getItemCounts({ item: { country }, data: { trips: DATA.ALL } })
   })
 );
 

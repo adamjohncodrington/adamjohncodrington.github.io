@@ -1,5 +1,5 @@
 import { DATA } from "../data";
 
-export const FAVOURITES: Array<IGigCard> = DATA.ALL.filter(
-  ({ favourite }: IGigCard) => favourite
+export const FAVOURITES: Array<IGig> = DATA.ALL.filter(
+  ({ favourite }: IGig) => favourite
 );

@@ -77,7 +77,7 @@ const method: Array<string> = [
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;
 
-export const COOKIES: IRecipeCard = {
+export const COOKIES: IRecipe = {
   ingredients,
   title,
   totalCost,

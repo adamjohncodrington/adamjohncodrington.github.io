@@ -79,7 +79,7 @@ const image: IJpgSrc = RECIPE_PHOTOS.BAKED_BEANS;
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;
 
-export const BAKED_BEANS: IRecipeCard = {
+export const BAKED_BEANS: IRecipe = {
   title,
   ingredients,
   makes,

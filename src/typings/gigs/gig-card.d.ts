@@ -1,4 +1,4 @@
-interface IGigCard {
+interface IGig {
   headline?: IMusician;
   festival?: IMusician;
   lineup?: Array<IMusician>;

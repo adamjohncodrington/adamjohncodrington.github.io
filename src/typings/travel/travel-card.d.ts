@@ -1,4 +1,4 @@
-interface ITravelCard {
+interface ITrip {
   title: Array<ILocation>;
   subtitle?: Array<ILocation>;
   favourite?: boolean;

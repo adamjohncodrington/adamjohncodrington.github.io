@@ -54,7 +54,7 @@ const THEME_PAGE_SECTION: IThemePageSection = {
       border: { bottom: `1px solid ${COLORS.gray}` },
       countedListItems: { padding: { vertical: "5px" } },
       padding: { bottom: "5px" },
-      recipeCards: {
+      recipes: {
         firstRecipeCard: { padding: { top: "15px" } },
         lastRecipeCard: { padding: { bottom: "20px" } },
         padding: { vertical: "15px" }
@@ -76,7 +76,7 @@ const THEME_PAGE_LAYOUT: IThemePageLayout = {
 };
 
 const THEME_RECIPE_CARD: IThemeRecipeCard = {
-  recipeCard: {
+  recipe: {
     dietSymbol: { margin: { top: "4px" } },
     panel: {
       children: { padding: { top: "15px" } },
@@ -98,7 +98,7 @@ const THEME_ROUNDED_SYMBOL: IThemeRoundedSymbol = {
 };
 
 const THEME_VINYL_CARD: IThemeVinylCard = {
-  vinylCard: {
+  vinyl: {
     artwork: { margin: { right: "10px" }, size: "100px" },
     notLastChild: { margin: { bottom: "5px" } }
   }

@@ -4,7 +4,7 @@ import { THEATRE_2018 } from "./theatre-2018";
 import { THEATRE_2019 } from "./theatre-2019";
 import { THEATRE_2020 } from "./theatre-2020";
 
-const ALL: Array<ITheatreCard> = [
+const ALL: Array<ITheatreVisit> = [
   ...THEATRE_2016,
   ...THEATRE_2017,
   ...THEATRE_2018,
@@ -12,7 +12,7 @@ const ALL: Array<ITheatreCard> = [
   ...THEATRE_2020
 ];
 
-const SPLIT_BY_YEAR: Array<Array<ITheatreCard>> = [
+const SPLIT_BY_YEAR: Array<Array<ITheatreVisit>> = [
   THEATRE_2016,
   THEATRE_2017,
   THEATRE_2018,

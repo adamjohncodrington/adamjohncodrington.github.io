@@ -85,7 +85,7 @@ const image: IJpgSrc = RECIPE_PHOTOS.CRUMBLE;
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;
 
-export const CRUMBLE: IRecipeCard = {
+export const CRUMBLE: IRecipe = {
   title,
   ingredients,
   makes,
