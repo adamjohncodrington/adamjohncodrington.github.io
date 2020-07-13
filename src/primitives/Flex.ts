@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 import { Li } from "./Lists";
 
@@ -28,3 +28,17 @@ export const FlexLiGrow = styled(Li)`
   display: flex;
   flex: 1;
 `;
+
+interface IIsBold {
+  isBold: boolean;
+}
+
+export const DynamicFontWeightFlexRow = styled(FlexRow)(
+  ({ isBold }: IIsBold) =>
+    isBold &&
+    css`
+      * {
+        font-weight: bold;
+      }
+    `
+);

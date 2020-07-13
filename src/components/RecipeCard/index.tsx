@@ -1,7 +1,7 @@
 import React, { useContext, FC } from "react";
 import { ThemeContext } from "styled-components";
 
-import { FlexRow, SquareImage } from "primitives";
+import { SquareImage, FlexRow } from "primitives";
 import { getIngredientsHeader, numberToCurrencyString } from "utils";
 
 import { Disclosure } from "../Disclosure";
@@ -20,6 +20,8 @@ import {
   RecipeCardPhotoContainer,
   RecipeCardCostsContainer
 } from "./styles";
+
+interface IRecipeCardHeader extends IClassName, IPanelIsVisible {}
 
 export const RecipeCard: FC<IRecipe> = ({
   title,
@@ -41,9 +43,14 @@ export const RecipeCard: FC<IRecipe> = ({
     ? getIngredientsHeader({ makes, defaultIngredientsHeader })
     : defaultIngredientsHeader;
 
-  const RecipeCardHeader: FC<IClassName> = ({ className }) => (
+  const RecipeCardHeader: FC<IRecipeCardHeader> = ({
+    panelIsVisible,
+    className
+  }) => (
     <FlexRow className={className}>
-      <RecipeCardTitle favourite={favourite}>{title}</RecipeCardTitle>
+      <RecipeCardTitle isBold={panelIsVisible} favourite={favourite}>
+        {title}
+      </RecipeCardTitle>
       <RoundedSymbol color={diet.color}>{diet.abbreviation}</RoundedSymbol>
     </FlexRow>
   );

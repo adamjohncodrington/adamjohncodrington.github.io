@@ -1,5 +1,4 @@
 import React, { FC, useState } from "react";
-import styled, { css } from "styled-components";
 
 import { PanelContainer, StyledDiv } from "./styles";
 
@@ -15,25 +14,15 @@ export const Disclosure: FC<IDisclosure> = ({
   const onClick = (): void => switchPanelVisibility(!panelIsVisible);
   const dataTestClickableDiv: string = "disclosure-clickable-region";
 
-  const StyledHeader = styled(Header)(
-    () =>
-      panelIsVisible &&
-      css`
-        * {
-          font-weight: bold;
-        }
-      `
-  );
-
   return isStatic ? (
     <>
-      <StyledHeader />
+      <Header panelIsVisible={panelIsVisible} />
       {children}
     </>
   ) : (
     <>
       <StyledDiv data-test={dataTestClickableDiv} onClick={onClick}>
-        <StyledHeader />
+        <Header panelIsVisible={panelIsVisible} />
       </StyledDiv>
       <PanelContainer
         data-test="disclosure-panel"

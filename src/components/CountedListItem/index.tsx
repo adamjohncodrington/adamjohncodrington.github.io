@@ -1,6 +1,6 @@
 import React, { FC, ReactElement } from "react";
 
-import { FlexRow, FlexLiGrow } from "primitives";
+import { FlexLiGrow, DynamicFontWeightFlexRow } from "primitives";
 
 import { CountedListItemDetails } from "../CountedListItemDetails";
 import { Disclosure } from "../Disclosure";
@@ -10,6 +10,18 @@ import {
   CountedListItemPastCount,
   CountedListItemFutureCount
 } from "./styles";
+
+interface IDisclosureHeader extends IClassName, IPanelIsVisible {}
+
+const DisclosureHeader: FC<IDisclosureHeader> = ({
+  className,
+  children,
+  panelIsVisible
+}) => (
+  <DynamicFontWeightFlexRow className={className} isBold={panelIsVisible}>
+    {children}
+  </DynamicFontWeightFlexRow>
+);
 
 export const CountedListItem: FC<ICountedListItem> = ({
   text,
@@ -45,13 +57,15 @@ export const CountedListItem: FC<ICountedListItem> = ({
     </>
   );
 
-  const DisclosureHeader: FC<IClassName> = ({ className }) => (
-    <FlexRow className={className}>{TextAndCounts}</FlexRow>
-  );
-
   return details && details.length > 0 ? (
     <li>
-      <Disclosure Header={DisclosureHeader}>
+      <Disclosure
+        Header={({ panelIsVisible }) => (
+          <DisclosureHeader panelIsVisible={panelIsVisible}>
+            {TextAndCounts}
+          </DisclosureHeader>
+        )}
+      >
         <CountedListItemDetails details={details} />
       </Disclosure>
     </li>

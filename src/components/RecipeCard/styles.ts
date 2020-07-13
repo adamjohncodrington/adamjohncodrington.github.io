@@ -5,12 +5,13 @@ import { CSS } from "styles";
 
 interface IRecipeCardTitle extends IThemeProp {
   favourite?: boolean;
+  isBold?: boolean;
 }
 
 export const RecipeCardTitle = styled(H3)(
-  ({ theme: { recipe }, favourite }: IRecipeCardTitle) => css`
+  ({ isBold, theme: { recipe }, favourite }: IRecipeCardTitle) => css`
     text-transform: lowercase;
-    font-weight: ${recipe.title.fontWeight};
+    font-weight: ${isBold ? "bold" : recipe.title.fontWeight};
     flex: 1;
     ${favourite && CSS.PSEUDO_ELEMENT_HEART}
   `
