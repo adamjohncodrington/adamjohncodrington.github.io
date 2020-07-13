@@ -6,5 +6,3 @@ interface IStatesUSA {
   MASSACHUSETTS: IState;
   VIRGINIA: IState;
 }
-
-interface IStates extends IStatesUSA {}

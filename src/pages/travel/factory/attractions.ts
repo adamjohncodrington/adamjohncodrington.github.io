@@ -1,4 +1,4 @@
-import { ATTRACTIONS } from "@constants";
+import { COUNTRIES } from "@constants";
 import {
   getItemCounts,
   attractionMatchExists,
@@ -8,6 +8,17 @@ import {
 } from "utils";
 
 import { DATA } from "../data";
+
+const generateAttractions = (): { [attraction: string]: IAttraction } => {
+  let attractions = {};
+  Object.values(COUNTRIES).forEach((country: ICountryTemplate): void => {
+    if (country.cities)
+      attractions = { ...attractions, ...country.attractions };
+  });
+  return attractions;
+};
+
+export const ATTRACTIONS = generateAttractions();
 
 const attractions: Array<IAttraction> = Object.values(ATTRACTIONS);
 

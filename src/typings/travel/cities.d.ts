@@ -186,37 +186,3 @@ interface ICitiesUSA {
   SPRINGFIELD_MASSACHUSETTS: ICity;
   WASHINGTON_DC: ICity;
 }
-
-interface ICities
-  extends ICitiesArgentina,
-    ICitiesAustria,
-    ICitiesBeligum,
-    ICitiesBelize,
-    ICitiesBrazil,
-    ICitiesCanada,
-    ICitiesCostaRica,
-    ICitiesCroatia,
-    ICitiesCuba,
-    ICitiesCyprus,
-    ICitiesCzechRepublic,
-    ICitiesDenmark,
-    ICitiesEcuador,
-    ICitiesEgypt,
-    ICitiesFrance,
-    ICitiesGermany,
-    ICitiesHungary,
-    ICitiesIreland,
-    ICitiesItaly,
-    ICitiesLaos,
-    ICitiesNetherlands,
-    ICitiesNorway,
-    ICitiesPeru,
-    ICitiesPoland,
-    ICitiesPortugal,
-    ICitiesSpain,
-    ICitiesSweden,
-    ICitiesThailand,
-    ICitiesUAE,
-    ICitiesUganda,
-    ICitiesUK,
-    ICitiesUSA {}

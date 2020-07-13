@@ -237,34 +237,3 @@ interface IAttractionsBarbados {
 interface IAttractionsBelize {
   BARRIER_REEF: IAttraction;
 }
-
-interface IAttractions
-  extends IAttractionsUSA,
-    IAttractionsCanada,
-    IAttractionsBarbados,
-    IAttractionsBelgium,
-    IAttractionsBelize,
-    IAttractionsCostaRica,
-    IAttractionsCroatia,
-    IAttractionsCyprus,
-    IAttractionsDenmark,
-    IAttractionsEcuador,
-    IAttractionsLaos,
-    IAttractionsEgypt,
-    IAttractionsFrance,
-    IAttractionsHungary,
-    IAttractionsItaly,
-    IAttractionsNorway,
-    IAttractionsBrazil,
-    IAttractionsNetherlands,
-    IAttractionsUK,
-    IAttractionsPeru,
-    IAttractionsCzechRepublic,
-    IAttractionsPortugal,
-    IAttractionsPoland,
-    IAttractionsUganda,
-    IAttractionsSpain,
-    IAttractionsThailand,
-    IAttractionsUAE,
-    IAttractionsIreland,
-    IAttractionsZimbabwe {}

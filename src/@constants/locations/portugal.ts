@@ -14,6 +14,7 @@ const attractions: IAttractionsPortugal = {
 
 const towns: ITownsPortugal = {
   FERRAGUDO: { name: "Ferragudo" },
+  LAGOS: { name: "Lagos" },
   TAVIRA: { name: "Tavira" },
   VILAMOURA: { name: "Vilamoura" }
 };

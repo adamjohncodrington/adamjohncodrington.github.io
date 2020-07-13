@@ -1,13 +1,17 @@
-import { CITIES } from "@constants";
-import {
-  getItemCounts,
-  cityMatchExists,
-  getTripTitle,
-  getDatesText,
-  isInFuture
-} from "utils";
+import { COUNTRIES } from "@constants";
+import { getItemCounts, cityMatchExists, isInFuture } from "utils";
 
 import { DATA } from "../data";
+
+const generateCities = (): { [city: string]: ICity } => {
+  let cities = {};
+  Object.values(COUNTRIES).forEach((country: ICountryTemplate): void => {
+    if (country.cities) cities = { ...cities, ...country.cities };
+  });
+  return cities;
+};
+
+export const CITIES = generateCities();
 
 const getTripsMatchingCity = (city: ICity): Array<ITrip> => {
   const tripsMatchingCity: Array<ITrip> = [];
@@ -25,8 +29,8 @@ const getCityDetails = (city: ICity): Array<ICountedListItemDetail> => {
       const { dates } = trip;
       return {
         index: tripsMatchingCity.length > 1 ? index + 1 : undefined,
-        mainText: getTripTitle(trip),
-        dateText: getDatesText(dates),
+        mainText: "COUNTRY GOES HERE",
+        dateText: "DATE GOES HERE",
         isInFuture: isInFuture(dates[0])
       };
     }

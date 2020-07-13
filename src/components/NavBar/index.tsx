@@ -16,10 +16,11 @@ const StyledNav = styled.nav(
 
 interface IStyledRouterLink extends IThemeProp {
   color?: ColorValue;
+  active?: boolean;
 }
 
 const StyledRouterLink = styled(RouterLink)(
-  ({ color, theme: { navBar } }: IStyledRouterLink) => css`
+  ({ active, color, theme: { navBar } }: IStyledRouterLink) => css`
     display: flex;
     justify-content: center;
 
@@ -36,6 +37,26 @@ const StyledRouterLink = styled(RouterLink)(
         navBar.icon.defaultHoverColor};
       }
     }
+
+    // None of the following approaches work at styling an active nav bar link
+    :active {
+      * {
+        color: red;
+      }
+    }
+
+    &.active {
+      * {
+        color: blue;
+      }
+    }
+
+    ${active &&
+    css`
+      * {
+        color: green;
+      }
+    `}
   `
 );
 

@@ -2,7 +2,7 @@
 
 - tidy up recipe method list bullets
 - move `CountedListItemDetails` style values to theme
-- add details to Travel counted list items
+- refine details to Travel counted list items
 - address `MARINA` vs. `Marina and the Diamonds`
 
 ## Enhancements

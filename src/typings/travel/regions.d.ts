@@ -17,9 +17,3 @@ interface IRegionsUK {
 interface IRegionsItaly {
   SICILY: IRegion;
 }
-
-interface IRegions
-  extends IRegionsItaly,
-    IRegionsGreece,
-    IRegionsUSA,
-    IRegionsUK {}

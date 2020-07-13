@@ -43,13 +43,3 @@ interface IIslandsSpain {
 interface IIslandsNorway {
   HOVEDOYA: IIsland;
 }
-
-interface IIslands
-  extends IIslandsSpain,
-    IIslandsUSA,
-    IIslandsBrazil,
-    IIslandsEcuador,
-    IIslandsBelize,
-    IIslandsGreece,
-    IIslandsNorway,
-    IIslandsThailand {}

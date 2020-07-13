@@ -1,7 +1,9 @@
-import { COUNTRIES, CITIES } from "@constants";
+import { COUNTRIES } from "@constants";
 import { getItemCounts } from "utils";
 
 import { DATA } from "../data";
+
+import { CITIES } from "./cities";
 
 const bucketListCountries: Array<ICountryCounted> = Object.values(COUNTRIES)
   .map(

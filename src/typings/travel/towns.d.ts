@@ -39,6 +39,7 @@ interface ITownsThailand {
 
 interface ITownsPortugal {
   FERRAGUDO: ITown;
+  LAGOS: ITown;
   TAVIRA: ITown;
   VILAMOURA: ITown;
 }
@@ -47,13 +48,3 @@ interface ITownsCostaRica {
   MONTEVERDE: ITown;
   PUERTO_VIEJO: ITown;
 }
-
-interface ITowns
-  extends ITownsPoland,
-    ITownsPortugal,
-    ITownsCostaRica,
-    ITownsPeru,
-    ITownsCuba,
-    ITownsItaly,
-    ITownsUK,
-    ITownsThailand {}
