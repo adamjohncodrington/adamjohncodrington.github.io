@@ -18,8 +18,8 @@ export const CountedListItemDetail: React.FC<ICountedListItemDetail> = ({
 }) => (
   <StyledLi key={index} isInFuture={isInFuture}>
     <FlexRow>
-      {!!index && <StyledIndex>{index}.</StyledIndex>}
-      <StyledMainText>{mainText}</StyledMainText>
+      {index && <StyledIndex>{index}.</StyledIndex>}
+      {mainText && <StyledMainText>{mainText}</StyledMainText>}
       <StyledDateText>{dateText}</StyledDateText>
     </FlexRow>
   </StyledLi>

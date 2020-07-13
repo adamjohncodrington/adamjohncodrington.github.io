@@ -25,9 +25,10 @@ const getCountryDetails = (
   return tripsMatchingCountry.map(
     (trip: ITrip, index: number): ICountedListItemDetail => {
       const { dates } = trip;
+      const tripTitle: string = getTripTitle(trip);
       return {
         index: tripsMatchingCountry.length > 1 ? index + 1 : undefined,
-        mainText: getTripTitle(trip),
+        mainText: !tripTitle.includes(country.name) ? tripTitle : undefined,
         dateText: getDatesText(dates),
         isInFuture: isInFuture(dates[0])
       };

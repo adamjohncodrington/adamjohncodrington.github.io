@@ -32,9 +32,12 @@ const StyledRouterLink = styled(RouterLink)(
 
     :hover {
       svg {
-        border: ${navBar.icon.hoverShrinkSize} solid transparent;
         fill: ${(USE_COLORS_IN_NAV_BAR && color) ||
         navBar.icon.defaultHoverColor};
+
+        ::after {
+          fill: ${navBar.icon.color};
+        }
       }
     }
 
