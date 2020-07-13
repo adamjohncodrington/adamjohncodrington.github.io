@@ -12,12 +12,12 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
     },
     {
       ingredient: INGREDIENTS.MILK_OATLY_BARISTA,
-      quantity: 125,
+      quantity: 100,
       measurement: MEASUREMENTS.MILLILITRE
     },
     {
       ingredient: INGREDIENTS.WATER,
-      quantity: 125,
+      quantity: 150,
       measurement: MEASUREMENTS.MILLILITRE
     },
     {
