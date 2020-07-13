@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { USE_COLORS_IN_NAV_BAR } from "config";
+import { USE_COLORS_IN_NAV_BAR, USE_HOVER_STYLING } from "config";
 import { RouterLink } from "primitives";
 import { CSS } from "styles";
 
@@ -30,16 +30,19 @@ const StyledRouterLink = styled(RouterLink)(
       height: ${navBar.icon.size};
     }
 
-    :hover {
-      svg {
-        fill: ${(USE_COLORS_IN_NAV_BAR && color) ||
-        navBar.icon.defaultHoverColor};
+    ${USE_HOVER_STYLING &&
+    css`
+      :hover {
+        svg {
+          fill: ${(USE_COLORS_IN_NAV_BAR && color) ||
+          navBar.icon.defaultHoverColor};
 
-        ::after {
-          fill: ${navBar.icon.color};
+          ::after {
+            fill: ${navBar.icon.color};
+          }
         }
       }
-    }
+    `}
 
     // None of the following approaches work at styling an active nav bar link
     :active {
