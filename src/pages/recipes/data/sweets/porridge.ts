@@ -7,12 +7,12 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   [
     {
       ingredient: INGREDIENTS.OATS,
-      quantity: 35,
+      quantity: 40,
       measurement: MEASUREMENTS.GRAM
     },
     {
       ingredient: INGREDIENTS.MILK_OATLY_BARISTA,
-      quantity: 100,
+      quantity: 125,
       measurement: MEASUREMENTS.MILLILITRE
     },
     {
