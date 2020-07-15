@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/static/js/main.9ccb2518.chunk.js",
-    "main.js.map": "/static/js/main.9ccb2518.chunk.js.map",
+    "main.js": "/static/js/main.49eb81ee.chunk.js",
+    "main.js.map": "/static/js/main.49eb81ee.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.27f1f56c.js",
     "runtime-main.js.map": "/static/js/runtime-main.27f1f56c.js.map",
-    "static/js/2.a67e97f5.chunk.js": "/static/js/2.a67e97f5.chunk.js",
-    "static/js/2.a67e97f5.chunk.js.map": "/static/js/2.a67e97f5.chunk.js.map",
+    "static/js/2.20b1de92.chunk.js": "/static/js/2.20b1de92.chunk.js",
+    "static/js/2.20b1de92.chunk.js.map": "/static/js/2.20b1de92.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.192b7def193e5dda5806ff5d3474fc6a.js": "/precache-manifest.192b7def193e5dda5806ff5d3474fc6a.js",
+    "precache-manifest.6d3a0d97e4c21d78ecc447c722f4bfb2.js": "/precache-manifest.6d3a0d97e4c21d78ecc447c722f4bfb2.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.a67e97f5.chunk.js.LICENSE.txt": "/static/js/2.a67e97f5.chunk.js.LICENSE.txt",
+    "static/js/2.20b1de92.chunk.js.LICENSE.txt": "/static/js/2.20b1de92.chunk.js.LICENSE.txt",
     "static/media/1975_brief-inquiry.jpg": "/static/media/1975_brief-inquiry.450622e7.jpg",
     "static/media/adele_19.jpg": "/static/media/adele_19.e2cf5b85.jpg",
     "static/media/allie-x_super-sunset.jpg": "/static/media/allie-x_super-sunset.e4ba903d.jpg",
@@ -41,6 +41,7 @@
     "static/media/flapjacks.jpg": "/static/media/flapjacks.0d5f26e1.jpg",
     "static/media/florence_lungs.jpg": "/static/media/florence_lungs.32d27476.jpg",
     "static/media/george-fitzgerald_atmb.jpg": "/static/media/george-fitzgerald_atmb.7b74b70d.jpg",
+    "static/media/gracey-gig.mp4": "/static/media/gracey-gig.03f5821a.mp4",
     "static/media/grimes_aa.jpg": "/static/media/grimes_aa.d701ba28.jpg",
     "static/media/haim_wimpiii.jpg": "/static/media/haim_wimpiii.40870384.jpg",
     "static/media/jon-hopkins_singularity.jpg": "/static/media/jon-hopkins_singularity.9b297b88.jpg",
@@ -95,11 +96,12 @@
     "static/media/troye-sivan_bloom.jpg": "/static/media/troye-sivan_bloom.fdadad49.jpg",
     "static/media/troye-sivan_iad.jpg": "/static/media/troye-sivan_iad.648aa7b1.jpg",
     "static/media/veg-bowl.ee16e10a.svg": "/static/media/veg-bowl.ee16e10a.svg",
+    "static/media/video-camera.e6d6c948.svg": "/static/media/video-camera.e6d6c948.svg",
     "static/media/vinyl.69320bab.svg": "/static/media/vinyl.69320bab.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.27f1f56c.js",
-    "static/js/2.a67e97f5.chunk.js",
-    "static/js/main.9ccb2518.chunk.js"
+    "static/js/2.20b1de92.chunk.js",
+    "static/js/main.49eb81ee.chunk.js"
   ]
 }
