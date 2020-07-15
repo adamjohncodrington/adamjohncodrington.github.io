@@ -1,5 +1,6 @@
 export * from "./basic";
 export * from "./recipe-costs";
+export * from "./musician-utils";
 export * from "./getEventCardValues";
 export * from "./getItemCounts";
 export * from "./daysToGo";

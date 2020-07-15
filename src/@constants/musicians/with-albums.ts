@@ -192,6 +192,7 @@ export const LANA_DEL_REY: IMusician = {
 
 export const MARINA: IMusician = {
   name: "MARINA",
+  previousStageName: { name: "Marina and the Diamonds", yearDeprecated: 2019 },
   albums: [
     {
       title: "Electra Heart",

@@ -1,12 +1,20 @@
 import { MUSICIANS } from "@constants";
+import { getMusicianStageNameAtTime } from "utils";
 
 const vinyls: Array<IVinyl | undefined> = Object.values(MUSICIANS)
   .filter(({ albums }: IMusician): boolean => !!albums)
-  .map(
-    ({ name, albums }: IMusician): Array<IVinyl> | undefined =>
+  .map((musician: IMusician): Array<IVinyl> | undefined => {
+    const { albums } = musician;
+    return (
       albums &&
-      albums.map((album: IAlbum): IVinyl => ({ artist: name, ...album }))
-  )
+      albums.map(
+        (album: IAlbum): IVinyl => ({
+          artist: getMusicianStageNameAtTime({ musician, year: album.year }),
+          ...album
+        })
+      )
+    );
+  })
   .flat()
   .sort((a: IVinyl | undefined, b: IVinyl | undefined): number =>
     a && b

@@ -13,6 +13,7 @@ interface IVinyl extends IAlbum {
 }
 
 interface IMusician extends INameFavourite {
+  previousStageName?: { name: string; yearDeprecated: number };
   noLongerExists?: boolean;
   albums?: Array<IAlbum>;
 }

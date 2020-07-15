@@ -1,8 +1,14 @@
 import { arrayToString, moveTheSuffixToPrefix } from "./basic";
+import { getMusicianStageNameAtTime } from "./musician-utils";
 
-export const getGigTitle = ({ headline, festival }: IGig): string =>
+export const getGigTitle = ({ headline, festival, dates }: IGig): string =>
   headline
-    ? moveTheSuffixToPrefix(headline.name)
+    ? moveTheSuffixToPrefix(
+        getMusicianStageNameAtTime({
+          musician: headline,
+          year: dates[0].getFullYear()
+        })
+      )
     : festival
     ? festival.name
     : "GIG CARD TITLE MISSING";
