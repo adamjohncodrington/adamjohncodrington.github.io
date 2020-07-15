@@ -6,8 +6,6 @@ import { moveTheSuffixToPrefix } from "utils";
 
 import { CardTitleBold, CardSubtitleBold } from "../styles";
 
-const VinylCardContainer = FlexRow;
-
 const VinylCardLink = styled(Link)(
   ({ theme: { vinyl } }: IThemeProp) =>
     css`
@@ -41,7 +39,7 @@ export const VinylCard: FC<IVinyl> = ({
   const theme: ITheme = useContext(ThemeContext);
 
   return (
-    <VinylCardContainer data-test="vinyl-card">
+    <FlexRow data-test="vinyl-card">
       <VinylCardLink href={appleMusicUrl}>
         <VinylCardArtwork
           dataTest="vinyl-artwork"
@@ -55,6 +53,6 @@ export const VinylCard: FC<IVinyl> = ({
         <CardSubtitleBold>{moveTheSuffixToPrefix(artist)}</CardSubtitleBold>
         <div>{year}</div>
       </VinylCardTextContainer>
-    </VinylCardContainer>
+    </FlexRow>
   );
 };
