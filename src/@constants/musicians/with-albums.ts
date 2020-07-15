@@ -25,7 +25,6 @@ import {
   Jpg_JonHopkins_Singularity,
   Jpg_Lany_MN,
   Jpg_Sophie_OOEPUI,
-  Jpg_TroyeSivan_Bloom,
   Jpg_Pvris_AWKOHAWNOH,
   Jpg_Beyonce_Lemonade,
   Jpg_Tourist_U,
