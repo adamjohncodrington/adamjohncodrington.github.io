@@ -1,11 +1,10 @@
+import React from "react";
 import styled, { css } from "styled-components";
 
-interface IRoundedSymbol extends IThemeProp {
-  color: string;
-}
+interface IStyledRoundedSymbol extends IRoundedSymbol, IThemeProp {}
 
-export const RoundedSymbol = styled.div(
-  ({ color, theme: { roundedSymbol } }: IRoundedSymbol) => css`
+const StyledRoundedSymbol = styled.div(
+  ({ color, theme: { roundedSymbol } }: IStyledRoundedSymbol) => css`
     background: ${color};
     border-radius: ${roundedSymbol.borderRadius};
     color: ${roundedSymbol.textColor};
@@ -15,4 +14,12 @@ export const RoundedSymbol = styled.div(
     text-align: center;
     width: ${roundedSymbol.size};
   `
+);
+
+interface IRoundedSymbol {
+  color: string;
+}
+
+export const RoundedSymbol: React.FC<IRoundedSymbol> = props => (
+  <StyledRoundedSymbol {...props} />
 );

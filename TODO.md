@@ -4,6 +4,7 @@
 - add gig videos
 - add `(Marina and the Diamonds)` in faded grey beside `MARINA` list item????
 - display festival lineups by day????
+- add travel photos
 
 ## Enhancements
 

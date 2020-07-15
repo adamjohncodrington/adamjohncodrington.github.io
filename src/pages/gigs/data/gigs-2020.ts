@@ -1,4 +1,5 @@
 import { FRIENDS, MUSICIANS, TICKET_TYPES, MUSIC_VENUES } from "@constants";
+import { MP4_GRACEY } from "resources";
 
 export const GIGS_2020: Array<IGig> = [
   {
@@ -6,7 +7,7 @@ export const GIGS_2020: Array<IGig> = [
     venue: MUSIC_VENUES.LAYLOW,
     dates: [new Date("2020-01-28")],
     company: [FRIENDS.DARREN_TAYLOR],
-    videoSrc: "abc"
+    videoSrc: MP4_GRACEY
   },
   {
     headline: MUSICIANS.JOSEF_SALVAT,

@@ -1,6 +1,7 @@
-import React, { FC, useContext } from "react";
-import styled, { css, ThemeContext } from "styled-components";
+import React, { FC } from "react";
+import styled, { css } from "styled-components";
 
+import { useThemeContext } from "context";
 import { Link, FlexRow, SquareImage } from "primitives";
 import { moveTheSuffixToPrefix } from "utils";
 
@@ -36,14 +37,18 @@ export const VinylCard: FC<IVinyl> = ({
   appleMusicUrl,
   signed
 }) => {
-  const theme: ITheme = useContext(ThemeContext);
+  const {
+    vinyl: {
+      artwork: { size }
+    }
+  }: ITheme = useThemeContext();
 
   return (
     <FlexRow data-test="vinyl-card">
       <VinylCardLink href={appleMusicUrl}>
         <VinylCardArtwork
           dataTest="vinyl-artwork"
-          size={theme.vinyl.artwork.size}
+          size={size}
           imgSrc={artwork}
         />
       </VinylCardLink>

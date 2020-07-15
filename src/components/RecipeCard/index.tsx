@@ -1,5 +1,4 @@
-import React, { useContext, FC } from "react";
-import { ThemeContext } from "styled-components";
+import React, { FC } from "react";
 
 import { SquareImage, FlexRow } from "primitives";
 import { getIngredientsHeader, numberToCurrencyString } from "utils";
@@ -17,7 +16,6 @@ import {
   RecipeCardTitle,
   RecipeCardPanel,
   RecipeCardPortionCost,
-  RecipeCardPhotoContainer,
   RecipeCardCostsContainer
 } from "./styles";
 
@@ -36,8 +34,6 @@ export const RecipeCard: FC<IRecipe> = ({
   totalCost,
   portionCost
 }) => {
-  const theme: ITheme = useContext(ThemeContext);
-
   const defaultIngredientsHeader: string = "ingredients";
   const ingredientsHeader: string = makes
     ? getIngredientsHeader({ makes, defaultIngredientsHeader })
@@ -76,11 +72,7 @@ export const RecipeCard: FC<IRecipe> = ({
           showBullets
         />
 
-        {image && (
-          <RecipeCardPhotoContainer>
-            <SquareImage imgSrc={image} size={theme.recipe.photo.size} />
-          </RecipeCardPhotoContainer>
-        )}
+        {image && <SquareImage imgSrc={image} size="100%" />}
 
         {totalCost && (
           <RecipeCardCostsContainer>

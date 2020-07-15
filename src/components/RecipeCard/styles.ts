@@ -36,7 +36,3 @@ export const RecipeCardPortionCost = styled.span(
     ${CSS.FONT_SIZE_75_PERCENT}
   `
 );
-
-export const RecipeCardPhotoContainer = styled.div`
-  text-align: center;
-`;

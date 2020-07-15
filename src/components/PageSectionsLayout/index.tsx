@@ -1,6 +1,6 @@
-import React, { FC, useContext } from "react";
-import { ThemeContext } from "styled-components";
+import React, { FC } from "react";
 
+import { useThemeContext } from "context";
 import { Ul, Li, GridColumnDiv } from "primitives";
 import { replaceSpacesWithDashes, useMediaQueries } from "utils";
 
@@ -13,7 +13,9 @@ interface IPageSectionsLayout {
 export const PageSectionsLayout: FC<IPageSectionsLayout> = ({
   pageSections
 }) => {
-  const theme: ITheme = useContext(ThemeContext);
+  const {
+    pageLayout: { columnGap }
+  }: ITheme = useThemeContext();
   const { pageUses2Columns } = useMediaQueries();
 
   const validPageSections: Array<IPageSection> = pageSections.filter(
@@ -50,7 +52,7 @@ export const PageSectionsLayout: FC<IPageSectionsLayout> = ({
 
   return (
     <GridColumnDiv
-      columnGap={theme.pageLayout.columnGap}
+      columnGap={columnGap}
       data-test="page-sections"
       equalWidthColumns={true}
     >
