@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d80c642163b8f2d475bbde1cb858bf16",
+    "revision": "2ce1b401d8c733899e917cdf2017db23",
     "url": "/index.html"
   },
   {
-    "revision": "6f3bd1d073af2ed39ab9",
-    "url": "/static/js/2.9a1bbd3b.chunk.js"
+    "revision": "349adbd89adcd0ef6909",
+    "url": "/static/js/2.a67e97f5.chunk.js"
   },
   {
     "revision": "4bf00ea42f5dad8ab33d5f32afec9baf",
-    "url": "/static/js/2.9a1bbd3b.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.a67e97f5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "45d55b4c091467f1589b",
-    "url": "/static/js/main.38edae47.chunk.js"
+    "revision": "3cbe705e66abb8afbf0a",
+    "url": "/static/js/main.dd3f1319.chunk.js"
   },
   {
     "revision": "3cf57b419839acabd216",
@@ -350,6 +350,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "fdadad490653a2670ac5262b16d3f687",
     "url": "/static/media/troye-sivan_bloom.fdadad49.jpg"
+  },
+  {
+    "revision": "648aa7b1f6e6ac1b5eb69f856cdc3e2e",
+    "url": "/static/media/troye-sivan_iad.648aa7b1.jpg"
   },
   {
     "revision": "ee16e10addc92610135e7aa485c554d4",
