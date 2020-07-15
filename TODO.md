@@ -1,15 +1,14 @@
 # TO DO LIST
 
+- add more gig videos!!
 - export recipes as `JPG_BANANA_CAKE` etc.
-- add tooltips to `RoundedSymbol`s
 - tidy up recipe method list bullets (recipe method array should be `ol` not `ul`?)
-- add gig videos
-- add videos section to home page
 - display festival lineups by day????
-- add travel photos
+- add travel photos!!!
 
 ## Enhancements
 
+- add tooltips to `RoundedSymbol`s
 - refine Nav Bar (colors persist for active page, mobile behaviour)
 - prevent `Router` from allowing you to go back between pages?
 
