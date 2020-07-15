@@ -1,10 +1,7 @@
 # TO DO LIST
 
-- pass `favourite` down to CountedListItemDetails
 - tidy up recipe method list bullets (recipe method array should be `ol` not `ul`?)
-- move `CountedListItemDetails` style values to theme
-- address `MARINA` vs. `Marina and the Diamonds`
-- separate gigs and festivals????
+- add gig videos
 
 ## Enhancements
 
@@ -19,6 +16,8 @@
 
 ## Refactoring
 
+- separate gigs and festivals????
+- move `CountedListItemDetails` style values to theme??
 - review semantics of page structure, landmarks, accessibility, etc.
 - rationalise `data-test` attributes
 
