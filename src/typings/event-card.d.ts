@@ -18,6 +18,7 @@ interface IPhotos {
 }
 interface IVideo {
   videoSrc?: string;
+  hideVideoIcon?: boolean;
 }
 interface IEventCardCommon extends ICompany, IFavourite, IPhotos, IVideo {}
 

@@ -7,6 +7,7 @@ import { MUSICIANS_LIST_ITEMS } from "./musicians";
 import { pageCount } from "./page-count";
 import { UP_NEXT } from "./up-next";
 import { VENUES_LIST_ITEMS } from "./venues";
+import { VIDEOS } from "./videos";
 
 interface IGigsFactory {
   BUCKET_LIST: Array<ICountedListItem>;
@@ -15,6 +16,7 @@ interface IGigsFactory {
   FRIENDS: Array<ICountedListItem>;
   VENUES: Array<ICountedListItem>;
   UP_NEXT: Array<IGig>;
+  VIDEOS: Array<IGig>;
   pageCount: number;
 }
 
@@ -28,5 +30,6 @@ export const FACTORY: IGigsFactory = {
   MUSICIANS: formatCountedListItems({ countedListItems: MUSICIANS_LIST_ITEMS }),
   UP_NEXT,
   VENUES: formatCountedListItems({ countedListItems: VENUES_LIST_ITEMS }),
+  VIDEOS,
   pageCount
 };

@@ -23,6 +23,7 @@ export const EventCard: React.FC<IEventCard> = ({
   secondaryBody,
   note,
   countdownText,
+  hideVideoIcon,
   company,
   videoSrc
 }) => {
@@ -73,7 +74,7 @@ export const EventCard: React.FC<IEventCard> = ({
 
             {(company.length > 0 || videoSrc) && (
               <EventCardSymbolsContainer>
-                {videoSrc && <RoundedSymbol video />}
+                {videoSrc && !hideVideoIcon && <RoundedSymbol video />}
                 {company
                   .sort((a: IFriend, b: IFriend) =>
                     a.initials > b.initials ? 1 : -1

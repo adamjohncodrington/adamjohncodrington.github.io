@@ -56,7 +56,7 @@ const SECTION_VENUES_GIGS: IPageSection = {
 const SECTION_VIDEOS_GIGS: IPageSection = {
   SvgIcon: SvgVideoCamera,
   title: "Videos",
-  data: { gigs: FACTORY.UP_NEXT }
+  data: { gigs: FACTORY.VIDEOS }
 };
 
 const SECTIONS_YEARS: Array<IPageSection> = DATA.SPLIT_BY_YEAR.map(
