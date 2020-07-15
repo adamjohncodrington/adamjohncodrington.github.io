@@ -1,4 +1,4 @@
-interface IGig extends IDates, IFavourite, ICompany, IVideo {
+interface IGig extends IDates, IEventCardCommon {
   headline?: IMusician;
   festival?: IMusician;
   lineup?: Array<IMusician>;

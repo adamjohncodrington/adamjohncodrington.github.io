@@ -51,11 +51,11 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
 
       {gigs &&
         gigs.map((gig: IGig, index: number) => {
-          const { venue, dates, ticketType, ...rest } = gig;
+          const { venue, dates, ticketType } = gig;
           return (
             <Li key={index}>
               <EventCard
-                {...rest}
+                {...gig}
                 title={getGigTitle(gig)}
                 subtitle={getGigSubtitle(gig)}
                 body={moveTheSuffixToPrefix(venue.name)}
@@ -68,36 +68,30 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
         })}
 
       {theatreVisits &&
-        theatreVisits.map((theatreVisit: ITheatreVisit, index: number) => {
-          const { theatre, date, ...rest } = theatreVisit;
-          return (
-            <Li key={index}>
-              <EventCard
-                {...rest}
-                title={getTheatreVisitTitle(theatreVisit)}
-                subtitle={getTheatreVisitSubtitle(theatreVisit)}
-                body={theatre.name}
-                secondaryBody={getDateText(date)}
-              />
-            </Li>
-          );
-        })}
+        theatreVisits.map((theatreVisit: ITheatreVisit, index: number) => (
+          <Li key={index}>
+            <EventCard
+              {...theatreVisit}
+              title={getTheatreVisitTitle(theatreVisit)}
+              subtitle={getTheatreVisitSubtitle(theatreVisit)}
+              body={theatreVisit.theatre.name}
+              secondaryBody={getDateText(theatreVisit.date)}
+            />
+          </Li>
+        ))}
 
       {trips &&
-        trips.map((trip: ITrip, index: number) => {
-          const { dates, ...rest } = trip;
-          return (
-            <Li key={index}>
-              <EventCard
-                {...rest}
-                title={getTripTitle(trip)}
-                subtitle={getTripSubtitle(trip)}
-                secondaryBody={getTripBody(trip)}
-                body={getDatesText(dates)}
-              />
-            </Li>
-          );
-        })}
+        trips.map((trip: ITrip, index: number) => (
+          <Li key={index}>
+            <EventCard
+              {...trip}
+              title={getTripTitle(trip)}
+              subtitle={getTripSubtitle(trip)}
+              secondaryBody={getTripBody(trip)}
+              body={getDatesText(trip.dates)}
+            />
+          </Li>
+        ))}
 
       {vinyls &&
         vinyls.map(

@@ -1,4 +1,4 @@
-interface ITheatreVisit extends IDate, ICompany, IFavourite {
+interface ITheatreVisit extends IEventCardCommon {
   play: IPlay;
   theatre: ITheatreVenue;
   cast?: Array<IActor>;
