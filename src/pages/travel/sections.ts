@@ -25,7 +25,9 @@ const SECTION_CITIES: IPageSection = {
   title: "Cities",
   data: { countedListItems: FACTORY.CITIES },
   count: FACTORY.CITIES.length,
-  starCount: FACTORY.CITIES.filter(city => city.star).length
+  starCount: FACTORY.CITIES.filter(
+    ({ star }: ICountedListItem): boolean => !!star
+  ).length
 };
 
 const SECTION_COUNTRIES: IPageSection = {
@@ -72,7 +74,7 @@ const SECTIONS_YEARS: Array<IPageSection> = DATA.SPLIT_BY_YEAR.map(
     title: year[0].dates[0].getFullYear().toString(),
     count: year.length,
     data: {
-      trips: year.filter(({ dates }: ITrip) => !isInFuture(dates[0]))
+      trips: year.filter(({ dates }: ITrip): boolean => !isInFuture(dates[0]))
     }
   })
 );
@@ -87,4 +89,4 @@ export const sections: Array<IPageSection> = [
   SECTION_THEME_PARKS,
   SECTION_UP_NEXT_TRAVEL,
   ...SECTIONS_YEARS
-].filter((pageSection: IPageSection) => !pageSection.hide);
+].filter((pageSection: IPageSection): boolean => !pageSection.hide);

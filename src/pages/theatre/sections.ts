@@ -48,7 +48,9 @@ const SECTIONS_YEARS: Array<IPageSection> = DATA.SPLIT_BY_YEAR.map(
     title: year[0].date.getFullYear().toString(),
     count: year.length,
     data: {
-      theatreVisits: year.filter(({ date }: ITheatreVisit) => !isInFuture(date))
+      theatreVisits: year.filter(
+        ({ date }: ITheatreVisit): boolean => !isInFuture(date)
+      )
     }
   })
 );

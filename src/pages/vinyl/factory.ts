@@ -29,11 +29,11 @@ const vinyls: Array<IVinyl | undefined> = Object.values(MUSICIANS)
   );
 
 const WISH_LIST = vinyls.filter(
-  (vinyl: IVinyl | undefined) => vinyl && !vinyl.purchased
+  (vinyl: IVinyl | undefined): boolean => !!(vinyl && !vinyl.purchased)
 );
 
 const COLLECTION = vinyls.filter(
-  (vinyl: IVinyl | undefined) => vinyl && vinyl.purchased
+  (vinyl: IVinyl | undefined): boolean => !!(vinyl && vinyl.purchased)
 );
 
 export const FACTORY = { WISH_LIST, COLLECTION };

@@ -5,7 +5,8 @@ import {
   SvgPeaceSign,
   SvgFriends,
   SvgNotepad,
-  SvgStadium
+  SvgStadium,
+  SvgVideoCamera
 } from "resources";
 
 import { FACTORY } from "./factory";
@@ -52,12 +53,18 @@ const SECTION_VENUES_GIGS: IPageSection = {
   count: FACTORY.VENUES.length
 };
 
+const SECTION_VIDEOS_GIGS: IPageSection = {
+  SvgIcon: SvgVideoCamera,
+  title: "Videos",
+  data: { gigs: FACTORY.UP_NEXT }
+};
+
 const SECTIONS_YEARS: Array<IPageSection> = DATA.SPLIT_BY_YEAR.map(
   (year: Array<IGig>): IPageSection => ({
     title: year[0].dates[0].getFullYear().toString(),
     count: year.length,
     data: {
-      gigs: year.filter(({ dates }: IGig) => !isInFuture(dates[0]))
+      gigs: year.filter(({ dates }: IGig): boolean => !isInFuture(dates[0]))
     }
   })
 );
@@ -69,5 +76,6 @@ export const sections: Array<IPageSection> = [
   SECTION_FRIENDS_GIGS,
   SECTION_UP_NEXT_GIGS,
   SECTION_VENUES_GIGS,
+  SECTION_VIDEOS_GIGS,
   ...SECTIONS_YEARS
 ];

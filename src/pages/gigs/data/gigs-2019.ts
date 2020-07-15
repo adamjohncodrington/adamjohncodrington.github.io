@@ -1,4 +1,5 @@
 import { FRIENDS, FESTIVALS, MUSICIANS, MUSIC_VENUES } from "@constants";
+import { MP4_BANKS, MP4_LEON, MP4_CHARLI, MP4_MUNA } from "resources";
 
 export const GIGS_2019: Array<IGig> = [
   {
@@ -33,7 +34,8 @@ export const GIGS_2019: Array<IGig> = [
     venue: MUSIC_VENUES.ISLINGTON_ASSEMBLY_HALL,
     dates: [new Date("2019-04-08")],
     company: [FRIENDS.DARREN_TAYLOR],
-    favourite: true
+    favourite: true,
+    videoSrc: MP4_LEON
   },
   {
     headline: MUSICIANS.BULOW,
@@ -130,6 +132,7 @@ export const GIGS_2019: Array<IGig> = [
   {
     headline: MUSICIANS.MUNA,
     venue: MUSIC_VENUES.VILLAGE_UNDERGROUND,
+    videoSrc: MP4_MUNA,
     dates: [new Date("2019-09-10")],
     company: [FRIENDS.EMMA_CODRINGTON]
   },
@@ -155,7 +158,8 @@ export const GIGS_2019: Array<IGig> = [
     venue: MUSIC_VENUES.BRIXTON_ACADEMY,
     dates: [new Date("2019-10-31")],
     company: [FRIENDS.DARREN_TAYLOR],
-    favourite: true
+    favourite: true,
+    videoSrc: MP4_CHARLI
   },
   {
     headline: MUSICIANS.BANKS,
@@ -163,6 +167,7 @@ export const GIGS_2019: Array<IGig> = [
     venue: MUSIC_VENUES.ROUNDHOUSE,
     dates: [new Date("2019-11-04")],
     company: [FRIENDS.DARREN_TAYLOR],
+    videoSrc: MP4_BANKS,
     favourite: true
   },
   {

@@ -1,5 +1,7 @@
 # TO DO LIST
 
+- export recipes as `JPG_BANANA_CAKE` etc.
+- add tooltips to `RoundedSymbol`s
 - tidy up recipe method list bullets (recipe method array should be `ol` not `ul`?)
 - add gig videos
 - add videos section to home page
