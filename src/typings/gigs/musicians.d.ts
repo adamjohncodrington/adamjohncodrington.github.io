@@ -243,6 +243,7 @@ interface IMusicians {
   RAINBOW_KITTEN_SURPRISE: IMusician;
   RALEIGH_RITCHIE: IMusician;
   RALPH: IMusician;
+  RATIONALE: IMusician;
   REDLIGHT: IMusician;
   RIHANNA: IMusician;
   RINA_SAWAYAMA: IMusician;

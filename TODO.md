@@ -2,7 +2,7 @@
 
 - tidy up recipe method list bullets (recipe method array should be `ol` not `ul`?)
 - add gig videos
-- add `(Marina and the Diamonds)` in faded grey beside `MARINA` list item????
+- add videos section to home page
 - display festival lineups by day????
 - add travel photos
 

@@ -19,7 +19,15 @@ interface IStar {
   star?: boolean;
 }
 
-interface ICountedListItem extends IPastAndFutureCounts, IFavourite, IStar {
+interface ISecondaryText {
+  secondaryText?: string;
+}
+
+interface ICountedListItem
+  extends ISecondaryText,
+    IPastAndFutureCounts,
+    IFavourite,
+    IStar {
   text: string;
   doNotIncludeInList?: boolean;
   countInfoIrrelevant?: boolean;

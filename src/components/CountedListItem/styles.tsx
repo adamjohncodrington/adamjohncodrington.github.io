@@ -2,21 +2,40 @@ import styled, { css } from "styled-components";
 
 import { CSS } from "styles";
 
-interface ICountedListItemText extends IThemeProp, IFavourite, IStar {
+interface ICountedListItemText
+  extends ISecondaryText,
+    IThemeProp,
+    IFavourite,
+    IStar {
   faded: boolean;
 }
 
 export const CountedListItemText = styled.span(
-  ({ favourite, star, faded, theme }: ICountedListItemText) => css`
+  ({
+    secondaryText,
+    favourite,
+    star,
+    faded,
+    theme: { fadedOpacity }
+  }: ICountedListItemText) => css`
     flex: 1;
 
     ${favourite && CSS.PSEUDO_HEART_BEFORE}
     ${star && CSS.PSEUDO_STAR_BEFORE}
+
     ${
       faded &&
       css`
-        opacity: ${theme.fadedOpacity};
+        opacity: ${fadedOpacity};
       `
+    }
+
+    ${
+      secondaryText &&
+      css`::after {
+          opacity: ${fadedOpacity};
+      content: " (${secondaryText})";
+    }`
     }
   `
 );

@@ -73,7 +73,7 @@ export const EventCard: React.FC<IEventCard> = ({
 
             {(company.length > 0 || videoSrc) && (
               <EventCardSymbolsContainer>
-                {videoSrc && <RoundedSymbol color="black">V</RoundedSymbol>}
+                {videoSrc && <RoundedSymbol video />}
                 {company
                   .sort((a: IFriend, b: IFriend) =>
                     a.initials > b.initials ? 1 : -1

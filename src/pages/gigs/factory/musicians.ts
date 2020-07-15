@@ -65,10 +65,11 @@ export const MUSICIANS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
   MUSICIANS
 ).map(
   (musician: IMusician): ICountedListItem => {
-    const { name, noLongerExists } = musician;
+    const { name, previousStageName, noLongerExists } = musician;
     const details: Array<ICountedListItemDetail> = getMusicianDetails(musician);
     return {
       text: name,
+      secondaryText: previousStageName && previousStageName.name,
       favourite: detailsContainsFavourite(details),
       ...getItemCounts({ item: { musician }, data: { gigs: DATA.ALL } }),
       noLongerExists,

@@ -1,6 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
+import { SvgVideoCamera } from "resources";
+
 interface IStyledRoundedSymbol extends IRoundedSymbol, IThemeProp {}
 
 const StyledRoundedSymbol = styled.div(
@@ -13,13 +15,29 @@ const StyledRoundedSymbol = styled.div(
     line-height: ${roundedSymbol.size};
     text-align: center;
     width: ${roundedSymbol.size};
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      height: 65%;
+      width: 65%;
+      opacity: 85%;
+      fill: white;
+    }
   `
 );
 
 interface IRoundedSymbol {
-  color: string;
+  video?: boolean;
+  color?: string;
 }
 
-export const RoundedSymbol: React.FC<IRoundedSymbol> = props => (
-  <StyledRoundedSymbol {...props} />
-);
+export const RoundedSymbol: React.FC<IRoundedSymbol> = ({ video, ...rest }) =>
+  video ? (
+    <StyledRoundedSymbol color="black">
+      <SvgVideoCamera />
+    </StyledRoundedSymbol>
+  ) : (
+    <StyledRoundedSymbol {...rest} />
+  );

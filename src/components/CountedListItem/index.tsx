@@ -25,6 +25,7 @@ const DisclosureHeader: FC<IDisclosureHeader> = ({
 
 export const CountedListItem: FC<ICountedListItem> = ({
   text,
+  secondaryText,
   favourite,
   star,
   futureCount,
@@ -43,12 +44,15 @@ export const CountedListItem: FC<ICountedListItem> = ({
         faded={!countInfoIrrelevant && pastCount === 0}
         favourite={favourite}
         star={star}
+        secondaryText={secondaryText}
       >
         {text}
       </CountedListItemText>
+
       {!countInfoIrrelevant && showFutureCount && (
         <CountedListItemFutureCount>{futureCount}</CountedListItemFutureCount>
       )}
+
       {!countInfoIrrelevant && showPastCount && (
         <CountedListItemPastCount isLeaderboardItem={isLeaderboardItem}>
           {pastCount}

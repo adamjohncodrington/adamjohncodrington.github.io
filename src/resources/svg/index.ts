@@ -17,3 +17,4 @@ export { ReactComponent as SvgTheatre } from "./theatre.svg";
 export { ReactComponent as SvgTravel } from "./travel.svg";
 export { ReactComponent as SvgVegBowl } from "./veg-bowl.svg";
 export { ReactComponent as SvgVinyl } from "./vinyl.svg";
+export { ReactComponent as SvgVideoCamera } from "./video-camera.svg";

@@ -209,6 +209,7 @@ export const MUSICIANS: IMusicians = {
   RAINBOW_KITTEN_SURPRISE: { name: "Rainbow Kitten Surprise" },
   RALEIGH_RITCHIE: { name: "Raleigh Ritchie" },
   RALPH: { name: "Ralph" },
+  RATIONALE: { name: "Rationale" },
   REDLIGHT: { name: "Redlight" },
   RINA_SAWAYAMA: { name: "Rina Sawayama" },
   RITON: { name: "Riton" },
