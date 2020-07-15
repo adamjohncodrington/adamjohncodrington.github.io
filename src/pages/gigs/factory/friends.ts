@@ -19,7 +19,7 @@ const getFriendDetails = (friend: IFriend): Array<ICountedListItemDetail> => {
       const { dates } = gig;
       return {
         index: gigsMatchingFriend.length > 1 ? index + 1 : undefined,
-        mainText: getGigTitle(gig),
+        mainText: [getGigTitle(gig)],
         dateText: getDatesText(dates),
         isInFuture: isInFuture(dates[0])
       };

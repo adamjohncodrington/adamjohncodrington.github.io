@@ -10,7 +10,7 @@ interface IDetailItem {
 
 interface ICountedListItemDetail {
   index?: number;
-  mainText?: string;
+  mainText?: Array<string>;
   dateText: string;
   isInFuture: boolean;
 }

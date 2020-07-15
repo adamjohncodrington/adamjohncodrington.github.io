@@ -24,15 +24,7 @@ export const getDateText = (
 
 export const getDatesText = (dates: Array<Date>): string => {
   if (dates.length === 1) return getDateText(dates[0]);
-
-  if (dates.length === 2) {
-    return getDateTextFor2Dates(dates[0], dates[1]);
-  }
-
-  const errorText: string =
-    "ERROR: incorrect number of dates passed to `getDatesText` function";
-  alert(errorText);
-  return errorText;
+  return getDateTextFor2Dates(dates[0], dates[dates.length - 1]);
 };
 
 const getDateTextFor2Dates = (firstDate: Date, secondDate: Date): string => {

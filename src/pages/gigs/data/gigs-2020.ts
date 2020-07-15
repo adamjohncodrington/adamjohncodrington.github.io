@@ -58,14 +58,6 @@ export const GIGS_2020: Array<IGig> = [
   //   company: FRIENDS.DARREN_TAYLOR,
   //   ticketType: TICKET_TYPES.DICE,
   // },
-  // {
-  //   festival: FESTIVALS.MAD_COOL,
-  //   lineup: [MUSICIANS.TWENTY_ONE_PILOTS],
-  //   venue: MUSIC_VENUES.IFEMA_MADRID,
-  //   dates: [new Date("2020-07-08")],
-  //   company: [FRIENDS.DAN_SPARROW],
-  //   ticketType: TICKET_TYPES.FESTICKET_PDF
-  // },
   {
     headline: MUSICIANS.CARIBOU,
     venue: MUSIC_VENUES.BRIXTON_ACADEMY,

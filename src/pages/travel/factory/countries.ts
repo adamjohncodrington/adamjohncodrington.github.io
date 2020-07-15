@@ -31,8 +31,10 @@ const getCountryDetails = (
       return {
         index: tripsMatchingCountry.length > 1 ? index + 1 : undefined,
         mainText: !tripTitle.includes(country.name)
-          ? tripTitle
-          : tripSubtitle || undefined,
+          ? [tripTitle]
+          : tripSubtitle
+          ? [tripSubtitle]
+          : undefined,
         dateText: getDatesText(dates),
         isInFuture: isInFuture(dates[0])
       };

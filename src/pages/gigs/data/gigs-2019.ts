@@ -96,11 +96,13 @@ export const GIGS_2019: Array<IGig> = [
   {
     festival: FESTIVALS.MANCHESTER_PRIDE,
     lineup: [
-      MUSICIANS.BECKY_MILLS_HILL,
-      MUSICIANS.BANANARAMA,
-      MUSICIANS.TULISA,
-      MUSICIANS.CHERYL,
-      MUSICIANS.ARIANA_GRANDE
+      [
+        MUSICIANS.BECKY_MILLS_HILL,
+        MUSICIANS.BANANARAMA,
+        MUSICIANS.TULISA,
+        MUSICIANS.CHERYL,
+        MUSICIANS.ARIANA_GRANDE
+      ]
     ],
     venue: MUSIC_VENUES.MAYFIELD_DEPOT,
     dates: [new Date("2019-08-25")],
@@ -120,7 +122,7 @@ export const GIGS_2019: Array<IGig> = [
   },
   {
     festival: FESTIVALS.CHINGFEST,
-    lineup: [MUSICIANS.INCOGNITO, MUSICIANS.NAO],
+    lineup: [[MUSICIANS.INCOGNITO, MUSICIANS.NAO]],
     venue: MUSIC_VENUES.RIDGEWAY_PARK,
     dates: [new Date("2019-08-31")],
     company: [FRIENDS.DARREN_TAYLOR]
@@ -172,7 +174,7 @@ export const GIGS_2019: Array<IGig> = [
   },
   {
     festival: FESTIVALS.HOMOBLOC,
-    lineup: [MUSICIANS.ROMY, MUSICIANS.ROBYN, MUSICIANS.HORSE_MEAT_DISCO],
+    lineup: [[MUSICIANS.ROMY, MUSICIANS.ROBYN, MUSICIANS.HORSE_MEAT_DISCO]],
     venue: MUSIC_VENUES.MAYFIELD_DEPOT,
     dates: [new Date("2019-11-09")],
     company: [FRIENDS.DAN_SPARROW, FRIENDS.MARIA_TAYLOR]
@@ -225,7 +227,7 @@ export const GIGS_2019: Array<IGig> = [
   },
   {
     festival: FESTIVALS.AREA_10_NYE,
-    lineup: [MUSICIANS.MK],
+    lineup: [[MUSICIANS.MK]],
     venue: MUSIC_VENUES.BRIXTON_ACADEMY,
     dates: [new Date("2019-12-31")],
     company: [

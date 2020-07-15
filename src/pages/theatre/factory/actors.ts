@@ -28,7 +28,7 @@ const getActorDetails = (actor: IActor): Array<ICountedListItemDetail> => {
       const { date } = theatreVisit;
       return {
         index: theatreVisitsMatchingActor.length > 1 ? index + 1 : undefined,
-        mainText: getTheatreVisitTitle(theatreVisit),
+        mainText: [getTheatreVisitTitle(theatreVisit)],
         dateText: getDateText(date),
         isInFuture: isInFuture(date)
       };

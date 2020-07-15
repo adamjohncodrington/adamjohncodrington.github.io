@@ -16,9 +16,9 @@ export const getGigSubtitle = ({ support, lineup }: IGig) =>
       })
     : lineup &&
       arrayToString({
-        stringArray: lineup.map(({ name }: IMusician): string =>
-          moveTheSuffixToPrefix(name)
-        )
+        stringArray: lineup
+          .flat()
+          .map(({ name }: IMusician): string => moveTheSuffixToPrefix(name))
       });
 
 export const getTheatreVisitTitle = ({ play }: ITheatreVisit): string =>

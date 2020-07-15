@@ -19,7 +19,7 @@ const getFriendDetails = (friend: IFriend): Array<ICountedListItemDetail> => {
       const { dates } = trip;
       return {
         index: tripsMatchingFriend.length > 1 ? index + 1 : undefined,
-        mainText: getTripTitle(trip),
+        mainText: [getTripTitle(trip)],
         dateText: getDatesText(dates),
         isInFuture: isInFuture(dates[0])
       };

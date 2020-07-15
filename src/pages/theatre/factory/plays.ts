@@ -45,7 +45,7 @@ const getPlayDetails = (play: IPlay): Array<ICountedListItemDetail> => {
       const { date } = theatreVisit;
       return {
         index: theatreVisitsMatchingPlay.length > 1 ? index + 1 : undefined,
-        mainText: moveTheSuffixToPrefix(theatreVisit.theatre.name),
+        mainText: [moveTheSuffixToPrefix(theatreVisit.theatre.name)],
         dateText: getDateText(date),
         isInFuture: isInFuture(date)
       };

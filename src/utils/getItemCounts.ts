@@ -27,7 +27,14 @@ export const musicianMatchExists = (
 ): boolean => {
   if (headline === musician) return true;
   if (support && support.includes(musician)) return true;
-  if (lineup && lineup.includes(musician)) return true;
+
+  if (lineup) {
+    let lineupMatchFound: boolean = false;
+    lineup.forEach((day: Array<IMusician>): void => {
+      if (day.includes(musician)) lineupMatchFound = true;
+    });
+    return lineupMatchFound;
+  }
   return false;
 };
 

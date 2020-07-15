@@ -114,12 +114,14 @@ export const GIGS_2017: Array<IGig> = [
   {
     festival: FESTIVALS.LOVEBOX,
     lineup: [
-      MUSICIANS.JOE_GODDARD,
-      MUSICIANS.RUFUS_DU_SOL,
-      MUSICIANS.BICEP,
-      MUSICIANS.JAMIE_XX,
-      MUSICIANS.EATS_EVERYTHING,
-      MUSICIANS.FRANK_OCEAN
+      [
+        MUSICIANS.JOE_GODDARD,
+        MUSICIANS.RUFUS_DU_SOL,
+        MUSICIANS.BICEP,
+        MUSICIANS.JAMIE_XX,
+        MUSICIANS.EATS_EVERYTHING,
+        MUSICIANS.FRANK_OCEAN
+      ]
     ],
     dates: [new Date("2017-07-14")],
     venue: MUSIC_VENUES.VICTORIA_PARK,
@@ -133,7 +135,7 @@ export const GIGS_2017: Array<IGig> = [
   },
   {
     festival: FESTIVALS.BRIGHTON_PRIDE,
-    lineup: [MUSICIANS.BECKY_MILLS_HILL, MUSICIANS.YEARS_AND_YEARS],
+    lineup: [[MUSICIANS.BECKY_MILLS_HILL, MUSICIANS.YEARS_AND_YEARS]],
     dates: [new Date("2017-08-05")],
     venue: MUSIC_VENUES.PRESTON_PARK,
     company: [
@@ -148,22 +150,29 @@ export const GIGS_2017: Array<IGig> = [
   {
     festival: FESTIVALS.BESTIVAL,
     lineup: [
-      MUSICIANS.ALMA,
-      MUSICIANS.LITTLE_DRAGON,
-      MUSICIANS.KOLSCH,
-      MUSICIANS.XX_THE,
-      MUSICIANS.MACEO_PLEX,
-      MUSICIANS.JOE_GODDARD,
-      MUSICIANS.FOURS,
-      MUSICIANS.ANNA_OF_THE_NORTH,
-      MUSICIANS.LUCY_ROSE,
-      MUSICIANS.DIZZEE_RASCAL,
-      MUSICIANS.DUSKY,
-      MUSICIANS.CHARLOTTE_CHURCH,
-      MUSICIANS.SOUL_WAX,
-      MUSICIANS.PET_SHOP_BOYS
+      [
+        MUSICIANS.ALMA,
+        MUSICIANS.LITTLE_DRAGON,
+        MUSICIANS.KOLSCH,
+        MUSICIANS.XX_THE,
+        MUSICIANS.MACEO_PLEX,
+        MUSICIANS.JOE_GODDARD
+      ],
+      [
+        MUSICIANS.FOURS,
+        MUSICIANS.ANNA_OF_THE_NORTH,
+        MUSICIANS.LUCY_ROSE,
+        MUSICIANS.DIZZEE_RASCAL,
+        MUSICIANS.DUSKY,
+        MUSICIANS.CHARLOTTE_CHURCH
+      ],
+      [MUSICIANS.SOUL_WAX, MUSICIANS.PET_SHOP_BOYS]
     ],
-    dates: [new Date("2017-09-08"), new Date("2017-09-10")],
+    dates: [
+      new Date("2017-09-08"),
+      new Date("2017-09-09"),
+      new Date("2017-09-10")
+    ],
     venue: MUSIC_VENUES.LULWORTH_ESTATE,
     company: [
       FRIENDS.TONYA_FRANCE,

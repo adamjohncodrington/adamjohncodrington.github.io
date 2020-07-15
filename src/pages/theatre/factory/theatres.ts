@@ -31,7 +31,7 @@ const getTheatreVenueDetails = (
       const { date } = theatreVisit;
       return {
         index: theatreVisitsMatchingVenue.length > 1 ? index + 1 : undefined,
-        mainText: moveTheSuffixToPrefix(theatreVisit.play.name),
+        mainText: [moveTheSuffixToPrefix(theatreVisit.play.name)],
         dateText: getDateText(date),
         isInFuture: isInFuture(date)
       };

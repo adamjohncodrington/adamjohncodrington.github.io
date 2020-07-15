@@ -52,7 +52,7 @@ export const GIGS_2018: Array<IGig> = [
   },
   {
     festival: FESTIVALS.ON_THE_RUN_II,
-    lineup: [MUSICIANS.JAY_Z, MUSICIANS.BEYONCE],
+    lineup: [[MUSICIANS.JAY_Z, MUSICIANS.BEYONCE]],
     venue: MUSIC_VENUES.LONDON_STADIUM,
     dates: [new Date("2018-06-16")],
     company: [FRIENDS.TONYA_FRANCE]
@@ -68,12 +68,14 @@ export const GIGS_2018: Array<IGig> = [
   {
     festival: FESTIVALS.NOTION_SUMMER_PARTY,
     lineup: [
-      MUSICIANS.M_0,
-      MUSICIANS.BONDAX,
-      MUSICIANS.RITON,
-      MUSICIANS.KAH_LO,
-      MUSICIANS.ANNE_MARIE,
-      MUSICIANS.MO
+      [
+        MUSICIANS.M_0,
+        MUSICIANS.BONDAX,
+        MUSICIANS.RITON,
+        MUSICIANS.KAH_LO,
+        MUSICIANS.ANNE_MARIE,
+        MUSICIANS.MO
+      ]
     ],
     venue: MUSIC_VENUES.TROXY,
     dates: [new Date("2018-07-27")],
@@ -81,7 +83,7 @@ export const GIGS_2018: Array<IGig> = [
   },
   {
     festival: FESTIVALS.BRIGHTON_PRIDE,
-    lineup: [MUSICIANS.BRITNEY_SPEARS],
+    lineup: [[MUSICIANS.BRITNEY_SPEARS]],
     venue: MUSIC_VENUES.PRESTON_PARK,
     dates: [new Date("2018-08-04")],
     company: [

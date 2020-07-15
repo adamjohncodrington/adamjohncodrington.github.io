@@ -23,7 +23,7 @@ const getFestivalDetails = (
       const { dates } = gig;
       return {
         index: gigsMatchingFestival.length > 1 ? index + 1 : undefined,
-        mainText: getGigSubtitle(gig) || "TBC",
+        mainText: [getGigSubtitle(gig) || "TBC"],
         dateText: getDatesText(dates),
         isInFuture: isInFuture(dates[0])
       };

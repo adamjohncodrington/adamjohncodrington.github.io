@@ -23,7 +23,7 @@ const getMusicVenueDetails = (
       const { dates } = gig;
       return {
         index: gigsMatchingMusicVenue.length > 1 ? index + 1 : undefined,
-        mainText: getGigTitle(gig),
+        mainText: [getGigTitle(gig)],
         dateText: getDatesText(dates),
         isInFuture: isInFuture(dates[0])
       };
