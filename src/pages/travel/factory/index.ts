@@ -13,11 +13,6 @@ const UP_NEXT: Array<ITrip> = DATA.ALL.filter(({ dates }: ITrip): boolean =>
   isInFuture(dates[0])
 );
 
-const totalTripsAbroadEver: number = DATA.ALL.filter(item => !item.notAbroad)
-  .length;
-const tripsInTheFuture: number = UP_NEXT.length;
-const totalAbroadTripsSoFar: number = totalTripsAbroadEver - tripsInTheFuture;
-
 interface ITravelFactory {
   BUCKET_LIST: Array<ICountedListItem>;
   CITIES: Array<ICountedListItem>;
@@ -27,7 +22,6 @@ interface ITravelFactory {
   ISLANDS: Array<ICountedListItem>;
   THEME_PARKS: Array<ICountedListItem>;
   UP_NEXT: Array<ITrip>;
-  pageCount: number;
 }
 
 export const FACTORY: ITravelFactory = {
@@ -45,7 +39,5 @@ export const FACTORY: ITravelFactory = {
   THEME_PARKS: formatCountedListItems({
     countedListItems: THEME_PARKS_LIST_ITEMS
   }),
-  UP_NEXT,
-
-  pageCount: totalAbroadTripsSoFar
+  UP_NEXT
 };

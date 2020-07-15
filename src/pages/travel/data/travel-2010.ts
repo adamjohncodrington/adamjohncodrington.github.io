@@ -4,7 +4,7 @@ export const TRAVEL_2010: Array<ITrip> = [
   {
     title: [COUNTRIES.UAE.cities.DUBAI],
     subtitle: [COUNTRIES.UAE],
-    hidden: [
+    body: [
       COUNTRIES.UAE.attractions.AQUAVENTURE,
       COUNTRIES.UAE.attractions.BURJ_KHALIFA
     ],
@@ -16,6 +16,6 @@ export const TRAVEL_2010: Array<ITrip> = [
     subtitle: [COUNTRIES.PORTUGAL],
     dates: [new Date("2010-08-13"), new Date("2010-08-18")],
     company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON],
-    hidden: [COUNTRIES.PORTUGAL.cities.PORTIMAO]
+    body: [COUNTRIES.PORTUGAL.cities.PORTIMAO]
   }
 ];

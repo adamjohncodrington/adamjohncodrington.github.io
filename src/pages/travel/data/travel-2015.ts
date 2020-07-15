@@ -4,7 +4,7 @@ export const TRAVEL_2015: Array<ITrip> = [
   {
     title: [COUNTRIES.FRANCE.cities.PARIS],
     subtitle: [COUNTRIES.FRANCE],
-    hidden: [
+    body: [
       COUNTRIES.FRANCE.attractions.SACRE_COEUR,
       COUNTRIES.FRANCE.attractions.LOUVRE,
       COUNTRIES.FRANCE.attractions.ARC_DE_TRIOMPHE,
@@ -25,7 +25,7 @@ export const TRAVEL_2015: Array<ITrip> = [
   {
     title: [COUNTRIES.UGANDA],
     subtitle: [COUNTRIES.UGANDA.cities.JINJA],
-    hidden: [
+    body: [
       COUNTRIES.UGANDA.attractions.NILE_SOURCE,
       COUNTRIES.UGANDA.attractions.RAFTING_NALUBALE
     ],
@@ -46,32 +46,48 @@ export const TRAVEL_2015: Array<ITrip> = [
     ]
   },
   {
-    title: [
-      COUNTRIES.GERMANY.cities.BERLIN,
-      COUNTRIES.CZECH_REPUBLIC.cities.PRAGUE,
-      COUNTRIES.POLAND.cities.KRAKOW,
-      COUNTRIES.HUNGARY.cities.BUDAPEST
-    ],
-    hidden: [
-      COUNTRIES.GERMANY,
+    title: [COUNTRIES.GERMANY.cities.BERLIN],
+    subtitle: [COUNTRIES.GERMANY],
+    body: [
       COUNTRIES.GERMANY.attractions.BERLIN_WALL,
       COUNTRIES.GERMANY.attractions.BRANDENBURG_GATE,
       COUNTRIES.GERMANY.attractions.EAST_SIDE_GALLERY,
       COUNTRIES.GERMANY.attractions.HOLOCAUST_MEMORIAL,
-      COUNTRIES.GERMANY.attractions.REICHSTAG,
-      COUNTRIES.CZECH_REPUBLIC,
+      COUNTRIES.GERMANY.attractions.REICHSTAG
+    ],
+    dates: [new Date("2015-09-10"), new Date("2015-09-14")],
+    company: [FRIENDS.SIAN_RODWAY_SMITH]
+  },
+  {
+    title: [COUNTRIES.CZECH_REPUBLIC.cities.PRAGUE],
+    subtitle: [COUNTRIES.CZECH_REPUBLIC],
+    body: [
       COUNTRIES.CZECH_REPUBLIC.attractions.JOHN_LENNON_WALL,
-      COUNTRIES.CZECH_REPUBLIC.attractions.VYSEHRAD,
-      COUNTRIES.POLAND,
+      COUNTRIES.CZECH_REPUBLIC.attractions.VYSEHRAD
+    ],
+    dates: [new Date("2015-09-14"), new Date("2015-09-17")],
+    company: [FRIENDS.SIAN_RODWAY_SMITH]
+  },
+  {
+    title: [COUNTRIES.POLAND.cities.KRAKOW],
+    subtitle: [COUNTRIES.POLAND],
+    body: [
       COUNTRIES.POLAND.towns.WIELICZKA,
       COUNTRIES.POLAND.attractions.WIELICZKA_SALT_MINE,
-      COUNTRIES.POLAND.attractions.AUSCHWITZ_BIRKENAU,
-      COUNTRIES.HUNGARY,
+      COUNTRIES.POLAND.attractions.AUSCHWITZ_BIRKENAU
+    ],
+    dates: [new Date("2015-09-17"), new Date("2015-09-19")],
+    company: [FRIENDS.SIAN_RODWAY_SMITH]
+  },
+  {
+    title: [COUNTRIES.HUNGARY.cities.BUDAPEST],
+    subtitle: [COUNTRIES.HUNGARY],
+    body: [
       COUNTRIES.HUNGARY.attractions.CITADELLA,
       COUNTRIES.HUNGARY.attractions.PARLIAMENT_BUILDING,
       COUNTRIES.HUNGARY.attractions.THERMAL_BATH_SZECHENYI
     ],
-    dates: [new Date("2015-09-10"), new Date("2015-09-24")],
+    dates: [new Date("2015-09-20"), new Date("2015-09-24")],
     company: [FRIENDS.SIAN_RODWAY_SMITH]
   }
 ];

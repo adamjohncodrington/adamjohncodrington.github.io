@@ -2,11 +2,12 @@ import { FRIENDS, COUNTRIES } from "@constants";
 
 export const TRAVEL_2008: Array<ITrip> = [
   {
-    title: [COUNTRIES.ITALY.cities.ROME, COUNTRIES.ITALY.cities.VATICAN],
+    title: [COUNTRIES.ITALY.cities.ROME],
     subtitle: [COUNTRIES.ITALY],
-    hidden: [
+    body: [
       COUNTRIES.ITALY.attractions.COLOSSEUM,
-      COUNTRIES.ITALY.attractions.TREVI_FOUNTAIN
+      COUNTRIES.ITALY.attractions.TREVI_FOUNTAIN,
+      COUNTRIES.ITALY.cities.VATICAN
     ],
     dates: [new Date("2008-02-08"), new Date("2008-02-10")],
     company: [FRIENDS.EMMA_CODRINGTON, FRIENDS.DAD]
@@ -14,7 +15,7 @@ export const TRAVEL_2008: Array<ITrip> = [
   {
     title: [COUNTRIES.FRANCE.cities.PARIS],
     subtitle: [COUNTRIES.FRANCE],
-    hidden: [
+    body: [
       COUNTRIES.FRANCE.attractions.AIR_SPACE_MUSEUM,
       COUNTRIES.FRANCE.attractions.ARC_DE_TRIOMPHE,
       COUNTRIES.FRANCE.attractions.EIFFEL_TOWER,
@@ -39,7 +40,7 @@ export const TRAVEL_2008: Array<ITrip> = [
   {
     title: [COUNTRIES.USA.cities.WASHINGTON_DC, COUNTRIES.USA.states.VIRGINIA],
     subtitle: [COUNTRIES.USA],
-    hidden: [
+    body: [
       COUNTRIES.USA.cities.VIRGINIA_BEACH,
       COUNTRIES.USA.attractions.WASHINGTON_MONUMENT,
       COUNTRIES.USA.attractions.SIX_FLAGS_AMERICA,

@@ -1,9 +1,9 @@
 # TO DO LIST
 
-- tidy up recipe method list bullets
+- tidy up recipe method list bullets (recipe method array should be `ol` not `ul`?)
 - move `CountedListItemDetails` style values to theme
-- refine details to Travel counted list items
 - address `MARINA` vs. `Marina and the Diamonds`
+- break festival lineups down by day
 
 ## Enhancements
 
@@ -19,7 +19,6 @@
 ## Refactoring
 
 - review semantics of page structure, landmarks, accessibility, etc.
-- recipe method array should be `ol` not `ul`?
 - rationalise `data-test` attributes
 
 ## Testing

@@ -27,6 +27,7 @@ interface ICitiesBrazil {
 
 interface ICitiesCanada {
   NIAGARA_FALLS: ICity;
+  TORONTO: ICity;
 }
 
 interface ICitiesCostaRica {

@@ -2,12 +2,12 @@ import { FRIENDS, COUNTRIES } from "@constants";
 
 export const TRAVEL_2012: Array<ITrip> = [
   {
-    title: [
+    title: [COUNTRIES.EGYPT],
+    subtitle: [
       COUNTRIES.EGYPT.cities.SHARM_EL_SHEIKH,
       COUNTRIES.EGYPT.cities.CAIRO
     ],
-    subtitle: [COUNTRIES.EGYPT],
-    hidden: [COUNTRIES.EGYPT.attractions.GIZA_PYRAMIDS_SPHINX],
+    body: [COUNTRIES.EGYPT.attractions.GIZA_PYRAMIDS_SPHINX],
     dates: [new Date("2012-07-22"), new Date("2012-07-29")],
     company: [FRIENDS.DAD]
   },

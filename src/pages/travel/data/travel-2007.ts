@@ -7,7 +7,7 @@ export const TRAVEL_2007: Array<ITrip> = [
       COUNTRIES.USA.cities.LOS_ANGELES
     ],
     subtitle: [COUNTRIES.USA],
-    hidden: [
+    body: [
       COUNTRIES.USA.attractions.GOLDEN_GATE_BRIDGE,
       COUNTRIES.USA.attractions.FISHERMANS_WHARF,
       COUNTRIES.USA.attractions.ALCATRAZ_PRISON,

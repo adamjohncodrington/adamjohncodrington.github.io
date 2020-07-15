@@ -33,30 +33,33 @@ export const musicianMatchExists = (
 
 export const countryMatchExists = (
   country: ICountryTemplate,
-  { title, subtitle, hidden }: ITrip
+  { title, subtitle, body, hidden }: ITrip
 ): boolean => {
   if (title && title.includes(country)) return true;
   if (subtitle && subtitle.includes(country)) return true;
+  if (body && body.includes(country)) return true;
   if (hidden && hidden.includes(country)) return true;
   return false;
 };
 
 export const cityMatchExists = (
   city: ICity,
-  { title, subtitle, hidden }: ITrip
+  { title, subtitle, body, hidden }: ITrip
 ): boolean => {
   if (title && title.includes(city)) return true;
   if (subtitle && subtitle.includes(city)) return true;
+  if (body && body.includes(city)) return true;
   if (hidden && hidden.includes(city)) return true;
   return false;
 };
 
 export const attractionMatchExists = (
   attraction: IAttraction,
-  { title, subtitle, hidden }: ITrip
+  { title, subtitle, body, hidden }: ITrip
 ): boolean => {
   if (title && title.includes(attraction)) return true;
   if (subtitle && subtitle.includes(attraction)) return true;
+  if (body && body.includes(attraction)) return true;
   if (hidden && hidden.includes(attraction)) return true;
   return false;
 };
@@ -104,7 +107,7 @@ export const getItemCounts = ({
   trips &&
     (attraction || city || country || friend || island) &&
     trips.forEach((trip: ITrip): void => {
-      const { title, company, subtitle, hidden, dates } = trip;
+      const { title, company, subtitle, body, dates } = trip;
 
       if (
         (attraction && attractionMatchExists(attraction, trip)) ||
@@ -112,7 +115,7 @@ export const getItemCounts = ({
         (city && cityMatchExists(city, trip)) ||
         (island &&
           ((title && title.includes(island)) ||
-            (hidden && hidden.includes(island)) ||
+            (body && body.includes(island)) ||
             (subtitle && subtitle.includes(island)))) ||
         (friend && company.includes(friend))
       )

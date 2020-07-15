@@ -1,5 +1,5 @@
 import { COUNTRIES } from "@constants";
-import { getItemCounts, cityMatchExists, isInFuture } from "utils";
+import { getItemCounts } from "utils";
 
 import { DATA } from "../data";
 
@@ -13,30 +13,6 @@ const generateCities = (): { [city: string]: ICity } => {
 
 export const CITIES = generateCities();
 
-const getTripsMatchingCity = (city: ICity): Array<ITrip> => {
-  const tripsMatchingCity: Array<ITrip> = [];
-  const trips: Array<ITrip> = DATA.ALL;
-  trips.forEach((trip: ITrip): void => {
-    if (cityMatchExists(city, trip)) tripsMatchingCity.push(trip);
-  });
-  return tripsMatchingCity;
-};
-
-const getCityDetails = (city: ICity): Array<ICountedListItemDetail> => {
-  const tripsMatchingCity: Array<ITrip> = getTripsMatchingCity(city);
-  return tripsMatchingCity.map(
-    (trip: ITrip, index: number): ICountedListItemDetail => {
-      const { dates } = trip;
-      return {
-        index: tripsMatchingCity.length > 1 ? index + 1 : undefined,
-        mainText: "COUNTRY GOES HERE",
-        dateText: "DATE GOES HERE",
-        isInFuture: isInFuture(dates[0])
-      };
-    }
-  );
-};
-
 export const CITIES_LIST_ITEMS: Array<ICountedListItem> = Object.values(
   CITIES
 ).map(
@@ -46,8 +22,7 @@ export const CITIES_LIST_ITEMS: Array<ICountedListItem> = Object.values(
       text: name,
       star: capital,
       countInfoIrrelevant: insignificant,
-      ...getItemCounts({ item: { city }, data: { trips: DATA.ALL } }),
-      details: getCityDetails(city)
+      ...getItemCounts({ item: { city }, data: { trips: DATA.ALL } })
     };
   }
 );

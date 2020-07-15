@@ -4,7 +4,7 @@ export const TRAVEL_2006: Array<ITrip> = [
   {
     title: [COUNTRIES.USA.states.FLORIDA],
     subtitle: [COUNTRIES.USA],
-    hidden: [
+    body: [
       COUNTRIES.USA.attractions.BUSCH_GARDENS_TAMPA,
       COUNTRIES.USA.attractions.VENICE_BEACH,
       COUNTRIES.USA.attractions.UNIVERSALS_ISLANDS_OF_ADVENTURE,
@@ -18,10 +18,7 @@ export const TRAVEL_2006: Array<ITrip> = [
   {
     title: [COUNTRIES.ITALY.towns.SORRENTO, COUNTRIES.ITALY.cities.POMPEII],
     subtitle: [COUNTRIES.ITALY],
-    hidden: [
-      COUNTRIES.ITALY.attractions.VESUVIUS,
-      COUNTRIES.ITALY.cities.NAPLES
-    ],
+    body: [COUNTRIES.ITALY.attractions.VESUVIUS, COUNTRIES.ITALY.cities.NAPLES],
     dates: [new Date("2006-08-18"), new Date("2006-08-25")],
     company: [
       FRIENDS.MUM,

@@ -13,7 +13,7 @@ export const TRAVEL_2017: Array<ITrip> = [
       FRIENDS.JAZZ_THIND,
       FRIENDS.JHC
     ],
-    hidden: [
+    body: [
       COUNTRIES.ITALY.attractions.MILAN_MALL,
       COUNTRIES.ITALY.attractions.SEMPIONE_PARK,
       COUNTRIES.ITALY.attractions.ARCO_DELLA_PACE
@@ -30,7 +30,7 @@ export const TRAVEL_2017: Array<ITrip> = [
       FRIENDS.ELLIE_FORMAN,
       FRIENDS.HARRIET_KESTERTON
     ],
-    hidden: [
+    body: [
       COUNTRIES.SPAIN.attractions.PARK_GUELL,
       COUNTRIES.SPAIN.attractions.CIUTADELLA_PARK
     ]
@@ -40,6 +40,6 @@ export const TRAVEL_2017: Array<ITrip> = [
     subtitle: [COUNTRIES.SPAIN],
     dates: [new Date("2017-06-15"), new Date("2017-06-18")],
     company: [FRIENDS.LUKE_STERN],
-    hidden: [COUNTRIES.SPAIN.attractions.SIAM_PARK]
+    body: [COUNTRIES.SPAIN.attractions.SIAM_PARK]
   }
 ];

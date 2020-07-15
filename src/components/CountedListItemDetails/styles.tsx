@@ -29,12 +29,11 @@ export const StyledLi = styled.li(
 
 export const StyledMainText = styled.div`
   flex: 1;
+  margin-right: 10px;
 `;
 
 export const StyledIndex = styled.div`
   min-width: 25px;
 `;
 
-export const StyledDateText = styled.div`
-  margin-left: 10px;
-`;
+export const StyledDateText = styled.div``;

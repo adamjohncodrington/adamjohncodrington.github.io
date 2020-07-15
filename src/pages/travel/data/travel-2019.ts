@@ -4,7 +4,7 @@ export const TRAVEL_2019: Array<ITrip> = [
   {
     title: [COUNTRIES.NETHERLANDS.cities.AMSTERDAM],
     subtitle: [COUNTRIES.NETHERLANDS],
-    hidden: [
+    body: [
       COUNTRIES.NETHERLANDS.attractions.SEX_MUSEUM,
       COUNTRIES.NETHERLANDS.attractions.STEDELIJK_MUSEUM
     ],
@@ -19,28 +19,28 @@ export const TRAVEL_2019: Array<ITrip> = [
   {
     title: [COUNTRIES.PORTUGAL.cities.LISBON],
     subtitle: [COUNTRIES.PORTUGAL],
-    hidden: [COUNTRIES.PORTUGAL.attractions.OCENARIO_DE_LISBOA],
+    body: [COUNTRIES.PORTUGAL.attractions.OCENARIO_DE_LISBOA],
     dates: [new Date("2019-02-08"), new Date("2019-02-10")],
     company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON]
   },
   {
     title: [COUNTRIES.BELGIUM.cities.BRUGES],
     subtitle: [COUNTRIES.BELGIUM],
-    hidden: [COUNTRIES.BELGIUM.attractions.BELFRY_OF_BRUGES],
+    body: [COUNTRIES.BELGIUM.attractions.BELFRY_OF_BRUGES],
     dates: [new Date("2019-05-17"), new Date("2019-05-19")],
     company: [FRIENDS.JAMIE_HALKET]
   },
   {
     title: [COUNTRIES.ITALY.cities.CATANIA],
     subtitle: [COUNTRIES.ITALY.regions.SICILY],
-    hidden: [COUNTRIES.ITALY, COUNTRIES.ITALY.attractions.ETNA],
+    body: [COUNTRIES.ITALY, COUNTRIES.ITALY.attractions.ETNA],
     dates: [new Date("2019-07-10"), new Date("2019-07-15")],
     company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON]
   },
   {
     title: [COUNTRIES.FRANCE.cities.NICE],
     subtitle: [COUNTRIES.FRANCE],
-    hidden: [COUNTRIES.FRANCE.cities.MONACO],
+    body: [COUNTRIES.FRANCE.cities.MONACO],
     dates: [new Date("2019-06-08"), new Date("2019-06-14")],
     company: [FRIENDS.SIAN_RODWAY_SMITH]
   }

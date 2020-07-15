@@ -1,6 +1,6 @@
 export * from "./basic";
 export * from "./recipe-costs";
-export * from "./get-card-titles";
+export * from "./getEventCardValues";
 export * from "./getItemCounts";
 export * from "./daysToGo";
 export * from "./getCountdownText";

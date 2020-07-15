@@ -4,7 +4,7 @@ export const TRAVEL_2009: Array<ITrip> = [
   {
     title: [COUNTRIES.BELGIUM.attractions.BATTLEFIELDS],
     subtitle: [COUNTRIES.BELGIUM],
-    hidden: [COUNTRIES.BELGIUM.cities.YPRES],
+    body: [COUNTRIES.BELGIUM.cities.YPRES],
     dates: [new Date("2009-06-12"), new Date("2009-06-15")],
     company: [
       FRIENDS.CFS,
@@ -23,7 +23,7 @@ export const TRAVEL_2009: Array<ITrip> = [
       COUNTRIES.USA.attractions.GRAND_CANYON,
       COUNTRIES.USA.cities.LOS_ANGELES
     ],
-    hidden: [
+    body: [
       COUNTRIES.USA.attractions.HOLLYWOOD_WALK_OF_FAME,
       COUNTRIES.USA.attractions.SIX_FLAGS_MAGIC_MOUNTAIN,
       COUNTRIES.USA.attractions.FARMERS_MARKET

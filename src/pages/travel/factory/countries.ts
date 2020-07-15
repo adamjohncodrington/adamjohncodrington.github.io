@@ -4,7 +4,8 @@ import {
   countryMatchExists,
   getTripTitle,
   getDatesText,
-  isInFuture
+  isInFuture,
+  getTripSubtitle
 } from "utils";
 
 import { DATA } from "../data";
@@ -26,9 +27,12 @@ const getCountryDetails = (
     (trip: ITrip, index: number): ICountedListItemDetail => {
       const { dates } = trip;
       const tripTitle: string = getTripTitle(trip);
+      const tripSubtitle: string | undefined = getTripSubtitle(trip);
       return {
         index: tripsMatchingCountry.length > 1 ? index + 1 : undefined,
-        mainText: !tripTitle.includes(country.name) ? tripTitle : undefined,
+        mainText: !tripTitle.includes(country.name)
+          ? tripTitle
+          : tripSubtitle || undefined,
         dateText: getDatesText(dates),
         isInFuture: isInFuture(dates[0])
       };

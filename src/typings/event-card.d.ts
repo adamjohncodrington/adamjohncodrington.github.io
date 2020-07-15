@@ -1,10 +1,10 @@
 interface IEventCard {
   title: string;
   subtitle?: string;
-  favourite?: boolean;
   body?: string;
+  secondaryBody?: string;
+  favourite?: boolean;
   company: Array<IFriend>;
-  dateText: string;
   countdownText?: string;
   note?: string;
   photos?: Array<IJpgSrc>;

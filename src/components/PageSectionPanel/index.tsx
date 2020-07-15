@@ -12,7 +12,8 @@ import {
   moveTheSuffixToPrefix,
   getCountdownText,
   getDatesText,
-  getDateText
+  getDateText,
+  getTripBody
 } from "utils";
 
 import { CountedListItem } from "../CountedListItem";
@@ -57,9 +58,9 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
                 title={getGigTitle(gig)}
                 subtitle={getGigSubtitle(gig)}
                 body={moveTheSuffixToPrefix(venue.name)}
+                secondaryBody={getDatesText(dates)}
                 favourite={favourite}
                 company={company}
-                dateText={getDatesText(dates)}
                 countdownText={getCountdownText(dates[0])}
                 note={ticketType}
               />
@@ -76,9 +77,9 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
                 title={getTheatreVisitTitle(theatreVisit)}
                 subtitle={getTheatreVisitSubtitle(theatreVisit)}
                 body={theatre.name}
+                secondaryBody={getDateText(date)}
                 favourite={favourite}
                 company={company}
-                dateText={getDateText(date)}
               />
             </Li>
           );
@@ -92,9 +93,10 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
               <EventCard
                 title={getTripTitle(trip)}
                 subtitle={getTripSubtitle(trip)}
+                secondaryBody={getTripBody(trip)}
                 favourite={favourite}
                 company={company}
-                dateText={getDatesText(dates)}
+                body={getDatesText(dates)}
                 photos={photos}
               />
             </Li>

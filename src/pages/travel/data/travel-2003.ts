@@ -4,7 +4,7 @@ export const TRAVEL_2003: Array<ITrip> = [
   {
     title: [COUNTRIES.PORTUGAL.towns.LAGOS],
     subtitle: [COUNTRIES.PORTUGAL],
-    hidden: [
+    body: [
       COUNTRIES.PORTUGAL.attractions.ZOOMARINE,
       COUNTRIES.PORTUGAL.cities.PORTIMAO
     ],

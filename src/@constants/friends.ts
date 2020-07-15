@@ -21,12 +21,7 @@ export const FRIENDS: IFriends = {
   BLAINE_PEARSON: { name: "Blaine Pearson", initials: "BP" },
   // C
   CAITY_DALBY: { name: "Caity Dalby", initials: "CD" },
-  CAITLIN_MCCAIG: {
-    name: "Caitlin McCaig",
-    initials: "CM",
-    gigs: true,
-    travel: true
-  },
+  CAITLIN_MCCAIG: { name: "Caitlin McCaig", initials: "CM", gigs: true },
   CARMEN_DALGLISH: { name: "Carmen Dalglish", initials: "CD" },
   CAMERON_BLACKBURN: { name: "Cameron Blackburn", initials: "CB" },
   CHELSEA_CUNNINGHAM: { name: "Chelsea Cunningham", initials: "CC" },
@@ -82,8 +77,7 @@ export const FRIENDS: IFriends = {
     name: "Jamie Halket",
     initials: "JH",
     gigs: true,
-    theatre: true,
-    travel: true
+    theatre: true
   },
   JAZZ_THIND: { name: "Jasminder Thind", initials: "JT" },
   JERRY_EDWARDS: {
@@ -129,7 +123,7 @@ export const FRIENDS: IFriends = {
   POPPY_SMITH: { name: "Poppy Smith", initials: "PS" },
   // R
   ROB_GALL: { name: "Robert Gall", initials: "RG" },
-  RYAN_MILLS: { name: "Ryan Mills", initials: "RM", gigs: true, travel: true },
+  RYAN_MILLS: { name: "Ryan Mills", initials: "RM", gigs: true },
   // S
   SAM_BERRIE: { name: "Sam Berrie", initials: "SB" },
   SARAH_WALKER: { name: "Sarah Walker", initials: "SW" },
@@ -146,12 +140,7 @@ export const FRIENDS: IFriends = {
   STEVE_RICHARDS: { name: "Steve Richards", initials: "SR" },
   // T
   THOM_STEPHANAKIS: { name: "Thom Stephanakis", initials: "TS" },
-  TOM_CHINDA_COUTTS: {
-    name: "Tom Chinda-Coutts",
-    initials: "TC",
-    gigs: true,
-    travel: true
-  },
+  TOM_CHINDA_COUTTS: { name: "Tom Chinda-Coutts", initials: "TC", gigs: true },
   TONYA_FRANCE: {
     name: "Tonya France",
     initials: "TF",

@@ -4,7 +4,7 @@ export const TRAVEL_2002: Array<ITrip> = [
   {
     title: [COUNTRIES.USA.states.FLORIDA],
     subtitle: [COUNTRIES.USA],
-    hidden: [
+    body: [
       COUNTRIES.USA.attractions.BUSCH_GARDENS_TAMPA,
       COUNTRIES.USA.attractions.DISNEY_EPCOT,
       COUNTRIES.USA.attractions.UNIVERSALS_ISLANDS_OF_ADVENTURE,

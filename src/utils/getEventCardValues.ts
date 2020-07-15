@@ -43,5 +43,10 @@ export const getTripTitle = ({ title }: ITrip): string =>
 export const getTripSubtitle = ({ subtitle }: ITrip): string | undefined =>
   subtitle &&
   arrayToString({
-    stringArray: subtitle.map(({ name }: ILocation) => name)
+    stringArray: subtitle.map(({ name }: ILocation) => name),
+    useAmpersandsForPair: true
   });
+
+export const getTripBody = ({ body }: ITrip): string | undefined =>
+  body &&
+  arrayToString({ stringArray: body.map(({ name }: ILocation) => name) });

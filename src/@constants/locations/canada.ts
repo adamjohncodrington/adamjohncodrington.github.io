@@ -1,4 +1,7 @@
-const cities: ICitiesCanada = { NIAGARA_FALLS: { name: "Niagara Falls" } };
+const cities: ICitiesCanada = {
+  NIAGARA_FALLS: { name: "Niagara Falls" },
+  TORONTO: { name: "Toronto" }
+};
 
 const attractions: IAttractionsCanada = {
   NIAGARA_FALLS: { name: "Niagara Falls", highlight: true }

@@ -5,7 +5,7 @@ export const TRAVEL_2020: Array<ITrip> = [
   {
     title: [COUNTRIES.NORWAY.cities.OSLO],
     subtitle: [COUNTRIES.NORWAY],
-    hidden: [
+    body: [
       COUNTRIES.NORWAY.islands.HOVEDOYA,
       COUNTRIES.NORWAY.attractions.OSLO_FJORD_SAUNA
     ],
@@ -27,7 +27,7 @@ export const TRAVEL_2020: Array<ITrip> = [
   //     COUNTRIES.COSTA_RICA.towns.MONTEVERDE,
   //     COUNTRIES.COSTA_RICA.towns.PUERTO_VIEJO
   //   ],
-  //   hidden: [
+  //   body: [
   //     COUNTRIES.BELIZE.cities.BELIZE_CITY,
   //     COUNTRIES.BELIZE.islands.AMBERGRIS_CAYE,
   //     COUNTRIES.COSTA_RICA.cities.SAN_JOSE,
@@ -39,7 +39,7 @@ export const TRAVEL_2020: Array<ITrip> = [
   // {
   //   title: COUNTRIES.SPAIN.cities.MADRID,
   //   subtitle: COUNTRIES.SPAIN,
-  //   hidden: [COUNTRIES.SPAIN.attractions.PARQUE_WARNER],
+  //   body: [COUNTRIES.SPAIN.attractions.PARQUE_WARNER],
   //   dates: [new Date("2020-07-07"), new Date("2020-07-10")],
   //   company: FRIENDS.DAN_SPARROW
   // }

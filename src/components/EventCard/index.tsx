@@ -11,7 +11,7 @@ import {
   EventCardCountdown,
   EventCardMainContainer,
   EventCardCompanyContainer,
-  EventCardDateText,
+  EventCardSecondaryBody,
   EventCardPhotosContainer
 } from "./styles";
 
@@ -20,7 +20,7 @@ export const EventCard: React.FC<IEventCard> = ({
   subtitle,
   favourite,
   body,
-  dateText,
+  secondaryBody,
   note,
   countdownText,
   company,
@@ -30,23 +30,23 @@ export const EventCard: React.FC<IEventCard> = ({
 
   const EventCardMain: ReactElement = (
     <EventCardMainContainer data-test="event-card-container">
-      <div data-test="event-card-title-and-subtitle">
-        <CardTitleBold data-test="event-card-title" favourite={favourite}>
-          {title}
-        </CardTitleBold>
+      <CardTitleBold data-test="event-card-title" favourite={favourite}>
+        {title}
+      </CardTitleBold>
 
-        {subtitle && (
-          <CardSubtitleBold data-test="event-card-subtitle">
-            {subtitle}
-          </CardSubtitleBold>
-        )}
-      </div>
+      {subtitle && (
+        <CardSubtitleBold data-test="event-card-subtitle">
+          {subtitle}
+        </CardSubtitleBold>
+      )}
 
       {body && <span data-test="event-card-body">{body}</span>}
 
-      <EventCardDateText data-test="event-card-date-text">
-        {dateText}
-      </EventCardDateText>
+      {secondaryBody && (
+        <EventCardSecondaryBody data-test="event-card-secondary-body">
+          {secondaryBody}
+        </EventCardSecondaryBody>
+      )}
 
       {countdownText && (
         <>

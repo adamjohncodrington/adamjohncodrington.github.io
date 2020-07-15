@@ -6,7 +6,7 @@ export const TRAVEL_2016: Array<ITrip> = [
     subtitle: [COUNTRIES.IRELAND],
     dates: [new Date("2016-02-05"), new Date("2016-02-07")],
     company: [FRIENDS.SIAN_RODWAY_SMITH],
-    hidden: [
+    body: [
       COUNTRIES.IRELAND.attractions.DUBLIN_PRISON,
       COUNTRIES.IRELAND.attractions.ST_STEPHENS_GREEN_PARK,
       COUNTRIES.IRELAND.attractions.GUINNESS_STOREHOUSE
@@ -19,45 +19,55 @@ export const TRAVEL_2016: Array<ITrip> = [
     company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON]
   },
   {
-    title: [COUNTRIES.ECUADOR, COUNTRIES.PERU],
+    title: [COUNTRIES.ECUADOR],
     subtitle: [
       COUNTRIES.ECUADOR.cities.QUITO,
       COUNTRIES.ECUADOR.cities.OTAVALO,
       COUNTRIES.ECUADOR.attractions.COTOPAXI,
       COUNTRIES.ECUADOR.cities.BANOS,
-      COUNTRIES.ECUADOR.islands.GALAPAGOS,
+      COUNTRIES.ECUADOR.islands.GALAPAGOS
+    ],
+    body: [
+      COUNTRIES.ECUADOR.attractions.EQUATOR_MONUMENT,
+      COUNTRIES.ECUADOR.attractions.OTAVALO_MARKET,
+      COUNTRIES.ECUADOR.attractions.PAILON_DEL_DIABLO,
+      COUNTRIES.ECUADOR.cities.GUAYAQUIL,
+      COUNTRIES.ECUADOR.attractions.TORTOISE_PARK
+    ],
+    dates: [new Date("2016-10-03"), new Date("2016-10-16")],
+    company: []
+  },
+  {
+    title: [COUNTRIES.PERU],
+    subtitle: [
       COUNTRIES.PERU.towns.MANCORA,
       COUNTRIES.PERU.cities.HUARAZ,
       COUNTRIES.PERU.cities.LIMA,
       COUNTRIES.PERU.towns.PARACAS,
       COUNTRIES.PERU.villages.HUACACHINA,
       COUNTRIES.PERU.cities.AREQUIPA,
-      COUNTRIES.PERU.attractions.COLCA_CANYON,
       COUNTRIES.PERU.cities.CUSCO,
       COUNTRIES.PERU.attractions.MANU,
-      COUNTRIES.PERU.attractions.RAINBOW_MOUNTAIN,
       COUNTRIES.PERU.attractions.MACHU_PICCHU
     ],
-    hidden: [
-      COUNTRIES.ECUADOR.attractions.EQUATOR_MONUMENT,
-      COUNTRIES.ECUADOR.attractions.OTAVALO_MARKET,
-      COUNTRIES.ECUADOR.attractions.PAILON_DEL_DIABLO,
-      COUNTRIES.ECUADOR.cities.GUAYAQUIL,
-      COUNTRIES.ECUADOR.attractions.TORTOISE_PARK,
+    body: [
       COUNTRIES.PERU.attractions.HUASCARAN_PARK,
       COUNTRIES.PERU.attractions.LAGUNA_69,
       COUNTRIES.PERU.attractions.HUACACHINA,
+      COUNTRIES.PERU.attractions.COLCA_CANYON,
+      COUNTRIES.PERU.attractions.RAINBOW_MOUNTAIN,
       COUNTRIES.PERU.attractions.JUNGLE_ZIPLINE
     ],
-    dates: [new Date("2016-10-03"), new Date("2016-11-10")],
-    company: [FRIENDS.SARAH_WHITAKER, FRIENDS.SIAN_RODWAY_SMITH]
+    dates: [new Date("2016-10-17"), new Date("2016-11-10")],
+    company: [FRIENDS.SARAH_WHITAKER]
   },
   {
-    title: [
+    title: [COUNTRIES.BRAZIL],
+    subtitle: [
       COUNTRIES.BRAZIL.cities.RIO_DE_JANEIRO,
       COUNTRIES.BRAZIL.islands.ILHA_GRANDE
     ],
-    hidden: [
+    body: [
       COUNTRIES.BRAZIL.attractions.HANG_GLIDING,
       COUNTRIES.BRAZIL.attractions.MODERN_ART_MUSEUM_RIO,
       COUNTRIES.BRAZIL.attractions.COPACABANA_BEACH,
@@ -66,7 +76,6 @@ export const TRAVEL_2016: Array<ITrip> = [
       COUNTRIES.BRAZIL.attractions.SELARON_STEPS,
       COUNTRIES.BRAZIL.attractions.CHRIST_THE_REDEEMER
     ],
-    subtitle: [COUNTRIES.BRAZIL],
     dates: [new Date("2016-12-01"), new Date("2016-12-11")],
     company: [FRIENDS.SIAN_RODWAY_SMITH]
   }
