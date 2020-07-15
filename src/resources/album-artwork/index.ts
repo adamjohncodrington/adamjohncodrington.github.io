@@ -42,3 +42,4 @@ export const Jpg_SufajnStevens_CAL: IJpgSrc = require("./sufjan-stevens_cal.jpg"
 export const Jpg_TaylorSwift_1989: IJpgSrc = require("./taylor-swift_1989.jpg");
 export const Jpg_Tourist_U: IJpgSrc = require("./tourist_u.jpg");
 export const Jpg_TroyeSivan_Bloom: IJpgSrc = require("./troye-sivan_bloom.jpg");
+export const Jpg_TroyeSivan_IAD: IJpgSrc = require("./troye-sivan_iad.jpg");

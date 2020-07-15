@@ -4,7 +4,8 @@ import {
   isInFuture,
   moveTheSuffixToPrefix,
   musicianMatchExists,
-  getDateText
+  getDateText,
+  detailsContainsFavourite
 } from "utils";
 
 import { DATA } from "../data";
@@ -45,7 +46,7 @@ const getMusicianDetails = (
   const gigsMatchingMusician: Array<IGig> = getGigsMatchingMusician(musician);
   return gigsMatchingMusician.map(
     (
-      { dates, festival, lineup, venue }: IGig,
+      { dates, headline, festival, lineup, venue, favourite }: IGig,
       index: number
     ): ICountedListItemDetail => ({
       index: gigsMatchingMusician.length > 1 ? index + 1 : undefined,
@@ -54,8 +55,8 @@ const getMusicianDetails = (
         festival && lineup && lineup.length > 1
           ? getFestivalDateText({ dates, lineup, musician })
           : getDateText(dates[0]),
-
-      isInFuture: isInFuture(dates[0])
+      isInFuture: isInFuture(dates[0]),
+      favourite: musician === headline && favourite
     })
   );
 };
@@ -64,13 +65,14 @@ export const MUSICIANS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
   MUSICIANS
 ).map(
   (musician: IMusician): ICountedListItem => {
-    const { name, favourite, noLongerExists } = musician;
+    const { name, noLongerExists } = musician;
+    const details: Array<ICountedListItemDetail> = getMusicianDetails(musician);
     return {
       text: name,
-      favourite,
+      favourite: detailsContainsFavourite(details),
       ...getItemCounts({ item: { musician }, data: { gigs: DATA.ALL } }),
       noLongerExists,
-      details: getMusicianDetails(musician)
+      details
     };
   }
 );

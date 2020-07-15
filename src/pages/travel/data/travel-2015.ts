@@ -47,6 +47,7 @@ export const TRAVEL_2015: Array<ITrip> = [
   },
   {
     title: [COUNTRIES.GERMANY.cities.BERLIN],
+    favourite: true,
     subtitle: [COUNTRIES.GERMANY],
     body: [
       COUNTRIES.GERMANY.attractions.BERLIN_WALL,

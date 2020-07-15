@@ -1,5 +1,7 @@
 import styled, { css } from "styled-components";
 
+import { CSS } from "styles";
+
 export const StyledOl = styled.ol`
   list-style-type: none;
   padding: 0;
@@ -36,4 +38,6 @@ export const StyledIndex = styled.div`
   min-width: 25px;
 `;
 
-export const StyledDateText = styled.div``;
+export const StyledDateText = styled.div(
+  ({ favourite }: IFavourite) => favourite && CSS.PSEUDO_HEART_AFTER
+);

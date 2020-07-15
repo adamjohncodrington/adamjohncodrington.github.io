@@ -14,13 +14,14 @@ export const CountedListItemDetail: React.FC<ICountedListItemDetail> = ({
   index,
   mainText,
   dateText,
+  favourite,
   isInFuture
 }) => (
   <StyledLi key={index} isInFuture={isInFuture}>
     <FlexRow>
       {index && <StyledIndex>{index}.</StyledIndex>}
       {mainText && <StyledMainText>{mainText[0]}</StyledMainText>}
-      <StyledDateText>{dateText}</StyledDateText>
+      <StyledDateText favourite={favourite}>{dateText}</StyledDateText>
     </FlexRow>
   </StyledLi>
 );

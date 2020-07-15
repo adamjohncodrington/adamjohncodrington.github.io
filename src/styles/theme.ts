@@ -100,6 +100,7 @@ const THEME_ROUNDED_SYMBOL: IThemeRoundedSymbol = {
 const THEME_VINYL_CARD: IThemeVinylCard = {
   vinyl: {
     artwork: { margin: { right: "10px" }, size: "100px" },
+    signed: { color: COLORS.oldGold },
     notLastChild: { margin: { bottom: "5px" } }
   }
 };

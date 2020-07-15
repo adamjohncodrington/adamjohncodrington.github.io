@@ -42,7 +42,8 @@ import {
   Jpg_NataliaKills_P,
   Jpg_Lane8_Rise,
   Jpg_Caribou_OurLove,
-  Jpg_EllieGoulding_Halcyon
+  Jpg_EllieGoulding_Halcyon,
+  Jpg_TroyeSivan_IAD
 } from "resources";
 
 export const ALLIE_X: IMusician = {
@@ -411,11 +412,20 @@ export const TROYE_SIVAN: IMusician = {
   name: "Troye Sivan",
   favourite: true,
   albums: [
+    // {
+    //   title: "Bloom",
+    //   artwork: Jpg_TroyeSivan_Bloom,
+    //   appleMusicUrl: "https://music.apple.com/gb/album/bloom/1396292262",
+    //   year: 2018
+    // },
     {
-      title: "Bloom",
-      artwork: Jpg_TroyeSivan_Bloom,
-      appleMusicUrl: "https://music.apple.com/gb/album/bloom/1396292262",
-      year: 2018
+      title: "In a Dream",
+      artwork: Jpg_TroyeSivan_IAD,
+      appleMusicUrl:
+        "https://music.apple.com/gb/album/in-a-dream-ep/1523003841",
+      year: 2020,
+      signed: true,
+      purchased: true
     }
   ]
 };

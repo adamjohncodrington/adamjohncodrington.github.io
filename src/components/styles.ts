@@ -3,11 +3,14 @@ import styled, { css } from "styled-components";
 import { H3 } from "primitives";
 import { CSS } from "styles";
 
+interface ICardTitleBold extends IFavourite, IStar {}
+
 export const CardTitleBold = styled(H3)(
-  ({ favourite }: IFavourite) => css`
+  ({ favourite, star }: ICardTitleBold) => css`
     font-weight: bold;
     text-transform: uppercase;
-    ${favourite && CSS.PSEUDO_ELEMENT_HEART}
+    ${favourite && CSS.PSEUDO_HEART_BEFORE}
+    ${star && CSS.PSEUDO_STAR_AFTER}
   `
 );
 

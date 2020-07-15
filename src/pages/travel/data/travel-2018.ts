@@ -17,6 +17,7 @@ export const TRAVEL_2018: Array<ITrip> = [
   },
   {
     title: [COUNTRIES.CROATIA.cities.DUBROVNIK],
+    favourite: true,
     subtitle: [COUNTRIES.CROATIA],
     dates: [new Date("2018-06-02"), new Date("2018-06-09")],
     company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON],

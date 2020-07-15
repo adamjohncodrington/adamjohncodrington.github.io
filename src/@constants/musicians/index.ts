@@ -157,6 +157,7 @@ export const MUSICIANS: IMusicians = {
   L_DEVINE: { name: "L Devine" },
   LELAND: { name: "Leland" },
   LILY_ALLEN: { name: "Lily Allen" },
+  LITANY: { name: "Litany" },
   LITTLE_COMETS: { name: "Little Comets" },
   LITTLE_DRAGON: { name: "Little Dragon" },
   LONDON_GRAMMAR: { name: "London Grammar" },

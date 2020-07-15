@@ -4,15 +4,30 @@ const FONT_SIZE_75_PERCENT = css`
   font-size: 75%;
 `;
 
-const PSEUDO_ELEMENT_HEART = css`
+const HEART: string = "♥";
+const STAR: string = "★";
+
+const PSEUDO_HEART_BEFORE = css`
   ::before {
-    content: "♥ ";
+    content: "${HEART} ";
   }
 `;
 
-const PSEUDO_ELEMENT_STAR = css`
+const PSEUDO_HEART_AFTER = css`
+  ::after {
+    content: " ${HEART}";
+  }
+`;
+
+const PSEUDO_STAR_BEFORE = css`
   ::before {
-    content: "★ ";
+  content: "${STAR} ";
+  }
+`;
+
+const PSEUDO_STAR_AFTER = css`
+  ::after {
+  content: " ${STAR}";
   }
 `;
 
@@ -35,7 +50,9 @@ export const CSS = {
   FONT_SIZE_75_PERCENT,
   GRID_COLUMN,
   GRID_COLUMN_EQUAL_WIDTHS,
-  PSEUDO_ELEMENT_HEART,
-  PSEUDO_ELEMENT_STAR,
+  PSEUDO_HEART_BEFORE,
+  PSEUDO_HEART_AFTER,
+  PSEUDO_STAR_BEFORE,
+  PSEUDO_STAR_AFTER,
   ZERO_MARGIN_AND_PADDING
 };

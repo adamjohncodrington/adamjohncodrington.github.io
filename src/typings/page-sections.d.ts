@@ -8,17 +8,20 @@ interface IDetailItem {
   isInFuture: boolean;
 }
 
-interface ICountedListItemDetail {
+interface ICountedListItemDetail extends IFavourite {
   index?: number;
   mainText?: Array<string>;
   dateText: string;
   isInFuture: boolean;
 }
 
-interface ICountedListItem extends IPastAndFutureCounts, IFavourite {
+interface IStar {
+  star?: boolean;
+}
+
+interface ICountedListItem extends IPastAndFutureCounts, IFavourite, IStar {
   text: string;
   doNotIncludeInList?: boolean;
-  star?: boolean;
   countInfoIrrelevant?: boolean;
   noLongerExists?: boolean;
   isLeaderboardItem?: boolean;

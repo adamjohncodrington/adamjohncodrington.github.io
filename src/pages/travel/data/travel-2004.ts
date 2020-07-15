@@ -4,6 +4,7 @@ export const TRAVEL_2004: Array<ITrip> = [
   {
     title: [COUNTRIES.USA.cities.NEW_YORK_CITY],
     subtitle: [COUNTRIES.USA],
+    favourite: true,
     body: [
       COUNTRIES.USA.attractions.CENTRAL_PARK,
       COUNTRIES.USA.attractions.TIMES_SQUARE,

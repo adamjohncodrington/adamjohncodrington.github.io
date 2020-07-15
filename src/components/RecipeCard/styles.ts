@@ -12,7 +12,7 @@ export const RecipeCardTitle = styled(H3)(
     text-transform: lowercase;
     font-weight: ${isBold ? "bold" : recipe.title.fontWeight};
     flex: 1;
-    ${favourite && CSS.PSEUDO_ELEMENT_HEART}
+    ${favourite && CSS.PSEUDO_HEART_BEFORE}
   `
 );
 

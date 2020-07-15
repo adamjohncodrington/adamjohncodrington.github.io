@@ -188,6 +188,7 @@ interface IMusicians {
   LELAND: IMusician;
   LENNON_STELLA: IMusician;
   LEON: IMusician;
+  LITANY: IMusician;
   LILY_ALLEN: IMusician;
   LISSIE: IMusician;
   LITTLE_COMETS: IMusician;

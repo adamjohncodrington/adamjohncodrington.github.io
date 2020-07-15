@@ -14,6 +14,7 @@ export const TRAVEL_2016: Array<ITrip> = [
   },
   {
     title: [COUNTRIES.PORTUGAL.towns.TAVIRA],
+    favourite: true,
     subtitle: [COUNTRIES.PORTUGAL],
     dates: [new Date("2016-06-09"), new Date("2016-06-16")],
     company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON]
@@ -39,6 +40,7 @@ export const TRAVEL_2016: Array<ITrip> = [
   },
   {
     title: [COUNTRIES.PERU],
+    favourite: true,
     subtitle: [
       COUNTRIES.PERU.towns.MANCORA,
       COUNTRIES.PERU.cities.HUARAZ,
@@ -63,6 +65,7 @@ export const TRAVEL_2016: Array<ITrip> = [
   },
   {
     title: [COUNTRIES.BRAZIL],
+    favourite: true,
     subtitle: [
       COUNTRIES.BRAZIL.cities.RIO_DE_JANEIRO,
       COUNTRIES.BRAZIL.islands.ILHA_GRANDE

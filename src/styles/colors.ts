@@ -16,6 +16,7 @@ interface IColors {
   azalea: ColorValue;
   amethystSmoke: ColorValue;
   bouquet: ColorValue;
+  oldGold: ColorValue;
   aliceBlue: ColorValue;
   nepal: ColorValue;
   sherpaBlue: ColorValue;
@@ -58,6 +59,7 @@ export const COLORS: IColors = {
   // Creams, yellows, oranges
   hillary: "#B0A186",
   champagne: "#FAE9D5",
+  oldGold: "#D4AF37",
   bisonHide: "#C0B7A7",
   buddhaGold: "#CCA100",
   sandyBrown: "#F2A652"

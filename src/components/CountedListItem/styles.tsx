@@ -2,8 +2,7 @@ import styled, { css } from "styled-components";
 
 import { CSS } from "styles";
 
-interface ICountedListItemText extends IThemeProp, IFavourite {
-  star?: boolean;
+interface ICountedListItemText extends IThemeProp, IFavourite, IStar {
   faded: boolean;
 }
 
@@ -11,8 +10,8 @@ export const CountedListItemText = styled.span(
   ({ favourite, star, faded, theme }: ICountedListItemText) => css`
     flex: 1;
 
-    ${favourite && CSS.PSEUDO_ELEMENT_HEART}
-    ${star && CSS.PSEUDO_ELEMENT_STAR}
+    ${favourite && CSS.PSEUDO_HEART_BEFORE}
+    ${star && CSS.PSEUDO_STAR_BEFORE}
     ${
       faded &&
       css`

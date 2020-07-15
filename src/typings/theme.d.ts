@@ -99,6 +99,7 @@ interface IThemeRoundedSymbol {
 
 interface IThemeVinylCard {
   vinyl: {
+    signed: { color: ColorValue };
     artwork: { margin: { right: PxValue }; size: PxValue };
     notLastChild: { margin: { bottom: PxValue } };
   };
