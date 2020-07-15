@@ -15,10 +15,9 @@ interface ICountedListItemDetail {
   isInFuture: boolean;
 }
 
-interface ICountedListItem extends IPastAndFutureCounts {
+interface ICountedListItem extends IPastAndFutureCounts, IFavourite {
   text: string;
   doNotIncludeInList?: boolean;
-  favourite?: boolean;
   star?: boolean;
   countInfoIrrelevant?: boolean;
   noLongerExists?: boolean;

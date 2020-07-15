@@ -51,16 +51,15 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
 
       {gigs &&
         gigs.map((gig: IGig, index: number) => {
-          const { venue, favourite, company, dates, ticketType } = gig;
+          const { venue, dates, ticketType, ...rest } = gig;
           return (
             <Li key={index}>
               <EventCard
+                {...rest}
                 title={getGigTitle(gig)}
                 subtitle={getGigSubtitle(gig)}
                 body={moveTheSuffixToPrefix(venue.name)}
                 secondaryBody={getDatesText(dates)}
-                favourite={favourite}
-                company={company}
                 countdownText={getCountdownText(dates[0])}
                 note={ticketType}
               />
@@ -70,16 +69,15 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
 
       {theatreVisits &&
         theatreVisits.map((theatreVisit: ITheatreVisit, index: number) => {
-          const { favourite, company, theatre, date } = theatreVisit;
+          const { theatre, date, ...rest } = theatreVisit;
           return (
             <Li key={index}>
               <EventCard
+                {...rest}
                 title={getTheatreVisitTitle(theatreVisit)}
                 subtitle={getTheatreVisitSubtitle(theatreVisit)}
                 body={theatre.name}
                 secondaryBody={getDateText(date)}
-                favourite={favourite}
-                company={company}
               />
             </Li>
           );
@@ -87,17 +85,15 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
 
       {trips &&
         trips.map((trip: ITrip, index: number) => {
-          const { favourite, company, dates, photos } = trip;
+          const { dates, ...rest } = trip;
           return (
             <Li key={index}>
               <EventCard
+                {...rest}
                 title={getTripTitle(trip)}
                 subtitle={getTripSubtitle(trip)}
                 secondaryBody={getTripBody(trip)}
-                favourite={favourite}
-                company={company}
                 body={getDatesText(dates)}
-                photos={photos}
               />
             </Li>
           );

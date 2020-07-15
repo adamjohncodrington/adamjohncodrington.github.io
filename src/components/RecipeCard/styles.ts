@@ -3,8 +3,7 @@ import styled, { css } from "styled-components";
 import { H3, FlexColumn } from "primitives";
 import { CSS } from "styles";
 
-interface IRecipeCardTitle extends IThemeProp {
-  favourite?: boolean;
+interface IRecipeCardTitle extends IThemeProp, IFavourite {
   isBold?: boolean;
 }
 

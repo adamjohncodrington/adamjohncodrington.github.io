@@ -2,8 +2,7 @@ import styled, { css } from "styled-components";
 
 import { CSS } from "styles";
 
-interface ICountedListItemText extends IThemeProp {
-  favourite?: boolean;
+interface ICountedListItemText extends IThemeProp, IFavourite {
   star?: boolean;
   faded: boolean;
 }

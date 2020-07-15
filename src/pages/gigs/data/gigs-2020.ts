@@ -5,7 +5,8 @@ export const GIGS_2020: Array<IGig> = [
     headline: MUSICIANS.GRACEY,
     venue: MUSIC_VENUES.LAYLOW,
     dates: [new Date("2020-01-28")],
-    company: [FRIENDS.DARREN_TAYLOR]
+    company: [FRIENDS.DARREN_TAYLOR],
+    videoSrc: "abc"
   },
   {
     headline: MUSICIANS.JOSEF_SALVAT,

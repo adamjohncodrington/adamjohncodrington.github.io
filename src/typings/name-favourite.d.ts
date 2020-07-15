@@ -1,5 +1,4 @@
-interface INameFavourite {
+interface INameFavourite extends IFavourite {
   name: string;
-  favourite?: boolean;
   insignificant?: boolean;
 }
