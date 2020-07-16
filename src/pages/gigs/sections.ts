@@ -54,9 +54,11 @@ const SECTION_VENUES_GIGS: IPageSection = {
 };
 
 const SECTION_VIDEOS_GIGS: IPageSection = {
+  autoExpandAlways: true,
   SvgIcon: SvgVideoCamera,
-  title: "Videos",
-  data: { gigs: FACTORY.VIDEOS }
+  title: PAGE_SECTION_TITLES.VIDEOS,
+  data: { gigs: FACTORY.VIDEOS },
+  count: FACTORY.VIDEOS.length
 };
 
 const SECTIONS_YEARS: Array<IPageSection> = DATA.SPLIT_BY_YEAR.map(

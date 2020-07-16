@@ -82,7 +82,6 @@ interface IThemeRecipeCard {
       children: { padding: { top: PxValue } };
       padding: { top: PxValue };
     };
-    photo: { size: PxValue };
     portionCost: { margin: { top: PxValue } };
     title: { fontWeight: FontWeightValue };
   };

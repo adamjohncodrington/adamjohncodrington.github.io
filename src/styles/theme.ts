@@ -82,7 +82,6 @@ const THEME_RECIPE_CARD: IThemeRecipeCard = {
       children: { padding: { top: "15px" } },
       padding: { top: "5px" }
     },
-    photo: { size: "300px" },
     portionCost: { margin: { top: "3px" } },
     title: { fontWeight: "300" }
   }

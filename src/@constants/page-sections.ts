@@ -2,12 +2,14 @@ interface IPageSectionTitle {
   BUCKET_LIST: string;
   FRIENDS: string;
   UP_NEXT: string;
+  VIDEOS: string;
 }
 
 export const PAGE_SECTION_TITLES: IPageSectionTitle = {
   BUCKET_LIST: "Bucket List",
   FRIENDS: "Friends",
-  UP_NEXT: "Up Next"
+  UP_NEXT: "Up Next",
+  VIDEOS: "Videos"
 };
 
 interface IPageSectionPanelTypes {

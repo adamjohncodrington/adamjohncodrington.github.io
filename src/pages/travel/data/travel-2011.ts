@@ -18,9 +18,9 @@ export const TRAVEL_2011: Array<ITrip> = [
   },
   {
     title: [COUNTRIES.USA.regions.FLORIDA_KEYS],
-    subtitle: [COUNTRIES.USA.regions.ISLAMORADA, COUNTRIES.USA.cities.KEY_WEST],
+    body: [COUNTRIES.USA.regions.ISLAMORADA, COUNTRIES.USA.cities.KEY_WEST],
     dates: [new Date("2011-08-02"), new Date("2011-08-10")],
     company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON],
-    body: [COUNTRIES.USA]
+    subtitle: [COUNTRIES.USA]
   }
 ];

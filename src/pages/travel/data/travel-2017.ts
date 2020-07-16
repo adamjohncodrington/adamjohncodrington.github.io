@@ -13,6 +13,7 @@ export const TRAVEL_2017: Array<ITrip> = [
       FRIENDS.JAZZ_THIND,
       FRIENDS.JHC
     ],
+    youtubeId: "Dqq4RY6ZYF8",
     body: [
       COUNTRIES.ITALY.attractions.MILAN_MALL,
       COUNTRIES.ITALY.attractions.SEMPIONE_PARK,

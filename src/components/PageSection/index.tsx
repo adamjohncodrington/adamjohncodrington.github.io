@@ -49,9 +49,8 @@ export const PageSection: React.FC<IPageSection> = ({
             dataTest="section-header-container"
           />
         )}
-      >
-        <PageSectionPanel {...data} />
-      </Disclosure>
+        Panel={<PageSectionPanel {...data} />}
+      />
     </PageSectionContainer>
   );
 };

@@ -1,10 +1,12 @@
-import React, { FC, useState } from "react";
+import React, { FC, useState, ReactElement } from "react";
+
+import { SPEED_UP_PAGE_LOAD } from "config";
 
 import { PanelContainer, StyledDiv } from "./styles";
 
 export const Disclosure: FC<IDisclosure> = ({
   Header,
-  children,
+  Panel,
   autoExpand,
   isStatic
 }) => {
@@ -14,21 +16,30 @@ export const Disclosure: FC<IDisclosure> = ({
   const onClick = (): void => switchPanelVisibility(!panelIsVisible);
   const dataTestClickableDiv: string = "disclosure-clickable-region";
 
+  const ClickableHeader: ReactElement = (
+    <StyledDiv data-test={dataTestClickableDiv} onClick={onClick}>
+      <Header panelIsVisible={panelIsVisible} />
+    </StyledDiv>
+  );
+
   return isStatic ? (
     <>
       <Header panelIsVisible={panelIsVisible} />
-      {children}
+      {Panel}
+    </>
+  ) : SPEED_UP_PAGE_LOAD ? (
+    <>
+      {ClickableHeader}
+      {panelIsVisible && Panel}
     </>
   ) : (
     <>
-      <StyledDiv data-test={dataTestClickableDiv} onClick={onClick}>
-        <Header panelIsVisible={panelIsVisible} />
-      </StyledDiv>
+      {ClickableHeader}
       <PanelContainer
         data-test="disclosure-panel"
         panelIsVisible={panelIsVisible}
       >
-        {children}
+        {Panel}
       </PanelContainer>
     </>
   );

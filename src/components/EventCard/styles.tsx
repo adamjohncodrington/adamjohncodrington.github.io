@@ -33,10 +33,3 @@ export const EventCardSymbolsContainer = styled(FlexRow)(
     }
   `
 );
-
-export const EventCardVideo = styled.video`
-  text-align: center;
-  margin-top: 10px;
-  height: 100%;
-  width: 100%;
-`;

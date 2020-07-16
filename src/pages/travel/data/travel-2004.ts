@@ -25,7 +25,6 @@ export const TRAVEL_2004: Array<ITrip> = [
   {
     title: [COUNTRIES.USA.states.MASSACHUSETTS],
     subtitle: [
-      COUNTRIES.USA,
       COUNTRIES.USA.cities.BOSTON_MASSACHUSETTS,
       COUNTRIES.USA.cities.SPRINGFIELD_MASSACHUSETTS,
       COUNTRIES.USA.regions.CAPE_COD

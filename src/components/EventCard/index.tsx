@@ -5,14 +5,15 @@ import { GridColumnDiv, CentredContent } from "primitives";
 
 import { Disclosure } from "../Disclosure";
 import { RoundedSymbol } from "../RoundedSymbol";
+import { YouTubeVideo } from "../YouTubeVideo";
+
 import { CardTitleBold, CardSubtitleBold } from "../styles";
 import {
   EventCardNote,
   EventCardCountdown,
   EventCardTextContainer,
   EventCardSymbolsContainer,
-  EventCardSecondaryBody,
-  EventCardVideo
+  EventCardSecondaryBody
 } from "./styles";
 
 export const EventCard: React.FC<IEventCard> = ({
@@ -25,7 +26,10 @@ export const EventCard: React.FC<IEventCard> = ({
   countdownText,
   hideVideoIcon,
   company,
-  videoSrc
+  youtubeId,
+  hideCompany,
+  hideSecondaryBody,
+  hideSubtitle
 }) => {
   const {
     eventCard: { companySymbol }
@@ -34,7 +38,7 @@ export const EventCard: React.FC<IEventCard> = ({
   return (
     <>
       <Disclosure
-        isStatic={!videoSrc}
+        isStatic={!youtubeId}
         Header={() => (
           <GridColumnDiv
             data-test="event-card-grid-container"
@@ -45,7 +49,7 @@ export const EventCard: React.FC<IEventCard> = ({
                 {title}
               </CardTitleBold>
 
-              {subtitle && (
+              {subtitle && !hideSubtitle && (
                 <CardSubtitleBold data-test="event-card-subtitle">
                   {subtitle}
                 </CardSubtitleBold>
@@ -53,7 +57,7 @@ export const EventCard: React.FC<IEventCard> = ({
 
               {body && <span data-test="event-card-body">{body}</span>}
 
-              {secondaryBody && (
+              {secondaryBody && !hideSecondaryBody && (
                 <EventCardSecondaryBody data-test="event-card-secondary-body">
                   {secondaryBody}
                 </EventCardSecondaryBody>
@@ -72,29 +76,33 @@ export const EventCard: React.FC<IEventCard> = ({
               )}
             </EventCardTextContainer>
 
-            {(company.length > 0 || videoSrc) && (
+            {(company.length > 0 || youtubeId) && (
               <EventCardSymbolsContainer>
-                {videoSrc && !hideVideoIcon && <RoundedSymbol video />}
-                {company
-                  .sort((a: IFriend, b: IFriend) =>
-                    a.initials > b.initials ? 1 : -1
-                  )
-                  .map(({ initials }: IFriend, index: number) => (
-                    <RoundedSymbol key={index} color={companySymbol.color}>
-                      {initials}
-                    </RoundedSymbol>
-                  ))}
+                {youtubeId && !hideVideoIcon && <RoundedSymbol video />}
+                {!hideCompany &&
+                  company
+                    .sort((a: IFriend, b: IFriend) =>
+                      a.initials > b.initials ? 1 : -1
+                    )
+                    .map(({ initials }: IFriend, index: number) => (
+                      <RoundedSymbol key={index} color={companySymbol.color}>
+                        {initials}
+                      </RoundedSymbol>
+                    ))}
               </EventCardSymbolsContainer>
             )}
           </GridColumnDiv>
         )}
-      >
-        {videoSrc && (
-          <CentredContent>
-            <EventCardVideo controls src={videoSrc} />
-          </CentredContent>
-        )}
-      </Disclosure>
+        Panel={
+          <>
+            {youtubeId && (
+              <CentredContent>
+                <YouTubeVideo youtubeId={youtubeId} />
+              </CentredContent>
+            )}
+          </>
+        }
+      />
     </>
   );
 };

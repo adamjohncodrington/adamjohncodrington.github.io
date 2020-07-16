@@ -1,5 +1,7 @@
 import { FRIENDS, COUNTRIES } from "@constants";
 
+const ecuadorAndPeruYouTubeId: string = "lteCbkamhcQ";
+
 export const TRAVEL_2016: Array<ITrip> = [
   {
     title: [COUNTRIES.IRELAND.cities.DUBLIN],
@@ -35,6 +37,7 @@ export const TRAVEL_2016: Array<ITrip> = [
       COUNTRIES.ECUADOR.cities.GUAYAQUIL,
       COUNTRIES.ECUADOR.attractions.TORTOISE_PARK
     ],
+    youtubeId: ecuadorAndPeruYouTubeId,
     dates: [new Date("2016-10-03"), new Date("2016-10-16")],
     company: []
   },
@@ -52,6 +55,7 @@ export const TRAVEL_2016: Array<ITrip> = [
       COUNTRIES.PERU.attractions.MANU,
       COUNTRIES.PERU.attractions.MACHU_PICCHU
     ],
+    youtubeId: ecuadorAndPeruYouTubeId,
     body: [
       COUNTRIES.PERU.attractions.HUASCARAN_PARK,
       COUNTRIES.PERU.attractions.LAGUNA_69,
@@ -70,6 +74,7 @@ export const TRAVEL_2016: Array<ITrip> = [
       COUNTRIES.BRAZIL.cities.RIO_DE_JANEIRO,
       COUNTRIES.BRAZIL.islands.ILHA_GRANDE
     ],
+    youtubeId: "EvCJY_bq6rk",
     body: [
       COUNTRIES.BRAZIL.attractions.HANG_GLIDING,
       COUNTRIES.BRAZIL.attractions.MODERN_ART_MUSEUM_RIO,

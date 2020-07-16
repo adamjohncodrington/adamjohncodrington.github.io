@@ -52,47 +52,51 @@ export const RecipeCard: FC<IRecipe> = ({
   );
 
   return (
-    <Disclosure autoExpand={newRecipe} Header={RecipeCardHeader}>
-      <RecipeCardPanel>
-        <List
-          title={ingredientsHeader}
-          listItems={mapIngredientsToListItems(ingredients)}
-        />
-
-        {serveWith && (
+    <Disclosure
+      autoExpand={newRecipe}
+      Header={RecipeCardHeader}
+      Panel={
+        <RecipeCardPanel>
           <List
-            title="serve with"
-            listItems={mapServeWithToListItems(serveWith)}
+            title={ingredientsHeader}
+            listItems={mapIngredientsToListItems(ingredients)}
           />
-        )}
 
-        <List
-          title="method"
-          listItems={mapMethodToListItems(method)}
-          showBullets
-        />
+          {serveWith && (
+            <List
+              title="serve with"
+              listItems={mapServeWithToListItems(serveWith)}
+            />
+          )}
 
-        {image && <SquareImage imgSrc={image} size="100%" />}
+          <List
+            title="method"
+            listItems={mapMethodToListItems(method)}
+            showBullets
+          />
 
-        {totalCost && (
-          <RecipeCardCostsContainer>
-            <span>
-              <span>approx. </span>
-              <strong>{numberToCurrencyString(totalCost, 1)}</strong>
-              <span> to make</span>
-            </span>
+          {image && <SquareImage imgSrc={image} size="100%" />}
 
-            {portionCost && makes && (
-              <RecipeCardPortionCost>
-                <strong>{numberToCurrencyString(portionCost, 1)}</strong>
-                <span>
-                  {makes.measurement ? ` per ${makes.measurement}` : " each"}
-                </span>
-              </RecipeCardPortionCost>
-            )}
-          </RecipeCardCostsContainer>
-        )}
-      </RecipeCardPanel>
-    </Disclosure>
+          {totalCost && (
+            <RecipeCardCostsContainer>
+              <span>
+                <span>approx. </span>
+                <strong>{numberToCurrencyString(totalCost, 1)}</strong>
+                <span> to make</span>
+              </span>
+
+              {portionCost && makes && (
+                <RecipeCardPortionCost>
+                  <strong>{numberToCurrencyString(portionCost, 1)}</strong>
+                  <span>
+                    {makes.measurement ? ` per ${makes.measurement}` : " each"}
+                  </span>
+                </RecipeCardPortionCost>
+              )}
+            </RecipeCardCostsContainer>
+          )}
+        </RecipeCardPanel>
+      }
+    />
   );
 };

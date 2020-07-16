@@ -11,6 +11,7 @@ export const GIGS_2016: Array<IGig> = [
   {
     headline: MUSICIANS.JOSEF_SALVAT,
     venue: MUSIC_VENUES.GORILLA,
+    youtubeId: "BpjAegPwYqQ",
     favourite: true,
     company: [],
     dates: [new Date("2016-03-06")]
@@ -151,6 +152,7 @@ export const GIGS_2016: Array<IGig> = [
   },
   {
     headline: MUSICIANS.ROOSEVELT,
+    youtubeId: "EfUIRLGUjMM",
     venue: MUSIC_VENUES.XOYO,
     company: [FRIENDS.TONYA_FRANCE],
     dates: [new Date("2016-11-24")]

@@ -8,6 +8,7 @@ import { CITIES_LIST_ITEMS } from "./cities";
 import { COUNTRIES_LIST_ITEMS } from "./countries";
 import { FRIENDS_LIST_ITEMS } from "./friends";
 import { ISLANDS_LIST_ITEMS } from "./islands";
+import { VIDEOS } from "./videos";
 
 const UP_NEXT: Array<ITrip> = DATA.ALL.filter(({ dates }: ITrip): boolean =>
   isInFuture(dates[0])
@@ -22,6 +23,7 @@ interface ITravelFactory {
   ISLANDS: Array<ICountedListItem>;
   THEME_PARKS: Array<ICountedListItem>;
   UP_NEXT: Array<ITrip>;
+  VIDEOS: Array<ITrip>;
 }
 
 export const FACTORY: ITravelFactory = {
@@ -39,5 +41,6 @@ export const FACTORY: ITravelFactory = {
   THEME_PARKS: formatCountedListItems({
     countedListItems: THEME_PARKS_LIST_ITEMS
   }),
-  UP_NEXT
+  UP_NEXT,
+  VIDEOS
 };

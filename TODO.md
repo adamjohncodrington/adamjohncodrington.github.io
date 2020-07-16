@@ -5,6 +5,7 @@
 - tidy up recipe method list bullets (recipe method array should be `ol` not `ul`?)
 - display festival lineups by day????
 - add travel photos!!!
+- move `count` to inside `data`?
 
 ## Enhancements
 

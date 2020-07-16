@@ -6,17 +6,20 @@ export const GIGS_2018: Array<IGig> = [
     support: [MUSICIANS.GRYFFIN, MUSICIANS.SEEB],
     venue: MUSIC_VENUES.O2_THE,
     dates: [new Date("2018-02-25")],
+    youtubeId: "59OAEOL05dw",
     company: [FRIENDS.TONYA_FRANCE]
   },
   {
     headline: MUSICIANS.CODE_THE,
     venue: MUSIC_VENUES.CORSICA_STUDIOS,
     dates: [new Date("2018-03-07")],
+    youtubeId: "xSS9YiCzqWw",
     company: [FRIENDS.JERRY_EDWARDS, FRIENDS.JAMIE_HALKET, FRIENDS.DOM_COYNE]
   },
   {
     headline: MUSICIANS.GEORGE_FITZGERALD,
     venue: MUSIC_VENUES.ISLINGTON_ASSEMBLY_HALL,
+    youtubeId: "cGQD-nAo4Vc",
     dates: [new Date("2018-03-27")],
     company: [FRIENDS.TONYA_FRANCE]
   },
@@ -24,11 +27,13 @@ export const GIGS_2018: Array<IGig> = [
     headline: MUSICIANS.AQUILO,
     venue: MUSIC_VENUES.OVAL_SPACE,
     dates: [new Date("2018-04-19")],
+    youtubeId: "ts7L_aQBvbQ",
     company: [FRIENDS.JAMIE_HALKET]
   },
   {
     headline: MUSICIANS.TWO_FEET,
     venue: MUSIC_VENUES.ELECTROWERKZ,
+    youtubeId: "EVP4BbbcFxE",
     dates: [new Date("2018-05-24")],
     company: [FRIENDS.JERRY_EDWARDS]
   },
@@ -37,6 +42,7 @@ export const GIGS_2018: Array<IGig> = [
     venue: MUSIC_VENUES.COURTYARD_THEATRE,
     dates: [new Date("2018-05-25")],
     company: [FRIENDS.JERRY_EDWARDS],
+    youtubeId: "hks5LRHlgLE",
     favourite: true
   },
   {
@@ -55,6 +61,7 @@ export const GIGS_2018: Array<IGig> = [
     lineup: [[MUSICIANS.JAY_Z, MUSICIANS.BEYONCE]],
     venue: MUSIC_VENUES.LONDON_STADIUM,
     dates: [new Date("2018-06-16")],
+    youtubeId: "_Oj9VOXXu2o",
     company: [FRIENDS.TONYA_FRANCE]
   },
   {

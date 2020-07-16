@@ -69,9 +69,8 @@ export const CountedListItem: FC<ICountedListItem> = ({
             {TextAndCounts}
           </DisclosureHeader>
         )}
-      >
-        <CountedListItemDetails details={details} />
-      </Disclosure>
+        Panel={<CountedListItemDetails details={details} />}
+      />
     </li>
   ) : (
     <FlexLiGrow>{TextAndCounts}</FlexLiGrow>

@@ -25,6 +25,7 @@ export const TRAVEL_2015: Array<ITrip> = [
   {
     title: [COUNTRIES.UGANDA],
     subtitle: [COUNTRIES.UGANDA.cities.JINJA],
+    youtubeId: "ennXFiXhoAw",
     body: [
       COUNTRIES.UGANDA.attractions.NILE_SOURCE,
       COUNTRIES.UGANDA.attractions.RAFTING_NALUBALE
