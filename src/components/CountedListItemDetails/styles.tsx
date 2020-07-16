@@ -31,7 +31,7 @@ export const StyledLi = styled.li(
 
 export const StyledMainText = styled.div`
   flex: 1;
-  margin-right: 10px;
+  margin-right: 15px;
 `;
 
 export const StyledIndex = styled.div`
@@ -45,8 +45,9 @@ export const StyledDateText = styled.div(
 //TODO: move this to theme, all of this tbh
 const svgSize: string = "14px";
 export const StyledSvgContainer = styled.div`
-  display: flex;
-  align-items: center;
+  margin-top: 1px;
+  // display: flex;
+  // align-items: center;
 
   svg {
     margin-left: 5px;

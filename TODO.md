@@ -1,13 +1,12 @@
 # TO DO LIST
 
-- add more travel photos!!!
-- merge trips together again as arrays of "trip legs"
-- reinstate 49 abroad trips
-- tidy up recipe method list bullets (recipe method array should be `ol` not `ul`?)
-- display festival lineups by day????
-
 ## Enhancements
 
+- display festival lineups by day????
+- merge trips together again as arrays of "trip legs"
+- reinstate 49 abroad trips
+- add more travel photos!!!
+- add alt text to all photos
 - add tooltips to `RoundedSymbol`s
 - refine Nav Bar (colors persist for active page, mobile behaviour)
 - prevent `Router` from allowing you to go back between pages?

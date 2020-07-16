@@ -1,0 +1,17 @@
+export const JPG_BAKED_BEANS: IJpgSrc = "https://iili.io/dfwMtS.jpg";
+export const JPG_BANANA_CAKE: IJpgSrc = "https://iili.io/dfwXV9.jpg";
+export const JPG_BANG_BANG_CAULI: IJpgSrc = "https://iili.io/dfwWo7.jpg";
+export const JPG_BOLOGNESE: IJpgSrc = "https://iili.io/dfwkHx.jpg";
+export const JPG_BLUEBERRY_PANCAKES: IJpgSrc = "https://iili.io/dfwhPe.jpg";
+export const JPG_BROWNIES: IJpgSrc = "https://iili.io/dfwOSj.jpg";
+export const JPG_CRUMBLE: IJpgSrc = "https://iili.io/dfwNcb.jpg";
+export const JPG_FLAPJACKS: IJpgSrc = "https://iili.io/dfwwKu.jpg";
+export const JPG_KALE_CRISPY: IJpgSrc = "https://iili.io/dfwSDB.jpg";
+export const JPG_LASAGNE: IJpgSrc = "https://iili.io/dfw8NV.jpg";
+export const JPG_MASHED_POTATO: IJpgSrc = "https://iili.io/dfwvAQ.jpg";
+export const JPG_PIRI_PIRI: IJpgSrc = "https://iili.io/dfwPKg.jpg";
+export const JPG_PORRIDGE: IJpgSrc = "https://iili.io/dfwgoP.jpg";
+export const JPG_POTATO_SALAD: IJpgSrc = "https://iili.io/dfwrV1.jpg";
+export const JPG_RATATOUILLE: IJpgSrc = "https://iili.io/dfw4iF.jpg";
+export const JPG_ROGAN_JOSH: IJpgSrc = "https://iili.io/dfwila.jpg";
+export const JPG_SHEPHERDS_PIE: IJpgSrc = "https://iili.io/dfwsUJ.jpg";

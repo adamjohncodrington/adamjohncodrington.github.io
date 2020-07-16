@@ -3,7 +3,8 @@ import {
   PHOTOS_TRAVEL_AMSTERDAM,
   PHOTOS_TRAVEL_LISBON,
   PHOTOS_TRAVEL_NICE,
-  PHOTOS_TRAVEL_BRUGES
+  PHOTOS_TRAVEL_BRUGES,
+  PHOTOS_TRAVEL_CATANIA
 } from "resources";
 
 const AMSTERDAM: ITrip = [
@@ -54,7 +55,8 @@ const CATANIA: ITrip = [
     secondaryLocations: [COUNTRIES.ITALY.attractions.ETNA],
     hiddenLocations: [COUNTRIES.ITALY.regions.SICILY],
     dates: [new Date("2019-07-10"), new Date("2019-07-15")],
-    company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON]
+    company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON],
+    photos: PHOTOS_TRAVEL_CATANIA
   }
 ];
 
