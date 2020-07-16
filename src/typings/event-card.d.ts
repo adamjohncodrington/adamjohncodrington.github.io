@@ -13,8 +13,10 @@ interface IDates {
   dates: Array<Date>;
 }
 
+type IPhoto = IPhoto;
+
 interface IPhotos {
-  photos?: Array<IJpgSrc>;
+  photos?: Array<IPhoto>;
   hidePhotosIcon?: boolean;
 }
 interface IYouTubeVideo {

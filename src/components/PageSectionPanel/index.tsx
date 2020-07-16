@@ -17,6 +17,7 @@ import {
 } from "utils";
 
 import { CountedListItem } from "../CountedListItem";
+import { PhotoGrid } from "../PhotoGrid";
 import { EventCard } from "../EventCard";
 import { RecipeCard } from "../RecipeCard";
 import { VinylCard } from "../VinylCard";
@@ -29,7 +30,8 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
   recipes,
   theatreVisits,
   trips,
-  vinyls
+  vinyls,
+  photos
 }) => {
   const pageSectionPanelType: string = recipes
     ? PAGE_SECTION_PANEL_TYPES.RECIPE_CARDS
@@ -102,6 +104,8 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
               </Li>
             )
         )}
+
+      {photos && <PhotoGrid photos={photos} />}
 
       {countedListItems &&
         countedListItems.map(

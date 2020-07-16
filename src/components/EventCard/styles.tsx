@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { FlexColumn, FlexRow, GridTwoColumns } from "primitives";
+import { FlexColumn, FlexRow } from "primitives";
 import { CSS } from "styles";
 
 export const EventCardNote = styled.div(() => CSS.FONT_SIZE_75_PERCENT);
@@ -33,7 +33,3 @@ export const EventCardSymbolsContainer = styled(FlexRow)(
     }
   `
 );
-
-export const EventCardPhotosContainer = styled(GridTwoColumns)`
-  margin-top: 10px;
-`;

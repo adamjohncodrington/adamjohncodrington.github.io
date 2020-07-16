@@ -1,5 +1,10 @@
 import { FRIENDS, COUNTRIES } from "@constants";
-import { PHOTOS_TRAVEL_AMSTERDAM, PHOTOS_TRAVEL_LISBON } from "resources";
+import {
+  PHOTOS_TRAVEL_AMSTERDAM,
+  PHOTOS_TRAVEL_LISBON,
+  PHOTOS_TRAVEL_NICE,
+  PHOTOS_TRAVEL_BRUGES
+} from "resources";
 
 export const TRAVEL_2019: Array<ITrip> = [
   {
@@ -28,6 +33,7 @@ export const TRAVEL_2019: Array<ITrip> = [
   },
   {
     primaryLocations: [COUNTRIES.BELGIUM.cities.BRUGES],
+    photos: PHOTOS_TRAVEL_BRUGES,
     country: COUNTRIES.BELGIUM,
     secondaryLocations: [COUNTRIES.BELGIUM.attractions.BELFRY_OF_BRUGES],
     dates: [new Date("2019-05-17"), new Date("2019-05-19")],
@@ -42,6 +48,7 @@ export const TRAVEL_2019: Array<ITrip> = [
   },
   {
     primaryLocations: [COUNTRIES.FRANCE.cities.NICE],
+    photos: PHOTOS_TRAVEL_NICE,
     country: COUNTRIES.FRANCE,
     secondaryLocations: [COUNTRIES.FRANCE.cities.MONACO],
     dates: [new Date("2019-06-08"), new Date("2019-06-14")],

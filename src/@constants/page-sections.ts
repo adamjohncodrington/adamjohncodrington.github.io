@@ -2,6 +2,7 @@ interface IPageSectionTitle {
   BUCKET_LIST: string;
   FRIENDS: string;
   UP_NEXT: string;
+  PHOTOS: string;
   VIDEOS: string;
 }
 
@@ -9,6 +10,7 @@ export const PAGE_SECTION_TITLES: IPageSectionTitle = {
   BUCKET_LIST: "Bucket List",
   FRIENDS: "Friends",
   UP_NEXT: "Up Next",
+  PHOTOS: "Photos",
   VIDEOS: "Videos"
 };
 

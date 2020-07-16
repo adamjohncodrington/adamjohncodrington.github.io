@@ -45,6 +45,7 @@ interface IPageSectionDisclosure extends IOnlyHeaderClicable {
 
 interface IPageSectionDataTypes {
   countedListItems?: Array<ICountedListItem>;
+  photos?: Array<IPhoto>;
   gigs?: Array<IGig>;
   recipes?: Array<IRecipe>;
   theatreVisits?: Array<ITheatreVisit>;

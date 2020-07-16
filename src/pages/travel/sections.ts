@@ -8,7 +8,8 @@ import {
   SvgNotepad,
   SvgMapPin,
   SvgRollerCoaster,
-  SvgVideoCamera
+  SvgVideoCamera,
+  SvgCamera
 } from "resources";
 import { isInFuture } from "utils";
 
@@ -77,6 +78,13 @@ const SECTION_VIDEOS_TRAVEL: IPageSection = {
   count: FACTORY.VIDEOS.length
 };
 
+const SECTION_PHOTOS_TRAVEL: IPageSection = {
+  SvgIcon: SvgCamera,
+  title: PAGE_SECTION_TITLES.PHOTOS,
+  data: { photos: FACTORY.PHOTOS },
+  count: FACTORY.PHOTOS.length
+};
+
 const SECTIONS_YEARS: Array<IPageSection> = DATA.SPLIT_BY_YEAR.map(
   (year: Array<ITrip>): IPageSection => ({
     title: year[0].dates[0].getFullYear().toString(),
@@ -95,6 +103,7 @@ export const sections: Array<IPageSection> = [
   SECTION_HIGHLIGHTS,
   SECTION_ISLANDS,
   SECTION_THEME_PARKS,
+  SECTION_PHOTOS_TRAVEL,
   SECTION_UP_NEXT_TRAVEL,
   SECTION_VIDEOS_TRAVEL,
   ...SECTIONS_YEARS

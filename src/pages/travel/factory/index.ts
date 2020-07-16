@@ -1,6 +1,4 @@
-import { isInFuture, formatCountedListItems } from "utils";
-
-import { DATA } from "../data";
+import { formatCountedListItems } from "utils";
 
 import { HIGHLIGHTS_LIST_ITEMS, THEME_PARKS_LIST_ITEMS } from "./attractions";
 import { BUCKET_LIST_ITEMS } from "./bucket-list";
@@ -8,11 +6,9 @@ import { CITIES_LIST_ITEMS } from "./cities";
 import { COUNTRIES_LIST_ITEMS } from "./countries";
 import { FRIENDS_LIST_ITEMS } from "./friends";
 import { ISLANDS_LIST_ITEMS } from "./islands";
+import { PHOTOS } from "./photos";
+import { UP_NEXT } from "./up-next";
 import { VIDEOS } from "./videos";
-
-const UP_NEXT: Array<ITrip> = DATA.ALL.filter(({ dates }: ITrip): boolean =>
-  isInFuture(dates[0])
-);
 
 interface ITravelFactory {
   BUCKET_LIST: Array<ICountedListItem>;
@@ -21,6 +17,7 @@ interface ITravelFactory {
   FRIENDS: Array<ICountedListItem>;
   HIGHLIGHTS: Array<ICountedListItem>;
   ISLANDS: Array<ICountedListItem>;
+  PHOTOS: Array<IPhoto>;
   THEME_PARKS: Array<ICountedListItem>;
   UP_NEXT: Array<ITrip>;
   VIDEOS: Array<ITrip>;
@@ -41,6 +38,7 @@ export const FACTORY: ITravelFactory = {
   THEME_PARKS: formatCountedListItems({
     countedListItems: THEME_PARKS_LIST_ITEMS
   }),
+  PHOTOS,
   UP_NEXT,
   VIDEOS
 };

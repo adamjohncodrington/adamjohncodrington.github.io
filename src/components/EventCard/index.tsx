@@ -1,9 +1,10 @@
 import React from "react";
 
 import { useThemeContext } from "context";
-import { GridColumnDiv, SquareImage } from "primitives";
+import { GridColumnDiv } from "primitives";
 
 import { Disclosure } from "../Disclosure";
+import { PhotoGrid } from "../PhotoGrid";
 import { RoundedSymbol } from "../RoundedSymbol";
 import { YouTubeVideo } from "../YouTubeVideo";
 
@@ -13,8 +14,7 @@ import {
   EventCardCountdown,
   EventCardTextContainer,
   EventCardSymbolsContainer,
-  EventCardSecondaryBody,
-  EventCardPhotosContainer
+  EventCardSecondaryBody
 } from "./styles";
 
 export const EventCard: React.FC<IEventCard> = ({
@@ -102,15 +102,7 @@ export const EventCard: React.FC<IEventCard> = ({
           <>
             {youtubeId && <YouTubeVideo youtubeId={youtubeId} />}
 
-            {photos && photos.length > 0 && (
-              <EventCardPhotosContainer>
-                {photos.map((photo: IJpgSrc) => (
-                  <div data-test="image-container">
-                    <SquareImage imgSrc={photo} size="100%" />
-                  </div>
-                ))}
-              </EventCardPhotosContainer>
-            )}
+            {<PhotoGrid photos={photos} />}
           </>
         }
       />
