@@ -1,5 +1,7 @@
 import React from "react";
 
+import { DynamicFontWeightFlexRow } from "primitives";
+
 import { Disclosure } from "../Disclosure";
 
 import {
@@ -8,7 +10,7 @@ import {
   StyledMainText,
   StyledIndex,
   StyledDateText,
-  StyledFlexRow
+  StyledSvgContainer
 } from "./styles";
 import { YouTubeVideo } from "components/YouTubeVideo";
 import { SvgVideoCamera } from "resources";
@@ -25,12 +27,18 @@ export const CountedListItemDetail: React.FC<ICountedListItemDetail> = ({
     <Disclosure
       isStatic={!youtubeId}
       Header={({ panelIsVisible }) => (
-        <StyledFlexRow panelIsVisible={!!youtubeId && panelIsVisible}>
+        <DynamicFontWeightFlexRow
+          panelIsVisible={!!youtubeId && panelIsVisible}
+        >
           {index && <StyledIndex>{index}.</StyledIndex>}
           {mainText && <StyledMainText>{mainText[0]}</StyledMainText>}
           <StyledDateText favourite={favourite}>{dateText}</StyledDateText>
-          {youtubeId && <SvgVideoCamera />}
-        </StyledFlexRow>
+          {youtubeId && (
+            <StyledSvgContainer>
+              <SvgVideoCamera />
+            </StyledSvgContainer>
+          )}
+        </DynamicFontWeightFlexRow>
       )}
       Panel={<>{youtubeId && <YouTubeVideo youtubeId={youtubeId} />}</>}
     />
