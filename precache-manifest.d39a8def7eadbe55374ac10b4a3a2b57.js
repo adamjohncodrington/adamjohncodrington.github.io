@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2261463d1fa01e15a5bca83dae0237bc",
+    "revision": "cd7d005ba9b095b669966c5c0928c20b",
     "url": "/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.20b1de92.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "de030b52bcf66037c331",
-    "url": "/static/js/main.b5d9c55e.chunk.js"
+    "revision": "3b63a3a2e101a4769a25",
+    "url": "/static/js/main.d4ae4139.chunk.js"
   },
   {
     "revision": "3cf57b419839acabd216",
@@ -57,7 +57,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   },
   {
     "revision": "4af35ae2fb1b13c518c3603b7df23033",
-    "url": "/static/media/bang-bang-cauliflower.4af35ae2.jpg"
+    "url": "/static/media/bang-bang-cauli.4af35ae2.jpg"
   },
   {
     "revision": "b72779a494cacd04e25fddc238ec498a",
@@ -90,10 +90,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8469260458b814565877e6297f8815e7",
     "url": "/static/media/brownies.84692604.jpg"
-  },
-  {
-    "revision": "9848608aea9dab8cf445d973bf8a1413",
-    "url": "/static/media/carbonara.9848608a.jpg"
   },
   {
     "revision": "c6a86242967f0436820ea6ba39d7967a",
