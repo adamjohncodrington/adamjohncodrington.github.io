@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { CSS } from "styles";
+import { HEART, getPseudoElementAfter, TRIANGLE_RIGHT } from "styles";
 
 export const StyledOl = styled.ol`
   list-style-type: none;
@@ -40,8 +40,15 @@ export const StyledIndex = styled.div`
 
 interface IStyledDateText extends IFavourite, IVideo {}
 export const StyledDateText = styled.div(
-  ({ favourite, youtubeId }: IStyledDateText) => css`
-    ${favourite && !youtubeId && CSS.PSEUDO_HEART_AFTER}
-    ${youtubeId && !favourite && CSS.PSEUDO_PLAY_AFTER}
-  `
+  ({ favourite, youtubeId }: IStyledDateText) =>
+    (favourite || youtubeId) &&
+    getPseudoElementAfter(
+      favourite && !youtubeId
+        ? HEART
+        : youtubeId && !favourite
+        ? TRIANGLE_RIGHT
+        : youtubeId && favourite
+        ? HEART + " " + TRIANGLE_RIGHT
+        : ""
+    )
 );

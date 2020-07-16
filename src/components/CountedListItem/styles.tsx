@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { CSS } from "styles";
+import { getPseudoElementBefore, HEART, STAR } from "styles";
 
 interface ICountedListItemText
   extends ISecondaryText,
@@ -20,8 +20,8 @@ export const CountedListItemText = styled.span(
   }: ICountedListItemText) => css`
     flex: 1;
 
-    ${favourite && CSS.PSEUDO_HEART_BEFORE}
-    ${star && CSS.PSEUDO_STAR_BEFORE}
+    ${favourite && getPseudoElementBefore(HEART)}
+    ${star && getPseudoElementBefore(STAR)}
 
     ${
       faded &&

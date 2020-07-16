@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import styled, { css } from "styled-components";
 
 import { Ul, Li, FlexRow } from "primitives";
-import { CSS } from "styles";
+import { CIRCLE } from "styles";
 
 interface IStyledLi extends IThemeProp {
   addPaddingTop?: boolean;
@@ -35,7 +35,7 @@ export const List: FC<ListProps> = ({ title, listItems, showBullets }) => (
         <PaddedLi key={index} addPaddingTop={addPaddingTop}>
           {showBullets ? (
             <FlexRow>
-              <PaddedSpan>{CSS.CIRCLE_SMALL}</PaddedSpan>
+              <PaddedSpan>{CIRCLE}</PaddedSpan>
               <span>{text} </span>
             </FlexRow>
           ) : (

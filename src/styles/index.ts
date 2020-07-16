@@ -1,6 +1,6 @@
-export { BREAKPOINTS } from "./breakpoints";
-export { CSS } from "./css";
-export { COLORS, PAGE_COLORS } from "./colors";
-export { FONT_SIZES } from "./font-sizes";
-export { THEME } from "./theme";
-export { GlobalStyle } from "./GlobalStyle";
+export * from "./breakpoints";
+export * from "./css";
+export * from "./colors";
+export * from "./font-sizes";
+export * from "./theme";
+export * from "./GlobalStyle";
