@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { FlexRow, DynamicFontWeightFlexRow } from "primitives";
+import { DynamicFontWeightFlexRow } from "primitives";
 import { CSS } from "styles";
 
 export const StyledOl = styled.ol`

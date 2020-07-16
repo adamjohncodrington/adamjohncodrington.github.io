@@ -16,11 +16,12 @@ const getFriendDetails = (friend: IFriend): Array<ICountedListItemDetail> => {
   const gigsMatchingFriend: Array<IGig> = getGigsMatchingFriend(friend);
   return gigsMatchingFriend.map(
     (gig: IGig, index: number): ICountedListItemDetail => {
-      const { dates, youtubeId } = gig;
+      const { dates, youtubeId, favourite } = gig;
       return {
         index: gigsMatchingFriend.length > 1 ? index + 1 : undefined,
         mainText: [getGigTitle(gig)],
         dateText: getDatesText(dates),
+        favourite,
         isInFuture: isInFuture(dates[0]),
         youtubeId
       };
