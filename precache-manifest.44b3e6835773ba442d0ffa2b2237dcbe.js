@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2ff938e8de5a459c3107edb07d4fac3e",
+    "revision": "f43215843df001200213f36d950783e7",
     "url": "/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.9a1bbd3b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "87349af2c1f61085013a",
-    "url": "/static/js/main.9dc2777e.chunk.js"
+    "revision": "487ef2938f65583a3e26",
+    "url": "/static/js/main.2eaa2e27.chunk.js"
   },
   {
     "revision": "3cf57b419839acabd216",
@@ -40,6 +40,22 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/AMSTERDAM_4.f0f6ff49.jpg"
   },
   {
+    "revision": "24a33d03bbb10eb5e182eceb37554982",
+    "url": "/static/media/BRUGES_1.24a33d03.JPG"
+  },
+  {
+    "revision": "041466ce80dc375db24f63070664148e",
+    "url": "/static/media/BRUGES_2.041466ce.JPG"
+  },
+  {
+    "revision": "d7da7103a0efaee4038d7f7971ed0a0b",
+    "url": "/static/media/BRUGES_3.d7da7103.JPG"
+  },
+  {
+    "revision": "a27964f2e284889fbd307ffd7606cf44",
+    "url": "/static/media/BRUGES_4.a27964f2.JPG"
+  },
+  {
     "revision": "2a630c9ea1889590ab6a41e00db262ae",
     "url": "/static/media/LISBON_1.2a630c9e.jpg"
   },
@@ -54,6 +70,22 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "af2248b04251df7b5d53bb0cf7ef04af",
     "url": "/static/media/LISBON_4.af2248b0.jpg"
+  },
+  {
+    "revision": "bfa4d0f059ab0d9e3fc3cfdda4f48891",
+    "url": "/static/media/NICE_1.bfa4d0f0.JPG"
+  },
+  {
+    "revision": "bd62e0b80625c664dc00471a47ad44c4",
+    "url": "/static/media/NICE_2.bd62e0b8.JPG"
+  },
+  {
+    "revision": "03708bf28933eb9c57796d237a64d9cb",
+    "url": "/static/media/NICE_3.03708bf2.JPG"
+  },
+  {
+    "revision": "dc4a167f42627b104b9db633614678ce",
+    "url": "/static/media/NICE_4.dc4a167f.JPG"
   },
   {
     "revision": "e2cf5b85fc9309312483d762d1a97743",

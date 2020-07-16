@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.9dc2777e.chunk.js",
-    "main.js.map": "/static/js/main.9dc2777e.chunk.js.map",
+    "main.js": "/static/js/main.2eaa2e27.chunk.js",
+    "main.js.map": "/static/js/main.2eaa2e27.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.27f1f56c.js",
     "runtime-main.js.map": "/static/js/runtime-main.27f1f56c.js.map",
     "static/js/2.9a1bbd3b.chunk.js": "/static/js/2.9a1bbd3b.chunk.js",
     "static/js/2.9a1bbd3b.chunk.js.map": "/static/js/2.9a1bbd3b.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.af6bcd366838d47be76bed3e8043eff7.js": "/precache-manifest.af6bcd366838d47be76bed3e8043eff7.js",
+    "precache-manifest.44b3e6835773ba442d0ffa2b2237dcbe.js": "/precache-manifest.44b3e6835773ba442d0ffa2b2237dcbe.js",
     "service-worker.js": "/service-worker.js",
     "static/js/2.9a1bbd3b.chunk.js.LICENSE.txt": "/static/js/2.9a1bbd3b.chunk.js.LICENSE.txt",
     "static/media/1975_brief-inquiry.jpg": "/static/media/1975_brief-inquiry.450622e7.jpg",
@@ -15,10 +15,18 @@
     "static/media/AMSTERDAM_2.jpg": "/static/media/AMSTERDAM_2.24990fa3.jpg",
     "static/media/AMSTERDAM_3.jpg": "/static/media/AMSTERDAM_3.e8b144a8.jpg",
     "static/media/AMSTERDAM_4.jpg": "/static/media/AMSTERDAM_4.f0f6ff49.jpg",
+    "static/media/BRUGES_1.JPG": "/static/media/BRUGES_1.24a33d03.JPG",
+    "static/media/BRUGES_2.JPG": "/static/media/BRUGES_2.041466ce.JPG",
+    "static/media/BRUGES_3.JPG": "/static/media/BRUGES_3.d7da7103.JPG",
+    "static/media/BRUGES_4.JPG": "/static/media/BRUGES_4.a27964f2.JPG",
     "static/media/LISBON_1.jpg": "/static/media/LISBON_1.2a630c9e.jpg",
     "static/media/LISBON_2.jpg": "/static/media/LISBON_2.1c5e5c3b.jpg",
     "static/media/LISBON_3.jpg": "/static/media/LISBON_3.94b6c4c5.jpg",
     "static/media/LISBON_4.jpg": "/static/media/LISBON_4.af2248b0.jpg",
+    "static/media/NICE_1.JPG": "/static/media/NICE_1.bfa4d0f0.JPG",
+    "static/media/NICE_2.JPG": "/static/media/NICE_2.bd62e0b8.JPG",
+    "static/media/NICE_3.JPG": "/static/media/NICE_3.03708bf2.JPG",
+    "static/media/NICE_4.JPG": "/static/media/NICE_4.dc4a167f.JPG",
     "static/media/adele_19.jpg": "/static/media/adele_19.e2cf5b85.jpg",
     "static/media/allie-x_super-sunset.jpg": "/static/media/allie-x_super-sunset.e4ba903d.jpg",
     "static/media/amy-winehouse_btb.jpg": "/static/media/amy-winehouse_btb.ecf94e06.jpg",
@@ -109,6 +117,6 @@
   "entrypoints": [
     "static/js/runtime-main.27f1f56c.js",
     "static/js/2.9a1bbd3b.chunk.js",
-    "static/js/main.9dc2777e.chunk.js"
+    "static/js/main.2eaa2e27.chunk.js"
   ]
 }
