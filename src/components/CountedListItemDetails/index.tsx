@@ -2,6 +2,8 @@ import React from "react";
 
 import { FlexRow } from "primitives";
 
+import { Disclosure } from "../Disclosure";
+
 import {
   StyledLi,
   StyledOl,
@@ -9,20 +11,28 @@ import {
   StyledIndex,
   StyledDateText
 } from "./styles";
+import { YouTubeVideo } from "components/YouTubeVideo";
 
 export const CountedListItemDetail: React.FC<ICountedListItemDetail> = ({
   index,
   mainText,
   dateText,
   favourite,
-  isInFuture
+  isInFuture,
+  youtubeId
 }) => (
   <StyledLi key={index} isInFuture={isInFuture}>
-    <FlexRow>
-      {index && <StyledIndex>{index}.</StyledIndex>}
-      {mainText && <StyledMainText>{mainText[0]}</StyledMainText>}
-      <StyledDateText favourite={favourite}>{dateText}</StyledDateText>
-    </FlexRow>
+    <Disclosure
+      isStatic={!youtubeId}
+      Header={() => (
+        <FlexRow>
+          {index && <StyledIndex>{index}.</StyledIndex>}
+          {mainText && <StyledMainText>{mainText[0]}</StyledMainText>}
+          <StyledDateText favourite={favourite}>{dateText}</StyledDateText>
+        </FlexRow>
+      )}
+      Panel={<>{youtubeId && <YouTubeVideo youtubeId={youtubeId} />}</>}
+    />
   </StyledLi>
 );
 

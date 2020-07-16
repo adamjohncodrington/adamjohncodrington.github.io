@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useThemeContext } from "context";
-import { GridColumnDiv, CentredContent } from "primitives";
+import { GridColumnDiv } from "primitives";
 
 import { Disclosure } from "../Disclosure";
 import { RoundedSymbol } from "../RoundedSymbol";
@@ -78,7 +78,6 @@ export const EventCard: React.FC<IEventCard> = ({
 
             {(company.length > 0 || youtubeId) && (
               <EventCardSymbolsContainer>
-                {youtubeId && !hideVideoIcon && <RoundedSymbol video />}
                 {!hideCompany &&
                   company
                     .sort((a: IFriend, b: IFriend) =>
@@ -89,19 +88,13 @@ export const EventCard: React.FC<IEventCard> = ({
                         {initials}
                       </RoundedSymbol>
                     ))}
+
+                {youtubeId && !hideVideoIcon && <RoundedSymbol video />}
               </EventCardSymbolsContainer>
             )}
           </GridColumnDiv>
         )}
-        Panel={
-          <>
-            {youtubeId && (
-              <CentredContent>
-                <YouTubeVideo youtubeId={youtubeId} />
-              </CentredContent>
-            )}
-          </>
-        }
+        Panel={<>{youtubeId && <YouTubeVideo youtubeId={youtubeId} />}</>}
       />
     </>
   );

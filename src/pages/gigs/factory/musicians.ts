@@ -46,7 +46,7 @@ const getMusicianDetails = (
   const gigsMatchingMusician: Array<IGig> = getGigsMatchingMusician(musician);
   return gigsMatchingMusician.map(
     (
-      { dates, headline, festival, lineup, venue, favourite }: IGig,
+      { dates, headline, festival, lineup, venue, favourite, youtubeId }: IGig,
       index: number
     ): ICountedListItemDetail => ({
       index: gigsMatchingMusician.length > 1 ? index + 1 : undefined,
@@ -56,6 +56,7 @@ const getMusicianDetails = (
           ? getFestivalDateText({ dates, lineup, musician })
           : getDateText(dates[0]),
       isInFuture: isInFuture(dates[0]),
+      youtubeId,
       favourite: musician === headline && favourite
     })
   );

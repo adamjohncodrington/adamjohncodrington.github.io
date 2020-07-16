@@ -8,7 +8,7 @@ interface IDetailItem {
   isInFuture: boolean;
 }
 
-interface ICountedListItemDetail extends IFavourite {
+interface ICountedListItemDetail extends IVideo, IFavourite {
   index?: number;
   mainText?: Array<string>;
   dateText: string;

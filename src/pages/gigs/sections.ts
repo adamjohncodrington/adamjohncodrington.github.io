@@ -54,7 +54,6 @@ const SECTION_VENUES_GIGS: IPageSection = {
 };
 
 const SECTION_VIDEOS_GIGS: IPageSection = {
-  autoExpandAlways: true,
   SvgIcon: SvgVideoCamera,
   title: PAGE_SECTION_TITLES.VIDEOS,
   data: { gigs: FACTORY.VIDEOS },
