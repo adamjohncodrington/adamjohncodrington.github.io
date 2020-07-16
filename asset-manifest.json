@@ -1,16 +1,20 @@
 {
   "files": {
-    "main.js": "/static/js/main.121aa4ab.chunk.js",
-    "main.js.map": "/static/js/main.121aa4ab.chunk.js.map",
+    "main.js": "/static/js/main.9f620f1c.chunk.js",
+    "main.js.map": "/static/js/main.9f620f1c.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.27f1f56c.js",
     "runtime-main.js.map": "/static/js/runtime-main.27f1f56c.js.map",
-    "static/js/2.20b1de92.chunk.js": "/static/js/2.20b1de92.chunk.js",
-    "static/js/2.20b1de92.chunk.js.map": "/static/js/2.20b1de92.chunk.js.map",
+    "static/js/2.9a1bbd3b.chunk.js": "/static/js/2.9a1bbd3b.chunk.js",
+    "static/js/2.9a1bbd3b.chunk.js.map": "/static/js/2.9a1bbd3b.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.de771aa92316db5090d935c342ddff7e.js": "/precache-manifest.de771aa92316db5090d935c342ddff7e.js",
+    "precache-manifest.92670201ab8108d458464232742b763c.js": "/precache-manifest.92670201ab8108d458464232742b763c.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.20b1de92.chunk.js.LICENSE.txt": "/static/js/2.20b1de92.chunk.js.LICENSE.txt",
+    "static/js/2.9a1bbd3b.chunk.js.LICENSE.txt": "/static/js/2.9a1bbd3b.chunk.js.LICENSE.txt",
     "static/media/1975_brief-inquiry.jpg": "/static/media/1975_brief-inquiry.450622e7.jpg",
+    "static/media/AMSTERDAM_1.jpg": "/static/media/AMSTERDAM_1.7bc7aacb.jpg",
+    "static/media/AMSTERDAM_2.jpg": "/static/media/AMSTERDAM_2.24990fa3.jpg",
+    "static/media/AMSTERDAM_3.jpg": "/static/media/AMSTERDAM_3.e8b144a8.jpg",
+    "static/media/AMSTERDAM_4.jpg": "/static/media/AMSTERDAM_4.f0f6ff49.jpg",
     "static/media/adele_19.jpg": "/static/media/adele_19.e2cf5b85.jpg",
     "static/media/allie-x_super-sunset.jpg": "/static/media/allie-x_super-sunset.e4ba903d.jpg",
     "static/media/amy-winehouse_btb.jpg": "/static/media/amy-winehouse_btb.ecf94e06.jpg",
@@ -28,6 +32,7 @@
     "static/media/book.a7bef01b.svg": "/static/media/book.a7bef01b.svg",
     "static/media/brain.237ef4f4.svg": "/static/media/brain.237ef4f4.svg",
     "static/media/brownies.jpg": "/static/media/brownies.84692604.jpg",
+    "static/media/camera.33f4f24c.svg": "/static/media/camera.33f4f24c.svg",
     "static/media/caribou_our-love.jpg": "/static/media/caribou_our-love.c6a86242.jpg",
     "static/media/caroline-polachek_pang.jpg": "/static/media/caroline-polachek_pang.94caf107.jpg",
     "static/media/charli-xcx_hifn.jpg": "/static/media/charli-xcx_hifn.189d54fe.jpg",
@@ -99,7 +104,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.27f1f56c.js",
-    "static/js/2.20b1de92.chunk.js",
-    "static/js/main.121aa4ab.chunk.js"
+    "static/js/2.9a1bbd3b.chunk.js",
+    "static/js/main.9f620f1c.chunk.js"
   ]
 }
