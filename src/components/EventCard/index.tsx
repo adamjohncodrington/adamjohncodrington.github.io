@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useThemeContext } from "context";
-import { GridColumnDiv, GridTwoColumns, SquareImage } from "primitives";
+import { GridColumnDiv, SquareImage } from "primitives";
 
 import { Disclosure } from "../Disclosure";
 import { RoundedSymbol } from "../RoundedSymbol";
