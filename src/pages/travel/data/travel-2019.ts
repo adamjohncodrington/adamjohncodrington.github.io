@@ -1,5 +1,5 @@
 import { FRIENDS, COUNTRIES } from "@constants";
-import { PHOTOS_TRAVEL_AMSTERDAM } from "resources";
+import { PHOTOS_TRAVEL_AMSTERDAM, PHOTOS_TRAVEL_LISBON } from "resources";
 
 export const TRAVEL_2019: Array<ITrip> = [
   {
@@ -21,6 +21,7 @@ export const TRAVEL_2019: Array<ITrip> = [
   {
     primaryLocations: [COUNTRIES.PORTUGAL.cities.LISBON],
     country: COUNTRIES.PORTUGAL,
+    photos: PHOTOS_TRAVEL_LISBON,
     secondaryLocations: [COUNTRIES.PORTUGAL.attractions.OCENARIO_DE_LISBOA],
     dates: [new Date("2019-02-08"), new Date("2019-02-10")],
     company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON]
