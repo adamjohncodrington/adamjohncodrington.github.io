@@ -1,6 +1,7 @@
 export { ReactComponent as SvgArtist } from "./artist.svg";
 export { ReactComponent as SvgBook } from "./book.svg";
 export { ReactComponent as SvgBrain } from "./brain.svg";
+export { ReactComponent as SvgCamera } from "./camera.svg";
 export { ReactComponent as SvgCity } from "./city.svg";
 export { ReactComponent as SvgFlag } from "./flag.svg";
 export { ReactComponent as SvgFriends } from "./people.svg";

@@ -42,8 +42,8 @@ export const StyledDateText = styled.div(
   ({ favourite }: IFavourite) => favourite && CSS.PSEUDO_HEART_AFTER
 );
 
-const svgSize: string = "12px";
-
+//TODO: move this to theme, all of this tbh
+const svgSize: string = "14px";
 export const StyledSvgContainer = styled.div`
   display: flex;
   align-items: center;

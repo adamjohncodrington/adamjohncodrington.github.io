@@ -1,4 +1,5 @@
 import { FRIENDS, COUNTRIES } from "@constants";
+import { PHOTOS_TRAVEL_AMSTERDAM } from "resources";
 
 export const TRAVEL_2019: Array<ITrip> = [
   {
@@ -14,7 +15,8 @@ export const TRAVEL_2019: Array<ITrip> = [
       FRIENDS.TONYA_FRANCE,
       FRIENDS.RYAN_MILLS,
       FRIENDS.TOM_CHINDA_COUTTS
-    ]
+    ],
+    photos: PHOTOS_TRAVEL_AMSTERDAM
   },
   {
     primaryLocations: [COUNTRIES.PORTUGAL.cities.LISBON],

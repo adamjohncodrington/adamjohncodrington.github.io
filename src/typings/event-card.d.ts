@@ -15,6 +15,7 @@ interface IDates {
 
 interface IPhotos {
   photos?: Array<IJpgSrc>;
+  hidePhotosIcon?: boolean;
 }
 interface IYouTubeVideo {
   youtubeId: string;

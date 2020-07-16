@@ -17,3 +17,8 @@ export const GridColumnDiv = styled.div(
     `}
   `
 );
+
+export const GridTwoColumns = styled.div`
+  display: grid;
+  grid-template-areas: "column-1 column-2";
+`;

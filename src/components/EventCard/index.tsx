@@ -1,7 +1,7 @@
 import React from "react";
 
 import { useThemeContext } from "context";
-import { GridColumnDiv } from "primitives";
+import { GridColumnDiv, GridTwoColumns, SquareImage } from "primitives";
 
 import { Disclosure } from "../Disclosure";
 import { RoundedSymbol } from "../RoundedSymbol";
@@ -13,7 +13,8 @@ import {
   EventCardCountdown,
   EventCardTextContainer,
   EventCardSymbolsContainer,
-  EventCardSecondaryBody
+  EventCardSecondaryBody,
+  EventCardPhotosContainer
 } from "./styles";
 
 export const EventCard: React.FC<IEventCard> = ({
@@ -27,7 +28,9 @@ export const EventCard: React.FC<IEventCard> = ({
   hideVideoIcon,
   company,
   youtubeId,
+  photos,
   hideCompany,
+  hidePhotosIcon,
   hideSecondaryBody,
   hideSubtitle
 }) => {
@@ -38,7 +41,7 @@ export const EventCard: React.FC<IEventCard> = ({
   return (
     <>
       <Disclosure
-        isStatic={!youtubeId}
+        isStatic={!(youtubeId || (photos && photos.length > 0))}
         Header={() => (
           <GridColumnDiv
             data-test="event-card-grid-container"
@@ -90,11 +93,26 @@ export const EventCard: React.FC<IEventCard> = ({
                     ))}
 
                 {youtubeId && !hideVideoIcon && <RoundedSymbol video />}
+                {photos && !hidePhotosIcon && <RoundedSymbol photo />}
               </EventCardSymbolsContainer>
             )}
           </GridColumnDiv>
         )}
-        Panel={<>{youtubeId && <YouTubeVideo youtubeId={youtubeId} />}</>}
+        Panel={
+          <>
+            {youtubeId && <YouTubeVideo youtubeId={youtubeId} />}
+
+            {photos && photos.length > 0 && (
+              <EventCardPhotosContainer>
+                {photos.map((photo: IJpgSrc) => (
+                  <div data-test="image-container">
+                    <SquareImage imgSrc={photo} size="100%" />
+                  </div>
+                ))}
+              </EventCardPhotosContainer>
+            )}
+          </>
+        }
       />
     </>
   );

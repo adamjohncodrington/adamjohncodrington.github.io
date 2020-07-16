@@ -10,6 +10,7 @@ const StyledImage = styled.img(
     height: ${size};
     width: ${size};
     margin: 0;
+    display: block;
   `
 );
 

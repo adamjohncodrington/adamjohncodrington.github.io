@@ -14,10 +14,6 @@ const VinylCardLink = styled(Link)(
     `
 );
 
-const VinylCardArtwork = styled(SquareImage)`
-  display: block;
-`;
-
 const VinylCardTextContainer = styled.div(
   ({ theme: { vinyl } }: IThemeProp) =>
     css`
@@ -46,11 +42,7 @@ export const VinylCard: FC<IVinyl> = ({
   return (
     <FlexRow data-test="vinyl-card">
       <VinylCardLink href={appleMusicUrl}>
-        <VinylCardArtwork
-          dataTest="vinyl-artwork"
-          size={size}
-          imgSrc={artwork}
-        />
+        <SquareImage dataTest="vinyl-artwork" size={size} imgSrc={artwork} />
       </VinylCardLink>
 
       <VinylCardTextContainer>
