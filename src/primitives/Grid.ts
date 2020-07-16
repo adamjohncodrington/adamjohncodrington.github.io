@@ -18,7 +18,12 @@ export const GridColumnDiv = styled.div(
   `
 );
 
-export const GridTwoColumns = styled.div`
-  display: grid;
-  grid-template-areas: "column-1 column-2";
-`;
+export const GridWithColumns = styled.div(({ columnCount }: IColumnCount) => {
+  const gridTemplateAreas: string =
+    columnCount === 4 ? `"col1 col2 col3 col4"` : `"col1 col2"`;
+
+  return css`
+    display: grid;
+    grid-template-areas: ${gridTemplateAreas};
+  `;
+});

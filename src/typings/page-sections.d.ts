@@ -23,6 +23,10 @@ interface ISecondaryText {
   secondaryText?: string;
 }
 
+interface IColumnCount {
+  columnCount?: number;
+}
+
 interface ICountedListItem
   extends ISecondaryText,
     IPastAndFutureCounts,

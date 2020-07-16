@@ -105,7 +105,7 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
             )
         )}
 
-      {photos && <PhotoGrid photos={photos} />}
+      {photos && <PhotoGrid columnCount={4} photos={photos} />}
 
       {countedListItems &&
         countedListItems.map(

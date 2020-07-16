@@ -1,17 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 
-import { GridTwoColumns, SquareImage } from "primitives";
+import { GridWithColumns, SquareImage } from "primitives";
 
-export const EventCardPhotosContainer = styled(GridTwoColumns)`
+export const EventCardPhotosContainer = styled(GridWithColumns)`
   margin-top: 10px;
 `;
 
-export const PhotoGrid = ({ photos }: IPhotos) => {
+interface IPhotoGrid extends IPhotos, IColumnCount {}
+
+export const PhotoGrid = ({ photos, columnCount }: IPhotoGrid) => {
   if (!(photos && photos.length > 0)) return null;
 
   return (
-    <EventCardPhotosContainer>
+    <EventCardPhotosContainer columnCount={columnCount}>
       {photos.map((photo: IJpgSrc) => (
         <div data-test="image-container">
           <SquareImage imgSrc={photo} size="100%" />
