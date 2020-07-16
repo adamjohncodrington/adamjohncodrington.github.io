@@ -2,9 +2,9 @@ import { FRIENDS, COUNTRIES } from "@constants";
 
 export const TRAVEL_2019: Array<ITrip> = [
   {
-    title: [COUNTRIES.NETHERLANDS.cities.AMSTERDAM],
-    subtitle: [COUNTRIES.NETHERLANDS],
-    body: [
+    primaryLocations: [COUNTRIES.NETHERLANDS.cities.AMSTERDAM],
+    country: COUNTRIES.NETHERLANDS,
+    secondaryLocations: [
       COUNTRIES.NETHERLANDS.attractions.SEX_MUSEUM,
       COUNTRIES.NETHERLANDS.attractions.STEDELIJK_MUSEUM
     ],
@@ -17,30 +17,30 @@ export const TRAVEL_2019: Array<ITrip> = [
     ]
   },
   {
-    title: [COUNTRIES.PORTUGAL.cities.LISBON],
-    subtitle: [COUNTRIES.PORTUGAL],
-    body: [COUNTRIES.PORTUGAL.attractions.OCENARIO_DE_LISBOA],
+    primaryLocations: [COUNTRIES.PORTUGAL.cities.LISBON],
+    country: COUNTRIES.PORTUGAL,
+    secondaryLocations: [COUNTRIES.PORTUGAL.attractions.OCENARIO_DE_LISBOA],
     dates: [new Date("2019-02-08"), new Date("2019-02-10")],
     company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON]
   },
   {
-    title: [COUNTRIES.BELGIUM.cities.BRUGES],
-    subtitle: [COUNTRIES.BELGIUM],
-    body: [COUNTRIES.BELGIUM.attractions.BELFRY_OF_BRUGES],
+    primaryLocations: [COUNTRIES.BELGIUM.cities.BRUGES],
+    country: COUNTRIES.BELGIUM,
+    secondaryLocations: [COUNTRIES.BELGIUM.attractions.BELFRY_OF_BRUGES],
     dates: [new Date("2019-05-17"), new Date("2019-05-19")],
     company: [FRIENDS.JAMIE_HALKET]
   },
   {
-    title: [COUNTRIES.ITALY.cities.CATANIA],
-    subtitle: [COUNTRIES.ITALY.regions.SICILY],
-    body: [COUNTRIES.ITALY, COUNTRIES.ITALY.attractions.ETNA],
+    primaryLocations: [COUNTRIES.ITALY.cities.CATANIA],
+    country: COUNTRIES.ITALY.regions.SICILY,
+    secondaryLocations: [COUNTRIES.ITALY, COUNTRIES.ITALY.attractions.ETNA],
     dates: [new Date("2019-07-10"), new Date("2019-07-15")],
     company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON]
   },
   {
-    title: [COUNTRIES.FRANCE.cities.NICE],
-    subtitle: [COUNTRIES.FRANCE],
-    body: [COUNTRIES.FRANCE.cities.MONACO],
+    primaryLocations: [COUNTRIES.FRANCE.cities.NICE],
+    country: COUNTRIES.FRANCE,
+    secondaryLocations: [COUNTRIES.FRANCE.cities.MONACO],
     dates: [new Date("2019-06-08"), new Date("2019-06-14")],
     company: [FRIENDS.SIAN_RODWAY_SMITH]
   }

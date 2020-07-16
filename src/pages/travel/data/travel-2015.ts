@@ -2,9 +2,9 @@ import { FRIENDS, COUNTRIES } from "@constants";
 
 export const TRAVEL_2015: Array<ITrip> = [
   {
-    title: [COUNTRIES.FRANCE.cities.PARIS],
-    subtitle: [COUNTRIES.FRANCE],
-    body: [
+    primaryLocations: [COUNTRIES.FRANCE.cities.PARIS],
+    country: COUNTRIES.FRANCE,
+    secondaryLocations: [
       COUNTRIES.FRANCE.attractions.SACRE_COEUR,
       COUNTRIES.FRANCE.attractions.LOUVRE,
       COUNTRIES.FRANCE.attractions.ARC_DE_TRIOMPHE,
@@ -23,10 +23,11 @@ export const TRAVEL_2015: Array<ITrip> = [
     ]
   },
   {
-    title: [COUNTRIES.UGANDA],
-    subtitle: [COUNTRIES.UGANDA.cities.JINJA],
+    primaryLocations: [COUNTRIES.UGANDA.cities.JINJA],
+    country: COUNTRIES.UGANDA,
     youtubeId: "ennXFiXhoAw",
-    body: [
+    showCountryAsTitle: true,
+    secondaryLocations: [
       COUNTRIES.UGANDA.attractions.NILE_SOURCE,
       COUNTRIES.UGANDA.attractions.RAFTING_NALUBALE
     ],
@@ -47,10 +48,10 @@ export const TRAVEL_2015: Array<ITrip> = [
     ]
   },
   {
-    title: [COUNTRIES.GERMANY.cities.BERLIN],
+    primaryLocations: [COUNTRIES.GERMANY.cities.BERLIN],
     favourite: true,
-    subtitle: [COUNTRIES.GERMANY],
-    body: [
+    country: COUNTRIES.GERMANY,
+    secondaryLocations: [
       COUNTRIES.GERMANY.attractions.BERLIN_WALL,
       COUNTRIES.GERMANY.attractions.BRANDENBURG_GATE,
       COUNTRIES.GERMANY.attractions.EAST_SIDE_GALLERY,
@@ -61,9 +62,9 @@ export const TRAVEL_2015: Array<ITrip> = [
     company: [FRIENDS.SIAN_RODWAY_SMITH]
   },
   {
-    title: [COUNTRIES.CZECH_REPUBLIC.cities.PRAGUE],
-    subtitle: [COUNTRIES.CZECH_REPUBLIC],
-    body: [
+    primaryLocations: [COUNTRIES.CZECH_REPUBLIC.cities.PRAGUE],
+    country: COUNTRIES.CZECH_REPUBLIC,
+    secondaryLocations: [
       COUNTRIES.CZECH_REPUBLIC.attractions.JOHN_LENNON_WALL,
       COUNTRIES.CZECH_REPUBLIC.attractions.VYSEHRAD
     ],
@@ -71,9 +72,9 @@ export const TRAVEL_2015: Array<ITrip> = [
     company: [FRIENDS.SIAN_RODWAY_SMITH]
   },
   {
-    title: [COUNTRIES.POLAND.cities.KRAKOW],
-    subtitle: [COUNTRIES.POLAND],
-    body: [
+    primaryLocations: [COUNTRIES.POLAND.cities.KRAKOW],
+    country: COUNTRIES.POLAND,
+    secondaryLocations: [
       COUNTRIES.POLAND.towns.WIELICZKA,
       COUNTRIES.POLAND.attractions.WIELICZKA_SALT_MINE,
       COUNTRIES.POLAND.attractions.AUSCHWITZ_BIRKENAU
@@ -82,9 +83,9 @@ export const TRAVEL_2015: Array<ITrip> = [
     company: [FRIENDS.SIAN_RODWAY_SMITH]
   },
   {
-    title: [COUNTRIES.HUNGARY.cities.BUDAPEST],
-    subtitle: [COUNTRIES.HUNGARY],
-    body: [
+    primaryLocations: [COUNTRIES.HUNGARY.cities.BUDAPEST],
+    country: COUNTRIES.HUNGARY,
+    secondaryLocations: [
       COUNTRIES.HUNGARY.attractions.CITADELLA,
       COUNTRIES.HUNGARY.attractions.PARLIAMENT_BUILDING,
       COUNTRIES.HUNGARY.attractions.THERMAL_BATH_SZECHENYI

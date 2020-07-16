@@ -3,9 +3,9 @@ import { PHOTOS_TRAVEL } from "resources";
 
 export const TRAVEL_2020: Array<ITrip> = [
   {
-    title: [COUNTRIES.NORWAY.cities.OSLO],
-    subtitle: [COUNTRIES.NORWAY],
-    body: [
+    primaryLocations: [COUNTRIES.NORWAY.cities.OSLO],
+    country: COUNTRIES.NORWAY,
+    secondaryLocations: [
       COUNTRIES.NORWAY.islands.HOVEDOYA,
       COUNTRIES.NORWAY.attractions.OSLO_FJORD_SAUNA
     ],
@@ -19,15 +19,15 @@ export const TRAVEL_2020: Array<ITrip> = [
     photos: PHOTOS_TRAVEL.OSLO
   }
   // {
-  //   title: [COUNTRIES.BELIZE, COUNTRIES.COSTA_RICA],
-  //   subtitle: [
+  //   primaryLocations: [COUNTRIES.BELIZE, COUNTRIES.COSTA_RICA],
+  //   country:
   //     COUNTRIES.BELIZE.islands.CAYE_CAULKER,
   //     COUNTRIES.BELIZE.attractions.BARRIER_REEF,
   //     COUNTRIES.COSTA_RICA.attractions.CORCOVADO,
   //     COUNTRIES.COSTA_RICA.towns.MONTEVERDE,
   //     COUNTRIES.COSTA_RICA.towns.PUERTO_VIEJO
   //   ],
-  //   body: [
+  //   secondaryLocations: [
   //     COUNTRIES.BELIZE.cities.BELIZE_CITY,
   //     COUNTRIES.BELIZE.islands.AMBERGRIS_CAYE,
   //     COUNTRIES.COSTA_RICA.cities.SAN_JOSE,
@@ -39,7 +39,7 @@ export const TRAVEL_2020: Array<ITrip> = [
   // {
   //   title: COUNTRIES.SPAIN.cities.MADRID,
   //   subtitle: COUNTRIES.SPAIN,
-  //   body: [COUNTRIES.SPAIN.attractions.PARQUE_WARNER],
+  //   secondaryLocations: [COUNTRIES.SPAIN.attractions.PARQUE_WARNER],
   //   dates: [new Date("2020-07-07"), new Date("2020-07-10")],
   //   company: FRIENDS.DAN_SPARROW
   // }

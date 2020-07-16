@@ -2,8 +2,8 @@ import { FRIENDS, COUNTRIES } from "@constants";
 
 export const TRAVEL_2017: Array<ITrip> = [
   {
-    title: [COUNTRIES.ITALY.cities.MILAN],
-    subtitle: [COUNTRIES.ITALY],
+    primaryLocations: [COUNTRIES.ITALY.cities.MILAN],
+    country: COUNTRIES.ITALY,
     dates: [new Date("2017-05-12"), new Date("2017-05-14")],
     company: [
       FRIENDS.AISHA_SAEED,
@@ -14,15 +14,15 @@ export const TRAVEL_2017: Array<ITrip> = [
       FRIENDS.JHC
     ],
     youtubeId: "Dqq4RY6ZYF8",
-    body: [
+    secondaryLocations: [
       COUNTRIES.ITALY.attractions.MILAN_MALL,
       COUNTRIES.ITALY.attractions.SEMPIONE_PARK,
       COUNTRIES.ITALY.attractions.ARCO_DELLA_PACE
     ]
   },
   {
-    title: [COUNTRIES.SPAIN.cities.BARCELONA],
-    subtitle: [COUNTRIES.SPAIN],
+    primaryLocations: [COUNTRIES.SPAIN.cities.BARCELONA],
+    country: COUNTRIES.SPAIN,
     dates: [new Date("2017-06-15"), new Date("2017-06-18")],
     company: [
       FRIENDS.SIAN_RODWAY_SMITH,
@@ -31,16 +31,16 @@ export const TRAVEL_2017: Array<ITrip> = [
       FRIENDS.ELLIE_FORMAN,
       FRIENDS.HARRIET_KESTERTON
     ],
-    body: [
+    secondaryLocations: [
       COUNTRIES.SPAIN.attractions.PARK_GUELL,
       COUNTRIES.SPAIN.attractions.CIUTADELLA_PARK
     ]
   },
   {
-    title: [COUNTRIES.SPAIN.islands.TENERIFE],
-    subtitle: [COUNTRIES.SPAIN],
+    primaryLocations: [COUNTRIES.SPAIN.islands.TENERIFE],
+    country: COUNTRIES.SPAIN,
     dates: [new Date("2017-06-15"), new Date("2017-06-18")],
     company: [FRIENDS.LUKE_STERN],
-    body: [COUNTRIES.SPAIN.attractions.SIAM_PARK]
+    secondaryLocations: [COUNTRIES.SPAIN.attractions.SIAM_PARK]
   }
 ];

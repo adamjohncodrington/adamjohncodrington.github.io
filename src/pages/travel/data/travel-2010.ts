@@ -2,9 +2,9 @@ import { FRIENDS, COUNTRIES } from "@constants";
 
 export const TRAVEL_2010: Array<ITrip> = [
   {
-    title: [COUNTRIES.UAE.cities.DUBAI],
-    subtitle: [COUNTRIES.UAE],
-    body: [
+    primaryLocations: [COUNTRIES.UAE.cities.DUBAI],
+    country: COUNTRIES.UAE,
+    secondaryLocations: [
       COUNTRIES.UAE.attractions.AQUAVENTURE,
       COUNTRIES.UAE.attractions.BURJ_KHALIFA
     ],
@@ -12,10 +12,10 @@ export const TRAVEL_2010: Array<ITrip> = [
     company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON]
   },
   {
-    title: [COUNTRIES.PORTUGAL.towns.FERRAGUDO],
-    subtitle: [COUNTRIES.PORTUGAL],
+    primaryLocations: [COUNTRIES.PORTUGAL.towns.FERRAGUDO],
+    country: COUNTRIES.PORTUGAL,
     dates: [new Date("2010-08-13"), new Date("2010-08-18")],
     company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON],
-    body: [COUNTRIES.PORTUGAL.cities.PORTIMAO]
+    secondaryLocations: [COUNTRIES.PORTUGAL.cities.PORTIMAO]
   }
 ];

@@ -2,9 +2,9 @@ import { FRIENDS, COUNTRIES } from "@constants";
 
 export const TRAVEL_2003: Array<ITrip> = [
   {
-    title: [COUNTRIES.PORTUGAL.towns.LAGOS],
-    subtitle: [COUNTRIES.PORTUGAL],
-    body: [
+    primaryLocations: [COUNTRIES.PORTUGAL.towns.LAGOS],
+    country: COUNTRIES.PORTUGAL,
+    secondaryLocations: [
       COUNTRIES.PORTUGAL.attractions.ZOOMARINE,
       COUNTRIES.PORTUGAL.cities.PORTIMAO
     ],

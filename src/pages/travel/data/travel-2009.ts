@@ -2,9 +2,9 @@ import { FRIENDS, COUNTRIES } from "@constants";
 
 export const TRAVEL_2009: Array<ITrip> = [
   {
-    title: [COUNTRIES.BELGIUM.attractions.BATTLEFIELDS],
-    subtitle: [COUNTRIES.BELGIUM],
-    body: [COUNTRIES.BELGIUM.cities.YPRES],
+    primaryLocations: [COUNTRIES.BELGIUM.attractions.BATTLEFIELDS],
+    country: COUNTRIES.BELGIUM,
+    secondaryLocations: [COUNTRIES.BELGIUM.cities.YPRES],
     dates: [new Date("2009-06-12"), new Date("2009-06-15")],
     company: [
       FRIENDS.CFS,
@@ -18,23 +18,23 @@ export const TRAVEL_2009: Array<ITrip> = [
     ]
   },
   {
-    title: [
+    primaryLocations: [
       COUNTRIES.USA.cities.LAS_VEGAS,
       COUNTRIES.USA.attractions.GRAND_CANYON,
       COUNTRIES.USA.cities.LOS_ANGELES
     ],
-    body: [
+    secondaryLocations: [
       COUNTRIES.USA.attractions.HOLLYWOOD_WALK_OF_FAME,
       COUNTRIES.USA.attractions.SIX_FLAGS_MAGIC_MOUNTAIN,
       COUNTRIES.USA.attractions.FARMERS_MARKET
     ],
-    subtitle: [COUNTRIES.USA],
+    country: COUNTRIES.USA,
     dates: [new Date("2009-07-21"), new Date("2009-07-31")],
     company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON]
   },
   {
-    title: [COUNTRIES.GREECE.islands.KOS],
-    subtitle: [COUNTRIES.GREECE],
+    primaryLocations: [COUNTRIES.GREECE.islands.KOS],
+    country: COUNTRIES.GREECE,
     dates: [new Date("2009-08-12"), new Date("2009-08-19")],
     company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON]
   }

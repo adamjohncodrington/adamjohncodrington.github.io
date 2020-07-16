@@ -2,9 +2,9 @@ import { FRIENDS, COUNTRIES } from "@constants";
 
 export const TRAVEL_2002: Array<ITrip> = [
   {
-    title: [COUNTRIES.USA.states.FLORIDA],
-    subtitle: [COUNTRIES.USA],
-    body: [
+    primaryLocations: [COUNTRIES.USA.states.FLORIDA],
+    country: COUNTRIES.USA,
+    secondaryLocations: [
       COUNTRIES.USA.attractions.BUSCH_GARDENS_TAMPA,
       COUNTRIES.USA.attractions.DISNEY_EPCOT,
       COUNTRIES.USA.attractions.UNIVERSALS_ISLANDS_OF_ADVENTURE,

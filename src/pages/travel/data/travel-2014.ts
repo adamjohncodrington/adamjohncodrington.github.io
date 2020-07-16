@@ -2,14 +2,15 @@ import { FRIENDS, COUNTRIES } from "@constants";
 
 export const TRAVEL_2014: Array<ITrip> = [
   {
-    title: [COUNTRIES.BARBADOS],
+    country: COUNTRIES.BARBADOS,
+    showCountryAsTitle: true,
     dates: [new Date("2014-06-16"), new Date("2014-06-24")],
     company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON],
-    body: [COUNTRIES.BARBADOS.attractions.HARRISONS_CAVE]
+    secondaryLocations: [COUNTRIES.BARBADOS.attractions.HARRISONS_CAVE]
   },
   {
-    title: [COUNTRIES.THAILAND],
-    subtitle: [
+    country: COUNTRIES.THAILAND,
+    primaryLocations: [
       COUNTRIES.THAILAND.cities.BANGKOK,
       COUNTRIES.THAILAND.islands.KOH_PHANGAN,
       COUNTRIES.THAILAND.islands.KOH_TAO,
@@ -17,7 +18,8 @@ export const TRAVEL_2014: Array<ITrip> = [
       COUNTRIES.THAILAND.cities.CHIANG_MAI,
       COUNTRIES.THAILAND.towns.PAI
     ],
-    body: [
+    showCountryAsTitle: true,
+    secondaryLocations: [
       COUNTRIES.THAILAND.attractions.SKY_BAR,
       COUNTRIES.THAILAND.attractions.GRAND_PALACE,
       COUNTRIES.THAILAND.attractions.TIGER_KINGDOM,
@@ -31,12 +33,13 @@ export const TRAVEL_2014: Array<ITrip> = [
     company: [FRIENDS.TONYA_FRANCE]
   },
   {
-    title: [COUNTRIES.LAOS],
-    subtitle: [
+    country: COUNTRIES.LAOS,
+    showCountryAsTitle: true,
+    primaryLocations: [
       COUNTRIES.LAOS.cities.LUANG_PRABANG,
       COUNTRIES.LAOS.cities.VIENTIANE
     ],
-    body: [
+    secondaryLocations: [
       COUNTRIES.LAOS.attractions.BUDDHA_PARK,
       COUNTRIES.LAOS.attractions.ELEPHANT_VILLAGE,
       COUNTRIES.LAOS.attractions.KUANG_SI_FALLS

@@ -1,7 +1,11 @@
 interface ITrip extends IEventCardCommon, IDates {
-  title: Array<ILocation>;
-  subtitle?: Array<ILocation>;
-  hidden?: Array<ILocation>;
-  body?: Array<ILocation>;
+  country: ICountryTemplate;
+  primaryLocations?: Array<ILocation>;
+  secondaryLocations?: Array<ILocation>;
+  hiddenLocations?: Array<ILocation>;
   notAbroad?: boolean;
+  showCountryAsTitle?: boolean;
 }
+
+type ITripLeg = ITrip;
+type ITripLegs = Array<ITripLeg>;

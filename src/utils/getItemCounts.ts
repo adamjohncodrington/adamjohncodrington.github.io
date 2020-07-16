@@ -38,36 +38,48 @@ export const musicianMatchExists = (
   return false;
 };
 
+//TODO: merge these 3
 export const countryMatchExists = (
   country: ICountryTemplate,
-  { title, subtitle, body, hidden }: ITrip
+  trip: ITrip
 ): boolean => {
-  if (title && title.includes(country)) return true;
-  if (subtitle && subtitle.includes(country)) return true;
-  if (body && body.includes(country)) return true;
-  if (hidden && hidden.includes(country)) return true;
+  const { primaryLocations, secondaryLocations, hiddenLocations } = trip;
+
+  if (trip.country === country) return true;
+  if (primaryLocations && primaryLocations.includes(country)) return true;
+  if (secondaryLocations && secondaryLocations.includes(country)) return true;
+  if (hiddenLocations && hiddenLocations.includes(country)) return true;
   return false;
 };
 
-export const cityMatchExists = (
-  city: ICity,
-  { title, subtitle, body, hidden }: ITrip
-): boolean => {
-  if (title && title.includes(city)) return true;
-  if (subtitle && subtitle.includes(city)) return true;
-  if (body && body.includes(city)) return true;
-  if (hidden && hidden.includes(city)) return true;
+export const cityMatchExists = (city: ICity, trip: ITrip): boolean => {
+  const { primaryLocations, secondaryLocations, hiddenLocations } = trip;
+
+  if (primaryLocations && primaryLocations.includes(city)) return true;
+  if (secondaryLocations && secondaryLocations.includes(city)) return true;
+  if (hiddenLocations && hiddenLocations.includes(city)) return true;
   return false;
 };
 
 export const attractionMatchExists = (
   attraction: IAttraction,
-  { title, subtitle, body, hidden }: ITrip
+  trip: ITrip
 ): boolean => {
-  if (title && title.includes(attraction)) return true;
-  if (subtitle && subtitle.includes(attraction)) return true;
-  if (body && body.includes(attraction)) return true;
-  if (hidden && hidden.includes(attraction)) return true;
+  const { primaryLocations, secondaryLocations, hiddenLocations } = trip;
+
+  if (primaryLocations && primaryLocations.includes(attraction)) return true;
+  if (secondaryLocations && secondaryLocations.includes(attraction))
+    return true;
+  if (hiddenLocations && hiddenLocations.includes(attraction)) return true;
+  return false;
+};
+
+const islandMatchExists = (island: IIsland, trip: ITrip): boolean => {
+  const { primaryLocations, secondaryLocations, hiddenLocations } = trip;
+
+  if (primaryLocations && primaryLocations.includes(island)) return true;
+  if (secondaryLocations && secondaryLocations.includes(island)) return true;
+  if (hiddenLocations && hiddenLocations.includes(island)) return true;
   return false;
 };
 
@@ -114,16 +126,12 @@ export const getItemCounts = ({
   trips &&
     (attraction || city || country || friend || island) &&
     trips.forEach((trip: ITrip): void => {
-      const { title, company, subtitle, body, dates } = trip;
-
+      const { company, dates } = trip;
       if (
         (attraction && attractionMatchExists(attraction, trip)) ||
         (country && countryMatchExists(country, trip)) ||
         (city && cityMatchExists(city, trip)) ||
-        (island &&
-          ((title && title.includes(island)) ||
-            (body && body.includes(island)) ||
-            (subtitle && subtitle.includes(island)))) ||
+        (island && islandMatchExists(island, trip)) ||
         (friend && company.includes(friend))
       )
         incremementPastOrFutureCount(dates[0]);

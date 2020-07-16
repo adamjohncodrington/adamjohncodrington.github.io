@@ -40,19 +40,37 @@ export const getTheatreVisitSubtitle = ({
     )
   });
 
-export const getTripTitle = ({ title }: ITrip): string =>
-  arrayToString({
-    stringArray: title.map(({ name }: ILocation) => name),
-    useAmpersandsForPair: true
-  });
+export const getTripTitle = ({
+  country,
+  primaryLocations,
+  showCountryAsTitle
+}: ITrip): string =>
+  showCountryAsTitle
+    ? country.name
+    : primaryLocations
+    ? arrayToString({
+        stringArray: primaryLocations.map(({ name }: ILocation) => name),
+        useAmpersandsForPair: true
+      })
+    : "TRIP TITLE MISSING";
 
-export const getTripSubtitle = ({ subtitle }: ITrip): string | undefined =>
-  subtitle &&
-  arrayToString({
-    stringArray: subtitle.map(({ name }: ILocation) => name),
-    useAmpersandsForPair: true
-  });
+export const getTripSubtitle = ({
+  country,
+  showCountryAsTitle,
+  primaryLocations
+}: ITrip): string | undefined =>
+  showCountryAsTitle
+    ? primaryLocations &&
+      arrayToString({
+        stringArray: primaryLocations.map(({ name }: ILocation) => name),
+        useAmpersandsForPair: true
+      })
+    : country.name;
 
-export const getTripBody = ({ body }: ITrip): string | undefined =>
-  body &&
-  arrayToString({ stringArray: body.map(({ name }: ILocation) => name) });
+export const getTripBody = ({
+  secondaryLocations
+}: ITrip): string | undefined =>
+  secondaryLocations &&
+  arrayToString({
+    stringArray: secondaryLocations.map(({ name }: ILocation) => name)
+  });

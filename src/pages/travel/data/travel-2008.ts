@@ -2,9 +2,9 @@ import { FRIENDS, COUNTRIES } from "@constants";
 
 export const TRAVEL_2008: Array<ITrip> = [
   {
-    title: [COUNTRIES.ITALY.cities.ROME],
-    subtitle: [COUNTRIES.ITALY],
-    body: [
+    primaryLocations: [COUNTRIES.ITALY.cities.ROME],
+    country: COUNTRIES.ITALY,
+    secondaryLocations: [
       COUNTRIES.ITALY.attractions.COLOSSEUM,
       COUNTRIES.ITALY.attractions.TREVI_FOUNTAIN,
       COUNTRIES.ITALY.cities.VATICAN
@@ -13,9 +13,9 @@ export const TRAVEL_2008: Array<ITrip> = [
     company: [FRIENDS.EMMA_CODRINGTON, FRIENDS.DAD]
   },
   {
-    title: [COUNTRIES.FRANCE.cities.PARIS],
-    subtitle: [COUNTRIES.FRANCE],
-    body: [
+    primaryLocations: [COUNTRIES.FRANCE.cities.PARIS],
+    country: COUNTRIES.FRANCE,
+    secondaryLocations: [
       COUNTRIES.FRANCE.attractions.AIR_SPACE_MUSEUM,
       COUNTRIES.FRANCE.attractions.ARC_DE_TRIOMPHE,
       COUNTRIES.FRANCE.attractions.EIFFEL_TOWER,
@@ -38,9 +38,12 @@ export const TRAVEL_2008: Array<ITrip> = [
     ]
   },
   {
-    title: [COUNTRIES.USA.cities.WASHINGTON_DC, COUNTRIES.USA.states.VIRGINIA],
-    subtitle: [COUNTRIES.USA],
-    body: [
+    primaryLocations: [
+      COUNTRIES.USA.cities.WASHINGTON_DC,
+      COUNTRIES.USA.states.VIRGINIA
+    ],
+    country: COUNTRIES.USA,
+    secondaryLocations: [
       COUNTRIES.USA.cities.VIRGINIA_BEACH,
       COUNTRIES.USA.attractions.WASHINGTON_MONUMENT,
       COUNTRIES.USA.attractions.SIX_FLAGS_AMERICA,
@@ -53,8 +56,8 @@ export const TRAVEL_2008: Array<ITrip> = [
     company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON]
   },
   {
-    title: [COUNTRIES.PORTUGAL.towns.VILAMOURA],
-    subtitle: [COUNTRIES.PORTUGAL],
+    primaryLocations: [COUNTRIES.PORTUGAL.towns.VILAMOURA],
+    country: COUNTRIES.PORTUGAL,
     dates: [new Date("2008-08-07"), new Date("2008-08-14")],
     company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON]
   }
