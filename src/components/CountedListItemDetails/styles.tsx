@@ -38,20 +38,10 @@ export const StyledIndex = styled.div`
   min-width: 25px;
 `;
 
+interface IStyledDateText extends IFavourite, IVideo {}
 export const StyledDateText = styled.div(
-  ({ favourite }: IFavourite) => favourite && CSS.PSEUDO_HEART_AFTER
+  ({ favourite, youtubeId }: IStyledDateText) => css`
+    ${favourite && !youtubeId && CSS.PSEUDO_HEART_AFTER}
+    ${youtubeId && !favourite && CSS.PSEUDO_PLAY_AFTER}
+  `
 );
-
-//TODO: move this to theme, all of this tbh
-const svgSize: string = "14px";
-export const StyledSvgContainer = styled.div`
-  margin-top: 1px;
-  // display: flex;
-  // align-items: center;
-
-  svg {
-    margin-left: 5px;
-    height: ${svgSize};
-    width: ${svgSize};
-  }
-`;

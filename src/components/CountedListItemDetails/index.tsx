@@ -9,11 +9,9 @@ import {
   StyledOl,
   StyledMainText,
   StyledIndex,
-  StyledDateText,
-  StyledSvgContainer
+  StyledDateText
 } from "./styles";
 import { YouTubeVideo } from "components/YouTubeVideo";
-import { SvgVideoCamera } from "resources";
 
 export const CountedListItemDetail: React.FC<ICountedListItemDetail> = ({
   index,
@@ -32,12 +30,9 @@ export const CountedListItemDetail: React.FC<ICountedListItemDetail> = ({
         >
           {index && <StyledIndex>{index}.</StyledIndex>}
           {mainText && <StyledMainText>{mainText[0]}</StyledMainText>}
-          <StyledDateText favourite={favourite}>{dateText}</StyledDateText>
-          {youtubeId && (
-            <StyledSvgContainer>
-              <SvgVideoCamera />
-            </StyledSvgContainer>
-          )}
+          <StyledDateText favourite={favourite} youtubeId={youtubeId}>
+            {dateText}
+          </StyledDateText>
         </DynamicFontWeightFlexRow>
       )}
       Panel={<>{youtubeId && <YouTubeVideo youtubeId={youtubeId} />}</>}
