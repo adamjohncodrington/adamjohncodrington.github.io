@@ -83,7 +83,7 @@ export const GIGS_2014: Array<IGig> = [
     dates: [new Date("2014-10-28")]
   },
   {
-    headline: MUSICIANS.CHRVCHES,
+    headline: MUSICIANS.CHVRCHES,
     venue: MUSIC_VENUES.ACADEMY_MANCHESTER,
     company: [FRIENDS.SIMAN_PONE],
     dates: [new Date("2014-11-06")]

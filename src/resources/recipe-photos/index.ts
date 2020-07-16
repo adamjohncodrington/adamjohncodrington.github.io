@@ -1,31 +1,17 @@
-const requireJpg = (photo: string): IJpgSrc => require(`./${photo}.jpg`);
-
-export const RECIPE_PHOTOS: IRecipePhotos = {
-  // B
-  BAKED_BEANS: requireJpg("baked-beans"),
-  BANG_BANG_CAULIFLOWER: requireJpg("bang-bang-cauliflower"),
-  BANANA_CAKE: requireJpg("banana-cake"),
-  BOLOGNESE: requireJpg("bolognese"),
-  BLUEBERRY_PANCAKES: requireJpg("blueberry-pancakes"),
-  BROWNIES: requireJpg("brownies"),
-  // C
-  CARBONARA: requireJpg("carbonara"),
-  CRUMBLE: requireJpg("crumble"),
-  // F
-  FLAPJACKS: requireJpg("flapjacks"),
-  // K
-  KALE_CRISPY: requireJpg("kale-crispy"),
-  // L
-  LASAGNE: requireJpg("lasagne"),
-  // M
-  MASHED_POTATO: requireJpg("mashed-potato"),
-  // P
-  PORRIDGE: requireJpg("porridge"),
-  POTATO_SALAD: requireJpg("potato-salad"),
-  PIRI_PIRI: requireJpg("piri-piri"),
-  // R
-  RATATOUILLE: requireJpg("ratatouille"),
-  ROGAN_JOSH: requireJpg("rogan-josh"),
-  // S
-  SHEPHERDS_PIE: requireJpg("shepherds-pie")
-};
+export const JPG_BANG_BANG_CAULI: IJpgSrc = require("./bang-bang-cauli.jpg");
+export const JPG_BAKED_BEANS: IJpgSrc = require("./baked-beans.jpg");
+export const JPG_PORRIDGE: IJpgSrc = require("./porridge.jpg");
+export const JPG_ROGAN_JOSH: IJpgSrc = require("./rogan-josh.jpg");
+export const JPG_BANANA_CAKE: IJpgSrc = require("./banana-cake.jpg");
+export const JPG_BOLOGNESE: IJpgSrc = require("./bolognese.jpg");
+export const JPG_BLUEBERRY_PANCAKES: IJpgSrc = require("./blueberry-pancakes.jpg");
+export const JPG_BROWNIES: IJpgSrc = require("./brownies.jpg");
+export const JPG_CRUMBLE: IJpgSrc = require("./crumble.jpg");
+export const JPG_FLAPJACKS: IJpgSrc = require("./flapjacks.jpg");
+export const JPG_KALE_CRISPY: IJpgSrc = require("./kale-crispy.jpg");
+export const JPG_LASAGNE: IJpgSrc = require("./lasagne.jpg");
+export const JPG_MASHED_POTATO: IJpgSrc = require("./mashed-potato.jpg");
+export const JPG_POTATO_SALAD: IJpgSrc = require("./potato-salad.jpg");
+export const JPG_PIRI_PIRI: IJpgSrc = require("./piri-piri.jpg");
+export const JPG_RATATOUILLE: IJpgSrc = require("./ratatouille.jpg");
+export const JPG_SHEPHERDS_PIE: IJpgSrc = require("./shepherds-pie.jpg");

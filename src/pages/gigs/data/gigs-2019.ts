@@ -9,6 +9,7 @@ export const GIGS_2019: Array<IGig> = [
   },
   {
     headline: MUSICIANS.MAGGIE_ROGERS,
+    youtubeId: "193waN4hMd4",
     support: [MUSICIANS.MALLRAT],
     venue: MUSIC_VENUES.BRIXTON_ACADEMY,
     dates: [new Date("2019-02-19")],
@@ -30,6 +31,7 @@ export const GIGS_2019: Array<IGig> = [
   },
   {
     headline: MUSICIANS.LEON,
+    youtubeId: "ZDWHAMDoxWo",
     venue: MUSIC_VENUES.ISLINGTON_ASSEMBLY_HALL,
     dates: [new Date("2019-04-08")],
     company: [FRIENDS.DARREN_TAYLOR],
@@ -43,6 +45,7 @@ export const GIGS_2019: Array<IGig> = [
   },
   {
     headline: MUSICIANS.ROBYN,
+    youtubeId: "onPD2Gzd0BQ",
     venue: MUSIC_VENUES.ALEXANDRA_PALACE,
     dates: [new Date("2019-04-12")],
     company: [FRIENDS.DAN_SPARROW, FRIENDS.RYAN_MILLS],
@@ -57,6 +60,7 @@ export const GIGS_2019: Array<IGig> = [
   {
     headline: MUSICIANS.MARINA,
     venue: MUSIC_VENUES.ROYAL_ALBERT_HALL,
+    youtubeId: "rvvJboVvG6U",
     dates: [new Date("2019-05-03")],
     company: [FRIENDS.DARREN_TAYLOR]
   },
@@ -89,6 +93,7 @@ export const GIGS_2019: Array<IGig> = [
   },
   {
     headline: MUSICIANS.SOPHIE,
+    youtubeId: "-ktoahuTfZQ",
     favourite: true,
     venue: MUSIC_VENUES.ROYAL_FESTIVAL_HALL,
     dates: [new Date("2019-08-10")],
@@ -117,6 +122,7 @@ export const GIGS_2019: Array<IGig> = [
   },
   {
     headline: MUSICIANS.KIM_PETRAS,
+    youtubeId: "F6OBvyUN-xE",
     venue: MUSIC_VENUES.HEAVEN,
     dates: [new Date("2019-08-27")],
     company: [FRIENDS.DARREN_TAYLOR, FRIENDS.JERRY_EDWARDS]
@@ -132,10 +138,12 @@ export const GIGS_2019: Array<IGig> = [
     headline: MUSICIANS.MUNA,
     venue: MUSIC_VENUES.VILLAGE_UNDERGROUND,
     dates: [new Date("2019-09-10")],
+    youtubeId: "b1GQKpH9nRY",
     company: [FRIENDS.EMMA_CODRINGTON]
   },
   {
     headline: MUSICIANS.JULIA_MICHAELS,
+    youtubeId: "QjZxfJ5rMoI",
     venue: MUSIC_VENUES.SHEPHERDS_BUSH_EMPIRE,
     dates: [new Date("2019-09-17")],
     company: [FRIENDS.DARREN_TAYLOR]
@@ -152,6 +160,7 @@ export const GIGS_2019: Array<IGig> = [
   },
   {
     headline: MUSICIANS.CHARLI_XCX,
+    youtubeId: "aWMtkdL7_5Q",
     support: [MUSICIANS.RINA_SAWAYAMA],
     venue: MUSIC_VENUES.BRIXTON_ACADEMY,
     dates: [new Date("2019-10-31")],
@@ -160,6 +169,7 @@ export const GIGS_2019: Array<IGig> = [
   },
   {
     headline: MUSICIANS.BANKS,
+    youtubeId: "2sp-iXxyxLg",
     support: [MUSICIANS.GLOWIE],
     venue: MUSIC_VENUES.ROUNDHOUSE,
     dates: [new Date("2019-11-04")],
@@ -168,7 +178,8 @@ export const GIGS_2019: Array<IGig> = [
   },
   {
     headline: MUSICIANS.LAUV,
-    support: [MUSICIANS.CHELSEA_CUNNINGHAM_CUTLER],
+    youtubeId: "CWEoCdcltQ8",
+    support: [MUSICIANS.CHELSEA_CUTLER],
     venue: MUSIC_VENUES.KENTISH_TOWN_FORUM,
     dates: [new Date("2019-11-05")],
     company: [FRIENDS.JERRY_EDWARDS, FRIENDS.POPPY_SMITH]
@@ -189,6 +200,7 @@ export const GIGS_2019: Array<IGig> = [
   },
   {
     headline: MUSICIANS.ROBINSON,
+    youtubeId: "msmiWt45P0A",
     support: [MUSICIANS.NAVVY],
     venue: MUSIC_VENUES.QUEEN_OF_HOXTON,
     dates: [new Date("2019-11-20")],
@@ -196,6 +208,7 @@ export const GIGS_2019: Array<IGig> = [
   },
   {
     headline: MUSICIANS.FKA_TWIGS,
+    youtubeId: "ayQHCkqK04c",
     venue: MUSIC_VENUES.BRIXTON_ACADEMY,
     dates: [new Date("2019-11-25")],
     company: [
@@ -207,6 +220,7 @@ export const GIGS_2019: Array<IGig> = [
   },
   {
     headline: MUSICIANS.NAAZ,
+    youtubeId: "YYqQIxqo2y4",
     support: [MUSICIANS.DYLAN],
     venue: MUSIC_VENUES.CAMDEN_ASSEMBLY,
     dates: [new Date("2019-11-27")],

@@ -74,12 +74,13 @@ interface IMusicians {
   CHARLI_ADAMS: IMusician;
   CHARLI_XCX: IMusician;
   CHARLOTTE_CHURCH: IMusician;
-  CHELSEA_CUNNINGHAM_CUTLER: IMusician;
+  CHELSEA_CUTLER: IMusician;
+  CHELSEA_JADE: IMusician;
   CHEMICAL_BROTHERS_THE: IMusician;
   CHERYL: IMusician;
   CHLOE_WHITE_X_HALLE: IMusician;
   CHRISTINE_AND_THE_QUEENS: IMusician;
-  CHRVCHES: IMusician;
+  CHVRCHES: IMusician;
   CLAIRO: IMusician;
   CLEAN_BANDIT: IMusician;
   COBRA_STARSHIP: IMusician;

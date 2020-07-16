@@ -15,7 +15,7 @@ export const GIGS_2013: Array<IGig> = [
     favourite: true
   },
   {
-    headline: MUSICIANS.CHRVCHES,
+    headline: MUSICIANS.CHVRCHES,
     venue: MUSIC_VENUES.RITZ_MANCHESTER,
     company: [FRIENDS.SIMAN_PONE],
     dates: [new Date("2013-10-14")]

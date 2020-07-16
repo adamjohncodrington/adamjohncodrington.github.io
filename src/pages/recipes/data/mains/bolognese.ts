@@ -1,5 +1,5 @@
 import { INGREDIENTS, MEASUREMENTS, UNICODE, DIETS } from "@constants";
-import { RECIPE_PHOTOS } from "resources";
+import { JPG_BOLOGNESE } from "resources";
 
 import { recipeMethodEntries, calculateRecipeCost } from "utils";
 
@@ -106,7 +106,7 @@ const method: Array<string> = [
 
 const title: string = "Bolognese";
 const makes: IRecipeMakes = { quantity: 5, measurement: MEASUREMENTS.PORTION };
-const image: IJpgSrc = RECIPE_PHOTOS.BOLOGNESE;
+const image: IJpgSrc = JPG_BOLOGNESE;
 const diet: IRecipeDiet = DIETS.VEGAN;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);

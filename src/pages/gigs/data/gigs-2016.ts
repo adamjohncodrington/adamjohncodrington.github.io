@@ -19,17 +19,20 @@ export const GIGS_2016: Array<IGig> = [
   {
     headline: MUSICIANS.TROYE_SIVAN,
     venue: MUSIC_VENUES.ACADEMY_MANCHESTER,
+    youtubeId: "SQy4KzKHzvQ",
     company: [FRIENDS.DAN_SPARROW],
     dates: [new Date("2016-04-18")]
   },
   {
     headline: MUSICIANS.TOURIST,
+    youtubeId: "nU4t19llSig",
     venue: MUSIC_VENUES.DEAF_INSTITUTE,
     company: [FRIENDS.DAN_SPARROW],
     dates: [new Date("2016-05-10")]
   },
   {
     festival: FESTIVALS.GLASTONBURY,
+    youtubeId: "CcjqpflHGwA",
     lineup: [
       [
         MUSICIANS.NAO,
@@ -73,12 +76,14 @@ export const GIGS_2016: Array<IGig> = [
   {
     headline: MUSICIANS.BEYONCE,
     venue: MUSIC_VENUES.WEMBLEY_STADIUM,
+    youtubeId: "73kUYQAYnFk",
     company: [FRIENDS.EMMA_CODRINGTON],
     dates: [new Date("2016-07-03")],
     favourite: true
   },
   {
     festival: FESTIVALS.LOVEBOX,
+    youtubeId: "Udliwez_5BM",
     lineup: [
       [
         MUSICIANS.MO,
@@ -107,6 +112,7 @@ export const GIGS_2016: Array<IGig> = [
     lineup: [[MUSICIANS.MK]],
     venue: MUSIC_VENUES.MOTION,
     dates: [new Date("2016-07-30")],
+    youtubeId: "bcST9diXdKA",
     company: [FRIENDS.CHELSEA_CUNNINGHAM, FRIENDS.SARAH_WHITAKER]
   },
   {
@@ -114,6 +120,7 @@ export const GIGS_2016: Array<IGig> = [
     lineup: [
       [MUSICIANS.DUA_LIPA, MUSICIANS.CARLY_RAE_JEPSEN, MUSICIANS.SISTER_SLEDGE]
     ],
+    youtubeId: "9__FQwNSa44",
     venue: MUSIC_VENUES.PRESTON_PARK,
     company: [
       FRIENDS.ELLIE_GURKIN,
@@ -127,6 +134,7 @@ export const GIGS_2016: Array<IGig> = [
   },
   {
     festival: FESTIVALS.V_FESTIVAL,
+    youtubeId: "MYDY3lBavQ0",
     lineup: [
       [
         MUSICIANS.MIKE_POSNER,
@@ -147,6 +155,7 @@ export const GIGS_2016: Array<IGig> = [
     festival: FESTIVALS.WAREHOUSE_PROJECT,
     lineup: [[MUSICIANS.DUSKY, MUSICIANS.DANIEL_AVERY]],
     venue: MUSIC_VENUES.STORE_STREET,
+    youtubeId: "4PbG79luzoM",
     company: [FRIENDS.DAN_SPARROW],
     dates: [new Date("2016-09-30")]
   },

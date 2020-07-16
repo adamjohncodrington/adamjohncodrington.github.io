@@ -1,11 +1,10 @@
 # TO DO LIST
 
-- add more gig videos!!
+- add travel photos!!!
+- merge trips together again as arrays of "trip legs"
 - export recipes as `JPG_BANANA_CAKE` etc.
 - tidy up recipe method list bullets (recipe method array should be `ol` not `ul`?)
 - display festival lineups by day????
-- add travel photos!!!
-- move `count` to inside `data`?
 
 ## Enhancements
 

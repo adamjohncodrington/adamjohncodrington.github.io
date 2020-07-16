@@ -1,5 +1,5 @@
 import { INGREDIENTS, MEASUREMENTS, UNICODE, DIETS } from "@constants";
-import { RECIPE_PHOTOS } from "resources";
+import { JPG_SHEPHERDS_PIE } from "resources";
 
 import { recipeMethodEntries } from "utils";
 
@@ -118,7 +118,7 @@ const method: Array<string> = [
 
 const title: string = "Shepherd's pie";
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IJpgSrc = RECIPE_PHOTOS.SHEPHERDS_PIE;
+const image: IJpgSrc = JPG_SHEPHERDS_PIE;
 const makes: IRecipeMakes = { quantity: 7, measurement: MEASUREMENTS.PORTION };
 
 export const SHEPHERDS_PIE: IRecipe = {
