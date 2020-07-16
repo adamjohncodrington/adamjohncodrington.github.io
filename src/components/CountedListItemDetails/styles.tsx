@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 
+import { FlexRow, DynamicFontWeightFlexRow } from "primitives";
 import { CSS } from "styles";
 
 export const StyledOl = styled.ol`
@@ -41,3 +42,12 @@ export const StyledIndex = styled.div`
 export const StyledDateText = styled.div(
   ({ favourite }: IFavourite) => favourite && CSS.PSEUDO_HEART_AFTER
 );
+
+const svgSize: string = "1rem";
+export const StyledFlexRow = styled(DynamicFontWeightFlexRow)`
+  svg {
+    margin-left: 5px;
+    height: ${svgSize};
+    width: ${svgSize};
+  }
+`;

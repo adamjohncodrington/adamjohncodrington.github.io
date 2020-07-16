@@ -2,6 +2,7 @@
 
 - add travel photos!!!
 - merge trips together again as arrays of "trip legs"
+- reinstate 49 abroad trips
 - tidy up recipe method list bullets (recipe method array should be `ol` not `ul`?)
 - display festival lineups by day????
 

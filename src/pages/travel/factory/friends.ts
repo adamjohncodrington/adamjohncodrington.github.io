@@ -16,11 +16,12 @@ const getFriendDetails = (friend: IFriend): Array<ICountedListItemDetail> => {
   const tripsMatchingFriend: Array<ITrip> = getTripsMatchingFriend(friend);
   return tripsMatchingFriend.map(
     (trip: ITrip, index: number): ICountedListItemDetail => {
-      const { dates } = trip;
+      const { dates, youtubeId } = trip;
       return {
         index: tripsMatchingFriend.length > 1 ? index + 1 : undefined,
         mainText: [getTripTitle(trip)],
         dateText: getDatesText(dates),
+        youtubeId,
         isInFuture: isInFuture(dates[0])
       };
     }

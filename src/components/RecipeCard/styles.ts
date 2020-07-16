@@ -3,14 +3,12 @@ import styled, { css } from "styled-components";
 import { H3, FlexColumn } from "primitives";
 import { CSS } from "styles";
 
-interface IRecipeCardTitle extends IThemeProp, IFavourite {
-  isBold?: boolean;
-}
+interface IRecipeCardTitle extends IPanelIsVisible, IThemeProp, IFavourite {}
 
 export const RecipeCardTitle = styled(H3)(
-  ({ isBold, theme: { recipe }, favourite }: IRecipeCardTitle) => css`
+  ({ panelIsVisible, theme: { recipe }, favourite }: IRecipeCardTitle) => css`
     text-transform: lowercase;
-    font-weight: ${isBold ? "bold" : recipe.title.fontWeight};
+    font-weight: ${panelIsVisible ? "bold" : recipe.title.fontWeight};
     flex: 1;
     ${favourite && CSS.PSEUDO_HEART_BEFORE}
   `

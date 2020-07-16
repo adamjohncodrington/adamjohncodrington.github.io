@@ -18,7 +18,10 @@ const DisclosureHeader: FC<IDisclosureHeader> = ({
   children,
   panelIsVisible
 }) => (
-  <DynamicFontWeightFlexRow className={className} isBold={panelIsVisible}>
+  <DynamicFontWeightFlexRow
+    className={className}
+    panelIsVisible={panelIsVisible}
+  >
     {children}
   </DynamicFontWeightFlexRow>
 );

@@ -29,13 +29,9 @@ export const FlexLiGrow = styled(Li)`
   flex: 1;
 `;
 
-interface IIsBold {
-  isBold: boolean;
-}
-
 export const DynamicFontWeightFlexRow = styled(FlexRow)(
-  ({ isBold }: IIsBold) =>
-    isBold &&
+  ({ panelIsVisible }: IPanelIsVisible) =>
+    panelIsVisible &&
     css`
       * {
         font-weight: bold;

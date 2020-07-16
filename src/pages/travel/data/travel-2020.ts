@@ -1,5 +1,5 @@
 import { FRIENDS, COUNTRIES } from "@constants";
-import { PHOTOS_TRAVEL } from "resources";
+import { PHOTOS_TRAVEL_OSLO } from "resources";
 
 export const TRAVEL_2020: Array<ITrip> = [
   {
@@ -16,7 +16,7 @@ export const TRAVEL_2020: Array<ITrip> = [
       FRIENDS.TOM_CHINDA_COUTTS,
       FRIENDS.TONYA_FRANCE
     ],
-    photos: PHOTOS_TRAVEL.OSLO
+    photos: PHOTOS_TRAVEL_OSLO
   }
   // {
   //   primaryLocations: [COUNTRIES.BELIZE, COUNTRIES.COSTA_RICA],
