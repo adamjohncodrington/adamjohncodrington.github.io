@@ -83,7 +83,7 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
         ))}
 
       {trips &&
-        trips.map((trip: ITrip, index: number) => (
+        trips.map((trip: ITripLeg, index: number) => (
           <Li key={index}>
             <EventCard
               {...trip}

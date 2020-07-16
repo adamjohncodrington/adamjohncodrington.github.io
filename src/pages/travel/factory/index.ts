@@ -19,8 +19,8 @@ interface ITravelFactory {
   ISLANDS: Array<ICountedListItem>;
   PHOTOS: Array<IPhoto>;
   THEME_PARKS: Array<ICountedListItem>;
-  UP_NEXT: Array<ITrip>;
-  VIDEOS: Array<ITrip>;
+  UP_NEXT: Array<ITripLeg>;
+  VIDEOS: Array<ITripLeg>;
 }
 
 export const FACTORY: ITravelFactory = {

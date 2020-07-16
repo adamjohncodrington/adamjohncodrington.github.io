@@ -1,13 +1,16 @@
 import { FRIENDS, COUNTRIES } from "@constants";
 
-export const TRAVEL_2018: Array<ITrip> = [
+const COPENHAGEN: ITrip = [
   {
     primaryLocations: [COUNTRIES.DENMARK.cities.COPENHAGEN],
     country: COUNTRIES.DENMARK,
     dates: [new Date("2018-01-19"), new Date("2018-01-22")],
     company: [FRIENDS.LUKE_STERN],
     secondaryLocations: [COUNTRIES.DENMARK.attractions.LOUISIANA_ART_MUSEUM]
-  },
+  }
+];
+
+const PAPHOS: ITrip = [
   {
     primaryLocations: [COUNTRIES.CYPRUS.cities.PAPHOS],
     country: COUNTRIES.CYPRUS,
@@ -16,7 +19,10 @@ export const TRAVEL_2018: Array<ITrip> = [
     secondaryLocations: [
       COUNTRIES.CYPRUS.attractions.PAPHOS_ARCHAEOLOGICAL_PARK
     ]
-  },
+  }
+];
+
+const DUBROVNIK: ITrip = [
   {
     primaryLocations: [COUNTRIES.CROATIA.cities.DUBROVNIK],
     favourite: true,
@@ -27,7 +33,10 @@ export const TRAVEL_2018: Array<ITrip> = [
       COUNTRIES.CROATIA.attractions.DUBROVNIK_WALLS,
       COUNTRIES.CROATIA.attractions.DUBROVNIK_CABLE_CAR
     ]
-  },
+  }
+];
+
+const GRONINGEN: ITrip = [
   {
     primaryLocations: [COUNTRIES.NETHERLANDS.cities.GRONINGEN],
     country: COUNTRIES.NETHERLANDS,
@@ -35,4 +44,11 @@ export const TRAVEL_2018: Array<ITrip> = [
     dates: [new Date("2018-07-14"), new Date("2018-07-16")],
     company: [FRIENDS.CARMEN_DALGLISH]
   }
+];
+
+export const TRAVEL_2018: Array<ITrip> = [
+  GRONINGEN,
+  DUBROVNIK,
+  PAPHOS,
+  COPENHAGEN
 ];

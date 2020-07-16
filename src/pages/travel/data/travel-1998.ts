@@ -1,6 +1,6 @@
 import { FRIENDS, COUNTRIES } from "@constants";
 
-export const TRAVEL_1998: Array<ITrip> = [
+const LANZAROTE_1998: ITrip = [
   {
     primaryLocations: [COUNTRIES.SPAIN.islands.LANZAROTE],
     country: COUNTRIES.SPAIN,
@@ -8,3 +8,5 @@ export const TRAVEL_1998: Array<ITrip> = [
     company: [FRIENDS.DAD, FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON]
   }
 ];
+
+export const TRAVEL_1998: Array<ITrip> = [LANZAROTE_1998];

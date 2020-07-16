@@ -44,7 +44,7 @@ export const getTripTitle = ({
   country,
   primaryLocations,
   showCountryAsTitle
-}: ITrip): string =>
+}: ITripLeg): string =>
   showCountryAsTitle
     ? country.name
     : primaryLocations
@@ -58,7 +58,7 @@ export const getTripSubtitle = ({
   country,
   showCountryAsTitle,
   primaryLocations
-}: ITrip): string | undefined =>
+}: ITripLeg): string | undefined =>
   showCountryAsTitle
     ? primaryLocations &&
       arrayToString({
@@ -69,7 +69,7 @@ export const getTripSubtitle = ({
 
 export const getTripBody = ({
   secondaryLocations
-}: ITrip): string | undefined =>
+}: ITripLeg): string | undefined =>
   secondaryLocations &&
   arrayToString({
     stringArray: secondaryLocations.map(({ name }: ILocation) => name)

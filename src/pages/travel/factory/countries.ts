@@ -11,10 +11,12 @@ import {
 
 import { DATA } from "../data";
 
-const getTripsMatchingCountry = (country: ICountryTemplate): Array<ITrip> => {
-  const tripsMatchingCountry: Array<ITrip> = [];
-  const trips: Array<ITrip> = DATA.ALL;
-  trips.forEach((trip: ITrip): void => {
+const getTripsMatchingCountry = (
+  country: ICountryTemplate
+): Array<ITripLeg> => {
+  const tripsMatchingCountry: Array<ITripLeg> = [];
+  const trips: Array<ITripLeg> = DATA.ALL_FLAT;
+  trips.forEach((trip: ITripLeg): void => {
     if (countryMatchExists(country, trip)) tripsMatchingCountry.push(trip);
   });
   return tripsMatchingCountry;
@@ -23,9 +25,11 @@ const getTripsMatchingCountry = (country: ICountryTemplate): Array<ITrip> => {
 const getCountryDetails = (
   country: ICountryTemplate
 ): Array<ICountedListItemDetail> => {
-  const tripsMatchingCountry: Array<ITrip> = getTripsMatchingCountry(country);
+  const tripsMatchingCountry: Array<ITripLeg> = getTripsMatchingCountry(
+    country
+  );
   return tripsMatchingCountry.map(
-    (trip: ITrip, index: number): ICountedListItemDetail => {
+    (trip: ITripLeg, index: number): ICountedListItemDetail => {
       const { dates, favourite, youtubeId } = trip;
       const tripTitle: string = getTripTitle(trip);
       const tripSubtitle: string | undefined = getTripSubtitle(trip);
@@ -53,7 +57,7 @@ export const COUNTRIES_LIST_ITEMS: Array<ICountedListItem> = Object.values(
     return {
       text: country.name,
       favourite: detailsContainsFavourite(details),
-      ...getItemCounts({ item: { country }, data: { trips: DATA.ALL } }),
+      ...getItemCounts({ item: { country }, data: { trips: DATA.ALL_FLAT } }),
       details
     };
   }

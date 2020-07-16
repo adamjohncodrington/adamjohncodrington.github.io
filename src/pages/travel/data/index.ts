@@ -50,6 +50,8 @@ const ALL: Array<ITrip> = [
   ...TRAVEL_2020
 ];
 
+const ALL_FLAT: Array<ITripLeg> = ALL.flat();
+
 const SPLIT_BY_YEAR: Array<Array<ITrip>> = [
   TRAVEL_1997,
   TRAVEL_1998,
@@ -77,4 +79,4 @@ const SPLIT_BY_YEAR: Array<Array<ITrip>> = [
   TRAVEL_2020
 ];
 
-export const DATA = { ALL, SPLIT_BY_YEAR };
+export const DATA = { ALL, ALL_FLAT, SPLIT_BY_YEAR };

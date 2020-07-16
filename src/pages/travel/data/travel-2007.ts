@@ -1,6 +1,7 @@
 import { FRIENDS, COUNTRIES } from "@constants";
 
-export const TRAVEL_2007: Array<ITrip> = [
+//TODO: break this down into legs????
+const SAN_FRANCISCO_LA: ITrip = [
   {
     primaryLocations: [
       COUNTRIES.USA.cities.SAN_FRANCISCO,
@@ -19,7 +20,10 @@ export const TRAVEL_2007: Array<ITrip> = [
     ],
     dates: [new Date("2007-07-24"), new Date("2007-08-05")],
     company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON]
-  },
+  }
+];
+
+const CORNWALL_2007: ITrip = [
   {
     primaryLocations: [COUNTRIES.UK.regions.CORNWALL],
     notAbroad: true,
@@ -28,3 +32,5 @@ export const TRAVEL_2007: Array<ITrip> = [
     company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON]
   }
 ];
+
+export const TRAVEL_2007: Array<ITrip> = [SAN_FRANCISCO_LA, CORNWALL_2007];

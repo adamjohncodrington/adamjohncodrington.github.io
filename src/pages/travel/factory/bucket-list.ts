@@ -9,7 +9,7 @@ const bucketListCountries: Array<ICountryCounted> = Object.values(COUNTRIES)
   .map(
     (country: ICountryTemplate): ICountryCounted => ({
       ...country,
-      ...getItemCounts({ item: { country }, data: { trips: DATA.ALL } })
+      ...getItemCounts({ item: { country }, data: { trips: DATA.ALL_FLAT } })
     })
   )
   .filter(
@@ -34,7 +34,7 @@ const bucketListCities: Array<ICityCounted> = Object.values(CITIES)
   .map(
     (city: ICity): ICityCounted => ({
       ...city,
-      ...getItemCounts({ item: { city }, data: { trips: DATA.ALL } })
+      ...getItemCounts({ item: { city }, data: { trips: DATA.ALL_FLAT } })
     })
   )
   .filter(

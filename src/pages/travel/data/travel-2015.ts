@@ -1,6 +1,6 @@
 import { FRIENDS, COUNTRIES } from "@constants";
 
-export const TRAVEL_2015: Array<ITrip> = [
+const PARIS_2015: ITrip = [
   {
     primaryLocations: [COUNTRIES.FRANCE.cities.PARIS],
     country: COUNTRIES.FRANCE,
@@ -21,7 +21,10 @@ export const TRAVEL_2015: Array<ITrip> = [
       FRIENDS.GRACE_HULME,
       FRIENDS.ELLIE_GURKIN
     ]
-  },
+  }
+];
+
+const UGANDA: ITrip = [
   {
     primaryLocations: [COUNTRIES.UGANDA.cities.JINJA],
     country: COUNTRIES.UGANDA,
@@ -46,7 +49,10 @@ export const TRAVEL_2015: Array<ITrip> = [
       FRIENDS.KATE_BOWMAR,
       FRIENDS.COURTNEY_LAWSON
     ]
-  },
+  }
+];
+
+const INTERRAILING: ITrip = [
   {
     primaryLocations: [COUNTRIES.GERMANY.cities.BERLIN],
     favourite: true,
@@ -94,3 +100,5 @@ export const TRAVEL_2015: Array<ITrip> = [
     company: [FRIENDS.SIAN_RODWAY_SMITH]
   }
 ];
+
+export const TRAVEL_2015: Array<ITrip> = [PARIS_2015, UGANDA, INTERRAILING];

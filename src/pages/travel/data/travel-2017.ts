@@ -1,6 +1,6 @@
 import { FRIENDS, COUNTRIES } from "@constants";
 
-export const TRAVEL_2017: Array<ITrip> = [
+const MILAN: ITrip = [
   {
     primaryLocations: [COUNTRIES.ITALY.cities.MILAN],
     country: COUNTRIES.ITALY,
@@ -19,7 +19,10 @@ export const TRAVEL_2017: Array<ITrip> = [
       COUNTRIES.ITALY.attractions.SEMPIONE_PARK,
       COUNTRIES.ITALY.attractions.ARCO_DELLA_PACE
     ]
-  },
+  }
+];
+
+const BARCELONA: ITrip = [
   {
     primaryLocations: [COUNTRIES.SPAIN.cities.BARCELONA],
     country: COUNTRIES.SPAIN,
@@ -35,7 +38,10 @@ export const TRAVEL_2017: Array<ITrip> = [
       COUNTRIES.SPAIN.attractions.PARK_GUELL,
       COUNTRIES.SPAIN.attractions.CIUTADELLA_PARK
     ]
-  },
+  }
+];
+
+const TENERIFE_2017: ITrip = [
   {
     primaryLocations: [COUNTRIES.SPAIN.islands.TENERIFE],
     country: COUNTRIES.SPAIN,
@@ -44,3 +50,5 @@ export const TRAVEL_2017: Array<ITrip> = [
     secondaryLocations: [COUNTRIES.SPAIN.attractions.SIAM_PARK]
   }
 ];
+
+export const TRAVEL_2017: Array<ITrip> = [TENERIFE_2017, BARCELONA, MILAN];

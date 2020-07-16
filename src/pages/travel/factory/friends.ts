@@ -3,19 +3,19 @@ import { getItemCounts, getDatesText, isInFuture, getTripTitle } from "utils";
 
 import { DATA } from "../data";
 
-const getTripsMatchingFriend = (friend: IFriend): Array<ITrip> => {
-  const tripsMatchingFriend: Array<ITrip> = [];
-  const trips: Array<ITrip> = DATA.ALL;
-  trips.forEach((trip: ITrip): void => {
+const getTripsMatchingFriend = (friend: IFriend): Array<ITripLeg> => {
+  const tripsMatchingFriend: Array<ITripLeg> = [];
+  const trips: Array<ITripLeg> = DATA.ALL_FLAT;
+  trips.forEach((trip: ITripLeg): void => {
     if (trip.company.includes(friend)) tripsMatchingFriend.push(trip);
   });
   return tripsMatchingFriend;
 };
 
 const getFriendDetails = (friend: IFriend): Array<ICountedListItemDetail> => {
-  const tripsMatchingFriend: Array<ITrip> = getTripsMatchingFriend(friend);
+  const tripsMatchingFriend: Array<ITripLeg> = getTripsMatchingFriend(friend);
   return tripsMatchingFriend.map(
-    (trip: ITrip, index: number): ICountedListItemDetail => {
+    (trip: ITripLeg, index: number): ICountedListItemDetail => {
       const { dates, youtubeId } = trip;
       return {
         index: tripsMatchingFriend.length > 1 ? index + 1 : undefined,
@@ -35,7 +35,7 @@ export const FRIENDS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
   .map(
     (friend: IFriend): ICountedListItem => ({
       text: friend.name,
-      ...getItemCounts({ item: { friend }, data: { trips: DATA.ALL } }),
+      ...getItemCounts({ item: { friend }, data: { trips: DATA.ALL_FLAT } }),
       details: getFriendDetails(friend)
     })
   );

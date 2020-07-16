@@ -1,13 +1,16 @@
 import { FRIENDS, COUNTRIES } from "@constants";
 
-export const TRAVEL_2014: Array<ITrip> = [
+const BARBADOS: ITrip = [
   {
     country: COUNTRIES.BARBADOS,
     showCountryAsTitle: true,
     dates: [new Date("2014-06-16"), new Date("2014-06-24")],
     company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON],
     secondaryLocations: [COUNTRIES.BARBADOS.attractions.HARRISONS_CAVE]
-  },
+  }
+];
+
+const THAILAND_LAOS: ITrip = [
   {
     country: COUNTRIES.THAILAND,
     primaryLocations: [
@@ -48,3 +51,5 @@ export const TRAVEL_2014: Array<ITrip> = [
     company: [FRIENDS.TONYA_FRANCE]
   }
 ];
+
+export const TRAVEL_2014: Array<ITrip> = [THAILAND_LAOS, BARBADOS];

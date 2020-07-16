@@ -1,4 +1,4 @@
-interface ITrip extends IEventCardCommon, IDates {
+interface ITripLeg extends IEventCardCommon, IDates {
   country: ICountryTemplate;
   primaryLocations?: Array<ILocation>;
   secondaryLocations?: Array<ILocation>;
@@ -7,5 +7,4 @@ interface ITrip extends IEventCardCommon, IDates {
   showCountryAsTitle?: boolean;
 }
 
-type ITripLeg = ITrip;
-type ITripLegs = Array<ITripLeg>;
+type ITrip = Array<ITripLegLeg>;

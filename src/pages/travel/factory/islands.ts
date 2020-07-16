@@ -30,7 +30,7 @@ export const ISLANDS_LIST_ITEMS: Array<ICountedListItem> = islandsAll.map(
     return {
       text: name,
       countInfoIrrelevant: insignificant,
-      ...getItemCounts({ item: { island }, data: { trips: DATA.ALL } })
+      ...getItemCounts({ item: { island }, data: { trips: DATA.ALL_FLAT } })
     };
   }
 );

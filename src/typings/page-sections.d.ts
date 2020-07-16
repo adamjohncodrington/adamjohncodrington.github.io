@@ -53,7 +53,7 @@ interface IPageSectionDataTypes {
   gigs?: Array<IGig>;
   recipes?: Array<IRecipe>;
   theatreVisits?: Array<ITheatreVisit>;
-  trips?: Array<ITrip>;
+  trips?: Array<ITripLeg>;
   vinyls?: Array<IVinyl | undefined>;
 }
 

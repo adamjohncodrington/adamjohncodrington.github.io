@@ -22,7 +22,7 @@ export const CITIES_LIST_ITEMS: Array<ICountedListItem> = Object.values(
       text: name,
       star: capital,
       countInfoIrrelevant: insignificant,
-      ...getItemCounts({ item: { city }, data: { trips: DATA.ALL } })
+      ...getItemCounts({ item: { city }, data: { trips: DATA.ALL_FLAT } })
     };
   }
 );

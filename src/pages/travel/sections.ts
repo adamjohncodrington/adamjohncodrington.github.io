@@ -87,10 +87,12 @@ const SECTION_PHOTOS_TRAVEL: IPageSection = {
 
 const SECTIONS_YEARS: Array<IPageSection> = DATA.SPLIT_BY_YEAR.map(
   (year: Array<ITrip>): IPageSection => ({
-    title: year[0].dates[0].getFullYear().toString(),
+    title: year[0][0].dates[0].getFullYear().toString(),
     count: year.length,
     data: {
-      trips: year.filter(({ dates }: ITrip): boolean => !isInFuture(dates[0]))
+      trips: year
+        .flat()
+        .filter(({ dates }: ITripLeg): boolean => !isInFuture(dates[0]))
     }
   })
 );

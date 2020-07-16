@@ -6,7 +6,7 @@ import {
   PHOTOS_TRAVEL_BRUGES
 } from "resources";
 
-export const TRAVEL_2019: Array<ITrip> = [
+const AMSTERDAM: ITrip = [
   {
     primaryLocations: [COUNTRIES.NETHERLANDS.cities.AMSTERDAM],
     country: COUNTRIES.NETHERLANDS,
@@ -22,7 +22,10 @@ export const TRAVEL_2019: Array<ITrip> = [
       FRIENDS.TOM_CHINDA_COUTTS
     ],
     photos: PHOTOS_TRAVEL_AMSTERDAM
-  },
+  }
+];
+
+const LISBON: ITrip = [
   {
     primaryLocations: [COUNTRIES.PORTUGAL.cities.LISBON],
     country: COUNTRIES.PORTUGAL,
@@ -30,7 +33,10 @@ export const TRAVEL_2019: Array<ITrip> = [
     secondaryLocations: [COUNTRIES.PORTUGAL.attractions.OCENARIO_DE_LISBOA],
     dates: [new Date("2019-02-08"), new Date("2019-02-10")],
     company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON]
-  },
+  }
+];
+
+const BRUGES: ITrip = [
   {
     primaryLocations: [COUNTRIES.BELGIUM.cities.BRUGES],
     photos: PHOTOS_TRAVEL_BRUGES,
@@ -38,14 +44,21 @@ export const TRAVEL_2019: Array<ITrip> = [
     secondaryLocations: [COUNTRIES.BELGIUM.attractions.BELFRY_OF_BRUGES],
     dates: [new Date("2019-05-17"), new Date("2019-05-19")],
     company: [FRIENDS.JAMIE_HALKET]
-  },
+  }
+];
+
+const CATANIA: ITrip = [
   {
     primaryLocations: [COUNTRIES.ITALY.cities.CATANIA],
-    country: COUNTRIES.ITALY.regions.SICILY,
-    secondaryLocations: [COUNTRIES.ITALY, COUNTRIES.ITALY.attractions.ETNA],
+    country: COUNTRIES.ITALY,
+    secondaryLocations: [COUNTRIES.ITALY.attractions.ETNA],
+    hiddenLocations: [COUNTRIES.ITALY.regions.SICILY],
     dates: [new Date("2019-07-10"), new Date("2019-07-15")],
     company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON]
-  },
+  }
+];
+
+const NICE: ITrip = [
   {
     primaryLocations: [COUNTRIES.FRANCE.cities.NICE],
     photos: PHOTOS_TRAVEL_NICE,
@@ -54,4 +67,12 @@ export const TRAVEL_2019: Array<ITrip> = [
     dates: [new Date("2019-06-08"), new Date("2019-06-14")],
     company: [FRIENDS.SIAN_RODWAY_SMITH]
   }
+];
+
+export const TRAVEL_2019: Array<ITrip> = [
+  NICE,
+  CATANIA,
+  BRUGES,
+  LISBON,
+  AMSTERDAM
 ];

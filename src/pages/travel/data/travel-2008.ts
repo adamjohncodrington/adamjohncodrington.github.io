@@ -1,6 +1,6 @@
 import { FRIENDS, COUNTRIES } from "@constants";
 
-export const TRAVEL_2008: Array<ITrip> = [
+const ROME: ITrip = [
   {
     primaryLocations: [COUNTRIES.ITALY.cities.ROME],
     country: COUNTRIES.ITALY,
@@ -11,7 +11,10 @@ export const TRAVEL_2008: Array<ITrip> = [
     ],
     dates: [new Date("2008-02-08"), new Date("2008-02-10")],
     company: [FRIENDS.EMMA_CODRINGTON, FRIENDS.DAD]
-  },
+  }
+];
+
+const PARIS_2008: ITrip = [
   {
     primaryLocations: [COUNTRIES.FRANCE.cities.PARIS],
     country: COUNTRIES.FRANCE,
@@ -36,7 +39,11 @@ export const TRAVEL_2008: Array<ITrip> = [
       FRIENDS.GEMMA_GILDERTHORP,
       FRIENDS.SARAH_WHITAKER
     ]
-  },
+  }
+];
+
+//TODO: this could be split into 2 legs
+const WASHINGTON_VIRGINIA: ITrip = [
   {
     primaryLocations: [
       COUNTRIES.USA.cities.WASHINGTON_DC,
@@ -54,11 +61,22 @@ export const TRAVEL_2008: Array<ITrip> = [
     ],
     dates: [new Date("2008-07-13"), new Date("2008-07-24")],
     company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON]
-  },
+  }
+];
+
+const VILAMOURA: ITrip = [
   {
     primaryLocations: [COUNTRIES.PORTUGAL.towns.VILAMOURA],
     country: COUNTRIES.PORTUGAL,
     dates: [new Date("2008-08-07"), new Date("2008-08-14")],
     company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON]
   }
+];
+
+//TODO: verify that this is re-ordered by date
+export const TRAVEL_2008: Array<ITrip> = [
+  VILAMOURA,
+  WASHINGTON_VIRGINIA,
+  PARIS_2008,
+  ROME
 ];

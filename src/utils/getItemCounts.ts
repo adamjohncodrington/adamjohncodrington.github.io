@@ -4,7 +4,7 @@ interface IGetItemCounts {
   data: {
     gigs?: Array<IGig>;
     theatreVisits?: Array<ITheatreVisit>;
-    trips?: Array<ITrip>;
+    trips?: Array<ITripLeg>;
   };
   item: {
     actor?: IActor;
@@ -41,7 +41,7 @@ export const musicianMatchExists = (
 //TODO: merge these 3
 export const countryMatchExists = (
   country: ICountryTemplate,
-  trip: ITrip
+  trip: ITripLeg
 ): boolean => {
   const { primaryLocations, secondaryLocations, hiddenLocations } = trip;
 
@@ -52,7 +52,7 @@ export const countryMatchExists = (
   return false;
 };
 
-export const cityMatchExists = (city: ICity, trip: ITrip): boolean => {
+export const cityMatchExists = (city: ICity, trip: ITripLeg): boolean => {
   const { primaryLocations, secondaryLocations, hiddenLocations } = trip;
 
   if (primaryLocations && primaryLocations.includes(city)) return true;
@@ -63,7 +63,7 @@ export const cityMatchExists = (city: ICity, trip: ITrip): boolean => {
 
 export const attractionMatchExists = (
   attraction: IAttraction,
-  trip: ITrip
+  trip: ITripLeg
 ): boolean => {
   const { primaryLocations, secondaryLocations, hiddenLocations } = trip;
 
@@ -74,7 +74,7 @@ export const attractionMatchExists = (
   return false;
 };
 
-const islandMatchExists = (island: IIsland, trip: ITrip): boolean => {
+const islandMatchExists = (island: IIsland, trip: ITripLeg): boolean => {
   const { primaryLocations, secondaryLocations, hiddenLocations } = trip;
 
   if (primaryLocations && primaryLocations.includes(island)) return true;
@@ -125,7 +125,7 @@ export const getItemCounts = ({
 
   trips &&
     (attraction || city || country || friend || island) &&
-    trips.forEach((trip: ITrip): void => {
+    trips.forEach((trip: ITripLeg): void => {
       const { company, dates } = trip;
       if (
         (attraction && attractionMatchExists(attraction, trip)) ||

@@ -2,7 +2,7 @@ import { FRIENDS, COUNTRIES } from "@constants";
 
 const ecuadorAndPeruYouTubeId: string = "lteCbkamhcQ";
 
-export const TRAVEL_2016: Array<ITrip> = [
+const DUBLIN: ITrip = [
   {
     primaryLocations: [COUNTRIES.IRELAND.cities.DUBLIN],
     country: COUNTRIES.IRELAND,
@@ -13,14 +13,20 @@ export const TRAVEL_2016: Array<ITrip> = [
       COUNTRIES.IRELAND.attractions.ST_STEPHENS_GREEN_PARK,
       COUNTRIES.IRELAND.attractions.GUINNESS_STOREHOUSE
     ]
-  },
+  }
+];
+
+const TAVIRA: ITrip = [
   {
     primaryLocations: [COUNTRIES.PORTUGAL.towns.TAVIRA],
     favourite: true,
     country: COUNTRIES.PORTUGAL,
     dates: [new Date("2016-06-09"), new Date("2016-06-16")],
     company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON]
-  },
+  }
+];
+
+const ECUADOR_PERU: ITrip = [
   {
     country: COUNTRIES.ECUADOR,
     primaryLocations: [
@@ -68,7 +74,10 @@ export const TRAVEL_2016: Array<ITrip> = [
     ],
     dates: [new Date("2016-10-17"), new Date("2016-11-10")],
     company: [FRIENDS.SARAH_WHITAKER]
-  },
+  }
+];
+
+const BRAZIL: ITrip = [
   {
     country: COUNTRIES.BRAZIL,
     favourite: true,
@@ -91,3 +100,5 @@ export const TRAVEL_2016: Array<ITrip> = [
     company: [FRIENDS.SIAN_RODWAY_SMITH]
   }
 ];
+
+export const TRAVEL_2016: Array<ITrip> = [TAVIRA, BRAZIL, ECUADOR_PERU, DUBLIN];

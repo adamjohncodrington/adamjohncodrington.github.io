@@ -1,6 +1,6 @@
 import { FRIENDS, COUNTRIES } from "@constants";
 
-export const TRAVEL_2011: Array<ITrip> = [
+const CORNWALL_2011: ITrip = [
   {
     primaryLocations: [COUNTRIES.UK.regions.CORNWALL],
     notAbroad: true,
@@ -15,7 +15,10 @@ export const TRAVEL_2011: Array<ITrip> = [
       FRIENDS.CARMEN_DALGLISH,
       FRIENDS.KYLE_HOUGH
     ]
-  },
+  }
+];
+
+const FLORIDA_KEYS: ITrip = [
   {
     primaryLocations: [COUNTRIES.USA.regions.FLORIDA_KEYS],
     secondaryLocations: [
@@ -27,3 +30,5 @@ export const TRAVEL_2011: Array<ITrip> = [
     country: COUNTRIES.USA
   }
 ];
+
+export const TRAVEL_2011: Array<ITrip> = [CORNWALL_2011, FLORIDA_KEYS];

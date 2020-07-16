@@ -29,7 +29,7 @@ export const HIGHLIGHTS_LIST_ITEMS: Array<ICountedListItem> = highlights.map(
     text: highlight.name,
     ...getItemCounts({
       item: { attraction: highlight },
-      data: { trips: DATA.ALL }
+      data: { trips: DATA.ALL_FLAT }
     })
   })
 );
@@ -39,7 +39,7 @@ export const THEME_PARKS_LIST_ITEMS: Array<ICountedListItem> = themeParks.map(
     text: themePark.name,
     ...getItemCounts({
       item: { attraction: themePark },
-      data: { trips: DATA.ALL }
+      data: { trips: DATA.ALL_FLAT }
     })
   })
 );

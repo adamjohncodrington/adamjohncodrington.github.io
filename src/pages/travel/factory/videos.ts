@@ -1,9 +1,9 @@
 import { DATA } from "../data";
 
-export const VIDEOS: Array<ITrip> = DATA.ALL.filter(
-  ({ youtubeId }: ITrip): boolean => !!youtubeId
+export const VIDEOS: Array<ITripLeg> = DATA.ALL_FLAT.filter(
+  ({ youtubeId }: ITripLeg): boolean => !!youtubeId
 ).map(
-  (gig: ITrip): ITrip => ({
+  (gig: ITripLeg): ITripLeg => ({
     ...gig,
     hideCompany: true,
     hideSubtitle: true,
@@ -11,6 +11,3 @@ export const VIDEOS: Array<ITrip> = DATA.ALL.filter(
     hideSecondaryBody: true
   })
 );
-// .sort((a: IGig, b: IGig) =>
-//   a.dates[0].valueOf() < b.dates[0].valueOf() ? 1 : -1
-// );
