@@ -1,21 +1,16 @@
 {
   "files": {
-    "main.js": "/static/js/main.d9b0b1f2.chunk.js",
-    "main.js.map": "/static/js/main.d9b0b1f2.chunk.js.map",
+    "main.js": "/static/js/main.b5d9c55e.chunk.js",
+    "main.js.map": "/static/js/main.b5d9c55e.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.27f1f56c.js",
     "runtime-main.js.map": "/static/js/runtime-main.27f1f56c.js.map",
     "static/js/2.20b1de92.chunk.js": "/static/js/2.20b1de92.chunk.js",
     "static/js/2.20b1de92.chunk.js.map": "/static/js/2.20b1de92.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.0d5fe37fa28b9c930cb10c639cd84321.js": "/precache-manifest.0d5fe37fa28b9c930cb10c639cd84321.js",
+    "precache-manifest.57fcaf2c85c7d4141b02c1be0fc26d0e.js": "/precache-manifest.57fcaf2c85c7d4141b02c1be0fc26d0e.js",
     "service-worker.js": "/service-worker.js",
     "static/js/2.20b1de92.chunk.js.LICENSE.txt": "/static/js/2.20b1de92.chunk.js.LICENSE.txt",
     "static/media/1975_brief-inquiry.jpg": "/static/media/1975_brief-inquiry.450622e7.jpg",
-    "static/media/MP4_BANKS.mp4": "/static/media/MP4_BANKS.454aada9.mp4",
-    "static/media/MP4_CHARLI.mp4": "/static/media/MP4_CHARLI.d002d2d3.mp4",
-    "static/media/MP4_GRACEY.mp4": "/static/media/MP4_GRACEY.03f5821a.mp4",
-    "static/media/MP4_LEON.mp4": "/static/media/MP4_LEON.53eb5805.mp4",
-    "static/media/MP4_MUNA.mp4": "/static/media/MP4_MUNA.efe37a8c.mp4",
     "static/media/adele_19.jpg": "/static/media/adele_19.e2cf5b85.jpg",
     "static/media/allie-x_super-sunset.jpg": "/static/media/allie-x_super-sunset.e4ba903d.jpg",
     "static/media/amy-winehouse_btb.jpg": "/static/media/amy-winehouse_btb.ecf94e06.jpg",
@@ -106,6 +101,6 @@
   "entrypoints": [
     "static/js/runtime-main.27f1f56c.js",
     "static/js/2.20b1de92.chunk.js",
-    "static/js/main.d9b0b1f2.chunk.js"
+    "static/js/main.b5d9c55e.chunk.js"
   ]
 }
