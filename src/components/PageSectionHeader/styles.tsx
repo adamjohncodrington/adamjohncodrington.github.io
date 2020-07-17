@@ -25,10 +25,19 @@ export const PageSectionStarredCount = styled(PageSectionCount)(
 );
 
 export const PageSectionSvgContainer = styled.div(
-  ({ theme: { pageSection } }: IThemeProp) => css`
+  ({
+    theme: {
+      pageSection: {
+        icon: { size }
+      }
+    }
+  }: IThemeProp) => css`
+    display: flex;
+    align-items: center;
+
     svg {
-      height: ${pageSection.icon.size};
-      width: ${pageSection.icon.size};
+      height: ${size};
+      width: ${size};
     }
   `
 );
