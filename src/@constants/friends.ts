@@ -162,7 +162,7 @@ export const POLE_INSTRUCTORS: IPoleInstructors = {
   JANE: { name: "Jane Giles", initials: "JG" },
   LAETITIA: { name: "Laetitia Tigra", initials: "LT" },
   MARINE: { name: "Marine Canaguier", initials: "MC", stageName: "Nanar Jinx" },
-  MEL: { name: "Mel", initials: "M", stageName: "Elly Flowers" },
+  MEL: { name: "Mel Hua", initials: "MH", stageName: "Elly Flowers" },
   SARAH: { name: "Sarah Elliott", initials: "SE" },
   VERONICA: { name: "Veronica Cebotari", initials: "VC" }
 };
