@@ -10,7 +10,9 @@ const ALL: Array<ITheatreVisit> = [
   ...THEATRE_2018,
   ...THEATRE_2019,
   ...THEATRE_2020
-];
+].sort((a: ITheatreVisit, b: ITheatreVisit): number =>
+  a.date.valueOf() > b.date.valueOf() ? 1 : -1
+);
 
 const SPLIT_BY_YEAR: Array<Array<ITheatreVisit>> = [
   THEATRE_2016,
@@ -18,6 +20,11 @@ const SPLIT_BY_YEAR: Array<Array<ITheatreVisit>> = [
   THEATRE_2018,
   THEATRE_2019,
   THEATRE_2020
-];
+].map(
+  (year: Array<ITheatreVisit>): Array<ITheatreVisit> =>
+    year.sort((a: ITheatreVisit, b: ITheatreVisit): number =>
+      a.date.valueOf() > b.date.valueOf() ? 1 : -1
+    )
+);
 
 export const DATA = { ALL, SPLIT_BY_YEAR };

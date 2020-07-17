@@ -2,6 +2,13 @@ import { PLAYS, THEATRE_VENUES, FRIENDS, ACTORS } from "@constants";
 
 export const THEATRE_2019: Array<ITheatreVisit> = [
   {
+    play: PLAYS.HOME_IM_DARLING,
+    cast: [ACTORS.KATHERINE_PARKINSON],
+    theatre: THEATRE_VENUES.DUKE_OF_YORKS,
+    date: new Date("2019-03-04"),
+    company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON]
+  },
+  {
     play: PLAYS.WICKED,
     theatre: THEATRE_VENUES.APOLLO_VICTORIA,
     date: new Date("2019-01-12"),
@@ -13,13 +20,7 @@ export const THEATRE_2019: Array<ITheatreVisit> = [
     date: new Date("2019-01-22"),
     company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON]
   },
-  {
-    play: PLAYS.HOME_IM_DARLING,
-    cast: [ACTORS.KATHERINE_PARKINSON],
-    theatre: THEATRE_VENUES.DUKE_OF_YORKS,
-    date: new Date("2019-03-04"),
-    company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON]
-  },
+
   {
     play: PLAYS.MIDSUMMER_NIGHTS_DREAM,
     cast: [
