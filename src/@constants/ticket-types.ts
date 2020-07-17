@@ -11,5 +11,6 @@ export const TICKET_TYPES: ITicketTypes = {
   SEE_TICKETS_PRINT_AT_HOME: "SeeTickets print-at-home",
   // T
   TICKETWEB: `Ticketweb PDF`,
+  TICKETMASTER_POSTAL: "Ticketmaster postal",
   TICKETMASTER_ETICKET: "Ticketmaster eTicket"
 };

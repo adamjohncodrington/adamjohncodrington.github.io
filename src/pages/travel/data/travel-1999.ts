@@ -18,4 +18,4 @@ const MINORCA_1999: ITrip = [
   }
 ];
 
-export const TRAVEL_1999: Array<ITrip> = [DISNEYLAND_PARIS, MINORCA_1999];
+export const TRAVEL_1999: Array<ITrip> = [MINORCA_1999, DISNEYLAND_PARIS];

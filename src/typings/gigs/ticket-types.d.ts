@@ -7,5 +7,6 @@ interface ITicketTypes {
   KABOODLE_ETICKET: ITicketType;
   SEE_TICKETS_PRINT_AT_HOME: ITicketType;
   TICKETWEB: ITicketType;
+  TICKETMASTER_POSTAL: ITicketType;
   TICKETMASTER_ETICKET: ITicketType;
 }

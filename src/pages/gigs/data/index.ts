@@ -32,7 +32,9 @@ const ALL: Array<IGig> = [
   ...GIGS_2019,
   ...GIGS_2020,
   ...GIGS_2021
-];
+].sort((a: IGig, b: IGig): number =>
+  a.dates[0].valueOf() > b.dates[0].valueOf() ? 1 : -1
+);
 
 const SPLIT_BY_YEAR: Array<Array<IGig>> = [
   GIGS_2006,
@@ -51,6 +53,11 @@ const SPLIT_BY_YEAR: Array<Array<IGig>> = [
   GIGS_2019,
   GIGS_2020,
   GIGS_2021
-];
+].map(
+  (year: Array<IGig>): Array<IGig> =>
+    year.sort((a: IGig, b: IGig): number =>
+      a.dates[0].valueOf() > b.dates[0].valueOf() ? 1 : -1
+    )
+);
 
 export const DATA = { ALL, SPLIT_BY_YEAR };

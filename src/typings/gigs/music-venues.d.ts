@@ -27,6 +27,7 @@ interface IMusicVenuesLondon {
   KOKO: IMusicVenue;
   LAFAYETTE: IMusicVenue;
   LAYLOW: IMusicVenue;
+  LONDON_PALLADIUM: IMusicVenue;
   LONDON_STADIUM: IMusicVenue;
   MINISTRY_OF_SOUND: IMusicVenue;
   MOTH_CLUB: IMusicVenue;

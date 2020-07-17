@@ -48,7 +48,9 @@ const ALL: Array<ITrip> = [
   ...TRAVEL_2018,
   ...TRAVEL_2019,
   ...TRAVEL_2020
-];
+].sort((a: ITrip, b: ITrip): number =>
+  a[0].dates[0].valueOf() > b[0].dates[0].valueOf() ? 1 : -1
+);
 
 const ALL_FLAT: Array<ITripLeg> = ALL.flat();
 
@@ -77,6 +79,11 @@ const SPLIT_BY_YEAR: Array<Array<ITrip>> = [
   TRAVEL_2018,
   TRAVEL_2019,
   TRAVEL_2020
-];
+].map(
+  (year: Array<ITrip>): Array<ITrip> =>
+    year.sort((a: ITrip, b: ITrip): number =>
+      a[0].dates[0].valueOf() > b[0].dates[0].valueOf() ? 1 : -1
+    )
+);
 
 export const DATA = { ALL, ALL_FLAT, SPLIT_BY_YEAR };

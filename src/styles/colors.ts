@@ -64,19 +64,3 @@ export const COLORS: IColors = {
   buddhaGold: "#CCA100",
   sandyBrown: "#F2A652"
 };
-
-interface IPageColors {
-  GIGS: ColorValue;
-  RECIPES: ColorValue;
-  THEATRE: ColorValue;
-  TRAVEL: ColorValue;
-  VINYL: ColorValue;
-}
-
-export const PAGE_COLORS: IPageColors = {
-  GIGS: COLORS.amethystSmoke,
-  RECIPES: COLORS.avocado,
-  THEATRE: COLORS.hillary,
-  TRAVEL: COLORS.baliHai,
-  VINYL: COLORS.turkishRose
-};

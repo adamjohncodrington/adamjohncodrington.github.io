@@ -36,6 +36,7 @@ const MUSIC_VENUES_LONDON: IMusicVenuesLondon = {
   // L
   LAFAYETTE: { name: "Lafayette" },
   LAYLOW: { name: "Laylow" },
+  LONDON_PALLADIUM: { name: "London Palladium" },
   LONDON_STADIUM: { name: "London Stadium" },
   // M
   MINISTRY_OF_SOUND: { name: "Ministry of Sound" },

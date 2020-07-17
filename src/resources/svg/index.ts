@@ -10,6 +10,7 @@ export { ReactComponent as SvgMicrophone } from "./microphone.svg";
 export { ReactComponent as SvgNotepad } from "./notepad.svg";
 export { ReactComponent as SvgPalmTree } from "./palm-tree.svg";
 export { ReactComponent as SvgPeaceSign } from "./peace-sign.svg";
+export { ReactComponent as SvgPole } from "./pole-1.svg";
 export { ReactComponent as SvgRollerCoaster } from "./roller-coaster.svg";
 export { ReactComponent as SvgStadium } from "./stadium.svg";
 export { ReactComponent as SvgStars } from "./stars.svg";
