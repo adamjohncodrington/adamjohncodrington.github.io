@@ -4,6 +4,13 @@ import * as SIDES from "./sides";
 import * as SWEETS from "./sweets";
 import { RECIPES_COMING_SOON as COMING_SOON } from "./recipes-coming-soon";
 
+const ALL: Array<IRecipe> = Object.values({
+  ...MAINS,
+  ...SAUCES,
+  ...SIDES,
+  ...SWEETS
+});
+
 const mains: IRecipeGroup = {
   title: "Mains",
   recipes: [
@@ -52,4 +59,4 @@ const sweets: IRecipeGroup = {
 
 const CATEGORISED: Array<IRecipeGroup> = [mains, sides, sauces, sweets];
 
-export const DATA = { CATEGORISED, COMING_SOON };
+export const DATA = { ALL, CATEGORISED, COMING_SOON };

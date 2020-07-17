@@ -1,7 +1,6 @@
 # TO DO LIST
 
 - beef up POLE section
-- add photos section to recipes page?
 - refactor `ITicketType` as `{ retailer, format }`
 
 ## Enhancements
