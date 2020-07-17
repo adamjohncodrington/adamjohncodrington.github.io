@@ -8,7 +8,7 @@ const SECTIONS_RECIPE_GROUPS: Array<IPageSection> = DATA.CATEGORISED.map(
   ({ title, recipes }: IRecipeGroup): IPageSection => ({
     title: title,
     data: { recipes: recipes },
-    staticIf2Columns: true
+    autoExpandIf2Columns: true
   })
 );
 
