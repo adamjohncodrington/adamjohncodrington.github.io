@@ -8,6 +8,7 @@ export const TICKET_TYPES: ITicketTypes = {
   // K
   KABOODLE_ETICKET: "Kaboodle eTicket",
   // S
+  SEE_TICKETS_POSTAL: "SeeTickets postal",
   SEE_TICKETS_PRINT_AT_HOME: "SeeTickets print-at-home",
   // T
   TICKETWEB: `Ticketweb PDF`,

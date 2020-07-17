@@ -1,6 +1,15 @@
 import { FRIENDS, MUSICIANS, TICKET_TYPES, MUSIC_VENUES } from "@constants";
 
+const CELESTE_SHEPHERDS_BUSH: IGig = {
+  headline: MUSICIANS.CELESTE,
+  venue: MUSIC_VENUES.SHEPHERDS_BUSH_EMPIRE,
+  dates: [new Date("2020-08-11")],
+  company: [FRIENDS.DARREN_TAYLOR]
+};
+
 export const GIGS_2020: Array<IGig> = [
+  CELESTE_SHEPHERDS_BUSH,
+
   {
     headline: MUSICIANS.GRACEY,
     venue: MUSIC_VENUES.LAYLOW,

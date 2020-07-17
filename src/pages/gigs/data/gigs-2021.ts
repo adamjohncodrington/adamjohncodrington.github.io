@@ -6,6 +6,14 @@ import {
   MUSIC_VENUES
 } from "@constants";
 
+const RATIONALE: IGig = {
+  headline: MUSICIANS.RATIONALE,
+  venue: MUSIC_VENUES.SHEPHERDS_BUSH_EMPIRE,
+  dates: [new Date("2021-04-28")],
+  company: [FRIENDS.DARREN_TAYLOR],
+  ticketType: TICKET_TYPES.SEE_TICKETS_POSTAL
+};
+
 const JESSIE_WARE_BRIXTON: IGig = {
   headline: MUSICIANS.JESSIE_WARE,
   venue: MUSIC_VENUES.BRIXTON_ACADEMY,
@@ -62,6 +70,7 @@ const SOPHIE_ELLIS_BEXTOR: IGig = {
 
 export const GIGS_2021: Array<IGig> = [
   MIGHTY_HOOPLA_2021,
+  RATIONALE,
   SOPHIE_ELLIS_BEXTOR,
   FINSBURY_1975_2021,
   JESSIE_WARE_BRIXTON,

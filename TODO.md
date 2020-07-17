@@ -1,6 +1,7 @@
 # TO DO LIST
 
 - add photos section to recipes page?
+- refactor `ITicketType` as `{ retailer, format }`
 
 ## Enhancements
 
