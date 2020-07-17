@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.20edcb45.chunk.js",
-    "main.js.map": "/static/js/main.20edcb45.chunk.js.map",
+    "main.js": "/static/js/main.5e9db2b2.chunk.js",
+    "main.js.map": "/static/js/main.5e9db2b2.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.27f1f56c.js",
     "runtime-main.js.map": "/static/js/runtime-main.27f1f56c.js.map",
     "static/js/2.9a1bbd3b.chunk.js": "/static/js/2.9a1bbd3b.chunk.js",
     "static/js/2.9a1bbd3b.chunk.js.map": "/static/js/2.9a1bbd3b.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.f7139ced2502dbc1fe51abd2438af119.js": "/precache-manifest.f7139ced2502dbc1fe51abd2438af119.js",
+    "precache-manifest.9e828a6bf6139f8bb87854641bd4211d.js": "/precache-manifest.9e828a6bf6139f8bb87854641bd4211d.js",
     "service-worker.js": "/service-worker.js",
     "static/js/2.9a1bbd3b.chunk.js.LICENSE.txt": "/static/js/2.9a1bbd3b.chunk.js.LICENSE.txt",
     "static/media/artist.6b1569d5.svg": "/static/media/artist.6b1569d5.svg",
@@ -17,12 +17,13 @@
     "static/media/city.e57fc0ca.svg": "/static/media/city.e57fc0ca.svg",
     "static/media/flag.b4a08446.svg": "/static/media/flag.b4a08446.svg",
     "static/media/map-pin.71135c81.svg": "/static/media/map-pin.71135c81.svg",
-    "static/media/masks.d8da85e9.svg": "/static/media/masks.d8da85e9.svg",
+    "static/media/masks.b3a48fe0.svg": "/static/media/masks.b3a48fe0.svg",
     "static/media/microphone.45f98fc5.svg": "/static/media/microphone.45f98fc5.svg",
     "static/media/notepad.4eca818e.svg": "/static/media/notepad.4eca818e.svg",
     "static/media/palm-tree.4f07f732.svg": "/static/media/palm-tree.4f07f732.svg",
     "static/media/peace-sign.045db1fc.svg": "/static/media/peace-sign.045db1fc.svg",
-    "static/media/people.af13270c.svg": "/static/media/people.af13270c.svg",
+    "static/media/people.0b77c720.svg": "/static/media/people.0b77c720.svg",
+    "static/media/pole-1.95e5965d.svg": "/static/media/pole-1.95e5965d.svg",
     "static/media/roller-coaster.6bcd9568.svg": "/static/media/roller-coaster.6bcd9568.svg",
     "static/media/stadium.5bff58bb.svg": "/static/media/stadium.5bff58bb.svg",
     "static/media/stars.86e33730.svg": "/static/media/stars.86e33730.svg",
@@ -35,6 +36,6 @@
   "entrypoints": [
     "static/js/runtime-main.27f1f56c.js",
     "static/js/2.9a1bbd3b.chunk.js",
-    "static/js/main.20edcb45.chunk.js"
+    "static/js/main.5e9db2b2.chunk.js"
   ]
 }

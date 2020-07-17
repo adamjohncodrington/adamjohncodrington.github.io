@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "204012e7111e5dc7180b045ff85d31f2",
+    "revision": "ec1a1cf37626927245f3ddef49b4edce",
     "url": "/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.9a1bbd3b.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8b5b5bf9a73fd2094479",
-    "url": "/static/js/main.20edcb45.chunk.js"
+    "revision": "1bcb0fc82a2596b315a6",
+    "url": "/static/js/main.5e9db2b2.chunk.js"
   },
   {
     "revision": "3cf57b419839acabd216",
@@ -48,8 +48,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/map-pin.71135c81.svg"
   },
   {
-    "revision": "d8da85e9c953b39ee2d6abe63dbf9a8c",
-    "url": "/static/media/masks.d8da85e9.svg"
+    "revision": "b3a48fe0e2dc3462b4e8e37ebca09af1",
+    "url": "/static/media/masks.b3a48fe0.svg"
   },
   {
     "revision": "45f98fc5fda14c916ab52e67a8593a5f",
@@ -68,8 +68,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/peace-sign.045db1fc.svg"
   },
   {
-    "revision": "af13270c2a54ade62bc1d0edaef5a2b9",
-    "url": "/static/media/people.af13270c.svg"
+    "revision": "0b77c72022d7c64b9cf5ced8d1214707",
+    "url": "/static/media/people.0b77c720.svg"
+  },
+  {
+    "revision": "95e5965d742949695bfd6dcd49b6b2aa",
+    "url": "/static/media/pole-1.95e5965d.svg"
   },
   {
     "revision": "6bcd95684afbb98c3741738c34f1a1a7",
