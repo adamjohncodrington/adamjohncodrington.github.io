@@ -43,7 +43,8 @@ const ELLIE_G_HAMMERSMITH: IGig = {
   headline: MUSICIANS.ELLIE_GOULDING,
   venue: MUSIC_VENUES.HAMMERSMITH_APOLLO,
   dates: [new Date("2021-05-06")],
-  company: []
+  company: [FRIENDS.DAN_SPARROW],
+  ticketType: TICKET_TYPES.TICKETMASTER_POSTAL
 };
 
 const FINSBURY_1975_2021: IGig = {
