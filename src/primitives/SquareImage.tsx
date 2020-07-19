@@ -16,7 +16,7 @@ const StyledImage = styled.img(
 
 interface ISquareImage extends IClassName {
   dataTest?: string;
-  imgSrc: string;
+  imgSrc: IPhoto;
   size: string;
 }
 

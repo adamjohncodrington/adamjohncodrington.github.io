@@ -60,7 +60,7 @@ const method: Array<string> = [
 
 const title: string = "Crispy Kale";
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IJpgSrc = JPG_KALE_CRISPY;
+const image: IPhoto = JPG_KALE_CRISPY;
 const makes: IRecipeMakes = { quantity: 2, measurement: MEASUREMENTS.SERVING };
 
 const totalCost: number = calculateRecipeCost(ingredients, title);

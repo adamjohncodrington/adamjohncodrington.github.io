@@ -31,7 +31,7 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
   theatreVisits,
   trips,
   vinyls,
-  photos
+  photoGrid
 }) => {
   const pageSectionPanelType: string = recipes
     ? PAGE_SECTION_PANEL_TYPES.RECIPE_CARDS
@@ -105,8 +105,12 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
             )
         )}
 
-      {photos && (
-        <PhotoGrid columnCount={photos.columnCount} photos={photos.urls} />
+      {/* TODO: spread this??? */}
+      {photoGrid && (
+        <PhotoGrid
+          columnCount={photoGrid.columnCount}
+          photos={photoGrid.photos}
+        />
       )}
 
       {countedListItems &&

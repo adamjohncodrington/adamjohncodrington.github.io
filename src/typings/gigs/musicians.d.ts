@@ -1,7 +1,7 @@
 interface IAlbum {
   title: string;
   year: number;
-  artwork: IJpgSrc;
+  artwork: IPhoto;
   appleMusicUrl: string;
   notes?: string;
   purchased?: boolean;

@@ -1,10 +1,12 @@
 # TO DO LIST
 
+- make a Thailand video
+- add photos to Thailand, Laos, Ecuador and Peru to establish how video will work
 - beef up POLE section
 - refactor `ITicketType` as `{ retailer, format }`
 - store YouTube IDs in 1 place
 - make YouTube videos play in HD
-- add "randomise" prop to `PhotoGrid`
+- rationalise all types, they are getting inconsistent and difficult to work with
 
 ## Enhancements
 
@@ -26,6 +28,7 @@
 
 ## Refactoring
 
+- avoid `| undefined` at all costs where possible
 - separate gigs and festivals????
 - move `CountedListItemDetails` style values to theme??
 - review semantics of page structure, landmarks, accessibility, etc.

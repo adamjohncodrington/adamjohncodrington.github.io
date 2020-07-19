@@ -74,7 +74,7 @@ const method: Array<string> = [
 const title: string = "Baked Beans";
 const makes: IRecipeMakes = { quantity: 4, measurement: MEASUREMENTS.PORTION };
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IJpgSrc = JPG_BAKED_BEANS;
+const image: IPhoto = JPG_BAKED_BEANS;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;

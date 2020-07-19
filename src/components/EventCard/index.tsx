@@ -101,8 +101,7 @@ export const EventCard: React.FC<IEventCard> = ({
         Panel={
           <>
             {youtubeId && <YouTubeVideo youtubeId={youtubeId} />}
-
-            {<PhotoGrid photos={photos} />}
+            {photos && <PhotoGrid photos={photos} columnCount={2} />}
           </>
         }
       />

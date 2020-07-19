@@ -73,7 +73,7 @@ const method: Array<string> = [
 
 const title: string = "Brownies";
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IJpgSrc = JPG_BROWNIES;
+const image: IPhoto = JPG_BROWNIES;
 
 export const BROWNIES: IRecipe = {
   ingredients,

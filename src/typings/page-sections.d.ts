@@ -49,7 +49,7 @@ interface IPageSectionDisclosure extends IOnlyHeaderClicable {
 
 interface IPageSectionDataTypes {
   countedListItems?: Array<ICountedListItem>;
-  photos?: { urls: Array<IPhoto>; columnCount: number };
+  photoGrid?: { photos: Array<IPhoto>; columnCount: number };
   gigs?: Array<IGig>;
   recipes?: Array<IRecipe>;
   theatreVisits?: Array<ITheatreVisit>;

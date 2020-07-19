@@ -13,23 +13,21 @@ interface IDates {
   dates: Array<Date>;
 }
 
-type IPhoto = IPhoto;
-
-interface IPhotos {
-  photos?: Array<IPhoto>;
-  hidePhotosIcon?: boolean;
-}
 interface IYouTubeVideo {
   youtubeId: string;
 }
+
 interface IVideo {
   youtubeId?: string;
   hideVideoIcon?: boolean;
 }
-interface IEventCardCommon extends ICompany, IFavourite, IPhotos, IVideo {
+interface IEventCardCommon extends ICompany, IFavourite, IVideo {
   hideSubtitle?: boolean;
+  photos?: Array<IPhoto>;
+
   hideCompany?: boolean;
   hideSecondaryBody?: boolean;
+  hidePhotosIcon?: boolean;
 }
 
 interface IEventCard extends IEventCardCommon {
@@ -39,4 +37,10 @@ interface IEventCard extends IEventCardCommon {
   secondaryBody?: string;
   countdownText?: string;
   note?: string;
+}
+
+interface IPhotoGrid {
+  photos: Array<IPhoto>;
+  columnCount: number;
+  randomise?: boolean;
 }

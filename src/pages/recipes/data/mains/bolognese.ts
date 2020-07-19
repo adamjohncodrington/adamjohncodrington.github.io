@@ -106,7 +106,7 @@ const method: Array<string> = [
 
 const title: string = "Bolognese";
 const makes: IRecipeMakes = { quantity: 5, measurement: MEASUREMENTS.PORTION };
-const image: IJpgSrc = JPG_BOLOGNESE;
+const image: IPhoto = JPG_BOLOGNESE;
 const diet: IRecipeDiet = DIETS.VEGAN;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);

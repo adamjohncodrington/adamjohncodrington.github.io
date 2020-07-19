@@ -48,7 +48,7 @@ const method: Array<string> = [
 const title: string = "Porridge";
 const makes: IRecipeMakes = { quantity: 1, measurement: MEASUREMENTS.PORTION };
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IJpgSrc = JPG_PORRIDGE;
+const image: IPhoto = JPG_PORRIDGE;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
 

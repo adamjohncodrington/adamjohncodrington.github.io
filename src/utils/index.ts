@@ -6,6 +6,7 @@ export * from "./getItemCounts";
 export * from "./daysToGo";
 export * from "./detailsContainsFavourite";
 export * from "./getCountdownText";
+export * from "./shuffleArray";
 export * from "./concatenateQuantityAndMeasurement";
 export * from "./useMediaQueries";
 export * from "./getIngredientsHeader";

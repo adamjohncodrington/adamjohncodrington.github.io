@@ -63,7 +63,7 @@ const method: Array<string> = [
 const title: string = "Flapjacks";
 const makes: IRecipeMakes = { quantity: 12, measurement: MEASUREMENTS.CHUNK };
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IJpgSrc = JPG_FLAPJACKS;
+const image: IPhoto = JPG_FLAPJACKS;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;

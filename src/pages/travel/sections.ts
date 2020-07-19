@@ -81,7 +81,7 @@ const SECTION_VIDEOS_TRAVEL: IPageSection = {
 const SECTION_PHOTOS_TRAVEL: IPageSection = {
   SvgIcon: SvgCamera,
   title: PAGE_SECTION_TITLES.PHOTOS,
-  data: { photos: { urls: FACTORY.PHOTOS, columnCount: 4 } },
+  data: { photoGrid: { photos: FACTORY.PHOTOS, columnCount: 4 } },
   count: FACTORY.PHOTOS.length
 };
 

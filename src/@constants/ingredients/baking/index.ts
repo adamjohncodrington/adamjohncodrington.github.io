@@ -1,6 +1,6 @@
 import { MEASUREMENTS } from "../../measurements";
 
-import { FLOUR } from "./flour";
+import * as FLOUR from "./flour";
 import { SUGAR } from "./sugar";
 import { SYRUPS } from "./syrups";
 

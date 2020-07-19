@@ -56,7 +56,7 @@ const method: Array<string> = [
 const title: string = "Blueberry Pancakes";
 const diet: IRecipeDiet = DIETS.VEGETARIAN;
 const makes: IRecipeMakes = { quantity: 13 };
-const image: IJpgSrc = JPG_BLUEBERRY_PANCAKES;
+const image: IPhoto = JPG_BLUEBERRY_PANCAKES;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;

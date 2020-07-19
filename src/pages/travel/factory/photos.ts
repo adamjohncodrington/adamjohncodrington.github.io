@@ -5,5 +5,5 @@ const tripsWithPhotos: Array<ITripLeg> = DATA.ALL_FLAT.filter(
 );
 
 export const PHOTOS: Array<IPhoto> = tripsWithPhotos
-  .map(({ photos }: ITripLeg): Array<IJpgSrc> | undefined => photos)
+  .map(({ photos }: ITripLeg): Array<IPhoto> | undefined => photos)
   .flat();

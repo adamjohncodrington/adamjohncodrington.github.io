@@ -6,24 +6,23 @@ export const SAINSBURYS_SEASONING_COST: IIngredientCost = {
   price: 1
 };
 
+const GRAM: string = "g";
+const KILOGRAM: string = "kg";
+const TEASPOON: string = "tsp";
+const MILLILITRE: string = "ml";
+const LITRE: string = "L";
+const CENTIMETRE: string = "cm";
+const CAN: string = "can";
+
 export const MEASUREMENTS: IMeasurements = {
-  // WEIGHT
-  GRAM: "g",
-  KILOGRAM: "kg",
-
-  // SPOONS
-  TEASPOON: "tsp",
+  GRAM,
+  KILOGRAM,
+  TEASPOON,
   TABLESPOON,
-
-  // CAPACITY
-  MILLILITRE: "ml",
-  LITRE: "L",
-
-  // LENGTH
-  CENTIMETRE: "cm",
-
-  // COLLOQUIAL
-  CAN: "can",
+  MILLILITRE,
+  LITRE,
+  CENTIMETRE,
+  CAN,
   SPRIG: "sprig",
   SLICE: "slice",
   JAR: "jar",
