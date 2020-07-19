@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5986bf3e411f8b3a9a8e92258145d2ea",
+    "revision": "1f6f9ef32a286335c5a455a64ee5ce9e",
     "url": "/index.html"
   },
   {
-    "revision": "6f3bd1d073af2ed39ab9",
-    "url": "/static/js/2.9a1bbd3b.chunk.js"
+    "revision": "349adbd89adcd0ef6909",
+    "url": "/static/js/2.a67e97f5.chunk.js"
   },
   {
     "revision": "4bf00ea42f5dad8ab33d5f32afec9baf",
-    "url": "/static/js/2.9a1bbd3b.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.a67e97f5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9e3d54382c73bc56fa91",
-    "url": "/static/js/main.d9d611fa.chunk.js"
+    "revision": "0aba7af742e0e8c92e25",
+    "url": "/static/js/main.972c6b3a.chunk.js"
   },
   {
     "revision": "3cf57b419839acabd216",
@@ -28,16 +28,36 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/book.a7bef01b.svg"
   },
   {
+    "revision": "2b0913adaca0c23ce243920b3a0879d5",
+    "url": "/static/media/bowl-1.2b0913ad.svg"
+  },
+  {
     "revision": "237ef4f48ff41d4faa7485237c411968",
     "url": "/static/media/brain.237ef4f4.svg"
+  },
+  {
+    "revision": "307e6b7e69fcb33c8dd2752a7d2d3900",
+    "url": "/static/media/cake-1.307e6b7e.svg"
   },
   {
     "revision": "33f4f24c98c61bc9835a682b0c848668",
     "url": "/static/media/camera.33f4f24c.svg"
   },
   {
+    "revision": "105940f5a7c5dc07ac9e8f9da19c542d",
+    "url": "/static/media/chef-hat.105940f5.svg"
+  },
+  {
     "revision": "e57fc0cac76651783a0de46415051fb9",
     "url": "/static/media/city.e57fc0ca.svg"
+  },
+  {
+    "revision": "1e7e8b51b54027faa81138de12486536",
+    "url": "/static/media/cloche.1e7e8b51.svg"
+  },
+  {
+    "revision": "b2f215b3cbf46a19402ca290e907a654",
+    "url": "/static/media/cutlery-1.b2f215b3.svg"
   },
   {
     "revision": "b4a08446e705d2ce79cb5b12eefeb881",
@@ -78,6 +98,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6bcd95684afbb98c3741738c34f1a1a7",
     "url": "/static/media/roller-coaster.6bcd9568.svg"
+  },
+  {
+    "revision": "696df6aff264ca8f87df18d5ba80e9d1",
+    "url": "/static/media/sauce.696df6af.svg"
   },
   {
     "revision": "5bff58bb1033ba3377ffe8c61f772dba",
