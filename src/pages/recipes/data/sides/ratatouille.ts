@@ -96,6 +96,5 @@ export const RATATOUILLE: IRecipe = {
   totalCost,
   portionCost,
   diet,
-  image,
-  favourite: true
+  image
 };

@@ -115,7 +115,6 @@ const portionCost: number = totalCost / makes.quantity;
 export const BOLOGNESE: IRecipe = {
   title,
   ingredients,
-  favourite: true,
   makes,
   serveWith,
   diet,

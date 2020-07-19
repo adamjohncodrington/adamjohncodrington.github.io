@@ -109,7 +109,6 @@ const portionCost: number = totalCost / makes.quantity;
 
 export const BANANA_CAKE: IRecipe = {
   title,
-  favourite: true,
   ingredients,
   totalCost,
   portionCost,

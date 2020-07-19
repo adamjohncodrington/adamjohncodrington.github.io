@@ -1,16 +1,15 @@
 import styled, { css } from "styled-components";
 
 import { H3, FlexColumn } from "primitives";
-import { CSS, getPseudoElementBefore, HEART } from "styles";
+import { CSS } from "styles";
 
-interface IRecipeCardTitle extends IPanelIsVisible, IThemeProp, IFavourite {}
+interface IRecipeCardTitle extends IPanelIsVisible, IThemeProp {}
 
 export const RecipeCardTitle = styled(H3)(
-  ({ panelIsVisible, theme: { recipe }, favourite }: IRecipeCardTitle) => css`
+  ({ panelIsVisible, theme: { recipe } }: IRecipeCardTitle) => css`
     text-transform: lowercase;
     font-weight: ${panelIsVisible ? "bold" : recipe.title.fontWeight};
     flex: 1;
-    ${favourite && getPseudoElementBefore(HEART)}
   `
 );
 

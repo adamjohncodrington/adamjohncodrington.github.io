@@ -20,3 +20,10 @@ export { ReactComponent as SvgTravel } from "./travel.svg";
 export { ReactComponent as SvgVegBowl } from "./veg-bowl.svg";
 export { ReactComponent as SvgVinyl } from "./vinyl.svg";
 export { ReactComponent as SvgVideoCamera } from "./video-camera.svg";
+
+export { ReactComponent as SvgBowl } from "./bowl-1.svg";
+export { ReactComponent as SvgCake } from "./cake-1.svg";
+export { ReactComponent as SvgCloche } from "./cloche.svg";
+export { ReactComponent as SvgCutlery } from "./cutlery-1.svg";
+export { ReactComponent as SvgChefHat } from "./chef-hat.svg";
+export { ReactComponent as SvgSauce } from "./sauce.svg";

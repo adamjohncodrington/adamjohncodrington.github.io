@@ -90,7 +90,6 @@ export const CRUMBLE: IRecipe = {
   ingredients,
   makes,
   serveWith,
-  favourite: true,
   method,
   totalCost,
   portionCost,

@@ -1,31 +1,41 @@
-import { PAGE_SECTION_TITLES } from "@constants";
-import { SvgCamera } from "resources";
+import { SvgNotepad, SvgCloche, SvgBowl, SvgSauce, SvgCake } from "resources";
 
 import { DATA } from "./data";
-import { FACTORY } from "./factory";
 
-const SECTIONS_RECIPE_GROUPS: Array<IPageSection> = DATA.CATEGORISED.map(
-  ({ title, recipes }: IRecipeGroup): IPageSection => ({
-    title: title,
-    data: { recipes: recipes },
-    autoExpandIf2Columns: true
-  })
-);
+const SECTION_MAINS: IPageSection = {
+  title: "Mains",
+  SvgIcon: SvgCloche,
+  data: { recipes: DATA.MAINS }
+};
 
-const SECTION_PHOTOS: IPageSection = {
-  SvgIcon: SvgCamera,
-  title: PAGE_SECTION_TITLES.PHOTOS,
-  data: { photos: { urls: FACTORY.PHOTOS, columnCount: 3 } }
+const SECTION_SIDES: IPageSection = {
+  title: "Sides",
+  SvgIcon: SvgBowl,
+  data: { recipes: DATA.SIDES }
+};
+
+const SECTION_SAUCES: IPageSection = {
+  title: "Sauces",
+  SvgIcon: SvgSauce,
+  data: { recipes: DATA.SAUCES }
+};
+
+const SECTION_SWEETS: IPageSection = {
+  title: "Sweets",
+  SvgIcon: SvgCake,
+  data: { recipes: DATA.SWEETS }
 };
 
 const SECTION_COMING_SOON: IPageSection = {
   title: "Coming Soon",
-  autoExpandIf2Columns: true,
+  SvgIcon: SvgNotepad,
   data: { countedListItems: DATA.COMING_SOON }
 };
 
 export const sections: Array<IPageSection> = [
-  ...SECTIONS_RECIPE_GROUPS,
-  SECTION_PHOTOS,
+  SECTION_MAINS,
+  SECTION_SIDES,
+  SECTION_SAUCES,
+  SECTION_SWEETS,
   SECTION_COMING_SOON
 ];

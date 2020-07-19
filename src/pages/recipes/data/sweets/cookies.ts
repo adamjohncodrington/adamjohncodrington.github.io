@@ -84,6 +84,5 @@ export const COOKIES: IRecipe = {
   method,
   portionCost,
   makes,
-  favourite: true,
   diet
 };
