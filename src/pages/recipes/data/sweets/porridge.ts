@@ -25,6 +25,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
       quantity: 0.25,
       measurement: MEASUREMENTS.TEASPOON
     },
+    { ingredient: INGREDIENTS.SALT_ROCK_FRESH },
     {
       ingredient: INGREDIENTS.RASPBERRIES_FROZEN,
       quantity: 75,

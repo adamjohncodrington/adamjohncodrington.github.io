@@ -1,6 +1,6 @@
 import { formatCountedListItems } from "utils";
 
-import { FRIENDS_LIST_ITEMS } from "./friends";
+import { INSTRUCTORS_LIST_ITEMS } from "./instructors";
 
 interface IPoleFactory {
   INSTRUCTORS: Array<ICountedListItem>;
@@ -8,6 +8,6 @@ interface IPoleFactory {
 
 export const FACTORY: IPoleFactory = {
   INSTRUCTORS: formatCountedListItems({
-    countedListItems: FRIENDS_LIST_ITEMS
+    countedListItems: INSTRUCTORS_LIST_ITEMS
   })
 };

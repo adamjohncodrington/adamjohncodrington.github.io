@@ -2,9 +2,13 @@
 
 - beef up POLE section
 - refactor `ITicketType` as `{ retailer, format }`
+- store YouTube IDs in 1 place
+- make YouTube videos play in HD
+- add "randomise" prop to `PhotoGrid`
 
 ## Enhancements
 
+- add images to theatre page (poster art)
 - display festival lineups by day????
 - merge trips together again as arrays of "trip legs"
 - reinstate 49 abroad trips

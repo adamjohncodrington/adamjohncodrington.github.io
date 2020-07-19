@@ -2,26 +2,18 @@ import styled, { css } from "styled-components";
 
 import { getPseudoElementBefore, HEART, STAR } from "styles";
 
-interface ICountedListItemText
-  extends ISecondaryText,
-    IThemeProp,
-    IFavourite,
-    IStar {
+interface ICountedListItemText extends IThemeProp, IFavourite, IStar {
   faded: boolean;
 }
 
 export const CountedListItemText = styled.span(
   ({
-    secondaryText,
     favourite,
     star,
     faded,
     theme: { fadedOpacity }
   }: ICountedListItemText) => css`
     flex: 1;
-
-    ${favourite && getPseudoElementBefore(HEART)}
-    ${star && getPseudoElementBefore(STAR)}
 
     ${
       faded &&
@@ -30,13 +22,8 @@ export const CountedListItemText = styled.span(
       `
     }
 
-    ${
-      secondaryText &&
-      css`::after {
-          opacity: ${fadedOpacity};
-      content: " (${secondaryText})";
-    }`
-    }
+    ${favourite && getPseudoElementBefore(HEART)}
+    ${star && getPseudoElementBefore(STAR)}
   `
 );
 

@@ -37,18 +37,15 @@ export const CountedListItem: FC<ICountedListItem> = ({
   isLeaderboardItem,
   details
 }) => {
+  const faded: boolean = !countInfoIrrelevant && pastCount === 0;
+
   const showFutureCount: boolean = futureCount > 0 && pastCount > 0;
   const showPastCount: boolean =
     pastCount > 1 || (futureCount > 0 && pastCount > 0);
 
   const TextAndCounts: ReactElement = (
     <>
-      <CountedListItemText
-        faded={!countInfoIrrelevant && pastCount === 0}
-        favourite={favourite}
-        star={star}
-        secondaryText={secondaryText}
-      >
+      <CountedListItemText faded={faded} favourite={favourite} star={star}>
         {text}
       </CountedListItemText>
 
