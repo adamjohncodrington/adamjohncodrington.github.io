@@ -1,6 +1,6 @@
 type ISvgIcon = React.FC<React.SVGProps<SVGSVGElement>>;
 
-type IPhoto = string | undefined;
+type IPhoto = string;
 
 interface IYouTubeVideo {
   id: string;

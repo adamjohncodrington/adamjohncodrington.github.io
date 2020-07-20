@@ -6,7 +6,6 @@ import { CITIES_LIST_ITEMS } from "./cities";
 import { COUNTRIES_LIST_ITEMS } from "./countries";
 import { FRIENDS_LIST_ITEMS } from "./friends";
 import { ISLANDS_LIST_ITEMS } from "./islands";
-import { PHOTOS } from "./photos";
 import { UP_NEXT } from "./up-next";
 import { VIDEOS } from "./videos";
 
@@ -17,7 +16,6 @@ interface ITravelFactory {
   FRIENDS: Array<ICountedListItem>;
   HIGHLIGHTS: Array<ICountedListItem>;
   ISLANDS: Array<ICountedListItem>;
-  PHOTOS: Array<IPhoto>;
   THEME_PARKS: Array<ICountedListItem>;
   UP_NEXT: Array<ITripLeg>;
   VIDEOS: Array<ITripLeg>;
@@ -38,7 +36,6 @@ export const FACTORY: ITravelFactory = {
   THEME_PARKS: formatCountedListItems({
     countedListItems: THEME_PARKS_LIST_ITEMS
   }),
-  PHOTOS,
   UP_NEXT,
   VIDEOS
 };

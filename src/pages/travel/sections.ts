@@ -10,7 +10,7 @@ import {
   SvgRollerCoaster,
   SvgVideoCamera,
   SvgCamera,
-  TRAVEL_VIDEOS_ARRAY
+  PHOTOS_TRAVEL_ARRAY
 } from "resources";
 import { isInFuture } from "utils";
 
@@ -75,17 +75,13 @@ const SECTION_UP_NEXT_TRAVEL: IPageSection = {
 const SECTION_VIDEOS_TRAVEL: IPageSection = {
   SvgIcon: SvgVideoCamera,
   title: PAGE_SECTION_TITLES.VIDEOS,
-  data: {
-    // trips: FACTORY.VIDEOS
-    videos: TRAVEL_VIDEOS_ARRAY
-  }
+  data: { trips: FACTORY.VIDEOS }
 };
 
 const SECTION_PHOTOS_TRAVEL: IPageSection = {
   SvgIcon: SvgCamera,
   title: PAGE_SECTION_TITLES.PHOTOS,
-  data: { photoGrid: { photos: FACTORY.PHOTOS, columnCount: 4 } },
-  count: FACTORY.PHOTOS.length
+  data: { photoGrid: { photos: PHOTOS_TRAVEL_ARRAY, columnCount: 4 } }
 };
 
 const SECTIONS_YEARS: Array<IPageSection> = DATA.SPLIT_BY_YEAR.map(
