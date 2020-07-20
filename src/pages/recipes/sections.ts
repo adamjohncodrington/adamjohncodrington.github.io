@@ -1,6 +1,15 @@
-import { SvgNotepad, SvgCloche, SvgBowl, SvgSauce, SvgCake } from "resources";
+import {
+  SvgNotepad,
+  SvgCloche,
+  SvgBowl,
+  SvgSauce,
+  SvgCake,
+  SvgCamera,
+  PHOTOS_RECIPES_ARRAY
+} from "resources";
 
 import { DATA } from "./data";
+import { PAGE_SECTION_TITLES } from "@constants";
 
 const SECTION_MAINS: IPageSection = {
   title: "Mains",
@@ -26,6 +35,12 @@ const SECTION_SWEETS: IPageSection = {
   data: { recipes: DATA.SWEETS }
 };
 
+const SECTION_PHOTOS: IPageSection = {
+  title: PAGE_SECTION_TITLES.PHOTOS,
+  SvgIcon: SvgCamera,
+  data: { photoGrid: { photos: PHOTOS_RECIPES_ARRAY, columnCount: 3 } }
+};
+
 const SECTION_COMING_SOON: IPageSection = {
   title: "Coming Soon",
   SvgIcon: SvgNotepad,
@@ -37,5 +52,6 @@ export const sections: Array<IPageSection> = [
   SECTION_SIDES,
   SECTION_SAUCES,
   SECTION_SWEETS,
+  SECTION_PHOTOS,
   SECTION_COMING_SOON
 ];
