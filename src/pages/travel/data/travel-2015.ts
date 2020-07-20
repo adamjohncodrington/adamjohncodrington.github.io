@@ -1,4 +1,5 @@
 import { FRIENDS, COUNTRIES } from "@constants";
+import { YOUTUBE_UGANDA } from "resources";
 
 const PARIS_2015: ITrip = [
   {
@@ -28,7 +29,7 @@ const UGANDA: ITrip = [
   {
     primaryLocations: [COUNTRIES.UGANDA.cities.JINJA],
     country: COUNTRIES.UGANDA,
-    youtubeId: "ennXFiXhoAw",
+    youtubeVideo: YOUTUBE_UGANDA,
     showCountryAsTitle: true,
     secondaryLocations: [
       COUNTRIES.UGANDA.attractions.NILE_SOURCE,

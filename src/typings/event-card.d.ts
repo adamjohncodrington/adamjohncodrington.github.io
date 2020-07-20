@@ -13,21 +13,15 @@ interface IDates {
   dates: Array<Date>;
 }
 
-interface IYouTubeVideo {
-  youtubeId: string;
-}
-
-interface IVideo {
-  youtubeId?: string;
-  hideVideoIcon?: boolean;
-}
-interface IEventCardCommon extends ICompany, IFavourite, IVideo {
+interface IEventCardCommon extends ICompany, IFavourite {
   hideSubtitle?: boolean;
   photos?: Array<IPhoto>;
+  youtubeVideo?: IYouTubeVideo;
 
   hideCompany?: boolean;
   hideSecondaryBody?: boolean;
   hidePhotosIcon?: boolean;
+  hideVideoIcon?: boolean;
 }
 
 interface IEventCard extends IEventCardCommon {

@@ -45,7 +45,7 @@ export const RecipeCard: FC<IRecipe> = ({
   }) => (
     <FlexRow className={className}>
       <RecipeCardTitle panelIsVisible={panelIsVisible}>{title}</RecipeCardTitle>
-      <RoundedSymbol color={diet.color}>{diet.abbreviation}</RoundedSymbol>
+      <RoundedSymbol type="diet">{diet.abbreviation}</RoundedSymbol>
     </FlexRow>
   );
 

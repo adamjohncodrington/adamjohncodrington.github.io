@@ -1,4 +1,5 @@
 import { FRIENDS, COUNTRIES } from "@constants";
+import { YOUTUBE_MILAN } from "resources";
 
 const MILAN: ITrip = [
   {
@@ -13,7 +14,7 @@ const MILAN: ITrip = [
       FRIENDS.JAZZ_THIND,
       FRIENDS.JHC
     ],
-    youtubeId: "Dqq4RY6ZYF8",
+    youtubeVideo: YOUTUBE_MILAN,
     secondaryLocations: [
       COUNTRIES.ITALY.attractions.MILAN_MALL,
       COUNTRIES.ITALY.attractions.SEMPIONE_PARK,

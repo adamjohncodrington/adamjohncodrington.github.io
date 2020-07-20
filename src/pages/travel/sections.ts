@@ -9,7 +9,8 @@ import {
   SvgMapPin,
   SvgRollerCoaster,
   SvgVideoCamera,
-  SvgCamera
+  SvgCamera,
+  TRAVEL_VIDEOS_ARRAY
 } from "resources";
 import { isInFuture } from "utils";
 
@@ -74,8 +75,10 @@ const SECTION_UP_NEXT_TRAVEL: IPageSection = {
 const SECTION_VIDEOS_TRAVEL: IPageSection = {
   SvgIcon: SvgVideoCamera,
   title: PAGE_SECTION_TITLES.VIDEOS,
-  data: { trips: FACTORY.VIDEOS },
-  count: FACTORY.VIDEOS.length
+  data: {
+    // trips: FACTORY.VIDEOS
+    videos: TRAVEL_VIDEOS_ARRAY
+  }
 };
 
 const SECTION_PHOTOS_TRAVEL: IPageSection = {

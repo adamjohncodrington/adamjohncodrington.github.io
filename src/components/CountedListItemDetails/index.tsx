@@ -19,23 +19,23 @@ export const CountedListItemDetail: React.FC<ICountedListItemDetail> = ({
   dateText,
   favourite,
   isInFuture,
-  youtubeId
+  youtubeVideo
 }) => (
   <StyledLi key={index} isInFuture={isInFuture}>
     <Disclosure
-      isStatic={!youtubeId}
+      isStatic={!youtubeVideo}
       Header={({ panelIsVisible }) => (
         <DynamicFontWeightFlexRow
-          panelIsVisible={!!youtubeId && panelIsVisible}
+          panelIsVisible={!!youtubeVideo && panelIsVisible}
         >
           {index && <StyledIndex>{index}.</StyledIndex>}
           {mainText && <StyledMainText>{mainText[0]}</StyledMainText>}
-          <StyledDateText favourite={favourite} youtubeId={youtubeId}>
+          <StyledDateText favourite={favourite} youtubeVideo={youtubeVideo}>
             {dateText}
           </StyledDateText>
         </DynamicFontWeightFlexRow>
       )}
-      Panel={<>{youtubeId && <YouTubeVideo youtubeId={youtubeId} />}</>}
+      Panel={<>{youtubeVideo && <YouTubeVideo {...youtubeVideo} />}</>}
     />
   </StyledLi>
 );

@@ -20,12 +20,12 @@ const getFestivalDetails = (
   const gigsMatchingFestival: Array<IGig> = getGigsMatchingFestival(musician);
   return gigsMatchingFestival.map(
     (gig: IGig, index: number): ICountedListItemDetail => {
-      const { dates, youtubeId } = gig;
+      const { dates, youtubeVideo } = gig;
       return {
         index: gigsMatchingFestival.length > 1 ? index + 1 : undefined,
         mainText: [getGigSubtitle(gig) || "TBC"],
         dateText: getDatesText(dates),
-        youtubeId,
+        youtubeVideo,
         isInFuture: isInFuture(dates[0])
       };
     }

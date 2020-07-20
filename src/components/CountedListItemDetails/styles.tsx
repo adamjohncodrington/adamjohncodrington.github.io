@@ -38,16 +38,19 @@ export const StyledIndex = styled.div`
   min-width: 25px;
 `;
 
-interface IStyledDateText extends IFavourite, IVideo {}
+interface IStyledDateText extends IFavourite {
+  youtubeVideo?: IYouTubeVideo;
+}
+
 export const StyledDateText = styled.div(
-  ({ favourite, youtubeId }: IStyledDateText) =>
-    (favourite || youtubeId) &&
+  ({ favourite, youtubeVideo }: IStyledDateText) =>
+    (favourite || youtubeVideo) &&
     getPseudoElementAfter(
-      favourite && !youtubeId
+      favourite && !youtubeVideo
         ? HEART
-        : youtubeId && !favourite
+        : youtubeVideo && !favourite
         ? TRIANGLE_RIGHT
-        : youtubeId && favourite
+        : youtubeVideo && favourite
         ? HEART + " " + TRIANGLE_RIGHT
         : ""
     )

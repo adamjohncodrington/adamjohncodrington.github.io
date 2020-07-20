@@ -1,4 +1,5 @@
 import { FRIENDS, MUSICIANS, TICKET_TYPES, MUSIC_VENUES } from "@constants";
+import { YOUTUBE_GRACEY, YOUTUBE_JOSEF_SALVAT_2020 } from "resources";
 
 const CELESTE_SHEPHERDS_BUSH: IGig = {
   headline: MUSICIANS.CELESTE,
@@ -13,20 +14,20 @@ export const GIGS_2020: Array<IGig> = [
   {
     headline: MUSICIANS.GRACEY,
     venue: MUSIC_VENUES.LAYLOW,
-    youtubeId: "MAZmlxTe22s",
+    youtubeVideo: YOUTUBE_GRACEY,
     dates: [new Date("2020-01-28")],
     company: [FRIENDS.DARREN_TAYLOR]
   },
   {
     headline: MUSICIANS.JOSEF_SALVAT,
     venue: MUSIC_VENUES.MOTH_CLUB,
-    youtubeId: "PPdOZ09ZM3k",
+    youtubeVideo: YOUTUBE_JOSEF_SALVAT_2020,
     dates: [new Date("2020-02-05")],
     company: [FRIENDS.DARREN_TAYLOR]
   },
   {
     headline: MUSICIANS.KIM_PETRAS,
-    youtubeId: "DisC3P5vbp0",
+    //youtubeId: "DisC3P5vbp0",
     support: [MUSICIANS.ALEX_CHAPMAN],
     venue: MUSIC_VENUES.SHEPHERDS_BUSH_EMPIRE,
     dates: [new Date("2020-02-11")],
@@ -42,7 +43,7 @@ export const GIGS_2020: Array<IGig> = [
   {
     headline: MUSICIANS.CHRISTINE_AND_THE_QUEENS,
     venue: MUSIC_VENUES.MOTH_CLUB,
-    youtubeId: "AzVwaTDg50w",
+    //youtubeId: "AzVwaTDg50w",
     dates: [new Date("2020-03-07")],
     favourite: true,
     company: [FRIENDS.DARREN_TAYLOR],
@@ -50,7 +51,7 @@ export const GIGS_2020: Array<IGig> = [
   },
   {
     headline: MUSICIANS.CAROLINE_POLACHEK,
-    youtubeId: "iWLxqOLHIRA",
+    //youtubeId: "iWLxqOLHIRA",
     support: [MUSICIANS.SEGA_BODEGA],
     venue: MUSIC_VENUES.HEAVEN,
     dates: [new Date("2020-03-11")],
@@ -59,7 +60,7 @@ export const GIGS_2020: Array<IGig> = [
   },
   {
     headline: MUSICIANS.GEORGIA,
-    youtubeId: "t4x0jvdmpJw",
+    //youtubeId: "t4x0jvdmpJw",
     venue: MUSIC_VENUES.HEAVEN,
     dates: [new Date("2020-03-12")],
     company: [FRIENDS.DARREN_TAYLOR],

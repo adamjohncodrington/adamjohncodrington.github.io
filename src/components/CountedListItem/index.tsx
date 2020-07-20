@@ -6,7 +6,8 @@ import { CountedListItemDetails } from "../CountedListItemDetails";
 import { Disclosure } from "../Disclosure";
 
 import {
-  CountedListItemText,
+  StyledMainText,
+  StyledTextContainer,
   CountedListItemPastCount,
   CountedListItemFutureCount
 } from "./styles";
@@ -37,7 +38,7 @@ export const CountedListItem: FC<ICountedListItem> = ({
   isLeaderboardItem,
   details
 }) => {
-  const faded: boolean = !countInfoIrrelevant && pastCount === 0;
+  const fadedMainText: boolean = !countInfoIrrelevant && pastCount === 0;
 
   const showFutureCount: boolean = futureCount > 0 && pastCount > 0;
   const showPastCount: boolean =
@@ -45,9 +46,13 @@ export const CountedListItem: FC<ICountedListItem> = ({
 
   const TextAndCounts: ReactElement = (
     <>
-      <CountedListItemText faded={faded} favourite={favourite} star={star}>
-        {text}
-      </CountedListItemText>
+      <StyledTextContainer>
+        <StyledMainText faded={fadedMainText} favourite={favourite} star={star}>
+          {text}
+        </StyledMainText>
+
+        {secondaryText && <span>({secondaryText})</span>}
+      </StyledTextContainer>
 
       {!countInfoIrrelevant && showFutureCount && (
         <CountedListItemFutureCount>{futureCount}</CountedListItemFutureCount>

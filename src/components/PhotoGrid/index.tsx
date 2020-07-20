@@ -17,8 +17,8 @@ export const PhotoGrid = ({
 
   return (
     <EventCardPhotosContainer columnCount={columnCount}>
-      {PHOTOS.map((photo: IPhoto) => (
-        <div data-test="image-container">
+      {PHOTOS.map((photo: IPhoto, index: number) => (
+        <div key={index} data-test="image-container">
           <SquareImage imgSrc={photo} size="100%" />
         </div>
       ))}

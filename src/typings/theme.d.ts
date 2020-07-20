@@ -73,6 +73,12 @@ interface IThemeRecipeCard {
 
 interface IThemeRoundedSymbol {
   borderRadius: PercentageValue;
+  color: {
+    diet: ColorValue;
+    friend: ColorValue;
+    photo: ColorValue;
+    video: ColorValue;
+  };
   fontSize: PercentageValue;
   size: PxValue;
   textColor: ColorValue;

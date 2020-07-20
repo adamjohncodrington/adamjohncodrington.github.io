@@ -5,25 +5,36 @@ import { SvgVideoCamera, SvgCamera } from "resources";
 
 interface IStyledRoundedSymbol extends IRoundedSymbol, IThemeProp {}
 
-const videoSvgSymbolSize: string = "65%";
-const photoSvgSymbolSize: string = "55%";
-
 const StyledRoundedSymbol = styled.div(
-  ({ photo, video, color, theme: { roundedSymbol } }: IStyledRoundedSymbol) => {
-    const iconSize: string = photo
-      ? photoSvgSymbolSize
-      : video
-      ? videoSvgSymbolSize
-      : "0";
+  ({
+    type,
+    theme: {
+      roundedSymbol: { borderRadius, color, fontSize, size, textColor }
+    }
+  }: IStyledRoundedSymbol) => {
+    const backgroundColor: string =
+      type === "diet"
+        ? color.diet
+        : type === "photo"
+        ? color.photo
+        : type === "friend"
+        ? color.friend
+        : type === "video"
+        ? color.video
+        : "black";
+
+    const iconSize: string =
+      type === "photo" ? "55%" : type === "video" ? "65%" : "0";
+
     return css`
-      background: ${color};
-      border-radius: ${roundedSymbol.borderRadius};
-      color: ${roundedSymbol.textColor};
-      font-size: ${roundedSymbol.fontSize};
-      height: ${roundedSymbol.size};
-      line-height: ${roundedSymbol.size};
+      background: ${backgroundColor};
+      border-radius: ${borderRadius};
+      color: ${textColor};
+      font-size: ${fontSize};
+      height: ${size};
+      line-height: ${size};
       text-align: center;
-      width: ${roundedSymbol.size};
+      width: ${size};
 
       display: flex;
       align-items: center;
@@ -39,20 +50,18 @@ const StyledRoundedSymbol = styled.div(
 );
 
 interface IRoundedSymbol {
-  photo?: boolean;
-  video?: boolean;
-  color?: string;
+  type: "diet" | "friend" | "photo" | "video";
 }
 
-export const RoundedSymbol: React.FC<IRoundedSymbol> = props => {
-  const { photo, video } = props;
+export const RoundedSymbol: React.FC<IRoundedSymbol> = ({ type, children }) => {
+  const isSvgSymbol: boolean = type === "video" || type === "photo";
 
-  return video || photo ? (
-    <StyledRoundedSymbol {...props} color="black">
-      {photo && <SvgCamera />}
-      {video && <SvgVideoCamera />}
+  return isSvgSymbol ? (
+    <StyledRoundedSymbol type={type}>
+      {type === "photo" && <SvgCamera />}
+      {type === "video" && <SvgVideoCamera />}
     </StyledRoundedSymbol>
   ) : (
-    <StyledRoundedSymbol {...props} />
+    <StyledRoundedSymbol type={type}>{children}</StyledRoundedSymbol>
   );
 };

@@ -27,7 +27,7 @@ export const EventCard: React.FC<IEventCard> = ({
   countdownText,
   hideVideoIcon,
   company,
-  youtubeId,
+  youtubeVideo,
   photos,
   hideCompany,
   hidePhotosIcon,
@@ -41,7 +41,7 @@ export const EventCard: React.FC<IEventCard> = ({
   return (
     <>
       <Disclosure
-        isStatic={!(youtubeId || (photos && photos.length > 0))}
+        isStatic={!(youtubeVideo || (photos && photos.length > 0))}
         Header={() => (
           <GridColumnDiv
             data-test="event-card-grid-container"
@@ -79,7 +79,7 @@ export const EventCard: React.FC<IEventCard> = ({
               )}
             </EventCardTextContainer>
 
-            {(company.length > 0 || youtubeId) && (
+            {(company.length > 0 || youtubeVideo) && (
               <EventCardSymbolsContainer>
                 {!hideCompany &&
                   company
@@ -87,20 +87,22 @@ export const EventCard: React.FC<IEventCard> = ({
                       a.initials > b.initials ? 1 : -1
                     )
                     .map(({ initials }: IFriend, index: number) => (
-                      <RoundedSymbol key={index} color={companySymbol.color}>
+                      <RoundedSymbol key={index} type="friend">
                         {initials}
                       </RoundedSymbol>
                     ))}
 
-                {youtubeId && !hideVideoIcon && <RoundedSymbol video />}
-                {photos && !hidePhotosIcon && <RoundedSymbol photo />}
+                {youtubeVideo && !hideVideoIcon && (
+                  <RoundedSymbol type="video" />
+                )}
+                {photos && !hidePhotosIcon && <RoundedSymbol type="photo" />}
               </EventCardSymbolsContainer>
             )}
           </GridColumnDiv>
         )}
         Panel={
           <>
-            {youtubeId && <YouTubeVideo youtubeId={youtubeId} />}
+            {youtubeVideo && <YouTubeVideo {...youtubeVideo} />}
             {photos && <PhotoGrid photos={photos} columnCount={2} />}
           </>
         }

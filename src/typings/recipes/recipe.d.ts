@@ -18,7 +18,6 @@ interface IServeWithItem {
 
 interface IRecipeDiet {
   abbreviation: string;
-  color: string;
 }
 
 interface IRecipeMakes {

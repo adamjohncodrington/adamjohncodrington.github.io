@@ -132,13 +132,13 @@ export const GIGS_2015: Array<IGig> = [
     headline: MUSICIANS.CHVRCHES,
     venue: MUSIC_VENUES.ALBERT_HALL_MANCHESTER,
     company: [FRIENDS.DAN_SPARROW],
-    youtubeId: "fZIWm7qDLsQ",
+    //youtubeId: "fZIWm7qDLsQ",
     dates: [new Date("2015-11-19")]
   },
   {
     headline: MUSICIANS.LISSIE,
     venue: MUSIC_VENUES.ACADEMY_2_MANCHESTER,
-    youtubeId: "3BO21qXwwvQ",
+    //youtubeId: "3BO21qXwwvQ",
     dates: [new Date("2015-12-05")],
     company: [],
     favourite: true

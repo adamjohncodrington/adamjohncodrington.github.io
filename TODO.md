@@ -1,5 +1,6 @@
 # TO DO LIST
 
+- reinstate `secondaryText`
 - make a Thailand video
 - add photos to Thailand, Laos, Ecuador and Peru to establish how video will work
 - beef up POLE section

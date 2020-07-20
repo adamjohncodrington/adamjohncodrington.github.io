@@ -8,7 +8,9 @@ interface IDetailItem {
   isInFuture: boolean;
 }
 
-interface ICountedListItemDetail extends IVideo, IFavourite {
+interface ICountedListItemDetail extends IFavourite {
+  youtubeVideo?: IYouTubeVideo;
+
   index?: number;
   mainText?: Array<string>;
   dateText: string;
@@ -54,6 +56,7 @@ interface IPageSectionDataTypes {
   recipes?: Array<IRecipe>;
   theatreVisits?: Array<ITheatreVisit>;
   trips?: Array<ITripLeg>;
+  videos?: Array<IYouTubeVideo>;
   vinyls?: Array<IVinyl | undefined>;
 }
 

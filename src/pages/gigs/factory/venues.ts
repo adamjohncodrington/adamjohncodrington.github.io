@@ -20,13 +20,13 @@ const getMusicVenueDetails = (
   );
   return gigsMatchingMusicVenue.map(
     (gig: IGig, index: number): ICountedListItemDetail => {
-      const { dates, youtubeId } = gig;
+      const { dates, youtubeVideo } = gig;
       return {
         index: gigsMatchingMusicVenue.length > 1 ? index + 1 : undefined,
         mainText: [getGigTitle(gig)],
         dateText: getDatesText(dates),
         isInFuture: isInFuture(dates[0]),
-        youtubeId
+        youtubeVideo
       };
     }
   );
