@@ -1,8 +1,9 @@
 # TO DO LIST
 
-- store YouTube IDs in 1 place
-- rationalise all `typings` (inc. tickettype as `{retailer, format}`)
+- reinstate all YouTube videos
+- rationalise all `typings`
 - beef up POLE section
+- avoid `| undefined` at all costs where possible
 
 ## Enhancements
 
@@ -10,7 +11,7 @@
 - add images to theatre page (poster art)
 - display festival lineups by day????
 - merge trips together again as arrays of "trip legs"
-- reinstate 49 abroad trips
+- reinstate 49 abroad trips page count
 - add more travel photos!!!
 - add alt text to all photos
 - add tooltips to `RoundedSymbol`s
@@ -25,7 +26,6 @@
 
 ## Refactoring
 
-- avoid `| undefined` at all costs where possible
 - separate gigs and festivals????
 - move `CountedListItemDetails` style values to theme??
 - review semantics of page structure, landmarks, accessibility, etc.

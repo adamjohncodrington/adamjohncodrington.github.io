@@ -1,4 +1,4 @@
-import { MEASUREMENTS } from "../../measurements";
+import * as MEASUREMENTS from "../../measurements";
 
 import * as FLOUR from "./flour";
 import { SUGAR } from "./sugar";

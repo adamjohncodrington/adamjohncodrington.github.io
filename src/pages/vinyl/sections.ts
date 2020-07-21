@@ -1,10 +1,12 @@
-import { FACTORY } from "./factory";
-import { SVG, PHOTOS } from "resources";
 import { PAGE_SECTION } from "@constants";
+import { SVG } from "resources";
+
+import { FACTORY } from "./factory";
 
 const SECTION_ARTISTS: IPageSection = {
   title: PAGE_SECTION.TITLES.ARTISTS,
-  data: { comingSoon: true },
+  data: { countedListItems: FACTORY.ARTISTS },
+  count: FACTORY.ARTISTS.length,
   SvgIcon: SVG.ARTIST
 };
 
@@ -17,7 +19,8 @@ const SECTION_COLLECTION: IPageSection = {
 
 const SECTION_SIGNED: IPageSection = {
   title: PAGE_SECTION.TITLES.SIGNED,
-  data: { comingSoon: true },
+  data: { vinyls: FACTORY.SIGNED },
+  count: FACTORY.SIGNED.length,
   SvgIcon: SVG.PEN
 };
 

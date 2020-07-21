@@ -105,7 +105,7 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
 
       {vinyls &&
         vinyls.map(
-          (vinyl: IVinyl | undefined, index: number) =>
+          (vinyl: IVinyl, index: number) =>
             vinyl && (
               <Li key={index}>
                 <VinylCard {...vinyl} />

@@ -261,3 +261,71 @@ export const YEARS_AND_YEARS: IMusician = { name: "Years & Years" };
 export const YOU_ME_AT_SIX: IMusician = { name: "You Me At Six" };
 export const YOUSEF: IMusician = { name: "Yousef" };
 export const ZARA_LARSSON: IMusician = { name: "Zara Larsson" };
+export const ALLIE_X: IMusician = { name: "Allie X" };
+export const BANKS: IMusician = { name: "Banks" };
+export const HAIM: IMusician = { name: "HAIM" };
+export const LEON: IMusician = { name: "LÉON", favourite: true };
+export const FKA_TWIGS: IMusician = { name: "FKA twigs", favourite: true };
+export const _1975_THE: IMusician = { name: "1975, The", favourite: true };
+export const MUNA: IMusician = { name: "MUNA", favourite: true };
+export const TAYLOR_SWIFT: IMusician = {
+  name: "Taylor Swift",
+  favourite: true
+};
+export const LORDE: IMusician = { name: "Lorde", favourite: true };
+export const LANA_DEL_REY: IMusician = {
+  name: "Lana Del Rey",
+  favourite: true
+};
+export const MARINA: IMusician = {
+  name: "MARINA",
+  previousStageName: { name: "Marina and the Diamonds", yearDeprecated: 2019 }
+};
+export const FLORENCE_AND_THE_MACHINE: IMusician = {
+  name: "Florence + the Machine",
+  favourite: true
+};
+export const ADELE: IMusician = { name: "Adele" };
+export const ARCTIC_MONKEYS: IMusician = { name: "Arctic Monkeys" };
+export const AMY_WINEHOUSE: IMusician = {
+  name: "Amy Winehouse",
+  noLongerExists: true
+};
+export const KATE_NASH: IMusician = { name: "Kate Nash" };
+export const CHARLI_XCX: IMusician = { name: "Charli XCX", favourite: true };
+export const DUA_LIPA: IMusician = { name: "Dua Lipa" };
+export const LENNON_STELLA: IMusician = { name: "Lennon Stella" };
+export const ARIANA_GRANDE: IMusician = { name: "Ariana Grande" };
+export const CAROLINE_POLACHEK: IMusician = { name: "Caroline Polachek" };
+export const KIM_PETRAS: IMusician = { name: "Kim Petras" };
+export const GEORGE_FITZGERALD: IMusician = { name: "George FitzGerald" };
+export const JON_HOPKINS: IMusician = { name: "Jon Hopkins", favourite: true };
+export const LANY: IMusician = { name: "LANY" };
+export const SOPHIE: IMusician = { name: "SOPHIE", favourite: true };
+export const TROYE_SIVAN: IMusician = { name: "Troye Sivan", favourite: true };
+export const PVRIS: IMusician = { name: "PVRIS" };
+export const BEYONCE: IMusician = { name: "Beyoncé" };
+export const TOURIST: IMusician = { name: "Tourist" };
+export const GRIMES: IMusician = { name: "Grimes", favourite: true };
+export const RYN_WEAVER: IMusician = { name: "Ryn Weaver", favourite: true };
+export const ELLIE_GOULDING: IMusician = { name: "Ellie Goulding" };
+export const BEN_HOWARD: IMusician = { name: "Ben Howard" };
+export const LADY_GAGA: IMusician = { name: "Lady Gaga", favourite: true };
+export const RIHANNA: IMusician = { name: "Rihanna" };
+export const LISSIE: IMusician = {
+  name: "Lissie",
+  favourite: true
+};
+export const KATY_PERRY: IMusician = {
+  name: "Katy Perry"
+};
+export const PANIC_AT_THE_DISCO: IMusician = { name: "Panic! At the Disco" };
+export const PARAMORE: IMusician = { name: "Paramore" };
+export const SUFJAN_STEVENS: IMusician = { name: "Sufjan Stevens" };
+export const NATALIA_KILLS: IMusician = {
+  name: "Natalia Kills",
+  favourite: true,
+  noLongerExists: true
+};
+export const LANE_8: IMusician = { name: "Lane 8" };
+export const CARIBOU: IMusician = { name: "Caribou" };

@@ -1,4 +1,4 @@
-import { MEASUREMENTS } from "../../measurements";
+import * as MEASUREMENTS from "../../measurements";
 
 export const VINEGARS: IVinegars = {
   VINEGAR_BALSAMIC: {

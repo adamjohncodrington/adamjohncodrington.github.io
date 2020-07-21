@@ -1,4 +1,4 @@
-import { MEASUREMENTS } from "../../measurements";
+import * as MEASUREMENTS from "../../measurements";
 
 export const SAUCES: ISauces = {
   LIQUID_SMOKE: {

@@ -20,7 +20,7 @@ const TROYE_SIVAN: IGig = {
 };
 
 const THE_1975_2019: IGig = {
-  headline: MUSICIANS.THE_1975,
+  headline: MUSICIANS._1975_THE,
   venue: MUSIC_VENUES.O2_THE,
   dates: [new Date("2019-01-19")],
   company: [FRIENDS.JERRY_EDWARDS]

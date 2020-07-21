@@ -47,7 +47,7 @@ export const GIGS_2016: Array<IGig> = [
       [
         MUSICIANS.ALESSIA_CARA,
         MUSICIANS.TOM_ODELL,
-        MUSICIANS.THE_1975,
+        MUSICIANS._1975_THE,
         MUSICIANS.WILL_YOUNG,
         MUSICIANS.ADELE
       ],

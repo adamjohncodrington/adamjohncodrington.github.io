@@ -1,4 +1,4 @@
-import { MEASUREMENTS } from "../../measurements";
+import * as MEASUREMENTS from "../../measurements";
 
 import { BEANS } from "./beans";
 import { SEITAN } from "./seitan";

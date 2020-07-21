@@ -17,19 +17,25 @@ export const EventCardTextContainer = styled(FlexColumn)(
   `
 );
 
-export const EventCardSecondaryBody = styled.div(
-  () => CSS.FONT_SIZE_75_PERCENT
-);
+export const EventCardSecondaryBody = styled.div`
+  ${CSS.FONT_SIZE_75_PERCENT}
+`;
 
 export const EventCardSymbolsContainer = styled(FlexRow)(
-  ({ theme: { eventCard } }: IThemeProp) => css`
+  ({
+    theme: {
+      eventCard: {
+        companySymbol: { spaceBetweenSymbols }
+      }
+    }
+  }: IThemeProp) => css`
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: flex-end;
 
     > * {
-      margin-left: ${eventCard.companySymbol.spaceBetweenSymbols};
-      margin-bottom: ${eventCard.companySymbol.spaceBetweenSymbols};
+      margin-left: ${spaceBetweenSymbols};
+      margin-bottom: ${spaceBetweenSymbols};
     }
   `
 );

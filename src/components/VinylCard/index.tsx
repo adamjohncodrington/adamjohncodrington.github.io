@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 
 import { useThemeContext } from "context";
 import { Link, FlexRow, SquareImage } from "primitives";
-import { moveTheSuffixToPrefix } from "utils";
+import { moveTheSuffixToPrefix, getMusicianStageNameAtTime } from "utils";
 
 import { CardTitleBold, CardSubtitleBold } from "../styles";
 
@@ -26,11 +26,11 @@ const VinylCardTextContainer = styled.div(
 );
 
 export const VinylCard: FC<IVinyl> = ({
-  artist,
+  musician,
   title,
   year,
   artwork,
-  appleMusicUrl
+  appleMusicId
 }) => {
   const {
     vinyl: {
@@ -40,13 +40,17 @@ export const VinylCard: FC<IVinyl> = ({
 
   return (
     <FlexRow data-test="vinyl-card">
-      <VinylCardLink href={appleMusicUrl}>
+      <VinylCardLink href={"https://music.apple.com/gb/album/" + appleMusicId}>
         <SquareImage dataTest="vinyl-artwork" size={size} photo={artwork} />
       </VinylCardLink>
 
       <VinylCardTextContainer>
         <CardTitleBold>{title}</CardTitleBold>
-        <CardSubtitleBold>{moveTheSuffixToPrefix(artist)}</CardSubtitleBold>
+        <CardSubtitleBold>
+          {moveTheSuffixToPrefix(
+            getMusicianStageNameAtTime({ musician, year })
+          )}
+        </CardSubtitleBold>
         <div>{year}</div>
       </VinylCardTextContainer>
     </FlexRow>

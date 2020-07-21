@@ -1,4 +1,4 @@
-import { MEASUREMENTS } from "../../measurements";
+import * as MEASUREMENTS from "../../measurements";
 
 export const FRUIT_FROZEN: IFruitFrozen = {
   BLACKBERRIES_FROZEN: {

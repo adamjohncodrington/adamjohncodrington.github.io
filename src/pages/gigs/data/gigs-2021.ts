@@ -48,7 +48,7 @@ const ELLIE_G_HAMMERSMITH: IGig = {
 };
 
 const FINSBURY_1975_2021: IGig = {
-  headline: MUSICIANS.THE_1975,
+  headline: MUSICIANS._1975_THE,
   venue: MUSIC_VENUES.FINSBURY_PARK,
   dates: [new Date("2021-07-10")],
   company: [

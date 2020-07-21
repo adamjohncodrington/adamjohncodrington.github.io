@@ -15,24 +15,20 @@ interface IMusicVenue extends INameFavourite {
   insignificant?: boolean;
 }
 
-interface IAlbum {
+interface IVinyl {
+  musician: IMusician;
   title: string;
   year: number;
   artwork: IPhoto;
-  appleMusicUrl: string;
+  appleMusicId: string;
+  signed?: true;
   notes?: string;
   purchased?: boolean;
-  signed?: true;
-}
-
-interface IVinyl extends IAlbum {
-  artist: string;
 }
 
 interface IMusician extends INameFavourite {
   previousStageName?: { name: string; yearDeprecated: number };
   noLongerExists?: boolean;
-  albums?: Array<IAlbum>;
 }
 
 type ITicketType = string;

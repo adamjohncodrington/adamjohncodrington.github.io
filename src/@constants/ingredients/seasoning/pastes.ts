@@ -1,4 +1,4 @@
-import { MEASUREMENTS } from "../../measurements";
+import * as MEASUREMENTS from "../../measurements";
 import { UNICODE } from "../../unicode";
 
 export const PASTES: IPastes = {

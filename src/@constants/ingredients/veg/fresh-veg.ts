@@ -1,4 +1,4 @@
-import { MEASUREMENTS } from "../../measurements";
+import * as MEASUREMENTS from "../../measurements";
 
 export const VEG_FRESH: IVegFresh = {
   ASPARAGUS: { displayText: "asparagus" },

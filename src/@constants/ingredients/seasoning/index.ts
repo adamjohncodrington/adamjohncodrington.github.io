@@ -1,4 +1,5 @@
-import { MEASUREMENTS, SAINSBURYS_SEASONING_COST } from "../../measurements";
+import * as MEASUREMENTS from "../../measurements";
+import { SAINSBURYS_SEASONING_COST } from "../../sainsburys";
 
 import { DRIED_SEASONING } from "./dried-seasoning";
 import { OILS } from "./oils";
