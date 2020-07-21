@@ -29,9 +29,12 @@ export { ReactComponent as SvgChefHat } from "./chef-hat.svg";
 export { ReactComponent as SvgSauce } from "./sauce.svg";
 
 export { ReactComponent as SvgBallet } from "./ballet.svg";
-export { ReactComponent as SvgBriefcase } from "./briefcase-2.svg";
+export { ReactComponent as SvgBriefcase } from "./briefcase-4.svg";
 export { ReactComponent as SvgContemporary } from "./contemporary.svg";
 export { ReactComponent as SvgDancerJumping } from "./dancer-jumping.svg";
 export { ReactComponent as SvgHeels } from "./heels.svg";
 export { ReactComponent as SvgHome } from "./home.svg";
 export { ReactComponent as SvgDancerMale } from "./male-dancer-1.svg";
+export { ReactComponent as SvgPoleVault } from "./pole-vault.svg";
+
+export { ReactComponent as SvgPen } from "./pen.svg";

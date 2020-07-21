@@ -1,5 +1,6 @@
 # TO DO LIST
 
+- merge all resources into objects like `SVG` and `PHOTOS`
 - add `artists` to vinyl section
 - reinstate `secondaryText` on `CountedListItem`
 - make a Thailand video

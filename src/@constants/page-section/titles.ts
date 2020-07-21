@@ -1,17 +1,24 @@
 // Common
 export const ARTISTS: string = "Artists";
 export const BUCKET_LIST: string = "Bucket List";
-export const COLLECTION: string = "Collection";
 export const COMING_SOON: string = "Coming Soon";
 export const FRIENDS: string = "Friends";
 export const PHOTOS: string = "Photos";
-export const WISH_LIST: string = "Wish List";
 export const UP_NEXT: string = "Up Next";
 export const VIDEOS: string = "Videos";
 
 // Gigs
 export const FESTIVALS: string = "Festivals";
 export const VENUES: string = "Venues";
+
+// Pole
+export const CONTEMPORARY: string = "Contemporary";
+export const EXOTIC: string = "Exotic";
+export const INSTRUCTORS: string = "Instructors";
+export const IMPROVISATION: string = "Improvisation";
+export const SHOWCASE: string = "Showcase";
+export const TRICKS_COMBOS: string = "Tricks & Combos";
+export const NON_POLE: string = "Non-Pole";
 
 // Recipes
 export const MAINS: string = "Mains";
@@ -30,3 +37,8 @@ export const COUNTRIES: string = "Countries";
 export const HIGHLIGHTS: string = "Highlights";
 export const ISLANDS: string = "Islands";
 export const THEME_PARKS: string = "Theme Parks";
+
+// Vinyl
+export const COLLECTION: string = "Collection";
+export const SIGNED: string = "Signed";
+export const WISH_LIST: string = "Wish List";

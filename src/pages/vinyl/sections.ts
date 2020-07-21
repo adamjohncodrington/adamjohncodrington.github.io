@@ -1,5 +1,5 @@
 import { FACTORY } from "./factory";
-import { SvgBriefcase, SvgStars, SvgArtist } from "resources";
+import { SvgBriefcase, SvgStars, SvgArtist, SvgPen } from "resources";
 import { PAGE_SECTION } from "@constants";
 
 const SECTION_ARTISTS: IPageSection = {
@@ -17,6 +17,12 @@ const SECTION_COLLECTION: IPageSection = {
   staticIf2Columns: true
 };
 
+const SECTION_SIGNED: IPageSection = {
+  title: PAGE_SECTION.TITLES.SIGNED,
+  data: { comingSoon: true },
+  SvgIcon: SvgPen
+};
+
 const SECTION_WISHLIST: IPageSection = {
   title: PAGE_SECTION.TITLES.WISH_LIST,
   SvgIcon: SvgStars,
@@ -29,5 +35,6 @@ const SECTION_WISHLIST: IPageSection = {
 export const sections: Array<IPageSection> = [
   SECTION_ARTISTS,
   SECTION_COLLECTION,
+  SECTION_SIGNED,
   SECTION_WISHLIST
 ];
