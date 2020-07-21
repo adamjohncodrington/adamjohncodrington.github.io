@@ -1,11 +1,5 @@
 import { PAGE_SECTION } from "@constants";
-import {
-  SvgArtist,
-  SvgFriends,
-  SvgBook,
-  SvgTheatre,
-  SvgNotepad
-} from "resources";
+import { SVG } from "resources";
 import { isInFuture } from "utils";
 
 import { FACTORY } from "./factory";
@@ -13,32 +7,32 @@ import { DATA } from "./data";
 
 const SECTION_ACTORS: IPageSection = {
   title: PAGE_SECTION.TITLES.ACTORS,
-  SvgIcon: SvgArtist,
+  SvgIcon: SVG.ARTIST,
   data: { countedListItems: FACTORY.ACTORS }
 };
 
 const SECTION_FRIENDS_THEATRE: IPageSection = {
   title: PAGE_SECTION.TITLES.FRIENDS,
-  SvgIcon: SvgFriends,
+  SvgIcon: SVG.PEOPLE,
   data: { countedListItems: FACTORY.FRIENDS }
 };
 
 const SECTION_PLAYS: IPageSection = {
   title: PAGE_SECTION.TITLES.PLAYS,
-  SvgIcon: SvgBook,
+  SvgIcon: SVG.BOOK,
   data: { countedListItems: FACTORY.PLAYS },
   count: FACTORY.PLAYS.length
 };
 
 const SECTION_THEATRES: IPageSection = {
   title: PAGE_SECTION.TITLES.THEATRES,
-  SvgIcon: SvgTheatre,
+  SvgIcon: SVG.THEATRE,
   data: { countedListItems: FACTORY.VENUES },
   count: FACTORY.VENUES.length
 };
 
 const SECTION_UP_NEXT_THEATRE: IPageSection = {
-  SvgIcon: SvgNotepad,
+  SvgIcon: SVG.NOTEPAD,
   title: PAGE_SECTION.TITLES.UP_NEXT,
   data: { theatreVisits: FACTORY.UP_NEXT }
 };

@@ -1,9 +1,4 @@
 import React from "react";
-import styled from "styled-components";
-
-const VideoContainer = styled.div`
-  margin-top: 10px;
-`;
 
 export const YouTubeVideo: React.FC<IYouTubeVideo> = ({ id, quality }) => {
   const URL_VIDEO_QUALITY: string | undefined =
@@ -16,15 +11,13 @@ export const YouTubeVideo: React.FC<IYouTubeVideo> = ({ id, quality }) => {
   const VIDEO_SRC: string = "https://www.youtube.com/embed/" + id + URL_SUFFIX;
 
   return (
-    <VideoContainer data-test="video-container">
-      <iframe
-        title={id}
-        width="100%"
-        src={VIDEO_SRC}
-        frameBorder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      />
-    </VideoContainer>
+    <iframe
+      title={id}
+      width="100%"
+      src={VIDEO_SRC}
+      frameBorder="0"
+      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    />
   );
 };

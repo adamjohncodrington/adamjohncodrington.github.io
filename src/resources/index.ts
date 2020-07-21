@@ -1,6 +1,7 @@
+import * as SVG from "./svg";
 import * as YOUTUBE from "./youtube";
 
-export { YOUTUBE };
+export { SVG, YOUTUBE };
 
 export * from "./photos";
 export * from "./photos/album-artwork";

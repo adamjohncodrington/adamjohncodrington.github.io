@@ -1,10 +1,10 @@
-import { SvgCutlery } from "resources";
+import { SVG } from "resources";
 
 import { sections } from "./sections";
 
 export const PAGE_RECIPES: IPage = {
   title: "Recipes",
   path: "/recipes",
-  SvgIcon: SvgCutlery,
+  SvgIcon: SVG.CUTLERY,
   sections
 };

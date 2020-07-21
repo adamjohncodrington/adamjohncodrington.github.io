@@ -1,7 +1,7 @@
 # TO DO LIST
 
 - `IPhoto = {url, date}`
-- merge all resources into objects like `SVG` and `PHOTOS`
+- merge all resources into objects like `PHOTOS`
 - add `artists` to vinyl section
 - reinstate `secondaryText` on `CountedListItem`
 - make a Thailand video

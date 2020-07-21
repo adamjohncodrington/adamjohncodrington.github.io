@@ -1,40 +1,51 @@
-export { ReactComponent as SvgArtist } from "./artist.svg";
-export { ReactComponent as SvgBook } from "./book.svg";
-export { ReactComponent as SvgBrain } from "./brain.svg";
-export { ReactComponent as SvgCamera } from "./camera.svg";
-export { ReactComponent as SvgCity } from "./city.svg";
-export { ReactComponent as SvgFlag } from "./flag.svg";
-export { ReactComponent as SvgFriends } from "./people.svg";
-export { ReactComponent as SvgMapPin } from "./map-pin.svg";
-export { ReactComponent as SvgMicrophone } from "./microphone.svg";
-export { ReactComponent as SvgNotepad } from "./notepad.svg";
-export { ReactComponent as SvgPalmTree } from "./palm-tree.svg";
-export { ReactComponent as SvgPeaceSign } from "./peace-sign.svg";
-export { ReactComponent as SvgPole } from "./pole-1.svg";
-export { ReactComponent as SvgRollerCoaster } from "./roller-coaster.svg";
-export { ReactComponent as SvgStadium } from "./stadium.svg";
-export { ReactComponent as SvgStars } from "./stars.svg";
-export { ReactComponent as SvgTheatreMasks } from "./masks.svg";
-export { ReactComponent as SvgTheatre } from "./theatre.svg";
-export { ReactComponent as SvgTravel } from "./travel.svg";
-export { ReactComponent as SvgVegBowl } from "./veg-bowl.svg";
-export { ReactComponent as SvgVinyl } from "./vinyl.svg";
-export { ReactComponent as SvgVideoCamera } from "./video-camera.svg";
-
-export { ReactComponent as SvgBowl } from "./bowl-1.svg";
-export { ReactComponent as SvgCake } from "./cake-1.svg";
-export { ReactComponent as SvgCloche } from "./cloche.svg";
-export { ReactComponent as SvgCutlery } from "./cutlery-1.svg";
-export { ReactComponent as SvgChefHat } from "./chef-hat.svg";
-export { ReactComponent as SvgSauce } from "./sauce.svg";
-
-export { ReactComponent as SvgBallet } from "./ballet.svg";
-export { ReactComponent as SvgBriefcase } from "./briefcase-2.svg";
-export { ReactComponent as SvgContemporary } from "./contemporary.svg";
-export { ReactComponent as SvgDancerJumping } from "./dancer-jumping.svg";
-export { ReactComponent as SvgHeels } from "./heels.svg";
-export { ReactComponent as SvgHome } from "./home.svg";
-export { ReactComponent as SvgDancerMale } from "./male-dancer-1.svg";
-export { ReactComponent as SvgPoleVault } from "./pole-vault.svg";
-
-export { ReactComponent as SvgPen } from "./pen.svg";
+// A
+export { ReactComponent as ARTIST } from "./artist.svg";
+// B
+export { ReactComponent as BOOK } from "./book.svg";
+export { ReactComponent as BOWL } from "./bowl-3.svg";
+export { ReactComponent as BOWL_VEG } from "./bowl-veg.svg";
+export { ReactComponent as BRAIN } from "./brain.svg";
+export { ReactComponent as BRIEFCASE } from "./briefcase-2.svg";
+// C
+export { ReactComponent as CAKE } from "./cake-1.svg";
+export { ReactComponent as CAMERA } from "./camera.svg";
+export { ReactComponent as CHEF_HAT } from "./chef-hat.svg";
+export { ReactComponent as CITY } from "./city.svg";
+export { ReactComponent as CLOCHE } from "./cloche.svg";
+export { ReactComponent as CUTLERY } from "./cutlery-2.svg";
+// D
+export { ReactComponent as DANCER_BALLET } from "./dancer-ballet.svg";
+export { ReactComponent as DANCER_JUMPING } from "./dancer-jumping.svg";
+export { ReactComponent as DANCER_MALE_1 } from "./dancer-male-1.svg";
+export { ReactComponent as DANCER_MALE_2 } from "./dancer-male-2.svg";
+export { ReactComponent as DANCER_POSE } from "./dancer-pose.svg";
+// F
+export { ReactComponent as FLAG } from "./flag.svg";
+// H
+export { ReactComponent as HEELS } from "./heels.svg";
+export { ReactComponent as HOME } from "./home.svg";
+// M
+export { ReactComponent as MAP_PIN } from "./map-pin.svg";
+export { ReactComponent as MICROPHONE } from "./microphone.svg";
+// N
+export { ReactComponent as NOTEPAD } from "./notepad.svg";
+// P
+export { ReactComponent as PALM_TREE } from "./palm-tree.svg";
+export { ReactComponent as PEACE_SIGN } from "./peace-sign.svg";
+export { ReactComponent as PEN } from "./pen.svg";
+export { ReactComponent as PEOPLE } from "./people.svg";
+export { ReactComponent as POLE_VAULT } from "./pole-vault.svg";
+// R
+export { ReactComponent as ROLLER_COASTER } from "./roller-coaster.svg";
+// S
+export { ReactComponent as SAUCE } from "./sauce.svg";
+export { ReactComponent as SHOES_FLAMENCO } from "./shoes-flamenco.svg";
+export { ReactComponent as STADIUM } from "./stadium.svg";
+export { ReactComponent as STARS } from "./stars.svg";
+// T
+export { ReactComponent as THEATRE_MASKS } from "./masks.svg";
+export { ReactComponent as THEATRE } from "./theatre.svg";
+export { ReactComponent as TRAVEL } from "./travel.svg";
+// V
+export { ReactComponent as VIDEO_CAMERA } from "./video-camera.svg";
+export { ReactComponent as VINYL } from "./vinyl.svg";

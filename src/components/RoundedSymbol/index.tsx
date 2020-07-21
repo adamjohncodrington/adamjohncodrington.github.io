@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { SvgVideoCamera, SvgCamera } from "resources";
+import { SVG } from "resources";
 
 interface IStyledRoundedSymbol extends IRoundedSymbol, IThemeProp {}
 
@@ -58,8 +58,8 @@ export const RoundedSymbol: React.FC<IRoundedSymbol> = ({ type, children }) => {
 
   return isSvgSymbol ? (
     <StyledRoundedSymbol type={type}>
-      {type === "photo" && <SvgCamera />}
-      {type === "video" && <SvgVideoCamera />}
+      {type === "photo" && <SVG.CAMERA />}
+      {type === "video" && <SVG.VIDEO_CAMERA />}
     </StyledRoundedSymbol>
   ) : (
     <StyledRoundedSymbol type={type}>{children}</StyledRoundedSymbol>
