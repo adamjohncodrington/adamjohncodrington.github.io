@@ -59,7 +59,7 @@ const method: Array<string> = [
 const title: string = "Piri Piri";
 const makes: IRecipeMakes = { quantity: 475, measurement: MEASUREMENTS.GRAM };
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IPhoto = PHOTOS.RECIPES.PIRI_PIRI;
+const photo: IPhoto = PHOTOS.RECIPES.PIRI_PIRI;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
 
@@ -70,5 +70,5 @@ export const PIRI_PIRI: IRecipe = {
   method,
   totalCost,
   diet,
-  image
+  photo
 };

@@ -106,7 +106,7 @@ const method: Array<string> = [
 
 const title: string = "Bolognese";
 const makes: IRecipeMakes = { quantity: 5, measurement: MEASUREMENTS.PORTION };
-const image: IPhoto = PHOTOS.RECIPES.BOLOGNESE;
+const photo: IPhoto = PHOTOS.RECIPES.BOLOGNESE;
 const diet: IRecipeDiet = DIETS.VEGAN;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
@@ -119,7 +119,7 @@ export const BOLOGNESE: IRecipe = {
   serveWith,
   diet,
   method,
-  image,
+  photo,
   totalCost,
   portionCost
 };

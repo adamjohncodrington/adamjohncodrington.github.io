@@ -60,7 +60,7 @@ const method: Array<string> = [
 
 const title: string = "Crispy Kale";
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IPhoto = PHOTOS.RECIPES.KALE_CRISPY;
+const photo: IPhoto = PHOTOS.RECIPES.KALE_CRISPY;
 const makes: IRecipeMakes = { quantity: 2, measurement: MEASUREMENTS.SERVING };
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
@@ -71,6 +71,6 @@ export const CRISPY_KALE: IRecipe = {
   makes,
   totalCost,
   method,
-  image,
+  photo,
   diet
 };

@@ -102,7 +102,7 @@ const method: Array<string> = [
 const title: string = "Banana Cake";
 const makes: IRecipeMakes = { quantity: 10, measurement: MEASUREMENTS.SLICE };
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IPhoto = PHOTOS.RECIPES.BANANA_CAKE;
+const photo: IPhoto = PHOTOS.RECIPES.BANANA_CAKE;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;
@@ -115,5 +115,5 @@ export const BANANA_CAKE: IRecipe = {
   makes,
   method,
   diet,
-  image
+  photo
 };

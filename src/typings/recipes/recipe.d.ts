@@ -28,7 +28,7 @@ interface IRecipeMakes {
 interface IRecipe extends IFavourite {
   title: string;
   makes?: IRecipeMakes;
-  image?: IPhoto;
+  photo?: IPhoto;
   ingredients: Array<Array<IRecipeIngredient>>;
   serveWith?: Array<Array<IServeWithItem>>;
   diet: IRecipeDiet;

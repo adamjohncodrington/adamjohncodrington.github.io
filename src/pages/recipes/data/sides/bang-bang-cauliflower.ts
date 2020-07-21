@@ -83,7 +83,7 @@ const serveWith: Array<Array<IServeWithItem>> = [
 const title: string = "Bang Bang Cauliflower";
 const makes: IRecipeMakes = { quantity: 2, measurement: MEASUREMENTS.PORTION };
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IPhoto = PHOTOS.RECIPES.BANG_BANG_CAULI;
+const photo: IPhoto = PHOTOS.RECIPES.BANG_BANG_CAULI;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;
@@ -91,7 +91,7 @@ const portionCost: number = totalCost / makes.quantity;
 export const BANG_BANG_CAULIFLOWER: IRecipe = {
   title,
   ingredients,
-  image,
+  photo,
   totalCost,
   serveWith,
   portionCost,

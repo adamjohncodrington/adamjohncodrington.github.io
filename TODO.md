@@ -1,17 +1,11 @@
 # TO DO LIST
 
-- rename `image: ` as `photo:`
-CHLOE_WHITE_X_HALLE fix!!!
-- implement `displayLast` boolean
-- `IPhoto = {url, date}`
-- merge all resources into objects like `PHOTOS`
-- add `artists` to vinyl section
-- reinstate `secondaryText` on `CountedListItem`
-- make a Thailand video
+- store YouTube IDs in 1 place
+
+
 - add photos to Thailand, Laos, Ecuador and Peru to establish how video will work
 - beef up POLE section
 - refactor `ITicketType` as `{ retailer, format }`
-- store YouTube IDs in 1 place
 - make YouTube videos play in HD
 - rationalise all types, they are getting inconsistent and difficult to work with
 

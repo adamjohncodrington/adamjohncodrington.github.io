@@ -35,7 +35,7 @@ const method: Array<string> = [
 const title: string = "Mashed Potato";
 const makes: IRecipeMakes = { quantity: 2, measurement: MEASUREMENTS.PORTION };
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IPhoto = PHOTOS.RECIPES.MASHED_POTATO;
+const photo: IPhoto = PHOTOS.RECIPES.MASHED_POTATO;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
 
@@ -46,5 +46,5 @@ export const MASHED_POTATO: IRecipe = {
   totalCost,
   method,
   diet,
-  image
+  photo
 };

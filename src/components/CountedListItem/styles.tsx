@@ -1,18 +1,24 @@
 import styled, { css } from "styled-components";
 
+import { FlexRow } from "primitives";
 import { getPseudoElementBefore, HEART, STAR } from "styles";
 
 interface IStyledMainText extends IThemeProp, IFavourite, IStar {
   faded: boolean;
 }
 
-export const StyledTextContainer = styled.div`
+export const StyledTextContainer = styled(FlexRow)`
   flex: 1;
+  align-items: baseline;
 `;
 
-export const StyledSecondaryText = styled.span`
-  margin-left: 5px;
-`;
+export const StyledSecondaryText = styled.span(
+  ({ theme: { fadedOpacity } }: IThemeProp) => css`
+    opacity: ${fadedOpacity};
+    margin-left: 5px;
+    font-size: 75%;
+  `
+);
 
 export const StyledMainText = styled.span(
   ({ favourite, star, faded, theme: { fadedOpacity } }: IStyledMainText) => css`

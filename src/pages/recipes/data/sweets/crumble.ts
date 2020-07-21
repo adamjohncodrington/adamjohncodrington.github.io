@@ -80,7 +80,7 @@ const method: Array<string> = [
 const makes: IRecipeMakes = { quantity: 8, measurement: MEASUREMENTS.PORTION };
 const title: string = "Crumble";
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IPhoto = PHOTOS.RECIPES.CRUMBLE;
+const photo: IPhoto = PHOTOS.RECIPES.CRUMBLE;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;
@@ -94,5 +94,5 @@ export const CRUMBLE: IRecipe = {
   totalCost,
   portionCost,
   diet,
-  image
+  photo
 };

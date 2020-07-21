@@ -49,7 +49,7 @@ export const CHEMICAL_BROTHERS_THE: IMusician = {
   name: "Chemical Brothers, The"
 };
 export const CHERYL: IMusician = { name: "Cheryl" };
-export const CHLOE_WHITE_X_HALLE: IMusician = { name: "Chloe x Halle" };
+export const CHLOE_X_HALLE: IMusician = { name: "Chloe x Halle" };
 export const CHRISTINE_AND_THE_QUEENS: IMusician = {
   name: "Christine and the Queens"
 };

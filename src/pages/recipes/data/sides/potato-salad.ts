@@ -41,7 +41,7 @@ const method: Array<string> = [
 const title: string = "Potato Salad";
 const makes: IRecipeMakes = { quantity: 4, measurement: MEASUREMENTS.PORTION };
 const diet: IRecipeDiet = DIETS.VEGETARIAN;
-const image: IPhoto = PHOTOS.RECIPES.POTATO_SALAD;
+const photo: IPhoto = PHOTOS.RECIPES.POTATO_SALAD;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;
@@ -54,5 +54,5 @@ export const POTATO_SALAD: IRecipe = {
   portionCost,
   method,
   diet,
-  image
+  photo
 };

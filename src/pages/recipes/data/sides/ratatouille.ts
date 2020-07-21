@@ -83,7 +83,7 @@ const method: Array<string> = [
 const title: string = "Ratatouille";
 const makes: IRecipeMakes = { quantity: 5, measurement: MEASUREMENTS.PORTION };
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IPhoto = PHOTOS.RECIPES.RATATOUILLE;
+const photo: IPhoto = PHOTOS.RECIPES.RATATOUILLE;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;
@@ -96,5 +96,5 @@ export const RATATOUILLE: IRecipe = {
   totalCost,
   portionCost,
   diet,
-  image
+  photo
 };
