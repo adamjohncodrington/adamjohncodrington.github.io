@@ -117,7 +117,7 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
 
       {videos &&
         videos.map((video: IVideo, index: number) => (
-          <YouTubeVideo {...video} />
+          <YouTubeVideo key={index} {...video} />
         ))}
 
       {countedListItems &&

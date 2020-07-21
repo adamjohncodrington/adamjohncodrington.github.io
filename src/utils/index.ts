@@ -13,3 +13,5 @@ export * from "./getIngredientsHeader";
 export * from "./generateIngredientListItem";
 export * from "./recipeMethodEntries";
 export * from "./formatCountedListItems";
+export * from "./year-splitters";
+export * from "./sorters";

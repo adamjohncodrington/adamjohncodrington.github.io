@@ -58,7 +58,7 @@ interface IPageSectionDataTypes {
   theatreVisits?: Array<ITheatreVisit>;
   trips?: Array<ITripLeg>;
   videos?: Array<IVideo>;
-  vinyls?: Array<IVinyl>;
+  vinyls?: Array<IVinylCards>;
 }
 
 interface IPageSection extends IPageSectionDisclosure {

@@ -31,6 +31,18 @@ const SECTION_WISHLIST: IPageSection = {
   count: FACTORY.WISH_LIST.length
 };
 
+const SECTIONS_YEARS: Array<IPageSection> = FACTORY.VINYLS_BY_YEAR.map(
+  (yearGroup: Array<IVinyl>): IPageSection => ({
+    title: yearGroup[0].year.toString(),
+    data: {
+      vinyls: yearGroup.map(
+        (vinyl: IVinyl): IVinylCard => ({ ...vinyl, hideYear: true })
+      )
+    },
+    count: yearGroup.length
+  })
+);
+
 // const SECTION_PHOTOS: IPageSection = {
 //   title: PAGE_SECTION.TITLES.PHOTOS,
 //   SvgIcon: SVG.CAMERA,
@@ -42,5 +54,6 @@ export const sections: Array<IPageSection> = [
   SECTION_COLLECTION,
   // SECTION_PHOTOS,
   SECTION_SIGNED,
-  SECTION_WISHLIST
+  SECTION_WISHLIST,
+  ...SECTIONS_YEARS
 ];

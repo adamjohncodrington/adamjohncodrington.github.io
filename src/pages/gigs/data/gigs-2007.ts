@@ -1,6 +1,6 @@
 import { FRIENDS, FESTIVALS, MUSICIANS, MUSIC_VENUES } from "@constants";
 
-const FOB_2007: IGig = {
+export const FOB_2007: IGig = {
   headline: MUSICIANS.FALL_OUT_BOY,
   support: [MUSICIANS.COBRA_STARSHIP],
   dates: [new Date("2007-04-03")],
@@ -8,7 +8,7 @@ const FOB_2007: IGig = {
   company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON, FRIENDS.MEGAN_BLACKBURN]
 };
 
-const DECAYDANCE: IGig = {
+export const DECAYDANCE: IGig = {
   festival: FESTIVALS.DECAYDANCE,
   lineup: [
     [
@@ -24,5 +24,3 @@ const DECAYDANCE: IGig = {
   company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON, FRIENDS.MEGAN_BLACKBURN],
   favourite: true
 };
-
-export const GIGS_2007: Array<IGig> = [DECAYDANCE, FOB_2007];

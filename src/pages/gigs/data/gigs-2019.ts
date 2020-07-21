@@ -87,7 +87,7 @@ const G_FLIP: IGig = {
   company: [FRIENDS.JERRY_EDWARDS]
 };
 
-const FKA_TWIGS_ALLY_PALLY: IGig = {
+const FKA_TWIGS_2019_05: IGig = {
   headline: MUSICIANS.FKA_TWIGS,
   video: VIDEOS.GIGS.FKA_TWIGS_ALLY_PALLY,
   venue: MUSIC_VENUES.ALEXANDRA_PALACE_THEATRE,
@@ -108,7 +108,7 @@ export const GIGS_2019: Array<IGig> = [
   MARINA_2020,
   SASHA_SLOAN,
   G_FLIP,
-  FKA_TWIGS_ALLY_PALLY,
+  FKA_TWIGS_2019_05,
 
   {
     headline: MUSICIANS.FLEETWOOD_MAC,

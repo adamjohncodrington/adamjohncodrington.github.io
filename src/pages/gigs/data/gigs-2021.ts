@@ -6,7 +6,7 @@ import {
   MUSIC_VENUES
 } from "@constants";
 
-const RATIONALE: IGig = {
+export const RATIONALE: IGig = {
   headline: MUSICIANS.RATIONALE,
   venue: MUSIC_VENUES.SHEPHERDS_BUSH_EMPIRE,
   dates: [new Date("2021-04-28")],
@@ -14,7 +14,7 @@ const RATIONALE: IGig = {
   ticketType: TICKET_TYPES.SEE_TICKETS_POSTAL
 };
 
-const JESSIE_WARE_BRIXTON: IGig = {
+export const JESSIE_WARE: IGig = {
   headline: MUSICIANS.JESSIE_WARE,
   venue: MUSIC_VENUES.BRIXTON_ACADEMY,
   dates: [new Date("2021-04-26")],
@@ -22,7 +22,7 @@ const JESSIE_WARE_BRIXTON: IGig = {
   ticketType: TICKET_TYPES.TICKETWEB
 };
 
-const MIGHTY_HOOPLA_2021: IGig = {
+export const MIGHTY_HOOPLA_2021: IGig = {
   festival: FESTIVALS.MIGHTY_HOOPLA,
   venue: MUSIC_VENUES.BROCKWELL_PARK,
   dates: [new Date("2021-06-05")],
@@ -39,7 +39,7 @@ const MIGHTY_HOOPLA_2021: IGig = {
   ticketType: TICKET_TYPES.KABOODLE_ETICKET
 };
 
-const ELLIE_G_HAMMERSMITH: IGig = {
+export const ELLIE_GOULDING_2021: IGig = {
   headline: MUSICIANS.ELLIE_GOULDING,
   venue: MUSIC_VENUES.HAMMERSMITH_APOLLO,
   dates: [new Date("2021-05-06")],
@@ -47,7 +47,7 @@ const ELLIE_G_HAMMERSMITH: IGig = {
   ticketType: TICKET_TYPES.TICKETMASTER_POSTAL
 };
 
-const FINSBURY_1975_2021: IGig = {
+export const THE_1975_2021: IGig = {
   headline: MUSICIANS._1975_THE,
   venue: MUSIC_VENUES.FINSBURY_PARK,
   dates: [new Date("2021-07-10")],
@@ -61,27 +61,17 @@ const FINSBURY_1975_2021: IGig = {
   ticketType: TICKET_TYPES.TICKETMASTER_ETICKET
 };
 
-const GAGA_2021: IGig = {
+export const LADY_GAGA_2021: IGig = {
   headline: MUSICIANS.LADY_GAGA,
   venue: MUSIC_VENUES.TOTTENHAM_HOTSPUR_STADIUM,
   dates: [new Date("2021-07-30")],
   company: [FRIENDS.RYAN_MILLS, FRIENDS.DAN_SPARROW, FRIENDS.TOM_CHINDA_COUTTS]
 };
 
-const SOPHIE_ELLIS_BEXTOR: IGig = {
+export const SOPHIE_ELLIS_BEXTOR: IGig = {
   headline: MUSICIANS.SOPHIE_ELLIS_BEXTOR,
   venue: MUSIC_VENUES.LONDON_PALLADIUM,
   dates: [new Date("2021-05-13")],
   company: [FRIENDS.DARREN_TAYLOR],
   ticketType: TICKET_TYPES.TICKETMASTER_POSTAL
 };
-
-export const GIGS_2021: Array<IGig> = [
-  MIGHTY_HOOPLA_2021,
-  RATIONALE,
-  SOPHIE_ELLIS_BEXTOR,
-  FINSBURY_1975_2021,
-  ELLIE_G_HAMMERSMITH,
-  JESSIE_WARE_BRIXTON,
-  GAGA_2021
-];

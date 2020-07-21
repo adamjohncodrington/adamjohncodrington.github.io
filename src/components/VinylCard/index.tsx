@@ -25,18 +25,27 @@ const VinylCardTextContainer = styled.div(
     `
 );
 
-export const VinylCard: FC<IVinyl> = ({
+export const VinylCard: FC<IVinylCard> = ({
   musician,
   title,
   year,
   artwork,
-  appleMusicId
+  appleMusicId,
+  hideYear
 }) => {
   const {
     vinyl: {
       artwork: { size }
     }
   }: ITheme = useThemeContext();
+
+  const musicianName: string = moveTheSuffixToPrefix(
+    getMusicianStageNameAtTime({ musician, year })
+  );
+  const albumTitle: string = title;
+
+  const cardTitle: string = hideYear ? musicianName : albumTitle;
+  const cardSubtitle: string = hideYear ? albumTitle : musicianName;
 
   return (
     <FlexRow data-test="vinyl-card">
@@ -45,13 +54,10 @@ export const VinylCard: FC<IVinyl> = ({
       </VinylCardLink>
 
       <VinylCardTextContainer>
-        <CardTitleBold>{title}</CardTitleBold>
-        <CardSubtitleBold>
-          {moveTheSuffixToPrefix(
-            getMusicianStageNameAtTime({ musician, year })
-          )}
-        </CardSubtitleBold>
-        <div>{year}</div>
+        <CardTitleBold>{cardTitle}</CardTitleBold>
+        <CardSubtitleBold>{cardSubtitle}</CardSubtitleBold>
+
+        {!hideYear && <div>{year}</div>}
       </VinylCardTextContainer>
     </FlexRow>
   );

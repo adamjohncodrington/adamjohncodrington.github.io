@@ -26,6 +26,10 @@ interface IVinyl {
   purchased?: boolean;
 }
 
+interface IVinylCard extends IVinyl {
+  hideYear?: boolean;
+}
+
 interface IMusician extends INameFavourite {
   previousStageName?: { name: string; yearDeprecated: number };
   noLongerExists?: boolean;
