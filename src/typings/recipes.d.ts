@@ -1,3 +1,15 @@
+interface IIngredientCost {
+  price: number;
+  quantity?: number;
+  measurement?: string;
+  payFullAmountAlways?: boolean;
+}
+
+interface IInventoryIngredient {
+  displayText: string;
+  knownCost?: IIngredientCost;
+}
+
 interface IListItemWithPaddingTopFlag {
   text: string;
   addPaddingTop?: boolean;

@@ -17,7 +17,7 @@ interface IGetItemCounts {
     musician?: IMusician;
     musicVenue?: IMusicVenue;
     play?: IPlay;
-    theatre?: ITheatreVenue;
+    theatre?: ITheatre;
   };
 }
 

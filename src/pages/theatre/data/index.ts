@@ -1,8 +1,12 @@
-import { THEATRE_2016 } from "./theatre-2016";
-import { THEATRE_2017 } from "./theatre-2017";
+import * as theatre2016 from "./theatre-2016";
+import * as theatre2017 from "./theatre-2017";
+
 import { THEATRE_2018 } from "./theatre-2018";
 import { THEATRE_2019 } from "./theatre-2019";
 import { THEATRE_2020 } from "./theatre-2020";
+
+const THEATRE_2016: Array<ITheatreVisit> = Object.values(theatre2016);
+const THEATRE_2017: Array<ITheatreVisit> = Object.values(theatre2017);
 
 const ALL: Array<ITheatreVisit> = [
   ...THEATRE_2016,

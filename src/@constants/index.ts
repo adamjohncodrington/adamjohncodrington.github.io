@@ -5,10 +5,12 @@ import * as FRIENDS from "./friends";
 import * as MEASUREMENTS from "./measurements";
 import * as MUSICIANS from "./musicians";
 import * as PAGE_SECTION from "./page-section";
+import * as PLAYS from "./plays";
 import * as POLE_INSTRUCTORS from "./pole-instructors";
 
 export * from "./music-venues";
 export * from "./sainsburys";
+export * from "./theatres";
 export * from "./vinyls";
 
 export {
@@ -19,6 +21,7 @@ export {
   MEASUREMENTS,
   MUSICIANS,
   PAGE_SECTION,
+  PLAYS,
   POLE_INSTRUCTORS
 };
 
@@ -27,7 +30,5 @@ export * from "./friends";
 export * from "./pole-instructors";
 export * from "./locations";
 export * from "./ingredients";
-export * from "./plays";
-export * from "./theatre-venues";
 export * from "./ticket-types";
 export * from "./unicode";

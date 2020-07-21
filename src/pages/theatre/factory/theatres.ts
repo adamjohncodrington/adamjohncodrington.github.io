@@ -9,7 +9,7 @@ import {
 import { DATA } from "../data";
 
 const getTheatreVisitsMatchingVenue = (
-  theatre: ITheatreVenue
+  theatre: ITheatre
 ): Array<ITheatreVisit> => {
   const theatreVisitsMatchingVenue: Array<ITheatreVisit> = [];
   const theatreVisits: Array<ITheatreVisit> = DATA.ALL;
@@ -21,7 +21,7 @@ const getTheatreVisitsMatchingVenue = (
 };
 
 const getTheatreVenueDetails = (
-  play: ITheatreVenue
+  play: ITheatre
 ): Array<ICountedListItemDetail> => {
   const theatreVisitsMatchingVenue: Array<ITheatreVisit> = getTheatreVisitsMatchingVenue(
     play
@@ -42,7 +42,7 @@ const getTheatreVenueDetails = (
 export const THEATRE_VENUES_LIST_ITEMS: Array<ICountedListItem> = Object.values(
   THEATRE_VENUES
 ).map(
-  (theatre: ITheatreVenue): ICountedListItem => ({
+  (theatre: ITheatre): ICountedListItem => ({
     text: theatre.name,
     ...getItemCounts({ item: { theatre }, data: { theatreVisits: DATA.ALL } }),
     details: getTheatreVenueDetails(theatre)
