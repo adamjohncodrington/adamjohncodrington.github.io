@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "2ff7502aca193dd8015fc9f9d2691424",
+    "revision": "5a54a094f8ca70b3889df9a8a7209761",
     "url": "/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.a67e97f5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "686aa9776297305c27c1",
-    "url": "/static/js/main.c2d8c599.chunk.js"
+    "revision": "b35d0c9cab74fd818b5e",
+    "url": "/static/js/main.6bfe93ca.chunk.js"
   },
   {
     "revision": "3cf57b419839acabd216",
@@ -24,16 +24,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/artist.6b1569d5.svg"
   },
   {
-    "revision": "1c88ddb6165f1b34befd28db6493d33c",
-    "url": "/static/media/ballet.1c88ddb6.svg"
-  },
-  {
     "revision": "a7bef01bba3d9aee14f481bfe76d3ee3",
     "url": "/static/media/book.a7bef01b.svg"
   },
   {
-    "revision": "2b0913adaca0c23ce243920b3a0879d5",
-    "url": "/static/media/bowl-1.2b0913ad.svg"
+    "revision": "5441026de621b4b1335d073ed998a333",
+    "url": "/static/media/bowl-3.5441026d.svg"
+  },
+  {
+    "revision": "ee16e10addc92610135e7aa485c554d4",
+    "url": "/static/media/bowl-veg.ee16e10a.svg"
   },
   {
     "revision": "237ef4f48ff41d4faa7485237c411968",
@@ -64,16 +64,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/cloche.1e7e8b51.svg"
   },
   {
-    "revision": "92e030e6bd5162fe87b5462694d25d5a",
-    "url": "/static/media/contemporary.92e030e6.svg"
+    "revision": "16ffbe35602efe48fe5736b18091d5b6",
+    "url": "/static/media/cutlery-2.16ffbe35.svg"
   },
   {
-    "revision": "b2f215b3cbf46a19402ca290e907a654",
-    "url": "/static/media/cutlery-1.b2f215b3.svg"
+    "revision": "1c88ddb6165f1b34befd28db6493d33c",
+    "url": "/static/media/dancer-ballet.1c88ddb6.svg"
   },
   {
     "revision": "f93a8480dedda933146b64dedd5b94a3",
     "url": "/static/media/dancer-jumping.f93a8480.svg"
+  },
+  {
+    "revision": "e332ed1df7efda732bb85e81c19a05ab",
+    "url": "/static/media/dancer-male-1.e332ed1d.svg"
+  },
+  {
+    "revision": "2126bb76bbc82af1353a2a0857a5a99b",
+    "url": "/static/media/dancer-male-2.2126bb76.svg"
+  },
+  {
+    "revision": "95e5965d742949695bfd6dcd49b6b2aa",
+    "url": "/static/media/dancer-pose.95e5965d.svg"
   },
   {
     "revision": "b4a08446e705d2ce79cb5b12eefeb881",
@@ -86,10 +98,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "8369a2d14964b9bc59e51a3af64496c4",
     "url": "/static/media/home.8369a2d1.svg"
-  },
-  {
-    "revision": "e332ed1df7efda732bb85e81c19a05ab",
-    "url": "/static/media/male-dancer-1.e332ed1d.svg"
   },
   {
     "revision": "71135c81e113ed8b82cc4959479e93b3",
@@ -124,10 +132,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/people.0b77c720.svg"
   },
   {
-    "revision": "95e5965d742949695bfd6dcd49b6b2aa",
-    "url": "/static/media/pole-1.95e5965d.svg"
-  },
-  {
     "revision": "0bcbacb361cee6ce2a273dfa9ef15a00",
     "url": "/static/media/pole-vault.0bcbacb3.svg"
   },
@@ -138,6 +142,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "696df6aff264ca8f87df18d5ba80e9d1",
     "url": "/static/media/sauce.696df6af.svg"
+  },
+  {
+    "revision": "92e030e6bd5162fe87b5462694d25d5a",
+    "url": "/static/media/shoes-flamenco.92e030e6.svg"
   },
   {
     "revision": "5bff58bb1033ba3377ffe8c61f772dba",
@@ -154,10 +162,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "d9baea5d438b15bdff6037d6c318b102",
     "url": "/static/media/travel.d9baea5d.svg"
-  },
-  {
-    "revision": "ee16e10addc92610135e7aa485c554d4",
-    "url": "/static/media/veg-bowl.ee16e10a.svg"
   },
   {
     "revision": "e6d6c9485977e63933d252e62f4ae7ae",
