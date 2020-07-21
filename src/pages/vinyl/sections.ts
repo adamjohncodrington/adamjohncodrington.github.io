@@ -1,5 +1,5 @@
 import { FACTORY } from "./factory";
-import { SVG } from "resources";
+import { SVG, PHOTOS } from "resources";
 import { PAGE_SECTION } from "@constants";
 
 const SECTION_ARTISTS: IPageSection = {
@@ -28,9 +28,16 @@ const SECTION_WISHLIST: IPageSection = {
   count: FACTORY.WISH_LIST.length
 };
 
+// const SECTION_PHOTOS: IPageSection = {
+//   title: PAGE_SECTION.TITLES.PHOTOS,
+//   SvgIcon: SVG.CAMERA,
+//   data: { photoGrid: { photos: Object.values(PHOTOS.ALBUMS), columnCount: 3 } }
+// };
+
 export const sections: Array<IPageSection> = [
   SECTION_ARTISTS,
   SECTION_COLLECTION,
+  // SECTION_PHOTOS,
   SECTION_SIGNED,
   SECTION_WISHLIST
 ];
