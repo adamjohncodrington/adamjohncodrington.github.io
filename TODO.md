@@ -1,5 +1,6 @@
 # TO DO LIST
 
+- implement `displayLast` boolean
 - `IPhoto = {url, date}`
 - merge all resources into objects like `PHOTOS`
 - add `artists` to vinyl section

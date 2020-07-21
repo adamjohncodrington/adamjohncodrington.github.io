@@ -39,18 +39,23 @@ export const PageSectionsLayout: FC<IPageSectionsLayout> = ({
 
   const validPageSectionCount: number = validPageSections.length;
 
-  const pageSectionsCol1: Array<IPageSection> = validPageSections.filter(
+  const sortedValidPageSections: Array<IPageSection> = validPageSections;
+  // .sort(
+  //   (a: IPageSection, b: IPageSection): number => (a.title > b.title ? 1 : -1)
+  // );
+
+  const pageSectionsCol1: Array<IPageSection> = sortedValidPageSections.filter(
     (pageSection: IPageSection, index: number): boolean =>
       index < validPageSectionCount / 2
   );
-  const pageSectionsCol2: Array<IPageSection> = validPageSections.filter(
+  const pageSectionsCol2: Array<IPageSection> = sortedValidPageSections.filter(
     (pageSection: IPageSection): boolean =>
       !pageSectionsCol1.includes(pageSection)
   );
 
   const pageSectionColumns: Array<Array<IPageSection>> = pageUses2Columns
     ? [pageSectionsCol1, pageSectionsCol2]
-    : [validPageSections];
+    : [sortedValidPageSections];
 
   return (
     <GridColumnDiv

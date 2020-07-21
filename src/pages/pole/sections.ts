@@ -24,7 +24,8 @@ const SECTION_EXOTIC: IPageSection = {
 const SECTION_NON_POLE: IPageSection = {
   SvgIcon: SVG.HOME,
   title: PAGE_SECTION.TITLES.NON_POLE,
-  data: { comingSoon: true }
+  data: { comingSoon: true },
+  displayLast: true
 };
 
 const SECTION_IMPROVISATION: IPageSection = {

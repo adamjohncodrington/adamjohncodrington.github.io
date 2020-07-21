@@ -68,4 +68,5 @@ interface IPageSection extends IPageSectionDisclosure {
   count?: number;
   starCount?: number;
   hide?: boolean;
+  displayLast?: boolean;
 }
