@@ -1,4 +1,4 @@
-import { PAGE_SECTION_TITLES } from "@constants";
+import { PAGE_SECTION } from "@constants";
 import {
   SvgStars,
   SvgFlag,
@@ -10,7 +10,8 @@ import {
   SvgRollerCoaster,
   SvgVideoCamera,
   SvgCamera,
-  PHOTOS_TRAVEL_ARRAY
+  PHOTOS_TRAVEL_ARRAY,
+  YOUTUBE
 } from "resources";
 import { isInFuture } from "utils";
 
@@ -19,13 +20,13 @@ import { FACTORY } from "./factory";
 
 const SECTION_BUCKET_LIST_TRAVEL: IPageSection = {
   SvgIcon: SvgStars,
-  title: PAGE_SECTION_TITLES.BUCKET_LIST,
+  title: PAGE_SECTION.TITLES.BUCKET_LIST,
   data: { countedListItems: FACTORY.BUCKET_LIST }
 };
 
 const SECTION_CITIES: IPageSection = {
   SvgIcon: SvgCity,
-  title: "Cities",
+  title: PAGE_SECTION.TITLES.CITIES,
   data: { countedListItems: FACTORY.CITIES },
   count: FACTORY.CITIES.length,
   starCount: FACTORY.CITIES.filter(
@@ -34,33 +35,33 @@ const SECTION_CITIES: IPageSection = {
 };
 
 const SECTION_COUNTRIES: IPageSection = {
+  title: PAGE_SECTION.TITLES.COUNTRIES,
   SvgIcon: SvgFlag,
-  title: "Countries",
   data: { countedListItems: FACTORY.COUNTRIES },
   count: FACTORY.COUNTRIES.length
 };
 
 const SECTION_FRIENDS_TRAVEL: IPageSection = {
   SvgIcon: SvgFriends,
-  title: PAGE_SECTION_TITLES.FRIENDS,
+  title: PAGE_SECTION.TITLES.FRIENDS,
   data: { countedListItems: FACTORY.FRIENDS }
 };
 
 const SECTION_HIGHLIGHTS: IPageSection = {
+  title: PAGE_SECTION.TITLES.HIGHLIGHTS,
   SvgIcon: SvgMapPin,
-  title: "Highlights",
   data: { countedListItems: FACTORY.HIGHLIGHTS }
 };
 
 const SECTION_ISLANDS: IPageSection = {
+  title: PAGE_SECTION.TITLES.ISLANDS,
   SvgIcon: SvgPalmTree,
-  title: "Islands",
   data: { countedListItems: FACTORY.ISLANDS }
 };
 
 const SECTION_THEME_PARKS: IPageSection = {
   SvgIcon: SvgRollerCoaster,
-  title: "Theme Parks",
+  title: PAGE_SECTION.TITLES.THEME_PARKS,
   hide: true,
   data: { countedListItems: FACTORY.THEME_PARKS },
   count: FACTORY.THEME_PARKS.length
@@ -68,19 +69,19 @@ const SECTION_THEME_PARKS: IPageSection = {
 
 const SECTION_UP_NEXT_TRAVEL: IPageSection = {
   SvgIcon: SvgNotepad,
-  title: PAGE_SECTION_TITLES.UP_NEXT,
+  title: PAGE_SECTION.TITLES.UP_NEXT,
   data: { trips: FACTORY.UP_NEXT }
 };
 
 const SECTION_VIDEOS_TRAVEL: IPageSection = {
   SvgIcon: SvgVideoCamera,
-  title: PAGE_SECTION_TITLES.VIDEOS,
-  data: { trips: FACTORY.VIDEOS }
+  title: PAGE_SECTION.TITLES.VIDEOS,
+  data: { videos: Object.values(YOUTUBE.TRAVEL) }
 };
 
 const SECTION_PHOTOS_TRAVEL: IPageSection = {
   SvgIcon: SvgCamera,
-  title: PAGE_SECTION_TITLES.PHOTOS,
+  title: PAGE_SECTION.TITLES.PHOTOS,
   data: { photoGrid: { photos: PHOTOS_TRAVEL_ARRAY, columnCount: 4 } }
 };
 

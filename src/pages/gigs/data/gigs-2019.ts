@@ -1,89 +1,115 @@
 import { FRIENDS, FESTIVALS, MUSICIANS, MUSIC_VENUES } from "@constants";
+import { YOUTUBE } from "resources";
+
+const MAGGIE_ROGERS: IGig = {
+  headline: MUSICIANS.MAGGIE_ROGERS,
+  youtubeVideo: YOUTUBE.GIGS.MAGGIE_ROGERS,
+  support: [MUSICIANS.MALLRAT],
+  venue: MUSIC_VENUES.BRIXTON_ACADEMY,
+  dates: [new Date("2019-02-19")],
+  company: [FRIENDS.DARREN_TAYLOR],
+  favourite: true
+};
+
+const TROYE_SIVAN: IGig = {
+  headline: MUSICIANS.TROYE_SIVAN,
+  support: [MUSICIANS.LELAND],
+  venue: MUSIC_VENUES.HAMMERSMITH_APOLLO,
+  dates: [new Date("2019-02-28")],
+  company: [FRIENDS.JERRY_EDWARDS]
+};
+
+const THE_1975_2019: IGig = {
+  headline: MUSICIANS.THE_1975,
+  venue: MUSIC_VENUES.O2_THE,
+  dates: [new Date("2019-01-19")],
+  company: [FRIENDS.JERRY_EDWARDS]
+};
+
+const LANY_BRIXTON: IGig = {
+  headline: MUSICIANS.LANY,
+  venue: MUSIC_VENUES.BRIXTON_ACADEMY,
+  dates: [new Date("2019-03-12")],
+  company: [FRIENDS.JERRY_EDWARDS]
+};
+
+const LEON: IGig = {
+  headline: MUSICIANS.LEON,
+  youtubeVideo: YOUTUBE.GIGS.LEON,
+  venue: MUSIC_VENUES.ISLINGTON_ASSEMBLY_HALL,
+  dates: [new Date("2019-04-08")],
+  company: [FRIENDS.DARREN_TAYLOR],
+  favourite: true
+};
+
+const BULOW: IGig = {
+  headline: MUSICIANS.BULOW,
+  venue: MUSIC_VENUES.COURTYARD_THEATRE,
+  dates: [new Date("2019-04-11")],
+  company: [FRIENDS.DARREN_TAYLOR]
+};
+
+const ROBYN: IGig = {
+  headline: MUSICIANS.ROBYN,
+  youtubeVideo: YOUTUBE.GIGS.ROBYN,
+  venue: MUSIC_VENUES.ALEXANDRA_PALACE,
+  dates: [new Date("2019-04-12")],
+  company: [FRIENDS.DAN_SPARROW, FRIENDS.RYAN_MILLS],
+  favourite: true
+};
+
+const BEARS_DEN: IGig = {
+  headline: MUSICIANS.BEARS_DEN,
+  venue: MUSIC_VENUES.SHEPHERDS_BUSH_EMPIRE,
+  dates: [new Date("2019-04-23")],
+  company: [FRIENDS.JAMIE_HALKET]
+};
+
+const MARINA_2020: IGig = {
+  headline: MUSICIANS.MARINA,
+  venue: MUSIC_VENUES.ROYAL_ALBERT_HALL,
+  youtubeVideo: YOUTUBE.GIGS.MARINA_2019,
+  dates: [new Date("2019-05-03")],
+  company: [FRIENDS.DARREN_TAYLOR]
+};
+
+const SASHA_SLOAN: IGig = {
+  headline: MUSICIANS.SASHA_SLOAN,
+  venue: MUSIC_VENUES.DINGWALLS,
+  dates: [new Date("2019-05-07")],
+  company: [FRIENDS.DARREN_TAYLOR]
+};
+
+const G_FLIP: IGig = {
+  headline: MUSICIANS.G_FLIP,
+  venue: MUSIC_VENUES.GARAGE_THE,
+  dates: [new Date("2019-05-15")],
+  company: [FRIENDS.JERRY_EDWARDS]
+};
+
+const FKA_TWIGS_ALLY_PALLY: IGig = {
+  headline: MUSICIANS.FKA_TWIGS,
+  youtubeVideo: YOUTUBE.GIGS.FKA_TWIGS_ALLY_PALLY,
+  venue: MUSIC_VENUES.ALEXANDRA_PALACE_THEATRE,
+  dates: [new Date("2019-05-28")],
+  company: [FRIENDS.DARREN_TAYLOR],
+  favourite: true
+};
 
 export const GIGS_2019: Array<IGig> = [
-  {
-    headline: MUSICIANS.THE_1975,
-    venue: MUSIC_VENUES.O2_THE,
-    dates: [new Date("2019-01-19")],
-    company: [FRIENDS.JERRY_EDWARDS]
-  },
-  {
-    headline: MUSICIANS.MAGGIE_ROGERS,
-    //youtubeId: "193waN4hMd4",
-    support: [MUSICIANS.MALLRAT],
-    venue: MUSIC_VENUES.BRIXTON_ACADEMY,
-    dates: [new Date("2019-02-19")],
-    company: [FRIENDS.DARREN_TAYLOR],
-    favourite: true
-  },
-  {
-    headline: MUSICIANS.TROYE_SIVAN,
-    support: [MUSICIANS.LELAND],
-    venue: MUSIC_VENUES.HAMMERSMITH_APOLLO,
-    dates: [new Date("2019-02-28")],
-    company: [FRIENDS.JERRY_EDWARDS]
-  },
-  {
-    headline: MUSICIANS.LANY,
-    venue: MUSIC_VENUES.BRIXTON_ACADEMY,
-    dates: [new Date("2019-03-12")],
-    company: [FRIENDS.JERRY_EDWARDS]
-  },
-  {
-    headline: MUSICIANS.LEON,
-    //youtubeId: "ZDWHAMDoxWo",
-    venue: MUSIC_VENUES.ISLINGTON_ASSEMBLY_HALL,
-    dates: [new Date("2019-04-08")],
-    company: [FRIENDS.DARREN_TAYLOR],
-    favourite: true
-  },
-  {
-    headline: MUSICIANS.BULOW,
-    venue: MUSIC_VENUES.COURTYARD_THEATRE,
-    dates: [new Date("2019-04-11")],
-    company: [FRIENDS.DARREN_TAYLOR]
-  },
-  {
-    headline: MUSICIANS.ROBYN,
-    //youtubeId: "onPD2Gzd0BQ",
-    venue: MUSIC_VENUES.ALEXANDRA_PALACE,
-    dates: [new Date("2019-04-12")],
-    company: [FRIENDS.DAN_SPARROW, FRIENDS.RYAN_MILLS],
-    favourite: true
-  },
-  {
-    headline: MUSICIANS.BEARS_DEN,
-    venue: MUSIC_VENUES.SHEPHERDS_BUSH_EMPIRE,
-    dates: [new Date("2019-04-23")],
-    company: [FRIENDS.JAMIE_HALKET]
-  },
-  {
-    headline: MUSICIANS.MARINA,
-    venue: MUSIC_VENUES.ROYAL_ALBERT_HALL,
-    //youtubeId: "rvvJboVvG6U",
-    dates: [new Date("2019-05-03")],
-    company: [FRIENDS.DARREN_TAYLOR]
-  },
-  {
-    headline: MUSICIANS.SASHA_SLOAN,
-    venue: MUSIC_VENUES.DINGWALLS,
-    dates: [new Date("2019-05-07")],
-    company: [FRIENDS.DARREN_TAYLOR]
-  },
-  {
-    headline: MUSICIANS.G_FLIP,
-    venue: MUSIC_VENUES.GARAGE_THE,
-    dates: [new Date("2019-05-15")],
-    company: [FRIENDS.JERRY_EDWARDS]
-  },
-  {
-    headline: MUSICIANS.FKA_TWIGS,
-    venue: MUSIC_VENUES.ALEXANDRA_PALACE_THEATRE,
-    dates: [new Date("2019-05-28")],
-    company: [FRIENDS.DARREN_TAYLOR],
-    favourite: true
-    //youtubeId: "onq0QD8FMwg"
-  },
+  MAGGIE_ROGERS,
+  TROYE_SIVAN,
+  THE_1975_2019,
+  LANY_BRIXTON,
+  LEON,
+  BULOW,
+  ROBYN,
+  BEARS_DEN,
+  MARINA_2020,
+  SASHA_SLOAN,
+  G_FLIP,
+  FKA_TWIGS_ALLY_PALLY,
+
   {
     headline: MUSICIANS.FLEETWOOD_MAC,
     support: [MUSICIANS.PRETENDERS],

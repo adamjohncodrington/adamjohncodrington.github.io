@@ -2,7 +2,10 @@ import { rgba } from "polished";
 
 import { BREAKPOINTS } from "./breakpoints";
 import { COLORS } from "./colors";
+import { FONT_SIZES } from "./font-sizes";
 import { fontFamily, scrollbarSize } from "./GlobalStyle";
+
+const thinFontWeight: string = "300";
 
 const THEME_COUNTED_LIST_ITEM: IThemeCountedListItem = {
   count: { margin: { left: "5px" }, width: "20px" }
@@ -34,6 +37,7 @@ const THEME_PAGE_SECTION: IThemePageSection = {
   background: COLORS.gainsboro,
   borderRadius: "10px",
   boxShadow: `0 1px 2px ${rgba(COLORS.gray, 0.5)}`,
+  comingSoon: { fontSize: FONT_SIZES.L, fontWeight: thinFontWeight },
   count: { margin: { left: "5px" } },
   header: { padding: { vertical: "12px" } },
   icon: { size: "32px" },
@@ -67,7 +71,7 @@ const THEME_RECIPE_CARD: IThemeRecipeCard = {
     padding: { top: "5px" }
   },
   portionCost: { margin: { top: "3px" } },
-  title: { fontWeight: "300" }
+  title: { fontWeight: thinFontWeight }
 };
 
 const THEME_ROUNDED_SYMBOL: IThemeRoundedSymbol = {

@@ -50,6 +50,7 @@ interface IPageSectionDisclosure extends IOnlyHeaderClicable {
 }
 
 interface IPageSectionDataTypes {
+  comingSoon?: boolean;
   countedListItems?: Array<ICountedListItem>;
   photoGrid?: { photos: Array<IPhoto>; columnCount: number };
   gigs?: Array<IGig>;

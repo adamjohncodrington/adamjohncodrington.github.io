@@ -1,5 +1,4 @@
 import { INGREDIENTS, MEASUREMENTS, UNICODE, DIETS } from "@constants";
-import { JPG_SHEPHERDS_PIE } from "resources";
 
 import { recipeMethodEntries } from "utils";
 
@@ -118,7 +117,6 @@ const method: Array<string> = [
 
 const title: string = "Shepherd's pie";
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IPhoto = JPG_SHEPHERDS_PIE;
 const makes: IRecipeMakes = { quantity: 7, measurement: MEASUREMENTS.PORTION };
 
 export const SHEPHERDS_PIE: IRecipe = {
@@ -128,6 +126,5 @@ export const SHEPHERDS_PIE: IRecipe = {
   serveWith,
   diet,
   hide: true,
-  method,
-  image
+  method
 };

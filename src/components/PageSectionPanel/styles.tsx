@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 
 import { Ul } from "primitives";
-import { PAGE_SECTION_PANEL_TYPES } from "@constants";
+import { PAGE_SECTION } from "@constants";
 
 interface IPageSectionPanelList {
   pageSectionPanelType: string;
@@ -82,9 +82,25 @@ const CSS_REGULAR_CARDS = ({
 export const PageSectionPanelList = styled(
   Ul
 )(({ pageSectionPanelType }: IPageSectionPanelList) =>
-  pageSectionPanelType === PAGE_SECTION_PANEL_TYPES.RECIPE_CARDS
+  pageSectionPanelType === PAGE_SECTION.PANEL_TYPES.RECIPE_CARDS
     ? CSS_RECIPE_CARDS
-    : pageSectionPanelType === PAGE_SECTION_PANEL_TYPES.COUNTED_LIST
+    : pageSectionPanelType === PAGE_SECTION.PANEL_TYPES.COUNTED_LIST
     ? CSS_COUNTED_LIST
     : CSS_REGULAR_CARDS
+);
+
+export const StyledComingSoonPlaceholder = styled.div(
+  ({
+    theme: {
+      fadedOpacity,
+      pageSection: {
+        comingSoon: { fontSize, fontWeight }
+      }
+    }
+  }: IThemeProp) => css`
+    padding-bottom: 10px;
+    opacity: ${fadedOpacity};
+    font-size: ${fontSize};
+    font-weight: ${fontWeight};
+  `
 );

@@ -1,5 +1,6 @@
-import * as TRAVEL_VIDEOS_OBJECT from "./travel";
+import * as GIGS from "./gigs";
+import * as TRAVEL from "./travel";
 
-export const TRAVEL_VIDEOS_ARRAY: Array<IYouTubeVideo> = Object.values(
-  TRAVEL_VIDEOS_OBJECT
-);
+export { GIGS, TRAVEL };
+
+export const YOUTUBE_TRAVEL_ARRAY: Array<IYouTubeVideo> = Object.values(TRAVEL);

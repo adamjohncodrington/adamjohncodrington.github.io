@@ -1,5 +1,4 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
-import { JPG_BROWNIES } from "resources";
 
 import { recipeMethodEntries } from "utils";
 
@@ -73,13 +72,11 @@ const method: Array<string> = [
 
 const title: string = "Brownies";
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IPhoto = JPG_BROWNIES;
 
 export const BROWNIES: IRecipe = {
   ingredients,
   method,
   diet,
-  image,
   title,
   hide: true
 };

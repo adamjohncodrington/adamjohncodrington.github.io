@@ -86,16 +86,16 @@ export const EventCard: React.FC<IEventCard> = ({
                     </RoundedSymbol>
                   ))}
 
-              {youtubeVideo && !hideVideoIcon && <RoundedSymbol type="video" />}
               {photos && !hidePhotosIcon && <RoundedSymbol type="photo" />}
+              {youtubeVideo && !hideVideoIcon && <RoundedSymbol type="video" />}
             </EventCardSymbolsContainer>
           )}
         </GridColumnDiv>
       )}
       Panel={
         <>
-          {youtubeVideo && <YouTubeVideo {...youtubeVideo} />}
           {photos && <PhotoGrid photos={photos} columnCount={2} />}
+          {youtubeVideo && <YouTubeVideo {...youtubeVideo} />}
         </>
       }
     />

@@ -39,3 +39,10 @@ export const PHOTOS_TRAVEL_CATANIA: Array<IPhoto> = [
   "https://iili.io/dfjxh7.jpg",
   "https://iili.io/dfjTBe.jpg"
 ];
+
+export const PHOTOS_TRAVEL_PERU: Array<IPhoto> = [
+  "https://iili.io/dC3yCJ.jpg",
+  "https://iili.io/dCF9Ev.jpg",
+  "https://iili.io/dC3mQa.jpg",
+  "https://iili.io/dCFH4R.jpg"
+];
