@@ -30,8 +30,7 @@ export const VinylCard: FC<IVinyl> = ({
   title,
   year,
   artwork,
-  appleMusicUrl,
-  signed
+  appleMusicUrl
 }) => {
   const {
     vinyl: {
@@ -46,7 +45,7 @@ export const VinylCard: FC<IVinyl> = ({
       </VinylCardLink>
 
       <VinylCardTextContainer>
-        <CardTitleBold star={signed}>{title}</CardTitleBold>
+        <CardTitleBold>{title}</CardTitleBold>
         <CardSubtitleBold>{moveTheSuffixToPrefix(artist)}</CardSubtitleBold>
         <div>{year}</div>
       </VinylCardTextContainer>

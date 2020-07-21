@@ -12,9 +12,7 @@ const SECTION_COLLECTION: IPageSection = {
   title: PAGE_SECTION.TITLES.COLLECTION,
   data: { vinyls: FACTORY.COLLECTION },
   count: FACTORY.COLLECTION.length,
-  SvgIcon: SvgBriefcase,
-  autoExpandIf2Columns: true,
-  staticIf2Columns: true
+  SvgIcon: SvgBriefcase
 };
 
 const SECTION_SIGNED: IPageSection = {
@@ -27,9 +25,7 @@ const SECTION_WISHLIST: IPageSection = {
   title: PAGE_SECTION.TITLES.WISH_LIST,
   SvgIcon: SvgStars,
   data: { vinyls: FACTORY.WISH_LIST },
-  count: FACTORY.WISH_LIST.length,
-  autoExpandIf2Columns: true,
-  staticIf2Columns: true
+  count: FACTORY.WISH_LIST.length
 };
 
 export const sections: Array<IPageSection> = [

@@ -92,14 +92,13 @@ export const PageSectionPanelList = styled(
 export const StyledComingSoonPlaceholder = styled.div(
   ({
     theme: {
-      fadedOpacity,
       pageSection: {
         comingSoon: { fontSize, fontWeight }
       }
     }
   }: IThemeProp) => css`
+    padding-top: 5px;
     padding-bottom: 10px;
-    opacity: ${fadedOpacity};
     font-size: ${fontSize};
     font-weight: ${fontWeight};
   `
