@@ -1,4 +1,6 @@
-import { DAYS_OF_THE_WEEK, MONTHS } from "@constants";
+import { DATES } from "@constants";
+
+const { DAYS_OF_THE_WEEK, MONTHS } = DATES;
 
 export const getDateText = (
   date: Date,

@@ -1,11 +1,5 @@
 import { FRIENDS, COUNTRIES } from "@constants";
-import {
-  PHOTOS_TRAVEL_AMSTERDAM,
-  PHOTOS_TRAVEL_LISBON,
-  PHOTOS_TRAVEL_NICE,
-  PHOTOS_TRAVEL_BRUGES,
-  PHOTOS_TRAVEL_CATANIA
-} from "resources";
+import { PHOTOS } from "resources";
 
 const AMSTERDAM: ITrip = [
   {
@@ -22,7 +16,7 @@ const AMSTERDAM: ITrip = [
       FRIENDS.RYAN_MILLS,
       FRIENDS.TOM_CHINDA_COUTTS
     ],
-    photos: PHOTOS_TRAVEL_AMSTERDAM
+    photos: PHOTOS.TRAVEL.AMSTERDAM
   }
 ];
 
@@ -30,7 +24,7 @@ const LISBON: ITrip = [
   {
     primaryLocations: [COUNTRIES.PORTUGAL.cities.LISBON],
     country: COUNTRIES.PORTUGAL,
-    photos: PHOTOS_TRAVEL_LISBON,
+    photos: PHOTOS.TRAVEL.LISBON,
     secondaryLocations: [COUNTRIES.PORTUGAL.attractions.OCENARIO_DE_LISBOA],
     dates: [new Date("2019-02-08"), new Date("2019-02-10")],
     company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON]
@@ -40,7 +34,7 @@ const LISBON: ITrip = [
 const BRUGES: ITrip = [
   {
     primaryLocations: [COUNTRIES.BELGIUM.cities.BRUGES],
-    photos: PHOTOS_TRAVEL_BRUGES,
+    photos: PHOTOS.TRAVEL.LISBON,
     country: COUNTRIES.BELGIUM,
     secondaryLocations: [COUNTRIES.BELGIUM.attractions.BELFRY_OF_BRUGES],
     dates: [new Date("2019-05-17"), new Date("2019-05-19")],
@@ -56,14 +50,14 @@ const CATANIA: ITrip = [
     hiddenLocations: [COUNTRIES.ITALY.regions.SICILY],
     dates: [new Date("2019-07-10"), new Date("2019-07-15")],
     company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON],
-    photos: PHOTOS_TRAVEL_CATANIA
+    photos: PHOTOS.TRAVEL.CATANIA
   }
 ];
 
 const NICE: ITrip = [
   {
     primaryLocations: [COUNTRIES.FRANCE.cities.NICE],
-    photos: PHOTOS_TRAVEL_NICE,
+    photos: PHOTOS.TRAVEL.NICE,
     country: COUNTRIES.FRANCE,
     secondaryLocations: [COUNTRIES.FRANCE.cities.MONACO],
     dates: [new Date("2019-06-08"), new Date("2019-06-14")],

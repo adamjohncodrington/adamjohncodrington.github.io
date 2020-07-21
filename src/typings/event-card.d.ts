@@ -16,7 +16,7 @@ interface IDates {
 interface IEventCardCommon extends ICompany, IFavourite {
   hideSubtitle?: boolean;
   photos?: Array<IPhoto>;
-  youtubeVideo?: IYouTubeVideo;
+  video?: IVideo;
 
   hideCompany?: boolean;
   hideSecondaryBody?: boolean;

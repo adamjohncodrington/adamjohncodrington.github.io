@@ -1,9 +1,9 @@
 import { FRIENDS, FESTIVALS, MUSICIANS, MUSIC_VENUES } from "@constants";
-import { YOUTUBE } from "resources";
+import { VIDEOS } from "resources";
 
 const MAGGIE_ROGERS: IGig = {
   headline: MUSICIANS.MAGGIE_ROGERS,
-  youtubeVideo: YOUTUBE.GIGS.MAGGIE_ROGERS,
+  video: VIDEOS.GIGS.MAGGIE_ROGERS,
   support: [MUSICIANS.MALLRAT],
   venue: MUSIC_VENUES.BRIXTON_ACADEMY,
   dates: [new Date("2019-02-19")],
@@ -35,7 +35,7 @@ const LANY_BRIXTON: IGig = {
 
 const LEON: IGig = {
   headline: MUSICIANS.LEON,
-  youtubeVideo: YOUTUBE.GIGS.LEON,
+  video: VIDEOS.GIGS.LEON,
   venue: MUSIC_VENUES.ISLINGTON_ASSEMBLY_HALL,
   dates: [new Date("2019-04-08")],
   company: [FRIENDS.DARREN_TAYLOR],
@@ -51,7 +51,7 @@ const BULOW: IGig = {
 
 const ROBYN: IGig = {
   headline: MUSICIANS.ROBYN,
-  youtubeVideo: YOUTUBE.GIGS.ROBYN,
+  video: VIDEOS.GIGS.ROBYN,
   venue: MUSIC_VENUES.ALEXANDRA_PALACE,
   dates: [new Date("2019-04-12")],
   company: [FRIENDS.DAN_SPARROW, FRIENDS.RYAN_MILLS],
@@ -68,7 +68,7 @@ const BEARS_DEN: IGig = {
 const MARINA_2020: IGig = {
   headline: MUSICIANS.MARINA,
   venue: MUSIC_VENUES.ROYAL_ALBERT_HALL,
-  youtubeVideo: YOUTUBE.GIGS.MARINA_2019,
+  video: VIDEOS.GIGS.MARINA_2019,
   dates: [new Date("2019-05-03")],
   company: [FRIENDS.DARREN_TAYLOR]
 };
@@ -89,7 +89,7 @@ const G_FLIP: IGig = {
 
 const FKA_TWIGS_ALLY_PALLY: IGig = {
   headline: MUSICIANS.FKA_TWIGS,
-  youtubeVideo: YOUTUBE.GIGS.FKA_TWIGS_ALLY_PALLY,
+  video: VIDEOS.GIGS.FKA_TWIGS_ALLY_PALLY,
   venue: MUSIC_VENUES.ALEXANDRA_PALACE_THEATRE,
   dates: [new Date("2019-05-28")],
   company: [FRIENDS.DARREN_TAYLOR],

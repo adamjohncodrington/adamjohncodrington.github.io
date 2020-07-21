@@ -39,19 +39,21 @@ export const StyledIndex = styled.div`
 `;
 
 interface IStyledDateText extends IFavourite {
-  youtubeVideo?: IYouTubeVideo;
+  video?: IVideo;
 }
 
 export const StyledDateText = styled.div(
-  ({ favourite, youtubeVideo }: IStyledDateText) =>
-    (favourite || youtubeVideo) &&
+  ({ favourite, video }: IStyledDateText) =>
+    (favourite || video) &&
     getPseudoElementAfter(
-      favourite && !youtubeVideo
+      favourite && !video
         ? HEART
-        : youtubeVideo && !favourite
+        : video && !favourite
         ? TRIANGLE_RIGHT
-        : youtubeVideo && favourite
+        : video && favourite
         ? HEART + " " + TRIANGLE_RIGHT
         : ""
     )
 );
+
+export const StyledPanelContainer = styled.div``;

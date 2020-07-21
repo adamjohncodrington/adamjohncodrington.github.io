@@ -1,5 +1,5 @@
 import { FRIENDS, MUSICIANS, TICKET_TYPES, MUSIC_VENUES } from "@constants";
-import { YOUTUBE } from "resources";
+import { VIDEOS } from "resources";
 
 const CELESTE_SHEPHERDS_BUSH: IGig = {
   headline: MUSICIANS.CELESTE,
@@ -11,7 +11,7 @@ const CELESTE_SHEPHERDS_BUSH: IGig = {
 const GRACEY_LAYLOW: IGig = {
   headline: MUSICIANS.GRACEY,
   venue: MUSIC_VENUES.LAYLOW,
-  youtubeVideo: YOUTUBE.GIGS.GRACEY,
+  video: VIDEOS.GIGS.GRACEY,
   dates: [new Date("2020-01-28")],
   company: [FRIENDS.DARREN_TAYLOR]
 };
@@ -19,7 +19,7 @@ const GRACEY_LAYLOW: IGig = {
 const CHRISTINE_MOTH_CLUB: IGig = {
   headline: MUSICIANS.CHRISTINE_AND_THE_QUEENS,
   venue: MUSIC_VENUES.MOTH_CLUB,
-  youtubeVideo: YOUTUBE.GIGS.CHRISTINE_AND_THE_QUEENS,
+  video: VIDEOS.GIGS.CHRISTINE_AND_THE_QUEENS,
   dates: [new Date("2020-03-07")],
   favourite: true,
   company: [FRIENDS.DARREN_TAYLOR],
@@ -29,14 +29,14 @@ const CHRISTINE_MOTH_CLUB: IGig = {
 const JOSEF_SALVAT_2020: IGig = {
   headline: MUSICIANS.JOSEF_SALVAT,
   venue: MUSIC_VENUES.MOTH_CLUB,
-  youtubeVideo: YOUTUBE.GIGS.JOSEF_SALVAT_2020,
+  video: VIDEOS.GIGS.JOSEF_SALVAT_2020,
   dates: [new Date("2020-02-05")],
   company: [FRIENDS.DARREN_TAYLOR]
 };
 
 const KIM_PETRAS_2020: IGig = {
   headline: MUSICIANS.KIM_PETRAS,
-  youtubeVideo: YOUTUBE.GIGS.KIM_PETRAS_2020,
+  video: VIDEOS.GIGS.KIM_PETRAS_2020,
   support: [MUSICIANS.ALEX_CHAPMAN],
   venue: MUSIC_VENUES.SHEPHERDS_BUSH_EMPIRE,
   dates: [new Date("2020-02-11")],
@@ -53,7 +53,7 @@ const NASTY_CHERRY: IGig = {
 
 const CAROLINE_POLACHEK: IGig = {
   headline: MUSICIANS.CAROLINE_POLACHEK,
-  youtubeVideo: YOUTUBE.GIGS.CAROLINE_POLACHEK,
+  video: VIDEOS.GIGS.CAROLINE_POLACHEK,
   support: [MUSICIANS.SEGA_BODEGA],
   venue: MUSIC_VENUES.HEAVEN,
   dates: [new Date("2020-03-11")],
@@ -63,7 +63,7 @@ const CAROLINE_POLACHEK: IGig = {
 
 const GEORGIA: IGig = {
   headline: MUSICIANS.GEORGIA,
-  youtubeVideo: YOUTUBE.GIGS.GEORGIA,
+  video: VIDEOS.GIGS.GEORGIA,
   venue: MUSIC_VENUES.HEAVEN,
   dates: [new Date("2020-03-12")],
   company: [FRIENDS.DARREN_TAYLOR],

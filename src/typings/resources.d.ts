@@ -1,9 +1,13 @@
 type ISvgIcon = React.FC<React.SVGProps<SVGSVGElement>>;
 
-type IPhoto = string;
+interface IPhoto {
+  date?: Date;
+  title?: string;
+  url: string;
+}
 
-interface IYouTubeVideo {
-  id: string;
+interface IVideo {
+  youtubeId: string;
   orientation: "portrait" | "landscape";
   quality: "720p" | "1080p";
 }

@@ -1,5 +1,5 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
-import { JPG_PORRIDGE } from "resources";
+import { PHOTOS } from "resources";
 
 import { calculateRecipeCost } from "utils";
 
@@ -48,7 +48,7 @@ const method: Array<string> = [
 const title: string = "Porridge";
 const makes: IRecipeMakes = { quantity: 1, measurement: MEASUREMENTS.PORTION };
 const diet: IRecipeDiet = DIETS.VEGAN;
-const image: IPhoto = JPG_PORRIDGE;
+const image: IPhoto = PHOTOS.RECIPES.PORRIDGE;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
 

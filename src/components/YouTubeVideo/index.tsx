@@ -1,6 +1,6 @@
 import React from "react";
 
-export const YouTubeVideo: React.FC<IYouTubeVideo> = ({ id, quality }) => {
+export const YouTubeVideo: React.FC<IVideo> = ({ youtubeId, quality }) => {
   const URL_VIDEO_QUALITY: string | undefined =
     quality === "720p" ? "VQ=HD720" : "1080p" ? "VQ=HD1080" : undefined;
 
@@ -8,11 +8,12 @@ export const YouTubeVideo: React.FC<IYouTubeVideo> = ({ id, quality }) => {
     ? "?" + URL_VIDEO_QUALITY
     : undefined;
 
-  const VIDEO_SRC: string = "https://www.youtube.com/embed/" + id + URL_SUFFIX;
+  const VIDEO_SRC: string =
+    "https://www.youtube.com/embed/" + youtubeId + URL_SUFFIX;
 
   return (
     <iframe
-      title={id}
+      title={youtubeId}
       width="100%"
       src={VIDEO_SRC}
       frameBorder="0"

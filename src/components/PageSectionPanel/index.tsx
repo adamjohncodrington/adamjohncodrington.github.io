@@ -116,8 +116,8 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
       {photoGrid && <PhotoGrid {...photoGrid} />}
 
       {videos &&
-        videos.map((youtubeVideo: IYouTubeVideo, index: number) => (
-          <YouTubeVideo {...youtubeVideo} />
+        videos.map((video: IVideo, index: number) => (
+          <YouTubeVideo {...video} />
         ))}
 
       {countedListItems &&

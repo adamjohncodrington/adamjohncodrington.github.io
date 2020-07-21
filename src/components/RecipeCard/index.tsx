@@ -73,7 +73,7 @@ export const RecipeCard: FC<IRecipe> = ({
             showBullets
           />
 
-          {image && <SquareImage imgSrc={image} size="100%" />}
+          {image && <SquareImage photo={image} size="100%" />}
 
           {totalCost && (
             <RecipeCardCostsContainer>

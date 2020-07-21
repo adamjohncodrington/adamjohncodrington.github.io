@@ -1,7 +1,7 @@
 import { DATA } from "../data";
 
 export const VIDEOS: Array<IGig> = DATA.ALL.filter(
-  ({ youtubeVideo }: IGig): boolean => !!youtubeVideo
+  ({ video }: IGig): boolean => !!video
 )
   .map(
     (gig: IGig): IGig => ({

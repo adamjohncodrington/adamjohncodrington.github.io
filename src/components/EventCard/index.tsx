@@ -26,7 +26,7 @@ export const EventCard: React.FC<IEventCard> = ({
   countdownText,
   hideVideoIcon,
   company,
-  youtubeVideo,
+  video,
   photos,
   hideCompany,
   hidePhotosIcon,
@@ -35,7 +35,7 @@ export const EventCard: React.FC<IEventCard> = ({
 }) => (
   <>
     <Disclosure
-      isStatic={!(youtubeVideo || (photos && photos.length > 0))}
+      isStatic={!(video || (photos && photos.length > 0))}
       Header={() => (
         <GridColumnDiv
           data-test="event-card-grid-container"
@@ -73,7 +73,7 @@ export const EventCard: React.FC<IEventCard> = ({
             )}
           </EventCardTextContainer>
 
-          {(company.length > 0 || youtubeVideo) && (
+          {(company.length > 0 || video) && (
             <EventCardSymbolsContainer>
               {!hideCompany &&
                 company
@@ -87,7 +87,7 @@ export const EventCard: React.FC<IEventCard> = ({
                   ))}
 
               {photos && !hidePhotosIcon && <RoundedSymbol type="photo" />}
-              {youtubeVideo && !hideVideoIcon && <RoundedSymbol type="video" />}
+              {video && !hideVideoIcon && <RoundedSymbol type="video" />}
             </EventCardSymbolsContainer>
           )}
         </GridColumnDiv>
@@ -95,7 +95,7 @@ export const EventCard: React.FC<IEventCard> = ({
       Panel={
         <>
           {photos && <PhotoGrid photos={photos} columnCount={2} />}
-          {youtubeVideo && <YouTubeVideo {...youtubeVideo} />}
+          {video && <YouTubeVideo {...video} />}
         </>
       }
     />

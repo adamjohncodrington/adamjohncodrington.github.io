@@ -41,7 +41,7 @@ export const VinylCard: FC<IVinyl> = ({
   return (
     <FlexRow data-test="vinyl-card">
       <VinylCardLink href={appleMusicUrl}>
-        <SquareImage dataTest="vinyl-artwork" size={size} imgSrc={artwork} />
+        <SquareImage dataTest="vinyl-artwork" size={size} photo={artwork} />
       </VinylCardLink>
 
       <VinylCardTextContainer>

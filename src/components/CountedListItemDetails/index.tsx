@@ -9,7 +9,8 @@ import {
   StyledOl,
   StyledMainText,
   StyledIndex,
-  StyledDateText
+  StyledDateText,
+  StyledPanelContainer
 } from "./styles";
 import { YouTubeVideo } from "components/YouTubeVideo";
 
@@ -19,23 +20,25 @@ export const CountedListItemDetail: React.FC<ICountedListItemDetail> = ({
   dateText,
   favourite,
   isInFuture,
-  youtubeVideo
+  video
 }) => (
   <StyledLi key={index} isInFuture={isInFuture}>
     <Disclosure
-      isStatic={!youtubeVideo}
+      isStatic={!video}
       Header={({ panelIsVisible }) => (
-        <DynamicFontWeightFlexRow
-          panelIsVisible={!!youtubeVideo && panelIsVisible}
-        >
+        <DynamicFontWeightFlexRow panelIsVisible={!!video && panelIsVisible}>
           {index && <StyledIndex>{index}.</StyledIndex>}
           {mainText && <StyledMainText>{mainText[0]}</StyledMainText>}
-          <StyledDateText favourite={favourite} youtubeVideo={youtubeVideo}>
+          <StyledDateText favourite={favourite} video={video}>
             {dateText}
           </StyledDateText>
         </DynamicFontWeightFlexRow>
       )}
-      Panel={<>{youtubeVideo && <YouTubeVideo {...youtubeVideo} />}</>}
+      Panel={
+        <StyledPanelContainer>
+          {video && <YouTubeVideo {...video} />}
+        </StyledPanelContainer>
+      }
     />
   </StyledLi>
 );

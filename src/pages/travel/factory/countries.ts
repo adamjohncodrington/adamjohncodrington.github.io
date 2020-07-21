@@ -30,7 +30,7 @@ const getCountryDetails = (
   );
   return tripsMatchingCountry.map(
     (trip: ITripLeg, index: number): ICountedListItemDetail => {
-      const { dates, favourite, youtubeVideo } = trip;
+      const { dates, favourite, video } = trip;
       const tripTitle: string = getTripTitle(trip);
       const tripSubtitle: string | undefined = getTripSubtitle(trip);
       return {
@@ -41,7 +41,7 @@ const getCountryDetails = (
           ? [tripSubtitle]
           : undefined,
         favourite,
-        youtubeVideo,
+        video,
         dateText: getDatesText(dates),
         isInFuture: isInFuture(dates[0])
       };

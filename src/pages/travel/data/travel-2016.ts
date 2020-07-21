@@ -1,12 +1,5 @@
-import {
-  FRIENDS,
-  COUNTRIES,
-  DATE_TRIP_ECUADOR_START,
-  DATE_TRIP_ECUADOR_END,
-  DATE_TRIP_PERU_START,
-  DATE_TRIP_PERU_END
-} from "@constants";
-import { YOUTUBE, PHOTOS_TRAVEL_PERU } from "resources";
+import { COUNTRIES, DATES, FRIENDS } from "@constants";
+import { VIDEOS, PHOTOS } from "resources";
 
 const DUBLIN: ITrip = [
   {
@@ -50,8 +43,8 @@ const ECUADOR_PERU: ITrip = [
       COUNTRIES.ECUADOR.attractions.TORTOISE_PARK
     ],
     showCountryAsTitle: true,
-    youtubeVideo: YOUTUBE.TRAVEL.ECUADOR_PERU,
-    dates: [DATE_TRIP_ECUADOR_START, DATE_TRIP_ECUADOR_END],
+    video: VIDEOS.TRAVEL.ECUADOR_PERU,
+    dates: [DATES.TRAVEL.ECUADOR.start, DATES.TRAVEL.ECUADOR.end],
     company: []
   },
   {
@@ -68,9 +61,9 @@ const ECUADOR_PERU: ITrip = [
       COUNTRIES.PERU.attractions.MANU,
       COUNTRIES.PERU.attractions.MACHU_PICCHU
     ],
-    photos: PHOTOS_TRAVEL_PERU,
+    photos: PHOTOS.TRAVEL.PERU,
     showCountryAsTitle: true,
-    youtubeVideo: YOUTUBE.TRAVEL.ECUADOR_PERU,
+    video: VIDEOS.TRAVEL.ECUADOR_PERU,
     secondaryLocations: [
       COUNTRIES.PERU.attractions.HUASCARAN_PARK,
       COUNTRIES.PERU.attractions.LAGUNA_69,
@@ -79,7 +72,7 @@ const ECUADOR_PERU: ITrip = [
       COUNTRIES.PERU.attractions.RAINBOW_MOUNTAIN,
       COUNTRIES.PERU.attractions.JUNGLE_ZIPLINE
     ],
-    dates: [DATE_TRIP_PERU_START, DATE_TRIP_PERU_END],
+    dates: [DATES.TRAVEL.PERU.start, DATES.TRAVEL.PERU.end],
     company: [FRIENDS.SARAH_WHITAKER]
   }
 ];
@@ -93,7 +86,7 @@ const BRAZIL: ITrip = [
       COUNTRIES.BRAZIL.cities.RIO_DE_JANEIRO,
       COUNTRIES.BRAZIL.islands.ILHA_GRANDE
     ],
-    youtubeVideo: YOUTUBE.TRAVEL.BRAZIL,
+    video: VIDEOS.TRAVEL.BRAZIL,
     secondaryLocations: [
       COUNTRIES.BRAZIL.attractions.HANG_GLIDING,
       COUNTRIES.BRAZIL.attractions.MODERN_ART_MUSEUM_RIO,

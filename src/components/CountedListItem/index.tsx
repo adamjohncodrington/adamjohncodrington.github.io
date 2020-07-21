@@ -7,6 +7,7 @@ import { Disclosure } from "../Disclosure";
 
 import {
   StyledMainText,
+  StyledSecondaryText,
   StyledTextContainer,
   CountedListItemPastCount,
   CountedListItemFutureCount
@@ -29,7 +30,7 @@ const DisclosureHeader: FC<IDisclosureHeader> = ({
 
 export const CountedListItem: FC<ICountedListItem> = ({
   text,
-  // secondaryText,
+  secondaryText,
   favourite,
   star,
   futureCount,
@@ -51,7 +52,9 @@ export const CountedListItem: FC<ICountedListItem> = ({
           {text}
         </StyledMainText>
 
-        {/* {secondaryText && <span>({secondaryText})</span>} */}
+        {secondaryText && (
+          <StyledSecondaryText>({secondaryText})</StyledSecondaryText>
+        )}
       </StyledTextContainer>
 
       {!countInfoIrrelevant && showFutureCount && (

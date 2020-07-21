@@ -1,4 +1,4 @@
-import { FRIENDS, COUNTRIES } from "@constants";
+import { FRIENDS, DATES, COUNTRIES } from "@constants";
 
 const BARBADOS: ITrip = [
   {
@@ -32,7 +32,7 @@ const THAILAND_LAOS: ITrip = [
       COUNTRIES.THAILAND.attractions.PAI_CANYON,
       COUNTRIES.THAILAND.cities.CHIANG_RAI
     ],
-    dates: [new Date("2014-07-07"), new Date("2014-07-27")],
+    dates: [DATES.TRAVEL.THAILAND.start, DATES.TRAVEL.THAILAND.end],
     company: [FRIENDS.TONYA_FRANCE]
   },
   {
@@ -47,7 +47,7 @@ const THAILAND_LAOS: ITrip = [
       COUNTRIES.LAOS.attractions.ELEPHANT_VILLAGE,
       COUNTRIES.LAOS.attractions.KUANG_SI_FALLS
     ],
-    dates: [new Date("2014-07-28"), new Date("2014-08-01")],
+    dates: [DATES.TRAVEL.LAOS.start, DATES.TRAVEL.LAOS.end],
     company: [FRIENDS.TONYA_FRANCE]
   }
 ];

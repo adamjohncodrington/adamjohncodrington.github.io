@@ -1,5 +1,5 @@
 import { PAGE_SECTION } from "@constants";
-import { SVG, PHOTOS_RECIPES_ARRAY } from "resources";
+import { SVG, PHOTOS } from "resources";
 
 import { DATA } from "./data";
 
@@ -30,7 +30,7 @@ const SECTION_SWEETS: IPageSection = {
 const SECTION_PHOTOS: IPageSection = {
   title: PAGE_SECTION.TITLES.PHOTOS,
   SvgIcon: SVG.CAMERA,
-  data: { photoGrid: { photos: PHOTOS_RECIPES_ARRAY, columnCount: 3 } }
+  data: { photoGrid: { photos: Object.values(PHOTOS.RECIPES), columnCount: 3 } }
 };
 
 const SECTION_COMING_SOON: IPageSection = {

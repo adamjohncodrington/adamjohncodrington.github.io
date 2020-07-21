@@ -9,7 +9,7 @@ interface IDetailItem {
 }
 
 interface ICountedListItemDetail extends IFavourite {
-  youtubeVideo?: IYouTubeVideo;
+  video?: IVideo;
 
   index?: number;
   mainText?: Array<string>;
@@ -57,7 +57,7 @@ interface IPageSectionDataTypes {
   recipes?: Array<IRecipe>;
   theatreVisits?: Array<ITheatreVisit>;
   trips?: Array<ITripLeg>;
-  videos?: Array<IYouTubeVideo>;
+  videos?: Array<IVideo>;
   vinyls?: Array<IVinyl | undefined>;
 }
 

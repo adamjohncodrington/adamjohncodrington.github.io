@@ -1,10 +1,5 @@
-import * as PHOTOS_RECIPES_OBJECT from "./recipe-photos";
-import * as PHOTOS_TRAVEL_OBJECT from "./travel-photos";
+import * as ALBUMS from "./albums";
+import * as RECIPES from "./recipes";
+import * as TRAVEL from "./travel";
 
-export const PHOTOS_RECIPES_ARRAY: Array<IPhoto> = Object.values(
-  PHOTOS_RECIPES_OBJECT
-);
-
-export const PHOTOS_TRAVEL_ARRAY: Array<IPhoto> = Object.values(
-  PHOTOS_TRAVEL_OBJECT
-).flat();
+export { ALBUMS, RECIPES, TRAVEL };

@@ -1,5 +1,7 @@
 # TO DO LIST
 
+- rename `image: ` as `photo:`
+CHLOE_WHITE_X_HALLE fix!!!
 - implement `displayLast` boolean
 - `IPhoto = {url, date}`
 - merge all resources into objects like `PHOTOS`

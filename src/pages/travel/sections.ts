@@ -1,5 +1,5 @@
 import { PAGE_SECTION } from "@constants";
-import { SVG, PHOTOS_TRAVEL_ARRAY, YOUTUBE } from "resources";
+import { SVG, PHOTOS, VIDEOS } from "resources";
 import { isInFuture } from "utils";
 
 import { DATA } from "./data";
@@ -63,13 +63,15 @@ const SECTION_UP_NEXT_TRAVEL: IPageSection = {
 const SECTION_VIDEOS_TRAVEL: IPageSection = {
   SvgIcon: SVG.VIDEO_CAMERA,
   title: PAGE_SECTION.TITLES.VIDEOS,
-  data: { videos: Object.values(YOUTUBE.TRAVEL) }
+  data: { videos: Object.values(VIDEOS.TRAVEL) }
 };
 
 const SECTION_PHOTOS_TRAVEL: IPageSection = {
   SvgIcon: SVG.CAMERA,
   title: PAGE_SECTION.TITLES.PHOTOS,
-  data: { photoGrid: { photos: PHOTOS_TRAVEL_ARRAY, columnCount: 4 } }
+  data: {
+    photoGrid: { photos: Object.values(PHOTOS.TRAVEL).flat(), columnCount: 4 }
+  }
 };
 
 const SECTIONS_YEARS: Array<IPageSection> = DATA.SPLIT_BY_YEAR.map(

@@ -16,20 +16,20 @@ const StyledImage = styled.img(
 
 interface ISquareImage extends IClassName {
   dataTest?: string;
-  imgSrc: IPhoto;
+  photo: IPhoto;
   size: string;
 }
 
 export const SquareImage = ({
   className,
   dataTest,
-  imgSrc,
+  photo: { url },
   size
 }: ISquareImage) => (
   <StyledImage
     className={className}
     data-test={dataTest}
-    src={imgSrc}
+    src={url}
     size={size}
   />
 );

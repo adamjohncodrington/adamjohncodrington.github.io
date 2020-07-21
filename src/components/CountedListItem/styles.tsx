@@ -10,6 +10,10 @@ export const StyledTextContainer = styled.div`
   flex: 1;
 `;
 
+export const StyledSecondaryText = styled.span`
+  margin-left: 5px;
+`;
+
 export const StyledMainText = styled.span(
   ({ favourite, star, faded, theme: { fadedOpacity } }: IStyledMainText) => css`
     ${

@@ -1,5 +1,5 @@
 import { FRIENDS, COUNTRIES } from "@constants";
-import { PHOTOS_TRAVEL_OSLO } from "resources";
+import { PHOTOS } from "resources";
 
 const OSLO: ITrip = [
   {
@@ -16,7 +16,7 @@ const OSLO: ITrip = [
       FRIENDS.TOM_CHINDA_COUTTS,
       FRIENDS.TONYA_FRANCE
     ],
-    photos: PHOTOS_TRAVEL_OSLO
+    photos: PHOTOS.TRAVEL.OSLO
   }
 ];
 
