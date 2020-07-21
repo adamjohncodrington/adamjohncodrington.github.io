@@ -6,10 +6,10 @@ import * as MEASUREMENTS from "./measurements";
 import * as MUSICIANS from "./musicians";
 import * as PAGE_SECTION from "./page-section";
 import * as POLE_INSTRUCTORS from "./pole-instructors";
-import * as VINYLS from "./vinyls";
 
 export * from "./music-venues";
 export * from "./sainsburys";
+export * from "./vinyls";
 
 export {
   ACTORS,
@@ -19,8 +19,7 @@ export {
   MEASUREMENTS,
   MUSICIANS,
   PAGE_SECTION,
-  POLE_INSTRUCTORS,
-  VINYLS
+  POLE_INSTRUCTORS
 };
 
 export * from "./diets";

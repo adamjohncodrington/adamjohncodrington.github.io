@@ -1,35 +1,33 @@
 import { VINYLS } from "@constants";
 import { moveTheSuffixToPrefix, formatCountedListItems } from "utils";
 
-const sortedVinyls: Array<IVinyl> = Object.values(
+const allVinylsSorted: Array<IVinyl> = Object.values(
   VINYLS
 ).sort((a: IVinyl, b: IVinyl): number =>
-  a && b
-    ? a.year < b.year
-      ? 1
-      : a.year === b.year
-      ? a.musician < b.musician
-        ? -1
-        : 1
-      : -1
-    : 0
+  a.year < b.year
+    ? 1
+    : a.year === b.year
+    ? a.musician < b.musician
+      ? -1
+      : 1
+    : -1
 );
 
-const WISH_LIST: Array<IVinyl> = sortedVinyls.filter(
-  (vinyl: IVinyl): boolean => !vinyl.purchased
+const desiredVinyls: Array<IVinyl> = allVinylsSorted.filter(
+  ({ purchased }: IVinyl): boolean => !purchased
 );
 
-const COLLECTION: Array<IVinyl> = sortedVinyls.filter(
-  (vinyl: IVinyl): boolean => !!vinyl.purchased
+const purchasedVinyls: Array<IVinyl> = allVinylsSorted.filter(
+  ({ purchased }: IVinyl): boolean => !!purchased
 );
 
-const SIGNED: Array<IVinyl> = sortedVinyls.filter(
-  (vinyl: IVinyl): boolean => !!vinyl.signed
+const signedVinyls: Array<IVinyl> = allVinylsSorted.filter(
+  ({ signed }: IVinyl): boolean => !!signed
 );
 
-const artists: Array<ICountedListItem> = COLLECTION.map(
-  ({ musician }: IVinyl): ICountedListItem => ({
-    text: moveTheSuffixToPrefix(musician.name),
+const artists: Array<ICountedListItem> = purchasedVinyls.map(
+  ({ musician: { name } }: IVinyl): ICountedListItem => ({
+    text: moveTheSuffixToPrefix(name),
     pastCount: 0,
     futureCount: 0,
     countInfoIrrelevant: true
@@ -40,4 +38,9 @@ const ARTISTS: Array<ICountedListItem> = formatCountedListItems({
   countedListItems: artists
 });
 
-export const FACTORY = { ARTISTS, WISH_LIST, COLLECTION, SIGNED };
+export const FACTORY = {
+  ARTISTS,
+  WISH_LIST: desiredVinyls,
+  COLLECTION: purchasedVinyls,
+  SIGNED: signedVinyls
+};

@@ -3,7 +3,6 @@
 - reinstate all YouTube videos
 - rationalise all `typings`
 - beef up POLE section
-- avoid `| undefined` at all costs where possible
 
 ## Enhancements
 
