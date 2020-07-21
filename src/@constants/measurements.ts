@@ -13,6 +13,14 @@ const MILLILITRE: string = "ml";
 const LITRE: string = "L";
 const CENTIMETRE: string = "cm";
 const CAN: string = "can";
+const SPRIG: string = "sprig";
+const SLICE: string = "slice";
+const JAR: string = "jar";
+const PORTION: string = "portion";
+const CHUNK: string = "chunk";
+const SEGMENT: string = "segment";
+const SERVING: string = "serving";
+const PANCAKE: string = "pancale";
 
 export const MEASUREMENTS: IMeasurements = {
   GRAM,
@@ -23,12 +31,12 @@ export const MEASUREMENTS: IMeasurements = {
   LITRE,
   CENTIMETRE,
   CAN,
-  SPRIG: "sprig",
-  SLICE: "slice",
-  JAR: "jar",
-  PORTION: "portion",
-  SERVING: "serving",
-  CHUNK: "chunk",
-  SEGMENT: "segment",
-  PANCAKE: "pancake"
+  SPRIG,
+  SLICE,
+  JAR,
+  PORTION,
+  CHUNK,
+  SEGMENT,
+  PANCAKE,
+  SERVING
 };

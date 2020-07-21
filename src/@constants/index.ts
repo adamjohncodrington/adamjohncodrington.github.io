@@ -1,11 +1,10 @@
 import * as PAGE_SECTION from "./page-section";
-
-export { PAGE_SECTION };
+import * as FESTIVALS from "./festivals";
+export { FESTIVALS, PAGE_SECTION };
 
 export * from "./actors";
 export * from "./diets";
 export * from "./dates";
-export * from "./festivals";
 export * from "./friends";
 export * from "./locations";
 export * from "./measurements";
