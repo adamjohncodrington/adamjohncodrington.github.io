@@ -1,5 +1,6 @@
 import { PAGE_SECTION } from "@constants";
 import { SVG } from "resources";
+import { SORT_POLE_SECTIONS_ALPHABETICALLY } from "config";
 
 import { FACTORY } from "./factory";
 
@@ -57,7 +58,7 @@ const SECTION_SHOWCASE: IPageSection = {
   data: { comingSoon: true }
 };
 
-export const sections: Array<IPageSection> = [
+const sections: Array<IPageSection> = [
   SECTION_TRICKS_COMBOS,
   SECTION_CONTEMPORARY,
   SECTION_EXOTIC,
@@ -68,3 +69,9 @@ export const sections: Array<IPageSection> = [
   SECTION_INSTRUCTORS,
   SECTION_NON_POLE
 ];
+
+export const SECTIONS: Array<IPageSection> = SORT_POLE_SECTIONS_ALPHABETICALLY
+  ? sections.sort((a: IPageSection, b: IPageSection): number =>
+      a.title > b.title ? 1 : -1
+    )
+  : sections;
