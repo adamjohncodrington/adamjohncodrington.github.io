@@ -1,7 +1,6 @@
 import { PAGE_SECTION_TITLES } from "@constants";
-import { SVG, PHOTOS } from "resources";
-
-import { DATA } from "./data";
+import { RECIPES as DATA } from "data";
+import { SVG, PHOTOS as photos } from "resources";
 
 const MAINS: IPageSection = {
   title: PAGE_SECTION_TITLES.MAINS,
@@ -27,10 +26,10 @@ const SWEETS: IPageSection = {
   data: { recipes: DATA.SWEETS }
 };
 
-const SECTION_PHOTOS: IPageSection = {
+const PHOTOS: IPageSection = {
   title: PAGE_SECTION_TITLES.PHOTOS,
   SvgIcon: SVG.CAMERA,
-  data: { photoGrid: { photos: Object.values(PHOTOS.RECIPES), columnCount: 3 } }
+  data: { photoGrid: { photos: Object.values(photos.RECIPES), columnCount: 3 } }
 };
 
 const COMING_SOON: IPageSection = {
@@ -39,11 +38,11 @@ const COMING_SOON: IPageSection = {
   data: { countedListItems: DATA.COMING_SOON }
 };
 
-export const sections: Array<IPageSection> = [
+export const RECIPES: Array<IPageSection> = [
   MAINS,
   SIDES,
   SAUCES,
   SWEETS,
-  SECTION_PHOTOS,
+  PHOTOS,
   COMING_SOON
 ];

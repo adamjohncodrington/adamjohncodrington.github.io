@@ -1,8 +1,7 @@
 import { SVG } from "resources";
+import { RECIPES as sections } from "sections";
 
-import { sections } from "./sections";
-
-export const PAGE_RECIPES: IPage = {
+export const RECIPES: IPage = {
   title: "Recipes",
   path: "/recipes",
   SvgIcon: SVG.CUTLERY,
