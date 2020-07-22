@@ -4,7 +4,8 @@ import * as FESTIVAL_TITLES from "./festival-titles";
 import * as FRIENDS from "./friends";
 import * as MEASUREMENTS from "./measurements";
 import * as MUSICIANS from "./musicians";
-import * as PAGE_SECTION from "./page-section";
+import * as PAGE_SECTION_PANEL_TYPES from "./page-section-panel-types";
+import * as PAGE_SECTION_TITLES from "./page-section-titles";
 import * as PLAYS from "./plays";
 import * as POLE_INSTRUCTORS from "./pole-instructors";
 import * as POLE_STUDIOS from "./pole-studios";
@@ -25,7 +26,8 @@ export {
   FRIENDS,
   MEASUREMENTS,
   MUSICIANS,
-  PAGE_SECTION,
+  PAGE_SECTION_PANEL_TYPES,
+  PAGE_SECTION_TITLES,
   PLAYS,
   POLE_STUDIOS,
   POLE_INSTRUCTORS,

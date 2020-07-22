@@ -1,6 +1,6 @@
-import * as DATA from "../data";
+import { GIGS as DATA } from "data";
 
-export const VIDEOS: Array<IGig> = DATA.ARRAY.filter(
+export const VIDEOS: Array<IGig> = DATA.filter(
   ({ video }: IGig): boolean => !!video
 )
   .map(

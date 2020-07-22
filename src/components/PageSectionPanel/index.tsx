@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 
-import { PAGE_SECTION } from "@constants";
+import { PAGE_SECTION_PANEL_TYPES } from "@constants";
 import { Li } from "primitives";
 import {
   getGigSubtitle,
@@ -25,6 +25,8 @@ import { YouTubeVideo } from "../YouTubeVideo";
 
 import { PageSectionPanelList, StyledComingSoonPlaceholder } from "./styles";
 
+const { COUNTED_LIST, RECIPE_CARDS, REGULAR } = PAGE_SECTION_PANEL_TYPES;
+
 export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
   countedListItems,
   gigs,
@@ -37,10 +39,10 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
   comingSoon
 }) => {
   const pageSectionPanelType: string = recipes
-    ? PAGE_SECTION.PANEL_TYPES.RECIPE_CARDS
+    ? RECIPE_CARDS
     : countedListItems
-    ? PAGE_SECTION.PANEL_TYPES.COUNTED_LIST
-    : PAGE_SECTION.PANEL_TYPES.REGULAR;
+    ? COUNTED_LIST
+    : REGULAR;
 
   if (comingSoon)
     return (

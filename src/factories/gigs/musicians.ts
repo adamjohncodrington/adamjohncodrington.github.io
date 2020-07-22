@@ -1,4 +1,5 @@
-import { MUSICIANS } from "@constants";
+import { MUSICIANS as musicians } from "@constants";
+import { GIGS as DATA } from "data";
 import {
   getItemCounts,
   isInFuture,
@@ -8,12 +9,9 @@ import {
   detailsContainsFavourite
 } from "utils";
 
-import * as DATA from "../data";
-
 const getGigsMatchingMusician = (musician: IMusician): Array<IGig> => {
   const gigsMatchingMusician: Array<IGig> = [];
-  const gigs: Array<IGig> = DATA.ARRAY;
-  gigs.forEach((gig: IGig): void => {
+  DATA.forEach((gig: IGig): void => {
     if (musicianMatchExists(musician, gig)) {
       gigsMatchingMusician.push(gig);
     }
@@ -73,9 +71,7 @@ const getMusicianDetails = (
   );
 };
 
-export const MUSICIANS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
-  MUSICIANS
-).map(
+export const MUSICIANS: Array<ICountedListItem> = Object.values(musicians).map(
   (musician: IMusician): ICountedListItem => {
     const { name, previousStageName, noLongerExists } = musician;
     const details: Array<ICountedListItemDetail> = getMusicianDetails(musician);
@@ -83,7 +79,7 @@ export const MUSICIANS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
       text: name,
       secondaryText: previousStageName && previousStageName.name,
       favourite: detailsContainsFavourite(details),
-      ...getItemCounts({ item: { musician }, data: { gigs: DATA.ARRAY } }),
+      ...getItemCounts({ item: { musician }, data: { gigs: DATA } }),
       noLongerExists,
       details
     };

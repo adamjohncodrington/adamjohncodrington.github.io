@@ -1,12 +1,10 @@
-import { FRIENDS } from "@constants";
+import { FRIENDS as friends } from "@constants";
+import { GIGS as DATA } from "data";
 import { getItemCounts, getGigTitle, getDatesText, isInFuture } from "utils";
-
-import * as DATA from "../data";
 
 const getGigsMatchingFriend = (friend: IFriend): Array<IGig> => {
   const gigsMatchingFriend: Array<IGig> = [];
-  const gigs: Array<IGig> = DATA.ARRAY;
-  gigs.forEach((gig: IGig): void => {
+  DATA.forEach((gig: IGig): void => {
     if (gig.company.includes(friend)) gigsMatchingFriend.push(gig);
   });
   return gigsMatchingFriend;
@@ -29,14 +27,12 @@ const getFriendDetails = (friend: IFriend): Array<ICountedListItemDetail> => {
   );
 };
 
-export const FRIENDS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
-  FRIENDS
-)
+export const FRIENDS: Array<ICountedListItem> = Object.values(friends)
   .filter(({ gigs }: IFriend): boolean => !!gigs)
   .map(
     (friend: IFriend): ICountedListItem => ({
       text: friend.name,
-      ...getItemCounts({ item: { friend }, data: { gigs: DATA.ARRAY } }),
+      ...getItemCounts({ item: { friend }, data: { gigs: DATA } }),
       details: getFriendDetails(friend)
     })
   );

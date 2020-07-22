@@ -1,58 +1,58 @@
-import { PAGE_SECTION } from "@constants";
+import { PAGE_SECTION_TITLES } from "@constants";
 import { POLE as FACTORY } from "factories";
 import { SVG } from "resources";
 
 const INSTRUCTORS: IPageSection = {
   SvgIcon: SVG.PEOPLE,
-  title: PAGE_SECTION.TITLES.INSTRUCTORS,
+  title: PAGE_SECTION_TITLES.INSTRUCTORS,
   data: { countedListItems: FACTORY.INSTRUCTORS }
 };
 
 const STUDIOS: IPageSection = {
   SvgIcon: SVG.MAP_PIN,
-  title: PAGE_SECTION.TITLES.STUDIOS,
+  title: PAGE_SECTION_TITLES.STUDIOS,
   data: { countedListItems: FACTORY.STUDIOS }
 };
 
 const CONTEMPORARY: IPageSection = {
-  title: PAGE_SECTION.TITLES.CONTEMPORARY,
+  title: PAGE_SECTION_TITLES.CONTEMPORARY,
   SvgIcon: SVG.DANCER_MALE_2,
   data: { comingSoon: true }
 };
 
 const EXOTIC: IPageSection = {
   SvgIcon: SVG.HEELS,
-  title: PAGE_SECTION.TITLES.EXOTIC,
+  title: PAGE_SECTION_TITLES.EXOTIC,
   data: { comingSoon: true }
 };
 
 const NON_POLE: IPageSection = {
   SvgIcon: SVG.HOME,
-  title: PAGE_SECTION.TITLES.NON_POLE,
+  title: PAGE_SECTION_TITLES.NON_POLE,
   data: { comingSoon: true }
 };
 
 const IMPROVISATION: IPageSection = {
   SvgIcon: SVG.DANCER_MALE_1,
-  title: PAGE_SECTION.TITLES.IMPROVISATION,
+  title: PAGE_SECTION_TITLES.IMPROVISATION,
   data: { comingSoon: true }
 };
 
 const PHOTOS: IPageSection = {
   SvgIcon: SVG.CAMERA,
-  title: PAGE_SECTION.TITLES.PHOTOS,
+  title: PAGE_SECTION_TITLES.PHOTOS,
   data: { comingSoon: true }
 };
 
 const TRICKS_COMBOS: IPageSection = {
   SvgIcon: SVG.POLE_VAULT,
-  title: PAGE_SECTION.TITLES.TRICKS_COMBOS,
+  title: PAGE_SECTION_TITLES.TRICKS_COMBOS,
   data: { comingSoon: true }
 };
 
 const SHOWCASE: IPageSection = {
   SvgIcon: SVG.STARS,
-  title: PAGE_SECTION.TITLES.SHOWCASE,
+  title: PAGE_SECTION_TITLES.SHOWCASE,
   data: { comingSoon: true }
 };
 

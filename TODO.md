@@ -1,6 +1,6 @@
 # TO DO LIST
 
-- root-level `data`, `factories`, `sections`, `pages`
+- root-level `data`, `factories`, `sections`, `pages` folders
 - reinstate all `festivals` functionality!!!
 - make gig date prop singular, make festival dates prop `start/end`?
 - move `vinyls` to `DATA`

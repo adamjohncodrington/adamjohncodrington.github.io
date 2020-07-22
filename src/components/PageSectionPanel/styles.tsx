@@ -1,7 +1,9 @@
 import styled, { css } from "styled-components";
 
 import { Ul } from "primitives";
-import { PAGE_SECTION } from "@constants";
+import { PAGE_SECTION_PANEL_TYPES } from "@constants";
+
+const { RECIPE_CARDS, COUNTED_LIST } = PAGE_SECTION_PANEL_TYPES;
 
 interface IPageSectionPanelList {
   pageSectionPanelType: string;
@@ -82,9 +84,9 @@ const CSS_REGULAR_CARDS = ({
 export const PageSectionPanelList = styled(
   Ul
 )(({ pageSectionPanelType }: IPageSectionPanelList) =>
-  pageSectionPanelType === PAGE_SECTION.PANEL_TYPES.RECIPE_CARDS
+  pageSectionPanelType === RECIPE_CARDS
     ? CSS_RECIPE_CARDS
-    : pageSectionPanelType === PAGE_SECTION.PANEL_TYPES.COUNTED_LIST
+    : pageSectionPanelType === COUNTED_LIST
     ? CSS_COUNTED_LIST
     : CSS_REGULAR_CARDS
 );

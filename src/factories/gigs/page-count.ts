@@ -1,8 +1,8 @@
-import * as DATA from "../data";
+import { GIGS as DATA } from "data";
 
 import { UP_NEXT } from "./up-next";
 
-const totalGigsPastAndPresent: number = DATA.ARRAY.length;
+const totalGigsPastAndPresent: number = DATA.length;
 const totalFutureGigs: number = UP_NEXT.length;
 const totalGigsSoFar: number = totalGigsPastAndPresent - totalFutureGigs;
 

@@ -1,7 +1,6 @@
 import { MUSICIANS } from "@constants";
+import { GIGS as DATA } from "data";
 import { getItemCounts } from "utils";
-
-import * as DATA from "../data";
 
 interface IMusicianCounted extends IMusician, I_PastFutureCounts {}
 
@@ -9,7 +8,7 @@ const musiciansForBucketList = Object.values(MUSICIANS)
   .map(
     (musician: IMusician): IMusicianCounted => ({
       ...musician,
-      ...getItemCounts({ item: { musician }, data: { gigs: DATA.ARRAY } })
+      ...getItemCounts({ item: { musician }, data: { gigs: DATA } })
     })
   )
   .filter(
@@ -17,7 +16,7 @@ const musiciansForBucketList = Object.values(MUSICIANS)
       pastCount === 0 && futureCount === 0 && !noLongerExists
   );
 
-export const BUCKET_LIST_ITEMS: Array<ICountedListItem> = musiciansForBucketList.map(
+export const BUCKET_LIST: Array<ICountedListItem> = musiciansForBucketList.map(
   ({
     name,
     pastCount,

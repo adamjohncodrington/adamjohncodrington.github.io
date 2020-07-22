@@ -1,4 +1,4 @@
-import { PAGE_SECTION } from "@constants";
+import { PAGE_SECTION_TITLES } from "@constants";
 import { SVG, PHOTOS, VIDEOS } from "resources";
 import { isInFuture } from "utils";
 
@@ -7,13 +7,13 @@ import { FACTORY } from "./factory";
 
 const BUCKET_LIST_TRAVEL: IPageSection = {
   SvgIcon: SVG.STARS,
-  title: PAGE_SECTION.TITLES.BUCKET_LIST,
+  title: PAGE_SECTION_TITLES.BUCKET_LIST,
   data: { countedListItems: FACTORY.BUCKET_LIST }
 };
 
 const CITIES: IPageSection = {
   SvgIcon: SVG.CITY,
-  title: PAGE_SECTION.TITLES.CITIES,
+  title: PAGE_SECTION_TITLES.CITIES,
   data: { countedListItems: FACTORY.CITIES },
   count: FACTORY.CITIES.length,
   starCount: FACTORY.CITIES.filter(
@@ -22,7 +22,7 @@ const CITIES: IPageSection = {
 };
 
 const COUNTRIES: IPageSection = {
-  title: PAGE_SECTION.TITLES.COUNTRIES,
+  title: PAGE_SECTION_TITLES.COUNTRIES,
   SvgIcon: SVG.FLAG,
   data: { countedListItems: FACTORY.COUNTRIES },
   count: FACTORY.COUNTRIES.length
@@ -30,25 +30,25 @@ const COUNTRIES: IPageSection = {
 
 const FRIENDS_TRAVEL: IPageSection = {
   SvgIcon: SVG.PEOPLE,
-  title: PAGE_SECTION.TITLES.FRIENDS,
+  title: PAGE_SECTION_TITLES.FRIENDS,
   data: { countedListItems: FACTORY.FRIENDS }
 };
 
 const HIGHLIGHTS: IPageSection = {
-  title: PAGE_SECTION.TITLES.HIGHLIGHTS,
+  title: PAGE_SECTION_TITLES.HIGHLIGHTS,
   SvgIcon: SVG.MAP_PIN,
   data: { countedListItems: FACTORY.HIGHLIGHTS }
 };
 
 const ISLANDS: IPageSection = {
-  title: PAGE_SECTION.TITLES.ISLANDS,
+  title: PAGE_SECTION_TITLES.ISLANDS,
   SvgIcon: SVG.PALM_TREE,
   data: { countedListItems: FACTORY.ISLANDS }
 };
 
 const THEME_PARKS: IPageSection = {
   SvgIcon: SVG.ROLLER_COASTER,
-  title: PAGE_SECTION.TITLES.THEME_PARKS,
+  title: PAGE_SECTION_TITLES.THEME_PARKS,
   hide: true,
   data: { countedListItems: FACTORY.THEME_PARKS },
   count: FACTORY.THEME_PARKS.length
@@ -56,19 +56,19 @@ const THEME_PARKS: IPageSection = {
 
 const UP_NEXT_TRAVEL: IPageSection = {
   SvgIcon: SVG.NOTEPAD,
-  title: PAGE_SECTION.TITLES.UP_NEXT,
+  title: PAGE_SECTION_TITLES.UP_NEXT,
   data: { trips: FACTORY.UP_NEXT }
 };
 
 const VIDEOS_TRAVEL: IPageSection = {
   SvgIcon: SVG.VIDEO_CAMERA,
-  title: PAGE_SECTION.TITLES.VIDEOS,
+  title: PAGE_SECTION_TITLES.VIDEOS,
   data: { videos: Object.values(VIDEOS.TRAVEL) }
 };
 
 const PHOTOS_TRAVEL: IPageSection = {
   SvgIcon: SVG.CAMERA,
-  title: PAGE_SECTION.TITLES.PHOTOS,
+  title: PAGE_SECTION_TITLES.PHOTOS,
   data: {
     photoGrid: { photos: Object.values(PHOTOS.TRAVEL).flat(), columnCount: 4 }
   }

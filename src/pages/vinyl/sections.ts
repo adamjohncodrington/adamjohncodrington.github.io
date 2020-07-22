@@ -1,31 +1,31 @@
-import { PAGE_SECTION } from "@constants";
+import { PAGE_SECTION_TITLES } from "@constants";
 import { SVG } from "resources";
 
 import { FACTORY } from "./factory";
 
 const SECTION_ARTISTS: IPageSection = {
-  title: PAGE_SECTION.TITLES.ARTISTS,
+  title: PAGE_SECTION_TITLES.ARTISTS,
   data: { countedListItems: FACTORY.ARTISTS },
   count: FACTORY.ARTISTS.length,
   SvgIcon: SVG.ARTIST
 };
 
 const SECTION_COLLECTION: IPageSection = {
-  title: PAGE_SECTION.TITLES.COLLECTION,
+  title: PAGE_SECTION_TITLES.COLLECTION,
   data: { vinyls: FACTORY.COLLECTION },
   count: FACTORY.COLLECTION.length,
   SvgIcon: SVG.BRIEFCASE
 };
 
 const SECTION_SIGNED: IPageSection = {
-  title: PAGE_SECTION.TITLES.SIGNED,
+  title: PAGE_SECTION_TITLES.SIGNED,
   data: { vinyls: FACTORY.SIGNED },
   count: FACTORY.SIGNED.length,
   SvgIcon: SVG.PEN
 };
 
 const SECTION_WISHLIST: IPageSection = {
-  title: PAGE_SECTION.TITLES.WISH_LIST,
+  title: PAGE_SECTION_TITLES.WISH_LIST,
   SvgIcon: SVG.STARS,
   data: { vinyls: FACTORY.WISH_LIST },
   count: FACTORY.WISH_LIST.length
@@ -44,7 +44,7 @@ const SECTIONS_YEARS: Array<IPageSection> = FACTORY.VINYLS_BY_YEAR.map(
 );
 
 // const SECTION_PHOTOS: IPageSection = {
-//   title: PAGE_SECTION.TITLES.PHOTOS,
+//   title: PAGE_SECTION_TITLES.PHOTOS,
 //   SvgIcon: SVG.CAMERA,
 //   data: { photoGrid: { photos: Object.values(PHOTOS.ALBUMS), columnCount: 3 } }
 // };

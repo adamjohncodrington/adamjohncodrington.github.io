@@ -1,6 +1,6 @@
+import { GIGS as FACTORY } from "factories";
 import { SVG } from "resources";
 
-import { FACTORY } from "./factory";
 import { sections } from "./sections";
 
 export const PAGE_GIGS: IPage = {
