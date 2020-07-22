@@ -1,5 +1,5 @@
 import { PLAYS } from "@constants";
-import { THEATRE_VISITS } from "data";
+import { THEATRE as DATA } from "data";
 import {
   getItemCounts,
   getDateText,
@@ -27,7 +27,7 @@ const playIsFavourited = ({
 
 const getTheatreVisitsMatchingPlay = (play: IPlay): Array<ITheatreVisit> => {
   const theatreVisitsMatchingPlay: Array<ITheatreVisit> = [];
-  const theatreVisits: Array<ITheatreVisit> = THEATRE_VISITS;
+  const theatreVisits: Array<ITheatreVisit> = DATA;
   theatreVisits.forEach((theatreVisit: ITheatreVisit): void => {
     if (theatreVisit.play === play)
       theatreVisitsMatchingPlay.push(theatreVisit);
@@ -58,10 +58,7 @@ export const PLAYS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
   (play: IPlay): ICountedListItem => ({
     text: play.name,
     favourite: playIsFavourited({ play, favouritedTheatreCards: FAVOURITES }),
-    ...getItemCounts({
-      item: { play },
-      data: { theatreVisits: THEATRE_VISITS }
-    }),
+    ...getItemCounts({ item: { play }, data: { theatreVisits: DATA } }),
     details: getPlayDetails(play)
   })
 );

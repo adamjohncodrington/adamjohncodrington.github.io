@@ -1,6 +1,6 @@
-import { THEATRE_VISITS } from "data";
+import { THEATRE as DATA } from "data";
 import { isInFuture } from "utils";
 
-export const UP_NEXT: Array<ITheatreVisit> = THEATRE_VISITS.filter(
+export const UP_NEXT: Array<ITheatreVisit> = DATA.filter(
   ({ date }: ITheatreVisit): boolean => isInFuture(date)
 );

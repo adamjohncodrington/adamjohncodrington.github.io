@@ -1,5 +1,5 @@
-import { THEATRE_VISITS } from "data";
+import { THEATRE as DATA } from "data";
 
-export const FAVOURITES: Array<ITheatreVisit> = THEATRE_VISITS.filter(
+export const FAVOURITES: Array<ITheatreVisit> = DATA.filter(
   ({ favourite }: ITheatreVisit): boolean => !!favourite
 );

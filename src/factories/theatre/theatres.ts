@@ -1,5 +1,5 @@
 import { THEATRE_VENUES } from "@constants";
-import { THEATRE_VISITS } from "data";
+import { THEATRE as DATA } from "data";
 import {
   getItemCounts,
   isInFuture,
@@ -11,7 +11,7 @@ const getTheatreVisitsMatchingVenue = (
   theatre: ITheatre
 ): Array<ITheatreVisit> => {
   const theatreVisitsMatchingVenue: Array<ITheatreVisit> = [];
-  const theatreVisits: Array<ITheatreVisit> = THEATRE_VISITS;
+  const theatreVisits: Array<ITheatreVisit> = DATA;
   theatreVisits.forEach((theatreVisit: ITheatreVisit): void => {
     if (theatreVisit.theatre === theatre)
       theatreVisitsMatchingVenue.push(theatreVisit);
@@ -43,10 +43,7 @@ export const THEATRE_VENUES_LIST_ITEMS: Array<ICountedListItem> = Object.values(
 ).map(
   (theatre: ITheatre): ICountedListItem => ({
     text: theatre.name,
-    ...getItemCounts({
-      item: { theatre },
-      data: { theatreVisits: THEATRE_VISITS }
-    }),
+    ...getItemCounts({ item: { theatre }, data: { theatreVisits: DATA } }),
     details: getTheatreVenueDetails(theatre)
   })
 );

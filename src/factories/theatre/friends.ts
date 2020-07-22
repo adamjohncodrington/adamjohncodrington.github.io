@@ -1,5 +1,5 @@
 import { FRIENDS } from "@constants";
-import { THEATRE_VISITS } from "data";
+import { THEATRE as DATA } from "data";
 import {
   getItemCounts,
   getTheatreVisitTitle,
@@ -11,7 +11,7 @@ const getTheatreVisitsMatchingFriend = (
   friend: IFriend
 ): Array<ITheatreVisit> => {
   const theatreVisitsMatchingFriend: Array<ITheatreVisit> = [];
-  const theatreVisits: Array<ITheatreVisit> = THEATRE_VISITS;
+  const theatreVisits: Array<ITheatreVisit> = DATA;
   theatreVisits.forEach((theatreVisit: ITheatreVisit): void => {
     if (theatreVisit.company.includes(friend))
       theatreVisitsMatchingFriend.push(theatreVisit);
@@ -43,10 +43,7 @@ export const FRIENDS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
   .map(
     (friend: IFriend): ICountedListItem => ({
       text: friend.name,
-      ...getItemCounts({
-        item: { friend },
-        data: { theatreVisits: THEATRE_VISITS }
-      }),
+      ...getItemCounts({ item: { friend }, data: { theatreVisits: DATA } }),
       details: getFriendDetails(friend)
     })
   );
