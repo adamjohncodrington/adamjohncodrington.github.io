@@ -8,7 +8,7 @@ interface ICountryTemplate extends ILocation {
   villages?: any;
 }
 
-interface ICountryCounted extends ICountryTemplate, IPastAndFutureCounts {}
+interface ICountryCounted extends ICountryTemplate, I_PastFutureCounts {}
 
 interface IIndonesia extends ILocation {}
 

@@ -3,7 +3,7 @@ interface IAttraction extends ILocation {
   highlight?: boolean;
 }
 
-interface IAttractionCounted extends IAttraction, IPastAndFutureCounts {}
+interface IAttractionCounted extends IAttraction, I_PastFutureCounts {}
 
 interface IAttractionsNorway {
   OSLO_FJORD_SAUNA: IAttraction;

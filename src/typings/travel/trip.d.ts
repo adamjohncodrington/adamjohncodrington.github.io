@@ -1,4 +1,4 @@
-interface ITripLeg extends IEventCardCommon, IDates {
+interface ITripLeg extends IEventCardAll, I_Dates {
   country: ICountryTemplate;
   primaryLocations?: Array<ILocation>;
   secondaryLocations?: Array<ILocation>;

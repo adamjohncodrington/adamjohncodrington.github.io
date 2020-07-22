@@ -1,18 +1,19 @@
-interface I_Favourite {
-  favourite?: boolean;
-}
+type ITicketType = string;
+type ISvgIcon = React.FC<React.SVGProps<SVGSVGElement>>;
 
-interface I_NameFavourite extends I_Favourite {
-  name: string;
-  insignificant?: boolean;
+interface I__Favourite {
+  favourite?: boolean;
 }
 
 interface I_Name {
   name: string;
+}
+
+interface I__Insignificant {
   insignificant?: boolean;
 }
 
-interface IPastAndFutureCounts {
+interface I_PastFutureCounts {
   futureCount: number;
   pastCount: number;
 }
@@ -22,19 +23,19 @@ interface IDetailItem {
   isInFuture: boolean;
 }
 
-interface ICompany {
+interface I_Company {
   company: Array<IFriend>;
 }
 
-interface IDate {
+interface I_Date {
   date: Date;
 }
 
-interface IDates {
+interface I_Dates {
   dates: Array<Date>;
 }
 
-interface IEventCardCommon extends ICompany, I_Favourite {
+interface IEventCardAll extends I_Company, I__Favourite {
   hideSubtitle?: boolean;
   photos?: Array<IPhoto>;
   video?: IVideo;
@@ -45,7 +46,7 @@ interface IEventCardCommon extends ICompany, I_Favourite {
   hideVideoIcon?: boolean;
 }
 
-interface IEventCard extends IEventCardCommon {
+interface IEventCard extends IEventCardAll {
   title: string;
   subtitle?: string;
   body?: string;
@@ -60,7 +61,7 @@ interface IPhotoGrid {
   randomise?: boolean;
 }
 
-interface IPerson extends I_NameFavourite {
+interface IPerson extends I_Name {
   initials: string;
 }
 
@@ -80,8 +81,6 @@ interface IPage {
   color?: ColorValue;
 }
 
-type ISvgIcon = React.FC<React.SVGProps<SVGSVGElement>>;
-
 interface IPhoto {
   date?: Date;
   title?: string;
@@ -97,32 +96,31 @@ interface IVideo extends I_OrientationQuality {
   youtubeId: string;
 }
 
-interface ICountedListItemDetail extends I_Favourite {
+interface ICountedListItemDetail extends I__Favourite {
   video?: IVideo;
-
   index?: number;
   mainText?: Array<string>;
   dateText: string;
   isInFuture: boolean;
 }
 
-interface IStar {
+interface I__Star {
   star?: boolean;
 }
 
-interface ISecondaryText {
+interface I__SecondaryText {
   secondaryText?: string;
 }
 
-interface IColumnCount {
+interface I__ColumnCount {
   columnCount?: number;
 }
 
 interface ICountedListItem
-  extends ISecondaryText,
-    IPastAndFutureCounts,
-    I_Favourite,
-    IStar {
+  extends I__SecondaryText,
+    I_PastFutureCounts,
+    I__Favourite,
+    I__Star {
   text: string;
   doNotIncludeInList?: boolean;
   countInfoIrrelevant?: boolean;
@@ -157,4 +155,78 @@ interface IPageSection extends IPageSectionDisclosure {
   count?: number;
   starCount?: number;
   hide?: boolean;
+}
+
+interface IFestivalTitle extends I_Name {}
+
+interface IGigAndFestival {
+  venue: IMusicVenue;
+  ticketType?: ITicketType;
+}
+
+interface IFestival extends IGigAndFestival, I_Dates, IEventCardAll {
+  title: IFestivalTitle;
+  lineup: Array<Array<IMusician>> | "TBC";
+}
+
+interface IGig extends IGigAndFestival, I_Dates, IEventCardAll {
+  headline: IMusician;
+  support?: Array<IMusician>;
+}
+
+interface IGigOrFestival {}
+
+interface IMusicVenue extends I_Name, I__Favourite, I__Insignificant {}
+
+interface IMusician extends I_Name, I__Favourite {
+  previousStageName?: { name: string; yearDeprecated: number };
+  noLongerExists?: boolean;
+}
+
+interface IGigVideo extends IVideo {
+  musician: IMusician;
+}
+
+interface IPoleStudio {
+  name: string;
+  branch?: string;
+}
+
+interface IPoleInstructor extends IPerson {
+  stageName?: string;
+}
+
+interface IActor extends I_Name, I__Favourite {}
+
+interface IPlay extends I_Name, I__Favourite {}
+
+interface ITheatre extends I_Name, I__Favourite {}
+
+interface ITheatreVisit extends I_Date, IEventCardAll {
+  play: IPlay;
+  theatre: ITheatre;
+  cast?: Array<IActor>;
+}
+
+interface IVinyl {
+  musician: IMusician;
+  title: string;
+  year: number;
+  artwork: IPhoto;
+  appleMusicId: string;
+  signed?: true;
+  notes?: string;
+  purchased?: boolean;
+}
+
+interface IVinylCard extends IVinyl {
+  hideYear?: boolean;
+}
+
+interface ILocation extends I_Name, I__Favourite, I__Insignificant {
+  island?: boolean;
+  insignificant?: boolean;
+  englishName?: string;
+  foreignName?: string;
+  excludeFromBucketList?: boolean;
 }

@@ -2,7 +2,7 @@ interface ICity extends ILocation {
   capital?: boolean;
 }
 
-interface ICityCounted extends ICity, IPastAndFutureCounts {}
+interface ICityCounted extends ICity, I_PastFutureCounts {}
 
 interface ICitiesArgentina {
   BUENOS_AIRES: ICity;

@@ -11,10 +11,7 @@ export const DEFECTED_BRISTOL: IFestivalTitle = {
   name: "Defected In the House Day & Night Party"
 };
 export const FABRIC_NYE: IFestivalTitle = { name: "Fabric NYE" };
-export const GLASTONBURY: IFestivalTitle = {
-  name: "Glastonbury",
-  favourite: true
-};
+export const GLASTONBURY: IFestivalTitle = { name: "Glastonbury" };
 export const HOMOBLOC: IFestivalTitle = { name: "Homobloc" };
 export const KALEIDOSCOPE: IFestivalTitle = {
   name: "Kaleidoscope"
@@ -39,7 +36,4 @@ export const TRIBAL_SESSIONS: IFestivalTitle = { name: "Tribal Sessions" };
 export const V_FESTIVAL: IFestivalTitle = {
   name: "V Festival"
 };
-export const WAREHOUSE_PROJECT: IFestivalTitle = {
-  name: "Warehouse Project",
-  favourite: true
-};
+export const WAREHOUSE_PROJECT: IFestivalTitle = { name: "Warehouse Project" };

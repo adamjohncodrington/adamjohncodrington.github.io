@@ -37,7 +37,7 @@ interface IRecipeMakes {
   measurement?: string;
 }
 
-interface IRecipe extends I_Favourite {
+interface IRecipe extends I__Favourite {
   title: string;
   makes?: IRecipeMakes;
   photo?: IPhoto;

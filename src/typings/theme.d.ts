@@ -1,7 +1,7 @@
-type ColorValue = string;
-type FontWeightValue = string;
 type PxValue = string;
 type RemValue = string;
+type ColorValue = string;
+type FontWeightValue = string;
 type BoxShadowValue = string;
 type TransitionValue = string;
 type PercentageValue = string;
@@ -36,7 +36,7 @@ interface IThemePageSection {
   background: ColorValue;
   borderRadius: PxValue;
   boxShadow: BoxShadowValue;
-  comingSoon: { fontSize: PxValue; fontWeight: string };
+  comingSoon: { fontSize: PxValue; fontWeight: FontWeightValue };
   count: { margin: { left: PxValue } };
   header: { padding: { vertical: PxValue } };
   icon: { size: PxValue };

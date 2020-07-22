@@ -4,7 +4,7 @@ import { UNICODE } from "@constants";
 import { FlexRow } from "primitives";
 import { getPseudoElementBefore } from "styles";
 
-interface IStyledMainText extends I_Theme, I_Favourite, IStar {
+interface IStyledMainText extends I_Theme, I__Favourite, I__Star {
   faded: boolean;
 }
 

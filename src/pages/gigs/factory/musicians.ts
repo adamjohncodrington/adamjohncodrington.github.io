@@ -21,7 +21,7 @@ const getGigsMatchingMusician = (musician: IMusician): Array<IGig> => {
   return gigsMatchingMusician;
 };
 
-// interface IGetFestivalDate extends IDates {
+// interface IGetFestivalDate extends I_Dates {
 //   lineup: Array<Array<IMusician>>;
 //   musician: IMusician;
 // }

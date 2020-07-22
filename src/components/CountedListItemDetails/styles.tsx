@@ -39,7 +39,7 @@ export const StyledIndex = styled.div`
   min-width: 25px;
 `;
 
-interface IStyledDateText extends I_Favourite {
+interface IStyledDateText extends I__Favourite {
   video?: IVideo;
 }
 

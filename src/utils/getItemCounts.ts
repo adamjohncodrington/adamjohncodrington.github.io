@@ -102,7 +102,7 @@ export const getItemCounts = ({
     play,
     theatre
   }
-}: IGetItemCounts): IPastAndFutureCounts => {
+}: IGetItemCounts): I_PastFutureCounts => {
   let pastCount: number = 0;
   let futureCount: number = 0;
 

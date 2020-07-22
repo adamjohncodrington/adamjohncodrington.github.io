@@ -18,7 +18,7 @@ export const GridColumnDiv = styled.div(
   `
 );
 
-export const GridWithColumns = styled.div(({ columnCount }: IColumnCount) => {
+export const GridWithColumns = styled.div(({ columnCount }: I__ColumnCount) => {
   const gridTemplateAreas: string =
     columnCount === 4
       ? `"col1 col2 col3 col4"`

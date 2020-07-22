@@ -3,7 +3,7 @@ import { getItemCounts } from "utils";
 
 import * as DATA from "../data";
 
-interface IMusicianCounted extends IMusician, IPastAndFutureCounts {}
+interface IMusicianCounted extends IMusician, I_PastFutureCounts {}
 
 const musiciansForBucketList = Object.values(MUSICIANS)
   .map(
