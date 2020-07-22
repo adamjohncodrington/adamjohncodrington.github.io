@@ -9,6 +9,6 @@ interface IDisclosure {
   isStatic?: boolean;
 }
 
-interface IClassName {
+interface I_ClassName {
   className?: string;
 }

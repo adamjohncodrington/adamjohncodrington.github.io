@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 
-import { HEART, getPseudoElementAfter, TRIANGLE_RIGHT } from "styles";
+import { UNICODE } from "@constants";
+import { getPseudoElementAfter } from "styles";
 
 export const StyledOl = styled.ol`
   list-style-type: none;
@@ -47,11 +48,11 @@ export const StyledDateText = styled.div(
     (favourite || video) &&
     getPseudoElementAfter(
       favourite && !video
-        ? HEART
+        ? UNICODE.HEART
         : video && !favourite
-        ? TRIANGLE_RIGHT
+        ? UNICODE.TRIANGLE_RIGHT
         : video && favourite
-        ? HEART + " " + TRIANGLE_RIGHT
+        ? UNICODE.HEART + " " + UNICODE.TRIANGLE_RIGHT
         : ""
     )
 );

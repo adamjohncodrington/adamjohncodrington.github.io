@@ -19,7 +19,7 @@ import {
   RecipeCardCostsContainer
 } from "./styles";
 
-interface IRecipeCardHeader extends IClassName, IPanelIsVisible {}
+interface IRecipeCardHeader extends I_ClassName, IPanelIsVisible {}
 
 export const RecipeCard: FC<IRecipe> = ({
   title,

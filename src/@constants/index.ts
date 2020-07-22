@@ -8,12 +8,15 @@ import * as PAGE_SECTION from "./page-section";
 import * as PLAYS from "./plays";
 import * as POLE_INSTRUCTORS from "./pole-instructors";
 import * as POLE_STUDIOS from "./pole-studios";
+import * as TICKET_TYPES from "./ticket-types";
+import * as UNICODE from "./unicode";
 
+export * from "./ingredients";
 export * from "./music-venues";
 export * from "./sainsburys";
 export * from "./theatres";
-export * from "./vinyls";
 export * from "./video";
+export * from "./vinyls";
 
 export {
   ACTORS,
@@ -25,13 +28,10 @@ export {
   PAGE_SECTION,
   PLAYS,
   POLE_STUDIOS,
-  POLE_INSTRUCTORS
+  POLE_INSTRUCTORS,
+  TICKET_TYPES,
+  UNICODE
 };
 
 export * from "./diets";
-export * from "./friends";
-export * from "./pole-instructors";
 export * from "./locations";
-export * from "./ingredients";
-export * from "./ticket-types";
-export * from "./unicode";

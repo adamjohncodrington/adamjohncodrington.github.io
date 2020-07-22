@@ -1,11 +1,5 @@
 import { css } from "styled-components";
 
-export const HEART: string = "♥";
-export const TRIANGLE_RIGHT: string = "▶︎";
-export const SQUARE: string = "■";
-export const CIRCLE: string = "•";
-export const STAR: string = "★";
-
 export const getPseudoElementAfter = (element: string) => css`
   ::after {
     content: " ${element}";

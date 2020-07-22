@@ -1,17 +1,11 @@
-export const TICKET_TYPES: ITicketTypes = {
-  // A
-  AXS_MOBILE_APP: "AXS app ticket",
-  // D
-  DICE: "Dice mobile ticket",
-  // G
-  GIGS_AND_TOURS_POSTAL: "Gigs and Tours postal ticket",
-  // K
-  KABOODLE_ETICKET: "Kaboodle eTicket",
-  // S
-  SEE_TICKETS_POSTAL: "SeeTickets postal",
-  SEE_TICKETS_PRINT_AT_HOME: "SeeTickets print-at-home",
-  // T
-  TICKETWEB: `Ticketweb PDF`,
-  TICKETMASTER_POSTAL: "Ticketmaster postal",
-  TICKETMASTER_ETICKET: "Ticketmaster eTicket"
-};
+export const AXS_MOBILE_APP: ITicketType = "AXS app ticket";
+export const DICE: ITicketType = "Dice mobile ticket";
+export const GIGS_AND_TOURS_POSTAL: ITicketType =
+  "Gigs and Tours postal ticket";
+export const KABOODLE_ETICKET: ITicketType = "Kaboodle eTicket";
+export const SEE_TICKETS_POSTAL: ITicketType = "SeeTickets postal";
+export const SEE_TICKETS_PRINT_AT_HOME: ITicketType =
+  "SeeTickets print-at-home";
+export const TICKETWEB: ITicketType = `Ticketweb PDF`;
+export const TICKETMASTER_POSTAL: ITicketType = "Ticketmaster postal";
+export const TICKETMASTER_ETICKET: ITicketType = "Ticketmaster eTicket";

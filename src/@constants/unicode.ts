@@ -1,26 +1,19 @@
-interface IUnicode {
-  JALAPENOS: string;
-  TOMATO_PUREE: string;
-  QUARTER: string;
-  THIRD: string;
-  HALF: string;
-  TWO_THIRDS: string;
-  THREE_QUARTERS: string;
-  DEGREES_CELCIUS: string;
-}
+// Characters
+export const HEART: string = "♥";
+export const TRIANGLE_RIGHT: string = "▶︎";
+export const SQUARE: string = "■";
+export const CIRCLE: string = "•";
+export const STAR: string = "★";
 
-export const UNICODE: IUnicode = {
-  // INGREDIENTS
-  JALAPENOS: "jalape\u00f1os",
-  TOMATO_PUREE: "tomato pur\u00e9e",
+// Recipes
+export const JALAPENOS: string = "jalape\u00f1os";
+export const PUREE: string = "pur\u00e9e";
+export const TOMATO_PUREE: string = "tomato " + PUREE;
+export const DEGREES_CELCIUS: string = "\u00b0C";
 
-  // FRACTIONS
-  QUARTER: "\u00bc",
-  THIRD: "\u2153",
-  HALF: "\u00bd",
-  TWO_THIRDS: "\u2154",
-  THREE_QUARTERS: "\u00be",
-
-  // MISC
-  DEGREES_CELCIUS: "\u00b0C"
-};
+// Fractions
+export const QUARTER: string = "\u00bc";
+export const THIRD: string = "\u2153";
+export const HALF: string = "\u00bd";
+export const TWO_THIRDS: string = "\u2154";
+export const THREE_QUARTERS: string = "\u00be";

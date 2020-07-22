@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import styled, { css } from "styled-components";
 
 import { Ul, Li, FlexRow } from "primitives";
-import { CIRCLE } from "styles";
+import { UNICODE } from "@constants";
 
 interface IStyledLi extends I_Theme {
   addPaddingTop?: boolean;
@@ -20,13 +20,13 @@ const PaddedSpan = styled.span`
   margin-right: 10px;
 `;
 
-interface ListProps {
+interface IList {
   title: string;
   listItems: Array<IListItemWithPaddingTopFlag>;
   showBullets?: boolean;
 }
 
-export const List: FC<ListProps> = ({ title, listItems, showBullets }) => (
+export const List: FC<IList> = ({ title, listItems, showBullets }) => (
   <Ul>
     <strong>{title}</strong>
 
@@ -35,7 +35,7 @@ export const List: FC<ListProps> = ({ title, listItems, showBullets }) => (
         <PaddedLi key={index} addPaddingTop={addPaddingTop}>
           {showBullets ? (
             <FlexRow>
-              <PaddedSpan>{CIRCLE}</PaddedSpan>
+              <PaddedSpan>{UNICODE.CIRCLE}</PaddedSpan>
               <span>{text} </span>
             </FlexRow>
           ) : (

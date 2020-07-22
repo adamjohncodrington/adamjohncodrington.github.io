@@ -1,24 +1,23 @@
-import { BAKING } from "./baking";
-import { CARBS } from "./carbs";
-import { DAIRY } from "./dairy";
-import { FRUIT } from "./fruit";
-import { HERBS } from "./herbs";
-import { PROTEIN } from "./protein";
-import { SEASONING } from "./seasoning";
-import { NUTS_AND_SEEDS } from "./nuts-seeds";
-import { VEG } from "./veg";
+import * as BAKING from "./baking";
+import * as CARBS from "./carbs";
+import * as DAIRY_ALTS from "./dairy-alts";
+import * as FRUIT from "./fruit";
+import * as FLUIDS from "./fluids";
+import * as HERBS from "./herbs";
+import * as PROTEIN from "./protein";
+import * as SEASONING from "./seasoning";
+import * as SEEDS from "./seeds";
+import * as VEG from "./veg";
 
-export const INGREDIENTS: IInventoryIngredients = {
+export const INGREDIENTS = {
   ...BAKING,
   ...CARBS,
-  ...DAIRY,
+  ...DAIRY_ALTS,
   ...FRUIT,
+  ...FLUIDS,
   ...HERBS,
-  ...NUTS_AND_SEEDS,
   ...PROTEIN,
   ...SEASONING,
-  ...VEG,
-
-  WATER: { displayText: "water", knownCost: { price: 0 } },
-  WATER_BOILING: { displayText: "boiling water", knownCost: { price: 0 } }
+  ...SEEDS,
+  ...VEG
 };

@@ -1,3 +1,8 @@
+interface I_NameFavourite extends IFavourite {
+  name: string;
+  insignificant?: boolean;
+}
+
 interface IPastAndFutureCounts {
   futureCount: number;
   pastCount: number;
@@ -6,6 +11,85 @@ interface IPastAndFutureCounts {
 interface IDetailItem {
   text: string;
   isInFuture: boolean;
+}
+
+interface IFavourite {
+  favourite?: boolean;
+}
+
+interface ICompany {
+  company: Array<IFriend>;
+}
+
+interface IDate {
+  date: Date;
+}
+
+interface IDates {
+  dates: Array<Date>;
+}
+
+interface IEventCardCommon extends ICompany, IFavourite {
+  hideSubtitle?: boolean;
+  photos?: Array<IPhoto>;
+  video?: IVideo;
+
+  hideCompany?: boolean;
+  hideSecondaryBody?: boolean;
+  hidePhotosIcon?: boolean;
+  hideVideoIcon?: boolean;
+}
+
+interface IEventCard extends IEventCardCommon {
+  title: string;
+  subtitle?: string;
+  body?: string;
+  secondaryBody?: string;
+  countdownText?: string;
+  note?: string;
+}
+
+interface IPhotoGrid {
+  photos: Array<IPhoto>;
+  columnCount: number;
+  randomise?: boolean;
+}
+
+interface IPerson extends I_NameFavourite {
+  initials: string;
+}
+
+interface IFriend extends IPerson {
+  gigs?: boolean;
+  travel?: boolean;
+  theatre?: boolean;
+}
+
+interface IPage {
+  title: string;
+  path: string;
+  SvgIcon: ISvgIcon;
+  sections: Array<IPageSection>;
+  count?: number;
+  hide?: boolean;
+  color?: ColorValue;
+}
+
+type ISvgIcon = React.FC<React.SVGProps<SVGSVGElement>>;
+
+interface IPhoto {
+  date?: Date;
+  title?: string;
+  url: string;
+}
+
+interface I_OrientationQuality {
+  orientation: "portrait" | "landscape";
+  quality: "720p" | "1080p";
+}
+
+interface IVideo extends I_OrientationQuality {
+  youtubeId: string;
 }
 
 interface ICountedListItemDetail extends IFavourite {

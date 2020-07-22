@@ -14,7 +14,7 @@ const StyledImage = styled.img(
   `
 );
 
-interface ISquareImage extends IClassName {
+interface ISquareImage extends I_ClassName {
   dataTest?: string;
   photo: IPhoto;
   size: string;

@@ -1,7 +1,8 @@
 import styled, { css } from "styled-components";
 
+import { UNICODE } from "@constants";
 import { FlexRow } from "primitives";
-import { getPseudoElementBefore, HEART, STAR } from "styles";
+import { getPseudoElementBefore } from "styles";
 
 interface IStyledMainText extends I_Theme, IFavourite, IStar {
   faded: boolean;
@@ -29,8 +30,8 @@ export const StyledMainText = styled.span(
       `
     }
 
-    ${favourite && getPseudoElementBefore(HEART)}
-    ${star && getPseudoElementBefore(STAR)}
+    ${favourite && getPseudoElementBefore(UNICODE.HEART)}
+    ${star && getPseudoElementBefore(UNICODE.STAR)}
   `
 );
 
