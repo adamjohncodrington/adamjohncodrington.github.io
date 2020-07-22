@@ -21,24 +21,24 @@ const getGigsMatchingMusician = (musician: IMusician): Array<IGig> => {
   return gigsMatchingMusician;
 };
 
-interface IGetFestivalDay extends IDates {
-  lineup: Array<Array<IMusician>>;
-  musician: IMusician;
-}
-const getFestivalDateText = ({
-  dates,
-  musician,
-  lineup
-}: IGetFestivalDay): string => {
-  for (let dayOfFestival = 0; dayOfFestival < lineup.length; dayOfFestival++) {
-    if (lineup[dayOfFestival].includes(musician)) {
-      return getDateText(dates[dayOfFestival]);
-    }
-  }
+// interface IGetFestivalDate extends IDates {
+//   lineup: Array<Array<IMusician>>;
+//   musician: IMusician;
+// }
+// const getFestivalDateText = ({
+//   dates,
+//   musician,
+//   lineup
+// }: IGetFestivalDate): string => {
+//   for (let dayOfFestival = 0; dayOfFestival < lineup.length; dayOfFestival++) {
+//     if (lineup[dayOfFestival].includes(musician)) {
+//       return getDateText(dates[dayOfFestival]);
+//     }
+//   }
 
-  const errorText: string = "NO FESTIVAL DATE FOUND";
-  return errorText;
-};
+//   const errorText: string = "NO FESTIVAL DATE FOUND";
+//   return errorText;
+// };
 
 const getMusicianDetails = (
   musician: IMusician
@@ -46,15 +46,26 @@ const getMusicianDetails = (
   const gigsMatchingMusician: Array<IGig> = getGigsMatchingMusician(musician);
   return gigsMatchingMusician.map(
     (
-      { dates, headline, festival, lineup, venue, favourite, video }: IGig,
+      {
+        dates,
+        headline,
+        // festival, lineup,
+        venue,
+        favourite,
+        video
+      }: IGig,
       index: number
     ): ICountedListItemDetail => ({
       index: gigsMatchingMusician.length > 1 ? index + 1 : undefined,
-      mainText: [festival ? festival.name : moveTheSuffixToPrefix(venue.name)],
+      mainText: [
+        // festival ? festival.name :
+        moveTheSuffixToPrefix(venue.name)
+      ],
       dateText:
-        festival && lineup && lineup.length > 1
-          ? getFestivalDateText({ dates, lineup, musician })
-          : getDateText(dates[0]),
+        // festival && lineup && lineup.length > 1
+        //   ? getFestivalDateText({ dates, lineup, musician })
+        //   :
+        getDateText(dates[0]),
       isInFuture: isInFuture(dates[0]),
       video,
       favourite: musician === headline && favourite

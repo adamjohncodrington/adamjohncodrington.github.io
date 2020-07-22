@@ -4,7 +4,7 @@ import { UNICODE } from "@constants";
 import { H3 } from "primitives";
 import { getPseudoElementBefore, getPseudoElementAfter } from "styles";
 
-interface ICardTitleBold extends IFavourite, IStar {}
+interface ICardTitleBold extends I_Favourite, IStar {}
 
 export const CardTitleBold = styled(H3)(
   ({ favourite, star }: ICardTitleBold) => css`

@@ -1,14 +1,17 @@
 interface IGig extends IDates, IEventCardCommon {
-  headline?: IMusician;
-  festival?: IMusician;
-  lineup?: Array<Array<IMusician>>;
+  headline: IMusician;
   support?: Array<IMusician>;
   venue: IMusicVenue;
-  ticketType?: string;
+  ticketType?: ITicketType;
 }
 
-interface IFestivalTitle extends I_NameFavourite {
-  festival?: boolean;
+interface IFestivalTitle extends I_NameFavourite {}
+
+interface IFestival extends IDates, IEventCardCommon {
+  title: IFestivalTitle;
+  lineup: Array<Array<IMusician>> | "TBC";
+  venue: IMusicVenue;
+  ticketType?: ITicketType;
 }
 
 interface IMusicVenue extends I_NameFavourite {

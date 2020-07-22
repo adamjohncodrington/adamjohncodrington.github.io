@@ -18,6 +18,23 @@ export const JOSEF_SALVAT_2016: IGig = {
   dates: [new Date("2016-03-06")]
 };
 
+export const BEYONCE: IGig = {
+  headline: MUSICIANS.BEYONCE,
+  venue: MUSIC_VENUES.WEMBLEY_STADIUM,
+  video: VIDEOS.GIGS.BEYONCE,
+  company: [FRIENDS.EMMA_CODRINGTON],
+  dates: [new Date("2016-07-03")],
+  favourite: true
+};
+
+export const ROOSEVELT: IGig = {
+  headline: MUSICIANS.ROOSEVELT,
+  video: VIDEOS.GIGS.ROOSEVELT,
+  venue: MUSIC_VENUES.XOYO,
+  company: [FRIENDS.TONYA_FRANCE],
+  dates: [new Date("2016-11-24")]
+};
+
 export const TROYE_SIVAN_2016: IGig = {
   headline: MUSICIANS.TROYE_SIVAN,
   venue: MUSIC_VENUES.ACADEMY_MANCHESTER,

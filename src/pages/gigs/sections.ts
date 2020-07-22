@@ -10,11 +10,11 @@ const SECTION_BUCKET_LIST: IPageSection = {
   count: FACTORY.BUCKET_LIST.length
 };
 
-const SECTION_FESTIVALS: IPageSection = {
-  SvgIcon: SVG.PEACE_SIGN,
-  title: PAGE_SECTION.TITLES.FESTIVALS,
-  data: { countedListItems: FACTORY.FESTIVALS }
-};
+// const SECTION_FESTIVALS: IPageSection = {
+//   SvgIcon: SVG.PEACE_SIGN,
+//   title: PAGE_SECTION.TITLES.FESTIVALS,
+//   data: { countedListItems: FACTORY.FESTIVALS }
+// };
 
 const SECTION_ARTISTS: IPageSection = {
   title: PAGE_SECTION.TITLES.ARTISTS,
@@ -61,7 +61,7 @@ const SECTIONS_YEARS: Array<IPageSection> = FACTORY.SPLIT_BY_YEAR.map(
 export const sections: Array<IPageSection> = [
   SECTION_ARTISTS,
   SECTION_BUCKET_LIST,
-  SECTION_FESTIVALS,
+  // SECTION_FESTIVALS,
   SECTION_FRIENDS_GIGS,
   SECTION_UP_NEXT_GIGS,
   SECTION_VENUES_GIGS,

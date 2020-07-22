@@ -23,18 +23,22 @@ interface IGetItemCounts {
 
 export const musicianMatchExists = (
   musician: IMusician,
-  { headline, support, lineup }: IGig
+  {
+    headline,
+    support
+  }: // lineup
+  IGig
 ): boolean => {
   if (headline === musician) return true;
   if (support && support.includes(musician)) return true;
 
-  if (lineup) {
-    let lineupMatchFound: boolean = false;
-    lineup.forEach((day: Array<IMusician>): void => {
-      if (day.includes(musician)) lineupMatchFound = true;
-    });
-    return lineupMatchFound;
-  }
+  // if (lineup) {
+  //   let lineupMatchFound: boolean = false;
+  //   lineup.forEach((day: Array<IMusician>): void => {
+  //     if (day.includes(musician)) lineupMatchFound = true;
+  //   });
+  //   return lineupMatchFound;
+  // }
   return false;
 };
 
@@ -115,7 +119,7 @@ export const getItemCounts = ({
     gigs.forEach((gig: IGig): void => {
       const { company, dates, venue } = gig;
       if (
-        (festival && gig.festival === festival) ||
+        // (festival && gig.festival === festival) ||
         (friend && company.includes(friend)) ||
         (musicVenue && musicVenue === venue) ||
         (musician && musicianMatchExists(musician, gig))

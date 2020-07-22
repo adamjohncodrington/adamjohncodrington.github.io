@@ -1,4 +1,13 @@
-interface I_NameFavourite extends IFavourite {
+interface I_Favourite {
+  favourite?: boolean;
+}
+
+interface I_NameFavourite extends I_Favourite {
+  name: string;
+  insignificant?: boolean;
+}
+
+interface I_Name {
   name: string;
   insignificant?: boolean;
 }
@@ -13,10 +22,6 @@ interface IDetailItem {
   isInFuture: boolean;
 }
 
-interface IFavourite {
-  favourite?: boolean;
-}
-
 interface ICompany {
   company: Array<IFriend>;
 }
@@ -29,7 +34,7 @@ interface IDates {
   dates: Array<Date>;
 }
 
-interface IEventCardCommon extends ICompany, IFavourite {
+interface IEventCardCommon extends ICompany, I_Favourite {
   hideSubtitle?: boolean;
   photos?: Array<IPhoto>;
   video?: IVideo;
@@ -92,7 +97,7 @@ interface IVideo extends I_OrientationQuality {
   youtubeId: string;
 }
 
-interface ICountedListItemDetail extends IFavourite {
+interface ICountedListItemDetail extends I_Favourite {
   video?: IVideo;
 
   index?: number;
@@ -116,7 +121,7 @@ interface IColumnCount {
 interface ICountedListItem
   extends ISecondaryText,
     IPastAndFutureCounts,
-    IFavourite,
+    I_Favourite,
     IStar {
   text: string;
   doNotIncludeInList?: boolean;

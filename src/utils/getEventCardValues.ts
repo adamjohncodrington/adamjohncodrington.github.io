@@ -1,7 +1,11 @@
 import { arrayToString, moveTheSuffixToPrefix } from "./basic";
 import { getMusicianStageNameAtTime } from "./musician-utils";
 
-export const getGigTitle = ({ headline, festival, dates }: IGig): string =>
+export const getGigTitle = ({
+  headline,
+  // festival,
+  dates
+}: IGig): string =>
   headline
     ? moveTheSuffixToPrefix(
         getMusicianStageNameAtTime({
@@ -9,23 +13,26 @@ export const getGigTitle = ({ headline, festival, dates }: IGig): string =>
           year: dates[0].getFullYear()
         })
       )
-    : festival
-    ? festival.name
-    : "GIG CARD TITLE MISSING";
+    : // : festival
+      // ? festival.name
+      "GIG CARD TITLE MISSING";
 
-export const getGigSubtitle = ({ support, lineup }: IGig) =>
+export const getGigSubtitle = ({
   support
-    ? arrayToString({
-        stringArray: support.map(({ name }: IMusician): string =>
-          moveTheSuffixToPrefix(name)
-        )
-      })
-    : lineup &&
-      arrayToString({
-        stringArray: lineup
-          .flat()
-          .map(({ name }: IMusician): string => moveTheSuffixToPrefix(name))
-      });
+}: // lineup
+IGig) =>
+  support &&
+  arrayToString({
+    stringArray: support.map(({ name }: IMusician): string =>
+      moveTheSuffixToPrefix(name)
+    )
+  });
+// : lineup &&
+//   arrayToString({
+//     stringArray: lineup
+//       .flat()
+//       .map(({ name }: IMusician): string => moveTheSuffixToPrefix(name))
+//   });
 
 export const getTheatreVisitTitle = ({ play }: ITheatreVisit): string =>
   moveTheSuffixToPrefix(play.name);

@@ -50,6 +50,13 @@ export const KIM_PETRAS_2018: IGig = {
   favourite: true
 };
 
+export const SOFI_TUKKER: IGig = {
+  headline: MUSICIANS.SOFI_TUKKER,
+  venue: MUSIC_VENUES.KOKO,
+  dates: [new Date("2018-09-17")],
+  company: [FRIENDS.TONYA_FRANCE]
+};
+
 export const HAIM_2018: IGig = {
   headline: MUSICIANS.HAIM,
   support: [MUSICIANS.MAGGIE_ROGERS],
