@@ -1,5 +1,5 @@
 import { PHOTOS } from "resources";
-import * as MUSICIANS from "../musicians";
+import { MUSICIANS } from "@constants";
 
 export const GEORGE_FITZGERALD_ALL_THAT_MUST_BE: IVinyl = {
   musician: MUSICIANS.GEORGE_FITZGERALD,

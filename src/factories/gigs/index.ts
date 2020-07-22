@@ -13,7 +13,7 @@ import { YEARS } from "./years";
 export const GIGS = {
   BUCKET_LIST: formatCountedListItems(BUCKET_LIST),
   // FESTIVALS: formatCountedListItems(FESTIVALS),
-  FRIENDS: formatCountedListItems(FRIENDS),
+  FRIENDS: formatCountedListItems(FRIENDS, { isLeaderboard: true }),
   MUSICIANS: formatCountedListItems(MUSICIANS),
   UP_NEXT,
   VENUES: formatCountedListItems(VENUES),

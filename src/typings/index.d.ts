@@ -77,7 +77,6 @@ interface IPage {
   SvgIcon: ISvgIcon;
   sections: Array<IPageSection>;
   count?: number;
-  hide?: boolean;
   color?: ColorValue;
 }
 

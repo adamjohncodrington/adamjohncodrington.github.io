@@ -1,5 +1,5 @@
 import { PHOTOS } from "resources";
-import * as MUSICIANS from "../musicians";
+import { MUSICIANS } from "@constants";
 
 export const MARINA_ELECTRA_HEART: IVinyl = {
   musician: MUSICIANS.MARINA,

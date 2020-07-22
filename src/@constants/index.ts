@@ -17,7 +17,6 @@ export * from "./music-venues";
 export * from "./sainsburys";
 export * from "./theatres";
 export * from "./video";
-export * from "./vinyls";
 
 export {
   ACTORS,

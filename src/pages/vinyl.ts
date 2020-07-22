@@ -1,6 +1,5 @@
 import { SVG } from "resources";
-
-import { sections } from "./sections";
+import { VINYL as sections } from "sections";
 
 export const PAGE_VINYL: IPage = {
   title: "Vinyl",

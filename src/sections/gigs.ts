@@ -57,7 +57,7 @@ const SECTIONS_YEARS: Array<IPageSection> = FACTORY.YEARS.map(
   })
 );
 
-export const sections: Array<IPageSection> = [
+export const GIGS: Array<IPageSection> = [
   ARTISTS,
   BUCKET_LIST,
   // FESTIVALS,

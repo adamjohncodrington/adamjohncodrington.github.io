@@ -1,5 +1,5 @@
 import { PHOTOS } from "resources";
-import * as MUSICIANS from "../musicians";
+import { MUSICIANS } from "@constants";
 
 export const MUNA_ABOUT_U: IVinyl = {
   musician: MUSICIANS.MUNA,

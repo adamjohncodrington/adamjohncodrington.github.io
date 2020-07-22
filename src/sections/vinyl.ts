@@ -1,7 +1,6 @@
 import { PAGE_SECTION_TITLES } from "@constants";
+import { VINYL as FACTORY } from "factories";
 import { SVG } from "resources";
-
-import { FACTORY } from "./factory";
 
 const SECTION_ARTISTS: IPageSection = {
   title: PAGE_SECTION_TITLES.ARTISTS,
@@ -31,7 +30,7 @@ const SECTION_WISHLIST: IPageSection = {
   count: FACTORY.WISH_LIST.length
 };
 
-const SECTIONS_YEARS: Array<IPageSection> = FACTORY.VINYLS_BY_YEAR.map(
+const SECTIONS_YEARS: Array<IPageSection> = FACTORY.YEARS.map(
   (yearGroup: Array<IVinyl>): IPageSection => ({
     title: yearGroup[0].year.toString(),
     data: {
@@ -49,7 +48,7 @@ const SECTIONS_YEARS: Array<IPageSection> = FACTORY.VINYLS_BY_YEAR.map(
 //   data: { photoGrid: { photos: Object.values(PHOTOS.ALBUMS), columnCount: 3 } }
 // };
 
-export const sections: Array<IPageSection> = [
+export const VINYL: Array<IPageSection> = [
   SECTION_ARTISTS,
   SECTION_COLLECTION,
   // SECTION_PHOTOS,

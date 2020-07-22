@@ -15,7 +15,7 @@ import * as VINYLS_2018 from "./vinyls-2018";
 import * as VINYLS_2019 from "./vinyls-2019";
 import * as VINYLS_2020 from "./vinyls-2020";
 
-export const VINYLS = {
+export const VINYLS: Array<IVinyl> = Object.values({
   ...VINYLS_2005,
   ...VINYLS_2006,
   ...VINYLS_2007,
@@ -32,4 +32,4 @@ export const VINYLS = {
   ...VINYLS_2018,
   ...VINYLS_2019,
   ...VINYLS_2020
-};
+});
