@@ -1,10 +1,4 @@
-import {
-  FRIENDS,
-  FESTIVALS,
-  MUSICIANS,
-  TICKET_TYPES,
-  MUSIC_VENUES
-} from "@constants";
+import { FRIENDS, MUSICIANS, TICKET_TYPES, MUSIC_VENUES } from "@constants";
 
 export const RATIONALE: IGig = {
   headline: MUSICIANS.RATIONALE,
@@ -20,23 +14,6 @@ export const JESSIE_WARE: IGig = {
   dates: [new Date("2021-04-26")],
   company: [FRIENDS.DARREN_TAYLOR],
   ticketType: TICKET_TYPES.TICKETWEB
-};
-
-export const MIGHTY_HOOPLA_2021: IGig = {
-  festival: FESTIVALS.MIGHTY_HOOPLA,
-  venue: MUSIC_VENUES.BROCKWELL_PARK,
-  dates: [new Date("2021-06-05")],
-  company: [
-    FRIENDS.TONYA_FRANCE,
-    FRIENDS.MARIA_TAYLOR,
-    FRIENDS.TOM_CHINDA_COUTTS,
-    FRIENDS.RYAN_MILLS,
-    FRIENDS.DARREN_TAYLOR,
-    FRIENDS.SIAN_RODWAY_SMITH,
-    FRIENDS.CAITLIN_MCCAIG,
-    FRIENDS.DAN_SPARROW
-  ],
-  ticketType: TICKET_TYPES.KABOODLE_ETICKET
 };
 
 export const ELLIE_GOULDING_2021: IGig = {

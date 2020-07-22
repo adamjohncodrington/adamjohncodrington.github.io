@@ -1,4 +1,4 @@
-import { FRIENDS, FESTIVALS, MUSICIANS, MUSIC_VENUES } from "@constants";
+import { FRIENDS, MUSICIANS, MUSIC_VENUES } from "@constants";
 import { VIDEOS } from "resources";
 
 export const JONAS_BLUE: IGig = {
@@ -185,80 +185,4 @@ export const PVRIS: IGig = {
   dates: [new Date("2017-11-30")],
   venue: MUSIC_VENUES.BRIXTON_ACADEMY,
   company: [FRIENDS.LUKE_STERN]
-};
-
-export const LOVEBOX_2017: IGig = {
-  festival: FESTIVALS.LOVEBOX,
-  lineup: [
-    [
-      MUSICIANS.JOE_GODDARD,
-      MUSICIANS.RUFUS_DU_SOL,
-      MUSICIANS.BICEP,
-      MUSICIANS.JAMIE_XX,
-      MUSICIANS.EATS_EVERYTHING,
-      MUSICIANS.FRANK_OCEAN
-    ]
-  ],
-  dates: [new Date("2017-07-14")],
-  venue: MUSIC_VENUES.VICTORIA_PARK,
-  company: [
-    FRIENDS.TONYA_FRANCE,
-    FRIENDS.TOM_CHINDA_COUTTS,
-    FRIENDS.RYAN_MILLS,
-    FRIENDS.CAITLIN_MCCAIG,
-    FRIENDS.ALICE_RODER
-  ]
-};
-
-export const BRIGHTON_PRIDE_2017: IGig = {
-  festival: FESTIVALS.BRIGHTON_PRIDE,
-  lineup: [[MUSICIANS.BECKY_MILLS_HILL, MUSICIANS.YEARS_AND_YEARS]],
-  dates: [new Date("2017-08-05")],
-  venue: MUSIC_VENUES.PRESTON_PARK,
-  company: [
-    FRIENDS.LUKE_STERN,
-    FRIENDS.TONYA_FRANCE,
-    FRIENDS.SONYA_PARDI,
-    FRIENDS.TOM_CHINDA_COUTTS,
-    FRIENDS.RYAN_MILLS,
-    FRIENDS.LAURA_CAPECE_GALEOTA
-  ]
-};
-
-export const BESTIVAL: IGig = {
-  festival: FESTIVALS.BESTIVAL,
-  lineup: [
-    [
-      MUSICIANS.ALMA,
-      MUSICIANS.LITTLE_DRAGON,
-      MUSICIANS.KOLSCH,
-      MUSICIANS.XX_THE,
-      MUSICIANS.MACEO_PLEX,
-      MUSICIANS.JOE_GODDARD
-    ],
-    [
-      MUSICIANS.FOURS,
-      MUSICIANS.ANNA_OF_THE_NORTH,
-      MUSICIANS.LUCY_ROSE,
-      MUSICIANS.DIZZEE_RASCAL,
-      MUSICIANS.DUSKY,
-      MUSICIANS.CHARLOTTE_CHURCH
-    ],
-    [MUSICIANS.SOUL_WAX, MUSICIANS.PET_SHOP_BOYS]
-  ],
-  dates: [
-    new Date("2017-09-08"),
-    new Date("2017-09-09"),
-    new Date("2017-09-10")
-  ],
-  venue: MUSIC_VENUES.LULWORTH_ESTATE,
-  //youtubeId: "uFjIdpIjY8Y",
-  company: [
-    FRIENDS.TONYA_FRANCE,
-    FRIENDS.RYAN_MILLS,
-    FRIENDS.DAN_SPARROW,
-    FRIENDS.MARIA_TAYLOR,
-    FRIENDS.CAITLIN_MCCAIG,
-    FRIENDS.CAITY_DALBY
-  ]
 };

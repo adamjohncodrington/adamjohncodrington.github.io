@@ -1,3 +1,5 @@
+import * as FESTIVALS from "./festivals";
+
 import * as GIGS_2006 from "./gigs-2006";
 import * as GIGS_2007 from "./gigs-2007";
 import * as GIGS_2008 from "./gigs-2008";
@@ -16,6 +18,8 @@ import * as GIGS_2020 from "./gigs-2020";
 import * as GIGS_2021 from "./gigs-2021";
 
 export const OBJECT = {
+  ...FESTIVALS,
+
   ...GIGS_2006,
   ...GIGS_2007,
   ...GIGS_2008,

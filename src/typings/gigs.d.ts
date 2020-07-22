@@ -7,7 +7,7 @@ interface IGig extends IDates, IEventCardCommon {
   ticketType?: string;
 }
 
-interface IFestival extends I_NameFavourite {
+interface IFestivalTitle extends I_NameFavourite {
   festival?: boolean;
 }
 

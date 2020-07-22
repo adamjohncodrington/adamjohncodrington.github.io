@@ -11,7 +11,7 @@ interface IGetItemCounts {
     attraction?: IAttraction;
     city?: ICity;
     country?: ICountryTemplate;
-    festival?: IFestival;
+    festival?: IFestivalTitle;
     friend?: IFriend;
     island?: IIsland;
     musician?: IMusician;

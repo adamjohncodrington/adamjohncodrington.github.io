@@ -1,4 +1,4 @@
-import { FRIENDS, FESTIVALS, MUSICIANS, MUSIC_VENUES } from "@constants";
+import { FRIENDS, MUSICIANS, MUSIC_VENUES } from "@constants";
 import { VIDEOS } from "resources";
 
 export const MAGGIE_ROGERS: IGig = {
@@ -113,42 +113,12 @@ export const SOPHIE_2019: IGig = {
   company: [FRIENDS.JERRY_EDWARDS]
 };
 
-export const MANCHESTER_PRIDE_2019: IGig = {
-  festival: FESTIVALS.MANCHESTER_PRIDE,
-  lineup: [
-    [
-      MUSICIANS.BECKY_MILLS_HILL,
-      MUSICIANS.BANANARAMA,
-      MUSICIANS.TULISA,
-      MUSICIANS.CHERYL,
-      MUSICIANS.ARIANA_GRANDE
-    ]
-  ],
-  venue: MUSIC_VENUES.MAYFIELD_DEPOT,
-  dates: [new Date("2019-08-25")],
-  company: [
-    FRIENDS.DAN_SPARROW,
-    FRIENDS.MARIA_TAYLOR,
-    FRIENDS.ASH_MORETON,
-    FRIENDS.SAM_BERRIE,
-    FRIENDS.LINDSAY_ASPINALL
-  ]
-};
-
 export const KIM_PETRAS_2019: IGig = {
   headline: MUSICIANS.KIM_PETRAS,
   //youtubeId: "F6OBvyUN-xE",
   venue: MUSIC_VENUES.HEAVEN,
   dates: [new Date("2019-08-27")],
   company: [FRIENDS.DARREN_TAYLOR, FRIENDS.JERRY_EDWARDS]
-};
-
-export const CHINGFEST: IGig = {
-  festival: FESTIVALS.CHINGFEST,
-  lineup: [[MUSICIANS.INCOGNITO, MUSICIANS.NAO]],
-  venue: MUSIC_VENUES.RIDGEWAY_PARK,
-  dates: [new Date("2019-08-31")],
-  company: [FRIENDS.DARREN_TAYLOR]
 };
 
 export const MUNA_2019_09: IGig = {
@@ -207,14 +177,6 @@ export const LAUV_2019: IGig = {
   company: [FRIENDS.JERRY_EDWARDS, FRIENDS.POPPY_SMITH]
 };
 
-export const HOMOBLOC: IGig = {
-  festival: FESTIVALS.HOMOBLOC,
-  lineup: [[MUSICIANS.ROMY, MUSICIANS.ROBYN, MUSICIANS.HORSE_MEAT_DISCO]],
-  venue: MUSIC_VENUES.MAYFIELD_DEPOT,
-  dates: [new Date("2019-11-09")],
-  company: [FRIENDS.DAN_SPARROW, FRIENDS.MARIA_TAYLOR]
-};
-
 export const SABRINA_CLAUDIO_2019: IGig = {
   headline: MUSICIANS.SABRINA_CLAUDIO,
   support: [MUSICIANS.OH_ANNIE_OH],
@@ -268,16 +230,4 @@ export const MELANIE_MARTINEZ: IGig = {
   venue: MUSIC_VENUES.SHEPHERDS_BUSH_EMPIRE,
   dates: [new Date("2019-12-09")],
   company: [FRIENDS.DARREN_TAYLOR]
-};
-
-export const AREA_10_NYE: IGig = {
-  festival: FESTIVALS.AREA_10_NYE,
-  lineup: [[MUSICIANS.MK]],
-  venue: MUSIC_VENUES.BRIXTON_ACADEMY,
-  dates: [new Date("2019-12-31")],
-  company: [
-    FRIENDS.TOM_CHINDA_COUTTS,
-    FRIENDS.TONYA_FRANCE,
-    FRIENDS.SONYA_PARDI
-  ]
 };

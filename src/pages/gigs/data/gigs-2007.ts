@@ -1,21 +1,4 @@
-import { FRIENDS, FESTIVALS, MUSICIANS, MUSIC_VENUES } from "@constants";
-
-export const DECAYDANCE: IGig = {
-  festival: FESTIVALS.DECAYDANCE,
-  lineup: [
-    [
-      MUSICIANS.COBRA_STARSHIP,
-      MUSICIANS.ACADEMY_IS_THE,
-      MUSICIANS.GYM_CLASS_HEROES,
-      MUSICIANS.PANIC_AT_THE_DISCO,
-      MUSICIANS.FALL_OUT_BOY
-    ]
-  ],
-  dates: [new Date("2007-08-22")],
-  venue: MUSIC_VENUES.HAMMERSMITH_APOLLO,
-  company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON, FRIENDS.MEGAN_BLACKBURN],
-  favourite: true
-};
+import { FRIENDS, MUSICIANS, MUSIC_VENUES } from "@constants";
 
 export const FOB_2007: IGig = {
   headline: MUSICIANS.FALL_OUT_BOY,

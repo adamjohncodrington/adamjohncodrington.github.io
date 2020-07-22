@@ -1,6 +1,31 @@
+// Organisations
 export const CFS: IFriend = { name: "Colonel Frank Seely", initials: "CFS" };
 export const JHC: IFriend = { name: "JHC", initials: "JHC" };
 
+// Family
+export const DAD: IFriend = {
+  name: "Dad",
+  initials: "D",
+  gigs: true,
+  theatre: true,
+  travel: true
+};
+export const MUM: IFriend = {
+  name: "Mum",
+  initials: "M",
+  gigs: true,
+  theatre: true,
+  travel: true
+};
+export const EMMA_CODRINGTON: IFriend = {
+  name: "Emma Codrington",
+  initials: "EC",
+  gigs: true,
+  theatre: true,
+  travel: true
+};
+
+// Friends
 export const AISHA_SAEED: IFriend = { name: "Aisha Saeed", initials: "AS" };
 export const ALEX_FAYE: IFriend = { name: "Alex-Faye Grundy", initials: "AG" };
 export const ALICE_RODER: IFriend = { name: "Alice Roder", initials: "AR" };
@@ -47,13 +72,6 @@ export const COURTNEY_LAWSON: IFriend = {
   name: "Courtney Lawson",
   initials: "CL"
 };
-export const DAD: IFriend = {
-  name: "Dad",
-  initials: "D",
-  gigs: true,
-  theatre: true,
-  travel: true
-};
 export const DARREN_TAYLOR: IFriend = {
   name: "Darren Taylor",
   initials: "DT",
@@ -84,13 +102,6 @@ export const ELLIE_PEARCE: IFriend = { name: "Ellie Pearce", initials: "EP" };
 export const ELLIE_SPANOVIC: IFriend = {
   name: "Ellie Spanovic",
   initials: "ES"
-};
-export const EMMA_CODRINGTON: IFriend = {
-  name: "Emma Codrington",
-  initials: "EC",
-  gigs: true,
-  theatre: true,
-  travel: true
 };
 export const FANNY_LINDQVIST: IFriend = {
   name: "Fanny Lindqvist",
@@ -180,13 +191,7 @@ export const MEGAN_BLACKBURN: IFriend = {
   initials: "MB",
   gigs: true
 };
-export const MUM: IFriend = {
-  name: "Mum",
-  initials: "M",
-  gigs: true,
-  theatre: true,
-  travel: true
-};
+
 export const NATALIE_LAMBERT: IFriend = {
   name: "Natalie Lambert",
   initials: "NL"

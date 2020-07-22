@@ -1,4 +1,4 @@
-import { FRIENDS, FESTIVALS, MUSICIANS, MUSIC_VENUES } from "@constants";
+import { FRIENDS, MUSICIANS, MUSIC_VENUES } from "@constants";
 
 export const FOXES: IGig = {
   headline: MUSICIANS.FOXES,
@@ -78,85 +78,4 @@ export const LILY_ALLEN: IGig = {
   venue: MUSIC_VENUES.APOLLO_MANCHESTER,
   company: [FRIENDS.SIAN_RODWAY_SMITH],
   dates: [new Date("2014-11-25")]
-};
-
-export const WHP_2014_10: IGig = {
-  festival: FESTIVALS.WAREHOUSE_PROJECT,
-  lineup: [
-    [
-      MUSICIANS.JAX_JONES,
-      MUSICIANS.DUKE_DUMONT,
-      MUSICIANS.CYRIL_HAHN,
-      MUSICIANS.FRIEND_WITHIN
-    ]
-  ],
-  venue: MUSIC_VENUES.STORE_STREET,
-  company: [FRIENDS.TONYA_FRANCE],
-  dates: [new Date("2014-10-04")]
-};
-
-export const WHP_2014_11_07: IGig = {
-  festival: FESTIVALS.WAREHOUSE_PROJECT,
-  lineup: [
-    [
-      MUSICIANS.KIDNAP,
-      MUSICIANS.BONDAX,
-      MUSICIANS.GORGON_CITY,
-      MUSICIANS.REDLIGHT
-    ]
-  ],
-  venue: MUSIC_VENUES.STORE_STREET,
-  company: [FRIENDS.AMY_BAGNI, FRIENDS.ELLE_OLDROYD],
-  dates: [new Date("2014-11-07")]
-};
-
-export const WHP_2014_11_15: IGig = {
-  festival: FESTIVALS.WAREHOUSE_PROJECT,
-  lineup: [
-    [
-      MUSICIANS.GEORGE_FITZGERALD,
-      MUSICIANS.SKREAM,
-      MUSICIANS.PAUL_WOOLFORD,
-      MUSICIANS.GREEN_VELVET
-    ]
-  ],
-  venue: MUSIC_VENUES.STORE_STREET,
-  company: [FRIENDS.ALEX_FAYE],
-  dates: [new Date("2014-11-15")]
-};
-
-export const WHP_2014_12: IGig = {
-  festival: FESTIVALS.WAREHOUSE_PROJECT,
-  lineup: [[MUSICIANS.MIDLAND, MUSICIANS.JOY_ORBISON, MUSICIANS.DUSKY]],
-  venue: MUSIC_VENUES.STORE_STREET,
-  company: [
-    FRIENDS.EMMA_CODRINGTON,
-    FRIENDS.BECKY_MILLS,
-    FRIENDS.NATALIE_LAMBERT
-  ],
-  dates: [new Date("2014-12-06")]
-};
-
-export const PARKLIFE_2014: IGig = {
-  festival: FESTIVALS.PARKLIFE,
-  lineup: [
-    [
-      MUSICIANS.FOXES,
-      MUSICIANS.ROUTE_94,
-      MUSICIANS.REDLIGHT,
-      MUSICIANS.BREACH,
-      MUSICIANS.RUDIMENTAL
-    ],
-    [
-      MUSICIANS.ELLA_EYRE,
-      MUSICIANS.CLEAN_BANDIT,
-      MUSICIANS.SAM_SMITH,
-      MUSICIANS.LONDON_GRAMMAR,
-      MUSICIANS.BASTILLE,
-      MUSICIANS.DISCLOSURE
-    ]
-  ],
-  venue: MUSIC_VENUES.HEATON_PARK,
-  company: [FRIENDS.JESS_SMITH, FRIENDS.POOJA_DHIR, FRIENDS.TONYA_FRANCE],
-  dates: [new Date("2014-06-07"), new Date("2014-06-08")]
 };

@@ -1,4 +1,4 @@
-import { FRIENDS, FESTIVALS, MUSICIANS, MUSIC_VENUES } from "@constants";
+import { FRIENDS, MUSICIANS, MUSIC_VENUES } from "@constants";
 
 export const KYGO: IGig = {
   headline: MUSICIANS.KYGO,
@@ -62,15 +62,6 @@ export const HAIM_2018: IGig = {
   ]
 };
 
-export const ON_THE_RUN_II: IGig = {
-  festival: FESTIVALS.ON_THE_RUN_II,
-  lineup: [[MUSICIANS.JAY_Z, MUSICIANS.BEYONCE]],
-  venue: MUSIC_VENUES.LONDON_STADIUM,
-  dates: [new Date("2018-06-16")],
-  //youtubeId: "_Oj9VOXXu2o",
-  company: [FRIENDS.TONYA_FRANCE]
-};
-
 export const TAYLOR_SWIFT_2018: IGig = {
   headline: MUSICIANS.TAYLOR_SWIFT,
   support: [MUSICIANS.CHARLI_XCX, MUSICIANS.CAMILA_CABELLO],
@@ -78,44 +69,6 @@ export const TAYLOR_SWIFT_2018: IGig = {
   dates: [new Date("2018-06-22")],
   company: [FRIENDS.DAN_SPARROW],
   favourite: true
-};
-
-export const NOTION_SUMMER_PARTY: IGig = {
-  festival: FESTIVALS.NOTION_SUMMER_PARTY,
-  lineup: [
-    [
-      MUSICIANS.M_0,
-      MUSICIANS.BONDAX,
-      MUSICIANS.RITON,
-      MUSICIANS.KAH_LO,
-      MUSICIANS.ANNE_MARIE,
-      MUSICIANS.MO
-    ]
-  ],
-  venue: MUSIC_VENUES.TROXY,
-  dates: [new Date("2018-07-27")],
-  company: [FRIENDS.LUKE_JONES]
-};
-
-export const BRIGHTON_PRIDE_2018: IGig = {
-  festival: FESTIVALS.BRIGHTON_PRIDE,
-  lineup: [[MUSICIANS.BRITNEY_SPEARS]],
-  venue: MUSIC_VENUES.PRESTON_PARK,
-  dates: [new Date("2018-08-04")],
-  company: [
-    FRIENDS.TONYA_FRANCE,
-    FRIENDS.SONYA_PARDI,
-    FRIENDS.TOM_CHINDA_COUTTS,
-    FRIENDS.RYAN_MILLS,
-    FRIENDS.SIAN_RODWAY_SMITH
-  ]
-};
-
-export const SOFI_TUKKER: IGig = {
-  headline: MUSICIANS.SOFI_TUKKER,
-  venue: MUSIC_VENUES.KOKO,
-  dates: [new Date("2018-09-17")],
-  company: [FRIENDS.TONYA_FRANCE]
 };
 
 export const LAUV_2018: IGig = {

@@ -3,7 +3,7 @@ import { getItemCounts, isInFuture, getDatesText, getGigSubtitle } from "utils";
 
 import * as DATA from "../data";
 
-const getGigsMatchingFestival = (festival: IFestival): Array<IGig> => {
+const getGigsMatchingFestival = (festival: IFestivalTitle): Array<IGig> => {
   const gigsMatchingFestival: Array<IGig> = [];
   const gigs: Array<IGig> = DATA.ARRAY;
   gigs.forEach((gig: IGig): void => {
@@ -35,9 +35,9 @@ const getFestivalDetails = (
 export const FESTIVALS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
   FESTIVALS
 )
-  .filter(({ festival }: IFestival): boolean => !!festival)
+  .filter(({ festival }: IFestivalTitle): boolean => !!festival)
   .map(
-    (festival: IFestival): ICountedListItem => ({
+    (festival: IFestivalTitle): ICountedListItem => ({
       text: festival.name,
       ...getItemCounts({ item: { festival }, data: { gigs: DATA.ARRAY } }),
       details: getFestivalDetails(festival)
