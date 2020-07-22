@@ -1,15 +1,19 @@
 # TO DO LIST
 
-- make `travel` intelligently split by year
-- split `gigs` and `festivals`
+- move `vinyls` to `DATA`
+- reinstate all festivals functionality!!!
+- make gig date prop singular, make festival dates prop `start/end`
+- root-level `data`, `factories`, `sections`, `pages`
+
 - reinstate all gig videos
-- make a dynamic `VideoCard` component
-- rationalise all `typings`
-- beef up POLE section
-- add Apple Music links and details to Vinyl `artists` section
+- make `travel` intelligently split by year
+- totally rewrite `travel`
 
 ## Enhancements
 
+- beef up POLE section
+- make a dynamic `VideoCard` component
+- add Apple Music links and details to Vinyl `artists` section
 - make YouTube videos play in HD
 - add images to theatre page (poster art)
 - display festival lineups by day????

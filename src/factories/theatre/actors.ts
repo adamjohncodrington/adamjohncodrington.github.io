@@ -1,4 +1,5 @@
 import { ACTORS } from "@constants";
+import { THEATRE_VISITS } from "data";
 import {
   getItemCounts,
   getTheatreVisitTitle,
@@ -6,11 +7,9 @@ import {
   getDateText
 } from "utils";
 
-import * as DATA from "../data";
-
 const getTheatreVisitsMatchingActor = (actor: IActor): Array<ITheatreVisit> => {
   const theatreVisitsMatchingActor: Array<ITheatreVisit> = [];
-  const theatreVisits: Array<ITheatreVisit> = DATA.ARRAY;
+  const theatreVisits: Array<ITheatreVisit> = THEATRE_VISITS;
   theatreVisits.forEach((theatreVisit: ITheatreVisit): void => {
     const { cast } = theatreVisit;
     if (cast && cast.includes(actor))
@@ -46,7 +45,7 @@ export const ACTORS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
       favourite,
       ...getItemCounts({
         item: { actor },
-        data: { theatreVisits: DATA.ARRAY }
+        data: { theatreVisits: THEATRE_VISITS }
       }),
       details: getActorDetails(actor)
     };

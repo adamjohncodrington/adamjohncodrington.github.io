@@ -1,4 +1,5 @@
 import { THEATRE_VENUES } from "@constants";
+import { THEATRE_VISITS } from "data";
 import {
   getItemCounts,
   isInFuture,
@@ -6,13 +7,11 @@ import {
   moveTheSuffixToPrefix
 } from "utils";
 
-import * as DATA from "../data";
-
 const getTheatreVisitsMatchingVenue = (
   theatre: ITheatre
 ): Array<ITheatreVisit> => {
   const theatreVisitsMatchingVenue: Array<ITheatreVisit> = [];
-  const theatreVisits: Array<ITheatreVisit> = DATA.ARRAY;
+  const theatreVisits: Array<ITheatreVisit> = THEATRE_VISITS;
   theatreVisits.forEach((theatreVisit: ITheatreVisit): void => {
     if (theatreVisit.theatre === theatre)
       theatreVisitsMatchingVenue.push(theatreVisit);
@@ -46,7 +45,7 @@ export const THEATRE_VENUES_LIST_ITEMS: Array<ICountedListItem> = Object.values(
     text: theatre.name,
     ...getItemCounts({
       item: { theatre },
-      data: { theatreVisits: DATA.ARRAY }
+      data: { theatreVisits: THEATRE_VISITS }
     }),
     details: getTheatreVenueDetails(theatre)
   })

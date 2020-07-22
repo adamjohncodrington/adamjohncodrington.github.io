@@ -1,3 +1,4 @@
+import { THEATRE_VISITS } from "data";
 import { FRIENDS } from "@constants";
 import {
   getItemCounts,
@@ -6,13 +7,11 @@ import {
   isInFuture
 } from "utils";
 
-import * as DATA from "../data";
-
 const getTheatreVisitsMatchingFriend = (
   friend: IFriend
 ): Array<ITheatreVisit> => {
   const theatreVisitsMatchingFriend: Array<ITheatreVisit> = [];
-  const theatreVisits: Array<ITheatreVisit> = DATA.ARRAY;
+  const theatreVisits: Array<ITheatreVisit> = THEATRE_VISITS;
   theatreVisits.forEach((theatreVisit: ITheatreVisit): void => {
     if (theatreVisit.company.includes(friend))
       theatreVisitsMatchingFriend.push(theatreVisit);
@@ -46,7 +45,7 @@ export const FRIENDS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
       text: friend.name,
       ...getItemCounts({
         item: { friend },
-        data: { theatreVisits: DATA.ARRAY }
+        data: { theatreVisits: THEATRE_VISITS }
       }),
       details: getFriendDetails(friend)
     })

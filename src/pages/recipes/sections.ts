@@ -3,25 +3,25 @@ import { SVG, PHOTOS } from "resources";
 
 import { DATA } from "./data";
 
-const SECTION_MAINS: IPageSection = {
+const MAINS: IPageSection = {
   title: PAGE_SECTION.TITLES.MAINS,
   SvgIcon: SVG.CLOCHE,
   data: { recipes: DATA.MAINS }
 };
 
-const SECTION_SIDES: IPageSection = {
+const SIDES: IPageSection = {
   title: PAGE_SECTION.TITLES.SIDES,
   SvgIcon: SVG.BOWL,
   data: { recipes: DATA.SIDES }
 };
 
-const SECTION_SAUCES: IPageSection = {
+const SAUCES: IPageSection = {
   title: PAGE_SECTION.TITLES.SAUCES,
   SvgIcon: SVG.SAUCE,
   data: { recipes: DATA.SAUCES }
 };
 
-const SECTION_SWEETS: IPageSection = {
+const SWEETS: IPageSection = {
   title: PAGE_SECTION.TITLES.SWEETS,
   SvgIcon: SVG.CAKE,
   data: { recipes: DATA.SWEETS }
@@ -33,17 +33,17 @@ const SECTION_PHOTOS: IPageSection = {
   data: { photoGrid: { photos: Object.values(PHOTOS.RECIPES), columnCount: 3 } }
 };
 
-const SECTION_COMING_SOON: IPageSection = {
+const COMING_SOON: IPageSection = {
   title: PAGE_SECTION.TITLES.COMING_SOON,
   SvgIcon: SVG.NOTEPAD,
   data: { countedListItems: DATA.COMING_SOON }
 };
 
 export const sections: Array<IPageSection> = [
-  SECTION_MAINS,
-  SECTION_SIDES,
-  SECTION_SAUCES,
-  SECTION_SWEETS,
+  MAINS,
+  SIDES,
+  SAUCES,
+  SWEETS,
   SECTION_PHOTOS,
-  SECTION_COMING_SOON
+  COMING_SOON
 ];

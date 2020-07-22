@@ -1,4 +1,6 @@
-// import * as FESTIVALS from "./festivals";
+import { mapGigsToGigCards, mapFestivalsToGigCards } from "utils";
+
+import * as FESTIVALS from "./festivals";
 
 import * as GIGS_2006 from "./gigs-2006";
 import * as GIGS_2007 from "./gigs-2007";
@@ -17,9 +19,7 @@ import * as GIGS_2019 from "./gigs-2019";
 import * as GIGS_2020 from "./gigs-2020";
 import * as GIGS_2021 from "./gigs-2021";
 
-export const OBJECT = {
-  // ...FESTIVALS,
-
+const GIGS = {
   ...GIGS_2006,
   ...GIGS_2007,
   ...GIGS_2008,
@@ -38,4 +38,15 @@ export const OBJECT = {
   ...GIGS_2021
 };
 
-export const ARRAY: Array<IGig> = Object.values(OBJECT);
+const FESTIVALS_ARRAY: Array<IFestival> = Object.values(FESTIVALS);
+
+const GIGS_ARRAY: Array<IGig> = Object.values(GIGS);
+
+export const ARRAY: Array<IGig> = Object.values(GIGS);
+
+export const GIG_CARDS_ARRAY: Array<IGigCard> = [
+  ...mapGigsToGigCards(GIGS_ARRAY),
+  ...mapFestivalsToGigCards(FESTIVALS_ARRAY)
+];
+
+console.log(GIG_CARDS_ARRAY);

@@ -159,22 +159,26 @@ interface IPageSection extends IPageSectionDisclosure {
 
 interface IFestivalTitle extends I_Name {}
 
-interface IGigAndFestival {
+interface IGigAndFestival extends IEventCardAll {
   venue: IMusicVenue;
   ticketType?: ITicketType;
 }
 
-interface IFestival extends IGigAndFestival, I_Dates, IEventCardAll {
+interface IFestival extends IGigAndFestival, I_Dates {
   title: IFestivalTitle;
-  lineup: Array<Array<IMusician>> | "TBC";
+  lineup: Array<Array<IMusician>>;
 }
 
-interface IGig extends IGigAndFestival, I_Dates, IEventCardAll {
+interface IGig extends IGigAndFestival, I_Dates {
   headline: IMusician;
   support?: Array<IMusician>;
 }
 
-interface IGigOrFestival {}
+interface IGigCard extends IGigAndFestival {
+  title: string;
+  subtitle?: string;
+  musicians: Array<IMusician>;
+}
 
 interface IMusicVenue extends I_Name, I__Favourite, I__Insignificant {}
 

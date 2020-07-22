@@ -6,21 +6,19 @@ export const getGigTitle = ({
   // festival,
   dates
 }: IGig): string =>
-  headline
-    ? moveTheSuffixToPrefix(
-        getMusicianStageNameAtTime({
-          musician: headline,
-          year: dates[0].getFullYear()
-        })
-      )
-    : // : festival
-      // ? festival.name
-      "GIG CARD TITLE MISSING";
+  moveTheSuffixToPrefix(
+    getMusicianStageNameAtTime({
+      musician: headline,
+      year: dates[0].getFullYear()
+    })
+  );
+
+export const getFestivalTitle = ({ title }: IFestival): string => title.name;
 
 export const getGigSubtitle = ({
   support
 }: // lineup
-IGig) =>
+IGig): string | undefined =>
   support &&
   arrayToString({
     stringArray: support.map(({ name }: IMusician): string =>
@@ -33,6 +31,15 @@ IGig) =>
 //       .flat()
 //       .map(({ name }: IMusician): string => moveTheSuffixToPrefix(name))
 //   });
+
+export const getFestivalSubtitle = ({ lineup }: IFestival): string =>
+  lineup[0].length > 0
+    ? arrayToString({
+        stringArray: lineup
+          .flat()
+          .map(({ name }: IMusician): string => moveTheSuffixToPrefix(name))
+      })
+    : "TBC";
 
 export const getTheatreVisitTitle = ({ play }: ITheatreVisit): string =>
   moveTheSuffixToPrefix(play.name);
@@ -81,3 +88,56 @@ export const getTripBody = ({
   arrayToString({
     stringArray: secondaryLocations.map(({ name }: ILocation) => name)
   });
+
+export const getGigMusicians = ({
+  headline,
+  support
+}: IGig): Array<IMusician> => {
+  const musicians: Array<IMusician> = [];
+
+  musicians.push(headline);
+
+  if (support && support.length > 0) {
+    support.forEach((supportAct: IMusician): void => {
+      musicians.push(supportAct);
+    });
+  }
+
+  return musicians;
+};
+
+export const getFestivalMusicians = ({
+  lineup
+}: IFestival): Array<IMusician> => {
+  const musicians: Array<IMusician> = [];
+
+  lineup.forEach((day: Array<IMusician>): void => {
+    day.forEach((musician: IMusician): void => {
+      musicians.push(musician);
+    });
+  });
+
+  return musicians;
+};
+
+export const mapGigsToGigCards = (gigs: Array<IGig>): Array<IGigCard> =>
+  gigs.map(
+    (gig: IGig): IGigCard => ({
+      ...gig,
+      title: getGigTitle(gig),
+      subtitle: getGigSubtitle(gig),
+      musicians: getGigMusicians(gig)
+    })
+  );
+
+export const mapFestivalsToGigCards = (
+  festivals: Array<IFestival>
+): Array<IGigCard> =>
+  festivals.map(
+    (festival: IFestival): IGigCard => ({
+      ...festival,
+      title: getFestivalTitle(festival),
+      subtitle: getFestivalSubtitle(festival),
+      musicians: getFestivalMusicians(festival)
+    })
+  );

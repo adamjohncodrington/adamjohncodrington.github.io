@@ -1,12 +1,11 @@
 import { PLAYS } from "@constants";
+import { THEATRE_VISITS } from "data";
 import {
   getItemCounts,
   getDateText,
   isInFuture,
   moveTheSuffixToPrefix
 } from "utils";
-
-import * as DATA from "../data";
 
 import { FAVOURITES } from "./favourites";
 
@@ -28,7 +27,7 @@ const playIsFavourited = ({
 
 const getTheatreVisitsMatchingPlay = (play: IPlay): Array<ITheatreVisit> => {
   const theatreVisitsMatchingPlay: Array<ITheatreVisit> = [];
-  const theatreVisits: Array<ITheatreVisit> = DATA.ARRAY;
+  const theatreVisits: Array<ITheatreVisit> = THEATRE_VISITS;
   theatreVisits.forEach((theatreVisit: ITheatreVisit): void => {
     if (theatreVisit.play === play)
       theatreVisitsMatchingPlay.push(theatreVisit);
@@ -59,7 +58,10 @@ export const PLAYS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
   (play: IPlay): ICountedListItem => ({
     text: play.name,
     favourite: playIsFavourited({ play, favouritedTheatreCards: FAVOURITES }),
-    ...getItemCounts({ item: { play }, data: { theatreVisits: DATA.ARRAY } }),
+    ...getItemCounts({
+      item: { play },
+      data: { theatreVisits: THEATRE_VISITS }
+    }),
     details: getPlayDetails(play)
   })
 );

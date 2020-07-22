@@ -1,6 +1,6 @@
 import * as ACTORS from "./actors";
 import * as DATES from "./dates";
-import * as FESTIVALS from "./festivals";
+import * as FESTIVAL_TITLES from "./festival-titles";
 import * as FRIENDS from "./friends";
 import * as MEASUREMENTS from "./measurements";
 import * as MUSICIANS from "./musicians";
@@ -21,7 +21,7 @@ export * from "./vinyls";
 export {
   ACTORS,
   DATES,
-  FESTIVALS,
+  FESTIVAL_TITLES,
   FRIENDS,
   MEASUREMENTS,
   MUSICIANS,

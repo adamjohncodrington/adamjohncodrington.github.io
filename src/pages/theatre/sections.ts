@@ -1,42 +1,41 @@
 import { PAGE_SECTION } from "@constants";
+import { THEATRE } from "factories";
 import { SVG } from "resources";
 import { isInFuture } from "utils";
 
-import { FACTORY } from "./factory";
-
-const SECTION_ACTORS: IPageSection = {
+const ACTORS: IPageSection = {
   title: PAGE_SECTION.TITLES.ACTORS,
   SvgIcon: SVG.ARTIST,
-  data: { countedListItems: FACTORY.ACTORS }
+  data: { countedListItems: THEATRE.ACTORS }
 };
 
-const SECTION_FRIENDS_THEATRE: IPageSection = {
+const FRIENDS_THEATRE: IPageSection = {
   title: PAGE_SECTION.TITLES.FRIENDS,
   SvgIcon: SVG.PEOPLE,
-  data: { countedListItems: FACTORY.FRIENDS }
+  data: { countedListItems: THEATRE.FRIENDS }
 };
 
-const SECTION_PLAYS: IPageSection = {
+const PLAYS: IPageSection = {
   title: PAGE_SECTION.TITLES.PLAYS,
   SvgIcon: SVG.BOOK,
-  data: { countedListItems: FACTORY.PLAYS },
-  count: FACTORY.PLAYS.length
+  data: { countedListItems: THEATRE.PLAYS },
+  count: THEATRE.PLAYS.length
 };
 
-const SECTION_THEATRES: IPageSection = {
+const THEATRES: IPageSection = {
   title: PAGE_SECTION.TITLES.THEATRES,
   SvgIcon: SVG.THEATRE,
-  data: { countedListItems: FACTORY.VENUES },
-  count: FACTORY.VENUES.length
+  data: { countedListItems: THEATRE.VENUES },
+  count: THEATRE.VENUES.length
 };
 
-const SECTION_UP_NEXT_THEATRE: IPageSection = {
+const UP_NEXT_THEATRE: IPageSection = {
   SvgIcon: SVG.NOTEPAD,
   title: PAGE_SECTION.TITLES.UP_NEXT,
-  data: { theatreVisits: FACTORY.UP_NEXT }
+  data: { theatreVisits: THEATRE.UP_NEXT }
 };
 
-const SECTIONS_YEARS: Array<IPageSection> = FACTORY.SPLIT_BY_YEAR.map(
+const SECTIONS_YEARS: Array<IPageSection> = THEATRE.SPLIT_BY_YEAR.map(
   (year: Array<ITheatreVisit>): IPageSection => ({
     title: year[0].date.getFullYear().toString(),
     count: year.length,
@@ -49,10 +48,10 @@ const SECTIONS_YEARS: Array<IPageSection> = FACTORY.SPLIT_BY_YEAR.map(
 );
 
 export const sections: Array<IPageSection> = [
-  SECTION_ACTORS,
-  SECTION_FRIENDS_THEATRE,
-  SECTION_PLAYS,
-  SECTION_THEATRES,
-  SECTION_UP_NEXT_THEATRE,
+  ACTORS,
+  FRIENDS_THEATRE,
+  PLAYS,
+  THEATRES,
+  UP_NEXT_THEATRE,
   ...SECTIONS_YEARS
 ];
