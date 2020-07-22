@@ -29,7 +29,7 @@ const artists: Array<ICountedListItem> = collection.map(
 );
 
 export const FACTORY = {
-  ARTISTS: formatCountedListItems({ countedListItems: artists }),
+  ARTISTS: formatCountedListItems(artists),
   COLLECTION: sortVinyls(collection),
   WISH_LIST: wishList,
   SIGNED: signed,

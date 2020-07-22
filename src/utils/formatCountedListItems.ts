@@ -1,14 +1,15 @@
 import { moveTheSuffixToPrefix } from "./basic";
 
-interface IFormatCountedListItems {
-  countedListItems: Array<ICountedListItem>;
-  isLeaderboard?: boolean;
+interface IFormatCLIOptions {
+  isLeaderboard: boolean;
 }
 
-export const formatCountedListItems = ({
-  countedListItems,
-  isLeaderboard
-}: IFormatCountedListItems): Array<ICountedListItem> => {
+export const formatCountedListItems = (
+  countedListItems: Array<ICountedListItem>,
+  options?: IFormatCLIOptions
+): Array<ICountedListItem> => {
+  const isLeaderboard: boolean = !!(options && options.isLeaderboard);
+
   const filteredCountedListItems: Array<ICountedListItem> = countedListItems.filter(
     ({
       futureCount,

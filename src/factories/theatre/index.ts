@@ -8,15 +8,10 @@ import { UP_NEXT } from "./up-next";
 import { YEARS } from "./years";
 
 export const THEATRE = {
-  ACTORS: formatCountedListItems({ countedListItems: ACTORS_LIST_ITEMS }),
-  FRIENDS: formatCountedListItems({
-    countedListItems: FRIENDS_LIST_ITEMS,
-    isLeaderboard: true
-  }),
-  PLAYS: formatCountedListItems({ countedListItems: PLAYS_LIST_ITEMS }),
-  VENUES: formatCountedListItems({
-    countedListItems: THEATRE_VENUES_LIST_ITEMS
-  }),
+  ACTORS: formatCountedListItems(ACTORS_LIST_ITEMS),
+  FRIENDS: formatCountedListItems(FRIENDS_LIST_ITEMS, { isLeaderboard: true }),
+  PLAYS: formatCountedListItems(PLAYS_LIST_ITEMS),
+  VENUES: formatCountedListItems(THEATRE_VENUES_LIST_ITEMS),
   UP_NEXT,
   YEARS
 };

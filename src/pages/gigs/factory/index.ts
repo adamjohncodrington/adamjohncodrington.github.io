@@ -14,15 +14,12 @@ import { VIDEOS } from "./videos";
 export const FACTORY = {
   SPLIT_BY_YEAR: splitGigsIntoYears(DATA.ARRAY),
 
-  BUCKET_LIST: formatCountedListItems({ countedListItems: BUCKET_LIST_ITEMS }),
+  BUCKET_LIST: formatCountedListItems(BUCKET_LIST_ITEMS),
   // FESTIVALS: formatCountedListItems({ countedListItems: FESTIVALS_LIST_ITEMS }),
-  FRIENDS: formatCountedListItems({
-    countedListItems: FRIENDS_LIST_ITEMS,
-    isLeaderboard: true
-  }),
-  MUSICIANS: formatCountedListItems({ countedListItems: MUSICIANS_LIST_ITEMS }),
+  FRIENDS: formatCountedListItems(FRIENDS_LIST_ITEMS),
+  MUSICIANS: formatCountedListItems(MUSICIANS_LIST_ITEMS),
   UP_NEXT,
-  VENUES: formatCountedListItems({ countedListItems: VENUES_LIST_ITEMS }),
+  VENUES: formatCountedListItems(VENUES_LIST_ITEMS),
   VIDEOS,
 
   pageCount

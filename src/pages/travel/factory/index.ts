@@ -20,19 +20,12 @@ interface ITravelFactory {
 }
 
 export const FACTORY: ITravelFactory = {
-  BUCKET_LIST: formatCountedListItems({ countedListItems: BUCKET_LIST_ITEMS }),
-  CITIES: formatCountedListItems({ countedListItems: CITIES_LIST_ITEMS }),
-  COUNTRIES: formatCountedListItems({ countedListItems: COUNTRIES_LIST_ITEMS }),
-  FRIENDS: formatCountedListItems({
-    countedListItems: FRIENDS_LIST_ITEMS,
-    isLeaderboard: true
-  }),
-  HIGHLIGHTS: formatCountedListItems({
-    countedListItems: HIGHLIGHTS_LIST_ITEMS
-  }),
-  ISLANDS: formatCountedListItems({ countedListItems: ISLANDS_LIST_ITEMS }),
-  THEME_PARKS: formatCountedListItems({
-    countedListItems: THEME_PARKS_LIST_ITEMS
-  }),
+  BUCKET_LIST: formatCountedListItems(BUCKET_LIST_ITEMS),
+  CITIES: formatCountedListItems(CITIES_LIST_ITEMS),
+  COUNTRIES: formatCountedListItems(COUNTRIES_LIST_ITEMS),
+  FRIENDS: formatCountedListItems(FRIENDS_LIST_ITEMS, { isLeaderboard: true }),
+  HIGHLIGHTS: formatCountedListItems(HIGHLIGHTS_LIST_ITEMS),
+  ISLANDS: formatCountedListItems(ISLANDS_LIST_ITEMS),
+  THEME_PARKS: formatCountedListItems(THEME_PARKS_LIST_ITEMS),
   UP_NEXT
 };
