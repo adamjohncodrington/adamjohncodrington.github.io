@@ -1,15 +1,17 @@
 import { PAGE_GIGS } from "./gigs";
-import { PAGE_POLE } from "./pole";
 import { PAGE_RECIPES } from "./recipes";
-import { PAGE_THEATRE } from "./theatre";
 import { PAGE_TRAVEL } from "./travel";
 import { PAGE_VINYL } from "./vinyl";
 
+import { POLE } from "./pole";
+import { THEATRE } from "./theatre";
+
 export const PAGES: Array<IPage> = [
+  POLE,
+  THEATRE,
+
   PAGE_GIGS,
-  PAGE_POLE,
   PAGE_RECIPES,
-  PAGE_THEATRE,
   PAGE_TRAVEL,
   PAGE_VINYL
 ]

@@ -1,10 +1,9 @@
 import { SVG } from "resources";
+import { THEATRE as sections } from "sections";
 
-import { THEATRE } from "sections";
-
-export const PAGE_THEATRE: IPage = {
+export const THEATRE: IPage = {
   title: "Theatre",
   path: "/theatre",
   SvgIcon: SVG.THEATRE_MASKS,
-  sections: THEATRE
+  sections
 };
