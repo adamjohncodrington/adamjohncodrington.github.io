@@ -1,8 +1,6 @@
-import { POLE_STUDIOS } from "@constants";
+import { POLE_STUDIOS as studios } from "@constants";
 
-export const STUDIOS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
-  POLE_STUDIOS
-).map(
+export const STUDIOS: Array<ICountedListItem> = Object.values(studios).map(
   ({ name, branch }: IPoleStudio): ICountedListItem => ({
     text: name,
     secondaryText: branch,

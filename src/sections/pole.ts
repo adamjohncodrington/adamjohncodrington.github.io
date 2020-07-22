@@ -1,8 +1,6 @@
 import { PAGE_SECTION } from "@constants";
+import { POLE as FACTORY } from "factories";
 import { SVG } from "resources";
-import { SORT_POLE_SECTIONS_ALPHABETICALLY } from "config";
-
-import { FACTORY } from "./factory";
 
 const INSTRUCTORS: IPageSection = {
   SvgIcon: SVG.PEOPLE,
@@ -58,7 +56,7 @@ const SHOWCASE: IPageSection = {
   data: { comingSoon: true }
 };
 
-const sections: Array<IPageSection> = [
+export const POLE: Array<IPageSection> = [
   TRICKS_COMBOS,
   CONTEMPORARY,
   EXOTIC,
@@ -68,10 +66,6 @@ const sections: Array<IPageSection> = [
   STUDIOS,
   INSTRUCTORS,
   NON_POLE
-];
-
-export const SECTIONS: Array<IPageSection> = SORT_POLE_SECTIONS_ALPHABETICALLY
-  ? sections.sort((a: IPageSection, b: IPageSection): number =>
-      a.title > b.title ? 1 : -1
-    )
-  : sections;
+].sort((a: IPageSection, b: IPageSection): number =>
+  a.title > b.title ? 1 : -1
+);

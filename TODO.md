@@ -1,9 +1,9 @@
 # TO DO LIST
 
-- move `vinyls` to `DATA`
-- reinstate all festivals functionality!!!
-- make gig date prop singular, make festival dates prop `start/end`
 - root-level `data`, `factories`, `sections`, `pages`
+- reinstate all `festivals` functionality!!!
+- make gig date prop singular, make festival dates prop `start/end`?
+- move `vinyls` to `DATA`
 
 - reinstate all gig videos
 - make `travel` intelligently split by year

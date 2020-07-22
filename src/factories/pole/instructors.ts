@@ -1,7 +1,7 @@
-import { POLE_INSTRUCTORS } from "@constants";
+import { POLE_INSTRUCTORS as instructors } from "@constants";
 
-export const INSTRUCTORS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
-  POLE_INSTRUCTORS
+export const INSTRUCTORS: Array<ICountedListItem> = Object.values(
+  instructors
 ).map(
   ({ name, stageName }: IPoleInstructor): ICountedListItem => ({
     text: name,
