@@ -1,11 +1,11 @@
-import { THEATRE_VISITS } from "data";
-import { formatCountedListItems, splitTheatreIntoYears } from "utils";
+import { formatCountedListItems } from "utils";
 
 import { ACTORS_LIST_ITEMS } from "./actors";
 import { FRIENDS_LIST_ITEMS } from "./friends";
 import { PLAYS_LIST_ITEMS } from "./plays";
 import { THEATRE_VENUES_LIST_ITEMS } from "./theatres";
 import { UP_NEXT } from "./up-next";
+import { YEARS } from "./years";
 
 export const THEATRE = {
   ACTORS: formatCountedListItems({ countedListItems: ACTORS_LIST_ITEMS }),
@@ -17,6 +17,6 @@ export const THEATRE = {
   VENUES: formatCountedListItems({
     countedListItems: THEATRE_VENUES_LIST_ITEMS
   }),
-  SPLIT_BY_YEAR: splitTheatreIntoYears(THEATRE_VISITS),
-  UP_NEXT
+  UP_NEXT,
+  YEARS
 };

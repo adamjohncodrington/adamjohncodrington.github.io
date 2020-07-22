@@ -1,41 +1,41 @@
 import { PAGE_SECTION } from "@constants";
-import { THEATRE } from "factories";
+import { THEATRE as FACTORY } from "factories";
 import { SVG } from "resources";
 import { isInFuture } from "utils";
 
 const ACTORS: IPageSection = {
   title: PAGE_SECTION.TITLES.ACTORS,
   SvgIcon: SVG.ARTIST,
-  data: { countedListItems: THEATRE.ACTORS }
+  data: { countedListItems: FACTORY.ACTORS }
 };
 
-const FRIENDS_THEATRE: IPageSection = {
+const FRIENDS: IPageSection = {
   title: PAGE_SECTION.TITLES.FRIENDS,
   SvgIcon: SVG.PEOPLE,
-  data: { countedListItems: THEATRE.FRIENDS }
+  data: { countedListItems: FACTORY.FRIENDS }
 };
 
 const PLAYS: IPageSection = {
   title: PAGE_SECTION.TITLES.PLAYS,
   SvgIcon: SVG.BOOK,
-  data: { countedListItems: THEATRE.PLAYS },
-  count: THEATRE.PLAYS.length
+  data: { countedListItems: FACTORY.PLAYS },
+  count: FACTORY.PLAYS.length
 };
 
 const THEATRES: IPageSection = {
   title: PAGE_SECTION.TITLES.THEATRES,
   SvgIcon: SVG.THEATRE,
-  data: { countedListItems: THEATRE.VENUES },
-  count: THEATRE.VENUES.length
+  data: { countedListItems: FACTORY.VENUES },
+  count: FACTORY.VENUES.length
 };
 
-const UP_NEXT_THEATRE: IPageSection = {
+const UP_NEXT: IPageSection = {
   SvgIcon: SVG.NOTEPAD,
   title: PAGE_SECTION.TITLES.UP_NEXT,
-  data: { theatreVisits: THEATRE.UP_NEXT }
+  data: { theatreVisits: FACTORY.UP_NEXT }
 };
 
-const SECTIONS_YEARS: Array<IPageSection> = THEATRE.SPLIT_BY_YEAR.map(
+const YEARS: Array<IPageSection> = FACTORY.YEARS.map(
   (year: Array<ITheatreVisit>): IPageSection => ({
     title: year[0].date.getFullYear().toString(),
     count: year.length,
@@ -47,11 +47,11 @@ const SECTIONS_YEARS: Array<IPageSection> = THEATRE.SPLIT_BY_YEAR.map(
   })
 );
 
-export const sections: Array<IPageSection> = [
+export const THEATRE: Array<IPageSection> = [
   ACTORS,
-  FRIENDS_THEATRE,
+  FRIENDS,
   PLAYS,
   THEATRES,
-  UP_NEXT_THEATRE,
-  ...SECTIONS_YEARS
+  UP_NEXT,
+  ...YEARS
 ];

@@ -8,6 +8,7 @@
 - reinstate all gig videos
 - make `travel` intelligently split by year
 - totally rewrite `travel`
+- move `formatCountedListItems` implementation to UI component
 
 ## Enhancements
 

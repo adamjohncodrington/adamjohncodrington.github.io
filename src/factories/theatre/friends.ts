@@ -1,5 +1,5 @@
-import { THEATRE_VISITS } from "data";
 import { FRIENDS } from "@constants";
+import { THEATRE_VISITS } from "data";
 import {
   getItemCounts,
   getTheatreVisitTitle,
