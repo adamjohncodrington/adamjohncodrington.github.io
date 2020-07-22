@@ -1,6 +1,12 @@
 import { FRIENDS, MUSICIANS, TICKET_TYPES, MUSIC_VENUES } from "@constants";
 import { VIDEOS } from "resources";
 
+//   headline: MUSICIANS.ALLIE_X,
+//   venue: MUSIC_VENUES.HEAVEN,
+//   dates: [new Date("2020-06-04"),
+//   company: FRIENDS.DARREN_TAYLOR,
+//   ticketType: TICKET_TYPES.DICE
+
 export const CELESTE: IGig = {
   headline: MUSICIANS.CELESTE,
   venue: MUSIC_VENUES.SHEPHERDS_BUSH_EMPIRE,
@@ -101,12 +107,6 @@ export const JON_HOPKINS: IGig = {
   dates: [new Date("2020-12-04")],
   company: [FRIENDS.TONYA_FRANCE]
 };
-
-//   headline: MUSICIANS.ALLIE_X,
-//   venue: MUSIC_VENUES.HEAVEN,
-//   dates: [new Date("2020-06-04"),
-//   company: FRIENDS.DARREN_TAYLOR,
-//   ticketType: TICKET_TYPES.DICE
 
 export const RATIONALE: IGig = {
   headline: MUSICIANS.RATIONALE,
