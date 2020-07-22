@@ -9,6 +9,12 @@ const SECTION_INSTRUCTORS: IPageSection = {
   data: { countedListItems: FACTORY.INSTRUCTORS }
 };
 
+const SECTION_STUDIOS: IPageSection = {
+  SvgIcon: SVG.MAP_PIN,
+  title: PAGE_SECTION.TITLES.STUDIOS,
+  data: { countedListItems: FACTORY.STUDIOS }
+};
+
 const SECTION_CONTEMPORARY: IPageSection = {
   title: PAGE_SECTION.TITLES.CONTEMPORARY,
   SvgIcon: SVG.DANCER_MALE_2,
@@ -58,6 +64,7 @@ export const sections: Array<IPageSection> = [
   SECTION_IMPROVISATION,
   SECTION_PHOTOS,
   SECTION_SHOWCASE,
+  SECTION_STUDIOS,
   SECTION_INSTRUCTORS,
   SECTION_NON_POLE
 ];

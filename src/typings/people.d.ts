@@ -1,4 +1,4 @@
-interface IPerson extends INameFavourite {
+interface IPerson extends I_NameFavourite {
   initials: string;
 }
 

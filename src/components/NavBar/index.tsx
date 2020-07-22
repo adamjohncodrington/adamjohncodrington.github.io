@@ -5,7 +5,7 @@ import { RouterLink } from "primitives";
 import { CSS } from "styles";
 
 const StyledNav = styled.nav(
-  ({ theme: { navBar } }: IThemeProp) => css`
+  ({ theme: { navBar } }: I_Theme) => css`
     background: ${navBar.background};
     padding: ${navBar.padding.vertical} 0;
 
@@ -13,7 +13,7 @@ const StyledNav = styled.nav(
   `
 );
 
-interface IStyledRouterLink extends IThemeProp {}
+interface IStyledRouterLink extends I_Theme {}
 
 const StyledRouterLink = styled(RouterLink)(
   ({

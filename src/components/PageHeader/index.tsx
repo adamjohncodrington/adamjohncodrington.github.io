@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 import { H1 } from "primitives";
 
 const PageHeaderContainer = styled.div(
-  ({ theme: { pageHeader } }: IThemeProp) => css`
+  ({ theme: { pageHeader } }: I_Theme) => css`
     display: flex;
     justify-content: center;
     text-transform: lowercase;
@@ -13,7 +13,7 @@ const PageHeaderContainer = styled.div(
 );
 
 const PageHeaderCount = styled.span(
-  ({ theme: { pageHeader } }: IThemeProp) => css`
+  ({ theme: { pageHeader } }: I_Theme) => css`
     padding: ${pageHeader.count.padding.all};
   `
 );

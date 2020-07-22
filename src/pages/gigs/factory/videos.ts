@@ -11,6 +11,6 @@ export const VIDEOS: Array<IGig> = DATA.ALL.filter(
       hideVideoIcon: true
     })
   )
-  .sort((a: IGig, b: IGig) =>
+  .sort((a: IGig, b: IGig): number =>
     a.dates[0].valueOf() < b.dates[0].valueOf() ? 1 : -1
   );

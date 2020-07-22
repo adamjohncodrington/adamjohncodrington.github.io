@@ -3,7 +3,6 @@ import { SVG } from "resources";
 import { isInFuture } from "utils";
 
 import { FACTORY } from "./factory";
-import { DATA } from "./data";
 
 const SECTION_ACTORS: IPageSection = {
   title: PAGE_SECTION.TITLES.ACTORS,
@@ -37,7 +36,7 @@ const SECTION_UP_NEXT_THEATRE: IPageSection = {
   data: { theatreVisits: FACTORY.UP_NEXT }
 };
 
-const SECTIONS_YEARS: Array<IPageSection> = DATA.SPLIT_BY_YEAR.map(
+const SECTIONS_YEARS: Array<IPageSection> = FACTORY.SPLIT_BY_YEAR.map(
   (year: Array<ITheatreVisit>): IPageSection => ({
     title: year[0].date.getFullYear().toString(),
     count: year.length,

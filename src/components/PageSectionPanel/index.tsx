@@ -84,7 +84,7 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
               {...theatreVisit}
               title={getTheatreVisitTitle(theatreVisit)}
               subtitle={getTheatreVisitSubtitle(theatreVisit)}
-              body={theatreVisit.theatre.name}
+              body={moveTheSuffixToPrefix(theatreVisit.theatre.name)}
               secondaryBody={getDateText(theatreVisit.date)}
             />
           </Li>

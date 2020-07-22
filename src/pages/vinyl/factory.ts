@@ -1,6 +1,5 @@
 import { VINYLS } from "@constants";
 import {
-  moveTheSuffixToPrefix,
   formatCountedListItems,
   splitVinylsIntoYears,
   sortVinyls
@@ -22,7 +21,7 @@ const signed: Array<IVinyl> = allVinyls.filter(
 
 const artists: Array<ICountedListItem> = collection.map(
   ({ musician: { name } }: IVinyl): ICountedListItem => ({
-    text: moveTheSuffixToPrefix(name),
+    text: name,
     pastCount: 0,
     futureCount: 0,
     countInfoIrrelevant: true

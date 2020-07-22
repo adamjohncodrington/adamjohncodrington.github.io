@@ -6,13 +6,13 @@ import {
   isInFuture
 } from "utils";
 
-import { DATA } from "../data";
+import * as DATA from "../data";
 
 const getTheatreVisitsMatchingFriend = (
   friend: IFriend
 ): Array<ITheatreVisit> => {
   const theatreVisitsMatchingFriend: Array<ITheatreVisit> = [];
-  const theatreVisits: Array<ITheatreVisit> = DATA.ALL;
+  const theatreVisits: Array<ITheatreVisit> = DATA.ARRAY;
   theatreVisits.forEach((theatreVisit: ITheatreVisit): void => {
     if (theatreVisit.company.includes(friend))
       theatreVisitsMatchingFriend.push(theatreVisit);
@@ -44,7 +44,10 @@ export const FRIENDS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
   .map(
     (friend: IFriend): ICountedListItem => ({
       text: friend.name,
-      ...getItemCounts({ item: { friend }, data: { theatreVisits: DATA.ALL } }),
+      ...getItemCounts({
+        item: { friend },
+        data: { theatreVisits: DATA.ARRAY }
+      }),
       details: getFriendDetails(friend)
     })
   );

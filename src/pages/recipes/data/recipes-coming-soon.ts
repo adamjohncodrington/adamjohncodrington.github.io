@@ -26,6 +26,6 @@ export const RECIPES_COMING_SOON: Array<ICountedListItem> = recipesComingSoon
     futureCount: 0,
     pastCount: 0
   }))
-  .sort((a: ICountedListItem, b: ICountedListItem) =>
+  .sort((a: ICountedListItem, b: ICountedListItem): number =>
     a.text > b.text ? 1 : -1
   );

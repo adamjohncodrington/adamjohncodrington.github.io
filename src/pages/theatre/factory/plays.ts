@@ -6,7 +6,7 @@ import {
   moveTheSuffixToPrefix
 } from "utils";
 
-import { DATA } from "../data";
+import * as DATA from "../data";
 
 import { FAVOURITES } from "./favourites";
 
@@ -28,7 +28,7 @@ const playIsFavourited = ({
 
 const getTheatreVisitsMatchingPlay = (play: IPlay): Array<ITheatreVisit> => {
   const theatreVisitsMatchingPlay: Array<ITheatreVisit> = [];
-  const theatreVisits: Array<ITheatreVisit> = DATA.ALL;
+  const theatreVisits: Array<ITheatreVisit> = DATA.ARRAY;
   theatreVisits.forEach((theatreVisit: ITheatreVisit): void => {
     if (theatreVisit.play === play)
       theatreVisitsMatchingPlay.push(theatreVisit);
@@ -59,7 +59,7 @@ export const PLAYS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
   (play: IPlay): ICountedListItem => ({
     text: play.name,
     favourite: playIsFavourited({ play, favouritedTheatreCards: FAVOURITES }),
-    ...getItemCounts({ item: { play }, data: { theatreVisits: DATA.ALL } }),
+    ...getItemCounts({ item: { play }, data: { theatreVisits: DATA.ARRAY } }),
     details: getPlayDetails(play)
   })
 );

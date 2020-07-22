@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 
 import { SVG } from "resources";
 
-interface IStyledRoundedSymbol extends IRoundedSymbol, IThemeProp {}
+interface IStyledRoundedSymbol extends IRoundedSymbol, I_Theme {}
 
 const StyledRoundedSymbol = styled.div(
   ({

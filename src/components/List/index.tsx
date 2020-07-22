@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 import { Ul, Li, FlexRow } from "primitives";
 import { CIRCLE } from "styles";
 
-interface IStyledLi extends IThemeProp {
+interface IStyledLi extends I_Theme {
   addPaddingTop?: boolean;
 }
 

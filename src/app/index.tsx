@@ -6,7 +6,7 @@ import { PageHeader, PageSectionsLayout, NavBar } from "components";
 import { PAGES } from "pages";
 
 const PageShell = styled.main(
-  ({ theme: { navBar, pageLayout } }: IThemeProp) => css`
+  ({ theme: { navBar, pageLayout } }: I_Theme) => css`
     padding: ${pageLayout.padding.all};
     height: calc(100vh - ${navBar.icon.size} - 2 * ${navBar.padding.vertical});
     overflow-y: auto;

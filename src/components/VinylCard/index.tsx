@@ -8,14 +8,14 @@ import { moveTheSuffixToPrefix, getMusicianStageNameAtTime } from "utils";
 import { CardTitleBold, CardSubtitleBold } from "../styles";
 
 const VinylCardLink = styled(Link)(
-  ({ theme: { vinyl } }: IThemeProp) =>
+  ({ theme: { vinyl } }: I_Theme) =>
     css`
       margin-right: ${vinyl.artwork.margin.right};
     `
 );
 
 const VinylCardTextContainer = styled.div(
-  ({ theme: { vinyl } }: IThemeProp) =>
+  ({ theme: { vinyl } }: I_Theme) =>
     css`
       flex: 1;
 

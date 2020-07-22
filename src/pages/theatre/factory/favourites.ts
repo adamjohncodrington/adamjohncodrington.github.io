@@ -1,5 +1,5 @@
-import { DATA } from "../data";
+import * as DATA from "../data";
 
-export const FAVOURITES: Array<ITheatreVisit> = DATA.ALL.filter(
+export const FAVOURITES: Array<ITheatreVisit> = DATA.ARRAY.filter(
   ({ favourite }: ITheatreVisit): boolean => !!favourite
 );

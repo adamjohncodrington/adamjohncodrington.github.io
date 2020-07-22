@@ -1,4 +1,4 @@
-interface ILocation extends INameFavourite {
+interface ILocation extends I_NameFavourite {
   island?: boolean;
   insignificant?: boolean;
   englishName?: string;

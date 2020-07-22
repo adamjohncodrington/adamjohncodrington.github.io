@@ -1,13 +1,13 @@
 import { formatCountedListItems } from "utils";
 
 import { INSTRUCTORS_LIST_ITEMS } from "./instructors";
+import { STUDIOS_LIST_ITEMS } from "./studios";
 
-interface IPoleFactory {
-  INSTRUCTORS: Array<ICountedListItem>;
-}
-
-export const FACTORY: IPoleFactory = {
+export const FACTORY = {
   INSTRUCTORS: formatCountedListItems({
     countedListItems: INSTRUCTORS_LIST_ITEMS
+  }),
+  STUDIOS: formatCountedListItems({
+    countedListItems: STUDIOS_LIST_ITEMS
   })
 };

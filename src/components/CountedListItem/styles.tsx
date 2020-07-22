@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import { FlexRow } from "primitives";
 import { getPseudoElementBefore, HEART, STAR } from "styles";
 
-interface IStyledMainText extends IThemeProp, IFavourite, IStar {
+interface IStyledMainText extends I_Theme, IFavourite, IStar {
   faded: boolean;
 }
 
@@ -13,7 +13,7 @@ export const StyledTextContainer = styled(FlexRow)`
 `;
 
 export const StyledSecondaryText = styled.span(
-  ({ theme: { fadedOpacity } }: IThemeProp) => css`
+  ({ theme: { fadedOpacity } }: I_Theme) => css`
     opacity: ${fadedOpacity};
     margin-left: 5px;
     font-size: 75%;
@@ -34,7 +34,7 @@ export const StyledMainText = styled.span(
   `
 );
 
-interface ICountedListItemPastCount extends IThemeProp {
+interface ICountedListItemPastCount extends I_Theme {
   isLeaderboardItem?: boolean;
 }
 
@@ -55,7 +55,7 @@ export const CountedListItemPastCount = styled.span(
 );
 
 export const CountedListItemFutureCount = styled(CountedListItemPastCount)(
-  ({ theme: { fadedOpacity } }: IThemeProp) => css`
+  ({ theme: { fadedOpacity } }: I_Theme) => css`
     opacity: ${fadedOpacity};
   `
 );

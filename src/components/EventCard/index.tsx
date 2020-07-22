@@ -77,7 +77,7 @@ export const EventCard: React.FC<IEventCard> = ({
             <EventCardSymbolsContainer>
               {!hideCompany &&
                 company
-                  .sort((a: IFriend, b: IFriend) =>
+                  .sort((a: IFriend, b: IFriend): number =>
                     a.initials > b.initials ? 1 : -1
                   )
                   .map(({ initials }: IFriend, index: number) => (

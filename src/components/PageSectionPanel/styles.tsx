@@ -7,7 +7,7 @@ interface IPageSectionPanelList {
   pageSectionPanelType: string;
 }
 
-const CSS_COMMON = ({ theme: { pageSection } }: IThemeProp) => css`
+const CSS_COMMON = ({ theme: { pageSection } }: I_Theme) => css`
   > * {
     border-bottom: ${pageSection.panelList.border.bottom};
   }
@@ -23,7 +23,7 @@ const CSS_RECIPE_CARDS = ({
       panelList: { recipes }
     }
   }
-}: IThemeProp) => css`
+}: I_Theme) => css`
   > * {
     padding: ${recipes.padding.vertical} 0;
   }
@@ -45,7 +45,7 @@ const CSS_COUNTED_LIST = ({
       panelList: { padding, countedListItems }
     }
   }
-}: IThemeProp) => css`
+}: I_Theme) => css`
   padding-bottom: ${padding.bottom};
 
   > * {
@@ -61,7 +61,7 @@ const CSS_REGULAR_CARDS = ({
       panelList: { padding, regularCards }
     }
   }
-}: IThemeProp) => css`
+}: I_Theme) => css`
   padding-bottom: ${padding.bottom};
 
   > * {
@@ -96,7 +96,7 @@ export const StyledComingSoonPlaceholder = styled.div(
         comingSoon: { fontSize, fontWeight }
       }
     }
-  }: IThemeProp) => css`
+  }: I_Theme) => css`
     padding-top: 5px;
     padding-bottom: 10px;
     font-size: ${fontSize};

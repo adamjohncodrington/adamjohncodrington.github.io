@@ -7,19 +7,19 @@ export const PageSectionTitle = styled(H2)`
 `;
 
 export const PageSectionHeaderContainer = styled(FlexRow)(
-  ({ theme: { pageSection } }: IThemeProp) => css`
+  ({ theme: { pageSection } }: I_Theme) => css`
     padding: ${pageSection.header.padding.vertical} 0;
   `
 );
 
 export const PageSectionCount = styled.span(
-  ({ theme: { pageSection } }: IThemeProp) => css`
+  ({ theme: { pageSection } }: I_Theme) => css`
     margin-left: ${pageSection.count.margin.left};
   `
 );
 
 export const PageSectionStarredCount = styled(PageSectionCount)(
-  ({ theme: { fadedOpacity } }: IThemeProp) => css`
+  ({ theme: { fadedOpacity } }: I_Theme) => css`
     opacity: ${fadedOpacity};
   `
 );
@@ -31,7 +31,7 @@ export const PageSectionSvgContainer = styled.div(
         icon: { size }
       }
     }
-  }: IThemeProp) => css`
+  }: I_Theme) => css`
     display: flex;
     align-items: center;
 

@@ -26,7 +26,15 @@ export const formatCountedListItems = ({
           : a.pastCount === b.pastCount && a.futureCount > b.futureCount
           ? -1
           : 1
-        : a.text.toLowerCase().localeCompare(b.text.toLowerCase())
+        : a.text.toLowerCase() > b.text.toLowerCase()
+        ? 1
+        : a.text.toLowerCase() === b.text.toLowerCase() &&
+          a.secondaryText &&
+          b.secondaryText
+        ? a.secondaryText > b.secondaryText
+          ? 1
+          : -1
+        : -1
   );
 
   const translatedCountedListItems: Array<ICountedListItem> = sortedCountedListItems.map(

@@ -5,22 +5,77 @@ export const splitVinylsIntoYears = (
     (a: IVinyl, b: IVinyl): number => (a.year > b.year ? 1 : -1)
   );
 
-  const vinylsSplitByYear: Array<Array<IVinyl>> = [];
+  const vinylsSplitIntoYears: Array<Array<IVinyl>> = [];
 
   let arrayIndex: number = 0;
   let arrayYear: number = sortedVinyls[0].year;
 
   sortedVinyls.forEach((vinyl: IVinyl): void => {
-    const { year } = vinyl;
+    const vinylYear: number = vinyl.year;
 
-    if (year !== arrayYear) {
+    if (vinylYear !== arrayYear) {
       arrayIndex += 1;
-      arrayYear = year;
+      arrayYear = vinylYear;
     }
 
-    if (!vinylsSplitByYear[arrayIndex]) vinylsSplitByYear[arrayIndex] = [];
-    vinylsSplitByYear[arrayIndex].push(vinyl);
+    if (!vinylsSplitIntoYears[arrayIndex])
+      vinylsSplitIntoYears[arrayIndex] = [];
+    vinylsSplitIntoYears[arrayIndex].push(vinyl);
   });
 
-  return vinylsSplitByYear;
+  return vinylsSplitIntoYears;
 };
+
+export const splitTheatreIntoYears = (
+  theatreVisits: Array<ITheatreVisit>
+): Array<Array<ITheatreVisit>> => {
+  const sortedTheatreVisits: Array<ITheatreVisit> = theatreVisits.sort(
+    (a: ITheatreVisit, b: ITheatreVisit): number =>
+      a.date.valueOf() > b.date.valueOf() ? 1 : -1
+  );
+
+  const theatreSplitIntoYears: Array<Array<ITheatreVisit>> = [];
+
+  let arrayIndex: number = 0;
+  let arrayYear: number = sortedTheatreVisits[0].date.getFullYear();
+
+  sortedTheatreVisits.forEach((theatreVisit: ITheatreVisit): void => {
+    const theatreVisitYear: number = theatreVisit.date.getFullYear();
+
+    if (theatreVisitYear !== arrayYear) {
+      arrayIndex += 1;
+      arrayYear = theatreVisitYear;
+    }
+
+    if (!theatreSplitIntoYears[arrayIndex]) {
+      theatreSplitIntoYears[arrayIndex] = [];
+    }
+    theatreSplitIntoYears[arrayIndex].push(theatreVisit);
+  });
+
+  return theatreSplitIntoYears;
+};
+
+// export const splitTheatreVisitsIntoYears = (
+//   theatreVisits: Array<ITheatreVisit>
+// ): Array<ITheatreVisit> => {
+//   const theatreVisitsSplitIntoYears: Array<Array<ITheatreVisit>> = [];
+
+//   let arrayIndex: number = 0;
+//   let arrayYear: number = theatreVisits[0].date.getFullYear();
+
+//   theatreVisits.forEach((theatreVisit: ITheatreVisit): void => {
+//     const theatreVisitYear: number = theatreVisit.date.getFullYear();
+
+//     if (theatreVisitYear !== arrayYear) {
+//       arrayIndex += 1;
+//       arrayYear = theatreVisitYear;
+//     }
+
+//     if (!theatreVisitsSplitIntoYears[arrayIndex])
+//       theatreVisitsSplitIntoYears[arrayIndex] = [];
+//     theatreVisitsSplitIntoYears[arrayIndex].push(theatreVisit);
+//   });
+
+//   return theatreVisitsSplitIntoYears;
+// };

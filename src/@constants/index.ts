@@ -7,11 +7,13 @@ import * as MUSICIANS from "./musicians";
 import * as PAGE_SECTION from "./page-section";
 import * as PLAYS from "./plays";
 import * as POLE_INSTRUCTORS from "./pole-instructors";
+import * as POLE_STUDIOS from "./pole-studios";
 
 export * from "./music-venues";
 export * from "./sainsburys";
 export * from "./theatres";
 export * from "./vinyls";
+export * from "./video";
 
 export {
   ACTORS,
@@ -22,6 +24,7 @@ export {
   MUSICIANS,
   PAGE_SECTION,
   PLAYS,
+  POLE_STUDIOS,
   POLE_INSTRUCTORS
 };
 

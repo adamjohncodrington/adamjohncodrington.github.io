@@ -14,4 +14,4 @@ export const PAGES: Array<IPage> = [
   PAGE_VINYL
 ]
   .filter((route: IPage): boolean => !route.hide)
-  .sort((a: IPage, b: IPage) => (a.title > b.title ? 1 : -1));
+  .sort((a: IPage, b: IPage): number => (a.title > b.title ? 1 : -1));

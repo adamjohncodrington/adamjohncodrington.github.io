@@ -6,13 +6,13 @@ import {
   moveTheSuffixToPrefix
 } from "utils";
 
-import { DATA } from "../data";
+import * as DATA from "../data";
 
 const getTheatreVisitsMatchingVenue = (
   theatre: ITheatre
 ): Array<ITheatreVisit> => {
   const theatreVisitsMatchingVenue: Array<ITheatreVisit> = [];
-  const theatreVisits: Array<ITheatreVisit> = DATA.ALL;
+  const theatreVisits: Array<ITheatreVisit> = DATA.ARRAY;
   theatreVisits.forEach((theatreVisit: ITheatreVisit): void => {
     if (theatreVisit.theatre === theatre)
       theatreVisitsMatchingVenue.push(theatreVisit);
@@ -44,7 +44,10 @@ export const THEATRE_VENUES_LIST_ITEMS: Array<ICountedListItem> = Object.values(
 ).map(
   (theatre: ITheatre): ICountedListItem => ({
     text: theatre.name,
-    ...getItemCounts({ item: { theatre }, data: { theatreVisits: DATA.ALL } }),
+    ...getItemCounts({
+      item: { theatre },
+      data: { theatreVisits: DATA.ARRAY }
+    }),
     details: getTheatreVenueDetails(theatre)
   })
 );

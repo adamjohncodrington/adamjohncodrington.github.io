@@ -14,7 +14,7 @@ export const StyledOl = styled.ol`
   }
 `;
 
-interface IStyledLi extends IThemeProp {
+interface IStyledLi extends I_Theme {
   isInFuture: boolean;
 }
 

@@ -10,7 +10,7 @@ export const EventCardCountdown = styled.div`
 `;
 
 export const EventCardTextContainer = styled(FlexColumn)(
-  ({ theme: { eventCard } }: IThemeProp) => css`
+  ({ theme: { eventCard } }: I_Theme) => css`
     > *:not(:first-child) {
       margin-top: ${eventCard.notFirstChild.margin.top};
     }
@@ -28,7 +28,7 @@ export const EventCardSymbolsContainer = styled(FlexRow)(
         companySymbol: { spaceBetweenSymbols }
       }
     }
-  }: IThemeProp) => css`
+  }: I_Theme) => css`
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: flex-end;

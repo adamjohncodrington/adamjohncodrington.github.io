@@ -1,8 +1,11 @@
 # TO DO LIST
 
-- reinstate all YouTube videos
+- split `gigs` and `festivals`
+- reinstate all gig videos
+- make a dynamic `VideoCard` component
 - rationalise all `typings`
 - beef up POLE section
+- add Apple Music links and details to Vinyl `artists` section
 
 ## Enhancements
 

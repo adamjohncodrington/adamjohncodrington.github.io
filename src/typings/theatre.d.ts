@@ -1,8 +1,8 @@
-interface IActor extends INameFavourite {}
+interface IActor extends I_NameFavourite {}
 
-interface IPlay extends INameFavourite {}
+interface IPlay extends I_NameFavourite {}
 
-interface ITheatre extends INameFavourite {}
+interface ITheatre extends I_NameFavourite {}
 
 interface ITheatreVisit extends IDate, IEventCardCommon {
   play: IPlay;

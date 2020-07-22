@@ -7,11 +7,11 @@ interface IGig extends IDates, IEventCardCommon {
   ticketType?: string;
 }
 
-interface IFestival extends INameFavourite {
+interface IFestival extends I_NameFavourite {
   festival?: boolean;
 }
 
-interface IMusicVenue extends INameFavourite {
+interface IMusicVenue extends I_NameFavourite {
   insignificant?: boolean;
 }
 
@@ -30,7 +30,7 @@ interface IVinylCard extends IVinyl {
   hideYear?: boolean;
 }
 
-interface IMusician extends INameFavourite {
+interface IMusician extends I_NameFavourite {
   previousStageName?: { name: string; yearDeprecated: number };
   noLongerExists?: boolean;
 }

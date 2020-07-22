@@ -6,13 +6,14 @@ import * as gigs2010 from "./gigs-2010";
 import * as gigs2011 from "./gigs-2011";
 import * as gigs2012 from "./gigs-2012";
 import * as gigs2013 from "./gigs-2013";
+import * as gigs2014 from "./gigs-2014";
+import * as gigs2015 from "./gigs-2015";
+import * as gigs2016 from "./gigs-2016";
+import * as gigs2017 from "./gigs-2017";
+
 import * as gigs2020 from "./gigs-2020";
 import * as gigs2021 from "./gigs-2021";
 
-import { GIGS_2014 } from "./gigs-2014";
-import { GIGS_2015 } from "./gigs-2015";
-import { GIGS_2016 } from "./gigs-2016";
-import { GIGS_2017 } from "./gigs-2017";
 import { GIGS_2018 } from "./gigs-2018";
 import { GIGS_2019 } from "./gigs-2019";
 
@@ -24,6 +25,11 @@ const GIGS_2010: Array<IGig> = Object.values(gigs2010);
 const GIGS_2011: Array<IGig> = Object.values(gigs2011);
 const GIGS_2012: Array<IGig> = Object.values(gigs2012);
 const GIGS_2013: Array<IGig> = Object.values(gigs2013);
+const GIGS_2014: Array<IGig> = Object.values(gigs2014);
+const GIGS_2015: Array<IGig> = Object.values(gigs2015);
+const GIGS_2016: Array<IGig> = Object.values(gigs2016);
+const GIGS_2017: Array<IGig> = Object.values(gigs2017);
+
 const GIGS_2020: Array<IGig> = Object.values(gigs2020);
 const GIGS_2021: Array<IGig> = Object.values(gigs2021);
 
