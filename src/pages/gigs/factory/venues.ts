@@ -1,11 +1,11 @@
 import { MUSIC_VENUES } from "@constants";
 import { getItemCounts, getGigTitle, getDatesText, isInFuture } from "utils";
 
-import { DATA } from "../data";
+import * as DATA from "../data";
 
 const getGigsMatchingMusicVenue = (musicVenue: IMusicVenue): Array<IGig> => {
   const gigsMatchingMusicVenue: Array<IGig> = [];
-  const gigs: Array<IGig> = DATA.ALL;
+  const gigs: Array<IGig> = DATA.ARRAY;
   gigs.forEach((gig: IGig): void => {
     if (gig.venue === musicVenue) gigsMatchingMusicVenue.push(gig);
   });
@@ -40,7 +40,7 @@ export const VENUES_LIST_ITEMS: Array<ICountedListItem> = Object.values(
     return {
       text: name,
       favourite,
-      ...getItemCounts({ item: { musicVenue }, data: { gigs: DATA.ALL } }),
+      ...getItemCounts({ item: { musicVenue }, data: { gigs: DATA.ARRAY } }),
       details: getMusicVenueDetails(musicVenue)
     };
   }

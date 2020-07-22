@@ -8,11 +8,11 @@ import {
   detailsContainsFavourite
 } from "utils";
 
-import { DATA } from "../data";
+import * as DATA from "../data";
 
 const getGigsMatchingMusician = (musician: IMusician): Array<IGig> => {
   const gigsMatchingMusician: Array<IGig> = [];
-  const gigs: Array<IGig> = DATA.ALL;
+  const gigs: Array<IGig> = DATA.ARRAY;
   gigs.forEach((gig: IGig): void => {
     if (musicianMatchExists(musician, gig)) {
       gigsMatchingMusician.push(gig);
@@ -72,7 +72,7 @@ export const MUSICIANS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
       text: name,
       secondaryText: previousStageName && previousStageName.name,
       favourite: detailsContainsFavourite(details),
-      ...getItemCounts({ item: { musician }, data: { gigs: DATA.ALL } }),
+      ...getItemCounts({ item: { musician }, data: { gigs: DATA.ARRAY } }),
       noLongerExists,
       details
     };

@@ -1,3 +1,5 @@
+import { isInFuture } from "./basic";
+
 export const splitVinylsIntoYears = (
   vinyls: Array<IVinyl>
 ): Array<Array<IVinyl>> => {
@@ -29,7 +31,11 @@ export const splitVinylsIntoYears = (
 export const splitTheatreIntoYears = (
   theatreVisits: Array<ITheatreVisit>
 ): Array<Array<ITheatreVisit>> => {
-  const sortedTheatreVisits: Array<ITheatreVisit> = theatreVisits.sort(
+  const filteredTheatreVisits: Array<ITheatreVisit> = theatreVisits.filter(
+    ({ date }: ITheatreVisit): boolean => !isInFuture(date)
+  );
+
+  const sortedTheatreVisits: Array<ITheatreVisit> = filteredTheatreVisits.sort(
     (a: ITheatreVisit, b: ITheatreVisit): number =>
       a.date.valueOf() > b.date.valueOf() ? 1 : -1
   );
@@ -56,26 +62,34 @@ export const splitTheatreIntoYears = (
   return theatreSplitIntoYears;
 };
 
-// export const splitTheatreVisitsIntoYears = (
-//   theatreVisits: Array<ITheatreVisit>
-// ): Array<ITheatreVisit> => {
-//   const theatreVisitsSplitIntoYears: Array<Array<ITheatreVisit>> = [];
+export const splitGigsIntoYears = (gigs: Array<IGig>): Array<Array<IGig>> => {
+  const filteredGigs: Array<IGig> = gigs.filter(
+    ({ dates }: IGig): boolean => !isInFuture(dates[0])
+  );
 
-//   let arrayIndex: number = 0;
-//   let arrayYear: number = theatreVisits[0].date.getFullYear();
+  const sortedGigs: Array<IGig> = filteredGigs.sort(
+    (a: IGig, b: IGig): number =>
+      a.dates[0].valueOf() > b.dates[0].valueOf() ? 1 : -1
+  );
 
-//   theatreVisits.forEach((theatreVisit: ITheatreVisit): void => {
-//     const theatreVisitYear: number = theatreVisit.date.getFullYear();
+  const gigsSplitIntoYears: Array<Array<IGig>> = [];
 
-//     if (theatreVisitYear !== arrayYear) {
-//       arrayIndex += 1;
-//       arrayYear = theatreVisitYear;
-//     }
+  let arrayIndex: number = 0;
+  let arrayYear: number = sortedGigs[0].dates[0].getFullYear();
 
-//     if (!theatreVisitsSplitIntoYears[arrayIndex])
-//       theatreVisitsSplitIntoYears[arrayIndex] = [];
-//     theatreVisitsSplitIntoYears[arrayIndex].push(theatreVisit);
-//   });
+  sortedGigs.forEach((gig: IGig): void => {
+    const gigYear: number = gig.dates[0].getFullYear();
 
-//   return theatreVisitsSplitIntoYears;
-// };
+    if (gigYear !== arrayYear) {
+      arrayIndex += 1;
+      arrayYear = gigYear;
+    }
+
+    if (!gigsSplitIntoYears[arrayIndex]) {
+      gigsSplitIntoYears[arrayIndex] = [];
+    }
+    gigsSplitIntoYears[arrayIndex].push(gig);
+  });
+
+  return gigsSplitIntoYears;
+};

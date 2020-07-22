@@ -1,4 +1,4 @@
-import { formatCountedListItems } from "utils";
+import { formatCountedListItems, splitGigsIntoYears } from "utils";
 
 import { BUCKET_LIST_ITEMS } from "./bucket-list";
 import { FRIENDS_LIST_ITEMS } from "./friends";
@@ -9,18 +9,9 @@ import { UP_NEXT } from "./up-next";
 import { VENUES_LIST_ITEMS } from "./venues";
 import { VIDEOS } from "./videos";
 
-interface IGigsFactory {
-  BUCKET_LIST: Array<ICountedListItem>;
-  MUSICIANS: Array<ICountedListItem>;
-  FESTIVALS: Array<ICountedListItem>;
-  FRIENDS: Array<ICountedListItem>;
-  VENUES: Array<ICountedListItem>;
-  UP_NEXT: Array<IGig>;
-  VIDEOS: Array<IGig>;
-  pageCount: number;
-}
+import * as DATA from "../data";
 
-export const FACTORY: IGigsFactory = {
+export const FACTORY = {
   BUCKET_LIST: formatCountedListItems({ countedListItems: BUCKET_LIST_ITEMS }),
   FESTIVALS: formatCountedListItems({ countedListItems: FESTIVALS_LIST_ITEMS }),
   FRIENDS: formatCountedListItems({
@@ -31,5 +22,7 @@ export const FACTORY: IGigsFactory = {
   UP_NEXT,
   VENUES: formatCountedListItems({ countedListItems: VENUES_LIST_ITEMS }),
   VIDEOS,
+  SPLIT_BY_YEAR: splitGigsIntoYears(DATA.ARRAY),
+
   pageCount
 };

@@ -2,8 +2,6 @@ import { PAGE_SECTION } from "@constants";
 import { SVG } from "resources";
 
 import { FACTORY } from "./factory";
-import { DATA } from "./data";
-import { isInFuture } from "utils";
 
 const SECTION_BUCKET_LIST: IPageSection = {
   title: PAGE_SECTION.TITLES.BUCKET_LIST,
@@ -52,13 +50,11 @@ const SECTION_VIDEOS_GIGS: IPageSection = {
   count: FACTORY.VIDEOS.length
 };
 
-const SECTIONS_YEARS: Array<IPageSection> = DATA.SPLIT_BY_YEAR.map(
+const SECTIONS_YEARS: Array<IPageSection> = FACTORY.SPLIT_BY_YEAR.map(
   (year: Array<IGig>): IPageSection => ({
     title: year[0].dates[0].getFullYear().toString(),
     count: year.length,
-    data: {
-      gigs: year.filter(({ dates }: IGig): boolean => !isInFuture(dates[0]))
-    }
+    data: { gigs: year }
   })
 );
 

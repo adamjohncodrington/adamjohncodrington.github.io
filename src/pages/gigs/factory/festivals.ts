@@ -1,11 +1,11 @@
 import { FESTIVALS } from "@constants";
 import { getItemCounts, isInFuture, getDatesText, getGigSubtitle } from "utils";
 
-import { DATA } from "../data";
+import * as DATA from "../data";
 
 const getGigsMatchingFestival = (festival: IFestival): Array<IGig> => {
   const gigsMatchingFestival: Array<IGig> = [];
-  const gigs: Array<IGig> = DATA.ALL;
+  const gigs: Array<IGig> = DATA.ARRAY;
   gigs.forEach((gig: IGig): void => {
     if (festival === gig.festival) {
       gigsMatchingFestival.push(gig);
@@ -39,7 +39,7 @@ export const FESTIVALS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
   .map(
     (festival: IFestival): ICountedListItem => ({
       text: festival.name,
-      ...getItemCounts({ item: { festival }, data: { gigs: DATA.ALL } }),
+      ...getItemCounts({ item: { festival }, data: { gigs: DATA.ARRAY } }),
       details: getFestivalDetails(festival)
     })
   );
