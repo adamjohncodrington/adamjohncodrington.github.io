@@ -1,5 +1,6 @@
 # TO DO LIST
 
+- make `travel` intelligently split by year
 - split `gigs` and `festivals`
 - reinstate all gig videos
 - make a dynamic `VideoCard` component
