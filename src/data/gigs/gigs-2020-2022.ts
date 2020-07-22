@@ -107,3 +107,56 @@ export const JON_HOPKINS: IGig = {
 //   dates: [new Date("2020-06-04"),
 //   company: FRIENDS.DARREN_TAYLOR,
 //   ticketType: TICKET_TYPES.DICE
+
+export const RATIONALE: IGig = {
+  headline: MUSICIANS.RATIONALE,
+  venue: MUSIC_VENUES.SHEPHERDS_BUSH_EMPIRE,
+  dates: [new Date("2021-04-28")],
+  company: [FRIENDS.DARREN_TAYLOR],
+  ticketType: TICKET_TYPES.SEE_TICKETS_POSTAL
+};
+
+export const JESSIE_WARE: IGig = {
+  headline: MUSICIANS.JESSIE_WARE,
+  venue: MUSIC_VENUES.BRIXTON_ACADEMY,
+  dates: [new Date("2021-04-26")],
+  company: [FRIENDS.DARREN_TAYLOR],
+  ticketType: TICKET_TYPES.TICKETWEB
+};
+
+export const ELLIE_GOULDING_2021: IGig = {
+  headline: MUSICIANS.ELLIE_GOULDING,
+  venue: MUSIC_VENUES.HAMMERSMITH_APOLLO,
+  dates: [new Date("2021-05-06")],
+  company: [FRIENDS.DAN_SPARROW],
+  ticketType: TICKET_TYPES.TICKETMASTER_POSTAL
+};
+
+export const THE_1975_2021: IGig = {
+  headline: MUSICIANS._1975_THE,
+  venue: MUSIC_VENUES.FINSBURY_PARK,
+  dates: [new Date("2021-07-10")],
+  company: [
+    FRIENDS.DAN_SPARROW,
+    FRIENDS.LEWIS_STEADMAN,
+    FRIENDS.JERRY_EDWARDS,
+    FRIENDS.CAITLIN_MCCAIG,
+    FRIENDS.COBY_BLACKBURN
+  ],
+  ticketType: TICKET_TYPES.TICKETMASTER_ETICKET
+};
+
+export const LADY_GAGA_2021: IGig = {
+  headline: MUSICIANS.LADY_GAGA,
+  venue: MUSIC_VENUES.TOTTENHAM_HOTSPUR_STADIUM,
+  dates: [new Date("2021-07-30")],
+  company: [FRIENDS.RYAN_MILLS, FRIENDS.DAN_SPARROW, FRIENDS.TOM_CHINDA_COUTTS]
+};
+
+export const SOPHIE_ELLIS_BEXTOR: IGig = {
+  headline: MUSICIANS.SOPHIE_ELLIS_BEXTOR,
+  venue: MUSIC_VENUES.LONDON_PALLADIUM,
+  dates: [new Date("2021-05-13")],
+  company: [FRIENDS.DARREN_TAYLOR],
+  ticketType: TICKET_TYPES.TICKETMASTER_POSTAL
+};

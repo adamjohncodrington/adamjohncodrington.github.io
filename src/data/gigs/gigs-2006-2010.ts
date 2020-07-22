@@ -1,0 +1,174 @@
+import { FRIENDS, MUSICIANS, MUSIC_VENUES } from "@constants";
+
+export const ALL_AMERICAN_REJECTS: IGig = {
+  headline: MUSICIANS.ALL_AMERICAN_REJECTS_THE,
+  dates: [new Date("2006-09-23")],
+  venue: MUSIC_VENUES.APOLLO_MANCHESTER,
+  company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON]
+};
+
+export const FOB_2007: IGig = {
+  headline: MUSICIANS.FALL_OUT_BOY,
+  support: [MUSICIANS.COBRA_STARSHIP],
+  dates: [new Date("2007-04-03")],
+  venue: MUSIC_VENUES.APOLLO_MANCHESTER,
+  company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON, FRIENDS.MEGAN_BLACKBURN]
+};
+
+export const KATE_NASH_2008: IGig = {
+  headline: MUSICIANS.KATE_NASH,
+  support: [MUSICIANS.BLACK_KIDS],
+  venue: MUSIC_VENUES.WOLVERHAMPTON_CIVIC_HALL,
+  company: [FRIENDS.DAD],
+  dates: [new Date("2008-03-01")]
+};
+
+export const PANIC_AT_THE_DISCO: IGig = {
+  headline: MUSICIANS.PANIC_AT_THE_DISCO,
+  support: [MUSICIANS.METRO_STATION],
+  venue: MUSIC_VENUES.ROCK_CITY,
+  company: [FRIENDS.MEGAN_BLACKBURN, FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON],
+  dates: [new Date("2008-03-15")],
+  favourite: true
+};
+
+export const ADELE_2008: IGig = {
+  headline: MUSICIANS.ADELE,
+  venue: MUSIC_VENUES.ALEXANDRA_THEATRE,
+  company: [FRIENDS.MUM],
+  dates: [new Date("2008-05-04")],
+  favourite: true
+};
+
+export const BOYS_LIKE_GIRLS: IGig = {
+  headline: MUSICIANS.BOYS_LIKE_GIRLS,
+  support: [MUSICIANS.WE_THE_KINGS, MUSICIANS.CUTE_IS_WHAT_WE_AIM_FOR],
+  venue: MUSIC_VENUES.ACADEMY_2_BIRMINGHAM,
+  company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON, FRIENDS.MEGAN_BLACKBURN],
+  dates: [new Date("2008-05-31")]
+};
+
+export const ACADEMY_IS: IGig = {
+  headline: MUSICIANS.ACADEMY_IS_THE,
+  support: [MUSICIANS.WE_THE_KINGS, MUSICIANS.MAINE_THE],
+  venue: MUSIC_VENUES.BARFLY_BIRMINGHAM,
+  company: [FRIENDS.MUM, FRIENDS.MEGAN_BLACKBURN, FRIENDS.EMMA_CODRINGTON],
+  dates: [new Date("2008-09-20")]
+};
+
+export const FALL_OUT_BOY_2008: IGig = {
+  headline: MUSICIANS.FALL_OUT_BOY,
+  support: [MUSICIANS.BOYS_LIKE_GIRLS, MUSICIANS.YOU_ME_AT_SIX],
+  venue: MUSIC_VENUES.NEC_ARENA_BIRMINGHAM,
+  dates: [new Date("2008-10-19")],
+  company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON, FRIENDS.MEGAN_BLACKBURN]
+};
+
+export const FALL_OUT_BOY_2009: IGig = {
+  headline: MUSICIANS.FALL_OUT_BOY,
+  support: [MUSICIANS.HEY_MONDAY, MUSICIANS.KIDS_IN_GLASS_HOUSES],
+  dates: [new Date("2009-03-05")],
+  company: [FRIENDS.MUM, FRIENDS.MEGAN_BLACKBURN, FRIENDS.EMMA_CODRINGTON],
+  venue: MUSIC_VENUES.ARENA_MANCHESTER
+};
+
+export const YOU_ME_AT_SIX_2009: IGig = {
+  headline: MUSICIANS.YOU_ME_AT_SIX,
+  support: [MUSICIANS.EMAROSA, MUSICIANS.SPILL_CANVAS_THE],
+  dates: [new Date("2009-03-07")],
+  venue: MUSIC_VENUES.ACADEMY_BIRMINGHAM,
+  company: [FRIENDS.MUM, FRIENDS.MEGAN_BLACKBURN, FRIENDS.EMMA_CODRINGTON]
+};
+
+export const KATY_PERRY_2009: IGig = {
+  headline: MUSICIANS.KATY_PERRY,
+  support: [MUSICIANS.SLIIMY],
+  favourite: true,
+  dates: [new Date("2009-08-25")],
+  venue: MUSIC_VENUES.ACADEMY_BIRMINGHAM,
+  company: [
+    FRIENDS.MUM,
+    FRIENDS.LOUISE_BLACKBURN,
+    FRIENDS.MEGAN_BLACKBURN,
+    FRIENDS.EMMA_CODRINGTON
+  ]
+};
+
+export const FLORENCE_2009: IGig = {
+  headline: MUSICIANS.FLORENCE_AND_THE_MACHINE,
+  support: [MUSICIANS.XX_THE],
+  venue: MUSIC_VENUES.ACADEMY_BIRMINGHAM,
+  dates: [new Date("2009-09-20")],
+  favourite: true,
+  company: [FRIENDS.DAD]
+};
+
+export const ALL_TIME_LOW: IGig = {
+  headline: MUSICIANS.ALL_TIME_LOW,
+  support: [MUSICIANS.FRIDAY_NIGHT_BOYS_THE, MUSICIANS.AUDITION_THE],
+  venue: MUSIC_VENUES.ACADEMY_BIRMINGHAM,
+  dates: [new Date("2009-10-02")],
+  company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON, FRIENDS.MEGAN_BLACKBURN]
+};
+
+export const ARCTIC_MONKEYS: IGig = {
+  headline: MUSICIANS.ARCTIC_MONKEYS,
+  dates: [new Date("2009-11-22")],
+  company: [FRIENDS.MUM, FRIENDS.DAD],
+  venue: MUSIC_VENUES.ARENA_NOTTINGHAM
+};
+
+export const PARAMORE_2009: IGig = {
+  headline: MUSICIANS.PARAMORE,
+  support: [MUSICIANS.YOU_ME_AT_SIX],
+  venue: MUSIC_VENUES.NIA_ARENA_BIRMINGHAM,
+  dates: [new Date("2009-12-11")],
+  company: [FRIENDS.MEGAN_BLACKBURN, FRIENDS.EMMA_CODRINGTON, FRIENDS.MUM]
+};
+
+export const YOU_ME_AT_SIX_2010: IGig = {
+  headline: MUSICIANS.YOU_ME_AT_SIX,
+  support: [MUSICIANS.WE_THE_KINGS, MUSICIANS.FOREVER_THE_SICKEST_KIDS],
+  venue: MUSIC_VENUES.ACADEMY_BIRMINGHAM,
+  dates: [new Date("2010-03-09")],
+  company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON, FRIENDS.MEGAN_BLACKBURN]
+};
+
+export const FLORENCE_2010: IGig = {
+  headline: MUSICIANS.FLORENCE_AND_THE_MACHINE,
+  support: [MUSICIANS.DRUMS_THE],
+  venue: MUSIC_VENUES.WOLVERHAMPTON_CIVIC_HALL,
+  company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON, FRIENDS.MUM],
+  dates: [new Date("2010-05-10")]
+};
+
+export const PALOMA_FAITH: IGig = {
+  headline: MUSICIANS.PALOMA_FAITH,
+  support: [MUSICIANS.ELIZA_DOOLITTLE],
+  venue: MUSIC_VENUES.DE_MONTFORT_HALL,
+  company: [FRIENDS.MUM],
+  dates: [new Date("2010-11-05")]
+};
+
+export const MARINA_2010: IGig = {
+  headline: MUSICIANS.MARINA,
+  venue: MUSIC_VENUES.TRENT_UNIVERSITY_NOTTINGHAM,
+  company: [FRIENDS.MUM],
+  dates: [new Date("2010-11-07")]
+};
+
+export const ELLIE_GOULDING_2010: IGig = {
+  headline: MUSICIANS.ELLIE_GOULDING,
+  support: [MUSICIANS.SUNDAY_GIRL],
+  venue: MUSIC_VENUES.ENGINE_SHED,
+  company: [FRIENDS.DAD],
+  dates: [new Date("2010-11-08")]
+};
+
+export const PARAMORE_2010: IGig = {
+  headline: MUSICIANS.PARAMORE,
+  support: [MUSICIANS.B_O_B],
+  venue: MUSIC_VENUES.SHEFFIELD_ARENA,
+  company: [FRIENDS.EMMA_CODRINGTON, FRIENDS.MEGAN_BLACKBURN, FRIENDS.MUM],
+  dates: [new Date("2010-11-11")]
+};
