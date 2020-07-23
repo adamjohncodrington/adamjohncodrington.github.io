@@ -1,9 +1,8 @@
 import { PAGE_SECTION_TITLES } from "@constants";
+import { TRAVEL as DATA } from "data";
+import { TRAVEL as FACTORY } from "factories";
 import { SVG, PHOTOS as photos, VIDEOS as videos } from "resources";
 import { isInFuture } from "utils";
-
-import { TRAVEL as DATA } from "data";
-import { FACTORY } from "./factory";
 
 const BUCKET_LIST: IPageSection = {
   SvgIcon: SVG.STARS,
@@ -86,7 +85,7 @@ const YEARS: Array<IPageSection> = DATA.YEARS.map(
   })
 );
 
-export const sections: Array<IPageSection> = [
+export const TRAVEL: Array<IPageSection> = [
   BUCKET_LIST,
   CITIES,
   COUNTRIES,
@@ -98,4 +97,4 @@ export const sections: Array<IPageSection> = [
   UP_NEXT,
   VIDEOS,
   ...YEARS
-].filter((pageSection: IPageSection): boolean => !pageSection.hide);
+];

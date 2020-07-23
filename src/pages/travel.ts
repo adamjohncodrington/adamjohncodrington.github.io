@@ -1,8 +1,7 @@
 import { SVG } from "resources";
+import { TRAVEL as sections } from "sections";
 
-import { sections } from "./sections";
-
-export const PAGE_TRAVEL: IPage = {
+export const TRAVEL: IPage = {
   title: "Travel",
   path: "/travel",
   SvgIcon: SVG.TRAVEL,

@@ -1,11 +1,10 @@
-import { COUNTRIES } from "@constants";
+import { COUNTRIES as countries } from "@constants";
+import { TRAVEL as DATA } from "data";
 import { getItemCounts } from "utils";
 
-import { TRAVEL as DATA } from "data";
+import { cities } from "./cities";
 
-import { CITIES } from "./cities";
-
-const bucketListCountries: Array<ICountryCounted> = Object.values(COUNTRIES)
+const bucketListCountries: Array<ICountryCounted> = Object.values(countries)
   .map(
     (country: ICountryTemplate): ICountryCounted => ({
       ...country,
@@ -30,7 +29,7 @@ const BUCKET_LIST_COUNTRIES: Array<ICountedListItem> = bucketListCountries.map(
   })
 );
 
-const bucketListCities: Array<ICityCounted> = Object.values(CITIES)
+const bucketListCities: Array<ICityCounted> = Object.values(cities)
   .map(
     (city: ICity): ICityCounted => ({
       ...city,
@@ -65,7 +64,7 @@ const BUCKET_LIST_CITIES: Array<ICountedListItem> = bucketListCities.map(
   })
 );
 
-export const BUCKET_LIST_ITEMS: Array<ICountedListItem> = [
+export const BUCKET_LIST: Array<ICountedListItem> = [
   ...BUCKET_LIST_COUNTRIES,
   ...BUCKET_LIST_CITIES
 ];

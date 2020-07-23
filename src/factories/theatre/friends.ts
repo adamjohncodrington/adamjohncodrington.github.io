@@ -11,8 +11,7 @@ const getTheatreVisitsMatchingFriend = (
   friend: IFriend
 ): Array<ITheatreVisit> => {
   const theatreVisitsMatchingFriend: Array<ITheatreVisit> = [];
-  const theatreVisits: Array<ITheatreVisit> = DATA;
-  theatreVisits.forEach((theatreVisit: ITheatreVisit): void => {
+  DATA.forEach((theatreVisit: ITheatreVisit): void => {
     if (theatreVisit.company.includes(friend))
       theatreVisitsMatchingFriend.push(theatreVisit);
   });

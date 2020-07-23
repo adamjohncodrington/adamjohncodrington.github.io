@@ -1,7 +1,6 @@
-import { FRIENDS } from "@constants";
-import { getItemCounts, getDatesText, isInFuture, getTripTitle } from "utils";
-
+import { FRIENDS as friends } from "@constants";
 import { TRAVEL as DATA } from "data";
+import { getItemCounts, getDatesText, isInFuture, getTripTitle } from "utils";
 
 const getTripsMatchingFriend = (friend: IFriend): Array<ITripLeg> => {
   const tripsMatchingFriend: Array<ITripLeg> = [];
@@ -28,9 +27,7 @@ const getFriendDetails = (friend: IFriend): Array<ICountedListItemDetail> => {
   );
 };
 
-export const FRIENDS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
-  FRIENDS
-)
+export const FRIENDS: Array<ICountedListItem> = Object.values(friends)
   .filter(({ travel }: IFriend): boolean => !!travel)
   .map(
     (friend: IFriend): ICountedListItem => ({

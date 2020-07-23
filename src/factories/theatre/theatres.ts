@@ -11,8 +11,7 @@ const getTheatreVisitsMatchingVenue = (
   theatre: ITheatre
 ): Array<ITheatreVisit> => {
   const theatreVisitsMatchingVenue: Array<ITheatreVisit> = [];
-  const theatreVisits: Array<ITheatreVisit> = DATA;
-  theatreVisits.forEach((theatreVisit: ITheatreVisit): void => {
+  DATA.forEach((theatreVisit: ITheatreVisit): void => {
     if (theatreVisit.theatre === theatre)
       theatreVisitsMatchingVenue.push(theatreVisit);
   });

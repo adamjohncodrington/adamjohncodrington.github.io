@@ -9,8 +9,7 @@ import {
 
 const getTheatreVisitsMatchingActor = (actor: IActor): Array<ITheatreVisit> => {
   const theatreVisitsMatchingActor: Array<ITheatreVisit> = [];
-  const theatreVisits: Array<ITheatreVisit> = DATA;
-  theatreVisits.forEach((theatreVisit: ITheatreVisit): void => {
+  DATA.forEach((theatreVisit: ITheatreVisit): void => {
     const { cast } = theatreVisit;
     if (cast && cast.includes(actor))
       theatreVisitsMatchingActor.push(theatreVisit);

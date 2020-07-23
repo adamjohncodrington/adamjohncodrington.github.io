@@ -1,30 +1,29 @@
-import { COUNTRIES } from "@constants";
-import { getItemCounts } from "utils";
-
+import { COUNTRIES as countries } from "@constants";
 import { TRAVEL as DATA } from "data";
+import { getItemCounts } from "utils";
 
 const generateIslands = (): { [island: string]: IIsland } => {
   let islands = {};
-  Object.values(COUNTRIES).forEach((country: ICountryTemplate): void => {
+  Object.values(countries).forEach((country: ICountryTemplate): void => {
     if (country.islands) islands = { ...islands, ...country.islands };
   });
   return islands;
 };
 
-export const ISLANDS = generateIslands();
+const islands = generateIslands();
 
 const islandsThatAreCountries: Array<ICountryTemplate> = Object.values(
-  COUNTRIES
+  countries
 ).filter(({ island }: ICountryTemplate): boolean => !!island);
 
-const islandsThatAreNotCountries: Array<IIsland> = Object.values(ISLANDS);
+const islandsThatAreNotCountries: Array<IIsland> = Object.values(islands);
 
 const islandsAll: Array<IIsland> = [
   ...islandsThatAreCountries,
   ...islandsThatAreNotCountries
 ];
 
-export const ISLANDS_LIST_ITEMS: Array<ICountedListItem> = islandsAll.map(
+export const ISLANDS: Array<ICountedListItem> = islandsAll.map(
   (island: IIsland): ICountedListItem => {
     const { name, insignificant } = island;
     return {

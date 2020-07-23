@@ -1,4 +1,5 @@
-import { COUNTRIES } from "@constants";
+import { COUNTRIES as countries } from "@constants";
+import { TRAVEL as DATA } from "data";
 import {
   getItemCounts,
   countryMatchExists,
@@ -8,8 +9,6 @@ import {
   getTripSubtitle,
   detailsContainsFavourite
 } from "utils";
-
-import { TRAVEL as DATA } from "data";
 
 const getTripsMatchingCountry = (
   country: ICountryTemplate
@@ -49,9 +48,7 @@ const getCountryDetails = (
   );
 };
 
-export const COUNTRIES_LIST_ITEMS: Array<ICountedListItem> = Object.values(
-  COUNTRIES
-).map(
+export const COUNTRIES: Array<ICountedListItem> = Object.values(countries).map(
   (country: ICountryTemplate): ICountedListItem => {
     const details: Array<ICountedListItemDetail> = getCountryDetails(country);
     return {

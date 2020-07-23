@@ -4,7 +4,7 @@
 - reinstate all `festivals` functionality!!!
 - make gig date prop singular, make festival dates prop `start/end`?
 - move `vinyls` to `DATA`
-- add `section` alphabetising at `page` level
+- add `section` alphabetising at `page` level and removing of `hide` sections, e.g. theme parks
 
 - reinstate all gig videos
 - make `travel` intelligently split by year

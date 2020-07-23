@@ -27,8 +27,7 @@ const playIsFavourited = ({
 
 const getTheatreVisitsMatchingPlay = (play: IPlay): Array<ITheatreVisit> => {
   const theatreVisitsMatchingPlay: Array<ITheatreVisit> = [];
-  const theatreVisits: Array<ITheatreVisit> = DATA;
-  theatreVisits.forEach((theatreVisit: ITheatreVisit): void => {
+  DATA.forEach((theatreVisit: ITheatreVisit): void => {
     if (theatreVisit.play === play)
       theatreVisitsMatchingPlay.push(theatreVisit);
   });
