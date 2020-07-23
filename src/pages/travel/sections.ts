@@ -1,11 +1,11 @@
 import { PAGE_SECTION_TITLES } from "@constants";
-import { SVG, PHOTOS, VIDEOS } from "resources";
+import { SVG, PHOTOS as photos, VIDEOS as videos } from "resources";
 import { isInFuture } from "utils";
 
 import { DATA } from "./data";
 import { FACTORY } from "./factory";
 
-const BUCKET_LIST_TRAVEL: IPageSection = {
+const BUCKET_LIST: IPageSection = {
   SvgIcon: SVG.STARS,
   title: PAGE_SECTION_TITLES.BUCKET_LIST,
   data: { countedListItems: FACTORY.BUCKET_LIST }
@@ -28,7 +28,7 @@ const COUNTRIES: IPageSection = {
   count: FACTORY.COUNTRIES.length
 };
 
-const FRIENDS_TRAVEL: IPageSection = {
+const FRIENDS: IPageSection = {
   SvgIcon: SVG.PEOPLE,
   title: PAGE_SECTION_TITLES.FRIENDS,
   data: { countedListItems: FACTORY.FRIENDS }
@@ -54,27 +54,27 @@ const THEME_PARKS: IPageSection = {
   count: FACTORY.THEME_PARKS.length
 };
 
-const UP_NEXT_TRAVEL: IPageSection = {
+const UP_NEXT: IPageSection = {
   SvgIcon: SVG.NOTEPAD,
   title: PAGE_SECTION_TITLES.UP_NEXT,
   data: { trips: FACTORY.UP_NEXT }
 };
 
-const VIDEOS_TRAVEL: IPageSection = {
+const VIDEOS: IPageSection = {
   SvgIcon: SVG.VIDEO_CAMERA,
   title: PAGE_SECTION_TITLES.VIDEOS,
-  data: { videos: Object.values(VIDEOS.TRAVEL) }
+  data: { videos: Object.values(videos.TRAVEL) }
 };
 
-const PHOTOS_TRAVEL: IPageSection = {
+const PHOTOS: IPageSection = {
   SvgIcon: SVG.CAMERA,
   title: PAGE_SECTION_TITLES.PHOTOS,
   data: {
-    photoGrid: { photos: Object.values(PHOTOS.TRAVEL).flat(), columnCount: 4 }
+    photoGrid: { photos: Object.values(photos.TRAVEL).flat(), columnCount: 4 }
   }
 };
 
-const SECTIONS_YEARS: Array<IPageSection> = DATA.SPLIT_BY_YEAR.map(
+const YEARS: Array<IPageSection> = DATA.SPLIT_BY_YEAR.map(
   (year: Array<ITrip>): IPageSection => ({
     title: year[0][0].dates[0].getFullYear().toString(),
     count: year.length,
@@ -87,15 +87,15 @@ const SECTIONS_YEARS: Array<IPageSection> = DATA.SPLIT_BY_YEAR.map(
 );
 
 export const sections: Array<IPageSection> = [
-  BUCKET_LIST_TRAVEL,
+  BUCKET_LIST,
   CITIES,
   COUNTRIES,
-  FRIENDS_TRAVEL,
+  FRIENDS,
   HIGHLIGHTS,
   ISLANDS,
   THEME_PARKS,
-  PHOTOS_TRAVEL,
-  UP_NEXT_TRAVEL,
-  VIDEOS_TRAVEL,
-  ...SECTIONS_YEARS
+  PHOTOS,
+  UP_NEXT,
+  VIDEOS,
+  ...YEARS
 ].filter((pageSection: IPageSection): boolean => !pageSection.hide);

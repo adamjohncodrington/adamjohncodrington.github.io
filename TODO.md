@@ -4,6 +4,7 @@
 - reinstate all `festivals` functionality!!!
 - make gig date prop singular, make festival dates prop `start/end`?
 - move `vinyls` to `DATA`
+- add `section` alphabetising at `page` level
 
 - reinstate all gig videos
 - make `travel` intelligently split by year
@@ -12,6 +13,7 @@
 
 ## Enhancements
 
+- split festivals into `IDayFestival`, `IMultiDayFestival`, `INightOut`, etc.
 - beef up POLE section
 - make a dynamic `VideoCard` component
 - add Apple Music links and details to Vinyl `artists` section

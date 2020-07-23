@@ -93,3 +93,37 @@ export const splitGigsIntoYears = (gigs: Array<IGig>): Array<Array<IGig>> => {
 
   return gigsSplitIntoYears;
 };
+
+export const splitTripsIntoYears = (
+  trips: Array<ITrip>
+): Array<Array<ITrip>> => {
+  const filteredTrips: Array<ITrip> = trips.filter(
+    (trip: ITrip): boolean => !isInFuture(trip[0].dates[0])
+  );
+
+  const sortedTrips: Array<ITrip> = filteredTrips.sort(
+    (a: ITrip, b: ITrip): number =>
+      a[0].dates[0].valueOf() > b[0].dates[0].valueOf() ? 1 : -1
+  );
+
+  const tripsSplitIntoYears: Array<Array<ITrip>> = [];
+
+  let arrayIndex: number = 0;
+  let arrayYear: number = sortedTrips[0][0].dates[0].getFullYear();
+
+  sortedTrips.forEach((trip: ITrip): void => {
+    const tripYear: number = trip[0].dates[0].getFullYear();
+
+    if (tripYear !== arrayYear) {
+      arrayIndex += 1;
+      arrayYear = tripYear;
+    }
+
+    if (!tripsSplitIntoYears[arrayIndex]) {
+      tripsSplitIntoYears[arrayIndex] = [];
+    }
+    tripsSplitIntoYears[arrayIndex].push(trip);
+  });
+
+  return tripsSplitIntoYears;
+};

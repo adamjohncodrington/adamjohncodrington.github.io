@@ -1,11 +1,5 @@
-import { TRAVEL_1997 } from "./travel-1997";
-import { TRAVEL_1998 } from "./travel-1998";
-import { TRAVEL_1999 } from "./travel-1999";
-import { TRAVEL_2000 } from "./travel-2000";
-import { TRAVEL_2001 } from "./travel-2001";
-import { TRAVEL_2002 } from "./travel-2002";
-import { TRAVEL_2003 } from "./travel-2003";
-import { TRAVEL_2004 } from "./travel-2004";
+import * as travel1997_2004 from "./travel-1997-2004";
+
 import { TRAVEL_2005 } from "./travel-2005";
 import { TRAVEL_2006 } from "./travel-2006";
 import { TRAVEL_2007 } from "./travel-2007";
@@ -22,16 +16,12 @@ import { TRAVEL_2017 } from "./travel-2017";
 import { TRAVEL_2018 } from "./travel-2018";
 import { TRAVEL_2019 } from "./travel-2019";
 import { TRAVEL_2020 } from "./travel-2020";
+import { splitTripsIntoYears } from "utils";
+
+const TRAVEL_1997_2004: Array<ITrip> = Object.values(travel1997_2004);
 
 const ALL: Array<ITrip> = [
-  ...TRAVEL_1997,
-  ...TRAVEL_1998,
-  ...TRAVEL_1999,
-  ...TRAVEL_2000,
-  ...TRAVEL_2001,
-  ...TRAVEL_2002,
-  ...TRAVEL_2003,
-  ...TRAVEL_2004,
+  ...TRAVEL_1997_2004,
   ...TRAVEL_2005,
   ...TRAVEL_2006,
   ...TRAVEL_2007,
@@ -48,42 +38,10 @@ const ALL: Array<ITrip> = [
   ...TRAVEL_2018,
   ...TRAVEL_2019,
   ...TRAVEL_2020
-].sort((a: ITrip, b: ITrip): number =>
-  a[0].dates[0].valueOf() > b[0].dates[0].valueOf() ? 1 : -1
-);
+];
 
 const ALL_FLAT: Array<ITripLeg> = ALL.flat();
 
-const SPLIT_BY_YEAR: Array<Array<ITrip>> = [
-  TRAVEL_1997,
-  TRAVEL_1998,
-  TRAVEL_1999,
-  TRAVEL_2000,
-  TRAVEL_2001,
-  TRAVEL_2002,
-  TRAVEL_2003,
-  TRAVEL_2004,
-  TRAVEL_2005,
-  TRAVEL_2006,
-  TRAVEL_2007,
-  TRAVEL_2008,
-  TRAVEL_2009,
-  TRAVEL_2010,
-  TRAVEL_2011,
-  TRAVEL_2012,
-  TRAVEL_2013,
-  TRAVEL_2014,
-  TRAVEL_2015,
-  TRAVEL_2016,
-  TRAVEL_2017,
-  TRAVEL_2018,
-  TRAVEL_2019,
-  TRAVEL_2020
-].map(
-  (year: Array<ITrip>): Array<ITrip> =>
-    year.sort((a: ITrip, b: ITrip): number =>
-      a[0].dates[0].valueOf() > b[0].dates[0].valueOf() ? 1 : -1
-    )
-);
+const SPLIT_BY_YEAR: Array<Array<ITrip>> = splitTripsIntoYears(ALL);
 
 export const DATA = { ALL, ALL_FLAT, SPLIT_BY_YEAR };
