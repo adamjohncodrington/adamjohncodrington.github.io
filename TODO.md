@@ -4,7 +4,6 @@
 - reinstate all `festivals` functionality!!!
   - years
   - festivals
-  - bucket list
   - venues
   - up next
 
