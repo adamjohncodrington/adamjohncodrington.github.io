@@ -19,16 +19,16 @@ const THEME_NAV_BAR: IThemeNavBar = {
   background: COLORS.black,
   icon: {
     color: COLORS.white,
-    size: "40px",
+    size: "36px",
     defaultHoverColor: "#aaa",
     hoverShrinkSize: "0"
   },
-  padding: { vertical: "10px" }
+  padding: { vertical: "8px" }
 };
 
 const THEME_PAGE_HEADER: IThemePageHeader = {
   count: { padding: { all: "12px 0 0 5px" } },
-  margin: { bottom: "25px" }
+  margin: { bottom: "20px" }
 };
 
 const THEME_PAGE_SECTION: IThemePageSection = {
@@ -36,13 +36,13 @@ const THEME_PAGE_SECTION: IThemePageSection = {
   borderRadius: "10px",
   boxShadow: `0 1px 2px ${rgba(COLORS.gray, 0.5)}`,
   comingSoon: { fontSize: FONT_SIZES.L },
-  count: { margin: { left: "5px" } },
+  count: { margin: { left: "7px" } },
   header: { padding: { vertical: "12px" } },
   icon: { size: "32px" },
   margin: { bottom: "20px" },
   padding: { horizontal: "12px", bottom: "5px" },
   panelList: {
-    border: { bottom: `0.5px dashed ${rgba("black", 0.25)}` },
+    border: { bottom: `1px dashed ${rgba("black", 0.25)}` },
     countedListItems: { padding: { vertical: "5px" } },
     padding: { bottom: "5px" },
     recipes: {

@@ -81,7 +81,7 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
             <EventCard
               {...theatreVisit}
               title={getTheatreVisitTitle(theatreVisit)}
-              subtitle={getTheatreVisitSubtitle(theatreVisit)}
+              // subtitle={getTheatreVisitSubtitle(theatreVisit)}
               body={moveTheSuffixToPrefix(theatreVisit.theatre.name)}
               secondaryBody={getDateText(theatreVisit.date)}
             />
@@ -94,7 +94,7 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
             <EventCard
               {...trip}
               title={getTripTitle(trip)}
-              subtitle={getTripSubtitle(trip)}
+              // subtitle={getTripSubtitle(trip)}
               secondaryBody={getTripBody(trip)}
               body={getDatesText(trip.dates)}
             />
