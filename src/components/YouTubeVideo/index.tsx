@@ -1,24 +1,30 @@
 import React from "react";
+import styled from "styled-components";
+
+export const StyledVideoContainer = styled.div`
+  margin-top: 5px;
+`;
 
 export const YouTubeVideo: React.FC<IVideo> = ({ youtubeId, quality }) => {
-  const URL_VIDEO_QUALITY: string | undefined =
+  const urlVideoQuality: string | undefined =
     quality === "720p" ? "VQ=HD720" : "1080p" ? "VQ=HD1080" : undefined;
 
-  const URL_SUFFIX: string | undefined = URL_VIDEO_QUALITY
-    ? "?" + URL_VIDEO_QUALITY
+  const urlSuffix: string | undefined = urlVideoQuality
+    ? "?" + urlVideoQuality
     : undefined;
 
-  const VIDEO_SRC: string =
-    "https://www.youtube.com/embed/" + youtubeId + URL_SUFFIX;
+  const src: string = "https://www.youtube.com/embed/" + youtubeId + urlSuffix;
 
   return (
-    <iframe
-      title={youtubeId}
-      width="100%"
-      src={VIDEO_SRC}
-      frameBorder="0"
-      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-      allowFullScreen
-    />
+    <StyledVideoContainer>
+      <iframe
+        title={youtubeId}
+        width="100%"
+        src={src}
+        frameBorder="0"
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      />
+    </StyledVideoContainer>
   );
 };

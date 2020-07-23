@@ -1,13 +1,14 @@
 # TO DO LIST
 
 - reinstate all `festivals` functionality!!!
-- make gig date prop singular, make festival dates prop `start/end`?
-- add `section` alphabetising at `page` level and removing of `hide` sections, e.g. theme parks
+- reinstate musician details
 
+- implement sorting at `PageSectionLayout` level
+- 
 - reinstate all gig videos
+- make gig date prop singular, make festival dates prop `start/end`?
 - make `travel` intelligently split by year
-- totally rewrite `travel`
-- move `formatCountedListItems` implementation to UI component
+- totally refactor `travel`
 
 ## Enhancements
 

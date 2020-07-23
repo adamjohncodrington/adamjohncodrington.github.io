@@ -182,6 +182,7 @@ interface IGig extends IGigAndFestival, I_Dates {
 interface IGigCard extends IGigAndFestival {
   title: string;
   subtitle?: string;
+  dates: Array<IDate>;
   musicians: Array<IMusician>;
 }
 
