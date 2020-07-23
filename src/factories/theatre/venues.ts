@@ -18,7 +18,6 @@ const getTheatreVenueDetails = (
     (theatreVisit: ITheatreVisit, index: number): ICountedListItemDetail => {
       const { date } = theatreVisit;
       return {
-        index: theatreMatches.length > 1 ? index + 1 : undefined,
         mainText: [moveTheSuffixToPrefix(theatreVisit.play.name)],
         dates: [date]
       };

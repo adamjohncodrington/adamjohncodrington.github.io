@@ -27,7 +27,6 @@ const getCountryDetails = (
       const tripTitle: string = getTripTitle(trip);
       const tripSubtitle: string | undefined = getTripSubtitle(trip);
       return {
-        index: countryMatches.length > 1 ? index + 1 : undefined,
         mainText: !tripTitle.includes(country.name)
           ? [tripTitle]
           : tripSubtitle

@@ -13,13 +13,9 @@ const getFriendMatches = (friend: IFriend): Array<ITheatreVisit> => {
 const getFriendDetails = (friend: IFriend): Array<ICountedListItemDetail> => {
   const friendMatches: Array<ITheatreVisit> = getFriendMatches(friend);
   return friendMatches.map(
-    (theatreVisit: ITheatreVisit, index: number): ICountedListItemDetail => {
+    (theatreVisit: ITheatreVisit): ICountedListItemDetail => {
       const { date } = theatreVisit;
-      return {
-        index: friendMatches.length > 1 ? index + 1 : undefined,
-        mainText: [getTheatreVisitTitle(theatreVisit)],
-        dates: [date]
-      };
+      return { mainText: [getTheatreVisitTitle(theatreVisit)], dates: [date] };
     }
   );
 };

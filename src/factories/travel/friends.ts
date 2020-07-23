@@ -17,7 +17,6 @@ const getFriendDetails = (friend: IFriend): Array<ICountedListItemDetail> => {
     (trip: ITripLeg, index: number): ICountedListItemDetail => {
       const { dates, video } = trip;
       return {
-        index: tripsMatchingFriend.length > 1 ? index + 1 : undefined,
         mainText: [getTripTitle(trip)],
         dates,
         video

@@ -1,6 +1,5 @@
 # TO DO LIST
 
-- fix `CountedListItem` detail sorting
 - reinstate all `festivals` functionality!!!
   - years
   - festivals

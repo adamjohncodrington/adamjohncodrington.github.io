@@ -31,10 +31,9 @@ const getPlayMatches = (play: IPlay): Array<ITheatreVisit> => {
 const getPlayDetails = (play: IPlay): Array<ICountedListItemDetail> => {
   const playMatches: Array<ITheatreVisit> = getPlayMatches(play);
   return playMatches.map(
-    (theatreVisit: ITheatreVisit, index: number): ICountedListItemDetail => {
+    (theatreVisit: ITheatreVisit): ICountedListItemDetail => {
       const { date } = theatreVisit;
       return {
-        index: playMatches.length > 1 ? index + 1 : undefined,
         mainText: [moveTheSuffixToPrefix(theatreVisit.theatre.name)],
         dates: [date]
       };

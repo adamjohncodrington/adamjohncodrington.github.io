@@ -99,7 +99,6 @@ interface IVideo extends I_OrientationQuality {
 
 interface ICountedListItemDetail extends I__Favourite {
   video?: IVideo;
-  index?: number;
   mainText?: Array<string>;
   dates: Array<Date>;
 }

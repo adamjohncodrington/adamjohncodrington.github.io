@@ -24,7 +24,6 @@ export const TO_BE_FIXED: string = "TO BE FIXED";
 //     (gig: IGig, index: number): ICountedListItemDetail => {
 //       const { dates, video } = gig;
 //       return {
-//         index: gigsMatchingFestival.length > 1 ? index + 1 : undefined,
 //         mainText: [getGigSubtitle(gig) || "TBC"],
 //         dates,
 //         video

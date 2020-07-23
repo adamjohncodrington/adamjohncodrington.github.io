@@ -16,13 +16,7 @@ const getFriendDetails = (friend: IFriend): Array<ICountedListItemDetail> => {
   return friendMatches.map(
     (gigOrFestival: IGigOrFestival, index: number): ICountedListItemDetail => {
       const { title, dates, video, favourite } = gigOrFestival;
-      return {
-        index: friendMatches.length > 1 ? index + 1 : undefined,
-        mainText: [title],
-        dates,
-        favourite,
-        video
-      };
+      return { mainText: [title], dates, favourite, video };
     }
   );
 };

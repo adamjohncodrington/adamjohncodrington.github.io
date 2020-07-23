@@ -22,12 +22,7 @@ const getMusicVenueDetails = (
   return musicVenueMatches.map(
     (gigOrFestival: IGigOrFestival, index: number): ICountedListItemDetail => {
       const { title, dates, video } = gigOrFestival;
-      return {
-        index: musicVenueMatches.length > 1 ? index + 1 : undefined,
-        mainText: [title],
-        dates,
-        video
-      };
+      return { mainText: [title], dates, video };
     }
   );
 };

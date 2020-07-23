@@ -14,13 +14,9 @@ const getActorMatches = (actor: IActor): Array<ITheatreVisit> => {
 const getActorDetails = (actor: IActor): Array<ICountedListItemDetail> => {
   const actorMatches: Array<ITheatreVisit> = getActorMatches(actor);
   return actorMatches.map(
-    (theatreVisit: ITheatreVisit, index: number): ICountedListItemDetail => {
+    (theatreVisit: ITheatreVisit): ICountedListItemDetail => {
       const { date } = theatreVisit;
-      return {
-        index: actorMatches.length > 1 ? index + 1 : undefined,
-        mainText: [getTheatreVisitTitle(theatreVisit)],
-        dates: [date]
-      };
+      return { mainText: [getTheatreVisitTitle(theatreVisit)], dates: [date] };
     }
   );
 };

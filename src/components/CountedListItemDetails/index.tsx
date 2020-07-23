@@ -15,7 +15,11 @@ import {
 } from "./styles";
 import { YouTubeVideo } from "components/YouTubeVideo";
 
-export const CountedListItemDetail: React.FC<ICountedListItemDetail> = ({
+interface ICountedListItemDetailIndexed extends ICountedListItemDetail {
+  index?: number;
+}
+
+export const CountedListItemDetail: React.FC<ICountedListItemDetailIndexed> = ({
   index,
   mainText,
   dates,
@@ -56,7 +60,11 @@ export const CountedListItemDetails: React.FC<ICountedListItemDetails> = ({
 }) => (
   <StyledOl>
     {details.map((detail: ICountedListItemDetail, index: number) => (
-      <CountedListItemDetail key={index} {...detail} />
+      <CountedListItemDetail
+        key={index}
+        index={details.length > 1 ? index + 1 : undefined}
+        {...detail}
+      />
     ))}
   </StyledOl>
 );

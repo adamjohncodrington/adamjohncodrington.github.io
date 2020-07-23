@@ -54,7 +54,6 @@ import {
 //       }: IGig,
 //       index: number
 //     ): ICountedListItemDetail => ({
-//       index: gigsMatchingMusician.length > 1 ? index + 1 : undefined,
 //       mainText: [
 //         // festival ? festival.name :
 //         moveTheSuffixToPrefix(venue.name)
