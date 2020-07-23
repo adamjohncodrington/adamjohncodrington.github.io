@@ -1,7 +1,7 @@
 import { isInFuture } from "./basic";
 
 interface IGetItemCounts {
-  data: IPageSectionDataTypes;
+  data: IPageSectionDataTypesExtended;
   item: {
     actor?: IActor;
     attraction?: IAttraction;
@@ -17,7 +17,7 @@ interface IGetItemCounts {
   };
 }
 
-//TODO: merge these 3
+//TODO: merge these 3 functions
 export const countryMatchExists = (
   country: ICountryTemplate,
   trip: ITripLeg

@@ -5,7 +5,7 @@ import { Ul, Li, GridColumnDiv } from "primitives";
 import {
   replaceSpacesWithDashes,
   useMediaQueries,
-  pageSectionHasData
+  validPageSectionData
 } from "utils";
 
 import { PageSection } from "../PageSection";
@@ -27,7 +27,7 @@ export const PageSectionsLayout: FC<IPageSectionsLayout> = ({
   );
 
   const datafulPageSections: Array<IPageSection> = unhiddenPageSections.filter(
-    (pageSection: IPageSection): boolean => pageSectionHasData(pageSection)
+    ({ data }: IPageSection): boolean => validPageSectionData(data)
   );
 
   const validPageSectionCount: number = datafulPageSections.length;

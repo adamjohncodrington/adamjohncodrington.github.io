@@ -38,7 +38,7 @@ const SOLO: IPageSection = {
 const FAVOURITES: IPageSection = {
   SvgIcon: SVG.HEART,
   title: PAGE_SECTION_TITLES.FAVOURITES,
-  data: { gigs: FACTORY.FAVOURITES }
+  data: { gigsAndFestivals: FACTORY.FAVOURITES }
 };
 
 const UP_NEXT: IPageSection = {

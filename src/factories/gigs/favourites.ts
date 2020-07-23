@@ -1,9 +1,9 @@
-import { GIGS as DATA } from "data";
+import { GIGS_AND_FESTIVALS as DATA } from "data";
 
-export const FAVOURITES: Array<IGig> = DATA.filter(
-  ({ favourite }: IGig): boolean => !!favourite
+export const FAVOURITES: Array<IGigOrFestival> = DATA.filter(
+  ({ favourite }: IGigOrFestival): boolean => !!favourite
 ).map(
-  (gig: IGig): IGig => ({
+  (gig: IGigOrFestival): IGigOrFestival => ({
     ...gig,
     hideFavouriteIcon: true,
     hideSubtitle: true,

@@ -152,14 +152,17 @@ interface IPageSectionDataTypes {
   comingSoon?: boolean;
   countedListItems?: Array<ICountedListItem>;
   photoGrid?: { photos: Array<IPhoto>; columnCount: number };
-  festivals?: Array<IFestival>;
-  gigs?: Array<IGig>;
   gigsAndFestivals?: Array<IGigOrFestival>;
   recipes?: Array<IRecipe>;
   theatreVisits?: Array<ITheatreVisit>;
   trips?: Array<ITripLeg>;
   videoCards?: Array<IVideoCard>;
   vinylCards?: IVinylCards;
+}
+
+interface IPageSectionDataTypesExtended extends IPageSectionDataTypes {
+  festivals?: Array<IFestival>;
+  gigs?: Array<IGig>;
 }
 
 interface IPageSection extends IPageSectionDisclosure {
