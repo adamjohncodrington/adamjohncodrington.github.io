@@ -1,9 +1,9 @@
 import { POLE_STUDIOS as studios } from "@constants";
 
 export const STUDIOS: Array<ICountedListItem> = Object.values(studios).map(
-  ({ name, branch }: IPoleStudio): ICountedListItem => ({
+  ({ name, location }: IPoleStudio): ICountedListItem => ({
     text: name,
-    secondaryText: branch,
+    secondaryText: location,
     countInfoIrrelevant: true,
     pastCount: 0,
     futureCount: 0

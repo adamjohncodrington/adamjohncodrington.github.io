@@ -2,7 +2,7 @@ import { PAGE_SECTION_TITLES } from "@constants";
 import { SVG, PHOTOS as photos, VIDEOS as videos } from "resources";
 import { isInFuture } from "utils";
 
-import { DATA } from "./data";
+import { TRAVEL as DATA } from "data";
 import { FACTORY } from "./factory";
 
 const BUCKET_LIST: IPageSection = {
@@ -74,7 +74,7 @@ const PHOTOS: IPageSection = {
   }
 };
 
-const YEARS: Array<IPageSection> = DATA.SPLIT_BY_YEAR.map(
+const YEARS: Array<IPageSection> = DATA.YEARS.map(
   (year: Array<ITrip>): IPageSection => ({
     title: year[0][0].dates[0].getFullYear().toString(),
     count: year.length,

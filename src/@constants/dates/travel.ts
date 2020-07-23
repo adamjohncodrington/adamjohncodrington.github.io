@@ -1,8 +1,3 @@
-interface IStartEndDate {
-  start: Date;
-  end: Date;
-}
-
 export const ECUADOR: IStartEndDate = {
   start: new Date("2016-10-03"),
   end: new Date("2016-10-16")

@@ -128,6 +128,11 @@ interface ICountedListItem
   details?: Array<ICountedListItemDetail>;
 }
 
+interface IStartEndDate {
+  start: Date;
+  end: Date;
+}
+
 interface IPageSectionDisclosure extends IOnlyHeaderClicable {
   autoExpandAlways?: boolean;
   autoExpandIf2Columns?: boolean;
@@ -192,7 +197,7 @@ interface IGigVideo extends IVideo {
 
 interface IPoleStudio {
   name: string;
-  branch?: string;
+  location?: string;
 }
 
 interface IPoleInstructor extends IPerson {

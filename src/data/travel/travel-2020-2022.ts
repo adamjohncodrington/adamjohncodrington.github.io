@@ -1,7 +1,7 @@
 import { FRIENDS, COUNTRIES } from "@constants";
 import { PHOTOS } from "resources";
 
-const OSLO: ITrip = [
+export const OSLO: ITrip = [
   {
     primaryLocations: [COUNTRIES.NORWAY.cities.OSLO],
     country: COUNTRIES.NORWAY,
@@ -19,5 +19,3 @@ const OSLO: ITrip = [
     photos: PHOTOS.TRAVEL.OSLO
   }
 ];
-
-export const TRAVEL_2020: Array<ITrip> = [OSLO];

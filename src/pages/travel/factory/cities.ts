@@ -1,7 +1,7 @@
 import { COUNTRIES } from "@constants";
 import { getItemCounts } from "utils";
 
-import { DATA } from "../data";
+import { TRAVEL as DATA } from "data";
 
 const generateCities = (): { [city: string]: ICity } => {
   let cities = {};
@@ -22,7 +22,7 @@ export const CITIES_LIST_ITEMS: Array<ICountedListItem> = Object.values(
       text: name,
       star: capital,
       countInfoIrrelevant: insignificant,
-      ...getItemCounts({ item: { city }, data: { trips: DATA.ALL_FLAT } })
+      ...getItemCounts({ item: { city }, data: { trips: DATA.TRIP_LEGS } })
     };
   }
 );

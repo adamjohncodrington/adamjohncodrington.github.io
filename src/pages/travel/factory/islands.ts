@@ -1,7 +1,7 @@
 import { COUNTRIES } from "@constants";
 import { getItemCounts } from "utils";
 
-import { DATA } from "../data";
+import { TRAVEL as DATA } from "data";
 
 const generateIslands = (): { [island: string]: IIsland } => {
   let islands = {};
@@ -30,7 +30,7 @@ export const ISLANDS_LIST_ITEMS: Array<ICountedListItem> = islandsAll.map(
     return {
       text: name,
       countInfoIrrelevant: insignificant,
-      ...getItemCounts({ item: { island }, data: { trips: DATA.ALL_FLAT } })
+      ...getItemCounts({ item: { island }, data: { trips: DATA.TRIP_LEGS } })
     };
   }
 );

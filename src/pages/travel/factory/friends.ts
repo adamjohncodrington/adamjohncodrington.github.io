@@ -1,11 +1,11 @@
 import { FRIENDS } from "@constants";
 import { getItemCounts, getDatesText, isInFuture, getTripTitle } from "utils";
 
-import { DATA } from "../data";
+import { TRAVEL as DATA } from "data";
 
 const getTripsMatchingFriend = (friend: IFriend): Array<ITripLeg> => {
   const tripsMatchingFriend: Array<ITripLeg> = [];
-  const trips: Array<ITripLeg> = DATA.ALL_FLAT;
+  const trips: Array<ITripLeg> = DATA.TRIP_LEGS;
   trips.forEach((trip: ITripLeg): void => {
     if (trip.company.includes(friend)) tripsMatchingFriend.push(trip);
   });
@@ -35,7 +35,7 @@ export const FRIENDS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
   .map(
     (friend: IFriend): ICountedListItem => ({
       text: friend.name,
-      ...getItemCounts({ item: { friend }, data: { trips: DATA.ALL_FLAT } }),
+      ...getItemCounts({ item: { friend }, data: { trips: DATA.TRIP_LEGS } }),
       details: getFriendDetails(friend)
     })
   );

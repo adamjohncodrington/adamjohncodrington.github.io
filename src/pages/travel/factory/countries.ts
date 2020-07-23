@@ -9,13 +9,13 @@ import {
   detailsContainsFavourite
 } from "utils";
 
-import { DATA } from "../data";
+import { TRAVEL as DATA } from "data";
 
 const getTripsMatchingCountry = (
   country: ICountryTemplate
 ): Array<ITripLeg> => {
   const tripsMatchingCountry: Array<ITripLeg> = [];
-  const trips: Array<ITripLeg> = DATA.ALL_FLAT;
+  const trips: Array<ITripLeg> = DATA.TRIP_LEGS;
   trips.forEach((trip: ITripLeg): void => {
     if (countryMatchExists(country, trip)) tripsMatchingCountry.push(trip);
   });
@@ -57,7 +57,7 @@ export const COUNTRIES_LIST_ITEMS: Array<ICountedListItem> = Object.values(
     return {
       text: country.name,
       favourite: detailsContainsFavourite(details),
-      ...getItemCounts({ item: { country }, data: { trips: DATA.ALL_FLAT } }),
+      ...getItemCounts({ item: { country }, data: { trips: DATA.TRIP_LEGS } }),
       details
     };
   }

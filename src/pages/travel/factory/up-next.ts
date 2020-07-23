@@ -1,7 +1,7 @@
 import { isInFuture } from "utils";
 
-import { DATA } from "../data";
+import { TRAVEL as DATA } from "data";
 
-export const UP_NEXT: Array<ITripLeg> = DATA.ALL_FLAT.filter(
+export const UP_NEXT: Array<ITripLeg> = DATA.TRIP_LEGS.filter(
   ({ dates }: ITripLeg): boolean => isInFuture(dates[0])
 );

@@ -1,7 +1,6 @@
 import { mapGigsToGigCards, mapFestivalsToGigCards } from "utils";
 
 import * as festivals from "./festivals";
-
 import * as GIGS_2006_2010 from "./gigs-2006-2010";
 import * as GIGS_2011_2013 from "./gigs-2011-2013";
 import * as GIGS_2014_2016 from "./gigs-2014-2016";

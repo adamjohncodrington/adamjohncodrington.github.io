@@ -1,7 +1,7 @@
 import { COUNTRIES } from "@constants";
 import { getItemCounts } from "utils";
 
-import { DATA } from "../data";
+import { TRAVEL as DATA } from "data";
 
 const generateAttractions = (): { [attraction: string]: IAttraction } => {
   let attractions = {};
@@ -29,7 +29,7 @@ export const HIGHLIGHTS_LIST_ITEMS: Array<ICountedListItem> = highlights.map(
     text: highlight.name,
     ...getItemCounts({
       item: { attraction: highlight },
-      data: { trips: DATA.ALL_FLAT }
+      data: { trips: DATA.TRIP_LEGS }
     })
   })
 );
@@ -39,7 +39,7 @@ export const THEME_PARKS_LIST_ITEMS: Array<ICountedListItem> = themeParks.map(
     text: themePark.name,
     ...getItemCounts({
       item: { attraction: themePark },
-      data: { trips: DATA.ALL_FLAT }
+      data: { trips: DATA.TRIP_LEGS }
     })
   })
 );
