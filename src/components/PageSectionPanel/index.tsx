@@ -3,9 +3,9 @@ import React, { FC } from "react";
 import { PAGE_SECTION_PANEL_TYPES } from "@constants";
 import { Li } from "primitives";
 import {
-  getTheatreVisitSubtitle,
+  // getTheatreVisitSubtitle,
   getTheatreVisitTitle,
-  getTripSubtitle,
+  // getTripSubtitle,
   getTripTitle,
   moveTheSuffixToPrefix,
   getCountdownText,
