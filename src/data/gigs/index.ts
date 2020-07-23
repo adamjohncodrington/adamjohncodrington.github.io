@@ -1,4 +1,7 @@
-import { mapGigsToGigCards, mapFestivalsToGigCards } from "utils";
+import {
+  mapGigsToGigsAndFestivals,
+  mapFestivalsToGigsAndFestivals
+} from "utils";
 
 import * as festivals from "./festivals";
 import * as GIGS_2006_2010 from "./gigs-2006-2010";
@@ -18,6 +21,6 @@ export const GIGS: Array<IGig> = Object.values({
 });
 
 export const GIGS_AND_FESTIVALS: Array<IGigOrFestival> = [
-  ...mapGigsToGigCards(GIGS),
-  ...mapFestivalsToGigCards(FESTIVALS)
+  ...mapGigsToGigsAndFestivals(GIGS),
+  ...mapFestivalsToGigsAndFestivals(FESTIVALS)
 ];

@@ -181,6 +181,8 @@ interface IGig extends IGigAndFestival, I_Dates {
 }
 
 interface IGigOrFestival extends IGigAndFestival {
+  gig?: IGig;
+  festival?: IFestival;
   title: string;
   subtitle?: string;
   dates: Array<IDate>;

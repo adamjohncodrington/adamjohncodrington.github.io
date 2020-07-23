@@ -1,89 +1,74 @@
 import { MUSICIANS as musicians } from "@constants";
 import { GIGS_AND_FESTIVALS as DATA } from "data";
 import {
-  getItemCounts
-  // isInFuture,
-  // moveTheSuffixToPrefix,
-  // musicianMatchExists
-  // getDateText,
-  // detailsContainsFavourite
+  getItemCounts,
+  moveTheSuffixToPrefix,
+  detailsContainsFavourite
 } from "utils";
 
-// const getGigCardsMatchingMusician = (musician: IMusician): Array<IGigOrFestival> => {
-//   const gigCardsMatchingMusician: Array<IGigOrFestival> = [];
-//   DATA.forEach((gigOrFestival: IGigOrFestival): void => {
-//     if (musicianMatchExists(musician, gigOrFestival)) {
-//       gigCardsMatchingMusician.push(gigOrFestival);
-//     }
-//   });
-//   return gigCardsMatchingMusician;
-// };
+const getMusicianMatches = (musician: IMusician): Array<IGigOrFestival> => {
+  const musicianMatches: Array<IGigOrFestival> = [];
+  DATA.forEach((gigOrFestival: IGigOrFestival): void => {
+    if (gigOrFestival.musicians.includes(musician)) {
+      musicianMatches.push(gigOrFestival);
+    }
+  });
+  return musicianMatches;
+};
 
-// interface IGetFestivalDate extends I_Dates {
-//   lineup: Array<Array<IMusician>>;
-//   musician: IMusician;
-// }
-// const getFestivalDateText = ({
-//   dates,
-//   musician,
-//   lineup
-// }: IGetFestivalDate): string => {
-//   for (let dayOfFestival = 0; dayOfFestival < lineup.length; dayOfFestival++) {
-//     if (lineup[dayOfFestival].includes(musician)) {
-//       return getDateText(dates[dayOfFestival]);
-//     }
-//   }
+const getMusicianFestivalDate = (
+  musician: IMusician,
+  { lineup, dates }: IFestival
+): Date => {
+  if (lineup.length === 1) return dates[0];
 
-//   const errorText: string = "NO FESTIVAL DATE FOUND";
-//   return errorText;
-// };
+  for (let day = 0; day < lineup.length; day++) {
+    if (lineup[day].includes(musician)) return dates[day];
+  }
 
-// const getMusicianDetails = (
-//   musician: IMusician
-// ): Array<ICountedListItemDetail> => {
-//   const gigCardsMatchingMusician: Array<IGigOrFestival> = getGigCardsMatchingMusician(musician);
-//   return gigCardsMatchingMusician.map(
-//     (
-//       {
-//         dates,
-//         headline,
-//         // festival, lineup,
-//         venue,
-//         favourite,
-//         video
-//       }: IGig,
-//       index: number
-//     ): ICountedListItemDetail => ({
-//       mainText: [
-//         // festival ? festival.name :
-//         moveTheSuffixToPrefix(venue.name)
-//       ],
-//       dates:
-//         // festival && lineup && lineup.length > 1
-//         //   ? getFestivalDateText({ dates, lineup, musician })
-//         //   :
-//         getDateText(dates[0]),
-//       isInFuture: isInFuture(dates[0]),
-//       video,
-//       favourite: musician === headline && favourite
-//     })
-//   );
-// };
+  alert(
+    "There has been an error calculating which day you saw an artist at a festival on"
+  );
+  return new Date();
+};
+
+const getMusicianDetails = (
+  musician: IMusician
+): Array<ICountedListItemDetail> => {
+  const musicianMatches: Array<IGigOrFestival> = getMusicianMatches(musician);
+  return musicianMatches.map(
+    ({
+      dates,
+      festival,
+      gig,
+      venue,
+      favourite,
+      video
+    }: IGigOrFestival): ICountedListItemDetail => ({
+      mainText: [
+        festival ? festival.title.name : moveTheSuffixToPrefix(venue.name)
+      ],
+      dates: festival ? [getMusicianFestivalDate(musician, festival)] : dates,
+      video,
+      favourite: favourite && gig && gig.headline === musician
+    })
+  );
+};
 
 export const MUSICIANS: Array<ICountedListItem> = Object.values(musicians).map(
   (musician: IMusician): ICountedListItem => {
     const { name, previousStageName, noLongerExists } = musician;
-    // const details: Array<ICountedListItemDetail> = getMusicianDetails(musician);
+    const details: Array<ICountedListItemDetail> = getMusicianDetails(musician);
     return {
       text: name,
       secondaryText: previousStageName && previousStageName.name,
-      // favourite: detailsContainsFavourite(details),
+      favourite: detailsContainsFavourite(details),
       ...getItemCounts({
         item: { musician },
         data: { gigsAndFestivals: DATA }
       }),
-      noLongerExists
-      // details
+      noLongerExists,
+      details
     };
   }
 );
