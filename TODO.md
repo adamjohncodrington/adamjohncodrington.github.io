@@ -1,14 +1,12 @@
 # TO DO LIST
 
+- reinstate all gig across site
 - define `IDates` as `{start, end, only}`
 - convert all `travel` data to use `IStartEndDate`
-- reinstate all videos across site
 - split festivals into `IDayFestival`, `IMultiDayFestival`, `INightOut`, etc.
 - make festival dates prop `start/end`???
-- reinstate all gig videos
 - implement sorting at `PageSectionLayout` level
 - totally refactor `travel` in `@constants`
-- make a dynamic `VideoCard` component
 
 ## Enhancements
 
