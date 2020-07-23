@@ -147,6 +147,7 @@ interface IPageSectionDataTypes {
   countedListItems?: Array<ICountedListItem>;
   photoGrid?: { photos: Array<IPhoto>; columnCount: number };
   gigs?: Array<IGig>;
+  gigsAndFestivals?: Array<IGigOrFestival>;
   recipes?: Array<IRecipe>;
   theatreVisits?: Array<ITheatreVisit>;
   trips?: Array<ITripLeg>;

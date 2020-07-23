@@ -1,12 +1,7 @@
 import { isInFuture } from "./basic";
 
 interface IGetItemCounts {
-  data: {
-    gigsAndFestivals?: Array<IGigOrFestival>;
-    gigs?: Array<IGig>;
-    theatreVisits?: Array<ITheatreVisit>;
-    trips?: Array<ITripLeg>;
-  };
+  data: IPageSectionDataTypes;
   item: {
     actor?: IActor;
     attraction?: IAttraction;
