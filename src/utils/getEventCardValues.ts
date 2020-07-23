@@ -4,12 +4,12 @@ import { getMusicianStageNameAtTime } from "./musician";
 export const getGigTitle = ({
   headline,
   // festival,
-  dates
+  date
 }: IGig): string =>
   moveTheSuffixToPrefix(
     getMusicianStageNameAtTime({
       musician: headline,
-      year: dates[0].getFullYear()
+      year: date.getFullYear()
     })
   );
 
@@ -127,6 +127,7 @@ export const mapGigsToGigsAndFestivals = (
     (gig: IGig): IGigOrFestival => ({
       ...gig,
       gig,
+      dates: [gig.date],
       title: getGigTitle(gig),
       subtitle: getGigSubtitle(gig),
       musicians: getGigMusicians(gig)

@@ -1,12 +1,9 @@
 # TO DO LIST
 
-- create a `factories/recipes` folder
-- implement sorting at `PageSectionLayout` level
-
-- reinstate all gig videos
 - make gig date prop singular, make festival dates prop `start/end`???
+- reinstate all gig videos
+- implement sorting at `PageSectionLayout` level
 - totally refactor `travel` in `@constants`
-
 - make a dynamic `VideoCard` component
 
 ## Enhancements

@@ -2,6 +2,8 @@ import { MAINS } from "./mains";
 import { SAUCES } from "./sauces";
 import { SIDES } from "./sides";
 import { SWEETS } from "./sweets";
-import { RECIPES_COMING_SOON as COMING_SOON } from "./recipes-coming-soon";
+import * as comingSoon from "./coming-soon";
+
+const COMING_SOON: Array<string> = Object.values(comingSoon);
 
 export const RECIPES = { MAINS, SAUCES, SIDES, SWEETS, COMING_SOON };

@@ -5,7 +5,7 @@ export const KATE_NASH_2011: IGig = {
   support: [MUSICIANS.BRIGITTE_APHRODITE],
   venue: MUSIC_VENUES.ROCK_CITY,
   company: [FRIENDS.TONYA_FRANCE, FRIENDS.KIRSTEN_JACKSON],
-  dates: [new Date("2011-03-22")],
+  date: new Date("2011-03-22"),
   favourite: true
 };
 
@@ -18,7 +18,7 @@ export const KATY_PERRY_2011: IGig = {
     FRIENDS.ELLIE_SPANOVIC,
     FRIENDS.POOJA_DHIR
   ],
-  dates: [new Date("2011-03-30")]
+  date: new Date("2011-03-30")
 };
 
 export const ADELE_2011_04: IGig = {
@@ -26,7 +26,7 @@ export const ADELE_2011_04: IGig = {
   support: [MUSICIANS.MICHAEL_KIWANUKA],
   venue: MUSIC_VENUES.INSTITUTE_BIRMINGHAM,
   company: [FRIENDS.MUM],
-  dates: [new Date("2011-04-18")]
+  date: new Date("2011-04-18")
 };
 
 export const ADELE_2011_09: IGig = {
@@ -34,7 +34,7 @@ export const ADELE_2011_09: IGig = {
   support: [MUSICIANS.AMOS_LEE],
   venue: MUSIC_VENUES.DE_MONTFORT_HALL,
   company: [FRIENDS.EMMA_CODRINGTON, FRIENDS.MUM],
-  dates: [new Date("2011-09-13")]
+  date: new Date("2011-09-13")
 };
 
 export const SBTRKT_2012: IGig = {
@@ -42,35 +42,35 @@ export const SBTRKT_2012: IGig = {
   support: [MUSICIANS.DISCLOSURE],
   venue: MUSIC_VENUES.ROCK_CITY,
   company: [FRIENDS.TONYA_FRANCE],
-  dates: [new Date("2012-02-28")]
+  date: new Date("2012-02-28")
 };
 
 export const FLORENCE_2012: IGig = {
   headline: MUSICIANS.FLORENCE_AND_THE_MACHINE,
   venue: MUSIC_VENUES.NEC_ARENA_BIRMINGHAM,
   company: [FRIENDS.DAD],
-  dates: [new Date("2012-03-13")]
+  date: new Date("2012-03-13")
 };
 
 export const LITTLE_COMETS_2012_04: IGig = {
   headline: MUSICIANS.LITTLE_COMETS,
   venue: MUSIC_VENUES.COCKPIT_LEEDS,
   company: [FRIENDS.EMMA_CODRINGTON],
-  dates: [new Date("2012-04-23")]
+  date: new Date("2012-04-23")
 };
 
 export const KATE_NASH_2012: IGig = {
   headline: MUSICIANS.KATE_NASH,
   venue: MUSIC_VENUES.BODEGA,
   company: [FRIENDS.TONYA_FRANCE, FRIENDS.SONYA_PARDI, FRIENDS.KIRSTEN_JACKSON],
-  dates: [new Date("2012-06-22")]
+  date: new Date("2012-06-22")
 };
 
 export const MARINA_2012: IGig = {
   headline: MUSICIANS.MARINA,
   venue: MUSIC_VENUES.INSTITUTE_BIRMINGHAM,
   company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON],
-  dates: [new Date("2012-06-29")],
+  date: new Date("2012-06-29"),
   favourite: true
 };
 
@@ -78,7 +78,7 @@ export const LADY_GAGA_2012: IGig = {
   headline: MUSICIANS.LADY_GAGA,
   venue: MUSIC_VENUES.TWICKENHAM_STADIUM,
   company: [FRIENDS.EMMA_CODRINGTON],
-  dates: [new Date("2012-09-08")],
+  date: new Date("2012-09-08"),
   favourite: true
 };
 
@@ -87,28 +87,28 @@ export const NICKI_MINAJ: IGig = {
   support: [MUSICIANS.MISHA_B, MUSICIANS.TYGA],
   venue: MUSIC_VENUES.ARENA_NOTTINGHAM,
   company: [FRIENDS.ELLIE_SPANOVIC, FRIENDS.BLAINE_PEARSON],
-  dates: [new Date("2012-10-21")]
+  date: new Date("2012-10-21")
 };
 
 export const LITTLE_COMETS_2012_10: IGig = {
   headline: MUSICIANS.LITTLE_COMETS,
   venue: MUSIC_VENUES.RESCUE_ROOMS,
   company: [FRIENDS.SARAH_WHITAKER, FRIENDS.BETH_SHEARS],
-  dates: [new Date("2012-10-31")]
+  date: new Date("2012-10-31")
 };
 
 export const KILLERS: IGig = {
   headline: MUSICIANS.KILLERS_THE,
   venue: MUSIC_VENUES.SHEFFIELD_ARENA,
   company: [FRIENDS.DAD],
-  dates: [new Date("2012-11-08")]
+  date: new Date("2012-11-08")
 };
 
 export const BEN_HOWARD: IGig = {
   headline: MUSICIANS.BEN_HOWARD,
   venue: MUSIC_VENUES.ROCK_CITY,
   company: [FRIENDS.STEVE_RICHARDS],
-  dates: [new Date("2012-11-22")]
+  date: new Date("2012-11-22")
 };
 
 export const ELLIE_GOULDING_2012: IGig = {
@@ -116,21 +116,21 @@ export const ELLIE_GOULDING_2012: IGig = {
   venue: MUSIC_VENUES.ROCK_CITY,
   favourite: true,
   company: [FRIENDS.BLAINE_PEARSON, FRIENDS.JESS_SMITH, FRIENDS.ELLIE_GURKIN],
-  dates: [new Date("2012-12-11")]
+  date: new Date("2012-12-11")
 };
 
 export const BASTILLE: IGig = {
   headline: MUSICIANS.BASTILLE,
   venue: MUSIC_VENUES.ROCK_CITY,
   company: [FRIENDS.TONYA_FRANCE],
-  dates: [new Date("2013-03-21")]
+  date: new Date("2013-03-21")
 };
 
 export const RIHANNA: IGig = {
   headline: MUSICIANS.RIHANNA,
   venue: MUSIC_VENUES.NEC_ARENA_BIRMINGHAM,
   company: [FRIENDS.JESS_SMITH],
-  dates: [new Date("2013-07-18")],
+  date: new Date("2013-07-18"),
   favourite: true
 };
 
@@ -138,5 +138,5 @@ export const CHVRCHES_2013: IGig = {
   headline: MUSICIANS.CHVRCHES,
   venue: MUSIC_VENUES.RITZ_MANCHESTER,
   company: [FRIENDS.SIMAN_PONE],
-  dates: [new Date("2013-10-14")]
+  date: new Date("2013-10-14")
 };

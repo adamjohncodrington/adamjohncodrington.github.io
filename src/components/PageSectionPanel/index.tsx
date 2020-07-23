@@ -3,8 +3,6 @@ import React, { FC } from "react";
 import { PAGE_SECTION_PANEL_TYPES } from "@constants";
 import { Li } from "primitives";
 import {
-  getGigSubtitle,
-  getGigTitle,
   getTheatreVisitSubtitle,
   getTheatreVisitTitle,
   getTripSubtitle,
@@ -29,7 +27,6 @@ const { COUNTED_LIST, RECIPE_CARDS, REGULAR } = PAGE_SECTION_PANEL_TYPES;
 
 export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
   countedListItems,
-  gigs,
   gigsAndFestivals,
   recipes,
   theatreVisits,
@@ -69,25 +66,6 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
             <Li key={index}>
               <EventCard
                 {...gigOrFestival}
-                body={moveTheSuffixToPrefix(venue.name)}
-                secondaryBody={getDatesText(dates)}
-                countdownText={getCountdownText(dates[0])}
-                note={ticketType}
-              />
-            </Li>
-          );
-        })}
-
-      {/* THIS NEEDS TO GO */}
-      {gigs &&
-        gigs.map((gig: IGig, index: number) => {
-          const { venue, dates, ticketType } = gig;
-          return (
-            <Li key={index}>
-              <EventCard
-                {...gig}
-                title={getGigTitle(gig)}
-                subtitle={getGigSubtitle(gig)}
                 body={moveTheSuffixToPrefix(venue.name)}
                 secondaryBody={getDatesText(dates)}
                 countdownText={getCountdownText(dates[0])}

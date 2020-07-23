@@ -1,5 +1,6 @@
 import { PAGE_SECTION_TITLES } from "@constants";
 import { RECIPES as DATA } from "data";
+import { RECIPES as FACTORY } from "factories";
 import { SVG, PHOTOS as photos } from "resources";
 
 const MAINS: IPageSection = {
@@ -35,7 +36,7 @@ const PHOTOS: IPageSection = {
 const COMING_SOON: IPageSection = {
   title: PAGE_SECTION_TITLES.COMING_SOON,
   SvgIcon: SVG.NOTEPAD,
-  data: { countedListItems: DATA.COMING_SOON }
+  data: { countedListItems: FACTORY.COMING_SOON }
 };
 
 export const RECIPES: Array<IPageSection> = [

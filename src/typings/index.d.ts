@@ -175,7 +175,7 @@ interface IFestival extends IGigAndFestival, I_Dates {
   lineup: Array<Array<IMusician>>;
 }
 
-interface IGig extends IGigAndFestival, I_Dates {
+interface IGig extends IGigAndFestival, I_Date {
   headline: IMusician;
   support?: Array<IMusician>;
 }

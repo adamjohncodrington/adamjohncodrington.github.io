@@ -1,0 +1,17 @@
+export const GINGERBREAD: string = "gingerbread";
+export const SPINACH_SWEET_POTATO_HASH: string = "spinach sweet potato hash";
+export const COURGETTE_ROSTI_FRITTERS: string = "courgette rösti fritters";
+export const KEY_LIME_PIE: string = "key lime pie";
+export const AUBERGINE_TERIYAKI: string = "aubergine teriyaki";
+export const LOADED_POTATO_SKINS: string = "loaded skins";
+export const CARROT_CAKE: string = "carrot ginger cake";
+export const JACKFRUIT_MAC: string = "jackfruit mac";
+export const MUSHROOM_STROGANOFF: string = "mushroom stroganoff";
+export const LEMON_MERINGUE_PIE: string = "lemon meringue pie";
+export const CHILLI_SIN_CARNE: string = "chilli sin carne";
+export const CHEESECAKE_PASSIONFRUIT: string = "passionfruit cheesecake";
+export const MARGARITAS: string = "margaritas";
+export const SMOOTHIE_BREAKFAST: string = "breakfast smoothie";
+export const DAHL: string = "dahl";
+export const VICTORIA_SPONGE: string = "victoria sponge";
+export const CURRY_THAI_GREEN: string = "thai green curry";
