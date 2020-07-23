@@ -28,6 +28,13 @@ const FRIENDS: IPageSection = {
   data: { countedListItems: FACTORY.FRIENDS }
 };
 
+const SOLO: IPageSection = {
+  title: PAGE_SECTION_TITLES.SOLO,
+  data: { gigs: FACTORY.SOLO },
+  count: FACTORY.SOLO.length,
+  hide: true
+};
+
 const UP_NEXT: IPageSection = {
   SvgIcon: SVG.NOTEPAD,
   title: PAGE_SECTION_TITLES.UP_NEXT,
@@ -63,6 +70,7 @@ export const GIGS: Array<IPageSection> = [
   // FESTIVALS,
   FRIENDS,
   UP_NEXT,
+  SOLO,
   VENUES,
   VIDEOS,
   ...YEARS
