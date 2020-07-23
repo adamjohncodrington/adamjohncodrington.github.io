@@ -6,7 +6,7 @@ export const VIDEOS: Array<IGig> = DATA.filter(
   .map(
     (gig: IGig): IGig => ({
       ...gig,
-      hideCompany: true,
+      hideCompanySymbols: true,
       hideSubtitle: true,
       hideBody: true,
       hideVideoIcon: true

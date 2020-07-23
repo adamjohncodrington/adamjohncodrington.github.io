@@ -40,7 +40,7 @@ interface IEventCardAll extends I_Company, I__Favourite {
   photos?: Array<IPhoto>;
   video?: IVideo;
 
-  hideCompany?: boolean;
+  hideCompanySymbols?: boolean;
   hideBody?: boolean;
   hideSecondaryBody?: boolean;
   hideFavouriteIcon?: boolean;

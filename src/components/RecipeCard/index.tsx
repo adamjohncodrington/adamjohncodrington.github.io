@@ -26,7 +26,6 @@ export const RecipeCard: FC<IRecipe> = ({
   makes,
   ingredients,
   method,
-  favourite,
   serveWith,
   newRecipe,
   diet,
@@ -45,7 +44,9 @@ export const RecipeCard: FC<IRecipe> = ({
   }) => (
     <FlexRow className={className}>
       <RecipeCardTitle panelIsVisible={panelIsVisible}>{title}</RecipeCardTitle>
-      <RoundedSymbol type="diet">{diet.abbreviation}</RoundedSymbol>
+      <RoundedSymbol opacity="50%" type="diet">
+        {diet.abbreviation}
+      </RoundedSymbol>
     </FlexRow>
   );
 

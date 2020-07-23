@@ -25,86 +25,100 @@ export const EventCard: React.FC<IEventCard> = ({
   secondaryBody,
   note,
   countdownText,
-  hideVideoIcon,
   company,
   video,
   photos,
-  hideCompany,
   hidePhotosIcon,
+  hideVideoIcon,
+  hideCompanySymbols,
   hideBody,
   hideSecondaryBody,
   hideSubtitle
-}) => (
-  <>
-    <Disclosure
-      isStatic={!(video || (photos && photos.length > 0))}
-      Header={() => (
-        <GridColumnDiv
-          data-test="event-card-grid-container"
-          equalWidthColumns={false}
-        >
-          <EventCardTextContainer data-test="event-card-container">
-            <CardTitleBold
-              data-test="event-card-title"
-              favourite={!hideFavouriteIcon && favourite}
-            >
-              {title}
-            </CardTitleBold>
+}) => {
+  const validCompany: boolean = company.length > 0 && !hideCompanySymbols;
 
-            {subtitle && !hideSubtitle && (
-              <CardSubtitleBold data-test="event-card-subtitle">
-                {subtitle}
-              </CardSubtitleBold>
-            )}
+  return (
+    <>
+      <Disclosure
+        isStatic={!(video || (photos && photos.length > 0))}
+        Header={() => (
+          <GridColumnDiv
+            data-test="event-card-grid-container"
+            equalWidthColumns={false}
+          >
+            <EventCardTextContainer data-test="event-card-container">
+              <CardTitleBold
+                data-test="event-card-title"
+                favourite={!hideFavouriteIcon && favourite}
+              >
+                {title}
+              </CardTitleBold>
 
-            {body && !hideBody && (
-              <span data-test="event-card-body">{body}</span>
-            )}
+              {subtitle && !hideSubtitle && (
+                <CardSubtitleBold data-test="event-card-subtitle">
+                  {subtitle}
+                </CardSubtitleBold>
+              )}
 
-            {secondaryBody && !hideSecondaryBody && (
-              <EventCardSecondaryBody data-test="event-card-secondary-body">
-                {secondaryBody}
-              </EventCardSecondaryBody>
-            )}
+              {body && !hideBody && (
+                <span data-test="event-card-body">{body}</span>
+              )}
 
-            {countdownText && (
-              <>
-                <EventCardCountdown data-test="event-card-countdown">
-                  {countdownText}
-                </EventCardCountdown>
+              {secondaryBody && !hideSecondaryBody && (
+                <EventCardSecondaryBody data-test="event-card-secondary-body">
+                  {secondaryBody}
+                </EventCardSecondaryBody>
+              )}
 
-                {note && (
-                  <EventCardNote data-test="event-card-note">{`(${note})`}</EventCardNote>
+              {countdownText && (
+                <>
+                  <EventCardCountdown data-test="event-card-countdown">
+                    {countdownText}
+                  </EventCardCountdown>
+
+                  {note && (
+                    <EventCardNote data-test="event-card-note">{`(${note})`}</EventCardNote>
+                  )}
+                </>
+              )}
+            </EventCardTextContainer>
+
+            {(company.length > 0 || video) && (
+              <EventCardSymbolsContainer>
+                {validCompany &&
+                  company
+                    .sort((a: IFriend, b: IFriend): number =>
+                      a.initials > b.initials ? 1 : -1
+                    )
+                    .map(({ initials }: IFriend, index: number) => (
+                      <RoundedSymbol key={index} type="friend" opacity="50%">
+                        {initials}
+                      </RoundedSymbol>
+                    ))}
+
+                {photos && !hidePhotosIcon && (
+                  <RoundedSymbol
+                    type="photo"
+                    opacity={validCompany ? "100%" : "50%"}
+                  />
                 )}
-              </>
+                {video && !hideVideoIcon && (
+                  <RoundedSymbol
+                    type="video"
+                    opacity={validCompany ? "100%" : "50%"}
+                  />
+                )}
+              </EventCardSymbolsContainer>
             )}
-          </EventCardTextContainer>
-
-          {(company.length > 0 || video) && (
-            <EventCardSymbolsContainer>
-              {!hideCompany &&
-                company
-                  .sort((a: IFriend, b: IFriend): number =>
-                    a.initials > b.initials ? 1 : -1
-                  )
-                  .map(({ initials }: IFriend, index: number) => (
-                    <RoundedSymbol key={index} type="friend">
-                      {initials}
-                    </RoundedSymbol>
-                  ))}
-
-              {photos && !hidePhotosIcon && <RoundedSymbol type="photo" />}
-              {video && !hideVideoIcon && <RoundedSymbol type="video" />}
-            </EventCardSymbolsContainer>
-          )}
-        </GridColumnDiv>
-      )}
-      Panel={
-        <>
-          {photos && <PhotoGrid photos={photos} columnCount={2} />}
-          {video && <YouTubeVideo {...video} marginTop="10px" />}
-        </>
-      }
-    />
-  </>
-);
+          </GridColumnDiv>
+        )}
+        Panel={
+          <>
+            {photos && <PhotoGrid photos={photos} columnCount={2} />}
+            {video && <YouTubeVideo {...video} marginTop="10px" />}
+          </>
+        }
+      />
+    </>
+  );
+};

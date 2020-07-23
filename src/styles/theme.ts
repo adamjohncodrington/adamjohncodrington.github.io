@@ -76,12 +76,6 @@ const THEME_RECIPE_CARD: IThemeRecipeCard = {
 
 const THEME_ROUNDED_SYMBOL: IThemeRoundedSymbol = {
   borderRadius: "25%",
-  color: {
-    diet: COLORS.boulder,
-    friend: COLORS.boulder,
-    photo: COLORS.black,
-    video: COLORS.black
-  },
   fontSize: "75%",
   size: "26px",
   textColor: COLORS.white

@@ -7,6 +7,6 @@ export const FAVOURITES: Array<IGig> = DATA.filter(
     ...gig,
     hideFavouriteIcon: true,
     hideSubtitle: true,
-    hideCompany: true
+    hideCompanySymbols: true
   })
 );
