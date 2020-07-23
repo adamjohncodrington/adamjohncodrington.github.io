@@ -120,9 +120,9 @@ export const getFestivalMusicians = ({
   return musicians;
 };
 
-export const mapGigsToGigCards = (gigs: Array<IGig>): Array<IGigCard> =>
+export const mapGigsToGigCards = (gigs: Array<IGig>): Array<IGigOrFestival> =>
   gigs.map(
-    (gig: IGig): IGigCard => ({
+    (gig: IGig): IGigOrFestival => ({
       ...gig,
       title: getGigTitle(gig),
       subtitle: getGigSubtitle(gig),
@@ -132,9 +132,9 @@ export const mapGigsToGigCards = (gigs: Array<IGig>): Array<IGigCard> =>
 
 export const mapFestivalsToGigCards = (
   festivals: Array<IFestival>
-): Array<IGigCard> =>
+): Array<IGigOrFestival> =>
   festivals.map(
-    (festival: IFestival): IGigCard => ({
+    (festival: IFestival): IGigOrFestival => ({
       ...festival,
       title: getFestivalTitle(festival),
       subtitle: getFestivalSubtitle(festival),

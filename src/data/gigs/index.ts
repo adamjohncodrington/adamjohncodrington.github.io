@@ -17,7 +17,7 @@ export const GIGS: Array<IGig> = Object.values({
   ...GIGS_2020_2022
 });
 
-export const GIG_CARDS: Array<IGigCard> = [
+export const GIGS_AND_FESTIVALS: Array<IGigOrFestival> = [
   ...mapGigsToGigCards(GIGS),
   ...mapFestivalsToGigCards(FESTIVALS)
 ];

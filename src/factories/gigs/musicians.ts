@@ -1,5 +1,5 @@
 import { MUSICIANS as musicians } from "@constants";
-import { GIG_CARDS as DATA } from "data";
+import { GIGS_AND_FESTIVALS as DATA } from "data";
 import {
   getItemCounts
   // isInFuture,
@@ -9,11 +9,11 @@ import {
   // detailsContainsFavourite
 } from "utils";
 
-// const getGigCardsMatchingMusician = (musician: IMusician): Array<IGigCard> => {
-//   const gigCardsMatchingMusician: Array<IGigCard> = [];
-//   DATA.forEach((gigCard: IGigCard): void => {
-//     if (musicianMatchExists(musician, gigCard)) {
-//       gigCardsMatchingMusician.push(gigCard);
+// const getGigCardsMatchingMusician = (musician: IMusician): Array<IGigOrFestival> => {
+//   const gigCardsMatchingMusician: Array<IGigOrFestival> = [];
+//   DATA.forEach((gigOrFestival: IGigOrFestival): void => {
+//     if (musicianMatchExists(musician, gigOrFestival)) {
+//       gigCardsMatchingMusician.push(gigOrFestival);
 //     }
 //   });
 //   return gigCardsMatchingMusician;
@@ -41,7 +41,7 @@ import {
 // const getMusicianDetails = (
 //   musician: IMusician
 // ): Array<ICountedListItemDetail> => {
-//   const gigCardsMatchingMusician: Array<IGigCard> = getGigCardsMatchingMusician(musician);
+//   const gigCardsMatchingMusician: Array<IGigOrFestival> = getGigCardsMatchingMusician(musician);
 //   return gigCardsMatchingMusician.map(
 //     (
 //       {
@@ -79,7 +79,10 @@ export const MUSICIANS: Array<ICountedListItem> = Object.values(musicians).map(
       text: name,
       secondaryText: previousStageName && previousStageName.name,
       // favourite: detailsContainsFavourite(details),
-      ...getItemCounts({ item: { musician }, data: { gigCards: DATA } }),
+      ...getItemCounts({
+        item: { musician },
+        data: { gigsAndFestivals: DATA }
+      }),
       noLongerExists
       // details
     };

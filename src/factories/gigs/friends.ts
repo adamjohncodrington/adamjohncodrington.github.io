@@ -1,23 +1,26 @@
 import { FRIENDS as friends } from "@constants";
-import { GIGS as DATA } from "data";
-import { getItemCounts, getGigTitle, getDatesText, isInFuture } from "utils";
+import { GIGS_AND_FESTIVALS as DATA } from "data";
+import { getItemCounts, getDatesText, isInFuture } from "utils";
 
-const getGigsMatchingFriend = (friend: IFriend): Array<IGig> => {
-  const gigsMatchingFriend: Array<IGig> = [];
-  DATA.forEach((gig: IGig): void => {
-    if (gig.company.includes(friend)) gigsMatchingFriend.push(gig);
+const getGigCardsMatchingFriend = (friend: IFriend): Array<IGigOrFestival> => {
+  const gigCardsMatchingFriend: Array<IGigOrFestival> = [];
+  DATA.forEach((gigOrFestival: IGigOrFestival): void => {
+    if (gigOrFestival.company.includes(friend))
+      gigCardsMatchingFriend.push(gigOrFestival);
   });
-  return gigsMatchingFriend;
+  return gigCardsMatchingFriend;
 };
 
 const getFriendDetails = (friend: IFriend): Array<ICountedListItemDetail> => {
-  const gigsMatchingFriend: Array<IGig> = getGigsMatchingFriend(friend);
-  return gigsMatchingFriend.map(
-    (gig: IGig, index: number): ICountedListItemDetail => {
-      const { dates, video, favourite } = gig;
+  const gigCardsMatchingFriend: Array<IGigOrFestival> = getGigCardsMatchingFriend(
+    friend
+  );
+  return gigCardsMatchingFriend.map(
+    (gigOrFestival: IGigOrFestival, index: number): ICountedListItemDetail => {
+      const { title, dates, video, favourite } = gigOrFestival;
       return {
-        index: gigsMatchingFriend.length > 1 ? index + 1 : undefined,
-        mainText: [getGigTitle(gig)],
+        index: gigCardsMatchingFriend.length > 1 ? index + 1 : undefined,
+        mainText: [title],
         dateText: getDatesText(dates),
         favourite,
         isInFuture: isInFuture(dates[0]),
@@ -32,7 +35,7 @@ export const FRIENDS: Array<ICountedListItem> = Object.values(friends)
   .map(
     (friend: IFriend): ICountedListItem => ({
       text: friend.name,
-      ...getItemCounts({ item: { friend }, data: { gigs: DATA } }),
+      ...getItemCounts({ item: { friend }, data: { gigsAndFestivals: DATA } }),
       details: getFriendDetails(friend)
     })
   );

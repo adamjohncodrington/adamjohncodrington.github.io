@@ -2,7 +2,7 @@ import { isInFuture } from "./basic";
 
 interface IGetItemCounts {
   data: {
-    gigCards?: Array<IGigCard>;
+    gigsAndFestivals?: Array<IGigOrFestival>;
     gigs?: Array<IGig>;
     theatreVisits?: Array<ITheatreVisit>;
     trips?: Array<ITripLeg>;
@@ -24,7 +24,7 @@ interface IGetItemCounts {
 
 export const musicianMatchExists = (
   musician: IMusician,
-  { musicians }: IGigCard
+  { musicians }: IGigOrFestival
 ): boolean => musicians.includes(musician);
 
 //TODO: merge these 3
@@ -73,7 +73,7 @@ const islandMatchExists = (island: IIsland, trip: ITripLeg): boolean => {
 };
 
 export const getItemCounts = ({
-  data: { gigCards, gigs, theatreVisits, trips },
+  data: { gigsAndFestivals, gigs, theatreVisits, trips },
   item: {
     actor,
     attraction,
@@ -99,22 +99,25 @@ export const getItemCounts = ({
     }
   };
 
-  gigCards &&
-    musician &&
-    gigCards.forEach((gigCard: IGigCard): void => {
-      const { dates } = gigCard;
-      if (musician && musicianMatchExists(musician, gigCard))
+  gigsAndFestivals &&
+    (musician || friend) &&
+    gigsAndFestivals.forEach((gigOrFestival: IGigOrFestival): void => {
+      const { dates, company } = gigOrFestival;
+      if (
+        (musician && musicianMatchExists(musician, gigOrFestival)) ||
+        (friend && company.includes(friend))
+      )
         incremementPastOrFutureCount(dates[0]);
     });
 
   gigs &&
-    (festival || friend || musicVenue) &&
+    (festival || musicVenue) &&
     gigs.forEach((gig: IGig): void => {
-      const { company, dates, venue } = gig;
+      const { dates, venue } = gig;
       if (
         // (festival && gig.festival === festival) ||
-        (friend && company.includes(friend)) ||
-        (musicVenue && musicVenue === venue)
+        musicVenue &&
+        musicVenue === venue
       )
         incremementPastOrFutureCount(dates[0]);
     });

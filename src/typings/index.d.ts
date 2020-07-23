@@ -179,7 +179,7 @@ interface IGig extends IGigAndFestival, I_Dates {
   support?: Array<IMusician>;
 }
 
-interface IGigCard extends IGigAndFestival {
+interface IGigOrFestival extends IGigAndFestival {
   title: string;
   subtitle?: string;
   dates: Array<IDate>;
