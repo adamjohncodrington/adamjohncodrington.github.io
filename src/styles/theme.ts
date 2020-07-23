@@ -28,7 +28,7 @@ const THEME_NAV_BAR: IThemeNavBar = {
 
 const THEME_PAGE_HEADER: IThemePageHeader = {
   count: { padding: { all: "12px 0 0 5px" } },
-  margin: { bottom: "20px" }
+  margin: { bottom: "25px" }
 };
 
 const THEME_PAGE_SECTION: IThemePageSection = {
