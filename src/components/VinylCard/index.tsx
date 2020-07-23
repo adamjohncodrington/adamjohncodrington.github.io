@@ -5,7 +5,7 @@ import { useThemeContext } from "context";
 import { Link, FlexRow, SquareImage } from "primitives";
 import { moveTheSuffixToPrefix, getMusicianStageNameAtTime } from "utils";
 
-import { CardTitle, CardSubtitleBold } from "../styles";
+import { CardTitle, CardSubtitle } from "../styles";
 
 const VinylCardLink = styled(Link)(
   ({ theme: { vinyl } }: I_Theme) =>
@@ -54,8 +54,8 @@ export const VinylCard: FC<IVinylCard> = ({
       </VinylCardLink>
 
       <VinylCardTextContainer>
-        <CardTitle bold={true}>{cardTitle}</CardTitle>
-        <CardSubtitleBold>{cardSubtitle}</CardSubtitleBold>
+        <CardTitle bold={false}>{cardTitle}</CardTitle>
+        <CardSubtitle>{cardSubtitle}</CardSubtitle>
 
         {!hideYear && <div>{year}</div>}
       </VinylCardTextContainer>

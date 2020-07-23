@@ -14,7 +14,6 @@ export const CardTitle = styled(H3)(
   `
 );
 
-export const CardSubtitleBold = styled.div`
-  font-weight: bold;
+export const CardSubtitle = styled.div`
   text-transform: uppercase;
 `;

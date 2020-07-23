@@ -20,9 +20,9 @@ const StyledDateText = styled.div`
 
 export const VideoCard: React.FC<IVideoCard> = ({ title, dates, ...video }) => (
   <Disclosure
-    Header={() => (
+    Header={({ panelIsVisible }) => (
       <VideoCardHeaderContainer>
-        <CardTitle bold={false}>{title}</CardTitle>
+        <CardTitle bold={panelIsVisible}>{title}</CardTitle>
         <StyledDateText>{getDatesText(dates)}</StyledDateText>
       </VideoCardHeaderContainer>
     )}

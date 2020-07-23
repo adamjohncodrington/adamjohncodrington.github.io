@@ -7,7 +7,7 @@ import { PhotoGrid } from "../PhotoGrid";
 import { RoundedSymbol } from "../RoundedSymbol";
 import { YouTubeVideo } from "../YouTubeVideo";
 
-import { CardTitle, CardSubtitleBold } from "../styles";
+import { CardTitle, CardSubtitle } from "../styles";
 import {
   EventCardNote,
   EventCardCountdown,
@@ -36,19 +36,20 @@ export const EventCard: React.FC<IEventCard> = ({
   hideSubtitle
 }) => {
   const validCompany: boolean = company.length > 0 && !hideCompanySymbols;
+  const isStatic: boolean = !(video || (photos && photos.length > 0));
 
   return (
     <>
       <Disclosure
-        isStatic={!(video || (photos && photos.length > 0))}
-        Header={() => (
+        isStatic={isStatic}
+        Header={({ panelIsVisible }) => (
           <GridColumnDiv
             data-test="event-card-grid-container"
             equalWidthColumns={false}
           >
             <EventCardTextContainer data-test="event-card-container">
               <CardTitle
-                bold={true}
+                bold={!isStatic && panelIsVisible}
                 data-test="event-card-title"
                 favourite={!hideFavouriteIcon && favourite}
               >
@@ -56,9 +57,9 @@ export const EventCard: React.FC<IEventCard> = ({
               </CardTitle>
 
               {subtitle && !hideSubtitle && (
-                <CardSubtitleBold data-test="event-card-subtitle">
+                <CardSubtitle data-test="event-card-subtitle">
                   {subtitle}
-                </CardSubtitleBold>
+                </CardSubtitle>
               )}
 
               {body && !hideBody && (

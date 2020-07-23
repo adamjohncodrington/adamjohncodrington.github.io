@@ -42,7 +42,7 @@ const THEME_PAGE_SECTION: IThemePageSection = {
   margin: { bottom: "20px" },
   padding: { horizontal: "12px", bottom: "5px" },
   panelList: {
-    border: { bottom: `1px dashed ${COLORS.gray}` },
+    border: { bottom: `0.5px dashed ${rgba("black", 0.25)}` },
     countedListItems: { padding: { vertical: "5px" } },
     padding: { bottom: "5px" },
     recipes: {
