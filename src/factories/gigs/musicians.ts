@@ -59,7 +59,7 @@ import {
 //         // festival ? festival.name :
 //         moveTheSuffixToPrefix(venue.name)
 //       ],
-//       dateText:
+//       dates:
 //         // festival && lineup && lineup.length > 1
 //         //   ? getFestivalDateText({ dates, lineup, musician })
 //         //   :

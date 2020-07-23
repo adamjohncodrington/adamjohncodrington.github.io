@@ -1,5 +1,6 @@
 # TO DO LIST
 
+- move `isInFuture` to `CountedListItemDetail`
 - reinstate all `festivals` functionality!!!
 - reinstate musician details
 

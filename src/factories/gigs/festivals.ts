@@ -1,5 +1,5 @@
 // import { FESTIVALS } from "@constants";
-// import { getItemCounts, isInFuture, getDatesText, getGigSubtitle } from "utils";
+// import { getItemCounts, isInFuture, getGigSubtitle } from "utils";
 
 // import * as DATA from "../data";
 
@@ -26,7 +26,7 @@ export const TO_BE_FIXED: string = "TO BE FIXED";
 //       return {
 //         index: gigsMatchingFestival.length > 1 ? index + 1 : undefined,
 //         mainText: [getGigSubtitle(gig) || "TBC"],
-//         dateText: getDatesText(dates),
+//         dates,
 //         video,
 //         isInFuture: isInFuture(dates[0])
 //       };

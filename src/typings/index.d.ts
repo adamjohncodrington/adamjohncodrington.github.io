@@ -100,7 +100,7 @@ interface ICountedListItemDetail extends I__Favourite {
   video?: IVideo;
   index?: number;
   mainText?: Array<string>;
-  dateText: string;
+  dates: Array<Date>;
   isInFuture: boolean;
 }
 

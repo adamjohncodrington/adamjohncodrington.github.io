@@ -41,7 +41,7 @@ const getCountryDetails = (
           : undefined,
         favourite,
         video,
-        dateText: getDatesText(dates),
+        dates,
         isInFuture: isInFuture(dates[0])
       };
     }

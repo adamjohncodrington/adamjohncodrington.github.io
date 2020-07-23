@@ -1,6 +1,6 @@
 import { MUSIC_VENUES as venues } from "@constants";
 import { GIGS as DATA } from "data";
-import { getItemCounts, getGigTitle, getDatesText, isInFuture } from "utils";
+import { getItemCounts, getGigTitle, isInFuture } from "utils";
 
 const getGigsMatchingMusicVenue = (musicVenue: IMusicVenue): Array<IGig> => {
   const gigsMatchingMusicVenue: Array<IGig> = [];
@@ -22,7 +22,7 @@ const getMusicVenueDetails = (
       return {
         index: gigsMatchingMusicVenue.length > 1 ? index + 1 : undefined,
         mainText: [getGigTitle(gig)],
-        dateText: getDatesText(dates),
+        dates,
         isInFuture: isInFuture(dates[0]),
         video
       };

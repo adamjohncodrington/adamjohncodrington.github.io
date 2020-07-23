@@ -77,7 +77,14 @@ export const CountedListItem: FC<ICountedListItem> = ({
             {TextAndCounts}
           </DisclosureHeader>
         )}
-        Panel={<CountedListItemDetails details={details} />}
+        Panel={
+          <CountedListItemDetails
+            details={details.sort(
+              (a: ICountedListItemDetail, b: ICountedListItemDetail) =>
+                a.dates[0].valueOf() > b.dates[0].valueOf() ? 1 : -1
+            )}
+          />
+        }
       />
     </li>
   ) : (

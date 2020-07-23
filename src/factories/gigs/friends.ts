@@ -1,6 +1,6 @@
 import { FRIENDS as friends } from "@constants";
 import { GIGS_AND_FESTIVALS as DATA } from "data";
-import { getItemCounts, getDatesText, isInFuture } from "utils";
+import { getItemCounts, isInFuture } from "utils";
 
 const getGigCardsMatchingFriend = (friend: IFriend): Array<IGigOrFestival> => {
   const gigCardsMatchingFriend: Array<IGigOrFestival> = [];
@@ -21,7 +21,7 @@ const getFriendDetails = (friend: IFriend): Array<ICountedListItemDetail> => {
       return {
         index: gigCardsMatchingFriend.length > 1 ? index + 1 : undefined,
         mainText: [title],
-        dateText: getDatesText(dates),
+        dates,
         favourite,
         isInFuture: isInFuture(dates[0]),
         video

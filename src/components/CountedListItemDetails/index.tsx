@@ -1,5 +1,6 @@
 import React from "react";
 
+import { getDatesText } from "utils";
 import { DynamicFontWeightFlexRow } from "primitives";
 
 import { Disclosure } from "../Disclosure";
@@ -17,7 +18,7 @@ import { YouTubeVideo } from "components/YouTubeVideo";
 export const CountedListItemDetail: React.FC<ICountedListItemDetail> = ({
   index,
   mainText,
-  dateText,
+  dates,
   favourite,
   isInFuture,
   video
@@ -30,7 +31,7 @@ export const CountedListItemDetail: React.FC<ICountedListItemDetail> = ({
           {index && <StyledIndex>{index}.</StyledIndex>}
           {mainText && <StyledMainText>{mainText[0]}</StyledMainText>}
           <StyledDateText favourite={favourite} video={video}>
-            {dateText}
+            {getDatesText(dates)}
           </StyledDateText>
         </DynamicFontWeightFlexRow>
       )}
