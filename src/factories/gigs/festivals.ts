@@ -27,8 +27,7 @@ export const TO_BE_FIXED: string = "TO BE FIXED";
 //         index: gigsMatchingFestival.length > 1 ? index + 1 : undefined,
 //         mainText: [getGigSubtitle(gig) || "TBC"],
 //         dates,
-//         video,
-//         isInFuture: isInFuture(dates[0])
+//         video
 //       };
 //     }
 //   );

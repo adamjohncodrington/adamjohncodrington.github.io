@@ -17,11 +17,6 @@ interface IGetItemCounts {
   };
 }
 
-export const musicianMatchExists = (
-  musician: IMusician,
-  { musicians }: IGigOrFestival
-): boolean => musicians.includes(musician);
-
 //TODO: merge these 3
 export const countryMatchExists = (
   country: ICountryTemplate,
@@ -68,7 +63,7 @@ const islandMatchExists = (island: IIsland, trip: ITripLeg): boolean => {
 };
 
 export const getItemCounts = ({
-  data: { gigsAndFestivals, gigs, theatreVisits, trips },
+  data: { gigsAndFestivals, theatreVisits, trips },
   item: {
     actor,
     attraction,
@@ -95,24 +90,13 @@ export const getItemCounts = ({
   };
 
   gigsAndFestivals &&
-    (musician || friend) &&
+    (musician || friend || musicVenue) &&
     gigsAndFestivals.forEach((gigOrFestival: IGigOrFestival): void => {
-      const { dates, company } = gigOrFestival;
+      const { dates, musicians, venue, company } = gigOrFestival;
       if (
-        (musician && musicianMatchExists(musician, gigOrFestival)) ||
-        (friend && company.includes(friend))
-      )
-        incremementPastOrFutureCount(dates[0]);
-    });
-
-  gigs &&
-    (festival || musicVenue) &&
-    gigs.forEach((gig: IGig): void => {
-      const { dates, venue } = gig;
-      if (
-        // (festival && gig.festival === festival) ||
-        musicVenue &&
-        musicVenue === venue
+        (musician && musicians.includes(musician)) ||
+        (friend && company.includes(friend)) ||
+        (musicVenue && musicVenue === venue)
       )
         incremementPastOrFutureCount(dates[0]);
     });

@@ -102,7 +102,6 @@ interface ICountedListItemDetail extends I__Favourite {
   index?: number;
   mainText?: Array<string>;
   dates: Array<Date>;
-  isInFuture: boolean;
 }
 
 interface I__Star {

@@ -1,6 +1,6 @@
 import { FRIENDS as friends } from "@constants";
 import { TRAVEL as DATA } from "data";
-import { getItemCounts, isInFuture, getTripTitle } from "utils";
+import { getItemCounts, getTripTitle } from "utils";
 
 const getTripsMatchingFriend = (friend: IFriend): Array<ITripLeg> => {
   const tripsMatchingFriend: Array<ITripLeg> = [];
@@ -20,8 +20,7 @@ const getFriendDetails = (friend: IFriend): Array<ICountedListItemDetail> => {
         index: tripsMatchingFriend.length > 1 ? index + 1 : undefined,
         mainText: [getTripTitle(trip)],
         dates,
-        video,
-        isInFuture: isInFuture(dates[0])
+        video
       };
     }
   );

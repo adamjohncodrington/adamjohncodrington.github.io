@@ -1,6 +1,6 @@
-import { PLAYS } from "@constants";
+import { PLAYS as plays } from "@constants";
 import { THEATRE as DATA } from "data";
-import { getItemCounts, isInFuture, moveTheSuffixToPrefix } from "utils";
+import { getItemCounts, moveTheSuffixToPrefix } from "utils";
 
 import { FAVOURITES } from "./favourites";
 
@@ -20,35 +20,29 @@ const playIsFavourited = ({
   return itemIsFavourited;
 };
 
-const getTheatreVisitsMatchingPlay = (play: IPlay): Array<ITheatreVisit> => {
-  const theatreVisitsMatchingPlay: Array<ITheatreVisit> = [];
+const getPlayMatches = (play: IPlay): Array<ITheatreVisit> => {
+  const playMatches: Array<ITheatreVisit> = [];
   DATA.forEach((theatreVisit: ITheatreVisit): void => {
-    if (theatreVisit.play === play)
-      theatreVisitsMatchingPlay.push(theatreVisit);
+    if (theatreVisit.play === play) playMatches.push(theatreVisit);
   });
-  return theatreVisitsMatchingPlay;
+  return playMatches;
 };
 
 const getPlayDetails = (play: IPlay): Array<ICountedListItemDetail> => {
-  const theatreVisitsMatchingPlay: Array<ITheatreVisit> = getTheatreVisitsMatchingPlay(
-    play
-  );
-  return theatreVisitsMatchingPlay.map(
+  const playMatches: Array<ITheatreVisit> = getPlayMatches(play);
+  return playMatches.map(
     (theatreVisit: ITheatreVisit, index: number): ICountedListItemDetail => {
       const { date } = theatreVisit;
       return {
-        index: theatreVisitsMatchingPlay.length > 1 ? index + 1 : undefined,
+        index: playMatches.length > 1 ? index + 1 : undefined,
         mainText: [moveTheSuffixToPrefix(theatreVisit.theatre.name)],
-        dates: [date],
-        isInFuture: isInFuture(date)
+        dates: [date]
       };
     }
   );
 };
 
-export const PLAYS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
-  PLAYS
-).map(
+export const PLAYS: Array<ICountedListItem> = Object.values(plays).map(
   (play: IPlay): ICountedListItem => ({
     text: play.name,
     favourite: playIsFavourited({ play, favouritedTheatreCards: FAVOURITES }),

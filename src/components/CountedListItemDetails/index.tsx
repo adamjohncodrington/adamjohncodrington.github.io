@@ -1,6 +1,6 @@
 import React from "react";
 
-import { getDatesText } from "utils";
+import { getDatesText, isInFuture } from "utils";
 import { DynamicFontWeightFlexRow } from "primitives";
 
 import { Disclosure } from "../Disclosure";
@@ -20,29 +20,32 @@ export const CountedListItemDetail: React.FC<ICountedListItemDetail> = ({
   mainText,
   dates,
   favourite,
-  isInFuture,
   video
-}) => (
-  <StyledLi key={index} isInFuture={isInFuture}>
-    <Disclosure
-      isStatic={!video}
-      Header={({ panelIsVisible }) => (
-        <DynamicFontWeightFlexRow panelIsVisible={!!video && panelIsVisible}>
-          {index && <StyledIndex>{index}.</StyledIndex>}
-          {mainText && <StyledMainText>{mainText[0]}</StyledMainText>}
-          <StyledDateText favourite={favourite} video={video}>
-            {getDatesText(dates)}
-          </StyledDateText>
-        </DynamicFontWeightFlexRow>
-      )}
-      Panel={
-        <StyledPanelContainer>
-          {video && <YouTubeVideo {...video} />}
-        </StyledPanelContainer>
-      }
-    />
-  </StyledLi>
-);
+}) => {
+  const IS_IN_FUTURE: boolean = isInFuture(dates[0]);
+
+  return (
+    <StyledLi key={index} isInFuture={IS_IN_FUTURE}>
+      <Disclosure
+        isStatic={!video}
+        Header={({ panelIsVisible }) => (
+          <DynamicFontWeightFlexRow panelIsVisible={!!video && panelIsVisible}>
+            {index && <StyledIndex>{index}.</StyledIndex>}
+            {mainText && <StyledMainText>{mainText[0]}</StyledMainText>}
+            <StyledDateText favourite={favourite} video={video}>
+              {getDatesText(dates)}
+            </StyledDateText>
+          </DynamicFontWeightFlexRow>
+        )}
+        Panel={
+          <StyledPanelContainer>
+            {video && <YouTubeVideo {...video} />}
+          </StyledPanelContainer>
+        }
+      />
+    </StyledLi>
+  );
+};
 
 interface ICountedListItemDetails {
   details: Array<ICountedListItemDetail>;

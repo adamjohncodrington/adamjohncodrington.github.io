@@ -1,29 +1,26 @@
 import { FRIENDS as friends } from "@constants";
 import { GIGS_AND_FESTIVALS as DATA } from "data";
-import { getItemCounts, isInFuture } from "utils";
+import { getItemCounts } from "utils";
 
-const getGigCardsMatchingFriend = (friend: IFriend): Array<IGigOrFestival> => {
-  const gigCardsMatchingFriend: Array<IGigOrFestival> = [];
+const getFriendMatches = (friend: IFriend): Array<IGigOrFestival> => {
+  const friendMatches: Array<IGigOrFestival> = [];
   DATA.forEach((gigOrFestival: IGigOrFestival): void => {
     if (gigOrFestival.company.includes(friend))
-      gigCardsMatchingFriend.push(gigOrFestival);
+      friendMatches.push(gigOrFestival);
   });
-  return gigCardsMatchingFriend;
+  return friendMatches;
 };
 
 const getFriendDetails = (friend: IFriend): Array<ICountedListItemDetail> => {
-  const gigCardsMatchingFriend: Array<IGigOrFestival> = getGigCardsMatchingFriend(
-    friend
-  );
-  return gigCardsMatchingFriend.map(
+  const friendMatches: Array<IGigOrFestival> = getFriendMatches(friend);
+  return friendMatches.map(
     (gigOrFestival: IGigOrFestival, index: number): ICountedListItemDetail => {
       const { title, dates, video, favourite } = gigOrFestival;
       return {
-        index: gigCardsMatchingFriend.length > 1 ? index + 1 : undefined,
+        index: friendMatches.length > 1 ? index + 1 : undefined,
         mainText: [title],
         dates,
         favourite,
-        isInFuture: isInFuture(dates[0]),
         video
       };
     }

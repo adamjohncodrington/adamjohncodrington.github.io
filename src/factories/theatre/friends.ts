@@ -1,38 +1,30 @@
-import { FRIENDS } from "@constants";
+import { FRIENDS as friends } from "@constants";
 import { THEATRE as DATA } from "data";
-import { getItemCounts, getTheatreVisitTitle, isInFuture } from "utils";
+import { getItemCounts, getTheatreVisitTitle } from "utils";
 
-const getTheatreVisitsMatchingFriend = (
-  friend: IFriend
-): Array<ITheatreVisit> => {
-  const theatreVisitsMatchingFriend: Array<ITheatreVisit> = [];
+const getFriendMatches = (friend: IFriend): Array<ITheatreVisit> => {
+  const friendMatches: Array<ITheatreVisit> = [];
   DATA.forEach((theatreVisit: ITheatreVisit): void => {
-    if (theatreVisit.company.includes(friend))
-      theatreVisitsMatchingFriend.push(theatreVisit);
+    if (theatreVisit.company.includes(friend)) friendMatches.push(theatreVisit);
   });
-  return theatreVisitsMatchingFriend;
+  return friendMatches;
 };
 
 const getFriendDetails = (friend: IFriend): Array<ICountedListItemDetail> => {
-  const theatreVisitsMatchingFriend: Array<ITheatreVisit> = getTheatreVisitsMatchingFriend(
-    friend
-  );
-  return theatreVisitsMatchingFriend.map(
+  const friendMatches: Array<ITheatreVisit> = getFriendMatches(friend);
+  return friendMatches.map(
     (theatreVisit: ITheatreVisit, index: number): ICountedListItemDetail => {
       const { date } = theatreVisit;
       return {
-        index: theatreVisitsMatchingFriend.length > 1 ? index + 1 : undefined,
+        index: friendMatches.length > 1 ? index + 1 : undefined,
         mainText: [getTheatreVisitTitle(theatreVisit)],
-        dates: [date],
-        isInFuture: isInFuture(date)
+        dates: [date]
       };
     }
   );
 };
 
-export const FRIENDS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
-  FRIENDS
-)
+export const FRIENDS: Array<ICountedListItem> = Object.values(friends)
   .filter(({ theatre }: IFriend): boolean => !!theatre)
   .map(
     (friend: IFriend): ICountedListItem => ({

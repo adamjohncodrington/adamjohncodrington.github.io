@@ -4,35 +4,30 @@ import {
   getItemCounts,
   countryMatchExists,
   getTripTitle,
-  isInFuture,
   getTripSubtitle,
   detailsContainsFavourite
 } from "utils";
 
-const getTripsMatchingCountry = (
-  country: ICountryTemplate
-): Array<ITripLeg> => {
-  const tripsMatchingCountry: Array<ITripLeg> = [];
+const getCountryMatches = (country: ICountryTemplate): Array<ITripLeg> => {
+  const countryMatches: Array<ITripLeg> = [];
   const trips: Array<ITripLeg> = DATA.TRIP_LEGS;
   trips.forEach((trip: ITripLeg): void => {
-    if (countryMatchExists(country, trip)) tripsMatchingCountry.push(trip);
+    if (countryMatchExists(country, trip)) countryMatches.push(trip);
   });
-  return tripsMatchingCountry;
+  return countryMatches;
 };
 
 const getCountryDetails = (
   country: ICountryTemplate
 ): Array<ICountedListItemDetail> => {
-  const tripsMatchingCountry: Array<ITripLeg> = getTripsMatchingCountry(
-    country
-  );
-  return tripsMatchingCountry.map(
+  const countryMatches: Array<ITripLeg> = getCountryMatches(country);
+  return countryMatches.map(
     (trip: ITripLeg, index: number): ICountedListItemDetail => {
       const { dates, favourite, video } = trip;
       const tripTitle: string = getTripTitle(trip);
       const tripSubtitle: string | undefined = getTripSubtitle(trip);
       return {
-        index: tripsMatchingCountry.length > 1 ? index + 1 : undefined,
+        index: countryMatches.length > 1 ? index + 1 : undefined,
         mainText: !tripTitle.includes(country.name)
           ? [tripTitle]
           : tripSubtitle
@@ -40,8 +35,7 @@ const getCountryDetails = (
           : undefined,
         favourite,
         video,
-        dates,
-        isInFuture: isInFuture(dates[0])
+        dates
       };
     }
   );

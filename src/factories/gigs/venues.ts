@@ -1,29 +1,31 @@
 import { MUSIC_VENUES as venues } from "@constants";
-import { GIGS as DATA } from "data";
-import { getItemCounts, getGigTitle, isInFuture } from "utils";
+import { GIGS_AND_FESTIVALS as DATA } from "data";
+import { getItemCounts } from "utils";
 
-const getGigsMatchingMusicVenue = (musicVenue: IMusicVenue): Array<IGig> => {
-  const gigsMatchingMusicVenue: Array<IGig> = [];
-  DATA.forEach((gig: IGig): void => {
-    if (gig.venue === musicVenue) gigsMatchingMusicVenue.push(gig);
+const getMusicVenueMatches = (
+  musicVenue: IMusicVenue
+): Array<IGigOrFestival> => {
+  const musicVenueMatches: Array<IGigOrFestival> = [];
+  DATA.forEach((gigOrFestival: IGigOrFestival): void => {
+    if (gigOrFestival.venue === musicVenue)
+      musicVenueMatches.push(gigOrFestival);
   });
-  return gigsMatchingMusicVenue;
+  return musicVenueMatches;
 };
 
 const getMusicVenueDetails = (
   musicVenue: IMusicVenue
 ): Array<ICountedListItemDetail> => {
-  const gigsMatchingMusicVenue: Array<IGig> = getGigsMatchingMusicVenue(
+  const musicVenueMatches: Array<IGigOrFestival> = getMusicVenueMatches(
     musicVenue
   );
-  return gigsMatchingMusicVenue.map(
-    (gig: IGig, index: number): ICountedListItemDetail => {
-      const { dates, video } = gig;
+  return musicVenueMatches.map(
+    (gigOrFestival: IGigOrFestival, index: number): ICountedListItemDetail => {
+      const { title, dates, video } = gigOrFestival;
       return {
-        index: gigsMatchingMusicVenue.length > 1 ? index + 1 : undefined,
-        mainText: [getGigTitle(gig)],
+        index: musicVenueMatches.length > 1 ? index + 1 : undefined,
+        mainText: [title],
         dates,
-        isInFuture: isInFuture(dates[0]),
         video
       };
     }
@@ -36,7 +38,10 @@ export const VENUES: Array<ICountedListItem> = Object.values(venues).map(
     return {
       text: name,
       favourite,
-      ...getItemCounts({ item: { musicVenue }, data: { gigs: DATA } }),
+      ...getItemCounts({
+        item: { musicVenue },
+        data: { gigsAndFestivals: DATA }
+      }),
       details: getMusicVenueDetails(musicVenue)
     };
   }
