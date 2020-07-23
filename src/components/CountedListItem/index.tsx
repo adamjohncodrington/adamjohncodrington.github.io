@@ -70,11 +70,6 @@ export const CountedListItem: FC<ICountedListItem> = ({
   );
 
   if (details && details.length > 0) {
-    const sortedDetails: Array<ICountedListItemDetail> = details.sort(
-      (a: ICountedListItemDetail, b: ICountedListItemDetail) =>
-        a.dates[0].valueOf() > b.dates[0].valueOf() ? 1 : -1
-    );
-
     return (
       <li>
         <Disclosure
@@ -83,7 +78,7 @@ export const CountedListItem: FC<ICountedListItem> = ({
               {TextAndCounts}
             </DisclosureHeader>
           )}
-          Panel={<CountedListItemDetails details={sortedDetails} />}
+          Panel={<CountedListItemDetails details={details} />}
         />
       </li>
     );

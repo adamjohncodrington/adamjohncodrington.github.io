@@ -102,7 +102,7 @@ export const EventCard: React.FC<IEventCard> = ({
       Panel={
         <>
           {photos && <PhotoGrid photos={photos} columnCount={2} />}
-          {video && <YouTubeVideo {...video} />}
+          {video && <YouTubeVideo {...video} marginTop="10px" />}
         </>
       }
     />

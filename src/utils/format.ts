@@ -4,6 +4,8 @@ interface IFormatCLIOptions {
   isLeaderboard: boolean;
 }
 
+///TODO: sort child details here
+
 export const formatCountedListItems = (
   countedListItems: Array<ICountedListItem>,
   options?: IFormatCLIOptions
@@ -55,7 +57,19 @@ export const formatCountedListItems = (
         : countedListItem
   );
 
-  return mappedCountedListItems;
+  const detailSortedCountedListItems: Array<ICountedListItem> = mappedCountedListItems.map(
+    ({ details, ...rest }: ICountedListItem): ICountedListItem => ({
+      ...rest,
+      details: details
+        ? details.sort(
+            (a: ICountedListItemDetail, b: ICountedListItemDetail): number =>
+              a.dates[0].valueOf() > b.dates[0].valueOf() ? 1 : -1
+          )
+        : undefined
+    })
+  );
+
+  return detailSortedCountedListItems;
 };
 
 export const formatVinyls = (vinyls: Array<IVinyl>): Array<IVinyl> => {

@@ -39,7 +39,7 @@ export const CountedListItemDetail: React.FC<ICountedListItemDetail> = ({
         )}
         Panel={
           <StyledPanelContainer>
-            {video && <YouTubeVideo {...video} />}
+            {video && <YouTubeVideo {...video} marginTop="5px" />}
           </StyledPanelContainer>
         }
       />
