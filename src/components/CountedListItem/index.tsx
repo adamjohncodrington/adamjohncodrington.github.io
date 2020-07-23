@@ -13,7 +13,7 @@ import {
   CountedListItemFutureCount
 } from "./styles";
 
-interface IDisclosureHeader extends I_ClassName, IPanelIsVisible {}
+interface IDisclosureHeader extends I_ClassName, I_PanelIsVisible {}
 
 const DisclosureHeader: FC<IDisclosureHeader> = ({
   className,

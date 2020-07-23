@@ -19,7 +19,7 @@ import {
   RecipeCardCostsContainer
 } from "./styles";
 
-interface IRecipeCardHeader extends I_ClassName, IPanelIsVisible {}
+interface IRecipeCardHeader extends I_ClassName, I_PanelIsVisible {}
 
 export const RecipeCard: FC<IRecipe> = ({
   title,
@@ -43,7 +43,7 @@ export const RecipeCard: FC<IRecipe> = ({
     className
   }) => (
     <FlexRow className={className}>
-      <RecipeCardTitle panelIsVisible={panelIsVisible}>{title}</RecipeCardTitle>
+      <RecipeCardTitle bold={panelIsVisible}>{title}</RecipeCardTitle>
       <RoundedSymbol opacity="50%" type="diet">
         {diet.abbreviation}
       </RoundedSymbol>

@@ -48,6 +48,7 @@ export const EventCard: React.FC<IEventCard> = ({
           >
             <EventCardTextContainer data-test="event-card-container">
               <CardTitle
+                bold={true}
                 data-test="event-card-title"
                 favourite={!hideFavouriteIcon && favourite}
               >

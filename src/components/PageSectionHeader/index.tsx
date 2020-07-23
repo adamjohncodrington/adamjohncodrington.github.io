@@ -10,7 +10,7 @@ import {
   PageSectionSvgContainer
 } from "./styles";
 
-interface IPageSectionHeader {
+interface IPageSectionHeader extends I_PanelIsVisible {
   title: string;
   count?: number;
   starCount?: number;
@@ -20,6 +20,7 @@ interface IPageSectionHeader {
 
 export const PageSectionHeader: React.FC<IPageSectionHeader> = ({
   title,
+  panelIsVisible,
   SvgIcon,
   count,
   starCount,
@@ -27,7 +28,7 @@ export const PageSectionHeader: React.FC<IPageSectionHeader> = ({
 }) => (
   <PageSectionHeaderContainer data-test={dataTest}>
     <FlexRowGrow data-test="section-header-title-and-counts">
-      <PageSectionTitle data-test="section-header-title">
+      <PageSectionTitle bold={panelIsVisible} data-test="section-header-title">
         {title}
       </PageSectionTitle>
 

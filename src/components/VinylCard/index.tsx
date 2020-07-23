@@ -54,7 +54,7 @@ export const VinylCard: FC<IVinylCard> = ({
       </VinylCardLink>
 
       <VinylCardTextContainer>
-        <CardTitle>{cardTitle}</CardTitle>
+        <CardTitle bold={true}>{cardTitle}</CardTitle>
         <CardSubtitleBold>{cardSubtitle}</CardSubtitleBold>
 
         {!hideYear && <div>{year}</div>}

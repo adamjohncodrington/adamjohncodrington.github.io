@@ -25,7 +25,9 @@ interface IPageHeader {
 
 export const PageHeader: React.FC<IPageHeader> = ({ titleText, count }) => (
   <PageHeaderContainer data-test="page-header-container">
-    <H1 data-test="page-header-title">{titleText}</H1>
+    <H1 bold={true} data-test="page-header-title">
+      {titleText}
+    </H1>
 
     {count && count > 0 && (
       <PageHeaderCount data-test="page-header-count">{count}</PageHeaderCount>

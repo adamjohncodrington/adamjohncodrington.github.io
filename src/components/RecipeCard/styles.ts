@@ -3,15 +3,10 @@ import styled, { css } from "styled-components";
 import { H3, FlexColumn } from "primitives";
 import { CSS } from "styles";
 
-interface IRecipeCardTitle extends IPanelIsVisible, I_Theme {}
-
-export const RecipeCardTitle = styled(H3)(
-  ({ panelIsVisible, theme: { recipe } }: IRecipeCardTitle) => css`
-    text-transform: lowercase;
-    font-weight: ${panelIsVisible ? "bold" : recipe.title.fontWeight};
-    flex: 1;
-  `
-);
+export const RecipeCardTitle = styled(H3)`
+  text-transform: lowercase;
+  flex: 1;
+`;
 
 export const RecipeCardPanel = styled.div(
   ({ theme: { recipe } }: I_Theme) => css`

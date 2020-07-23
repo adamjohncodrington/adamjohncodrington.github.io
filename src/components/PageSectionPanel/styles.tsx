@@ -95,13 +95,12 @@ export const StyledComingSoonPlaceholder = styled.div(
   ({
     theme: {
       pageSection: {
-        comingSoon: { fontSize, fontWeight }
+        comingSoon: { fontSize }
       }
     }
   }: I_Theme) => css`
     padding-top: 5px;
     padding-bottom: 10px;
     font-size: ${fontSize};
-    font-weight: ${fontWeight};
   `
 );

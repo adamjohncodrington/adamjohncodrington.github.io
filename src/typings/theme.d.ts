@@ -36,7 +36,7 @@ interface IThemePageSection {
   background: ColorValue;
   borderRadius: PxValue;
   boxShadow: BoxShadowValue;
-  comingSoon: { fontSize: PxValue; fontWeight: FontWeightValue };
+  comingSoon: { fontSize: PxValue };
   count: { margin: { left: PxValue } };
   header: { padding: { vertical: PxValue } };
   icon: { size: PxValue };
@@ -69,7 +69,6 @@ interface IThemeRecipeCard {
     padding: { top: PxValue };
   };
   portionCost: { margin: { top: PxValue } };
-  title: { fontWeight: FontWeightValue };
 }
 
 interface IThemeRoundedSymbol {

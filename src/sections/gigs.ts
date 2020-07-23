@@ -5,8 +5,7 @@ import { SVG } from "resources";
 const BUCKET_LIST: IPageSection = {
   title: PAGE_SECTION_TITLES.BUCKET_LIST,
   SvgIcon: SVG.STARS,
-  data: { countedListItems: FACTORY.BUCKET_LIST },
-  count: FACTORY.BUCKET_LIST.length
+  data: { countedListItems: FACTORY.BUCKET_LIST }
 };
 
 const FESTIVALS: IPageSection = {
@@ -31,8 +30,7 @@ const FRIENDS: IPageSection = {
 const SOLO: IPageSection = {
   SvgIcon: SVG.SOLO,
   title: PAGE_SECTION_TITLES.SOLO,
-  data: { gigsAndFestivals: FACTORY.SOLO },
-  count: FACTORY.SOLO.length
+  data: { gigsAndFestivals: FACTORY.SOLO }
 };
 
 const FAVOURITES: IPageSection = {
@@ -58,8 +56,7 @@ const VENUES: IPageSection = {
 const VIDEOS: IPageSection = {
   SvgIcon: SVG.VIDEO_CAMERA,
   title: PAGE_SECTION_TITLES.VIDEOS,
-  data: { videoCards: FACTORY.VIDEOS },
-  count: FACTORY.VIDEOS.length
+  data: { videoCards: FACTORY.VIDEOS }
 };
 
 const YEARS: Array<IPageSection> = FACTORY.YEARS.map(

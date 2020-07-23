@@ -8,7 +8,7 @@ export const StyledOl = styled.ol`
   padding: 0;
   margin: 0;
 
-  padding-top: 7px;
+  padding-top: 6px;
 
   > li:not(:last-child) {
     padding-bottom: 3px;

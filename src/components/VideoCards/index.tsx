@@ -14,15 +14,19 @@ const VideoCardHeaderContainer = styled.div`
   }
 `;
 
+const StyledDateText = styled.div`
+  font-size: 75%;
+`;
+
 export const VideoCard: React.FC<IVideoCard> = ({ title, dates, ...video }) => (
   <Disclosure
     Header={() => (
       <VideoCardHeaderContainer>
         <CardTitle bold={false}>{title}</CardTitle>
-        <div>{getDatesText(dates)}</div>
+        <StyledDateText>{getDatesText(dates)}</StyledDateText>
       </VideoCardHeaderContainer>
     )}
-    Panel={<YouTubeVideo marginTop="5px" {...video} />}
+    Panel={<YouTubeVideo marginTop="10px" {...video} />}
   />
 );
 

@@ -30,7 +30,7 @@ export const FlexLiGrow = styled(Li)`
 `;
 
 export const DynamicFontWeightFlexRow = styled(FlexRow)(
-  ({ panelIsVisible }: IPanelIsVisible) =>
+  ({ panelIsVisible }: I_PanelIsVisible) =>
     panelIsVisible &&
     css`
       * {

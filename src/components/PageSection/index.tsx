@@ -40,9 +40,10 @@ export const PageSection: React.FC<IPageSection> = ({
         autoExpand={
           autoExpandAlways || (pageUses2Columns && autoExpandIf2Columns)
         }
-        Header={() => (
+        Header={({ panelIsVisible }) => (
           <PageSectionHeader
             title={title}
+            panelIsVisible={panelIsVisible}
             count={count}
             starCount={starCount}
             SvgIcon={SvgIcon}

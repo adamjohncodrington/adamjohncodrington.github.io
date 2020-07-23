@@ -5,8 +5,6 @@ import { COLORS } from "./colors";
 import { FONT_SIZES } from "./font-sizes";
 import { fontFamily, scrollbarSize } from "./GlobalStyle";
 
-const thinFontWeight: string = "300";
-
 const THEME_COUNTED_LIST_ITEM: IThemeCountedListItem = {
   count: { margin: { left: "5px" }, width: "20px" }
 };
@@ -37,20 +35,20 @@ const THEME_PAGE_SECTION: IThemePageSection = {
   background: COLORS.gainsboro,
   borderRadius: "10px",
   boxShadow: `0 1px 2px ${rgba(COLORS.gray, 0.5)}`,
-  comingSoon: { fontSize: FONT_SIZES.L, fontWeight: thinFontWeight },
+  comingSoon: { fontSize: FONT_SIZES.L },
   count: { margin: { left: "5px" } },
   header: { padding: { vertical: "12px" } },
   icon: { size: "32px" },
   margin: { bottom: "20px" },
   padding: { horizontal: "12px", bottom: "5px" },
   panelList: {
-    border: { bottom: `1px solid ${COLORS.gray}` },
+    border: { bottom: `1px dashed ${COLORS.gray}` },
     countedListItems: { padding: { vertical: "5px" } },
     padding: { bottom: "5px" },
     recipes: {
-      firstRecipeCard: { padding: { top: "15px" } },
-      lastRecipeCard: { padding: { bottom: "20px" } },
-      padding: { vertical: "15px" }
+      firstRecipeCard: { padding: { top: "10px" } },
+      lastRecipeCard: { padding: { bottom: "15px" } },
+      padding: { vertical: "10px" }
     },
     regularCards: {
       lastRegularCard: { padding: { bottom: "5px" } },
@@ -67,11 +65,10 @@ const THEME_PAGE_LAYOUT: IThemePageLayout = {
 
 const THEME_RECIPE_CARD: IThemeRecipeCard = {
   panel: {
-    children: { padding: { top: "15px" } },
+    children: { padding: { top: "10px" } },
     padding: { top: "5px" }
   },
-  portionCost: { margin: { top: "3px" } },
-  title: { fontWeight: thinFontWeight }
+  portionCost: { margin: { top: "3px" } }
 };
 
 const THEME_ROUNDED_SYMBOL: IThemeRoundedSymbol = {
