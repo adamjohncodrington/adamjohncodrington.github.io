@@ -30,6 +30,7 @@ const { COUNTED_LIST, RECIPE_CARDS, REGULAR } = PAGE_SECTION_PANEL_TYPES;
 export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
   countedListItems,
   gigs,
+  gigsAndFestivals,
   recipes,
   theatreVisits,
   trips,
@@ -61,6 +62,23 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
             )
         )}
 
+      {gigsAndFestivals &&
+        gigsAndFestivals.map((gigOrFestival: IGigOrFestival, index: number) => {
+          const { venue, dates, ticketType } = gigOrFestival;
+          return (
+            <Li key={index}>
+              <EventCard
+                {...gigOrFestival}
+                body={moveTheSuffixToPrefix(venue.name)}
+                secondaryBody={getDatesText(dates)}
+                countdownText={getCountdownText(dates[0])}
+                note={ticketType}
+              />
+            </Li>
+          );
+        })}
+
+      {/* THIS NEEDS TO GO */}
       {gigs &&
         gigs.map((gig: IGig, index: number) => {
           const { venue, dates, ticketType } = gig;

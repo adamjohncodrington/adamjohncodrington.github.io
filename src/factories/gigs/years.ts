@@ -1,4 +1,6 @@
-import { GIGS as DATA } from "data";
-import { splitGigsIntoYears } from "utils";
+import { GIGS_AND_FESTIVALS as DATA } from "data";
+import { splitGigsAndFestivalsIntoYears } from "utils";
 
-export const YEARS: Array<Array<IGig>> = splitGigsIntoYears(DATA);
+export const YEARS: Array<Array<
+  IGigOrFestival
+>> = splitGigsAndFestivalsIntoYears(DATA);

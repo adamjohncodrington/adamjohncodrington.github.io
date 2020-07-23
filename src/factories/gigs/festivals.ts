@@ -1,43 +1,43 @@
-// import { FESTIVALS } from "@constants";
-// import { getItemCounts, isInFuture, getGigSubtitle } from "utils";
-
-// import * as DATA from "../data";
+import { FESTIVAL_TITLES as festivals } from "@constants";
+import { FESTIVALS as DATA } from "data";
+import { getItemCounts, getFestivalSubtitle } from "utils";
 
 export const TO_BE_FIXED: string = "TO BE FIXED";
 
-// const getGigsMatchingFestival = (festival: IFestivalTitle): Array<IGig> => {
-//   const gigsMatchingFestival: Array<IGig> = [];
-//   const gigs: Array<IGig> = DATA.ARRAY;
-//   gigs.forEach((gig: IGig): void => {
-//     if (festival === gig.festival) {
-//       gigsMatchingFestival.push(gig);
-//     }
-//   });
-//   return gigsMatchingFestival;
-// };
+const getFestivalMatches = (
+  festivalTitle: IFestivalTitle
+): Array<IFestival> => {
+  const festivalMatches: Array<IFestival> = [];
+  DATA.forEach((festival: IFestival): void => {
+    if (festivalTitle === festival.title) {
+      festivalMatches.push(festival);
+    }
+  });
+  return festivalMatches;
+};
 
-// const getFestivalDetails = (
-//   musician: IMusician
-// ): Array<ICountedListItemDetail> => {
-//   const gigsMatchingFestival: Array<IGig> = getGigsMatchingFestival(musician);
-//   return gigsMatchingFestival.map(
-//     (gig: IGig, index: number): ICountedListItemDetail => {
-//       const { dates, video } = gig;
-//       return {
-//         mainText: [getGigSubtitle(gig) || "TBC"],
-//         dates,
-//         video
-//       };
-//     }
-//   );
-// };
+const getFestivalDetails = (
+  musician: IMusician
+): Array<ICountedListItemDetail> => {
+  const festivalMatches: Array<IFestival> = getFestivalMatches(musician);
+  return festivalMatches.map(
+    (festival: IFestival): ICountedListItemDetail => {
+      const { dates, video } = festival;
+      return {
+        mainText: [getFestivalSubtitle(festival) || "TBC"],
+        dates,
+        video
+      };
+    }
+  );
+};
 
-// export const FESTIVALS_LIST_ITEMS: Array<ICountedListItem> = Object.values(
-//   FESTIVALS
-// ).map(
-//   (festival: IFestivalTitle): ICountedListItem => ({
-//     text: festival.name,
-//     ...getItemCounts({ item: { festival }, data: { gigs: DATA.ARRAY } }),
-//     details: getFestivalDetails(festival)
-//   })
-// );
+export const FESTIVALS: Array<ICountedListItem> = Object.values(festivals)
+  .filter(({ insignificant }: IFestivalTitle): boolean => !insignificant)
+  .map(
+    (festival: IFestivalTitle): ICountedListItem => ({
+      text: festival.name,
+      ...getItemCounts({ item: { festival }, data: { festivals: DATA } }),
+      details: getFestivalDetails(festival)
+    })
+  );

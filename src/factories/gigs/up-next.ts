@@ -1,6 +1,6 @@
-import { GIGS as DATA } from "data";
+import { GIGS_AND_FESTIVALS as DATA } from "data";
 import { isInFuture } from "utils";
 
-export const UP_NEXT: Array<IGig> = DATA.filter(({ dates }: IGig): boolean =>
-  isInFuture(dates[0])
+export const UP_NEXT: Array<IGigOrFestival> = DATA.filter(
+  ({ dates }: IGigOrFestival): boolean => isInFuture(dates[0])
 );

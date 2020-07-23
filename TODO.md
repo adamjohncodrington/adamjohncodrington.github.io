@@ -1,13 +1,8 @@
 # TO DO LIST
 
-- reinstate all `festivals` functionality!!!
-  - years
-  - festivals
-  - venues
-  - up next
-
 - reinstate musician details
 
+- create a `factories/recipes` folder
 - implement sorting at `PageSectionLayout` level
 
 - reinstate all gig videos

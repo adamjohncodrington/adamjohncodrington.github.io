@@ -9,11 +9,11 @@ const BUCKET_LIST: IPageSection = {
   count: FACTORY.BUCKET_LIST.length
 };
 
-// const FESTIVALS: IPageSection = {
-//   SvgIcon: SVG.PEACE_SIGN,
-//   title: PAGE_SECTION_TITLES.FESTIVALS,
-//   data: { countedListItems: FACTORY.FESTIVALS }
-// };
+const FESTIVALS: IPageSection = {
+  SvgIcon: SVG.PEACE_SIGN,
+  title: PAGE_SECTION_TITLES.FESTIVALS,
+  data: { countedListItems: FACTORY.FESTIVALS }
+};
 
 const ARTISTS: IPageSection = {
   title: PAGE_SECTION_TITLES.ARTISTS,
@@ -44,7 +44,7 @@ const FAVOURITES: IPageSection = {
 const UP_NEXT: IPageSection = {
   SvgIcon: SVG.NOTEPAD,
   title: PAGE_SECTION_TITLES.UP_NEXT,
-  data: { gigs: FACTORY.UP_NEXT },
+  data: { gigsAndFestivals: FACTORY.UP_NEXT },
   count: FACTORY.UP_NEXT.length
 };
 
@@ -63,10 +63,10 @@ const VIDEOS: IPageSection = {
 };
 
 const YEARS: Array<IPageSection> = FACTORY.YEARS.map(
-  (year: Array<IGig>): IPageSection => ({
+  (year: Array<IGigOrFestival>): IPageSection => ({
     title: year[0].dates[0].getFullYear().toString(),
     count: year.length,
-    data: { gigs: year }
+    data: { gigsAndFestivals: year }
   })
 );
 
@@ -74,7 +74,7 @@ export const GIGS: Array<IPageSection> = [
   ARTISTS,
   BUCKET_LIST,
   FAVOURITES,
-  // FESTIVALS,
+  FESTIVALS,
   FRIENDS,
   SOLO,
   UP_NEXT,

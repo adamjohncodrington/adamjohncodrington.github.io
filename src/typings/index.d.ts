@@ -144,6 +144,7 @@ interface IPageSectionDataTypes {
   comingSoon?: boolean;
   countedListItems?: Array<ICountedListItem>;
   photoGrid?: { photos: Array<IPhoto>; columnCount: number };
+  festivals?: Array<IFestival>;
   gigs?: Array<IGig>;
   gigsAndFestivals?: Array<IGigOrFestival>;
   recipes?: Array<IRecipe>;
@@ -162,7 +163,7 @@ interface IPageSection extends IPageSectionDisclosure {
   hide?: boolean;
 }
 
-interface IFestivalTitle extends I_Name {}
+interface IFestivalTitle extends I_Name, I__Insignificant {}
 
 interface IGigAndFestival extends IEventCardAll {
   venue: IMusicVenue;
