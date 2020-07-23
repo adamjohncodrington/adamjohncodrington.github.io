@@ -44,9 +44,6 @@ export const VinylCard: FC<IVinylCard> = ({
   );
   const albumTitle: string = title;
 
-  const cardTitle: string = hideYear ? musicianName : albumTitle;
-  const cardSubtitle: string = hideYear ? albumTitle : musicianName;
-
   return (
     <FlexRow data-test="vinyl-card">
       <VinylCardLink href={"https://music.apple.com/gb/album/" + appleMusicId}>
@@ -54,8 +51,8 @@ export const VinylCard: FC<IVinylCard> = ({
       </VinylCardLink>
 
       <VinylCardTextContainer>
-        <CardTitle bold={false}>{cardTitle}</CardTitle>
-        <CardSubtitle>{cardSubtitle}</CardSubtitle>
+        <CardTitle bold={false}>{albumTitle}</CardTitle>
+        <CardSubtitle>{musicianName}</CardSubtitle>
 
         {!hideYear && <div>{year}</div>}
       </VinylCardTextContainer>
