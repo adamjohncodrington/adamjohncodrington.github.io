@@ -76,8 +76,8 @@ export const GIGS: Array<IPageSection> = [
   FAVOURITES,
   // FESTIVALS,
   FRIENDS,
-  UP_NEXT,
   SOLO,
+  UP_NEXT,
   VENUES,
   VIDEOS,
   ...YEARS
