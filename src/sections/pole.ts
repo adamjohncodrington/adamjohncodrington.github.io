@@ -32,10 +32,10 @@ const NON_POLE: IPageSection = {
   data: { comingSoon: true }
 };
 
-const IMPROVISATION: IPageSection = {
+const IMPROV: IPageSection = {
   SvgIcon: SVG.DANCER_MALE_1,
-  title: PAGE_SECTION_TITLES.IMPROVISATION,
-  data: { comingSoon: true }
+  title: PAGE_SECTION_TITLES.IMPROV,
+  data: { videoCards: FACTORY.IMPROV }
 };
 
 const PHOTOS: IPageSection = {
@@ -60,7 +60,7 @@ export const POLE: Array<IPageSection> = [
   TRICKS,
   CONTEMPORARY,
   EXOTIC,
-  IMPROVISATION,
+  IMPROV,
   PHOTOS,
   SHOWCASE,
   STUDIOS,

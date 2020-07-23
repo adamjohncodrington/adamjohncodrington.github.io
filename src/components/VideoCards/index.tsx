@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Li } from "primitives";
 import { getDatesText } from "utils";
 
-import { CardTitle } from "../styles";
+import { CardTitle, CardSubtitle } from "../styles";
 import { Disclosure } from "../Disclosure";
 import { YouTubeVideo } from "../YouTubeVideo";
 
@@ -18,11 +18,21 @@ const StyledDateText = styled.div`
   font-size: 75%;
 `;
 
-export const VideoCard: React.FC<IVideoCard> = ({ title, dates, ...video }) => (
+export const VideoCard: React.FC<IVideoCard> = ({
+  title,
+  subtitle,
+  dates,
+  ...video
+}) => (
   <Disclosure
     Header={({ panelIsVisible }) => (
       <VideoCardHeaderContainer>
         <CardTitle bold={panelIsVisible}>{title}</CardTitle>
+
+        {subtitle && (
+          <CardSubtitle bold={panelIsVisible}>{subtitle}</CardSubtitle>
+        )}
+
         <StyledDateText>{getDatesText(dates)}</StyledDateText>
       </VideoCardHeaderContainer>
     )}

@@ -1,5 +1,8 @@
 # TO DO LIST
 
+- mush `EventCard`, `VideoCard`, `VinylCard` as `SectionCard`???
+- review outstanding `//TODO:`s
+
 - reinstate all gig across site
 - define `IDates` as `{start, end, only}`
 - convert all `travel` data to use `IStartEndDate`

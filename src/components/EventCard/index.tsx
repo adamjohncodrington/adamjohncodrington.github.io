@@ -56,7 +56,7 @@ export const EventCard: React.FC<IEventCard> = ({
               </CardTitle>
 
               {subtitle && !hideSubtitle && (
-                <CardSubtitle data-test="event-card-subtitle">
+                <CardSubtitle bold={false} data-test="event-card-subtitle">
                   {subtitle}
                 </CardSubtitle>
               )}

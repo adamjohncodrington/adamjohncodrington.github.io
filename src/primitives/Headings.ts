@@ -2,10 +2,6 @@ import styled, { css } from "styled-components";
 
 import { FONT_SIZES, CSS } from "styles";
 
-interface I_Bold {
-  bold: boolean;
-}
-
 export const H1 = styled.h1(
   ({ bold }: I_Bold) => css`
     font-size: ${FONT_SIZES.XxL};

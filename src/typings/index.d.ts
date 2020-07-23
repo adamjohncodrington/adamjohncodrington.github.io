@@ -99,6 +99,7 @@ interface IVideo extends I_OrientationQuality {
 
 interface IVideoCard extends IVideo, I_Dates {
   title: string;
+  subtitle?: string;
 }
 
 interface IVideoCards {
@@ -215,6 +216,32 @@ interface IGigVideo extends IVideo {
 interface ITravelVideo extends IVideo {
   dates: IStartEndDate;
   locations: Array<ILocation>;
+}
+
+interface I_Bold {
+  bold: boolean;
+}
+
+type IPoleCategory =
+  | "contemporary"
+  | "exotic"
+  | "improv"
+  | "non-pole"
+  | "showcase"
+  | "tricks";
+
+interface ISong {
+  musician: IMusician;
+  title: string;
+  year: number;
+}
+
+interface IPoleVideo extends IVideo {
+  date: Date;
+  song: ISong;
+  category: IPoleCategory;
+  studio: IPoleStudio;
+  instructor: IPoleInstructor | "none";
 }
 
 interface IPoleStudio {

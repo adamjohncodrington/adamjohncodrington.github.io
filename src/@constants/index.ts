@@ -9,6 +9,7 @@ import * as PAGE_SECTION_TITLES from "./page-section-titles";
 import * as PLAYS from "./plays";
 import * as POLE_INSTRUCTORS from "./pole-instructors";
 import * as POLE_STUDIOS from "./pole-studios";
+import * as SONGS from "./songs";
 import * as TICKET_TYPES from "./ticket-types";
 import * as UNICODE from "./unicode";
 
@@ -30,6 +31,7 @@ export {
   PLAYS,
   POLE_STUDIOS,
   POLE_INSTRUCTORS,
+  SONGS,
   TICKET_TYPES,
   UNICODE
 };

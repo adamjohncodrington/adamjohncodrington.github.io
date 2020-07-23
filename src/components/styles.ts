@@ -14,7 +14,14 @@ export const CardTitle = styled(H3)(
   `
 );
 
-export const CardSubtitle = styled.div`
-  text-transform: uppercase;
-  font-size: 85%;
-`;
+export const CardSubtitle = styled.div(
+  ({ bold }: I_Bold) => css`
+    text-transform: uppercase;
+    font-size: 85%;
+
+    ${bold &&
+    css`
+      font-weight: bold;
+    `}
+  `
+);
