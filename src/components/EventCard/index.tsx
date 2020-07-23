@@ -7,7 +7,7 @@ import { PhotoGrid } from "../PhotoGrid";
 import { RoundedSymbol } from "../RoundedSymbol";
 import { YouTubeVideo } from "../YouTubeVideo";
 
-import { CardTitleBold, CardSubtitleBold } from "../styles";
+import { CardTitle, CardSubtitleBold } from "../styles";
 import {
   EventCardNote,
   EventCardCountdown,
@@ -47,12 +47,12 @@ export const EventCard: React.FC<IEventCard> = ({
             equalWidthColumns={false}
           >
             <EventCardTextContainer data-test="event-card-container">
-              <CardTitleBold
+              <CardTitle
                 data-test="event-card-title"
                 favourite={!hideFavouriteIcon && favourite}
               >
                 {title}
-              </CardTitleBold>
+              </CardTitle>
 
               {subtitle && !hideSubtitle && (
                 <CardSubtitleBold data-test="event-card-subtitle">

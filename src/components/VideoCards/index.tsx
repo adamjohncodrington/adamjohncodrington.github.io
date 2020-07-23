@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { Li } from "primitives";
 import { getDatesText } from "utils";
 
-import { CardTitleBold } from "../styles";
+import { CardTitle } from "../styles";
 import { Disclosure } from "../Disclosure";
 import { YouTubeVideo } from "../YouTubeVideo";
 
@@ -18,7 +18,7 @@ export const VideoCard: React.FC<IVideoCard> = ({ title, dates, ...video }) => (
   <Disclosure
     Header={() => (
       <VideoCardHeaderContainer>
-        <CardTitleBold>{title}</CardTitleBold>
+        <CardTitle bold={false}>{title}</CardTitle>
         <div>{getDatesText(dates)}</div>
       </VideoCardHeaderContainer>
     )}

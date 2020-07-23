@@ -69,7 +69,7 @@ const PHOTOS: IPageSection = {
   SvgIcon: SVG.CAMERA,
   title: PAGE_SECTION_TITLES.PHOTOS,
   data: {
-    photoGrid: { photos: Object.values(photos.TRAVEL).flat(), columnCount: 4 }
+    photoGrid: { photos: FACTORY.PHOTOS, columnCount: 4 }
   }
 };
 

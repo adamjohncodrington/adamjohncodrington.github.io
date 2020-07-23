@@ -4,14 +4,16 @@ import { UNICODE } from "@constants";
 import { H3 } from "primitives";
 import { getPseudoElementBefore, getPseudoElementAfter } from "styles";
 
-interface ICardTitleBold extends I__Favourite, I__Star {}
+interface ICardTitle extends I__Favourite, I__Star {
+  bold?: boolean;
+}
 
-export const CardTitleBold = styled(H3)(
-  ({ favourite, star }: ICardTitleBold) => css`
-    font-weight: bold;
+export const CardTitle = styled(H3)(
+  ({ bold = true, favourite, star }: ICardTitle) => css`
     text-transform: uppercase;
     ${favourite && getPseudoElementBefore(UNICODE.HEART)}
     ${star && getPseudoElementAfter(UNICODE.STAR)}
+    ${bold && `font-weight: bold;`}
   `
 );
 

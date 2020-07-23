@@ -30,7 +30,7 @@ const SWEETS: IPageSection = {
 const PHOTOS: IPageSection = {
   title: PAGE_SECTION_TITLES.PHOTOS,
   SvgIcon: SVG.CAMERA,
-  data: { photoGrid: { photos: Object.values(photos.RECIPES), columnCount: 3 } }
+  data: { photoGrid: { photos: FACTORY.PHOTOS, columnCount: 3 } }
 };
 
 const COMING_SOON: IPageSection = {
