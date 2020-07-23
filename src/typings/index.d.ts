@@ -259,6 +259,7 @@ interface ILocation extends I_Name, I__Favourite, I__Insignificant {
   island?: boolean;
   insignificant?: boolean;
   englishName?: string;
+  shortName?: string;
   foreignName?: string;
   excludeFromBucketList?: boolean;
 }

@@ -1,4 +1,6 @@
-const cities: ICitiesBrazil = { RIO_DE_JANEIRO: { name: "Rio de Janeiro" } };
+const cities: ICitiesBrazil = {
+  RIO_DE_JANEIRO: { name: "Rio de Janeiro", shortName: "Rio" }
+};
 
 const attractions: IAttractionsBrazil = {
   MODERN_ART_MUSEUM_RIO: {

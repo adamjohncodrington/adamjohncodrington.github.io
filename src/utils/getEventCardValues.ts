@@ -46,7 +46,9 @@ export const getTripTitle = ({
     ? country.name
     : primaryLocations
     ? arrayToString(
-        primaryLocations.map(({ name }: ILocation) => name),
+        primaryLocations.map(
+          ({ shortName, name }: ILocation) => shortName || name
+        ),
         { useAmpersandsForPair: true }
       )
     : "TRIP TITLE MISSING";
@@ -59,7 +61,9 @@ export const getTripSubtitle = ({
   showCountryAsTitle
     ? primaryLocations &&
       arrayToString(
-        primaryLocations.map(({ name }: ILocation) => name),
+        primaryLocations.map(
+          ({ shortName, name }: ILocation) => shortName || name
+        ),
         { useAmpersandsForPair: true }
       )
     : country.name;
