@@ -1,6 +1,8 @@
 # TO DO LIST
 
-- make gig date prop singular, make festival dates prop `start/end`???
+- reinstate all videos across site
+- split festivals into `IDayFestival`, `IMultiDayFestival`, `INightOut`, etc.
+- make festival dates prop `start/end`???
 - reinstate all gig videos
 - implement sorting at `PageSectionLayout` level
 - totally refactor `travel` in `@constants`
@@ -8,7 +10,6 @@
 
 ## Enhancements
 
-- split festivals into `IDayFestival`, `IMultiDayFestival`, `INightOut`, etc.
 - beef up POLE section
 - add Apple Music links and details to Vinyl `artists` section
 - make YouTube videos play in HD

@@ -1,17 +1,9 @@
-import { GIGS as DATA } from "data";
+import { VIDEOS as videos } from "resources";
 
-export const VIDEOS: Array<IGig> = DATA.filter(
-  ({ video }: IGig): boolean => !!video
-)
-  .map(
-    (gig: IGig): IGig => ({
-      ...gig,
-      hideCompanySymbols: true,
-      hideSubtitle: true,
-      hideBody: true,
-      hideVideoIcon: true
-    })
-  )
-  .sort((a: IGig, b: IGig): number =>
-    a.date.valueOf() < b.date.valueOf() ? 1 : -1
-  );
+export const VIDEOS: Array<IVideoCard> = Object.values(videos.GIGS).map(
+  ({ musician, date, ...rest }: IGigVideo): IVideoCard => ({
+    ...rest,
+    title: musician.name,
+    dates: [date]
+  })
+);

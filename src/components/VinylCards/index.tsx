@@ -14,14 +14,11 @@ export const VinylCards: React.FC<IVinylCards> = ({ vinyls, shuffle }) => {
 
   return (
     <>
-      {VINYLS.map(
-        (vinyl: IVinylCard, index: number) =>
-          vinyl && (
-            <Li key={index}>
-              <VinylCard {...vinyl} />
-            </Li>
-          )
-      )}
+      {VINYLS.map((vinyl: IVinylCard, index: number) => (
+        <Li key={index}>
+          <VinylCard {...vinyl} />
+        </Li>
+      ))}
     </>
   );
 };

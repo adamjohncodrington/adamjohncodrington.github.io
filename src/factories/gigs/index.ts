@@ -1,4 +1,4 @@
-import { formatCountedListItems } from "utils";
+import { formatCountedListItems, formatVideoCards } from "utils";
 
 import { BUCKET_LIST } from "./bucket-list";
 import { FAVOURITES } from "./favourites";
@@ -21,7 +21,7 @@ export const GIGS = {
   SOLO,
   UP_NEXT,
   VENUES: formatCountedListItems(VENUES),
-  VIDEOS,
+  VIDEOS: formatVideoCards(VIDEOS),
   YEARS,
 
   pageCount

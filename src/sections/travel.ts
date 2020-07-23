@@ -1,7 +1,7 @@
 import { PAGE_SECTION_TITLES } from "@constants";
 import { TRAVEL as DATA } from "data";
 import { TRAVEL as FACTORY } from "factories";
-import { SVG, PHOTOS as photos, VIDEOS as videos } from "resources";
+import { SVG, PHOTOS as photos } from "resources";
 import { isInFuture } from "utils";
 
 const BUCKET_LIST: IPageSection = {
@@ -59,11 +59,11 @@ const UP_NEXT: IPageSection = {
   data: { trips: FACTORY.UP_NEXT }
 };
 
-const VIDEOS: IPageSection = {
-  SvgIcon: SVG.VIDEO_CAMERA,
-  title: PAGE_SECTION_TITLES.VIDEOS,
-  data: { videos: Object.values(videos.TRAVEL) }
-};
+// const VIDEOS: IPageSection = {
+//   SvgIcon: SVG.VIDEO_CAMERA,
+//   title: PAGE_SECTION_TITLES.VIDEOS,
+//   data: { videoCards: Object.values(videos.TRAVEL) }
+// };
 
 const PHOTOS: IPageSection = {
   SvgIcon: SVG.CAMERA,
@@ -95,6 +95,6 @@ export const TRAVEL: Array<IPageSection> = [
   THEME_PARKS,
   PHOTOS,
   UP_NEXT,
-  VIDEOS,
+  // VIDEOS,
   ...YEARS
 ];

@@ -1,5 +1,5 @@
-import { GIGS as DATA } from "data";
+import { GIGS_AND_FESTIVALS as DATA } from "data";
 
-export const SOLO: Array<IGig> = DATA.filter(
-  ({ company }: IGig): boolean => company.length === 0
+export const SOLO: Array<IGigOrFestival> = DATA.filter(
+  ({ company }: IGigOrFestival): boolean => company.length === 0
 );

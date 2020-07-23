@@ -97,6 +97,14 @@ interface IVideo extends I_OrientationQuality {
   youtubeId: string;
 }
 
+interface IVideoCard extends IVideo, I_Dates {
+  title: string;
+}
+
+interface IVideoCards {
+  videoCards: Array<IVideoCard>;
+}
+
 interface ICountedListItemDetail extends I__Favourite {
   video?: IVideo;
   mainText?: Array<string>;
@@ -150,7 +158,7 @@ interface IPageSectionDataTypes {
   recipes?: Array<IRecipe>;
   theatreVisits?: Array<ITheatreVisit>;
   trips?: Array<ITripLeg>;
-  videos?: Array<IVideo>;
+  videoCards?: Array<IVideoCard>;
   vinylCards?: IVinylCards;
 }
 

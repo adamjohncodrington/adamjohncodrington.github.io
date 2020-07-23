@@ -19,7 +19,7 @@ import { PhotoGrid } from "../PhotoGrid";
 import { EventCard } from "../EventCard";
 import { RecipeCard } from "../RecipeCard";
 import { VinylCards } from "../VinylCards";
-import { YouTubeVideo } from "../YouTubeVideo";
+import { VideoCards } from "../VideoCards";
 
 import { PageSectionPanelList, StyledComingSoonPlaceholder } from "./styles";
 
@@ -33,7 +33,7 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
   trips,
   vinylCards,
   photoGrid,
-  videos,
+  videoCards,
   comingSoon
 }) => {
   const pageSectionPanelType: string = recipes
@@ -105,10 +105,7 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
 
       {photoGrid && <PhotoGrid {...photoGrid} />}
 
-      {videos &&
-        videos.map((video: IVideo, index: number) => (
-          <YouTubeVideo key={index} {...video} marginTop="0" />
-        ))}
+      {videoCards && <VideoCards videoCards={videoCards} />}
 
       {countedListItems &&
         countedListItems.map(

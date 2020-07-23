@@ -31,7 +31,7 @@ const FRIENDS: IPageSection = {
 const SOLO: IPageSection = {
   SvgIcon: SVG.SOLO,
   title: PAGE_SECTION_TITLES.SOLO,
-  data: { gigs: FACTORY.SOLO },
+  data: { gigsAndFestivals: FACTORY.SOLO },
   count: FACTORY.SOLO.length
 };
 
@@ -58,7 +58,7 @@ const VENUES: IPageSection = {
 const VIDEOS: IPageSection = {
   SvgIcon: SVG.VIDEO_CAMERA,
   title: PAGE_SECTION_TITLES.VIDEOS,
-  data: { gigs: FACTORY.VIDEOS },
+  data: { videoCards: FACTORY.VIDEOS },
   count: FACTORY.VIDEOS.length
 };
 
