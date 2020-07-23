@@ -104,30 +104,3 @@ export const getFestivalMusicians = ({
 
   return musicians;
 };
-
-export const mapGigsToGigsAndFestivals = (
-  gigs: Array<IGig>
-): Array<IGigOrFestival> =>
-  gigs.map(
-    (gig: IGig): IGigOrFestival => ({
-      ...gig,
-      gig,
-      dates: [gig.date],
-      title: getGigTitle(gig),
-      subtitle: getGigSubtitle(gig),
-      musicians: getGigMusicians(gig)
-    })
-  );
-
-export const mapFestivalsToGigsAndFestivals = (
-  festivals: Array<IFestival>
-): Array<IGigOrFestival> =>
-  festivals.map(
-    (festival: IFestival): IGigOrFestival => ({
-      ...festival,
-      festival,
-      title: getFestivalTitle(festival),
-      subtitle: getFestivalSubtitle(festival),
-      musicians: getFestivalMusicians(festival)
-    })
-  );

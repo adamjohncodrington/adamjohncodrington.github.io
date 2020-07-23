@@ -1,4 +1,4 @@
-import { POLE_INSTRUCTORS as instructors } from "@constants";
+import { INSTRUCTORS as instructors } from "@constants";
 
 export const INSTRUCTORS: Array<ICountedListItem> = Object.values(
   instructors

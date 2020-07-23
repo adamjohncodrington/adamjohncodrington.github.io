@@ -15,19 +15,6 @@ import {
 
 interface IDisclosureHeader extends I_ClassName, I_PanelIsVisible {}
 
-const DisclosureHeader: FC<IDisclosureHeader> = ({
-  className,
-  children,
-  panelIsVisible
-}) => (
-  <DynamicFontWeightFlexRow
-    className={className}
-    panelIsVisible={panelIsVisible}
-  >
-    {children}
-  </DynamicFontWeightFlexRow>
-);
-
 export const CountedListItem: FC<ICountedListItem> = ({
   text,
   secondaryText,
@@ -74,9 +61,9 @@ export const CountedListItem: FC<ICountedListItem> = ({
       <li>
         <Disclosure
           Header={({ panelIsVisible }) => (
-            <DisclosureHeader panelIsVisible={panelIsVisible}>
+            <DynamicFontWeightFlexRow panelIsVisible={panelIsVisible}>
               {TextAndCounts}
-            </DisclosureHeader>
+            </DynamicFontWeightFlexRow>
           )}
           Panel={<CountedListItemDetails details={details} />}
         />

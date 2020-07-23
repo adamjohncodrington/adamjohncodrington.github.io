@@ -203,7 +203,7 @@ interface IGigOrFestival extends IGigAndFestival {
 
 interface IMusicVenue extends I_Name, I__Favourite, I__Insignificant {}
 
-interface IMusician extends I_Name, I__Favourite {
+interface IMusician extends I_Name, I__Favourite, I__ExcludeFromBucketList {
   previousStageName?: { name: string; yearDeprecated: number };
   noLongerExists?: boolean;
 }
@@ -285,11 +285,18 @@ interface IVinylCards {
   shuffle: boolean;
 }
 
-interface ILocation extends I_Name, I__Favourite, I__Insignificant {
+interface I__ExcludeFromBucketList {
+  excludeFromBucketList?: boolean;
+}
+
+interface ILocation
+  extends I_Name,
+    I__Favourite,
+    I__Insignificant,
+    I__ExcludeFromBucketList {
   island?: boolean;
   insignificant?: boolean;
   englishName?: string;
   shortName?: string;
   foreignName?: string;
-  excludeFromBucketList?: boolean;
 }

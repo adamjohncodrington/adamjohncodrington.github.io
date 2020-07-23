@@ -17,13 +17,13 @@ const STUDIOS: IPageSection = {
 const CONTEMPORARY: IPageSection = {
   title: PAGE_SECTION_TITLES.CONTEMPORARY,
   SvgIcon: SVG.DANCER_MALE_2,
-  data: { comingSoon: true }
+  data: { videoCards: FACTORY.CONTEMPORARY }
 };
 
 const EXOTIC: IPageSection = {
   SvgIcon: SVG.HEELS,
   title: PAGE_SECTION_TITLES.EXOTIC,
-  data: { comingSoon: true }
+  data: { videoCards: FACTORY.EXOTIC }
 };
 
 const NON_POLE: IPageSection = {

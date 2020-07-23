@@ -44,7 +44,6 @@ export const CountedListItemPastCount = styled.span(
     isLeaderboardItem,
     theme: { countedListItem }
   }: ICountedListItemPastCount) => css`
-    font-weight: bold;
     text-align: right;
     width: ${countedListItem.count.width};
     margin-left: ${isLeaderboardItem

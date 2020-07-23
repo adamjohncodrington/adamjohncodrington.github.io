@@ -11,3 +11,27 @@ export const ELLIE_GOULDING_START: ISong = {
   title: "Start",
   year: 2020
 };
+
+export const BILLIE_EILISH_WISH_YOU_WERE_GAY: ISong = {
+  musician: MUSICIANS.BILLIE_EILISH,
+  title: "wish you were gay",
+  year: 2019
+};
+
+export const GALLANT_WEIGHT_IN_GOLD: ISong = {
+  musician: MUSICIANS.GALLANT,
+  title: "Weight in Gold",
+  year: 2016
+};
+
+export const JORJA_SMITH_TOMORROW: ISong = {
+  musician: MUSICIANS.JORJA_SMITH,
+  title: "Tomorrow",
+  year: 2018
+};
+
+export const TAIKO_NO_MORE: ISong = {
+  musician: MUSICIANS.TAIKO,
+  title: "No More",
+  year: 2017
+};

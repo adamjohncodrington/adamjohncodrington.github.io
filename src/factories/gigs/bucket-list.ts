@@ -12,8 +12,16 @@ const musiciansForBucketList = Object.values(MUSICIANS)
     })
   )
   .filter(
-    ({ pastCount, futureCount, noLongerExists }: IMusicianCounted): boolean =>
-      pastCount === 0 && futureCount === 0 && !noLongerExists
+    ({
+      pastCount,
+      futureCount,
+      noLongerExists,
+      excludeFromBucketList
+    }: IMusicianCounted): boolean =>
+      pastCount === 0 &&
+      futureCount === 0 &&
+      !noLongerExists &&
+      !excludeFromBucketList
   );
 
 export const BUCKET_LIST: Array<ICountedListItem> = musiciansForBucketList.map(

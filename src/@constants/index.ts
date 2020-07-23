@@ -7,8 +7,8 @@ import * as MUSICIANS from "./musicians";
 import * as PAGE_SECTION_PANEL_TYPES from "./page-section-panel-types";
 import * as PAGE_SECTION_TITLES from "./page-section-titles";
 import * as PLAYS from "./plays";
-import * as POLE_INSTRUCTORS from "./pole-instructors";
-import * as POLE_STUDIOS from "./pole-studios";
+import * as INSTRUCTORS from "./pole-instructors";
+import * as STUDIOS from "./pole-studios";
 import * as SONGS from "./songs";
 import * as TICKET_TYPES from "./ticket-types";
 import * as UNICODE from "./unicode";
@@ -29,8 +29,8 @@ export {
   PAGE_SECTION_PANEL_TYPES,
   PAGE_SECTION_TITLES,
   PLAYS,
-  POLE_STUDIOS,
-  POLE_INSTRUCTORS,
+  STUDIOS,
+  INSTRUCTORS,
   SONGS,
   TICKET_TYPES,
   UNICODE
