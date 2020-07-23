@@ -41,6 +41,7 @@ interface IEventCardAll extends I_Company, I__Favourite {
   video?: IVideo;
 
   hideCompany?: boolean;
+  hideBody?: boolean;
   hideSecondaryBody?: boolean;
   hidePhotosIcon?: boolean;
   hideVideoIcon?: boolean;
@@ -192,6 +193,7 @@ interface IMusician extends I_Name, I__Favourite {
 }
 
 interface IGigVideo extends IVideo {
+  date: Date;
   musician: IMusician;
 }
 

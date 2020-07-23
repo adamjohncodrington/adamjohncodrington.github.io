@@ -30,6 +30,7 @@ export const EventCard: React.FC<IEventCard> = ({
   photos,
   hideCompany,
   hidePhotosIcon,
+  hideBody,
   hideSecondaryBody,
   hideSubtitle
 }) => (
@@ -52,7 +53,9 @@ export const EventCard: React.FC<IEventCard> = ({
               </CardSubtitleBold>
             )}
 
-            {body && <span data-test="event-card-body">{body}</span>}
+            {body && !hideBody && (
+              <span data-test="event-card-body">{body}</span>
+            )}
 
             {secondaryBody && !hideSecondaryBody && (
               <EventCardSecondaryBody data-test="event-card-secondary-body">

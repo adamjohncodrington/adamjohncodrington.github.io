@@ -5,7 +5,7 @@ import { Ul, Li, GridColumnDiv } from "primitives";
 import {
   replaceSpacesWithDashes,
   useMediaQueries,
-  pageSectionIsValid
+  pageSectionHasData
 } from "utils";
 
 import { PageSection } from "../PageSection";
@@ -22,13 +22,17 @@ export const PageSectionsLayout: FC<IPageSectionsLayout> = ({
   }: ITheme = useThemeContext();
   const { pageUses2Columns } = useMediaQueries();
 
-  const validPageSections: Array<IPageSection> = pageSections.filter(
-    (pageSection: IPageSection): boolean => pageSectionIsValid(pageSection)
+  const unhiddenPageSections: Array<IPageSection> = pageSections.filter(
+    ({ hide }: IPageSection): boolean => !hide
   );
 
-  const validPageSectionCount: number = validPageSections.length;
+  const datafulPageSections: Array<IPageSection> = unhiddenPageSections.filter(
+    (pageSection: IPageSection): boolean => pageSectionHasData(pageSection)
+  );
 
-  const sortedValidPageSections: Array<IPageSection> = validPageSections;
+  const validPageSectionCount: number = datafulPageSections.length;
+
+  const sortedValidPageSections: Array<IPageSection> = datafulPageSections;
   // .sort(
   //   (a: IPageSection, b: IPageSection): number => (a.title > b.title ? 1 : -1)
   // );

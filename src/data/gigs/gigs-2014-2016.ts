@@ -1,4 +1,4 @@
-import { FRIENDS, MUSICIANS, MUSIC_VENUES } from "@constants";
+import { FRIENDS, MUSICIANS, MUSIC_VENUES, DATES } from "@constants";
 import { VIDEOS } from "resources";
 
 export const FOXES: IGig = {
@@ -109,14 +109,14 @@ export const CHVRHCES: IGig = {
   venue: MUSIC_VENUES.ALBERT_HALL_MANCHESTER,
   company: [FRIENDS.DAN_SPARROW],
   video: VIDEOS.GIGS.CHVRCHES_2015,
-  dates: [new Date("2015-11-19")]
+  dates: [DATES.GIGS.CHVRCHES_2015]
 };
 
-export const LISSIE: IGig = {
+export const LISSIE_2015: IGig = {
   headline: MUSICIANS.LISSIE,
   venue: MUSIC_VENUES.ACADEMY_2_MANCHESTER,
   video: VIDEOS.GIGS.LISSIE,
-  dates: [new Date("2015-12-05")],
+  dates: [DATES.GIGS.LISSIE_2015],
   company: [],
   favourite: true
 };
@@ -135,15 +135,15 @@ export const JOSEF_SALVAT_2016: IGig = {
   video: VIDEOS.GIGS.JOSEF_SALVAT_2016,
   favourite: true,
   company: [],
-  dates: [new Date("2016-03-06")]
+  dates: [DATES.GIGS.JOSEF_SALVAT_2016]
 };
 
-export const BEYONCE: IGig = {
+export const BEYONCE_2016: IGig = {
   headline: MUSICIANS.BEYONCE,
   venue: MUSIC_VENUES.WEMBLEY_STADIUM,
-  video: VIDEOS.GIGS.BEYONCE,
+  video: VIDEOS.GIGS.BEYONCE_2016,
   company: [FRIENDS.EMMA_CODRINGTON],
-  dates: [new Date("2016-07-03")],
+  dates: [DATES.GIGS.BEYONCE_2016],
   favourite: true
 };
 
@@ -152,7 +152,7 @@ export const ROOSEVELT: IGig = {
   video: VIDEOS.GIGS.ROOSEVELT,
   venue: MUSIC_VENUES.XOYO,
   company: [FRIENDS.TONYA_FRANCE],
-  dates: [new Date("2016-11-24")]
+  dates: [DATES.GIGS.ROOSEVELT]
 };
 
 export const TROYE_SIVAN_2016: IGig = {
@@ -160,13 +160,13 @@ export const TROYE_SIVAN_2016: IGig = {
   venue: MUSIC_VENUES.ACADEMY_MANCHESTER,
   video: VIDEOS.GIGS.TROYE_SIVAN_2016,
   company: [FRIENDS.DAN_SPARROW],
-  dates: [new Date("2016-04-18")]
+  dates: [DATES.GIGS.TROYE_SIVAN_2016]
 };
 
 export const TOURIST: IGig = {
   headline: MUSICIANS.TOURIST,
   venue: MUSIC_VENUES.DEAF_INSTITUTE,
-  video: VIDEOS.GIGS.TOURIST,
+  video: VIDEOS.GIGS.TOURIST_2016,
   company: [FRIENDS.DAN_SPARROW],
-  dates: [new Date("2016-05-10")]
+  dates: [DATES.GIGS.TOURIST_2016]
 };

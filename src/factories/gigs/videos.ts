@@ -8,6 +8,7 @@ export const VIDEOS: Array<IGig> = DATA.filter(
       ...gig,
       hideCompany: true,
       hideSubtitle: true,
+      hideBody: true,
       hideVideoIcon: true
     })
   )

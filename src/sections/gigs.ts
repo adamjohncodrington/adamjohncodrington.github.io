@@ -22,34 +22,34 @@ const ARTISTS: IPageSection = {
   count: FACTORY.MUSICIANS.length
 };
 
-const FRIENDS_GIGS: IPageSection = {
+const FRIENDS: IPageSection = {
   SvgIcon: SVG.PEOPLE,
   title: PAGE_SECTION_TITLES.FRIENDS,
   data: { countedListItems: FACTORY.FRIENDS }
 };
 
-const UP_NEXT_GIGS: IPageSection = {
+const UP_NEXT: IPageSection = {
   SvgIcon: SVG.NOTEPAD,
   title: PAGE_SECTION_TITLES.UP_NEXT,
   data: { gigs: FACTORY.UP_NEXT },
   count: FACTORY.UP_NEXT.length
 };
 
-const VENUES_GIGS: IPageSection = {
+const VENUES: IPageSection = {
   SvgIcon: SVG.STADIUM,
   title: PAGE_SECTION_TITLES.VENUES,
   data: { countedListItems: FACTORY.VENUES },
   count: FACTORY.VENUES.length
 };
 
-const VIDEOS_GIGS: IPageSection = {
+const VIDEOS: IPageSection = {
   SvgIcon: SVG.VIDEO_CAMERA,
   title: PAGE_SECTION_TITLES.VIDEOS,
   data: { gigs: FACTORY.VIDEOS },
   count: FACTORY.VIDEOS.length
 };
 
-const SECTIONS_YEARS: Array<IPageSection> = FACTORY.YEARS.map(
+const YEARS: Array<IPageSection> = FACTORY.YEARS.map(
   (year: Array<IGig>): IPageSection => ({
     title: year[0].dates[0].getFullYear().toString(),
     count: year.length,
@@ -61,9 +61,9 @@ export const GIGS: Array<IPageSection> = [
   ARTISTS,
   BUCKET_LIST,
   // FESTIVALS,
-  FRIENDS_GIGS,
-  UP_NEXT_GIGS,
-  VENUES_GIGS,
-  VIDEOS_GIGS,
-  ...SECTIONS_YEARS
+  FRIENDS,
+  UP_NEXT,
+  VENUES,
+  VIDEOS,
+  ...YEARS
 ];

@@ -44,9 +44,9 @@ const PHOTOS: IPageSection = {
   data: { comingSoon: true }
 };
 
-const TRICKS_COMBOS: IPageSection = {
+const TRICKS: IPageSection = {
   SvgIcon: SVG.POLE_VAULT,
-  title: PAGE_SECTION_TITLES.TRICKS_COMBOS,
+  title: PAGE_SECTION_TITLES.TRICKS,
   data: { comingSoon: true }
 };
 
@@ -57,7 +57,7 @@ const SHOWCASE: IPageSection = {
 };
 
 export const POLE: Array<IPageSection> = [
-  TRICKS_COMBOS,
+  TRICKS,
   CONTEMPORARY,
   EXOTIC,
   IMPROVISATION,

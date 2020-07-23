@@ -1,4 +1,4 @@
-export const pageSectionIsValid = ({
+export const pageSectionHasData = ({
   data: { countedListItems, gigs, recipes, theatreVisits, trips, vinyls }
 }: IPageSection): boolean =>
   !(

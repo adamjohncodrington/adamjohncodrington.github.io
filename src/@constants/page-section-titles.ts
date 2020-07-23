@@ -17,7 +17,7 @@ export const EXOTIC: string = "Exotic";
 export const INSTRUCTORS: string = "Instructors";
 export const IMPROVISATION: string = "Improvisation";
 export const SHOWCASE: string = "Showcase";
-export const TRICKS_COMBOS: string = "Tricks & Combos";
+export const TRICKS: string = "Tricks & Combos";
 export const NON_POLE: string = "Non-Pole";
 export const STUDIOS: string = "Studios";
 

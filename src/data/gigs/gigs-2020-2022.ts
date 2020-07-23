@@ -1,4 +1,10 @@
-import { FRIENDS, MUSICIANS, TICKET_TYPES, MUSIC_VENUES } from "@constants";
+import {
+  DATES,
+  FRIENDS,
+  MUSICIANS,
+  TICKET_TYPES,
+  MUSIC_VENUES
+} from "@constants";
 import { VIDEOS } from "resources";
 
 //   headline: MUSICIANS.ALLIE_X,
@@ -18,15 +24,15 @@ export const GRACEY: IGig = {
   headline: MUSICIANS.GRACEY,
   venue: MUSIC_VENUES.LAYLOW,
   video: VIDEOS.GIGS.GRACEY,
-  dates: [new Date("2020-01-28")],
+  dates: [DATES.GIGS.GRACEY],
   company: [FRIENDS.DARREN_TAYLOR]
 };
 
-export const CHRISTINE_AND_THE_QUEENS: IGig = {
+export const CHRISTINE_AND_THE_QUEENS_2020: IGig = {
   headline: MUSICIANS.CHRISTINE_AND_THE_QUEENS,
   venue: MUSIC_VENUES.MOTH_CLUB,
-  video: VIDEOS.GIGS.CHRISTINE_AND_THE_QUEENS,
-  dates: [new Date("2020-03-07")],
+  video: VIDEOS.GIGS.CHRISTINE_AND_THE_QUEENS_2020,
+  dates: [DATES.GIGS.CHRISTINE_AND_THE_QUEENS_2020],
   favourite: true,
   company: [FRIENDS.DARREN_TAYLOR],
   ticketType: TICKET_TYPES.GIGS_AND_TOURS_POSTAL
@@ -36,7 +42,7 @@ export const JOSEF_SALVAT_2020: IGig = {
   headline: MUSICIANS.JOSEF_SALVAT,
   venue: MUSIC_VENUES.MOTH_CLUB,
   video: VIDEOS.GIGS.JOSEF_SALVAT_2020,
-  dates: [new Date("2020-02-05")],
+  dates: [DATES.GIGS.JOSEF_SALVAT_2020],
   company: [FRIENDS.DARREN_TAYLOR]
 };
 
@@ -45,7 +51,7 @@ export const KIM_PETRAS_2020: IGig = {
   video: VIDEOS.GIGS.KIM_PETRAS_2020,
   support: [MUSICIANS.ALEX_CHAPMAN],
   venue: MUSIC_VENUES.SHEPHERDS_BUSH_EMPIRE,
-  dates: [new Date("2020-02-11")],
+  dates: [DATES.GIGS.KIM_PETRAS_2020],
   company: [FRIENDS.DARREN_TAYLOR]
 };
 
@@ -57,12 +63,12 @@ export const NASTY_CHERRY: IGig = {
   ticketType: TICKET_TYPES.SEE_TICKETS_PRINT_AT_HOME
 };
 
-export const CAROLINE_POLACHEK: IGig = {
+export const CAROLINE_POLACHEK_2020: IGig = {
   headline: MUSICIANS.CAROLINE_POLACHEK,
-  video: VIDEOS.GIGS.CAROLINE_POLACHEK,
+  video: VIDEOS.GIGS.CAROLINE_POLACHEK_2020,
   support: [MUSICIANS.SEGA_BODEGA],
   venue: MUSIC_VENUES.HEAVEN,
-  dates: [new Date("2020-03-11")],
+  dates: [DATES.GIGS.CAROLINE_POLACHEK_2020],
   company: [FRIENDS.DARREN_TAYLOR],
   ticketType: TICKET_TYPES.DICE
 };
@@ -71,7 +77,7 @@ export const GEORGIA: IGig = {
   headline: MUSICIANS.GEORGIA,
   video: VIDEOS.GIGS.GEORGIA,
   venue: MUSIC_VENUES.HEAVEN,
-  dates: [new Date("2020-03-12")],
+  dates: [DATES.GIGS.GEORGIA],
   company: [FRIENDS.DARREN_TAYLOR],
   ticketType: TICKET_TYPES.DICE
 };

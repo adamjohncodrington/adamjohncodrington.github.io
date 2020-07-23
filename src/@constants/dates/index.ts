@@ -1,6 +1,7 @@
+import * as GIGS from "./gigs";
 import * as TRAVEL from "./travel";
 
-export { TRAVEL };
+export { GIGS, TRAVEL };
 
 export const DAYS_OF_THE_WEEK: Array<string> = [
   "Sun",

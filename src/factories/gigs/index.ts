@@ -4,6 +4,7 @@ import { BUCKET_LIST } from "./bucket-list";
 // import { FESTIVALS } from "./festivals";
 import { FRIENDS } from "./friends";
 import { MUSICIANS } from "./musicians";
+import { SOLO } from "./solo";
 import { pageCount } from "./page-count";
 import { UP_NEXT } from "./up-next";
 import { VENUES } from "./venues";
@@ -15,6 +16,7 @@ export const GIGS = {
   // FESTIVALS: formatCountedListItems(FESTIVALS),
   FRIENDS: formatCountedListItems(FRIENDS, { isLeaderboard: true }),
   MUSICIANS: formatCountedListItems(MUSICIANS),
+  SOLO,
   UP_NEXT,
   VENUES: formatCountedListItems(VENUES),
   VIDEOS,
