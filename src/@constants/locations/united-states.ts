@@ -54,7 +54,7 @@ const cities: ICitiesUSA = {
   KEY_WEST,
   LAS_VEGAS: { name: "Las Vegas" },
   VIRGINIA_BEACH: { name: "Virginia Beach" },
-  LOS_ANGELES: { name: "Los Angeles" },
+  LOS_ANGELES: { name: "Los Angeles", shortName: "LA" },
   NEW_YORK_CITY: { name: "New York City" },
   SAN_FRANCISCO: { name: "San Francisco" },
   SPRINGFIELD_MASSACHUSETTS: { name: "Springfield" },

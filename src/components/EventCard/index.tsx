@@ -35,7 +35,6 @@ export const EventCard: React.FC<IEventCard> = ({
   hideSecondaryBody,
   hideSubtitle
 }) => {
-  const validCompany: boolean = company.length > 0 && !hideCompanySymbols;
   const isStatic: boolean = !(video || (photos && photos.length > 0));
 
   return (
@@ -87,7 +86,8 @@ export const EventCard: React.FC<IEventCard> = ({
 
             {(company.length > 0 || video) && (
               <EventCardSymbolsContainer>
-                {validCompany &&
+                {company.length > 0 &&
+                  !hideCompanySymbols &&
                   company
                     .sort((a: IFriend, b: IFriend): number =>
                       a.initials > b.initials ? 1 : -1
@@ -101,13 +101,13 @@ export const EventCard: React.FC<IEventCard> = ({
                 {photos && !hidePhotosIcon && (
                   <RoundedSymbol
                     type="photo"
-                    opacity={validCompany ? "100%" : "50%"}
+                    opacity={!hideCompanySymbols ? "100%" : "50%"}
                   />
                 )}
                 {video && !hideVideoIcon && (
                   <RoundedSymbol
                     type="video"
-                    opacity={validCompany ? "100%" : "50%"}
+                    opacity={!hideCompanySymbols ? "100%" : "50%"}
                   />
                 )}
               </EventCardSymbolsContainer>

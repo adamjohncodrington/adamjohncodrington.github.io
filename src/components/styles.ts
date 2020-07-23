@@ -16,4 +16,5 @@ export const CardTitle = styled(H3)(
 
 export const CardSubtitle = styled.div`
   text-transform: uppercase;
+  font-size: 85%;
 `;
