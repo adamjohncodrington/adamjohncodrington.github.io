@@ -19,11 +19,11 @@ const THEME_NAV_BAR: IThemeNavBar = {
   background: COLORS.black,
   icon: {
     color: COLORS.white,
-    size: "36px",
+    size: "32px",
     defaultHoverColor: "#aaa",
     hoverShrinkSize: "0"
   },
-  padding: { vertical: "8px" }
+  padding: { vertical: "10px" }
 };
 
 const THEME_PAGE_HEADER: IThemePageHeader = {
