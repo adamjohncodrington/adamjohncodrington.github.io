@@ -1,11 +1,22 @@
-// import { VIDEOS } from "resources";
+import { VIDEOS as videos } from "resources";
+import { arrayToString } from "utils";
 
-//TODO: sort this file
+export const VIDEOS: Array<IVideoCard> = Object.values(videos.TRAVEL).map(
+  ({ locations, dates, ...rest }: ITravelVideo): IVideoCard => {
+    const locationNames: Array<string> = locations.map(
+      ({ name }: ILocation): string => name
+    );
 
-export const TBS: string = "to be sorted";
+    console.log(locationNames);
 
-// export const videos = Object.values(VIDEOS.TRAVEL);
-
-// DATA.TRIP_LEGS.filter(
-//   ({ dates }: ITripLeg): boolean => isInFuture(dates[0])
-// );
+    return {
+      ...rest,
+      title: arrayToString(locationNames),
+      // title: locationNames[0],
+      // title: "Travel Video Title",
+      // title: locations[0].name + locations[1].name,
+      // title: arrayToString(locations.map(({ name }: ILocation): string => name)),
+      dates: [dates.start, dates.end]
+    };
+  }
+);

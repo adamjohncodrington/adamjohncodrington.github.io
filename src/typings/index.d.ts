@@ -209,6 +209,11 @@ interface IGigVideo extends IVideo {
   musician: IMusician;
 }
 
+interface ITravelVideo extends IVideo {
+  dates: IStartEndDate;
+  locations: Array<ILocation>;
+}
+
 interface IPoleStudio {
   name: string;
   location?: string;

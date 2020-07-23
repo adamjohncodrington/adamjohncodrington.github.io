@@ -1,14 +1,17 @@
 import { moveTheSuffixToPrefix } from "./moveTheSuffixToPrefix";
 
-interface IArrayToString {
-  stringArray: Array<string>;
+interface IArrayToStringOptions {
   useAmpersandsForPair?: boolean;
 }
 
-export const arrayToString = ({
-  stringArray,
-  useAmpersandsForPair
-}: IArrayToString): string => {
+export const arrayToString = (
+  stringArray: Array<string>,
+  options?: IArrayToStringOptions
+): string => {
+  const useAmpersandsForPair: boolean = !!(
+    options && options.useAmpersandsForPair
+  );
+
   stringArray.map((item: string): string => moveTheSuffixToPrefix(item));
 
   if (useAmpersandsForPair && stringArray.length === 2)

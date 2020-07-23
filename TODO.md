@@ -1,5 +1,7 @@
 # TO DO LIST
 
+- define `IDates` as `{start, end, only}`
+- convert all `travel` data to use `IStartEndDate`
 - reinstate all videos across site
 - split festivals into `IDayFestival`, `IMultiDayFestival`, `INightOut`, etc.
 - make festival dates prop `start/end`???

@@ -1,11 +1,7 @@
 import { arrayToString, moveTheSuffixToPrefix } from "./basic";
 import { getMusicianStageNameAtTime } from "./musician";
 
-export const getGigTitle = ({
-  headline,
-  // festival,
-  date
-}: IGig): string =>
+export const getGigTitle = ({ headline, date }: IGig): string =>
   moveTheSuffixToPrefix(
     getMusicianStageNameAtTime({
       musician: headline,
@@ -15,30 +11,19 @@ export const getGigTitle = ({
 
 export const getFestivalTitle = ({ title }: IFestival): string => title.name;
 
-export const getGigSubtitle = ({
-  support
-}: // lineup
-IGig): string | undefined =>
+export const getGigSubtitle = ({ support }: IGig): string | undefined =>
   support &&
-  arrayToString({
-    stringArray: support.map(({ name }: IMusician): string =>
-      moveTheSuffixToPrefix(name)
-    )
-  });
-// : lineup &&
-//   arrayToString({
-//     stringArray: lineup
-//       .flat()
-//       .map(({ name }: IMusician): string => moveTheSuffixToPrefix(name))
-//   });
+  arrayToString(
+    support.map(({ name }: IMusician): string => moveTheSuffixToPrefix(name))
+  );
 
 export const getFestivalSubtitle = ({ lineup }: IFestival): string =>
   lineup[0].length > 0
-    ? arrayToString({
-        stringArray: lineup
+    ? arrayToString(
+        lineup
           .flat()
           .map(({ name }: IMusician): string => moveTheSuffixToPrefix(name))
-      })
+      )
     : "TBC";
 
 export const getTheatreVisitTitle = ({ play }: ITheatreVisit): string =>
@@ -48,11 +33,9 @@ export const getTheatreVisitSubtitle = ({
   cast
 }: ITheatreVisit): string | undefined =>
   cast &&
-  arrayToString({
-    stringArray: cast.map(({ name }: IActor): string =>
-      moveTheSuffixToPrefix(name)
-    )
-  });
+  arrayToString(
+    cast.map(({ name }: IActor): string => moveTheSuffixToPrefix(name))
+  );
 
 export const getTripTitle = ({
   country,
@@ -62,10 +45,10 @@ export const getTripTitle = ({
   showCountryAsTitle
     ? country.name
     : primaryLocations
-    ? arrayToString({
-        stringArray: primaryLocations.map(({ name }: ILocation) => name),
-        useAmpersandsForPair: true
-      })
+    ? arrayToString(
+        primaryLocations.map(({ name }: ILocation) => name),
+        { useAmpersandsForPair: true }
+      )
     : "TRIP TITLE MISSING";
 
 export const getTripSubtitle = ({
@@ -75,19 +58,17 @@ export const getTripSubtitle = ({
 }: ITripLeg): string | undefined =>
   showCountryAsTitle
     ? primaryLocations &&
-      arrayToString({
-        stringArray: primaryLocations.map(({ name }: ILocation) => name),
-        useAmpersandsForPair: true
-      })
+      arrayToString(
+        primaryLocations.map(({ name }: ILocation) => name),
+        { useAmpersandsForPair: true }
+      )
     : country.name;
 
 export const getTripBody = ({
   secondaryLocations
 }: ITripLeg): string | undefined =>
   secondaryLocations &&
-  arrayToString({
-    stringArray: secondaryLocations.map(({ name }: ILocation) => name)
-  });
+  arrayToString(secondaryLocations.map(({ name }: ILocation) => name));
 
 export const getGigMusicians = ({
   headline,

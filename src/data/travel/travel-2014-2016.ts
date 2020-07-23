@@ -87,7 +87,7 @@ export const UGANDA: ITrip = [
       COUNTRIES.UGANDA.attractions.NILE_SOURCE,
       COUNTRIES.UGANDA.attractions.RAFTING_NALUBALE
     ],
-    dates: [new Date("2015-08-04"), new Date("2015-09-05")],
+    dates: [DATES.TRAVEL.UGANDA.start, DATES.TRAVEL.UGANDA.end],
     company: [
       FRIENDS.AMY_CALCUTT,
       FRIENDS.HEATHER_CHILES,
@@ -239,7 +239,7 @@ export const BRAZIL: ITrip = [
       COUNTRIES.BRAZIL.cities.RIO_DE_JANEIRO,
       COUNTRIES.BRAZIL.islands.ILHA_GRANDE
     ],
-    video: VIDEOS.TRAVEL.BRAZIL,
+    video: VIDEOS.TRAVEL.RIO_ILHA_GRANDE,
     secondaryLocations: [
       COUNTRIES.BRAZIL.attractions.HANG_GLIDING,
       COUNTRIES.BRAZIL.attractions.MODERN_ART_MUSEUM_RIO,

@@ -29,17 +29,14 @@ describe("Basic utils", () => {
   describe("arrayToString function", () => {
     //TODO: test that this implicitly calls `moveTheSuffixToPrefix`
     it("should separate a string of arrays with commas", () => {
-      expect(
-        arrayToString({ stringArray: ["Apple", "Banana", "Carrot"] })
-      ).toEqual("Apple, Banana, Carrot");
+      expect(arrayToString(["Apple", "Banana", "Carrot"])).toEqual(
+        "Apple, Banana, Carrot"
+      );
     });
 
     it("should output an ampersand on a pair if requested", () => {
       expect(
-        arrayToString({
-          stringArray: ["Apple", "Banana"],
-          useAmpersandsForPair: true
-        })
+        arrayToString(["Apple", "Banana"], { useAmpersandsForPair: true })
       ).toEqual("Apple & Banana");
     });
   });

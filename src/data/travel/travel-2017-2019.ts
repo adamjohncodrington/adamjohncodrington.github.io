@@ -1,11 +1,11 @@
-import { FRIENDS, COUNTRIES } from "@constants";
+import { FRIENDS, COUNTRIES, DATES } from "@constants";
 import { PHOTOS, VIDEOS } from "resources";
 
 export const MILAN: ITrip = [
   {
     primaryLocations: [COUNTRIES.ITALY.cities.MILAN],
     country: COUNTRIES.ITALY,
-    dates: [new Date("2017-05-12"), new Date("2017-05-14")],
+    dates: [DATES.TRAVEL.MILAN.start, DATES.TRAVEL.MILAN.end],
     company: [
       FRIENDS.AISHA_SAEED,
       FRIENDS.JOE_EDWARDS,

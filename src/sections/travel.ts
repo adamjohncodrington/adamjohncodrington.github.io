@@ -59,11 +59,11 @@ const UP_NEXT: IPageSection = {
   data: { trips: FACTORY.UP_NEXT }
 };
 
-// const VIDEOS: IPageSection = {
-//   SvgIcon: SVG.VIDEO_CAMERA,
-//   title: PAGE_SECTION_TITLES.VIDEOS,
-//   data: { videoCards: Object.values(videos.TRAVEL) }
-// };
+const VIDEOS: IPageSection = {
+  SvgIcon: SVG.VIDEO_CAMERA,
+  title: PAGE_SECTION_TITLES.VIDEOS,
+  data: { videoCards: FACTORY.VIDEOS }
+};
 
 const PHOTOS: IPageSection = {
   SvgIcon: SVG.CAMERA,
@@ -95,6 +95,6 @@ export const TRAVEL: Array<IPageSection> = [
   THEME_PARKS,
   PHOTOS,
   UP_NEXT,
-  // VIDEOS,
+  VIDEOS,
   ...YEARS
 ];
