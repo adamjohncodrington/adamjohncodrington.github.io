@@ -1,7 +1,7 @@
 import { PAGE_SECTION_TITLES } from "@constants";
 import { TRAVEL as DATA } from "data";
 import { TRAVEL as FACTORY } from "factories";
-import { SVG, PHOTOS as photos } from "resources";
+import { SVG } from "resources";
 import { isInFuture } from "utils";
 
 const BUCKET_LIST: IPageSection = {

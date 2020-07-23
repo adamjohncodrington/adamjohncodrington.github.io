@@ -1,7 +1,7 @@
 import { PAGE_SECTION_TITLES } from "@constants";
 import { RECIPES as DATA } from "data";
 import { RECIPES as FACTORY } from "factories";
-import { SVG, PHOTOS as photos } from "resources";
+import { SVG } from "resources";
 
 const MAINS: IPageSection = {
   title: PAGE_SECTION_TITLES.MAINS,
