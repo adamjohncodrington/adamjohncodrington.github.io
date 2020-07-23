@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/static/js/main.38477005.chunk.js",
-    "main.js.map": "/static/js/main.38477005.chunk.js.map",
+    "main.js": "/static/js/main.52682e23.chunk.js",
+    "main.js.map": "/static/js/main.52682e23.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.27f1f56c.js",
     "runtime-main.js.map": "/static/js/runtime-main.27f1f56c.js.map",
-    "static/js/2.9a1bbd3b.chunk.js": "/static/js/2.9a1bbd3b.chunk.js",
-    "static/js/2.9a1bbd3b.chunk.js.map": "/static/js/2.9a1bbd3b.chunk.js.map",
+    "static/js/2.6f161f3a.chunk.js": "/static/js/2.6f161f3a.chunk.js",
+    "static/js/2.6f161f3a.chunk.js.map": "/static/js/2.6f161f3a.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.0f4862c2eb936a457568f10210e5642e.js": "/precache-manifest.0f4862c2eb936a457568f10210e5642e.js",
+    "precache-manifest.b024bfec30c892cc48bca7c68b1d30ad.js": "/precache-manifest.b024bfec30c892cc48bca7c68b1d30ad.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.9a1bbd3b.chunk.js.LICENSE.txt": "/static/js/2.9a1bbd3b.chunk.js.LICENSE.txt",
+    "static/js/2.6f161f3a.chunk.js.LICENSE.txt": "/static/js/2.6f161f3a.chunk.js.LICENSE.txt",
     "static/media/artist.6b1569d5.svg": "/static/media/artist.6b1569d5.svg",
     "static/media/book.a7bef01b.svg": "/static/media/book.a7bef01b.svg",
     "static/media/bowl-3.5441026d.svg": "/static/media/bowl-3.5441026d.svg",
@@ -28,6 +28,7 @@
     "static/media/dancer-male-2.2126bb76.svg": "/static/media/dancer-male-2.2126bb76.svg",
     "static/media/dancer-pose.95e5965d.svg": "/static/media/dancer-pose.95e5965d.svg",
     "static/media/flag.b4a08446.svg": "/static/media/flag.b4a08446.svg",
+    "static/media/heart-3.f4a2e05c.svg": "/static/media/heart-3.f4a2e05c.svg",
     "static/media/heels.00ea8fea.svg": "/static/media/heels.00ea8fea.svg",
     "static/media/home.8369a2d1.svg": "/static/media/home.8369a2d1.svg",
     "static/media/map-pin.71135c81.svg": "/static/media/map-pin.71135c81.svg",
@@ -42,6 +43,7 @@
     "static/media/roller-coaster.6bcd9568.svg": "/static/media/roller-coaster.6bcd9568.svg",
     "static/media/sauce.696df6af.svg": "/static/media/sauce.696df6af.svg",
     "static/media/shoes-flamenco.92e030e6.svg": "/static/media/shoes-flamenco.92e030e6.svg",
+    "static/media/solo.3706a2d6.svg": "/static/media/solo.3706a2d6.svg",
     "static/media/stadium.5bff58bb.svg": "/static/media/stadium.5bff58bb.svg",
     "static/media/stars.86e33730.svg": "/static/media/stars.86e33730.svg",
     "static/media/theatre.e5eaee16.svg": "/static/media/theatre.e5eaee16.svg",
@@ -51,7 +53,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.27f1f56c.js",
-    "static/js/2.9a1bbd3b.chunk.js",
-    "static/js/main.38477005.chunk.js"
+    "static/js/2.6f161f3a.chunk.js",
+    "static/js/main.52682e23.chunk.js"
   ]
 }

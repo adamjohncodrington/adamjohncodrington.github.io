@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ba4988b297f11a0c291dae1bebebfa70",
+    "revision": "a34f259a095c2797fa9226020bf64c36",
     "url": "/index.html"
   },
   {
-    "revision": "6f3bd1d073af2ed39ab9",
-    "url": "/static/js/2.9a1bbd3b.chunk.js"
+    "revision": "930c88ea3619c771d579",
+    "url": "/static/js/2.6f161f3a.chunk.js"
   },
   {
     "revision": "4bf00ea42f5dad8ab33d5f32afec9baf",
-    "url": "/static/js/2.9a1bbd3b.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.6f161f3a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "38c7ecfb0cc45b9d92ab",
-    "url": "/static/js/main.38477005.chunk.js"
+    "revision": "58a1c21db4984a6fb96c",
+    "url": "/static/js/main.52682e23.chunk.js"
   },
   {
     "revision": "3cf57b419839acabd216",
@@ -92,6 +92,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/flag.b4a08446.svg"
   },
   {
+    "revision": "f4a2e05c3cfa14a554a716ed8edd5538",
+    "url": "/static/media/heart-3.f4a2e05c.svg"
+  },
+  {
     "revision": "00ea8fead6b9cc735f61c45f35078ba1",
     "url": "/static/media/heels.00ea8fea.svg"
   },
@@ -146,6 +150,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "92e030e6bd5162fe87b5462694d25d5a",
     "url": "/static/media/shoes-flamenco.92e030e6.svg"
+  },
+  {
+    "revision": "3706a2d60a0e548c184e963b534b881f",
+    "url": "/static/media/solo.3706a2d6.svg"
   },
   {
     "revision": "5bff58bb1033ba3377ffe8c61f772dba",
