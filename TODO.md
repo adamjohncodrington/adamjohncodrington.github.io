@@ -1,5 +1,6 @@
 # TO DO LIST
 
+- move page section count to far right for icon-less year sections
 - mush `EventCard`, `VideoCard`, `VinylCard` as `SectionCard`???
 - review outstanding `//TODO:`s
 
