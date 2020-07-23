@@ -2,6 +2,7 @@
 export const ARTISTS: string = "Artists";
 export const BUCKET_LIST: string = "Bucket List";
 export const COMING_SOON: string = "Coming Soon";
+export const FAVOURITES: string = "Favourites";
 export const FRIENDS: string = "Friends";
 export const PHOTOS: string = "Photos";
 export const UP_NEXT: string = "Up Next";

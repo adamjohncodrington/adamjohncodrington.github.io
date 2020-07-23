@@ -1,6 +1,7 @@
 import { formatCountedListItems } from "utils";
 
 import { BUCKET_LIST } from "./bucket-list";
+import { FAVOURITES } from "./favourites";
 // import { FESTIVALS } from "./festivals";
 import { FRIENDS } from "./friends";
 import { MUSICIANS } from "./musicians";
@@ -13,6 +14,7 @@ import { YEARS } from "./years";
 
 export const GIGS = {
   BUCKET_LIST: formatCountedListItems(BUCKET_LIST),
+  FAVOURITES,
   // FESTIVALS: formatCountedListItems(FESTIVALS),
   FRIENDS: formatCountedListItems(FRIENDS, { isLeaderboard: true }),
   MUSICIANS: formatCountedListItems(MUSICIANS),

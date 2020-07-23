@@ -43,6 +43,7 @@ interface IEventCardAll extends I_Company, I__Favourite {
   hideCompany?: boolean;
   hideBody?: boolean;
   hideSecondaryBody?: boolean;
+  hideFavouriteIcon?: boolean;
   hidePhotosIcon?: boolean;
   hideVideoIcon?: boolean;
 }

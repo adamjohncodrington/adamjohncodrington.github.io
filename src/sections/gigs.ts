@@ -29,10 +29,16 @@ const FRIENDS: IPageSection = {
 };
 
 const SOLO: IPageSection = {
+  SvgIcon: SVG.SOLO,
   title: PAGE_SECTION_TITLES.SOLO,
   data: { gigs: FACTORY.SOLO },
-  count: FACTORY.SOLO.length,
-  hide: true
+  count: FACTORY.SOLO.length
+};
+
+const FAVOURITES: IPageSection = {
+  SvgIcon: SVG.HEART,
+  title: PAGE_SECTION_TITLES.FAVOURITES,
+  data: { gigs: FACTORY.FAVOURITES }
 };
 
 const UP_NEXT: IPageSection = {
@@ -67,6 +73,7 @@ const YEARS: Array<IPageSection> = FACTORY.YEARS.map(
 export const GIGS: Array<IPageSection> = [
   ARTISTS,
   BUCKET_LIST,
+  FAVOURITES,
   // FESTIVALS,
   FRIENDS,
   UP_NEXT,

@@ -20,6 +20,7 @@ export const EventCard: React.FC<IEventCard> = ({
   title,
   subtitle,
   favourite,
+  hideFavouriteIcon,
   body,
   secondaryBody,
   note,
@@ -43,7 +44,10 @@ export const EventCard: React.FC<IEventCard> = ({
           equalWidthColumns={false}
         >
           <EventCardTextContainer data-test="event-card-container">
-            <CardTitleBold data-test="event-card-title" favourite={favourite}>
+            <CardTitleBold
+              data-test="event-card-title"
+              favourite={!hideFavouriteIcon && favourite}
+            >
               {title}
             </CardTitleBold>
 

@@ -1,11 +1,6 @@
 import { ACTORS } from "@constants";
 import { THEATRE as DATA } from "data";
-import {
-  getItemCounts,
-  getTheatreVisitTitle,
-  isInFuture,
-  getDateText
-} from "utils";
+import { getItemCounts, getTheatreVisitTitle, isInFuture } from "utils";
 
 const getTheatreVisitsMatchingActor = (actor: IActor): Array<ITheatreVisit> => {
   const theatreVisitsMatchingActor: Array<ITheatreVisit> = [];

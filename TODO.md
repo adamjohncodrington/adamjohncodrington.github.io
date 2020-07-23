@@ -1,7 +1,15 @@
 # TO DO LIST
 
-- move `isInFuture` to `CountedListItemDetail`
+- fix `CountedListItem` detail sorting
 - reinstate all `festivals` functionality!!!
+  - years
+  - festivals
+  - bucket list
+  - venues
+  - up next
+
+- reinstate `favourites` section on gigs
+- move `isInFuture` to `CountedListItemDetail`
 - reinstate musician details
 
 - implement sorting at `PageSectionLayout` level

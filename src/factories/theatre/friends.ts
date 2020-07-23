@@ -1,11 +1,6 @@
 import { FRIENDS } from "@constants";
 import { THEATRE as DATA } from "data";
-import {
-  getItemCounts,
-  getTheatreVisitTitle,
-  getDateText,
-  isInFuture
-} from "utils";
+import { getItemCounts, getTheatreVisitTitle, isInFuture } from "utils";
 
 const getTheatreVisitsMatchingFriend = (
   friend: IFriend

@@ -4,7 +4,6 @@ import {
   getItemCounts,
   countryMatchExists,
   getTripTitle,
-  getDatesText,
   isInFuture,
   getTripSubtitle,
   detailsContainsFavourite

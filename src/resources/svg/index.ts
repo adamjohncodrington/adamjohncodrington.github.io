@@ -22,6 +22,7 @@ export { ReactComponent as DANCER_POSE } from "./dancer-pose.svg";
 // F
 export { ReactComponent as FLAG } from "./flag.svg";
 // H
+export { ReactComponent as HEART } from "./heart-3.svg";
 export { ReactComponent as HEELS } from "./heels.svg";
 export { ReactComponent as HOME } from "./home.svg";
 // M
@@ -40,6 +41,7 @@ export { ReactComponent as ROLLER_COASTER } from "./roller-coaster.svg";
 // S
 export { ReactComponent as SAUCE } from "./sauce.svg";
 export { ReactComponent as SHOES_FLAMENCO } from "./shoes-flamenco.svg";
+export { ReactComponent as SOLO } from "./solo.svg";
 export { ReactComponent as STADIUM } from "./stadium.svg";
 export { ReactComponent as STARS } from "./stars.svg";
 // T

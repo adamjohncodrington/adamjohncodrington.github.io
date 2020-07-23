@@ -69,25 +69,25 @@ export const CountedListItem: FC<ICountedListItem> = ({
     </>
   );
 
-  return details && details.length > 0 ? (
-    <li>
-      <Disclosure
-        Header={({ panelIsVisible }) => (
-          <DisclosureHeader panelIsVisible={panelIsVisible}>
-            {TextAndCounts}
-          </DisclosureHeader>
-        )}
-        Panel={
-          <CountedListItemDetails
-            details={details.sort(
-              (a: ICountedListItemDetail, b: ICountedListItemDetail) =>
-                a.dates[0].valueOf() > b.dates[0].valueOf() ? 1 : -1
-            )}
-          />
-        }
-      />
-    </li>
-  ) : (
-    <FlexLiGrow>{TextAndCounts}</FlexLiGrow>
-  );
+  if (details && details.length > 0) {
+    const sortedDetails: Array<ICountedListItemDetail> = details.sort(
+      (a: ICountedListItemDetail, b: ICountedListItemDetail) =>
+        a.dates[0].valueOf() > b.dates[0].valueOf() ? 1 : -1
+    );
+
+    return (
+      <li>
+        <Disclosure
+          Header={({ panelIsVisible }) => (
+            <DisclosureHeader panelIsVisible={panelIsVisible}>
+              {TextAndCounts}
+            </DisclosureHeader>
+          )}
+          Panel={<CountedListItemDetails details={sortedDetails} />}
+        />
+      </li>
+    );
+  }
+
+  return <FlexLiGrow>{TextAndCounts}</FlexLiGrow>;
 };

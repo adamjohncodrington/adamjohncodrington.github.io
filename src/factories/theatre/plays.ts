@@ -1,11 +1,6 @@
 import { PLAYS } from "@constants";
 import { THEATRE as DATA } from "data";
-import {
-  getItemCounts,
-  getDateText,
-  isInFuture,
-  moveTheSuffixToPrefix
-} from "utils";
+import { getItemCounts, isInFuture, moveTheSuffixToPrefix } from "utils";
 
 import { FAVOURITES } from "./favourites";
 

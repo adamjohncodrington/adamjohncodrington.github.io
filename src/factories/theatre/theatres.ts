@@ -1,11 +1,6 @@
 import { THEATRE_VENUES } from "@constants";
 import { THEATRE as DATA } from "data";
-import {
-  getItemCounts,
-  isInFuture,
-  getDateText,
-  moveTheSuffixToPrefix
-} from "utils";
+import { getItemCounts, isInFuture, moveTheSuffixToPrefix } from "utils";
 
 const getTheatreVisitsMatchingVenue = (
   theatre: ITheatre
