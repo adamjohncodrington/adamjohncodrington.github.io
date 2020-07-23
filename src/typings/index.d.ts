@@ -150,7 +150,7 @@ interface IPageSectionDataTypes {
   theatreVisits?: Array<ITheatreVisit>;
   trips?: Array<ITripLeg>;
   videos?: Array<IVideo>;
-  vinyls?: Array<IVinylCards>;
+  vinylCards?: IVinylCards;
 }
 
 interface IPageSection extends IPageSectionDisclosure {
@@ -232,6 +232,11 @@ interface IVinyl {
 
 interface IVinylCard extends IVinyl {
   hideYear?: boolean;
+}
+
+interface IVinylCards {
+  vinyls: Array<IVinylCard>;
+  shuffle: boolean;
 }
 
 interface ILocation extends I_Name, I__Favourite, I__Insignificant {

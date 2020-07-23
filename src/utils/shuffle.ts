@@ -1,4 +1,4 @@
-export const shuffleArray = (array: Array<any>): Array<any> => {
+export const shuffle = (array: Array<any>): Array<any> => {
   let currentIndex: number = array.length;
   let temporaryValue: any, randomIndex: number;
 

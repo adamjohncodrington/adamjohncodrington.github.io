@@ -1,29 +1,25 @@
 # TO DO LIST
 
-- make camera and photo icons grey on non-year sections
-
 - reinstate all `festivals` functionality!!!
   - years
   - festivals
   - venues
   - up next
 
-- reinstate `favourites` section on gigs
-- move `isInFuture` to `CountedListItemDetail`
 - reinstate musician details
 
 - implement sorting at `PageSectionLayout` level
-- 
+
 - reinstate all gig videos
-- make gig date prop singular, make festival dates prop `start/end`?
-- make `travel` intelligently split by year
-- totally refactor `travel`
+- make gig date prop singular, make festival dates prop `start/end`???
+- totally refactor `travel` in `@constants`
+
+- make a dynamic `VideoCard` component
 
 ## Enhancements
 
 - split festivals into `IDayFestival`, `IMultiDayFestival`, `INightOut`, etc.
 - beef up POLE section
-- make a dynamic `VideoCard` component
 - add Apple Music links and details to Vinyl `artists` section
 - make YouTube videos play in HD
 - add images to theatre page (poster art)

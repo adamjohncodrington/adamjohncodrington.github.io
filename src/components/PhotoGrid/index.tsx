@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { GridWithColumns, SquareImage } from "primitives";
-import { shuffleArray } from "utils";
+import { shuffle } from "utils";
 
 export const EventCardPhotosContainer = styled(GridWithColumns)`
   margin-top: 10px;
@@ -13,7 +13,7 @@ export const PhotoGrid = ({
   columnCount,
   randomise = true
 }: IPhotoGrid) => {
-  const PHOTOS = randomise ? shuffleArray(photos) : photos;
+  const PHOTOS = randomise ? shuffle(photos) : photos;
 
   return (
     <EventCardPhotosContainer columnCount={columnCount}>

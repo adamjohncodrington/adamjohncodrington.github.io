@@ -1,5 +1,5 @@
 export const pageSectionHasData = ({
-  data: { countedListItems, gigs, recipes, theatreVisits, trips, vinyls }
+  data: { countedListItems, gigs, recipes, theatreVisits, trips, vinylCards }
 }: IPageSection): boolean =>
   !(
     (countedListItems && countedListItems.length === 0) ||
@@ -8,5 +8,5 @@ export const pageSectionHasData = ({
       recipes.filter((item: IRecipe): boolean => !item.hide).length === 0) ||
     (theatreVisits && theatreVisits.length === 0) ||
     (trips && trips.length === 0) ||
-    (vinyls && vinyls.length === 0)
+    (vinylCards && vinylCards.vinyls.length === 0)
   );

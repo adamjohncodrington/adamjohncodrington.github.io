@@ -11,14 +11,14 @@ const ARTISTS: IPageSection = {
 
 const COLLECTION: IPageSection = {
   title: PAGE_SECTION_TITLES.COLLECTION,
-  data: { vinyls: FACTORY.COLLECTION },
+  data: { vinylCards: { vinyls: FACTORY.COLLECTION, shuffle: true } },
   count: FACTORY.COLLECTION.length,
   SvgIcon: SVG.BRIEFCASE
 };
 
 const SIGNED: IPageSection = {
   title: PAGE_SECTION_TITLES.SIGNED,
-  data: { vinyls: FACTORY.SIGNED },
+  data: { vinylCards: { vinyls: FACTORY.SIGNED, shuffle: true } },
   count: FACTORY.SIGNED.length,
   SvgIcon: SVG.PEN
 };
@@ -26,7 +26,7 @@ const SIGNED: IPageSection = {
 const WISH_LIST: IPageSection = {
   title: PAGE_SECTION_TITLES.WISH_LIST,
   SvgIcon: SVG.STARS,
-  data: { vinyls: FACTORY.WISH_LIST },
+  data: { vinylCards: { vinyls: FACTORY.WISH_LIST, shuffle: true } },
   count: FACTORY.WISH_LIST.length
 };
 
@@ -34,9 +34,12 @@ const YEARS: Array<IPageSection> = FACTORY.YEARS.map(
   (yearGroup: Array<IVinyl>): IPageSection => ({
     title: yearGroup[0].year.toString(),
     data: {
-      vinyls: yearGroup.map(
-        (vinyl: IVinyl): IVinylCard => ({ ...vinyl, hideYear: true })
-      )
+      vinylCards: {
+        shuffle: false,
+        vinyls: yearGroup.map(
+          (vinyl: IVinyl): IVinylCard => ({ ...vinyl, hideYear: true })
+        )
+      }
     },
     count: yearGroup.length
   })
