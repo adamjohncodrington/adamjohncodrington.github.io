@@ -1,7 +1,5 @@
 # TO DO LIST
 
-- reinstate musician details
-
 - create a `factories/recipes` folder
 - implement sorting at `PageSectionLayout` level
 
