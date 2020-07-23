@@ -2,7 +2,11 @@ import React, { FC } from "react";
 
 import { useThemeContext } from "context";
 import { Ul, Li, GridColumnDiv } from "primitives";
-import { replaceSpacesWithDashes, useMediaQueries } from "utils";
+import {
+  replaceSpacesWithDashes,
+  useMediaQueries,
+  pageSectionIsValid
+} from "utils";
 
 import { PageSection } from "../PageSection";
 
@@ -19,22 +23,7 @@ export const PageSectionsLayout: FC<IPageSectionsLayout> = ({
   const { pageUses2Columns } = useMediaQueries();
 
   const validPageSections: Array<IPageSection> = pageSections.filter(
-    ({
-      data: { countedListItems, gigs, recipes, theatreVisits, trips, vinyls }
-    }: IPageSection): boolean => {
-      const dataExists: boolean = !(
-        (countedListItems && countedListItems.length === 0) ||
-        (gigs && gigs.length === 0) ||
-        (recipes &&
-          recipes.filter((item: IRecipe): boolean => !item.hide).length ===
-            0) ||
-        (theatreVisits && theatreVisits.length === 0) ||
-        (trips && trips.length === 0) ||
-        (vinyls && vinyls.length === 0)
-      );
-
-      return dataExists;
-    }
+    (pageSection: IPageSection): boolean => pageSectionIsValid(pageSection)
   );
 
   const validPageSectionCount: number = validPageSections.length;

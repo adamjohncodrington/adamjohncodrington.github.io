@@ -1,5 +1,5 @@
 import { arrayToString, moveTheSuffixToPrefix } from "./basic";
-import { getMusicianStageNameAtTime } from "./musician-utils";
+import { getMusicianStageNameAtTime } from "./musician";
 
 export const getGigTitle = ({
   headline,
