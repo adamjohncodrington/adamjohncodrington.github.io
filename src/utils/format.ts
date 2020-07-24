@@ -83,7 +83,14 @@ export const formatVideoCards = (
   videoCards: Array<IVideoCard>
 ): Array<IVideoCard> => {
   const sorted: Array<IVideoCard> = videoCards.sort(
-    (a: IVideoCard, b: IVideoCard): number => (a.title > b.title ? 1 : -1)
+    (a: IVideoCard, b: IVideoCard): number =>
+      a.title > b.title
+        ? 1
+        : a.title === b.title
+        ? a.dates[0].valueOf() > b.dates[0].valueOf()
+          ? 1
+          : 0
+        : -1
   );
   return sorted;
 };

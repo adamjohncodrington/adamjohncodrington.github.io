@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 import { Li } from "primitives";
-import { getDatesText } from "utils";
+import { getDatesText, moveTheSuffixToPrefix } from "utils";
 
 import { CardTitle, CardSubtitle } from "../styles";
 import { Disclosure } from "../Disclosure";
@@ -27,7 +27,9 @@ export const VideoCard: React.FC<IVideoCard> = ({
   <Disclosure
     Header={({ panelIsVisible }) => (
       <VideoCardHeaderContainer>
-        <CardTitle bold={panelIsVisible}>{title}</CardTitle>
+        <CardTitle bold={panelIsVisible}>
+          {moveTheSuffixToPrefix(title)}
+        </CardTitle>
 
         {subtitle && (
           <CardSubtitle bold={panelIsVisible}>{subtitle}</CardSubtitle>
