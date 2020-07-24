@@ -1,66 +1,35 @@
-interface IColors {
-  black: ColorValue;
-  boulder: ColorValue;
-  gray: ColorValue;
-  gainsboro: ColorValue;
-  white: ColorValue;
-  avocado: ColorValue;
-  camarone: ColorValue;
-  surfCrest: ColorValue;
-  japaneseLaurel: ColorValue;
-  sprout: ColorValue;
-  eden: ColorValue;
-  turkishRose: ColorValue;
-  monaLisa: ColorValue;
-  mandy: ColorValue;
-  azalea: ColorValue;
-  amethystSmoke: ColorValue;
-  bouquet: ColorValue;
-  oldGold: ColorValue;
-  aliceBlue: ColorValue;
-  nepal: ColorValue;
-  sherpaBlue: ColorValue;
-  jetStream: ColorValue;
-  baliHai: ColorValue;
-  buddhaGold: ColorValue;
-  hillary: ColorValue;
-  champagne: ColorValue;
-  bisonHide: ColorValue;
-  sandyBrown: ColorValue;
-}
+// Greyscale
+export const BLACK: string = "#000000";
+export const BOULDER: string = "#000000";
+export const GRAY: string = "#808080";
+export const GAINSBORO: string = "#DCDCDC";
+export const WHITE: string = "#FFFFFF";
 
-export const COLORS: IColors = {
-  // Grayscale
-  black: "#000000",
-  boulder: "#777777",
-  gray: "#808080",
-  gainsboro: "#DCDCDC",
-  white: "#FFFFFF",
-  // Greens
-  eden: "#0E563E",
-  avocado: "#899A67",
-  sprout: "#B9D1A3",
-  surfCrest: "#CEE5CE",
-  camarone: "#006400",
-  japaneseLaurel: "#008000",
-  // Pinks, purples, reds
-  azalea: "#F6C5DB",
-  turkishRose: "#B86B77",
-  monaLisa: "#FF9999",
-  mandy: "#EE5162",
-  amethystSmoke: "#A186B0",
-  bouquet: "#BA8FA7",
-  // Blues
-  sherpaBlue: "#00594F",
-  aliceBlue: "#F0F8FF",
-  nepal: "#9CB0C3",
-  baliHai: "#86A3B0",
-  jetStream: "#BFD9D7",
-  // Creams, yellows, oranges
-  hillary: "#B0A186",
-  champagne: "#FAE9D5",
-  oldGold: "#D4AF37",
-  bisonHide: "#C0B7A7",
-  buddhaGold: "#CCA100",
-  sandyBrown: "#F2A652"
-};
+// Greens
+export const EDEN: string = "#0E563E";
+export const AVOCADO: string = "#899A67";
+export const SPROUT: string = "#B9D1A3";
+export const SURF_CREST: string = "#CEE5CE";
+
+// Pinks, purples, reds
+export const AZALEA: string = "#F6C5DB";
+export const TURKISH_ROSE: string = "#B86B77";
+export const MONA_LISA: string = "#FF9999";
+export const MANDY: string = "#EE5162";
+export const AMETHYST_SMOKE: string = "#A186B0";
+export const BOUQUET: string = "#BA8FA7";
+
+// Blues
+export const SHERPA_BLUE: string = "#00594F";
+export const ALICE_BLUE: string = "#F0F8FF";
+export const NEPAL: string = "#9CB0C3";
+export const BALI_HAI: string = "#86A3B0";
+export const JET_STREAM: string = "#BFD9D7";
+
+// Creams, yellows, oranges
+export const HILLARY: string = "#B0A186";
+export const CHAMPAGNE: string = "#FAE9D5";
+export const OLD_GOLD: string = "#D4AF37";
+export const BISON_HIDE: string = "#C0B7A7";
+export const BUDDHA_GOLD: string = "#CCA100";
+export const SANDY_BROWN: string = "#F2A652";

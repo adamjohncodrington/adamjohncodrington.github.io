@@ -1,7 +1,7 @@
 # TO DO LIST
 
 - move page section count to far right for icon-less year sections
-- mush `EventCard`, `VideoCard`, `VinylCard` as `SectionCard`???
+- incorporate `VideoCard`, `VinylCard` into `Card`???
 - review outstanding `//TODO:`s
 
 - reinstate all gig across site

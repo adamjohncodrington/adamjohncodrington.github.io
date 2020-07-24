@@ -1,7 +1,7 @@
 import { rgba } from "polished";
 
 import { BREAKPOINTS } from "./breakpoints";
-import { COLORS } from "./colors";
+import * as COLORS from "./colors";
 import { FONT_SIZES } from "./font-sizes";
 import { fontFamily, scrollbarSize } from "./GlobalStyle";
 
@@ -10,15 +10,15 @@ const THEME_COUNTED_LIST_ITEM: IThemeCountedListItem = {
 };
 
 const THEME_CARD: IThemeCard = {
-  companySymbol: { color: COLORS.boulder, spaceBetweenSymbols: "5px" },
+  companySymbol: { color: COLORS.BOULDER, spaceBetweenSymbols: "5px" },
   notFirstChild: { margin: { top: "5px" } },
   photo: { size: "75px" }
 };
 
 const THEME_NAV_BAR: IThemeNavBar = {
-  background: COLORS.black,
+  background: COLORS.BLACK,
   icon: {
-    color: COLORS.white,
+    color: COLORS.WHITE,
     size: "32px",
     defaultHoverColor: "#aaa",
     hoverShrinkSize: "0"
@@ -32,9 +32,9 @@ const THEME_PAGE_HEADER: IThemePageHeader = {
 };
 
 const THEME_PAGE_SECTION: IThemePageSection = {
-  background: COLORS.gainsboro,
+  background: COLORS.GAINSBORO,
   borderRadius: "10px",
-  boxShadow: `0 1px 2px ${rgba(COLORS.gray, 0.5)}`,
+  boxShadow: `0 1px 2px ${rgba(COLORS.GRAY, 0.5)}`,
   comingSoon: { fontSize: FONT_SIZES.L },
   count: { margin: { left: "7px" } },
   header: { padding: { vertical: "12px" } },
@@ -75,7 +75,7 @@ const THEME_ROUNDED_SYMBOL: IThemeRoundedSymbol = {
   borderRadius: "25%",
   fontSize: "75%",
   size: "26px",
-  textColor: COLORS.white
+  textColor: COLORS.WHITE
 };
 
 const THEME_VINYL_CARD: IThemeVinylCard = {

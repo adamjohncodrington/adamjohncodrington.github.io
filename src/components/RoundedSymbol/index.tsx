@@ -18,7 +18,7 @@ const StyledRoundedSymbol = styled.div(
       type === "photo" ? "55%" : type === "video" ? "65%" : "0";
 
     return css`
-      background: ${COLORS.black};
+      background: ${COLORS.BLACK};
       border-radius: ${borderRadius};
       color: ${textColor};
       font-size: ${fontSize};
