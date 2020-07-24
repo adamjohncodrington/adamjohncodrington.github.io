@@ -1,16 +1,15 @@
 import { isInFuture } from "./basic";
 
 export const splitVinylsIntoYears = (
-  vinyls: Array<IVinylPostPurchase>
-): Array<Array<IVinylPostPurchase>> => {
-  const sorted: Array<IVinylPostPurchase> = vinyls.sort(
-    (a: IVinylPostPurchase, b: IVinylPostPurchase): number =>
-      a.year > b.year ? 1 : -1
+  vinyls: Array<IVinyl>
+): Array<Array<IVinyl>> => {
+  const sorted: Array<IVinyl> = vinyls.sort((a: IVinyl, b: IVinyl): number =>
+    a.year > b.year ? 1 : -1
   );
-  const years: Array<Array<IVinylPostPurchase>> = [];
+  const years: Array<Array<IVinyl>> = [];
   let arrayIndex: number = 0;
   let arrayYear: number = sorted[0].year;
-  sorted.forEach((vinyl: IVinylPostPurchase): void => {
+  sorted.forEach((vinyl: IVinyl): void => {
     const vinylYear: number = vinyl.year;
     if (vinylYear !== arrayYear) {
       arrayIndex += 1;

@@ -1,7 +1,7 @@
 import { PHOTOS } from "resources";
 import { MUSICIANS } from "@constants";
 
-export const AMY_WINEHOUSE_BACK_TO_BLACK: IVinylPostPurchase = {
+export const AMY_WINEHOUSE_BACK_TO_BLACK: IVinyl = {
   musician: MUSICIANS.AMY_WINEHOUSE,
   title: "Back to Black",
   artwork: PHOTOS.ALBUMS.AMY_WINEHOUSE_BACK_TO_BLACK,
@@ -13,7 +13,7 @@ export const AMY_WINEHOUSE_BACK_TO_BLACK: IVinylPostPurchase = {
   sides: 2
 };
 
-export const ARCTIC_MONKEYS_FAVOURITE_WORST_NIGHTMARE: IVinylPostPurchase = {
+export const ARCTIC_MONKEYS_FAVOURITE_WORST_NIGHTMARE: IVinyl = {
   musician: MUSICIANS.ARCTIC_MONKEYS,
   title: "Favourite Worst Nightmare",
   appleMusicId: "favourite-worst-nightmare/251126923",
@@ -25,7 +25,7 @@ export const ARCTIC_MONKEYS_FAVOURITE_WORST_NIGHTMARE: IVinylPostPurchase = {
   artwork: PHOTOS.ALBUMS.ARCTIC_MONKEYS_FAVOURITE_WORST_NIGHTMARE
 };
 
-export const KATE_NASH_MADE_OF_BRICKS: IVinylPostPurchase = {
+export const KATE_NASH_MADE_OF_BRICKS: IVinyl = {
   musician: MUSICIANS.KATE_NASH,
   title: "Made of Bricks",
   artwork: PHOTOS.ALBUMS.KATE_NASH_MADE_OF_BRICKS,
@@ -37,7 +37,7 @@ export const KATE_NASH_MADE_OF_BRICKS: IVinylPostPurchase = {
   color: "black"
 };
 
-export const ADELE_19: IVinylPostPurchase = {
+export const ADELE_19: IVinyl = {
   musician: MUSICIANS.ADELE,
   title: "19",
   artwork: PHOTOS.ALBUMS.ADELE_19,

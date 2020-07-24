@@ -72,12 +72,9 @@ export const formatCountedListItems = (
   return detailSortedCountedListItems;
 };
 
-export const formatVinyls = (
-  vinyls: Array<IVinylPostPurchase>
-): Array<IVinylPostPurchase> => {
-  const sorted: Array<IVinylPostPurchase> = vinyls.sort(
-    (a: IVinylPostPurchase, b: IVinylPostPurchase): number =>
-      a.title < b.title ? 1 : -1
+export const formatVinyls = (vinyls: Array<IVinyl>): Array<IVinyl> => {
+  const sorted: Array<IVinyl> = vinyls.sort((a: IVinyl, b: IVinyl): number =>
+    a.title < b.title ? 1 : -1
   );
   return sorted;
 };

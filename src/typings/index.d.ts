@@ -265,7 +265,7 @@ interface ITheatreVisit extends I_Date, ICardAll {
   cast?: Array<IActor>;
 }
 
-interface IVinylPrePurchase {
+interface IAlbum {
   musician: IMusician;
   title: string;
   year: number;
@@ -273,7 +273,7 @@ interface IVinylPrePurchase {
   appleMusicId: string;
 }
 
-interface IVinylPostPurchase extends IVinylPrePurchase {
+interface IVinyl extends IAlbum {
   signed: boolean;
   color:
     | "black"
@@ -289,7 +289,7 @@ interface IVinylPostPurchase extends IVinylPrePurchase {
   inches: 10 | 12;
 }
 
-interface IVinylCard extends IVinylPrePurchase {
+interface IVinylCard extends IAlbum {
   hideYear?: boolean;
 }
 

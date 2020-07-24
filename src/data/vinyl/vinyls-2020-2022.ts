@@ -1,7 +1,7 @@
 import { PHOTOS } from "resources";
 import { MUSICIANS } from "@constants";
 
-export const HAIM_WIMPIII: IVinylPostPurchase = {
+export const HAIM_WIMPIII: IVinyl = {
   musician: MUSICIANS.HAIM,
   title: "Women In Music Pt. III",
   appleMusicId: "women-in-music-pt-iii/1500020581",
@@ -13,7 +13,7 @@ export const HAIM_WIMPIII: IVinylPostPurchase = {
   signed: true
 };
 
-export const TAYLOR_SWIFT_FOLKLORE: IVinylPostPurchase = {
+export const TAYLOR_SWIFT_FOLKLORE: IVinyl = {
   musician: MUSICIANS.TAYLOR_SWIFT,
   title: "folklore",
   appleMusicId: "folklore/1524801260",
@@ -25,7 +25,7 @@ export const TAYLOR_SWIFT_FOLKLORE: IVinylPostPurchase = {
   signed: false
 };
 
-export const TROYE_SIVAN_IN_A_DREAM: IVinylPostPurchase = {
+export const TROYE_SIVAN_IN_A_DREAM: IVinyl = {
   musician: MUSICIANS.TROYE_SIVAN,
   title: "In a Dream",
   artwork: PHOTOS.ALBUMS.TROYE_SIVAN_IN_A_DREAM,

@@ -3,7 +3,7 @@
 10 slices
 
 300g courgette (less than 2 whole)
-1 regular ripe avocado (not large)
+1 CARDS ripe avocado (not large)
 75ml sunflower oil
 175g golden caster sugar
 3 large eggs

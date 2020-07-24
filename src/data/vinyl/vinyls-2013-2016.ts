@@ -1,7 +1,7 @@
 import { PHOTOS } from "resources";
 import { MUSICIANS } from "@constants";
 
-export const LORDE_PURE_HEROINE: IVinylPostPurchase = {
+export const LORDE_PURE_HEROINE: IVinyl = {
   musician: MUSICIANS.LORDE,
   title: "Pure Heroine",
   appleMusicId: "pure-heroine/1440818584",
@@ -13,7 +13,7 @@ export const LORDE_PURE_HEROINE: IVinylPostPurchase = {
   artwork: PHOTOS.ALBUMS.LORDE_PURE_HEROINE
 };
 
-export const TAYLOR_SWIFT_1989: IVinylPostPurchase = {
+export const TAYLOR_SWIFT_1989: IVinyl = {
   musician: MUSICIANS.TAYLOR_SWIFT,
   title: "1989",
   artwork: PHOTOS.ALBUMS.TAYLOR_SWIFT_1989,
@@ -25,7 +25,7 @@ export const TAYLOR_SWIFT_1989: IVinylPostPurchase = {
   appleMusicId: "1989/1445888258"
 };
 
-export const GRIMES_ART_ANGELS: IVinylPostPurchase = {
+export const GRIMES_ART_ANGELS: IVinyl = {
   musician: MUSICIANS.GRIMES,
   title: "Art Angels",
   artwork: PHOTOS.ALBUMS.GRIMES_ART_ANGELS,
@@ -37,7 +37,7 @@ export const GRIMES_ART_ANGELS: IVinylPostPurchase = {
   signed: false
 };
 
-export const SUFJAN_STEVENS_CARRIE_LOWELL: IVinylPostPurchase = {
+export const SUFJAN_STEVENS_CARRIE_LOWELL: IVinyl = {
   musician: MUSICIANS.SUFJAN_STEVENS,
   artwork: PHOTOS.ALBUMS.SUFJAN_STEVENS_CARRIE_LOWELL,
   appleMusicId: "carrie-lowell/955572616",

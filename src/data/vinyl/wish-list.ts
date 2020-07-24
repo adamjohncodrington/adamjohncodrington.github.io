@@ -1,7 +1,7 @@
 import { PHOTOS } from "resources";
 import { MUSICIANS } from "@constants";
 
-export const PANIC_AT_THE_DISCO_AFYCSO: IVinylPrePurchase = {
+export const PANIC_AT_THE_DISCO_AFYCSO: IAlbum = {
   musician: MUSICIANS.PANIC_AT_THE_DISCO,
   artwork: PHOTOS.ALBUMS.PANIC_AT_THE_DISCO_AFYCSO,
   title: "A Fever You Can't Sweat Out",
@@ -9,7 +9,7 @@ export const PANIC_AT_THE_DISCO_AFYCSO: IVinylPrePurchase = {
   year: 2005
 };
 
-export const PARAMORE_RIOT: IVinylPrePurchase = {
+export const PARAMORE_RIOT: IAlbum = {
   musician: MUSICIANS.PARAMORE,
   artwork: PHOTOS.ALBUMS.PARAMORE_RIOT,
   title: "Riot!",
@@ -17,7 +17,7 @@ export const PARAMORE_RIOT: IVinylPrePurchase = {
   year: 2007
 };
 
-export const KATY_PERRY_ONE_OF_THE_BOYS: IVinylPrePurchase = {
+export const KATY_PERRY_ONE_OF_THE_BOYS: IAlbum = {
   musician: MUSICIANS.KATY_PERRY,
   artwork: PHOTOS.ALBUMS.KATY_PERRY_ONE_OF_THE_BOYS,
   title: "One of the Boys",
@@ -25,7 +25,7 @@ export const KATY_PERRY_ONE_OF_THE_BOYS: IVinylPrePurchase = {
   year: 2008
 };
 
-export const ARIANA_GRANDE_TUN: IVinylPrePurchase = {
+export const ARIANA_GRANDE_TUN: IAlbum = {
   musician: MUSICIANS.ARIANA_GRANDE,
   title: "thank u, next",
   artwork: PHOTOS.ALBUMS.ArianaGrande_TUN,
@@ -33,7 +33,7 @@ export const ARIANA_GRANDE_TUN: IVinylPrePurchase = {
   year: 2019
 };
 
-export const RIHANNA_RATED_R: IVinylPrePurchase = {
+export const RIHANNA_RATED_R: IAlbum = {
   musician: MUSICIANS.RIHANNA,
   artwork: PHOTOS.ALBUMS.RIHANNA_RATED_R,
   title: "Rated R",
@@ -41,7 +41,7 @@ export const RIHANNA_RATED_R: IVinylPrePurchase = {
   year: 2009
 };
 
-export const LISSIE_CATCHING_A_TIGER: IVinylPrePurchase = {
+export const LISSIE_CATCHING_A_TIGER: IAlbum = {
   musician: MUSICIANS.LISSIE,
   artwork: PHOTOS.ALBUMS.LISSIE_CATCHING_A_TIGER,
   appleMusicId: "catching-a-tiger/372594767",
@@ -49,7 +49,7 @@ export const LISSIE_CATCHING_A_TIGER: IVinylPrePurchase = {
   year: 2010
 };
 
-export const BEN_HOWARD_EVERY_KINGDOM: IVinylPrePurchase = {
+export const BEN_HOWARD_EVERY_KINGDOM: IAlbum = {
   musician: MUSICIANS.BEN_HOWARD,
   artwork: PHOTOS.ALBUMS.BEN_HOWARD_EVERY_KINGDOM,
   appleMusicId: "every-kingdom/1440804636",
@@ -57,7 +57,7 @@ export const BEN_HOWARD_EVERY_KINGDOM: IVinylPrePurchase = {
   year: 2011
 };
 
-export const NATALIA_KILLS_PERFECTIONIST: IVinylPrePurchase = {
+export const NATALIA_KILLS_PERFECTIONIST: IAlbum = {
   musician: MUSICIANS.NATALIA_KILLS,
   artwork: PHOTOS.ALBUMS.NATALIA_KILLS_PERFECTIONIST,
   title: "Perfectionist",
@@ -65,7 +65,7 @@ export const NATALIA_KILLS_PERFECTIONIST: IVinylPrePurchase = {
   appleMusicId: "perfectionist/1443164533"
 };
 
-export const LADY_GAGA_BORN_THIS_WAY: IVinylPrePurchase = {
+export const LADY_GAGA_BORN_THIS_WAY: IAlbum = {
   musician: MUSICIANS.LADY_GAGA,
   artwork: PHOTOS.ALBUMS.LADY_GAGA_BORN_THIS_WAY,
   title: "Born This Way",
@@ -73,7 +73,7 @@ export const LADY_GAGA_BORN_THIS_WAY: IVinylPrePurchase = {
   year: 2011
 };
 
-export const ELLIE_GOULDING_HALCYON: IVinylPrePurchase = {
+export const ELLIE_GOULDING_HALCYON: IAlbum = {
   musician: MUSICIANS.ELLIE_GOULDING,
   artwork: PHOTOS.ALBUMS.ELLIE_GOULDING_HALCYON,
   title: "Halcyon",
@@ -81,7 +81,7 @@ export const ELLIE_GOULDING_HALCYON: IVinylPrePurchase = {
   year: 2012
 };
 
-export const LANE_8: IVinylPrePurchase = {
+export const LANE_8: IAlbum = {
   musician: MUSICIANS.LANE_8,
   artwork: PHOTOS.ALBUMS.LANE_8_RISE,
   title: "Rise",
@@ -89,7 +89,7 @@ export const LANE_8: IVinylPrePurchase = {
   year: 2015
 };
 
-export const CARIBOU: IVinylPrePurchase = {
+export const CARIBOU: IAlbum = {
   musician: MUSICIANS.CARIBOU,
   artwork: PHOTOS.ALBUMS.CARIBOU_OUR_LOVE,
   appleMusicId: "our-love/1276611236",
@@ -97,7 +97,7 @@ export const CARIBOU: IVinylPrePurchase = {
   year: 2014
 };
 
-export const RYN_WEAVER_FOOL: IVinylPrePurchase = {
+export const RYN_WEAVER_FOOL: IAlbum = {
   musician: MUSICIANS.RYN_WEAVER,
   title: "The Fool",
   artwork: PHOTOS.ALBUMS.RYN_WEAVER_FOOL,
@@ -105,7 +105,7 @@ export const RYN_WEAVER_FOOL: IVinylPrePurchase = {
   appleMusicId: "the-fool/1442781012"
 };
 
-export const BEYONCE_LEMONADE: IVinylPrePurchase = {
+export const BEYONCE_LEMONADE: IAlbum = {
   musician: MUSICIANS.BEYONCE,
   title: "Lemonade",
   artwork: PHOTOS.ALBUMS.BEYONCE_LEMONADE,
@@ -113,7 +113,7 @@ export const BEYONCE_LEMONADE: IVinylPrePurchase = {
   year: 2016
 };
 
-export const TOURIST_U: IVinylPrePurchase = {
+export const TOURIST_U: IAlbum = {
   musician: MUSICIANS.TOURIST,
   appleMusicId: "u/1086160489",
   title: "U",
@@ -121,7 +121,7 @@ export const TOURIST_U: IVinylPrePurchase = {
   year: 2016
 };
 
-export const GEORGE_FITZGERALD_ALL_THAT_MUST_BE: IVinylPrePurchase = {
+export const GEORGE_FITZGERALD_ALL_THAT_MUST_BE: IAlbum = {
   musician: MUSICIANS.GEORGE_FITZGERALD,
   title: "All That Must Be",
   artwork: PHOTOS.ALBUMS.GEORGE_FITZGERALD_ALL_THAT_MUST_BE,
@@ -129,7 +129,7 @@ export const GEORGE_FITZGERALD_ALL_THAT_MUST_BE: IVinylPrePurchase = {
   year: 2018
 };
 
-export const JON_HOPKINS_SINGULARITY: IVinylPrePurchase = {
+export const JON_HOPKINS_SINGULARITY: IAlbum = {
   musician: MUSICIANS.JON_HOPKINS,
   title: "Singularity",
   artwork: PHOTOS.ALBUMS.JON_HOPKINS_SINGULARITY,
@@ -137,7 +137,7 @@ export const JON_HOPKINS_SINGULARITY: IVinylPrePurchase = {
   year: 2018
 };
 
-export const LANY_MALIBU_NIGHTS: IVinylPrePurchase = {
+export const LANY_MALIBU_NIGHTS: IAlbum = {
   musician: MUSICIANS.LANY,
   title: "Malibu Nights",
   artwork: PHOTOS.ALBUMS.LANY_MALIBU_NIGHTS,
@@ -145,7 +145,7 @@ export const LANY_MALIBU_NIGHTS: IVinylPrePurchase = {
   year: 2018
 };
 
-export const SOPHIE_OOEPUI: IVinylPrePurchase = {
+export const SOPHIE_OOEPUI: IAlbum = {
   musician: MUSICIANS.SOPHIE,
   title: "Oil of Every Pearl's Un-Insides",
   artwork: PHOTOS.ALBUMS.SOPHIE_OOEPUI,
@@ -153,7 +153,7 @@ export const SOPHIE_OOEPUI: IVinylPrePurchase = {
   year: 2018
 };
 
-export const CHARLI_XCX_HOW_IM_FEELING_NOW: IVinylPrePurchase = {
+export const CHARLI_XCX_HOW_IM_FEELING_NOW: IAlbum = {
   musician: MUSICIANS.CHARLI_XCX,
   title: "how i'm feeling now",
   year: 2020,
@@ -161,7 +161,7 @@ export const CHARLI_XCX_HOW_IM_FEELING_NOW: IVinylPrePurchase = {
   appleMusicId: "how-im-feeling-now/1513162098"
 };
 
-export const DUA_LIPA_FUTURE_NOSTALGIA: IVinylPrePurchase = {
+export const DUA_LIPA_FUTURE_NOSTALGIA: IAlbum = {
   musician: MUSICIANS.DUA_LIPA,
   title: "Future Nostalgia",
   artwork: PHOTOS.ALBUMS.DUA_LIPA_FUTURE_NOSTALGIA,
@@ -169,7 +169,7 @@ export const DUA_LIPA_FUTURE_NOSTALGIA: IVinylPrePurchase = {
   year: 2020
 };
 
-export const LENNON_STELLA_THREE_TWO_ONE: IVinylPrePurchase = {
+export const LENNON_STELLA_THREE_TWO_ONE: IAlbum = {
   musician: MUSICIANS.LENNON_STELLA,
   title: "Three. Two. One.",
   artwork: PHOTOS.ALBUMS.LENNON_STELLA_THREE_TWO_ONE,

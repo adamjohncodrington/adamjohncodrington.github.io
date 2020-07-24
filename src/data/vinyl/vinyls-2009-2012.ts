@@ -1,7 +1,7 @@
 import { PHOTOS } from "resources";
 import { MUSICIANS } from "@constants";
 
-export const FLORENCE_LUNGS: IVinylPostPurchase = {
+export const FLORENCE_LUNGS: IVinyl = {
   musician: MUSICIANS.FLORENCE_AND_THE_MACHINE,
   title: "Lungs",
   sides: 2,
@@ -13,7 +13,7 @@ export const FLORENCE_LUNGS: IVinylPostPurchase = {
   year: 2009
 };
 
-export const MARINA_ELECTRA_HEART: IVinylPostPurchase = {
+export const MARINA_ELECTRA_HEART: IVinyl = {
   musician: MUSICIANS.MARINA,
   title: "Electra Heart",
   artwork: PHOTOS.ALBUMS.MARINA_ELECTRA_HEART,
@@ -25,7 +25,7 @@ export const MARINA_ELECTRA_HEART: IVinylPostPurchase = {
   color: "black"
 };
 
-export const LANA_BORN_TO_DIE: IVinylPostPurchase = {
+export const LANA_BORN_TO_DIE: IVinyl = {
   musician: MUSICIANS.LANA_DEL_REY,
   signed: false,
   color: "black",

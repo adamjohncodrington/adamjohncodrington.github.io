@@ -1,7 +1,7 @@
 import { PHOTOS } from "resources";
 import { MUSICIANS } from "@constants";
 
-export const MUNA_ABOUT_U: IVinylPostPurchase = {
+export const MUNA_ABOUT_U: IVinyl = {
   musician: MUSICIANS.MUNA,
   title: "About U",
   sides: 4,
@@ -13,7 +13,7 @@ export const MUNA_ABOUT_U: IVinylPostPurchase = {
   year: 2017
 };
 
-export const PVRIS_AWKOHAWNOH: IVinylPostPurchase = {
+export const PVRIS_AWKOHAWNOH: IVinyl = {
   musician: MUSICIANS.PVRIS,
   title: "All We Know of Heaven, All We Need of Hell",
   artwork: PHOTOS.ALBUMS.PVRIS_AWKOHAWNOH,
@@ -25,7 +25,7 @@ export const PVRIS_AWKOHAWNOH: IVinylPostPurchase = {
   signed: true
 };
 
-export const _1975_BRIEF_INQUIRY: IVinylPostPurchase = {
+export const _1975_BRIEF_INQUIRY: IVinyl = {
   musician: MUSICIANS._1975_THE,
   title: "A Brief Inquiry Into Online Relationships",
   artwork: PHOTOS.ALBUMS._1975_BRIEF_INQUIRY,
@@ -37,7 +37,7 @@ export const _1975_BRIEF_INQUIRY: IVinylPostPurchase = {
   color: "clear"
 };
 
-export const ALLIE_X_SUPER_SUNSET: IVinylPostPurchase = {
+export const ALLIE_X_SUPER_SUNSET: IVinyl = {
   musician: MUSICIANS.ALLIE_X,
   title: "Super Sunset",
   color: "yellow",
@@ -49,7 +49,7 @@ export const ALLIE_X_SUPER_SUNSET: IVinylPostPurchase = {
   signed: true
 };
 
-export const BANKS_III: IVinylPostPurchase = {
+export const BANKS_III: IVinyl = {
   musician: MUSICIANS.BANKS,
   appleMusicId: "iii/1467547466",
   title: "III",
@@ -61,7 +61,7 @@ export const BANKS_III: IVinylPostPurchase = {
   color: "clear"
 };
 
-export const LEON_LEON: IVinylPostPurchase = {
+export const LEON_LEON: IVinyl = {
   musician: MUSICIANS.LEON,
   title: MUSICIANS.LEON.name,
   appleMusicId: "l%C3%A9on/1450257286",
@@ -73,7 +73,7 @@ export const LEON_LEON: IVinylPostPurchase = {
   artwork: PHOTOS.ALBUMS.LEON_LEON
 };
 
-export const LYKKE_LI_SO_SAD_SO_SEXY: IVinylPostPurchase = {
+export const LYKKE_LI_SO_SAD_SO_SEXY: IVinyl = {
   musician: MUSICIANS.LYKKE_LI,
   title: "so sad so sexy",
   appleMusicId: "so-sad-so-sexy/1372324600",
@@ -85,7 +85,7 @@ export const LYKKE_LI_SO_SAD_SO_SEXY: IVinylPostPurchase = {
   artwork: PHOTOS.ALBUMS.LYKKE_LI_SO_SAD_SO_SEXY
 };
 
-export const FKA_TWIGS_MAGDALENE: IVinylPostPurchase = {
+export const FKA_TWIGS_MAGDALENE: IVinyl = {
   musician: MUSICIANS.FKA_TWIGS,
   title: "Magdalene",
   appleMusicId: "magdalene/1477652618",
@@ -97,7 +97,7 @@ export const FKA_TWIGS_MAGDALENE: IVinylPostPurchase = {
   artwork: PHOTOS.ALBUMS.FKA_TWIGS_MAGDALENE
 };
 
-export const CAROLINE_POLACHEK_PANG: IVinylPostPurchase = {
+export const CAROLINE_POLACHEK_PANG: IVinyl = {
   musician: MUSICIANS.CAROLINE_POLACHEK,
   title: "Pang",
   artwork: PHOTOS.ALBUMS.CAROLINE_POLACHEK_PANG,
@@ -109,7 +109,7 @@ export const CAROLINE_POLACHEK_PANG: IVinylPostPurchase = {
   color: "black"
 };
 
-export const KIM_PETRAS_CLARITY: IVinylPostPurchase = {
+export const KIM_PETRAS_CLARITY: IVinyl = {
   musician: MUSICIANS.KIM_PETRAS,
   title: "Clarity",
   artwork: PHOTOS.ALBUMS.KIM_PETRAS_CLARITY,

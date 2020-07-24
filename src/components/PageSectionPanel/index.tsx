@@ -23,7 +23,7 @@ import { VideoCards } from "../VideoCards";
 
 import { PageSectionPanelList, StyledComingSoonPlaceholder } from "./styles";
 
-const { COUNTED_LIST, RECIPE_CARDS, REGULAR } = PAGE_SECTION_PANEL_TYPES;
+const { COUNTED_LIST_ITEMS, RECIPES, CARDS } = PAGE_SECTION_PANEL_TYPES;
 
 export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
   countedListItems,
@@ -37,10 +37,10 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
   comingSoon
 }) => {
   const pageSectionPanelType: string = recipes
-    ? RECIPE_CARDS
+    ? RECIPES
     : countedListItems
-    ? COUNTED_LIST
-    : REGULAR;
+    ? COUNTED_LIST_ITEMS
+    : CARDS;
 
   if (comingSoon)
     return (

@@ -33,13 +33,13 @@ const WISH_LIST: IPageSection = {
 };
 
 const YEARS: Array<IPageSection> = FACTORY.YEARS.map(
-  (yearGroup: Array<IVinylPostPurchase>): IPageSection => ({
+  (yearGroup: Array<IVinyl>): IPageSection => ({
     title: yearGroup[0].year.toString(),
     data: {
       vinylCards: {
         shuffle: false,
         vinyls: yearGroup.map(
-          (vinyl: IVinylPostPurchase): IVinylCard => ({
+          (vinyl: IVinyl): IVinylCard => ({
             ...vinyl,
             hideYear: true
           })
