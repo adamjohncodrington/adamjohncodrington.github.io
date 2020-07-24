@@ -1,12 +1,12 @@
 # TO DO LIST
 
-- `RECIPE LIST` / `CARD LIST` / `BASIC LIST`
 
+- merge `VideoCard` into `Card`!!!!
+
+- `RECIPE LIST` / `CARD LIST` / `BASIC LIST`
 - reinstate festival videos
 - remove Taylor Swift duplicate on vinyls artist list
 - add symbols to vinyl cards to indicate color and side count
-
-- incorporate `VideoCard`, `VinylCard` into `Card`!!!!
 
 - define `IDates` as `{start, end, only}`
 - convert all `travel` data to use `IStartEndDate`
