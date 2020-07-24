@@ -1,12 +1,12 @@
 # TO DO LIST
 
-- move page section count to far right for icon-less year sections
-- incorporate `VideoCard`, `VinylCard` into `Card`???
-- review outstanding `//TODO:`s
+- reinstate festival videos
 
-- reinstate all gig across site
+- incorporate `VideoCard`, `VinylCard` into `Card`!!!!
+
 - define `IDates` as `{start, end, only}`
 - convert all `travel` data to use `IStartEndDate`
+- review outstanding `//TODO:`s
 - split festivals into `IDayFestival`, `IMultiDayFestival`, `INightOut`, etc.
 - make festival dates prop `start/end`???
 - implement sorting at `PageSectionLayout` level

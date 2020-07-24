@@ -7,16 +7,22 @@ import {
   getFestivalMusicians
 } from "./get";
 
+export const mapPoleVideoToVideoCard = ({
+  date,
+  song: { musician, title },
+  ...rest
+}: IPoleVideo): IVideoCard => ({
+  ...rest,
+  title: musician.name,
+  subtitle: title,
+  dates: [date]
+});
+
 export const mapPoleVideosToVideoCards = (
   poleVideos: Array<IPoleVideo>
 ): Array<IVideoCard> =>
   poleVideos.map(
-    ({ date, song: { musician, title }, ...rest }: IPoleVideo): IVideoCard => ({
-      ...rest,
-      title: musician.name,
-      subtitle: title,
-      dates: [date]
-    })
+    (poleVideo: IPoleVideo): IVideoCard => mapPoleVideoToVideoCard(poleVideo)
   );
 
 export const mapGigsToGigsAndFestivals = (

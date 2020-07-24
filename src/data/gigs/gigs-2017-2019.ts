@@ -98,40 +98,40 @@ export const FRANCES: IGig = {
 
 export const JONES: IGig = {
   headline: MUSICIANS.JONES,
-  date: new Date("2017-05-03"),
-  //youtubeId: "7WRudCbbXl8",
+  date: DATES.GIGS.JONES,
+  video: VIDEOS.GIGS.JONES,
   venue: MUSIC_VENUES.HOXTON_HALL,
   company: [FRIENDS.LUKE_STERN]
 };
 
 export const BETSY: IGig = {
   headline: MUSICIANS.BETSY,
-  //youtubeId: "3Tri20SZIyw",
-  date: new Date("2017-05-15"),
+  video: VIDEOS.GIGS.BETSY,
+  date: DATES.GIGS.BETSY,
   venue: MUSIC_VENUES.MOTH_CLUB,
   company: [FRIENDS.LUKE_STERN]
 };
 
 export const ALMA: IGig = {
   headline: MUSICIANS.ALMA,
-  date: new Date("2017-05-16"),
+  video: VIDEOS.GIGS.ALMA,
+  date: DATES.GIGS.ALMA,
   venue: MUSIC_VENUES.OSLO_HACKNEY,
-  //youtubeId: "swBApwCoEGY",
   company: [FRIENDS.LUKE_STERN]
 };
 
 export const BETTY_WHO: IGig = {
   headline: MUSICIANS.BETTY_WHO,
-  date: new Date("2017-05-17"),
-  //youtubeId: "gzccsq6FR7A",
+  video: VIDEOS.GIGS.BETTY_WHO,
+  date: DATES.GIGS.BETTY_WHO,
   venue: MUSIC_VENUES.ZIGFRID_VON_UNDERBELLY,
   company: [FRIENDS.SIAN_RODWAY_SMITH]
 };
 
 export const PARAMORE_2017: IGig = {
   headline: MUSICIANS.PARAMORE,
-  //youtubeId: "4yCEwRyXc6s",
-  date: new Date("2017-06-19"),
+  video: VIDEOS.GIGS.PARAMORE_2017,
+  date: DATES.GIGS.PARAMORE_2017,
   venue: MUSIC_VENUES.ROYAL_ALBERT_HALL,
   company: [FRIENDS.LUKE_STERN],
   favourite: true
@@ -139,25 +139,25 @@ export const PARAMORE_2017: IGig = {
 
 export const SIGRID: IGig = {
   headline: MUSICIANS.SIGRID,
-  date: new Date("2017-09-13"),
+  date: DATES.GIGS.SIGRID,
+  video: VIDEOS.GIGS.SIGRID,
   venue: MUSIC_VENUES.SCALA,
-  //youtubeId: "o0WcLEYO3EA",
   company: [FRIENDS.SIAN_RODWAY_SMITH]
 };
 
-export const ALLIE_X: IGig = {
+export const ALLIE_X_2018: IGig = {
   headline: MUSICIANS.ALLIE_X,
-  date: new Date("2017-09-18"),
+  date: DATES.GIGS.ALLIE_X_2018,
   venue: MUSIC_VENUES.OMEARA,
   company: [FRIENDS.SIAN_RODWAY_SMITH],
-  //youtubeId: "jY1TrVD966s",
+  video: VIDEOS.GIGS.ALLIE_X_2018,
   favourite: true
 };
 
 export const LORDE_2017: IGig = {
   headline: MUSICIANS.LORDE,
-  date: new Date("2017-09-27"),
-  //youtubeId: "UTWTPj2AwIE",
+  date: DATES.GIGS.LORDE_2017,
+  video: VIDEOS.GIGS.LORDE_2017,
   favourite: true,
   venue: MUSIC_VENUES.ALEXANDRA_PALACE,
   company: [FRIENDS.LUKE_STERN, FRIENDS.CAITLIN_MCCAIG, FRIENDS.CAITY_DALBY]
@@ -165,24 +165,24 @@ export const LORDE_2017: IGig = {
 
 export const MURA_MASA: IGig = {
   headline: MUSICIANS.MURA_MASA,
-  date: new Date("2017-10-19"),
+  video: VIDEOS.GIGS.MURA_MASA,
+  date: DATES.GIGS.MURA_MASA,
   venue: MUSIC_VENUES.BRIXTON_ACADEMY,
-  //youtubeId: "lP5PXTTMRuY",
   company: [FRIENDS.LUKE_STERN]
 };
 
 export const FREYA_RIDINGS: IGig = {
   headline: MUSICIANS.FREYA_RIDINGS,
-  //youtubeId: "PqEYdOy4ozI",
-  date: new Date("2017-10-26"),
+  video: VIDEOS.GIGS.FREYA_RIDINGS,
+  date: DATES.GIGS.FREYA_RIDINGS,
   venue: MUSIC_VENUES.ST_GILES_IN_THE_FIELD,
   company: [FRIENDS.TONYA_FRANCE]
 };
 
 export const PVRIS: IGig = {
   headline: MUSICIANS.PVRIS,
-  //youtubeId: "h3YCpEnU-NI",
-  date: new Date("2017-11-30"),
+  video: VIDEOS.GIGS.PVRIS,
+  date: DATES.GIGS.PVRIS,
   venue: MUSIC_VENUES.BRIXTON_ACADEMY,
   company: [FRIENDS.LUKE_STERN]
 };
@@ -191,56 +191,56 @@ export const KYGO: IGig = {
   headline: MUSICIANS.KYGO,
   support: [MUSICIANS.GRYFFIN, MUSICIANS.SEEB],
   venue: MUSIC_VENUES.O2_THE,
-  date: new Date("2018-02-25"),
-  //youtubeId: "59OAEOL05dw",
+  video: VIDEOS.GIGS.KYGO,
+  date: DATES.GIGS.KYGO,
   company: [FRIENDS.TONYA_FRANCE]
 };
 
 export const CODE_THE: IGig = {
   headline: MUSICIANS.CODE_THE,
   venue: MUSIC_VENUES.CORSICA_STUDIOS,
-  date: new Date("2018-03-07"),
-  //youtubeId: "xSS9YiCzqWw",
+  video: VIDEOS.GIGS.CODE_THE,
+  date: DATES.GIGS.CODE_THE,
   company: [FRIENDS.JERRY_EDWARDS, FRIENDS.JAMIE_HALKET, FRIENDS.DOM_COYNE]
 };
 
-export const GEORGE_FTIZGERALD: IGig = {
+export const GEORGE_FITZGERALD: IGig = {
   headline: MUSICIANS.GEORGE_FITZGERALD,
+  video: VIDEOS.GIGS.GEORGE_FITZGERALD,
   venue: MUSIC_VENUES.ISLINGTON_ASSEMBLY_HALL,
-  //youtubeId: "cGQD-nAo4Vc",
-  date: new Date("2018-03-27"),
+  date: DATES.GIGS.GEORGE_FITZGERALD,
   company: [FRIENDS.TONYA_FRANCE]
 };
 
 export const AQUILO: IGig = {
   headline: MUSICIANS.AQUILO,
   venue: MUSIC_VENUES.OVAL_SPACE,
-  date: new Date("2018-04-19"),
-  //youtubeId: "ts7L_aQBvbQ",
+  video: VIDEOS.GIGS.AQUILO,
+  date: DATES.GIGS.AQUILO,
   company: [FRIENDS.JAMIE_HALKET]
 };
 
 export const TWO_FEET: IGig = {
   headline: MUSICIANS.TWO_FEET,
+  video: VIDEOS.GIGS.TWO_FEET,
   venue: MUSIC_VENUES.ELECTROWERKZ,
-  //youtubeId: "EVP4BbbcFxE",
-  date: new Date("2018-05-24"),
+  date: DATES.GIGS.TWO_FEET,
   company: [FRIENDS.JERRY_EDWARDS]
 };
 
 export const KIM_PETRAS_2018: IGig = {
   headline: MUSICIANS.KIM_PETRAS,
+  video: VIDEOS.GIGS.KIM_PETRAS_2018,
   venue: MUSIC_VENUES.COURTYARD_THEATRE,
-  date: new Date("2018-05-25"),
+  date: DATES.GIGS.KIM_PETRAS_2018,
   company: [FRIENDS.JERRY_EDWARDS],
-  //youtubeId: "hks5LRHlgLE",
   favourite: true
 };
 
 export const SOFI_TUKKER: IGig = {
   headline: MUSICIANS.SOFI_TUKKER,
   venue: MUSIC_VENUES.KOKO,
-  date: new Date("2018-09-17"),
+  date: DATES.GIGS.SOFI_TUKKER,
   company: [FRIENDS.TONYA_FRANCE]
 };
 
@@ -414,34 +414,34 @@ export const FLEETWOOD_MAC: IGig = {
 
 export const SOPHIE_2019: IGig = {
   headline: MUSICIANS.SOPHIE,
-  //youtubeId: "-ktoahuTfZQ",
+  video: VIDEOS.GIGS.SOPHIE_2019,
   favourite: true,
   venue: MUSIC_VENUES.ROYAL_FESTIVAL_HALL,
-  date: new Date("2019-08-10"),
+  date: DATES.GIGS.SOPHIE_2019,
   company: [FRIENDS.JERRY_EDWARDS]
 };
 
 export const KIM_PETRAS_2019: IGig = {
   headline: MUSICIANS.KIM_PETRAS,
-  //youtubeId: "F6OBvyUN-xE",
+  video: VIDEOS.GIGS.KIM_PETRAS_2019,
   venue: MUSIC_VENUES.HEAVEN,
-  date: new Date("2019-08-27"),
+  date: DATES.GIGS.KIM_PETRAS_2019,
   company: [FRIENDS.DARREN_TAYLOR, FRIENDS.JERRY_EDWARDS]
 };
 
 export const MUNA_2019_09: IGig = {
   headline: MUSICIANS.MUNA,
   venue: MUSIC_VENUES.VILLAGE_UNDERGROUND,
-  date: new Date("2019-09-10"),
-  //youtubeId: "b1GQKpH9nRY",
+  video: VIDEOS.GIGS.MUNA_2019_09,
+  date: DATES.GIGS.MUNA_2019_09,
   company: [FRIENDS.EMMA_CODRINGTON]
 };
 
 export const JULIA_MICHAELS: IGig = {
   headline: MUSICIANS.JULIA_MICHAELS,
-  //youtubeId: "QjZxfJ5rMoI",
+  video: VIDEOS.GIGS.JULIA_MICHAELS,
   venue: MUSIC_VENUES.SHEPHERDS_BUSH_EMPIRE,
-  date: new Date("2019-09-17"),
+  date: DATES.GIGS.JULIA_MICHAELS,
   company: [FRIENDS.DARREN_TAYLOR]
 };
 
@@ -458,30 +458,30 @@ export const ELDERBROOK: IGig = {
 
 export const CHARLI_XCX_2019: IGig = {
   headline: MUSICIANS.CHARLI_XCX,
-  //youtubeId: "aWMtkdL7_5Q",
+  video: VIDEOS.GIGS.CHARLI_XCX_2019,
   support: [MUSICIANS.RINA_SAWAYAMA],
   venue: MUSIC_VENUES.BRIXTON_ACADEMY,
-  date: new Date("2019-10-31"),
+  date: DATES.GIGS.CHARLI_XCX_2019,
   company: [FRIENDS.DARREN_TAYLOR],
   favourite: true
 };
 
 export const BANKS_2019: IGig = {
   headline: MUSICIANS.BANKS,
-  //youtubeId: "2sp-iXxyxLg",
+  video: VIDEOS.GIGS.BANKS_2019,
   support: [MUSICIANS.GLOWIE],
   venue: MUSIC_VENUES.ROUNDHOUSE,
-  date: new Date("2019-11-04"),
+  date: DATES.GIGS.BANKS_2019,
   company: [FRIENDS.DARREN_TAYLOR],
   favourite: true
 };
 
 export const LAUV_2019: IGig = {
   headline: MUSICIANS.LAUV,
-  //youtubeId: "CWEoCdcltQ8",
+  video: VIDEOS.GIGS.LAUV_2019,
   support: [MUSICIANS.CHELSEA_CUTLER],
   venue: MUSIC_VENUES.KENTISH_TOWN_FORUM,
-  date: new Date("2019-11-05"),
+  date: DATES.GIGS.LAUV_2019,
   company: [FRIENDS.JERRY_EDWARDS, FRIENDS.POPPY_SMITH]
 };
 
@@ -495,18 +495,18 @@ export const SABRINA_CLAUDIO_2019: IGig = {
 
 export const ROBINSON: IGig = {
   headline: MUSICIANS.ROBINSON,
-  //youtubeId: "msmiWt45P0A",
+  video: VIDEOS.GIGS.ROBINSON,
   support: [MUSICIANS.NAVVY],
   venue: MUSIC_VENUES.QUEEN_OF_HOXTON,
-  date: new Date("2019-11-20"),
+  date: DATES.GIGS.ROBINSON,
   company: [FRIENDS.DARREN_TAYLOR]
 };
 
 export const FKA_TWIGS_2019_11: IGig = {
   headline: MUSICIANS.FKA_TWIGS,
-  //youtubeId: "ayQHCkqK04c",
+  video: VIDEOS.GIGS.FKA_TWIGS_2019_11,
   venue: MUSIC_VENUES.BRIXTON_ACADEMY,
-  date: new Date("2019-11-25"),
+  date: DATES.GIGS.FKA_TWIGS_2019_11,
   company: [
     FRIENDS.DARREN_TAYLOR,
     FRIENDS.CAITLIN_MCCAIG,
@@ -517,10 +517,10 @@ export const FKA_TWIGS_2019_11: IGig = {
 
 export const NAAZ: IGig = {
   headline: MUSICIANS.NAAZ,
-  //youtubeId: "YYqQIxqo2y4",
+  video: VIDEOS.GIGS.NAAZ,
   support: [MUSICIANS.DYLAN],
   venue: MUSIC_VENUES.CAMDEN_ASSEMBLY,
-  date: new Date("2019-11-27"),
+  date: DATES.GIGS.NAAZ,
   company: [FRIENDS.DARREN_TAYLOR]
 };
 

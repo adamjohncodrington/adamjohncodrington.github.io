@@ -53,9 +53,9 @@ export const RoundedSymbol: React.FC<IRoundedSymbol> = ({
   children,
   opacity
 }) => {
-  const isSvgSymbol: boolean = type === "video" || type === "photo";
+  const isSvg: boolean = type === "video" || type === "photo";
 
-  return isSvgSymbol ? (
+  return isSvg ? (
     <StyledRoundedSymbol type={type} opacity={opacity}>
       {type === "photo" && <SVG.CAMERA />}
       {type === "video" && <SVG.VIDEO_CAMERA />}
