@@ -11,14 +11,14 @@ import {
   getCountdownText,
   getDatesText,
   getDateText,
-  getTripBody
+  getTripBody,
+  getMusicianStageNameAtTime
 } from "utils";
 
 import { CountedListItem } from "../CountedListItem";
 import { PhotoGrid } from "../PhotoGrid";
 import { Card } from "../Card";
 import { Recipe } from "../Recipe";
-import { VinylCards } from "../VinylCards";
 import { VideoCards } from "../VideoCards";
 
 import { PageSectionPanelList, StyledComingSoonPlaceholder } from "./styles";
@@ -101,7 +101,35 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
           </Li>
         ))}
 
-      {vinylCards && <VinylCards {...vinylCards} />}
+      {vinylCards &&
+        vinylCards.vinyls.map(
+          (
+            {
+              title,
+              musician,
+              year,
+              artwork,
+              hideYear,
+              appleMusicId
+            }: IVinylCard,
+            index: number
+          ) => (
+            <Li key={index}>
+              <Card
+                title={title}
+                subtitle={moveTheSuffixToPrefix(
+                  getMusicianStageNameAtTime({ musician, year })
+                )}
+                body={hideYear ? undefined : year.toString()}
+                company={[]}
+                headerPhoto={{
+                  ...artwork,
+                  href: "https://music.apple.com/gb/album/" + appleMusicId
+                }}
+              />
+            </Li>
+          )
+        )}
 
       {photoGrid && <PhotoGrid {...photoGrid} />}
 

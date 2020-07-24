@@ -55,6 +55,7 @@ interface ICard extends ICardAll {
   secondaryBody?: string;
   countdownText?: string;
   note?: string;
+  headerPhoto?: IPhotoLink;
 }
 
 interface IPhotoGrid {
@@ -86,6 +87,10 @@ interface IPhoto {
   date?: Date;
   title?: string;
   url: string;
+}
+
+interface IPhotoLink extends IPhoto {
+  href: string;
 }
 
 interface I_OrientationQuality {

@@ -1,5 +1,7 @@
 # TO DO LIST
 
+- `RECIPE LIST` / `CARD LIST` / `BASIC LIST`
+
 - reinstate festival videos
 - remove Taylor Swift duplicate on vinyls artist list
 - add symbols to vinyl cards to indicate color and side count
