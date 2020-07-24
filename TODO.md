@@ -15,11 +15,11 @@
 - make festival dates prop `start/end`???
 - implement sorting at `PageSectionLayout` level
 - totally refactor `travel` in `@constants`
+- add Apple Music links and details to Vinyl `artists` section
 
 ## Enhancements
 
 - beef up POLE section
-- add Apple Music links and details to Vinyl `artists` section
 - make YouTube videos play in HD
 - add images to theatre page (poster art)
 - display festival lineups by day????

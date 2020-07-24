@@ -9,8 +9,6 @@ const MUSICIANS: IPageSection = {
   SvgIcon: SVG.ARTIST
 };
 
-console.log(FACTORY.MUSICIANS);
-
 const COLLECTION: IPageSection = {
   title: PAGE_SECTION_TITLES.COLLECTION,
   data: { vinylCards: { vinyls: FACTORY.COLLECTION, shuffle: true } },
