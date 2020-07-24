@@ -1,5 +1,6 @@
+import { VINYL as DATA } from "data";
 import { splitVinylsIntoYears } from "utils";
 
-import { COLLECTION } from "./collection";
-
-export const YEARS: Array<Array<IVinyl>> = splitVinylsIntoYears(COLLECTION);
+export const YEARS: Array<Array<IVinylPostPurchase>> = splitVinylsIntoYears(
+  DATA.COLLECTION
+);

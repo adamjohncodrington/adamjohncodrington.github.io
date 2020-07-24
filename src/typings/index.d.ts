@@ -265,18 +265,31 @@ interface ITheatreVisit extends I_Date, ICardAll {
   cast?: Array<IActor>;
 }
 
-interface IVinyl {
+interface IVinylPrePurchase {
   musician: IMusician;
   title: string;
   year: number;
   artwork: IPhoto;
   appleMusicId: string;
-  signed?: true;
-  notes?: string;
-  purchased?: boolean;
 }
 
-interface IVinylCard extends IVinyl {
+interface IVinylPostPurchase extends IVinylPrePurchase {
+  signed: boolean;
+  color:
+    | "black"
+    | "photo"
+    | "clear"
+    | "pink"
+    | "black-and-clear"
+    | "yellow"
+    | "red"
+    | "teal"
+    | "blue-mist";
+  sides: 2 | 4;
+  inches: 10 | 12;
+}
+
+interface IVinylCard extends IVinylPrePurchase {
   hideYear?: boolean;
 }
 

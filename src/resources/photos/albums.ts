@@ -11,6 +11,12 @@ export const AMY_WINEHOUSE_BACK_TO_BLACK: IPhoto = {
 export const ARCTIC_MONKEYS_FAVOURITE_WORST_NIGHTMARE: IPhoto = {
   url: "https://iili.io/dfN10g.jpg"
 };
+export const LYKKE_LI_SO_SAD_SO_SEXY: IPhoto = {
+  url: "https://iili.io/dIuyCb.jpg"
+};
+export const TAYLOR_SWIFT_FOLKLORE: IPhoto = {
+  url: "https://iili.io/dIumZu.jpg"
+};
 export const ArianaGrande_TUN: IPhoto = {
   url: "https://iili.io/dfNEga.jpg"
 };
