@@ -21,11 +21,9 @@ const getMusicianFestivalDate = (
   { lineup, dates }: IFestival
 ): Date => {
   if (lineup.length === 1) return dates[0];
-
   for (let day = 0; day < lineup.length; day++) {
     if (lineup[day].includes(musician)) return dates[day];
   }
-
   alert(
     "There has been an error calculating which day you saw an artist at a festival on"
   );
@@ -49,7 +47,7 @@ const getMusicianDetails = (
         festival ? festival.title.name : moveTheSuffixToPrefix(venue.name)
       ],
       dates: festival ? [getMusicianFestivalDate(musician, festival)] : dates,
-      video,
+      video: gig ? (gig.headline === musician ? video : undefined) : undefined,
       favourite: favourite && gig && gig.headline === musician
     })
   );

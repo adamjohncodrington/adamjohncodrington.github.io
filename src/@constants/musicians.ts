@@ -58,7 +58,7 @@ export const CHLOE_X_HALLE: IMusician = { name: "Chloe x Halle" };
 export const CHRISTINE_AND_THE_QUEENS: IMusician = {
   name: "Christine and the Queens"
 };
-export const CHVRCHES: IMusician = { name: "CHVRCHES" };
+export const CHVRCHES: IMusician = { name: "CHVRCHΞS" };
 export const CLAIRO: IMusician = { name: "Clairo" };
 export const CLEAN_BANDIT: IMusician = { name: "Clean Bandit" };
 export const COBRA_STARSHIP: IMusician = { name: "Cobra Starship" };
