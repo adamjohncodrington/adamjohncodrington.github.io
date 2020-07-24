@@ -1,6 +1,8 @@
 # TO DO LIST
 
 - reinstate festival videos
+- remove Taylor Swift duplicate on vinyls artist list
+- add symbols to vinyl cards to indicate color and side count
 
 - incorporate `VideoCard`, `VinylCard` into `Card`!!!!
 

@@ -25,7 +25,7 @@ const getMusicianFestivalDate = (
     if (lineup[day].includes(musician)) return dates[day];
   }
   alert(
-    "There has been an error calculating which day you saw an artist at a festival on"
+    "There has been an error calculating which day you saw a musician at a festival on"
   );
   return new Date();
 };

@@ -1,5 +1,5 @@
 // Common
-export const ARTISTS: string = "Artists";
+export const MUSICIANS: string = "Artists";
 export const BUCKET_LIST: string = "Bucket List";
 export const COMING_SOON: string = "Coming Soon";
 export const FAVOURITES: string = "Favourites";

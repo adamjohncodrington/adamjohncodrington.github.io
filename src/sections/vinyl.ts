@@ -2,12 +2,14 @@ import { PAGE_SECTION_TITLES } from "@constants";
 import { VINYL as FACTORY } from "factories";
 import { SVG } from "resources";
 
-const ARTISTS: IPageSection = {
-  title: PAGE_SECTION_TITLES.ARTISTS,
-  data: { countedListItems: FACTORY.ARTISTS },
-  count: FACTORY.ARTISTS.length,
+const MUSICIANS: IPageSection = {
+  title: PAGE_SECTION_TITLES.MUSICIANS,
+  data: { countedListItems: FACTORY.MUSICIANS },
+  count: FACTORY.MUSICIANS.length,
   SvgIcon: SVG.ARTIST
 };
+
+console.log(FACTORY.MUSICIANS);
 
 const COLLECTION: IPageSection = {
   title: PAGE_SECTION_TITLES.COLLECTION,
@@ -49,7 +51,7 @@ const YEARS: Array<IPageSection> = FACTORY.YEARS.map(
 );
 
 export const VINYL: Array<IPageSection> = [
-  ARTISTS,
+  MUSICIANS,
   COLLECTION,
   SIGNED,
   WISH_LIST,

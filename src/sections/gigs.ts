@@ -15,8 +15,8 @@ const FESTIVALS: IPageSection = {
   data: { countedListItems: FACTORY.FESTIVALS }
 };
 
-const ARTISTS: IPageSection = {
-  title: PAGE_SECTION_TITLES.ARTISTS,
+const MUSICIANS: IPageSection = {
+  title: PAGE_SECTION_TITLES.MUSICIANS,
   SvgIcon: SVG.ARTIST,
   data: { countedListItems: FACTORY.MUSICIANS },
   count: FACTORY.MUSICIANS.length
@@ -70,7 +70,7 @@ const YEARS: Array<IPageSection> = FACTORY.YEARS.map(
 );
 
 export const GIGS: Array<IPageSection> = [
-  ARTISTS,
+  MUSICIANS,
   BUCKET_LIST,
   FAVOURITES,
   FESTIVALS,

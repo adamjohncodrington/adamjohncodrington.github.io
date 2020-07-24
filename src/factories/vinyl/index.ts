@@ -1,12 +1,12 @@
 import { VINYL as DATA } from "data";
 import { formatCountedListItems, formatVinyls } from "utils";
 
-import { ARTISTS } from "./artists";
+import { MUSICIANS } from "./musicians";
 import { SIGNED } from "./signed";
 import { YEARS } from "./years";
 
 export const VINYL = {
-  ARTISTS: formatCountedListItems(ARTISTS),
+  MUSICIANS: formatCountedListItems(MUSICIANS),
   COLLECTION: formatVinyls(DATA.COLLECTION),
   SIGNED,
   WISH_LIST: DATA.WISH_LIST,
