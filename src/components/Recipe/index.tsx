@@ -13,15 +13,15 @@ import {
   mapIngredientsToListItems
 } from "./factory";
 import {
-  RecipeCardTitle,
-  RecipeCardPanel,
-  RecipeCardPortionCost,
-  RecipeCardCostsContainer
+  RecipeTitle,
+  RecipePanel,
+  RecipePortionCost,
+  RecipeCostsContainer
 } from "./styles";
 
-interface IRecipeCardHeader extends I_ClassName, I_PanelIsVisible {}
+interface IRecipeHeader extends I_ClassName, I_PanelIsVisible {}
 
-export const RecipeCard: FC<IRecipe> = ({
+export const Recipe: FC<IRecipe> = ({
   title,
   makes,
   ingredients,
@@ -38,12 +38,9 @@ export const RecipeCard: FC<IRecipe> = ({
     ? getIngredientsHeader({ makes, defaultIngredientsHeader })
     : defaultIngredientsHeader;
 
-  const RecipeCardHeader: FC<IRecipeCardHeader> = ({
-    panelIsVisible,
-    className
-  }) => (
+  const RecipeHeader: FC<IRecipeHeader> = ({ panelIsVisible, className }) => (
     <FlexRow className={className}>
-      <RecipeCardTitle bold={panelIsVisible}>{title}</RecipeCardTitle>
+      <RecipeTitle bold={panelIsVisible}>{title}</RecipeTitle>
       <RoundedSymbol opacity="50%" type="diet">
         {diet.abbreviation}
       </RoundedSymbol>
@@ -53,9 +50,9 @@ export const RecipeCard: FC<IRecipe> = ({
   return (
     <Disclosure
       autoExpand={newRecipe}
-      Header={RecipeCardHeader}
+      Header={RecipeHeader}
       Panel={
-        <RecipeCardPanel>
+        <RecipePanel>
           <List
             title={ingredientsHeader}
             listItems={mapIngredientsToListItems(ingredients)}
@@ -77,7 +74,7 @@ export const RecipeCard: FC<IRecipe> = ({
           {photo && <SquareImage photo={photo} size="100%" />}
 
           {totalCost && (
-            <RecipeCardCostsContainer>
+            <RecipeCostsContainer>
               <span>
                 <span>approx. </span>
                 <strong>{numberToCurrencyString(totalCost, 1)}</strong>
@@ -85,16 +82,16 @@ export const RecipeCard: FC<IRecipe> = ({
               </span>
 
               {portionCost && makes && (
-                <RecipeCardPortionCost>
+                <RecipePortionCost>
                   <strong>{numberToCurrencyString(portionCost, 1)}</strong>
                   <span>
                     {makes.measurement ? ` per ${makes.measurement}` : " each"}
                   </span>
-                </RecipeCardPortionCost>
+                </RecipePortionCost>
               )}
-            </RecipeCardCostsContainer>
+            </RecipeCostsContainer>
           )}
-        </RecipeCardPanel>
+        </RecipePanel>
       }
     />
   );

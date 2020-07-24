@@ -2,7 +2,6 @@ export * from "./basic";
 export * from "./recipe-costs";
 export * from "./musician";
 export * from "./page-section";
-export * from "./getEventCardValues";
 export * from "./getItemCounts";
 export * from "./daysToGo";
 export * from "./detailsContainsFavourite";
@@ -13,6 +12,8 @@ export * from "./media-queries";
 export * from "./getIngredientsHeader";
 export * from "./generateIngredientListItem";
 export * from "./recipeMethodEntries";
+
 export * from "./years";
 export * from "./format";
 export * from "./map";
+export * from "./get";

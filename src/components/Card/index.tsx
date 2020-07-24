@@ -9,14 +9,14 @@ import { YouTubeVideo } from "../YouTubeVideo";
 
 import { CardTitle, CardSubtitle } from "../styles";
 import {
-  EventCardNote,
-  EventCardCountdown,
-  EventCardTextContainer,
-  EventCardSymbolsContainer,
-  EventCardSecondaryBody
+  CardNote,
+  CardCountdown,
+  CardTextContainer,
+  CardSymbolsContainer,
+  CardSecondaryBody
 } from "./styles";
 
-export const EventCard: React.FC<IEventCard> = ({
+export const Card: React.FC<ICard> = ({
   title,
   subtitle,
   favourite,
@@ -43,49 +43,47 @@ export const EventCard: React.FC<IEventCard> = ({
         isStatic={isStatic}
         Header={({ panelIsVisible }) => (
           <GridColumnDiv
-            data-test="event-card-grid-container"
+            data-test="card-grid-container"
             equalWidthColumns={false}
           >
-            <EventCardTextContainer data-test="event-card-container">
+            <CardTextContainer data-test="card-container">
               <CardTitle
                 bold={!isStatic && panelIsVisible}
-                data-test="event-card-title"
+                data-test="card-title"
                 favourite={!hideFavouriteIcon && favourite}
               >
                 {title}
               </CardTitle>
 
               {subtitle && !hideSubtitle && (
-                <CardSubtitle bold={false} data-test="event-card-subtitle">
+                <CardSubtitle bold={false} data-test="card-subtitle">
                   {subtitle}
                 </CardSubtitle>
               )}
 
-              {body && !hideBody && (
-                <span data-test="event-card-body">{body}</span>
-              )}
+              {body && !hideBody && <span data-test="card-body">{body}</span>}
 
               {secondaryBody && !hideSecondaryBody && (
-                <EventCardSecondaryBody data-test="event-card-secondary-body">
+                <CardSecondaryBody data-test="card-secondary-body">
                   {secondaryBody}
-                </EventCardSecondaryBody>
+                </CardSecondaryBody>
               )}
 
               {countdownText && (
                 <>
-                  <EventCardCountdown data-test="event-card-countdown">
+                  <CardCountdown data-test="card-countdown">
                     {countdownText}
-                  </EventCardCountdown>
+                  </CardCountdown>
 
                   {note && (
-                    <EventCardNote data-test="event-card-note">{`(${note})`}</EventCardNote>
+                    <CardNote data-test="card-note">{`(${note})`}</CardNote>
                   )}
                 </>
               )}
-            </EventCardTextContainer>
+            </CardTextContainer>
 
             {(company.length > 0 || video) && (
-              <EventCardSymbolsContainer>
+              <CardSymbolsContainer>
                 {company.length > 0 &&
                   !hideCompanySymbols &&
                   company
@@ -110,7 +108,7 @@ export const EventCard: React.FC<IEventCard> = ({
                     opacity={!hideCompanySymbols ? "100%" : "50%"}
                   />
                 )}
-              </EventCardSymbolsContainer>
+              </CardSymbolsContainer>
             )}
           </GridColumnDiv>
         )}

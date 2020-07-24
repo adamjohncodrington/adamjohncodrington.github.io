@@ -57,7 +57,8 @@ const VENUES: IPageSection = {
 const VIDEOS: IPageSection = {
   SvgIcon: SVG.VIDEO_CAMERA,
   title: PAGE_SECTION_TITLES.VIDEOS,
-  data: { videoCards: FACTORY.VIDEOS }
+  data: { videoCards: FACTORY.VIDEOS },
+  count: FACTORY.VIDEOS.length
 };
 
 const YEARS: Array<IPageSection> = FACTORY.YEARS.map(

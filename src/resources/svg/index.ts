@@ -28,6 +28,7 @@ export { ReactComponent as HOME } from "./home.svg";
 // M
 export { ReactComponent as MAP_PIN } from "./map-pin.svg";
 export { ReactComponent as MICROPHONE } from "./microphone.svg";
+export { ReactComponent as MUSIC } from "./music-1.svg";
 // N
 export { ReactComponent as NOTEPAD } from "./notepad.svg";
 // P

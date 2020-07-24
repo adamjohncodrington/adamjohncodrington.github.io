@@ -9,7 +9,7 @@ const THEME_COUNTED_LIST_ITEM: IThemeCountedListItem = {
   count: { margin: { left: "5px" }, width: "20px" }
 };
 
-const THEME_EVENT_CARD: IThemeEventCard = {
+const THEME_CARD: IThemeCard = {
   companySymbol: { color: COLORS.boulder, spaceBetweenSymbols: "5px" },
   notFirstChild: { margin: { top: "5px" } },
   photo: { size: "75px" }
@@ -46,8 +46,8 @@ const THEME_PAGE_SECTION: IThemePageSection = {
     countedListItems: { padding: { vertical: "5px" } },
     padding: { bottom: "5px" },
     recipes: {
-      firstRecipeCard: { padding: { top: "10px" } },
-      lastRecipeCard: { padding: { bottom: "15px" } },
+      firstRecipe: { padding: { top: "10px" } },
+      lastRecipe: { padding: { bottom: "15px" } },
       padding: { vertical: "10px" }
     },
     regularCards: {
@@ -63,7 +63,7 @@ const THEME_PAGE_LAYOUT: IThemePageLayout = {
   padding: { all: `15px ${pageLayoutHorizontalSpacing} 25px` }
 };
 
-const THEME_RECIPE_CARD: IThemeRecipeCard = {
+const THEME_RECIPE_CARD: IThemeRecipe = {
   panel: {
     children: { padding: { top: "10px" } },
     padding: { top: "5px" }
@@ -86,7 +86,7 @@ const THEME_VINYL_CARD: IThemeVinylCard = {
 export const THEME: ITheme = {
   breakpoints: BREAKPOINTS,
   countedListItem: THEME_COUNTED_LIST_ITEM,
-  eventCard: THEME_EVENT_CARD,
+  card: THEME_CARD,
   navBar: THEME_NAV_BAR,
   pageHeader: THEME_PAGE_HEADER,
   pageSection: THEME_PAGE_SECTION,

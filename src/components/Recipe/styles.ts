@@ -3,12 +3,12 @@ import styled, { css } from "styled-components";
 import { H3, FlexColumn } from "primitives";
 import { CSS } from "styles";
 
-export const RecipeCardTitle = styled(H3)`
+export const RecipeTitle = styled(H3)`
   text-transform: lowercase;
   flex: 1;
 `;
 
-export const RecipeCardPanel = styled.div(
+export const RecipePanel = styled.div(
   ({ theme: { recipe } }: I_Theme) => css`
     padding-top: ${recipe.panel.padding.top};
 
@@ -18,11 +18,11 @@ export const RecipeCardPanel = styled.div(
   `
 );
 
-export const RecipeCardCostsContainer = styled(FlexColumn)`
+export const RecipeCostsContainer = styled(FlexColumn)`
   text-align: center;
 `;
 
-export const RecipeCardPortionCost = styled.span(
+export const RecipePortionCost = styled.span(
   ({ theme: { recipe } }: I_Theme) => css`
     margin-top: ${recipe.portionCost.margin.top};
     ${CSS.FONT_SIZE_75_PERCENT}

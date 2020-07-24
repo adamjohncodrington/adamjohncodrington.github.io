@@ -5,7 +5,7 @@ import {
   getFestivalTitle,
   getFestivalSubtitle,
   getFestivalMusicians
-} from "./getEventCardValues";
+} from "./get";
 
 export const mapPoleVideosToVideoCards = (
   poleVideos: Array<IPoleVideo>

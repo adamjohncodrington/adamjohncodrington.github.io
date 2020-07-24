@@ -31,11 +31,11 @@ const CSS_RECIPE_CARDS = ({
   }
 
   > *:first-child {
-    padding-top: ${recipes.firstRecipeCard.padding.top};
+    padding-top: ${recipes.firstRecipe.padding.top};
   }
 
   > *:last-child {
-    padding-bottom: ${recipes.lastRecipeCard.padding.bottom};
+    padding-bottom: ${recipes.lastRecipe.padding.bottom};
   }
 
   ${CSS_COMMON}

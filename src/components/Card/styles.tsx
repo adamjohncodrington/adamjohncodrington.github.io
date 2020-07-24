@@ -3,28 +3,28 @@ import styled, { css } from "styled-components";
 import { FlexColumn, FlexRow } from "primitives";
 import { CSS } from "styles";
 
-export const EventCardNote = styled.div(() => CSS.FONT_SIZE_75_PERCENT);
+export const CardNote = styled.div(() => CSS.FONT_SIZE_75_PERCENT);
 
-export const EventCardCountdown = styled.div`
+export const CardCountdown = styled.div`
   font-weight: bold;
 `;
 
-export const EventCardTextContainer = styled(FlexColumn)(
-  ({ theme: { eventCard } }: I_Theme) => css`
+export const CardTextContainer = styled(FlexColumn)(
+  ({ theme: { card } }: I_Theme) => css`
     > *:not(:first-child) {
-      margin-top: ${eventCard.notFirstChild.margin.top};
+      margin-top: ${card.notFirstChild.margin.top};
     }
   `
 );
 
-export const EventCardSecondaryBody = styled.div`
+export const CardSecondaryBody = styled.div`
   ${CSS.FONT_SIZE_75_PERCENT}
 `;
 
-export const EventCardSymbolsContainer = styled(FlexRow)(
+export const CardSymbolsContainer = styled(FlexRow)(
   ({
     theme: {
-      eventCard: {
+      card: {
         companySymbol: { spaceBetweenSymbols }
       }
     }

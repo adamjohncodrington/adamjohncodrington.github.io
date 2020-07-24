@@ -10,7 +10,7 @@ interface IThemeCountedListItem {
   count: { margin: { left: PxValue }; width: PxValue };
 }
 
-interface IThemeEventCard {
+interface IThemeCard {
   companySymbol: { color: ColorValue; spaceBetweenSymbols: PxValue };
   notFirstChild: { margin: { top: PxValue } };
   photo: { size: PxValue };
@@ -47,8 +47,8 @@ interface IThemePageSection {
     countedListItems: { padding: { vertical: PxValue } };
     padding: { bottom: PxValue };
     recipes: {
-      firstRecipeCard: { padding: { top: PxValue } };
-      lastRecipeCard: { padding: { bottom: PxValue } };
+      firstRecipe: { padding: { top: PxValue } };
+      lastRecipe: { padding: { bottom: PxValue } };
       padding: { vertical: PxValue };
     };
     regularCards: {
@@ -63,7 +63,7 @@ interface IThemePageLayout {
   padding: { all: PxValue };
 }
 
-interface IThemeRecipeCard {
+interface IThemeRecipe {
   panel: {
     children: { padding: { top: PxValue } };
     padding: { top: PxValue };
@@ -86,12 +86,12 @@ interface IThemeVinylCard {
 interface ITheme {
   breakpoints: IBreakpoints;
   countedListItem: IThemeCountedListItem;
-  eventCard: IThemeEventCard;
+  card: IThemeCard;
   navBar: IThemeNavBar;
   pageHeader: IThemePageHeader;
   pageLayout: IThemePageLayout;
   pageSection: IThemePageSection;
-  recipe: IThemeRecipeCard;
+  recipe: IThemeRecipe;
   roundedSymbol: IThemeRoundedSymbol;
   vinyl: IThemeVinylCard;
 

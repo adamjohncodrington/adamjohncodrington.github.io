@@ -35,7 +35,7 @@ interface I_Dates {
   dates: Array<Date>;
 }
 
-interface IEventCardAll extends I_Company, I__Favourite {
+interface ICardAll extends I_Company, I__Favourite {
   hideSubtitle?: boolean;
   photos?: Array<IPhoto>;
   video?: IVideo;
@@ -48,7 +48,7 @@ interface IEventCardAll extends I_Company, I__Favourite {
   hideVideoIcon?: boolean;
 }
 
-interface IEventCard extends IEventCardAll {
+interface ICard extends ICardAll {
   title: string;
   subtitle?: string;
   body?: string;
@@ -177,7 +177,7 @@ interface IPageSection extends IPageSectionDisclosure {
 
 interface IFestivalTitle extends I_Name, I__Insignificant {}
 
-interface IGigAndFestival extends IEventCardAll {
+interface IGigAndFestival extends ICardAll {
   venue: IMusicVenue;
   ticketType?: ITicketType;
 }
@@ -259,7 +259,7 @@ interface IPlay extends I_Name, I__Favourite {}
 
 interface ITheatre extends I_Name, I__Favourite {}
 
-interface ITheatreVisit extends I_Date, IEventCardAll {
+interface ITheatreVisit extends I_Date, ICardAll {
   play: IPlay;
   theatre: ITheatre;
   cast?: Array<IActor>;

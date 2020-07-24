@@ -16,8 +16,8 @@ import {
 
 import { CountedListItem } from "../CountedListItem";
 import { PhotoGrid } from "../PhotoGrid";
-import { EventCard } from "../EventCard";
-import { RecipeCard } from "../RecipeCard";
+import { Card } from "../Card";
+import { Recipe } from "../Recipe";
 import { VinylCards } from "../VinylCards";
 import { VideoCards } from "../VideoCards";
 
@@ -54,7 +54,7 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
           (recipe: IRecipe, index: number) =>
             !recipe.hide && (
               <Li key={index}>
-                <RecipeCard key={index} {...recipe} />
+                <Recipe key={index} {...recipe} />
               </Li>
             )
         )}
@@ -64,7 +64,7 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
           const { venue, dates, ticketType } = gigOrFestival;
           return (
             <Li key={index}>
-              <EventCard
+              <Card
                 {...gigOrFestival}
                 body={moveTheSuffixToPrefix(venue.name)}
                 secondaryBody={getDatesText(dates)}
@@ -78,7 +78,7 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
       {theatreVisits &&
         theatreVisits.map((theatreVisit: ITheatreVisit, index: number) => (
           <Li key={index}>
-            <EventCard
+            <Card
               {...theatreVisit}
               title={getTheatreVisitTitle(theatreVisit)}
               // subtitle={getTheatreVisitSubtitle(theatreVisit)}
@@ -91,7 +91,7 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
       {trips &&
         trips.map((trip: ITripLeg, index: number) => (
           <Li key={index}>
-            <EventCard
+            <Card
               {...trip}
               title={getTripTitle(trip)}
               // subtitle={getTripSubtitle(trip)}
