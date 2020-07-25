@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { FlexColumn, FlexRow } from "primitives";
+import { FlexColumn, FlexRow, GridColumnDiv } from "primitives";
 import { CSS } from "styles";
 
 export const CardNote = styled.div`
@@ -41,3 +41,9 @@ export const CardSymbolsContainer = styled(FlexRow)(
     }
   `
 );
+
+export const StyledCardHeaderContainer = styled(FlexRow)``;
+
+export const StyledCardHeaderTextSymbolsContainer = styled(GridColumnDiv)`
+  flex: 1;
+`;

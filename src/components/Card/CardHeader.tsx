@@ -1,17 +1,20 @@
 import React from "react";
 
-import { GridColumnDiv, FlexRow } from "primitives";
-
 import { CardHeaderPhoto } from "./CardHeaderPhoto";
 import { CardHeaderText } from "./CardHeaderText";
 import { CardHeaderSymbols } from "./CardHeaderSymbols";
+import {
+  StyledCardHeaderContainer,
+  StyledCardHeaderTextSymbolsContainer
+} from "./styles";
 
 export const CardHeader: React.FC<ICardHeader> = props => (
-  <FlexRow>
+  <StyledCardHeaderContainer>
     <CardHeaderPhoto {...props} />
-    <GridColumnDiv data-test="card-grid-container" equalWidthColumns={false}>
+
+    <StyledCardHeaderTextSymbolsContainer equalWidthColumns={false}>
       <CardHeaderText {...props} />
       <CardHeaderSymbols {...props} />
-    </GridColumnDiv>
-  </FlexRow>
+    </StyledCardHeaderTextSymbolsContainer>
+  </StyledCardHeaderContainer>
 );

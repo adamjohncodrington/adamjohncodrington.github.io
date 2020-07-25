@@ -4,7 +4,6 @@ import { RoundedSymbol } from "../RoundedSymbol";
 
 import { CardSymbolsContainer } from "./styles";
 
-//TODO: rationalise this to be general
 export const CardHeaderSymbols: React.FC<ICard> = ({
   company,
   video,
@@ -12,8 +11,10 @@ export const CardHeaderSymbols: React.FC<ICard> = ({
   hidePhotosIcon,
   hideVideoIcon,
   hideCompanySymbols
-}) =>
-  company.length > 0 || video ? (
+}) => {
+  if (!(company.length > 0 || video)) return null;
+
+  return (
     <CardSymbolsContainer>
       {company.length > 0 &&
         !hideCompanySymbols &&
@@ -41,4 +42,5 @@ export const CardHeaderSymbols: React.FC<ICard> = ({
         />
       )}
     </CardSymbolsContainer>
-  ) : null;
+  );
+};
