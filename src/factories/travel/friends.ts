@@ -4,8 +4,8 @@ import { getItemCounts, getTripTitle } from "utils";
 
 const getTripsMatchingFriend = (friend: IFriend): Array<ITripLeg> => {
   const tripsMatchingFriend: Array<ITripLeg> = [];
-  const trips: Array<ITripLeg> = DATA.TRIP_LEGS;
-  trips.forEach((trip: ITripLeg): void => {
+  const tripLegs: Array<ITripLeg> = DATA.TRIP_LEGS;
+  tripLegs.forEach((trip: ITripLeg): void => {
     if (trip.company.includes(friend)) tripsMatchingFriend.push(trip);
   });
   return tripsMatchingFriend;
@@ -30,7 +30,10 @@ export const FRIENDS: Array<IBasicListItem> = Object.values(friends)
   .map(
     (friend: IFriend): IBasicListItem => ({
       text: friend.name,
-      ...getItemCounts({ item: { friend }, data: { trips: DATA.TRIP_LEGS } }),
+      ...getItemCounts({
+        item: { friend },
+        data: { tripLegs: DATA.TRIP_LEGS }
+      }),
       details: getFriendDetails(friend)
     })
   );

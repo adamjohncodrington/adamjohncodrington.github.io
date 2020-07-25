@@ -1,5 +1,6 @@
 export const AXS_MOBILE_APP: ITicketType = "AXS app ticket";
-export const DICE: ITicketType = "Dice mobile ticket";
+export const DICE_APP: ITicketType = "Dice app ticket";
+export const DICE_POSTAL: ITicketType = "Dice postal ticket";
 export const GIGS_AND_TOURS_POSTAL: ITicketType =
   "Gigs and Tours postal ticket";
 export const KABOODLE_ETICKET: ITicketType = "Kaboodle eTicket";

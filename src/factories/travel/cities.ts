@@ -19,7 +19,7 @@ export const CITIES: Array<IBasicListItem> = Object.values(cities).map(
       text: name,
       star: capital,
       countInfoIrrelevant: insignificant,
-      ...getItemCounts({ item: { city }, data: { trips: DATA.TRIP_LEGS } })
+      ...getItemCounts({ item: { city }, data: { tripLegs: DATA.TRIP_LEGS } })
     };
   }
 );

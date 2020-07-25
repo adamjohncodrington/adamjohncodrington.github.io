@@ -24,7 +24,7 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
   gigsAndFestivals,
   recipes,
   theatreVisits,
-  trips,
+  tripLegs,
   vinylCards,
   photoGrid,
   videoCards,
@@ -41,8 +41,34 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
       <StyledComingSoonPlaceholder>coming soon</StyledComingSoonPlaceholder>
     );
 
+  const cards: Array<ICard> | undefined = gigsAndFestivals
+    ? gigsAndFestivals.map(
+        (gigOrFestival: IGigOrFestival): ICard =>
+          mapGigOrFestivalToCard(gigOrFestival)
+      )
+    : theatreVisits
+    ? theatreVisits.map(
+        (theatreVisit: ITheatreVisit): ICard =>
+          mapTheatreVisitToCard(theatreVisit)
+      )
+    : tripLegs
+    ? tripLegs.map((tripLeg: ITripLeg): ICard => mapTripLegToCard(tripLeg))
+    : vinylCards
+    ? vinylCards.vinyls.map(
+        (vinylCard: IVinylCard): ICard => mapVinylCardToCard(vinylCard)
+      )
+    : undefined;
+
   return (
     <PageSectionPanelList pageSectionPanelType={pageSectionPanelType}>
+      {cards &&
+        cards.map((card: ICard, index: number) => (
+          <Li key={index}>
+            <Card {...card} />
+          </Li>
+        ))}
+      {videoCards && <VideoCards videoCards={videoCards} />}
+
       {recipes &&
         recipes.map(
           (recipe: IRecipe, index: number) =>
@@ -58,37 +84,7 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
           <BasicListItem key={index} {...basicListItem} />
         ))}
 
-      {gigsAndFestivals &&
-        gigsAndFestivals.map((gigOrFestival: IGigOrFestival, index: number) => (
-          <Li key={index}>
-            <Card {...mapGigOrFestivalToCard(gigOrFestival)} />
-          </Li>
-        ))}
-
-      {theatreVisits &&
-        theatreVisits.map((theatreVisit: ITheatreVisit, index: number) => (
-          <Li key={index}>
-            <Card {...mapTheatreVisitToCard(theatreVisit)} />
-          </Li>
-        ))}
-
-      {trips &&
-        trips.map((tripLeg: ITripLeg, index: number) => (
-          <Li key={index}>
-            <Card {...mapTripLegToCard(tripLeg)} />
-          </Li>
-        ))}
-
-      {vinylCards &&
-        vinylCards.vinyls.map((vinylCard: IVinylCard, index: number) => (
-          <Li key={index}>
-            <Card {...mapVinylCardToCard(vinylCard)} />
-          </Li>
-        ))}
-
       {photoGrid && <PhotoGrid {...photoGrid} />}
-
-      {videoCards && <VideoCards videoCards={videoCards} />}
     </PageSectionPanelList>
   );
 };

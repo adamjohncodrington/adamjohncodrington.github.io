@@ -29,7 +29,7 @@ export const ISLANDS: Array<IBasicListItem> = islandsAll.map(
     return {
       text: name,
       countInfoIrrelevant: insignificant,
-      ...getItemCounts({ item: { island }, data: { trips: DATA.TRIP_LEGS } })
+      ...getItemCounts({ item: { island }, data: { tripLegs: DATA.TRIP_LEGS } })
     };
   }
 );

@@ -26,7 +26,7 @@ export const HIGHLIGHTS: Array<IBasicListItem> = highlights.map(
     text: highlight.name,
     ...getItemCounts({
       item: { attraction: highlight },
-      data: { trips: DATA.TRIP_LEGS }
+      data: { tripLegs: DATA.TRIP_LEGS }
     })
   })
 );
@@ -36,7 +36,7 @@ export const THEME_PARKS: Array<IBasicListItem> = themeParks.map(
     text: themePark.name,
     ...getItemCounts({
       item: { attraction: themePark },
-      data: { trips: DATA.TRIP_LEGS }
+      data: { tripLegs: DATA.TRIP_LEGS }
     })
   })
 );

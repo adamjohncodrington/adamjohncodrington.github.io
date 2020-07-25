@@ -161,7 +161,7 @@ interface IPageSectionDataTypes {
   gigsAndFestivals?: Array<IGigOrFestival>;
   recipes?: Array<IRecipe>;
   theatreVisits?: Array<ITheatreVisit>;
-  trips?: Array<ITripLeg>;
+  tripLegs?: Array<ITripLeg>;
   videoCards?: Array<IVideoCard>;
   vinylCards?: IVinylCards;
 }

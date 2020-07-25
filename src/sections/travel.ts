@@ -56,7 +56,7 @@ const THEME_PARKS: IPageSection = {
 const UP_NEXT: IPageSection = {
   SvgIcon: SVG.NOTEPAD,
   title: PAGE_SECTION_TITLES.UP_NEXT,
-  data: { trips: FACTORY.UP_NEXT }
+  data: { tripLegs: FACTORY.UP_NEXT }
 };
 
 const VIDEOS: IPageSection = {
@@ -78,7 +78,7 @@ const YEARS: Array<IPageSection> = DATA.YEARS.map(
     title: year[0][0].dates[0].getFullYear().toString(),
     count: year.length,
     data: {
-      trips: year
+      tripLegs: year
         .flat()
         .filter(({ dates }: ITripLeg): boolean => !isInFuture(dates[0]))
     }

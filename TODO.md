@@ -1,7 +1,12 @@
 # TO DO LIST
 
+- convert `DAYS TO GO` into a dark number symbol
 
 - merge `VideoCard` into `Card`!!!!
+- add `shuffleContent` boolean to `IPageSetion`
+
+- add `details` to vinyl basic lists (artists)
+- reinstate vinyl shuffle functionality
 
 - `RECIPE LIST` / `CARD LIST` / `BASIC LIST`
 - reinstate festival videos

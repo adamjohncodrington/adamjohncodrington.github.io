@@ -10,8 +10,8 @@ import {
 
 const getCountryMatches = (country: ICountryTemplate): Array<ITripLeg> => {
   const countryMatches: Array<ITripLeg> = [];
-  const trips: Array<ITripLeg> = DATA.TRIP_LEGS;
-  trips.forEach((trip: ITripLeg): void => {
+  const tripLegs: Array<ITripLeg> = DATA.TRIP_LEGS;
+  tripLegs.forEach((trip: ITripLeg): void => {
     if (countryMatchExists(country, trip)) countryMatches.push(trip);
   });
   return countryMatches;
@@ -46,7 +46,10 @@ export const COUNTRIES: Array<IBasicListItem> = Object.values(countries).map(
     return {
       text: country.name,
       favourite: detailsContainsFavourite(details),
-      ...getItemCounts({ item: { country }, data: { trips: DATA.TRIP_LEGS } }),
+      ...getItemCounts({
+        item: { country },
+        data: { tripLegs: DATA.TRIP_LEGS }
+      }),
       details
     };
   }

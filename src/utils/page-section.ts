@@ -3,7 +3,7 @@ export const validPageSectionData = ({
   gigsAndFestivals,
   recipes,
   theatreVisits,
-  trips,
+  tripLegs,
   vinylCards
 }: IPageSectionDataTypes): boolean =>
   !(
@@ -12,6 +12,6 @@ export const validPageSectionData = ({
     (recipes &&
       recipes.filter((item: IRecipe): boolean => !item.hide).length === 0) ||
     (theatreVisits && theatreVisits.length === 0) ||
-    (trips && trips.length === 0) ||
+    (tripLegs && tripLegs.length === 0) ||
     (vinylCards && vinylCards.vinyls.length === 0)
   );

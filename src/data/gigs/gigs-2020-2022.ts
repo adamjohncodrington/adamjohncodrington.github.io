@@ -11,13 +11,14 @@ import { VIDEOS } from "resources";
 //   venue: MUSIC_VENUES.HEAVEN,
 //   date: new Date("2020-06-04"),
 //   company: FRIENDS.DARREN_TAYLOR,
-//   ticketType: TICKET_TYPES.DICE
+//   ticketType: TICKET_TYPES.DICE_APP
 
 export const CELESTE: IGig = {
   headline: MUSICIANS.CELESTE,
   venue: MUSIC_VENUES.SHEPHERDS_BUSH_EMPIRE,
   date: new Date("2020-08-11"),
-  company: [FRIENDS.DARREN_TAYLOR]
+  company: [FRIENDS.DARREN_TAYLOR],
+  ticketType: TICKET_TYPES.DICE_POSTAL
 };
 
 export const GRACEY: IGig = {
@@ -70,7 +71,7 @@ export const CAROLINE_POLACHEK_2020: IGig = {
   venue: MUSIC_VENUES.HEAVEN,
   date: DATES.GIGS.CAROLINE_POLACHEK_2020,
   company: [FRIENDS.DARREN_TAYLOR],
-  ticketType: TICKET_TYPES.DICE
+  ticketType: TICKET_TYPES.DICE_APP
 };
 
 export const GEORGIA: IGig = {
@@ -79,7 +80,7 @@ export const GEORGIA: IGig = {
   venue: MUSIC_VENUES.HEAVEN,
   date: DATES.GIGS.GEORGIA,
   company: [FRIENDS.DARREN_TAYLOR],
-  ticketType: TICKET_TYPES.DICE
+  ticketType: TICKET_TYPES.DICE_APP
 };
 
 export const CARIBOU: IGig = {
@@ -96,7 +97,7 @@ export const SOPHIE_2020: IGig = {
   venue: MUSIC_VENUES.OVAL_SPACE,
   date: new Date("2020-10-17"),
   company: [FRIENDS.LEWIS_STEADMAN, FRIENDS.JERRY_EDWARDS],
-  ticketType: TICKET_TYPES.DICE
+  ticketType: TICKET_TYPES.DICE_APP
 };
 
 export const LANE_8: IGig = {
@@ -104,7 +105,7 @@ export const LANE_8: IGig = {
   venue: MUSIC_VENUES.PRINTWORKS,
   date: new Date("2020-10-25"),
   company: [FRIENDS.TONYA_FRANCE],
-  ticketType: TICKET_TYPES.DICE
+  ticketType: TICKET_TYPES.DICE_APP
 };
 
 export const JON_HOPKINS: IGig = {
