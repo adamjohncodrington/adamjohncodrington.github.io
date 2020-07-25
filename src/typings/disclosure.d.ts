@@ -9,7 +9,3 @@ interface IDisclosure {
   autoExpand?: boolean;
   isStatic?: boolean;
 }
-
-interface I_ClassName {
-  className?: string;
-}
