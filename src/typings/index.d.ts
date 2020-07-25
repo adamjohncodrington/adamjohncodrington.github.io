@@ -227,6 +227,8 @@ interface I_Bold {
   bold: boolean;
 }
 
+interface ICardHeader extends ICard, IDisclosureHeader {}
+
 type IPoleCategory =
   | "contemporary"
   | "exotic"
