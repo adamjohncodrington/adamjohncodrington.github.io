@@ -4,15 +4,23 @@ interface IFormatCLIOptions {
   isLeaderboard: boolean;
 }
 
-///TODO: sort child details here
-
 export const formatCountedListItems = (
   countedListItems: Array<ICountedListItem>,
   options?: IFormatCLIOptions
 ): Array<ICountedListItem> => {
   const isLeaderboard: boolean = !!(options && options.isLeaderboard);
 
-  const filteredCountedListItems: Array<ICountedListItem> = countedListItems.filter(
+  const reduced = countedListItems.reduce(
+    (newArray: Array<ICountedListItem>, current: ICountedListItem) => {
+      const duplicate = newArray.find(
+        (item: ICountedListItem): boolean => item.text === current.text
+      );
+      return duplicate ? newArray : [...newArray, current];
+    },
+    []
+  );
+
+  const filtered: Array<ICountedListItem> = reduced.filter(
     ({
       futureCount,
       pastCount,
@@ -21,7 +29,7 @@ export const formatCountedListItems = (
       countInfoIrrelevant || futureCount !== 0 || pastCount !== 0
   );
 
-  const sortedCountedListItems: Array<ICountedListItem> = filteredCountedListItems.sort(
+  const sorted: Array<ICountedListItem> = filtered.sort(
     (a: ICountedListItem, b: ICountedListItem): number =>
       isLeaderboard
         ? a.pastCount > b.pastCount
@@ -40,24 +48,21 @@ export const formatCountedListItems = (
         : -1
   );
 
-  const translatedCountedListItems: Array<ICountedListItem> = sortedCountedListItems.map(
+  const translated: Array<ICountedListItem> = sorted.map(
     (countedListItem: ICountedListItem): ICountedListItem => ({
       ...countedListItem,
       text: moveTheSuffixToPrefix(countedListItem.text)
     })
   );
 
-  const mappedCountedListItems: Array<ICountedListItem> = translatedCountedListItems.map(
+  const mapped: Array<ICountedListItem> = translated.map(
     (countedListItem: ICountedListItem): ICountedListItem =>
       isLeaderboard
-        ? {
-            ...countedListItem,
-            isLeaderboardItem: true
-          }
+        ? { ...countedListItem, isLeaderboardItem: true }
         : countedListItem
   );
 
-  const detailSortedCountedListItems: Array<ICountedListItem> = mappedCountedListItems.map(
+  const detailSorted: Array<ICountedListItem> = mapped.map(
     ({ details, ...rest }: ICountedListItem): ICountedListItem => ({
       ...rest,
       details: details
@@ -69,7 +74,7 @@ export const formatCountedListItems = (
     })
   );
 
-  return detailSortedCountedListItems;
+  return detailSorted;
 };
 
 export const formatVinyls = (vinyls: Array<IVinyl>): Array<IVinyl> => {
