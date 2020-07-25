@@ -3,7 +3,9 @@ import styled, { css } from "styled-components";
 import { FlexColumn, FlexRow } from "primitives";
 import { CSS } from "styles";
 
-export const CardNote = styled.div(() => CSS.FONT_SIZE_75_PERCENT);
+export const CardNote = styled.div`
+  ${CSS.FONT_SIZE_75_PERCENT}
+`;
 
 export const CardCountdown = styled.div`
   font-weight: bold;
