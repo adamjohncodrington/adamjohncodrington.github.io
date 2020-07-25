@@ -1,12 +1,10 @@
 # TO DO LIST
 
-- review all instances of `.forEach`, potentially replace with `.reduce`, `.some` and/or `.every`
 
 - merge `VideoCard` into `Card`!!!!
 
 - `RECIPE LIST` / `CARD LIST` / `BASIC LIST`
 - reinstate festival videos
-- remove Taylor Swift duplicate on vinyls artist list
 - add symbols to vinyl cards to indicate color and side count
 
 - define `IDates` as `{start, end, only}`
@@ -34,7 +32,8 @@
 
 ## Refactoring
 
-- move `CountedListItemDetails` style values to theme??
+- review all instances of `.forEach`, potentially replace with `.reduce`, `.some` and/or `.every`
+- move `BasicListItemDetails` style values to theme??
 - review semantics of page structure, landmarks, accessibility, etc.
 - rationalise `data-test` attributes
 

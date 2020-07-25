@@ -15,7 +15,7 @@ const getTheatreVenueDetails = (
 ): Array<IBasicListItemDetail> => {
   const theatreMatches: Array<ITheatreVisit> = getTheatreMatches(play);
   return theatreMatches.map(
-    (theatreVisit: ITheatreVisit, index: number): IBasicListItemDetail => {
+    (theatreVisit: ITheatreVisit): IBasicListItemDetail => {
       const { date } = theatreVisit;
       return {
         mainText: [moveTheSuffixToPrefix(theatreVisit.play.name)],

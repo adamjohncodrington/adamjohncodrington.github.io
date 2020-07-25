@@ -14,7 +14,7 @@ const getTripsMatchingFriend = (friend: IFriend): Array<ITripLeg> => {
 const getFriendDetails = (friend: IFriend): Array<IBasicListItemDetail> => {
   const tripsMatchingFriend: Array<ITripLeg> = getTripsMatchingFriend(friend);
   return tripsMatchingFriend.map(
-    (trip: ITripLeg, index: number): IBasicListItemDetail => {
+    (trip: ITripLeg): IBasicListItemDetail => {
       const { dates, video } = trip;
       return {
         mainText: [getTripTitle(trip)],

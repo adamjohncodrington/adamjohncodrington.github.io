@@ -22,7 +22,7 @@ const getCountryDetails = (
 ): Array<IBasicListItemDetail> => {
   const countryMatches: Array<ITripLeg> = getCountryMatches(country);
   return countryMatches.map(
-    (trip: ITripLeg, index: number): IBasicListItemDetail => {
+    (trip: ITripLeg): IBasicListItemDetail => {
       const { dates, favourite, video } = trip;
       const tripTitle: string = getTripTitle(trip);
       const tripSubtitle: string | undefined = getTripSubtitle(trip);
