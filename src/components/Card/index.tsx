@@ -55,7 +55,7 @@ export const Card: React.FC<ICard> = ({
 
   const isStatic: boolean = !(video || (photos && photos.length > 0));
 
-  const CardHeader: React.FC<I_PanelIsVisible> = ({ panelIsVisible }) => (
+  const CardHeader: React.FC<IDisclosureHeader> = ({ panelIsVisible }) => (
     <FlexRow>
       {headerPhoto && (
         <CardHeaderPhotoLink href={headerPhoto.href}>

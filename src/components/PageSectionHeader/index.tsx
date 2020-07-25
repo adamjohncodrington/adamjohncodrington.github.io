@@ -10,7 +10,7 @@ import {
   PageSectionSvgContainer
 } from "./styles";
 
-interface IPageSectionHeader extends I_PanelIsVisible {
+interface IPageSectionHeader extends IDisclosureHeader {
   title: string;
   count?: number;
   starCount?: number;

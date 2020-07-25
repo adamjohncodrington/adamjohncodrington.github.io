@@ -1,9 +1,10 @@
-interface I_PanelIsVisible {
+interface IDisclosureHeader {
+  className?: string;
   panelIsVisible: boolean;
 }
 
 interface IDisclosure {
-  Header: React.FC<I_PanelIsVisible>;
+  Header: React.FC<IDisclosureHeader>;
   Panel: React.FC;
   autoExpand?: boolean;
   isStatic?: boolean;

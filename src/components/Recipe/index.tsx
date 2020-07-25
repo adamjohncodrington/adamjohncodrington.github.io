@@ -19,8 +19,6 @@ import {
   RecipeCostsContainer
 } from "./styles";
 
-interface IRecipeHeader extends I_ClassName, I_PanelIsVisible {}
-
 export const Recipe: FC<IRecipe> = ({
   title,
   makes,
@@ -38,7 +36,10 @@ export const Recipe: FC<IRecipe> = ({
     ? getIngredientsHeader({ makes, defaultIngredientsHeader })
     : defaultIngredientsHeader;
 
-  const RecipeHeader: FC<IRecipeHeader> = ({ panelIsVisible, className }) => (
+  const RecipeHeader: FC<IDisclosureHeader> = ({
+    panelIsVisible,
+    className
+  }) => (
     <FlexRow className={className}>
       <RecipeTitle bold={panelIsVisible}>{title}</RecipeTitle>
       <RoundedSymbol opacity="50%" type="diet">

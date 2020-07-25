@@ -13,8 +13,6 @@ import {
   BasicListItemFutureCount
 } from "./styles";
 
-interface IDisclosureHeader extends I_ClassName, I_PanelIsVisible {}
-
 export const BasicListItem: FC<IBasicListItem> = ({
   text,
   secondaryText,
