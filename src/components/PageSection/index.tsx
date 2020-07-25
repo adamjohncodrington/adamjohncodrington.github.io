@@ -50,7 +50,7 @@ export const PageSection: React.FC<IPageSection> = ({
             dataTest="section-header-container"
           />
         )}
-        Panel={<PageSectionPanel {...data} />}
+        Panel={() => <PageSectionPanel {...data} />}
       />
     </PageSectionContainer>
   );

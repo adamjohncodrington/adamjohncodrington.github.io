@@ -38,7 +38,7 @@ export const VideoCard: React.FC<IVideoCard> = ({
         <StyledDateText>{getDatesText(dates)}</StyledDateText>
       </VideoCardHeaderContainer>
     )}
-    Panel={<YouTubeVideo marginTop="10px" {...video} />}
+    Panel={() => <YouTubeVideo marginTop="10px" {...video} />}
   />
 );
 

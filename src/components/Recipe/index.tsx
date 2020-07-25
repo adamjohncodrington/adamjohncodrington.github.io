@@ -51,7 +51,7 @@ export const Recipe: FC<IRecipe> = ({
     <Disclosure
       autoExpand={newRecipe}
       Header={RecipeHeader}
-      Panel={
+      Panel={() => (
         <RecipePanel>
           <List
             title={ingredientsHeader}
@@ -92,7 +92,7 @@ export const Recipe: FC<IRecipe> = ({
             </RecipeCostsContainer>
           )}
         </RecipePanel>
-      }
+      )}
     />
   );
 };

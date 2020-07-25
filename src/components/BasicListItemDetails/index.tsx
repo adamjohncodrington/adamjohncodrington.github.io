@@ -41,11 +41,11 @@ export const BasicListItemDetail: React.FC<IBasicListItemDetailIndexed> = ({
             </StyledDateText>
           </DynamicFontWeightFlexRow>
         )}
-        Panel={
+        Panel={() => (
           <StyledPanelContainer>
             {video && <YouTubeVideo {...video} marginTop="5px" />}
           </StyledPanelContainer>
-        }
+        )}
       />
     </StyledLi>
   );

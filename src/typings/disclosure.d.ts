@@ -4,7 +4,7 @@ interface I_PanelIsVisible {
 
 interface IDisclosure {
   Header: React.FC<I_PanelIsVisible>;
-  Panel: React.ReactElement;
+  Panel: React.FC;
   autoExpand?: boolean;
   isStatic?: boolean;
 }

@@ -65,7 +65,7 @@ export const BasicListItem: FC<IBasicListItem> = ({
               {TextAndCounts}
             </DynamicFontWeightFlexRow>
           )}
-          Panel={<BasicListItemDetails details={details} />}
+          Panel={() => <BasicListItemDetails details={details} />}
         />
       </li>
     );

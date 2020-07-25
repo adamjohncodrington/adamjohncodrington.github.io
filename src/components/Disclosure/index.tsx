@@ -25,12 +25,12 @@ export const Disclosure: FC<IDisclosure> = ({
   return isStatic ? (
     <>
       <Header panelIsVisible={panelIsVisible} />
-      {Panel}
+      <Panel />
     </>
   ) : SPEED_UP_PAGE_LOAD ? (
     <>
       {ClickableHeader}
-      {panelIsVisible && Panel}
+      {panelIsVisible && <Panel />}
     </>
   ) : (
     <>
@@ -39,7 +39,7 @@ export const Disclosure: FC<IDisclosure> = ({
         data-test="disclosure-panel"
         panelIsVisible={panelIsVisible}
       >
-        {Panel}
+        <Panel />
       </PanelContainer>
     </>
   );
