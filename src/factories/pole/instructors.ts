@@ -1,9 +1,9 @@
 import { INSTRUCTORS as instructors } from "@constants";
 
-export const INSTRUCTORS: Array<ICountedListItem> = Object.values(
+export const INSTRUCTORS: Array<IBasicListItem> = Object.values(
   instructors
 ).map(
-  ({ name, stageName }: IPoleInstructor): ICountedListItem => ({
+  ({ name, stageName }: IPoleInstructor): IBasicListItem => ({
     text: name,
     secondaryText: stageName,
     countInfoIrrelevant: true,

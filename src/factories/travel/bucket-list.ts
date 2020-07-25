@@ -20,8 +20,8 @@ const bucketListCountries: Array<ICountryCounted> = Object.values(countries)
       pastCount === 0 && futureCount === 0 && !excludeFromBucketList
   );
 
-const BUCKET_LIST_COUNTRIES: Array<ICountedListItem> = bucketListCountries.map(
-  ({ name, pastCount, futureCount }: ICountryCounted): ICountedListItem => ({
+const BUCKET_LIST_COUNTRIES: Array<IBasicListItem> = bucketListCountries.map(
+  ({ name, pastCount, futureCount }: ICountryCounted): IBasicListItem => ({
     text: name,
     pastCount,
     futureCount,
@@ -49,13 +49,13 @@ const bucketListCities: Array<ICityCounted> = Object.values(cities)
       !insignificant
   );
 
-const BUCKET_LIST_CITIES: Array<ICountedListItem> = bucketListCities.map(
+const BUCKET_LIST_CITIES: Array<IBasicListItem> = bucketListCities.map(
   ({
     name,
     capital,
     pastCount,
     futureCount
-  }: ICityCounted): ICountedListItem => ({
+  }: ICityCounted): IBasicListItem => ({
     text: name,
     star: capital,
     pastCount,
@@ -64,7 +64,7 @@ const BUCKET_LIST_CITIES: Array<ICountedListItem> = bucketListCities.map(
   })
 );
 
-export const BUCKET_LIST: Array<ICountedListItem> = [
+export const BUCKET_LIST: Array<IBasicListItem> = [
   ...BUCKET_LIST_COUNTRIES,
   ...BUCKET_LIST_CITIES
 ];

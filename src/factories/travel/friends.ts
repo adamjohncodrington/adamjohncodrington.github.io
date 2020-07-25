@@ -11,10 +11,10 @@ const getTripsMatchingFriend = (friend: IFriend): Array<ITripLeg> => {
   return tripsMatchingFriend;
 };
 
-const getFriendDetails = (friend: IFriend): Array<ICountedListItemDetail> => {
+const getFriendDetails = (friend: IFriend): Array<IBasicListItemDetail> => {
   const tripsMatchingFriend: Array<ITripLeg> = getTripsMatchingFriend(friend);
   return tripsMatchingFriend.map(
-    (trip: ITripLeg, index: number): ICountedListItemDetail => {
+    (trip: ITripLeg, index: number): IBasicListItemDetail => {
       const { dates, video } = trip;
       return {
         mainText: [getTripTitle(trip)],
@@ -25,10 +25,10 @@ const getFriendDetails = (friend: IFriend): Array<ICountedListItemDetail> => {
   );
 };
 
-export const FRIENDS: Array<ICountedListItem> = Object.values(friends)
+export const FRIENDS: Array<IBasicListItem> = Object.values(friends)
   .filter(({ travel }: IFriend): boolean => !!travel)
   .map(
-    (friend: IFriend): ICountedListItem => ({
+    (friend: IFriend): IBasicListItem => ({
       text: friend.name,
       ...getItemCounts({ item: { friend }, data: { trips: DATA.TRIP_LEGS } }),
       details: getFriendDetails(friend)

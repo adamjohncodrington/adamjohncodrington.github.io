@@ -6,7 +6,7 @@ type BoxShadowValue = string;
 type TransitionValue = string;
 type PercentageValue = string;
 
-interface IThemeCountedListItem {
+interface IThemeBasicListItem {
   count: { margin: { left: PxValue }; width: PxValue };
 }
 
@@ -44,7 +44,7 @@ interface IThemePageSection {
   padding: { horizontal: PxValue; bottom: PxValue };
   panelList: {
     border: { bottom: PxValue };
-    countedListItems: { padding: { vertical: PxValue } };
+    basicListItems: { padding: { vertical: PxValue } };
     padding: { bottom: PxValue };
     recipes: {
       firstRecipe: { padding: { top: PxValue } };
@@ -85,7 +85,7 @@ interface IThemeVinylCard {
 
 interface ITheme {
   breakpoints: IBreakpoints;
-  countedListItem: IThemeCountedListItem;
+  basicListItem: IThemeBasicListItem;
   card: IThemeCard;
   navBar: IThemeNavBar;
   pageHeader: IThemePageHeader;

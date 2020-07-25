@@ -23,8 +23,8 @@ const islandsAll: Array<IIsland> = [
   ...islandsThatAreNotCountries
 ];
 
-export const ISLANDS: Array<ICountedListItem> = islandsAll.map(
-  (island: IIsland): ICountedListItem => {
+export const ISLANDS: Array<IBasicListItem> = islandsAll.map(
+  (island: IIsland): IBasicListItem => {
     const { name, insignificant } = island;
     return {
       text: name,

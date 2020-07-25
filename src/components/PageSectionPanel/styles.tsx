@@ -44,14 +44,14 @@ const CSS_RECIPE_CARDS = ({
 const CSS_COUNTED_LIST = ({
   theme: {
     pageSection: {
-      panelList: { padding, countedListItems }
+      panelList: { padding, basicListItems }
     }
   }
 }: I_Theme) => css`
   padding-bottom: ${padding.bottom};
 
   > * {
-    padding: ${countedListItems.padding.vertical} 0;
+    padding: ${basicListItems.padding.vertical} 0;
   }
 
   ${CSS_COMMON}

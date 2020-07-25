@@ -15,7 +15,7 @@ import {
   getMusicianStageNameAtTime
 } from "utils";
 
-import { CountedListItem } from "../CountedListItem";
+import { BasicListItem } from "../BasicListItem";
 import { PhotoGrid } from "../PhotoGrid";
 import { Card } from "../Card";
 import { Recipe } from "../Recipe";
@@ -26,7 +26,7 @@ import { PageSectionPanelList, StyledComingSoonPlaceholder } from "./styles";
 const { COUNTED_LIST_ITEMS, RECIPES, CARDS } = PAGE_SECTION_PANEL_TYPES;
 
 export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
-  countedListItems,
+  basicListItems,
   gigsAndFestivals,
   recipes,
   theatreVisits,
@@ -38,7 +38,7 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
 }) => {
   const pageSectionPanelType: string = recipes
     ? RECIPES
-    : countedListItems
+    : basicListItems
     ? COUNTED_LIST_ITEMS
     : CARDS;
 
@@ -135,12 +135,10 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
 
       {videoCards && <VideoCards videoCards={videoCards} />}
 
-      {countedListItems &&
-        countedListItems.map(
-          (countedListItem: ICountedListItem, index: number) => (
-            <CountedListItem key={index} {...countedListItem} />
-          )
-        )}
+      {basicListItems &&
+        basicListItems.map((basicListItem: IBasicListItem, index: number) => (
+          <BasicListItem key={index} {...basicListItem} />
+        ))}
     </PageSectionPanelList>
   );
 };

@@ -6,26 +6,26 @@ import { isInFuture } from "utils";
 const ACTORS: IPageSection = {
   title: PAGE_SECTION_TITLES.ACTORS,
   SvgIcon: SVG.ARTIST,
-  data: { countedListItems: FACTORY.ACTORS }
+  data: { basicListItems: FACTORY.ACTORS }
 };
 
 const FRIENDS: IPageSection = {
   title: PAGE_SECTION_TITLES.FRIENDS,
   SvgIcon: SVG.PEOPLE,
-  data: { countedListItems: FACTORY.FRIENDS }
+  data: { basicListItems: FACTORY.FRIENDS }
 };
 
 const PLAYS: IPageSection = {
   title: PAGE_SECTION_TITLES.PLAYS,
   SvgIcon: SVG.BOOK,
-  data: { countedListItems: FACTORY.PLAYS },
+  data: { basicListItems: FACTORY.PLAYS },
   count: FACTORY.PLAYS.length
 };
 
 const THEATRES: IPageSection = {
   title: PAGE_SECTION_TITLES.THEATRES,
   SvgIcon: SVG.THEATRE,
-  data: { countedListItems: FACTORY.VENUES },
+  data: { basicListItems: FACTORY.VENUES },
   count: FACTORY.VENUES.length
 };
 

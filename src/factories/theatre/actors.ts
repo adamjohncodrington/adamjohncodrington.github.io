@@ -11,18 +11,18 @@ const getActorMatches = (actor: IActor): Array<ITheatreVisit> => {
   return actorMatches;
 };
 
-const getActorDetails = (actor: IActor): Array<ICountedListItemDetail> => {
+const getActorDetails = (actor: IActor): Array<IBasicListItemDetail> => {
   const actorMatches: Array<ITheatreVisit> = getActorMatches(actor);
   return actorMatches.map(
-    (theatreVisit: ITheatreVisit): ICountedListItemDetail => {
+    (theatreVisit: ITheatreVisit): IBasicListItemDetail => {
       const { date } = theatreVisit;
       return { mainText: [getTheatreVisitTitle(theatreVisit)], dates: [date] };
     }
   );
 };
 
-export const ACTORS: Array<ICountedListItem> = Object.values(actors).map(
-  (actor: IActor): ICountedListItem => {
+export const ACTORS: Array<IBasicListItem> = Object.values(actors).map(
+  (actor: IActor): IBasicListItem => {
     const { name, favourite } = actor;
     return {
       text: name,

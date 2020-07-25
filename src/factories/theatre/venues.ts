@@ -12,10 +12,10 @@ const getTheatreMatches = (theatre: ITheatre): Array<ITheatreVisit> => {
 
 const getTheatreVenueDetails = (
   play: ITheatre
-): Array<ICountedListItemDetail> => {
+): Array<IBasicListItemDetail> => {
   const theatreMatches: Array<ITheatreVisit> = getTheatreMatches(play);
   return theatreMatches.map(
-    (theatreVisit: ITheatreVisit, index: number): ICountedListItemDetail => {
+    (theatreVisit: ITheatreVisit, index: number): IBasicListItemDetail => {
       const { date } = theatreVisit;
       return {
         mainText: [moveTheSuffixToPrefix(theatreVisit.play.name)],
@@ -25,8 +25,8 @@ const getTheatreVenueDetails = (
   );
 };
 
-export const VENUES: Array<ICountedListItem> = Object.values(venues).map(
-  (theatre: ITheatre): ICountedListItem => ({
+export const VENUES: Array<IBasicListItem> = Object.values(venues).map(
+  (theatre: ITheatre): IBasicListItem => ({
     text: theatre.name,
     ...getItemCounts({ item: { theatre }, data: { theatreVisits: DATA } }),
     details: getTheatreVenueDetails(theatre)

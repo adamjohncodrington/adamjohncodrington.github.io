@@ -19,10 +19,10 @@ const getCountryMatches = (country: ICountryTemplate): Array<ITripLeg> => {
 
 const getCountryDetails = (
   country: ICountryTemplate
-): Array<ICountedListItemDetail> => {
+): Array<IBasicListItemDetail> => {
   const countryMatches: Array<ITripLeg> = getCountryMatches(country);
   return countryMatches.map(
-    (trip: ITripLeg, index: number): ICountedListItemDetail => {
+    (trip: ITripLeg, index: number): IBasicListItemDetail => {
       const { dates, favourite, video } = trip;
       const tripTitle: string = getTripTitle(trip);
       const tripSubtitle: string | undefined = getTripSubtitle(trip);
@@ -40,9 +40,9 @@ const getCountryDetails = (
   );
 };
 
-export const COUNTRIES: Array<ICountedListItem> = Object.values(countries).map(
-  (country: ICountryTemplate): ICountedListItem => {
-    const details: Array<ICountedListItemDetail> = getCountryDetails(country);
+export const COUNTRIES: Array<IBasicListItem> = Object.values(countries).map(
+  (country: ICountryTemplate): IBasicListItem => {
+    const details: Array<IBasicListItemDetail> = getCountryDetails(country);
     return {
       text: country.name,
       favourite: detailsContainsFavourite(details),

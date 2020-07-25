@@ -5,27 +5,27 @@ import { SVG } from "resources";
 const BUCKET_LIST: IPageSection = {
   title: PAGE_SECTION_TITLES.BUCKET_LIST,
   SvgIcon: SVG.STARS,
-  data: { countedListItems: FACTORY.BUCKET_LIST },
+  data: { basicListItems: FACTORY.BUCKET_LIST },
   count: FACTORY.BUCKET_LIST.length
 };
 
 const FESTIVALS: IPageSection = {
   SvgIcon: SVG.PEACE_SIGN,
   title: PAGE_SECTION_TITLES.FESTIVALS,
-  data: { countedListItems: FACTORY.FESTIVALS }
+  data: { basicListItems: FACTORY.FESTIVALS }
 };
 
 const MUSICIANS: IPageSection = {
   title: PAGE_SECTION_TITLES.MUSICIANS,
   SvgIcon: SVG.ARTIST,
-  data: { countedListItems: FACTORY.MUSICIANS },
+  data: { basicListItems: FACTORY.MUSICIANS },
   count: FACTORY.MUSICIANS.length
 };
 
 const FRIENDS: IPageSection = {
   SvgIcon: SVG.PEOPLE,
   title: PAGE_SECTION_TITLES.FRIENDS,
-  data: { countedListItems: FACTORY.FRIENDS }
+  data: { basicListItems: FACTORY.FRIENDS }
 };
 
 const SOLO: IPageSection = {
@@ -50,7 +50,7 @@ const UP_NEXT: IPageSection = {
 const VENUES: IPageSection = {
   SvgIcon: SVG.STADIUM,
   title: PAGE_SECTION_TITLES.VENUES,
-  data: { countedListItems: FACTORY.VENUES },
+  data: { basicListItems: FACTORY.VENUES },
   count: FACTORY.VENUES.length
 };
 

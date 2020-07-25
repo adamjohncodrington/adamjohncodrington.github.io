@@ -4,7 +4,7 @@ import { SVG } from "resources";
 
 const MUSICIANS: IPageSection = {
   title: PAGE_SECTION_TITLES.MUSICIANS,
-  data: { countedListItems: FACTORY.MUSICIANS },
+  data: { basicListItems: FACTORY.MUSICIANS },
   count: FACTORY.MUSICIANS.length,
   SvgIcon: SVG.ARTIST
 };

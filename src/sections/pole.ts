@@ -5,13 +5,13 @@ import { SVG } from "resources";
 const INSTRUCTORS: IPageSection = {
   SvgIcon: SVG.PEOPLE,
   title: PAGE_SECTION_TITLES.INSTRUCTORS,
-  data: { countedListItems: FACTORY.INSTRUCTORS }
+  data: { basicListItems: FACTORY.INSTRUCTORS }
 };
 
 const STUDIOS: IPageSection = {
   SvgIcon: SVG.MAP_PIN,
   title: PAGE_SECTION_TITLES.STUDIOS,
-  data: { countedListItems: FACTORY.STUDIOS }
+  data: { basicListItems: FACTORY.STUDIOS }
 };
 
 const CONTEMPORARY: IPageSection = {

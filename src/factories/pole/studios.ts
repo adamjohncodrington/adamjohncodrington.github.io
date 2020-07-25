@@ -1,7 +1,7 @@
 import { STUDIOS as studios } from "@constants";
 
-export const STUDIOS: Array<ICountedListItem> = Object.values(studios).map(
-  ({ name, location }: IPoleStudio): ICountedListItem => ({
+export const STUDIOS: Array<IBasicListItem> = Object.values(studios).map(
+  ({ name, location }: IPoleStudio): IBasicListItem => ({
     text: name,
     secondaryText: location,
     countInfoIrrelevant: true,

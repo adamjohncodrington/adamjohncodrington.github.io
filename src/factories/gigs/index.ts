@@ -1,4 +1,4 @@
-import { formatCountedListItems, formatVideoCards } from "utils";
+import { formatBasicListItems, formatVideoCards } from "utils";
 
 import { BUCKET_LIST } from "./bucket-list";
 import { FAVOURITES } from "./favourites";
@@ -13,14 +13,14 @@ import { VIDEOS } from "./videos";
 import { YEARS } from "./years";
 
 export const GIGS = {
-  BUCKET_LIST: formatCountedListItems(BUCKET_LIST),
+  BUCKET_LIST: formatBasicListItems(BUCKET_LIST),
   FAVOURITES,
-  FESTIVALS: formatCountedListItems(FESTIVALS),
-  FRIENDS: formatCountedListItems(FRIENDS, { isLeaderboard: true }),
-  MUSICIANS: formatCountedListItems(MUSICIANS),
+  FESTIVALS: formatBasicListItems(FESTIVALS),
+  FRIENDS: formatBasicListItems(FRIENDS, { isLeaderboard: true }),
+  MUSICIANS: formatBasicListItems(MUSICIANS),
   SOLO,
   UP_NEXT,
-  VENUES: formatCountedListItems(VENUES),
+  VENUES: formatBasicListItems(VENUES),
   VIDEOS: formatVideoCards(VIDEOS),
   YEARS,
 

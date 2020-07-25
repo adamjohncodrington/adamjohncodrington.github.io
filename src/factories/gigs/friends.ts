@@ -4,27 +4,34 @@ import { getItemCounts } from "utils";
 
 const getFriendMatches = (friend: IFriend): Array<IGigOrFestival> => {
   const friendMatches: Array<IGigOrFestival> = [];
+
   DATA.forEach((gigOrFestival: IGigOrFestival): void => {
     if (gigOrFestival.company.includes(friend))
       friendMatches.push(gigOrFestival);
   });
+
   return friendMatches;
 };
 
-const getFriendDetails = (friend: IFriend): Array<ICountedListItemDetail> => {
-  const friendMatches: Array<IGigOrFestival> = getFriendMatches(friend);
-  return friendMatches.map(
-    (gigOrFestival: IGigOrFestival, index: number): ICountedListItemDetail => {
-      const { title, dates, video, favourite } = gigOrFestival;
-      return { mainText: [title], dates, favourite, video };
-    }
+const getFriendDetails = (friend: IFriend): Array<IBasicListItemDetail> =>
+  getFriendMatches(friend).map(
+    ({
+      title,
+      dates,
+      video,
+      favourite
+    }: IGigOrFestival): IBasicListItemDetail => ({
+      mainText: [title],
+      dates,
+      favourite,
+      video
+    })
   );
-};
 
-export const FRIENDS: Array<ICountedListItem> = Object.values(friends)
+export const FRIENDS: Array<IBasicListItem> = Object.values(friends)
   .filter(({ gigs }: IFriend): boolean => !!gigs)
   .map(
-    (friend: IFriend): ICountedListItem => ({
+    (friend: IFriend): IBasicListItem => ({
       text: friend.name,
       ...getItemCounts({ item: { friend }, data: { gigsAndFestivals: DATA } }),
       details: getFriendDetails(friend)

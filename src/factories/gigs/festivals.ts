@@ -8,20 +8,19 @@ const getFestivalMatches = (
   festivalTitle: IFestivalTitle
 ): Array<IFestival> => {
   const festivalMatches: Array<IFestival> = [];
+
   DATA.forEach((festival: IFestival): void => {
     if (festivalTitle === festival.title) {
       festivalMatches.push(festival);
     }
   });
+
   return festivalMatches;
 };
 
-const getFestivalDetails = (
-  musician: IMusician
-): Array<ICountedListItemDetail> => {
-  const festivalMatches: Array<IFestival> = getFestivalMatches(musician);
-  return festivalMatches.map(
-    (festival: IFestival): ICountedListItemDetail => {
+const getFestivalDetails = (musician: IMusician): Array<IBasicListItemDetail> =>
+  getFestivalMatches(musician).map(
+    (festival: IFestival): IBasicListItemDetail => {
       const { dates, video } = festival;
       return {
         mainText: [getFestivalSubtitle(festival) || "TBC"],
@@ -30,12 +29,11 @@ const getFestivalDetails = (
       };
     }
   );
-};
 
-export const FESTIVALS: Array<ICountedListItem> = Object.values(festivals)
+export const FESTIVALS: Array<IBasicListItem> = Object.values(festivals)
   .filter(({ insignificant }: IFestivalTitle): boolean => !insignificant)
   .map(
-    (festival: IFestivalTitle): ICountedListItem => ({
+    (festival: IFestivalTitle): IBasicListItem => ({
       text: festival.name,
       ...getItemCounts({ item: { festival }, data: { festivals: DATA } }),
       details: getFestivalDetails(festival)

@@ -1,5 +1,6 @@
 # TO DO LIST
 
+- review all instances of `.forEach`, potentially replace with `.reduce`, `.some` and/or `.every`
 
 - merge `VideoCard` into `Card`!!!!
 

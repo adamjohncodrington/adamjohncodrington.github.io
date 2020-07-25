@@ -15,20 +15,17 @@ const getMusicVenueMatches = (
 
 const getMusicVenueDetails = (
   musicVenue: IMusicVenue
-): Array<ICountedListItemDetail> => {
-  const musicVenueMatches: Array<IGigOrFestival> = getMusicVenueMatches(
-    musicVenue
+): Array<IBasicListItemDetail> =>
+  getMusicVenueMatches(musicVenue).map(
+    ({ title, dates, video }: IGigOrFestival): IBasicListItemDetail => ({
+      mainText: [title],
+      dates,
+      video
+    })
   );
-  return musicVenueMatches.map(
-    (gigOrFestival: IGigOrFestival, index: number): ICountedListItemDetail => {
-      const { title, dates, video } = gigOrFestival;
-      return { mainText: [title], dates, video };
-    }
-  );
-};
 
-export const VENUES: Array<ICountedListItem> = Object.values(venues).map(
-  (musicVenue: IMusicVenue): ICountedListItem => {
+export const VENUES: Array<IBasicListItem> = Object.values(venues).map(
+  (musicVenue: IMusicVenue): IBasicListItem => {
     const { name, favourite } = musicVenue;
     return {
       text: name,

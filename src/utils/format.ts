@@ -4,33 +4,33 @@ interface IFormatCLIOptions {
   isLeaderboard: boolean;
 }
 
-export const formatCountedListItems = (
-  countedListItems: Array<ICountedListItem>,
+export const formatBasicListItems = (
+  basicListItems: Array<IBasicListItem>,
   options?: IFormatCLIOptions
-): Array<ICountedListItem> => {
+): Array<IBasicListItem> => {
   const isLeaderboard: boolean = !!(options && options.isLeaderboard);
 
-  const reduced = countedListItems.reduce(
-    (newArray: Array<ICountedListItem>, current: ICountedListItem) => {
+  const reduced = basicListItems.reduce(
+    (newArray: Array<IBasicListItem>, current: IBasicListItem) => {
       const duplicate = newArray.find(
-        (item: ICountedListItem): boolean => item.text === current.text
+        (item: IBasicListItem): boolean => item.text === current.text
       );
       return duplicate ? newArray : [...newArray, current];
     },
     []
   );
 
-  const filtered: Array<ICountedListItem> = reduced.filter(
+  const filtered: Array<IBasicListItem> = reduced.filter(
     ({
       futureCount,
       pastCount,
       countInfoIrrelevant
-    }: ICountedListItem): boolean =>
+    }: IBasicListItem): boolean =>
       countInfoIrrelevant || futureCount !== 0 || pastCount !== 0
   );
 
-  const sorted: Array<ICountedListItem> = filtered.sort(
-    (a: ICountedListItem, b: ICountedListItem): number =>
+  const sorted: Array<IBasicListItem> = filtered.sort(
+    (a: IBasicListItem, b: IBasicListItem): number =>
       isLeaderboard
         ? a.pastCount > b.pastCount
           ? -1
@@ -48,26 +48,26 @@ export const formatCountedListItems = (
         : -1
   );
 
-  const translated: Array<ICountedListItem> = sorted.map(
-    (countedListItem: ICountedListItem): ICountedListItem => ({
-      ...countedListItem,
-      text: moveTheSuffixToPrefix(countedListItem.text)
+  const translated: Array<IBasicListItem> = sorted.map(
+    (basicListItem: IBasicListItem): IBasicListItem => ({
+      ...basicListItem,
+      text: moveTheSuffixToPrefix(basicListItem.text)
     })
   );
 
-  const mapped: Array<ICountedListItem> = translated.map(
-    (countedListItem: ICountedListItem): ICountedListItem =>
+  const mapped: Array<IBasicListItem> = translated.map(
+    (basicListItem: IBasicListItem): IBasicListItem =>
       isLeaderboard
-        ? { ...countedListItem, isLeaderboardItem: true }
-        : countedListItem
+        ? { ...basicListItem, isLeaderboardItem: true }
+        : basicListItem
   );
 
-  const detailSorted: Array<ICountedListItem> = mapped.map(
-    ({ details, ...rest }: ICountedListItem): ICountedListItem => ({
+  const detailSorted: Array<IBasicListItem> = mapped.map(
+    ({ details, ...rest }: IBasicListItem): IBasicListItem => ({
       ...rest,
       details: details
         ? details.sort(
-            (a: ICountedListItemDetail, b: ICountedListItemDetail): number =>
+            (a: IBasicListItemDetail, b: IBasicListItemDetail): number =>
               a.dates[0].valueOf() > b.dates[0].valueOf() ? 1 : -1
           )
         : undefined

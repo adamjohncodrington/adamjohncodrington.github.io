@@ -36,7 +36,7 @@ const PHOTOS: IPageSection = {
 const COMING_SOON: IPageSection = {
   title: PAGE_SECTION_TITLES.COMING_SOON,
   SvgIcon: SVG.NOTEPAD,
-  data: { countedListItems: FACTORY.COMING_SOON }
+  data: { basicListItems: FACTORY.COMING_SOON }
 };
 
 export const RECIPES: Array<IPageSection> = [

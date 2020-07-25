@@ -2,20 +2,20 @@ import React, { FC, ReactElement } from "react";
 
 import { FlexLiGrow, DynamicFontWeightFlexRow } from "primitives";
 
-import { CountedListItemDetails } from "../CountedListItemDetails";
+import { BasicListItemDetails } from "../BasicListItemDetails";
 import { Disclosure } from "../Disclosure";
 
 import {
   StyledMainText,
   StyledSecondaryText,
   StyledTextContainer,
-  CountedListItemPastCount,
-  CountedListItemFutureCount
+  BasicListItemPastCount,
+  BasicListItemFutureCount
 } from "./styles";
 
 interface IDisclosureHeader extends I_ClassName, I_PanelIsVisible {}
 
-export const CountedListItem: FC<ICountedListItem> = ({
+export const BasicListItem: FC<IBasicListItem> = ({
   text,
   secondaryText,
   favourite,
@@ -45,13 +45,13 @@ export const CountedListItem: FC<ICountedListItem> = ({
       </StyledTextContainer>
 
       {!countInfoIrrelevant && showFutureCount && (
-        <CountedListItemFutureCount>{futureCount}</CountedListItemFutureCount>
+        <BasicListItemFutureCount>{futureCount}</BasicListItemFutureCount>
       )}
 
       {!countInfoIrrelevant && showPastCount && (
-        <CountedListItemPastCount isLeaderboardItem={isLeaderboardItem}>
+        <BasicListItemPastCount isLeaderboardItem={isLeaderboardItem}>
           {pastCount}
-        </CountedListItemPastCount>
+        </BasicListItemPastCount>
       )}
     </>
   );
@@ -65,7 +65,7 @@ export const CountedListItem: FC<ICountedListItem> = ({
               {TextAndCounts}
             </DynamicFontWeightFlexRow>
           )}
-          Panel={<CountedListItemDetails details={details} />}
+          Panel={<BasicListItemDetails details={details} />}
         />
       </li>
     );

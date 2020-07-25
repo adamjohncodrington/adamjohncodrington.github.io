@@ -1,4 +1,4 @@
-import { formatCountedListItems } from "utils";
+import { formatBasicListItems } from "utils";
 
 import { ACTORS } from "./actors";
 import { FRIENDS } from "./friends";
@@ -8,10 +8,10 @@ import { UP_NEXT } from "./up-next";
 import { YEARS } from "./years";
 
 export const THEATRE = {
-  ACTORS: formatCountedListItems(ACTORS),
-  FRIENDS: formatCountedListItems(FRIENDS, { isLeaderboard: true }),
-  PLAYS: formatCountedListItems(PLAYS),
-  VENUES: formatCountedListItems(VENUES),
+  ACTORS: formatBasicListItems(ACTORS),
+  FRIENDS: formatBasicListItems(FRIENDS, { isLeaderboard: true }),
+  PLAYS: formatBasicListItems(PLAYS),
+  VENUES: formatBasicListItems(VENUES),
   UP_NEXT,
   YEARS
 };

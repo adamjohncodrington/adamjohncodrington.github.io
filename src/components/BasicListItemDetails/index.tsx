@@ -15,11 +15,11 @@ import {
 } from "./styles";
 import { YouTubeVideo } from "components/YouTubeVideo";
 
-interface ICountedListItemDetailIndexed extends ICountedListItemDetail {
+interface IBasicListItemDetailIndexed extends IBasicListItemDetail {
   index?: number;
 }
 
-export const CountedListItemDetail: React.FC<ICountedListItemDetailIndexed> = ({
+export const BasicListItemDetail: React.FC<IBasicListItemDetailIndexed> = ({
   index,
   mainText,
   dates,
@@ -51,16 +51,16 @@ export const CountedListItemDetail: React.FC<ICountedListItemDetailIndexed> = ({
   );
 };
 
-interface ICountedListItemDetails {
-  details: Array<ICountedListItemDetail>;
+interface IBasicListItemDetails {
+  details: Array<IBasicListItemDetail>;
 }
 
-export const CountedListItemDetails: React.FC<ICountedListItemDetails> = ({
+export const BasicListItemDetails: React.FC<IBasicListItemDetails> = ({
   details
 }) => (
   <StyledOl>
-    {details.map((detail: ICountedListItemDetail, index: number) => (
-      <CountedListItemDetail
+    {details.map((detail: IBasicListItemDetail, index: number) => (
+      <BasicListItemDetail
         key={index}
         index={details.length > 1 ? index + 1 : undefined}
         {...detail}

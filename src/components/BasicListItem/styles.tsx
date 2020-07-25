@@ -35,26 +35,26 @@ export const StyledMainText = styled.span(
   `
 );
 
-interface ICountedListItemPastCount extends I_Theme {
+interface IBasicListItemPastCount extends I_Theme {
   isLeaderboardItem?: boolean;
 }
 
-export const CountedListItemPastCount = styled.span(
+export const BasicListItemPastCount = styled.span(
   ({
     isLeaderboardItem,
-    theme: { countedListItem }
-  }: ICountedListItemPastCount) => css`
+    theme: { basicListItem }
+  }: IBasicListItemPastCount) => css`
     text-align: right;
-    width: ${countedListItem.count.width};
+    width: ${basicListItem.count.width};
     margin-left: ${isLeaderboardItem
       ? css`
-          calc(3 * ${countedListItem.count.margin.left})
+          calc(3 * ${basicListItem.count.margin.left})
         `
-      : countedListItem.count.margin.left};
+      : basicListItem.count.margin.left};
   `
 );
 
-export const CountedListItemFutureCount = styled(CountedListItemPastCount)(
+export const BasicListItemFutureCount = styled(BasicListItemPastCount)(
   ({ theme: { fadedOpacity } }: I_Theme) => css`
     opacity: ${fadedOpacity};
   `

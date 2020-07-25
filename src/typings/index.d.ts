@@ -111,7 +111,7 @@ interface IVideoCards {
   videoCards: Array<IVideoCard>;
 }
 
-interface ICountedListItemDetail extends I__Favourite {
+interface IBasicListItemDetail extends I__Favourite {
   video?: IVideo;
   mainText?: Array<string>;
   dates: Array<Date>;
@@ -129,7 +129,7 @@ interface I__ColumnCount {
   columnCount?: number;
 }
 
-interface ICountedListItem
+interface IBasicListItem
   extends I__SecondaryText,
     I_PastFutureCounts,
     I__Favourite,
@@ -139,7 +139,7 @@ interface ICountedListItem
   countInfoIrrelevant?: boolean;
   noLongerExists?: boolean;
   isLeaderboardItem?: boolean;
-  details?: Array<ICountedListItemDetail>;
+  details?: Array<IBasicListItemDetail>;
 }
 
 interface IStartEndDate {
@@ -156,7 +156,7 @@ interface IPageSectionDisclosure extends IOnlyHeaderClicable {
 
 interface IPageSectionDataTypes {
   comingSoon?: boolean;
-  countedListItems?: Array<ICountedListItem>;
+  basicListItems?: Array<IBasicListItem>;
   photoGrid?: { photos: Array<IPhoto>; columnCount: number };
   gigsAndFestivals?: Array<IGigOrFestival>;
   recipes?: Array<IRecipe>;
