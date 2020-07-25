@@ -3,16 +3,10 @@ import React, { FC } from "react";
 import { PAGE_SECTION_PANEL_TYPES } from "@constants";
 import { Li } from "primitives";
 import {
-  // getTheatreVisitSubtitle,
-  getTheatreVisitTitle,
-  // getTripSubtitle,
-  getTripTitle,
-  moveTheSuffixToPrefix,
-  getCountdownText,
-  getDatesText,
-  getDateText,
-  getTripBody,
-  getMusicianStageNameAtTime
+  mapGigOrFestivalToCard,
+  mapTheatreVisitToCard,
+  mapTripLegToCard,
+  mapVinylCardToCard
 } from "utils";
 
 import { BasicListItem } from "../BasicListItem";
@@ -59,86 +53,42 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
             )
         )}
 
-      {gigsAndFestivals &&
-        gigsAndFestivals.map((gigOrFestival: IGigOrFestival, index: number) => {
-          const { venue, dates, ticketType } = gigOrFestival;
-          return (
-            <Li key={index}>
-              <Card
-                {...gigOrFestival}
-                body={moveTheSuffixToPrefix(venue.name)}
-                secondaryBody={getDatesText(dates)}
-                countdownText={getCountdownText(dates[0])}
-                note={ticketType}
-              />
-            </Li>
-          );
-        })}
-
-      {theatreVisits &&
-        theatreVisits.map((theatreVisit: ITheatreVisit, index: number) => (
-          <Li key={index}>
-            <Card
-              {...theatreVisit}
-              title={getTheatreVisitTitle(theatreVisit)}
-              // subtitle={getTheatreVisitSubtitle(theatreVisit)}
-              body={moveTheSuffixToPrefix(theatreVisit.theatre.name)}
-              secondaryBody={getDateText(theatreVisit.date)}
-            />
-          </Li>
-        ))}
-
-      {trips &&
-        trips.map((trip: ITripLeg, index: number) => (
-          <Li key={index}>
-            <Card
-              {...trip}
-              title={getTripTitle(trip)}
-              // subtitle={getTripSubtitle(trip)}
-              secondaryBody={getTripBody(trip)}
-              body={getDatesText(trip.dates)}
-            />
-          </Li>
-        ))}
-
-      {vinylCards &&
-        vinylCards.vinyls.map(
-          (
-            {
-              title,
-              musician,
-              year,
-              artwork,
-              hideYear,
-              appleMusicId
-            }: IVinylCard,
-            index: number
-          ) => (
-            <Li key={index}>
-              <Card
-                title={title}
-                subtitle={moveTheSuffixToPrefix(
-                  getMusicianStageNameAtTime({ musician, year })
-                )}
-                body={hideYear ? undefined : year.toString()}
-                company={[]}
-                headerPhoto={{
-                  ...artwork,
-                  href: "https://music.apple.com/gb/album/" + appleMusicId
-                }}
-              />
-            </Li>
-          )
-        )}
-
-      {photoGrid && <PhotoGrid {...photoGrid} />}
-
-      {videoCards && <VideoCards videoCards={videoCards} />}
-
       {basicListItems &&
         basicListItems.map((basicListItem: IBasicListItem, index: number) => (
           <BasicListItem key={index} {...basicListItem} />
         ))}
+
+      {gigsAndFestivals &&
+        gigsAndFestivals.map((gigOrFestival: IGigOrFestival, index: number) => (
+          <Li key={index}>
+            <Card {...mapGigOrFestivalToCard(gigOrFestival)} />
+          </Li>
+        ))}
+
+      {theatreVisits &&
+        theatreVisits.map((theatreVisit: ITheatreVisit, index: number) => (
+          <Li key={index}>
+            <Card {...mapTheatreVisitToCard(theatreVisit)} />
+          </Li>
+        ))}
+
+      {trips &&
+        trips.map((tripLeg: ITripLeg, index: number) => (
+          <Li key={index}>
+            <Card {...mapTripLegToCard(tripLeg)} />
+          </Li>
+        ))}
+
+      {vinylCards &&
+        vinylCards.vinyls.map((vinylCard: IVinylCard, index: number) => (
+          <Li key={index}>
+            <Card {...mapVinylCardToCard(vinylCard)} />
+          </Li>
+        ))}
+
+      {photoGrid && <PhotoGrid {...photoGrid} />}
+
+      {videoCards && <VideoCards videoCards={videoCards} />}
     </PageSectionPanelList>
   );
 };
