@@ -1,5 +1,5 @@
 import { COUNTRIES as countries } from "@constants";
-import { TRAVEL as DATA } from "data";
+import { TRIP_LEGS as DATA } from "data";
 import { getItemCounts } from "utils";
 
 import { cities } from "./cities";
@@ -8,10 +8,7 @@ const bucketListCountries: Array<ICountryCounted> = Object.values(countries)
   .map(
     (country: ICountryTemplate): ICountryCounted => ({
       ...country,
-      ...getItemCounts({
-        item: { country },
-        data: { tripLegs: DATA.TRIP_LEGS }
-      })
+      ...getItemCounts({ item: { country }, data: { tripLegs: DATA } })
     })
   )
   .filter(
@@ -36,7 +33,7 @@ const bucketListCities: Array<ICityCounted> = Object.values(cities)
   .map(
     (city: ICity): ICityCounted => ({
       ...city,
-      ...getItemCounts({ item: { city }, data: { tripLegs: DATA.TRIP_LEGS } })
+      ...getItemCounts({ item: { city }, data: { tripLegs: DATA } })
     })
   )
   .filter(

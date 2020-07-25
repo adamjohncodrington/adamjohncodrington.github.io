@@ -1,10 +1,10 @@
 import { FRIENDS as friends } from "@constants";
-import { TRAVEL as DATA } from "data";
+import { TRIP_LEGS as DATA } from "data";
 import { getItemCounts, getTripTitle } from "utils";
 
 const getTripsMatchingFriend = (friend: IFriend): Array<ITripLeg> => {
   const tripsMatchingFriend: Array<ITripLeg> = [];
-  const tripLegs: Array<ITripLeg> = DATA.TRIP_LEGS;
+  const tripLegs: Array<ITripLeg> = DATA;
   tripLegs.forEach((trip: ITripLeg): void => {
     if (trip.company.includes(friend)) tripsMatchingFriend.push(trip);
   });
@@ -32,7 +32,7 @@ export const FRIENDS: Array<IBasicListItem> = Object.values(friends)
       text: friend.name,
       ...getItemCounts({
         item: { friend },
-        data: { tripLegs: DATA.TRIP_LEGS }
+        data: { tripLegs: DATA }
       }),
       details: getFriendDetails(friend)
     })

@@ -9,6 +9,7 @@ import { ISLANDS } from "./islands";
 import { PHOTOS } from "./photos";
 import { UP_NEXT } from "./up-next";
 import { VIDEOS } from "./videos";
+import { YEARS } from "./years";
 
 export const TRAVEL = {
   BUCKET_LIST: formatBasicListItems(BUCKET_LIST),
@@ -20,5 +21,6 @@ export const TRAVEL = {
   PHOTOS,
   THEME_PARKS: formatBasicListItems(THEME_PARKS),
   UP_NEXT,
-  VIDEOS: formatVideoCards(VIDEOS)
+  VIDEOS: formatVideoCards(VIDEOS),
+  YEARS
 };

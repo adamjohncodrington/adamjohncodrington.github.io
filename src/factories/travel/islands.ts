@@ -1,5 +1,5 @@
 import { COUNTRIES as countries } from "@constants";
-import { TRAVEL as DATA } from "data";
+import { TRIP_LEGS as DATA } from "data";
 import { getItemCounts } from "utils";
 
 const generateIslands = (): { [island: string]: IIsland } => {
@@ -29,7 +29,7 @@ export const ISLANDS: Array<IBasicListItem> = islandsAll.map(
     return {
       text: name,
       countInfoIrrelevant: insignificant,
-      ...getItemCounts({ item: { island }, data: { tripLegs: DATA.TRIP_LEGS } })
+      ...getItemCounts({ item: { island }, data: { tripLegs: DATA } })
     };
   }
 );

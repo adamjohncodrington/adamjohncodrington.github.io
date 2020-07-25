@@ -1,5 +1,5 @@
 import { COUNTRIES } from "@constants";
-import { TRAVEL as DATA } from "data";
+import { TRIP_LEGS as DATA } from "data";
 import { getItemCounts } from "utils";
 
 const generateAttractions = (): { [attraction: string]: IAttraction } => {
@@ -26,7 +26,7 @@ export const HIGHLIGHTS: Array<IBasicListItem> = highlights.map(
     text: highlight.name,
     ...getItemCounts({
       item: { attraction: highlight },
-      data: { tripLegs: DATA.TRIP_LEGS }
+      data: { tripLegs: DATA }
     })
   })
 );
@@ -36,7 +36,7 @@ export const THEME_PARKS: Array<IBasicListItem> = themeParks.map(
     text: themePark.name,
     ...getItemCounts({
       item: { attraction: themePark },
-      data: { tripLegs: DATA.TRIP_LEGS }
+      data: { tripLegs: DATA }
     })
   })
 );

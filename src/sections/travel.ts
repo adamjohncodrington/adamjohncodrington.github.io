@@ -1,5 +1,4 @@
 import { PAGE_SECTION_TITLES } from "@constants";
-import { TRAVEL as DATA } from "data";
 import { TRAVEL as FACTORY } from "factories";
 import { SVG } from "resources";
 import { isInFuture } from "utils";
@@ -68,12 +67,10 @@ const VIDEOS: IPageSection = {
 const PHOTOS: IPageSection = {
   SvgIcon: SVG.CAMERA,
   title: PAGE_SECTION_TITLES.PHOTOS,
-  data: {
-    photoGrid: { photos: FACTORY.PHOTOS, columnCount: 4 }
-  }
+  data: { photoGrid: { photos: FACTORY.PHOTOS, columnCount: 4 } }
 };
 
-const YEARS: Array<IPageSection> = DATA.YEARS.map(
+const YEARS: Array<IPageSection> = FACTORY.YEARS.map(
   (year: Array<ITrip>): IPageSection => ({
     title: year[0][0].dates[0].getFullYear().toString(),
     count: year.length,

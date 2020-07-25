@@ -1,5 +1,5 @@
 import { COUNTRIES as countries } from "@constants";
-import { TRAVEL as DATA } from "data";
+import { TRIP_LEGS as DATA } from "data";
 import {
   getItemCounts,
   countryMatchExists,
@@ -10,8 +10,7 @@ import {
 
 const getCountryMatches = (country: ICountryTemplate): Array<ITripLeg> => {
   const countryMatches: Array<ITripLeg> = [];
-  const tripLegs: Array<ITripLeg> = DATA.TRIP_LEGS;
-  tripLegs.forEach((trip: ITripLeg): void => {
+  DATA.forEach((trip: ITripLeg): void => {
     if (countryMatchExists(country, trip)) countryMatches.push(trip);
   });
   return countryMatches;
@@ -46,10 +45,7 @@ export const COUNTRIES: Array<IBasicListItem> = Object.values(countries).map(
     return {
       text: country.name,
       favourite: detailsContainsFavourite(details),
-      ...getItemCounts({
-        item: { country },
-        data: { tripLegs: DATA.TRIP_LEGS }
-      }),
+      ...getItemCounts({ item: { country }, data: { tripLegs: DATA } }),
       details
     };
   }
