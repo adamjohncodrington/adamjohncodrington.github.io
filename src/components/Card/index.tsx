@@ -139,7 +139,13 @@ export const Card: React.FC<ICard> = ({
 
   return (
     <>
-      <Disclosure isStatic={isStatic} Header={CardHeader} Panel={CardPanel} />
+      <Disclosure
+        isStatic={isStatic}
+        Header={({ panelIsVisible }) => (
+          <CardHeader panelIsVisible={panelIsVisible} />
+        )}
+        Panel={() => <CardPanel />}
+      />
     </>
   );
 };

@@ -50,7 +50,9 @@ export const Recipe: FC<IRecipe> = ({
   return (
     <Disclosure
       autoExpand={newRecipe}
-      Header={RecipeHeader}
+      Header={({ panelIsVisible }) => (
+        <RecipeHeader panelIsVisible={panelIsVisible} />
+      )}
       Panel={() => (
         <RecipePanel>
           <List
