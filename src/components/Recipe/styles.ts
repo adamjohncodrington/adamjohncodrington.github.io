@@ -8,7 +8,7 @@ export const RecipeTitle = styled(H3)`
   flex: 1;
 `;
 
-export const RecipePanel = styled.div(
+export const RecipePanelContainer = styled.div(
   ({ theme: { recipe } }: I_Theme) => css`
     padding-top: ${recipe.panel.padding.top};
 

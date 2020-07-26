@@ -12,6 +12,7 @@ import {
 import { moveTheSuffixToPrefix, getDatesText, getDateText } from "./basic";
 import { getCountdownText } from "./getCountdownText";
 import { getMusicianStageNameAtTime } from "./musician";
+import { generateIngredientListItem } from "./generateIngredientListItem";
 
 export const mapPoleVideoToVideoCard = ({
   date,
@@ -113,4 +114,64 @@ export const mapVinylCardToCard = ({
       href: "https://music.apple.com/gb/album/" + appleMusicId
     }
   };
+};
+
+export const mapMethodToListItems = (
+  method: Array<string>
+): Array<IListItemWithPaddingTopFlag> =>
+  method.map(
+    (item: string): IListItemWithPaddingTopFlag => ({
+      text: item,
+      addPaddingTop: false
+    })
+  );
+
+export const mapServeWithToListItems = (
+  serveWith: Array<Array<IRecipeIngredient>>
+): Array<IListItemWithPaddingTopFlag> => {
+  const getServeWithListItem = (
+    lineOptions: Array<IRecipeIngredient>
+  ): string => {
+    let output: string = "";
+
+    lineOptions.forEach(
+      ({ ingredient: { displayText } }: IRecipeIngredient, index: number) =>
+        (output +=
+          index === 0
+            ? displayText
+            : index === lineOptions.length - 1
+            ? ` or ${displayText}`
+            : `, ${displayText}`)
+    );
+
+    return output;
+  };
+
+  return serveWith.map(
+    (lineOptions: Array<IRecipeIngredient>): IListItemWithPaddingTopFlag => ({
+      text: getServeWithListItem(lineOptions),
+      addPaddingTop: false
+    })
+  );
+};
+
+export const mapIngredientsToListItems = (
+  ingredientsGroups: Array<Array<IRecipeIngredient>>
+): Array<IListItemWithPaddingTopFlag> => {
+  let ingredientsWithPaddingFlags: Array<IListItemWithPaddingTopFlag> = [];
+
+  ingredientsGroups.forEach(
+    (ingredientsGroup: Array<IRecipeIngredient>, INDEX_HIGH: number) => {
+      ingredientsGroup.forEach(
+        (ingredient: IRecipeIngredient, INDEX_LOW: number) => {
+          ingredientsWithPaddingFlags.push({
+            text: generateIngredientListItem(ingredient),
+            addPaddingTop: INDEX_HIGH !== 0 && INDEX_LOW === 0
+          });
+        }
+      );
+    }
+  );
+
+  return ingredientsWithPaddingFlags;
 };

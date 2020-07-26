@@ -13,16 +13,14 @@ const CardHeaderPhotoLink = styled(Link)(
 
 export const CardHeaderPhoto: React.FC<ICard> = ({ headerPhoto }) => {
   const {
-    vinyl: {
-      artwork: { size }
-    }
+    vinyl: { artwork }
   }: ITheme = useThemeContext();
 
   if (!headerPhoto) return null;
 
   return (
     <CardHeaderPhotoLink href={headerPhoto.href}>
-      <SquareImage size={size} photo={headerPhoto} />
+      <SquareImage size={artwork.size} photo={headerPhoto} />
     </CardHeaderPhotoLink>
   );
 };

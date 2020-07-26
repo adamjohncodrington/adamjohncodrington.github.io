@@ -58,8 +58,8 @@ export const BasicListItem: FC<IBasicListItem> = ({
     return (
       <li>
         <Disclosure
-          Header={({ panelIsVisible }) => (
-            <DynamicFontWeightFlexRow panelIsVisible={panelIsVisible}>
+          Header={headerProps => (
+            <DynamicFontWeightFlexRow {...headerProps}>
               {TextAndCounts}
             </DynamicFontWeightFlexRow>
           )}

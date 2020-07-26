@@ -8,13 +8,13 @@ import {
   StyledCardHeaderTextSymbolsContainer
 } from "./styles";
 
-export const CardHeader: React.FC<ICardHeader> = props => (
+export const CardHeader: React.FC<ICardHeader> = cardHeaderProps => (
   <StyledCardHeaderContainer>
-    <CardHeaderPhoto {...props} />
+    <CardHeaderPhoto {...cardHeaderProps} />
 
     <StyledCardHeaderTextSymbolsContainer equalWidthColumns={false}>
-      <CardHeaderText {...props} />
-      <CardHeaderSymbols {...props} />
+      <CardHeaderText {...cardHeaderProps} />
+      <CardHeaderSymbols {...cardHeaderProps} />
     </StyledCardHeaderTextSymbolsContainer>
   </StyledCardHeaderContainer>
 );

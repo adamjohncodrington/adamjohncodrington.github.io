@@ -229,6 +229,8 @@ interface I_Bold {
 
 interface ICardHeader extends ICard, IDisclosureHeader {}
 
+interface IRecipeHeader extends IRecipe, IDisclosureHeader {}
+
 type IPoleCategory =
   | "contemporary"
   | "exotic"
