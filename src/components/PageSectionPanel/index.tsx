@@ -13,7 +13,7 @@ import { BasicListItem } from "../BasicListItem";
 import { PhotoGrid } from "../PhotoGrid";
 import { Card } from "../Card";
 import { Recipe } from "../Recipe";
-import { VideoCards } from "../VideoCards";
+import { VideoCard } from "../VideoCard";
 
 import { PageSectionPanelList, StyledComingSoonPlaceholder } from "./styles";
 
@@ -67,7 +67,13 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
             <Card {...card} />
           </Li>
         ))}
-      {videoCards && <VideoCards videoCards={videoCards} />}
+
+      {videoCards &&
+        videoCards.map((videoCard: IVideoCard, index: number) => (
+          <Li key={index}>
+            <VideoCard {...videoCard} />
+          </Li>
+        ))}
 
       {recipes &&
         recipes.map(

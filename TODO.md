@@ -1,5 +1,7 @@
 # TO DO LIST
 
+- rationalise all instances of `<Disclosure Header={} />`
+
 - convert `DAYS TO GO` into a dark number symbol
 
 - merge `VideoCard` into `Card`!!!!

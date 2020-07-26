@@ -1,11 +1,10 @@
 import styled, { css } from "styled-components";
 
-import { H3, FlexColumn } from "primitives";
+import { H3, FlexColumn, FlexRow } from "primitives";
 import { CSS } from "styles";
 
 export const RecipeTitle = styled(H3)`
   text-transform: lowercase;
-  flex: 1;
 `;
 
 export const RecipePanelContainer = styled.div(
@@ -28,3 +27,9 @@ export const RecipePortionCost = styled.span(
     ${CSS.FONT_SIZE_75_PERCENT}
   `
 );
+
+export const RecipeHeaderContainer = styled(FlexRow)`
+  > *:first-child {
+    flex: 1;
+  }
+`;

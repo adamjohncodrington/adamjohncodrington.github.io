@@ -1,10 +1,8 @@
 import React, { FC } from "react";
 
-import { FlexRow } from "primitives";
-
 import { RoundedSymbol } from "../RoundedSymbol";
 
-import { RecipeTitle } from "./styles";
+import { RecipeHeaderContainer, RecipeTitle } from "./styles";
 
 export const RecipeHeader: FC<IRecipeHeader> = ({
   panelIsVisible,
@@ -12,10 +10,10 @@ export const RecipeHeader: FC<IRecipeHeader> = ({
   title,
   diet
 }) => (
-  <FlexRow className={className}>
+  <RecipeHeaderContainer className={className}>
     <RecipeTitle bold={panelIsVisible}>{title}</RecipeTitle>
     <RoundedSymbol opacity="50%" type="diet">
       {diet.abbreviation}
     </RoundedSymbol>
-  </FlexRow>
+  </RecipeHeaderContainer>
 );
