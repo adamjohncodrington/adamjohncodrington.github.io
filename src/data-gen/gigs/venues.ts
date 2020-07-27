@@ -1,5 +1,5 @@
 import { MUSIC_VENUES as venues } from "@constants";
-import { MUSIC_EVENTS as DATA } from "data";
+import { MUSIC_EVENTS as DATA } from "data-raw";
 import { getItemCounts } from "utils";
 
 const getMusicVenueMatches = (musicVenue: IMusicVenue): Array<IMusicEvent> => {

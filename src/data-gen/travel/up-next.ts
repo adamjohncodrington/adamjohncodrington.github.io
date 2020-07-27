@@ -1,4 +1,4 @@
-import { TRIP_LEGS as DATA } from "data";
+import { TRIP_LEGS as DATA } from "data-raw";
 import { isInFuture } from "utils";
 
 export const UP_NEXT: Array<ITripLeg> = DATA.filter(

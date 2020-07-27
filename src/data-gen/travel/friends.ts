@@ -1,5 +1,5 @@
 import { FRIENDS as friends } from "@constants";
-import { TRIP_LEGS as DATA } from "data";
+import { TRIP_LEGS as DATA } from "data-raw";
 import { getItemCounts, getTripTitle } from "utils";
 
 const getTripsMatchingFriend = (friend: IFriend): Array<ITripLeg> => {

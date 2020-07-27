@@ -1,5 +1,5 @@
 import { FRIENDS as friends } from "@constants";
-import { THEATRE as DATA } from "data";
+import { THEATRE as DATA } from "data-raw";
 import { getItemCounts, getTheatreVisitTitle } from "utils";
 
 const getFriendMatches = (friend: IFriend): Array<ITheatreVisit> => {

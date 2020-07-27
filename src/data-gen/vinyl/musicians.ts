@@ -1,4 +1,4 @@
-import { VINYL as DATA } from "data";
+import { VINYL as DATA } from "data-raw";
 
 export const MUSICIANS: Array<IMiniCard> = DATA.COLLECTION.map(
   ({ musician: { name } }: IVinyl): IMiniCard => ({

@@ -1,5 +1,5 @@
 import { PAGE_SECTION_TITLES } from "@constants";
-import { RECIPES as DATA } from "data";
+import { RECIPES as DATA } from "data-raw";
 import { RECIPES as DATA_GEN } from "data-gen";
 import { SVG } from "resources";
 

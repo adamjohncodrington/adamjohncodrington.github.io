@@ -1,5 +1,5 @@
 import { COUNTRIES } from "@constants";
-import { TRIP_LEGS as DATA } from "data";
+import { TRIP_LEGS as DATA } from "data-raw";
 import { getItemCounts } from "utils";
 
 const generateAttractions = (): { [attraction: string]: IAttraction } => {

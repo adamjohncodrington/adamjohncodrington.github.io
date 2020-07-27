@@ -1,5 +1,5 @@
 import { PLAYS as plays } from "@constants";
-import { THEATRE as DATA } from "data";
+import { THEATRE as DATA } from "data-raw";
 import { getItemCounts, moveTheSuffixToPrefix } from "utils";
 
 import { FAVOURITES } from "./favourites";

@@ -1,4 +1,4 @@
-import { MUSIC_EVENTS as DATA } from "data";
+import { MUSIC_EVENTS as DATA } from "data-raw";
 
 import { UP_NEXT } from "./up-next";
 

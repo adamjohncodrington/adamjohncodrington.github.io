@@ -1,5 +1,5 @@
 import { MUSICIANS } from "@constants";
-import { MUSIC_EVENTS as DATA } from "data";
+import { MUSIC_EVENTS as DATA } from "data-raw";
 import { getItemCounts } from "utils";
 
 interface IMusicianCounted extends IMusician, I_PastFutureCounts {}

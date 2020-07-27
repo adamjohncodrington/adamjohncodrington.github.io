@@ -1,4 +1,4 @@
-import { VINYL as DATA } from "data";
+import { VINYL as DATA } from "data-raw";
 import { formatMiniCards, formatVinyls } from "utils";
 
 import { MUSICIANS } from "./musicians";

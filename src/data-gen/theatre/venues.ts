@@ -1,5 +1,5 @@
 import { THEATRE_VENUES as venues } from "@constants";
-import { THEATRE as DATA } from "data";
+import { THEATRE as DATA } from "data-raw";
 import { getItemCounts, moveTheSuffixToPrefix } from "utils";
 
 const getTheatreMatches = (theatre: ITheatre): Array<ITheatreVisit> => {

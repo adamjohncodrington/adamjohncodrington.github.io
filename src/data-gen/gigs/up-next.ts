@@ -1,4 +1,4 @@
-import { MUSIC_EVENTS as DATA } from "data";
+import { MUSIC_EVENTS as DATA } from "data-raw";
 import { isInFuture } from "utils";
 
 export const UP_NEXT: Array<IMusicEvent> = DATA.filter(
