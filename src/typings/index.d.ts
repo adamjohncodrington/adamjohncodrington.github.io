@@ -128,6 +128,7 @@ interface IMiniCardPanelItem extends I__Favourite {
   mainText?: Array<string>;
   dates: Array<Date>;
   index?: number;
+  headerLink?: string;
 }
 
 interface IMiniCard
@@ -147,9 +148,7 @@ interface IMiniCardHeader extends IMiniCard, IDisclosureHeader {}
 
 interface IMiniCardPanelItemHeader
   extends IMiniCardPanelItem,
-    IDisclosureHeader {
-  headerLink?: string;
-}
+    IDisclosureHeader {}
 
 interface IStartEndDate {
   start: Date;
