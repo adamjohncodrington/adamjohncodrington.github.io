@@ -1,8 +1,9 @@
 # TO DO LIST
 
-- ABANDON `VideoCard` and `IVideoCard` entirely!!!
+- ABANDON `VideoCard` and `IVideoCard` entirely!!!!!
 - do not export recipe data in nest
 
+- rationalise `IVideo` into `I_Video` and `I__Video`
 
 - refactor symbols!!
 - convert `DAYS TO GO` into a dark number symbol
