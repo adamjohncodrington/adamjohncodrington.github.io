@@ -9,7 +9,7 @@ import {
   mapVinylCardToCard
 } from "utils";
 
-import { BasicListItem } from "../BasicListItem";
+import { MiniCard } from "../MiniCard";
 import { PhotoGrid } from "../PhotoGrid";
 import { Card } from "../Card";
 import { Recipe } from "../Recipe";
@@ -17,10 +17,10 @@ import { VideoCard } from "../VideoCard";
 
 import { PageSectionPanelList, StyledComingSoonPlaceholder } from "./styles";
 
-const { COUNTED_LIST_ITEMS, RECIPES, CARDS } = PAGE_SECTION_PANEL_TYPES;
+const { MINI_CARDS, RECIPES, CARDS } = PAGE_SECTION_PANEL_TYPES;
 
 export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
-  basicListItems,
+  miniCards,
   gigsAndFestivals,
   recipes,
   theatreVisits,
@@ -32,8 +32,8 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
 }) => {
   const pageSectionPanelType: string = recipes
     ? RECIPES
-    : basicListItems
-    ? COUNTED_LIST_ITEMS
+    : miniCards
+    ? MINI_CARDS
     : CARDS;
 
   if (comingSoon)
@@ -85,9 +85,9 @@ export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
             )
         )}
 
-      {basicListItems &&
-        basicListItems.map((basicListItem: IBasicListItem, index: number) => (
-          <BasicListItem key={index} {...basicListItem} />
+      {miniCards &&
+        miniCards.map((miniCard: IMiniCard, index: number) => (
+          <MiniCard key={index} {...miniCard} />
         ))}
 
       {photoGrid && <PhotoGrid {...photoGrid} />}

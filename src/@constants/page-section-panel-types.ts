@@ -1,3 +1,3 @@
 export const CARDS: string = "CARDS";
-export const COUNTED_LIST_ITEMS: string = "basic-list-items";
+export const MINI_CARDS: string = "mini-cards";
 export const RECIPES: string = "recipes";

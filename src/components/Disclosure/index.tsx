@@ -1,4 +1,4 @@
-import React, { FC, useState, ReactElement } from "react";
+import React, { FC, useState } from "react";
 
 import { SPEED_UP_PAGE_LOAD } from "config";
 
@@ -14,10 +14,9 @@ export const Disclosure: FC<IDisclosure> = ({
     !!(autoExpand || isStatic)
   );
   const onClick = (): void => switchPanelVisibility(!panelIsVisible);
-  const dataTestClickableDiv: string = "disclosure-clickable-region";
 
-  const ClickableHeader: ReactElement = (
-    <StyledDiv data-test={dataTestClickableDiv} onClick={onClick}>
+  const ClickableHeader: FC = () => (
+    <StyledDiv onClick={onClick}>
       <Header panelIsVisible={panelIsVisible} />
     </StyledDiv>
   );
@@ -29,7 +28,7 @@ export const Disclosure: FC<IDisclosure> = ({
     </>
   ) : SPEED_UP_PAGE_LOAD ? (
     <>
-      {ClickableHeader}
+      <ClickableHeader />
       {panelIsVisible && <Panel />}
     </>
   ) : (

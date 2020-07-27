@@ -111,7 +111,7 @@ interface IVideoCards {
   videoCards: Array<IVideoCard>;
 }
 
-interface IBasicListItemDetail extends I__Favourite {
+interface IMiniCardDetail extends I__Favourite {
   video?: IVideo;
   mainText?: Array<string>;
   dates: Array<Date>;
@@ -129,7 +129,7 @@ interface I__ColumnCount {
   columnCount?: number;
 }
 
-interface IBasicListItem
+interface IMiniCard
   extends I__SecondaryText,
     I_PastFutureCounts,
     I__Favourite,
@@ -139,7 +139,7 @@ interface IBasicListItem
   countInfoIrrelevant?: boolean;
   noLongerExists?: boolean;
   isLeaderboardItem?: boolean;
-  details?: Array<IBasicListItemDetail>;
+  details?: Array<IMiniCardDetail>;
 }
 
 interface IStartEndDate {
@@ -147,16 +147,9 @@ interface IStartEndDate {
   end: Date;
 }
 
-interface IPageSectionDisclosure extends IOnlyHeaderClicable {
-  autoExpandAlways?: boolean;
-  autoExpandIf2Columns?: boolean;
-  staticAlways?: boolean;
-  staticIf2Columns?: boolean;
-}
-
 interface IPageSectionDataTypes {
   comingSoon?: boolean;
-  basicListItems?: Array<IBasicListItem>;
+  miniCards?: Array<IMiniCard>;
   photoGrid?: { photos: Array<IPhoto>; columnCount: number };
   gigsAndFestivals?: Array<IGigOrFestival>;
   recipes?: Array<IRecipe>;
@@ -171,7 +164,7 @@ interface IPageSectionDataTypesExtended extends IPageSectionDataTypes {
   gigs?: Array<IGig>;
 }
 
-interface IPageSection extends IPageSectionDisclosure {
+interface IPageSection extends I__AutoExpand {
   title: string;
   SvgIcon?: ISvgIcon;
   data: IPageSectionDataTypes;

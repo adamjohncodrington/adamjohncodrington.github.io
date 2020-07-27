@@ -4,16 +4,16 @@ import styled, { css } from "styled-components";
 import { SVG } from "resources";
 import { COLORS } from "styles";
 
-interface IStyledRoundedSymbol extends IRoundedSymbol, I_Theme {}
+interface IStyledSymbol extends ISymbol, I_Theme {}
 
-const StyledRoundedSymbol = styled.div(
+const StyledSymbol = styled.div(
   ({
     type,
     opacity,
     theme: {
       roundedSymbol: { borderRadius, fontSize, size, textColor }
     }
-  }: IStyledRoundedSymbol) => {
+  }: IStyledSymbol) => {
     const iconSize: string =
       type === "photo" ? "55%" : type === "video" ? "65%" : "0";
 
@@ -43,26 +43,22 @@ const StyledRoundedSymbol = styled.div(
 
 type IOpacityOptions = "100%" | "50%";
 
-interface IRoundedSymbol {
+interface ISymbol {
   opacity: IOpacityOptions;
   type: "diet" | "friend" | "photo" | "video";
 }
 
-export const RoundedSymbol: React.FC<IRoundedSymbol> = ({
-  type,
-  children,
-  opacity
-}) => {
+export const Symbol: React.FC<ISymbol> = ({ type, children, opacity }) => {
   const isSvg: boolean = type === "video" || type === "photo";
 
   return isSvg ? (
-    <StyledRoundedSymbol type={type} opacity={opacity}>
+    <StyledSymbol type={type} opacity={opacity}>
       {type === "photo" && <SVG.CAMERA />}
       {type === "video" && <SVG.VIDEO_CAMERA />}
-    </StyledRoundedSymbol>
+    </StyledSymbol>
   ) : (
-    <StyledRoundedSymbol type={type} opacity={opacity}>
+    <StyledSymbol type={type} opacity={opacity}>
       {children}
-    </StyledRoundedSymbol>
+    </StyledSymbol>
   );
 };

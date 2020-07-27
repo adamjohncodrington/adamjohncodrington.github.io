@@ -1,10 +1,9 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { useMediaQueries } from "utils";
 import { Disclosure } from "../Disclosure";
-import { PageSectionHeader } from "../PageSectionHeader";
-import { PageSectionPanel } from "../PageSectionPanel";
+import { PageSectionHeader } from "./PageSectionHeader";
+import { PageSectionPanel } from "./PageSectionPanel";
 
 const PageSectionContainer = styled.section(
   ({
@@ -23,27 +22,19 @@ const PageSectionContainer = styled.section(
 export const PageSection: React.FC<IPageSection> = ({
   title,
   SvgIcon,
+  autoExpand,
   data,
   count,
-  starCount,
-  staticAlways,
-  staticIf2Columns,
-  autoExpandAlways,
-  autoExpandIf2Columns
+  starCount
 }) => {
-  const { pageUses2Columns } = useMediaQueries();
-
   return (
     <PageSectionContainer>
       <Disclosure
-        isStatic={staticAlways || (pageUses2Columns && staticIf2Columns)}
-        autoExpand={
-          autoExpandAlways || (pageUses2Columns && autoExpandIf2Columns)
-        }
-        Header={({ panelIsVisible }) => (
+        autoExpand={autoExpand}
+        Header={headerProps => (
           <PageSectionHeader
+            {...headerProps}
             title={title}
-            panelIsVisible={panelIsVisible}
             count={count}
             starCount={starCount}
             SvgIcon={SvgIcon}

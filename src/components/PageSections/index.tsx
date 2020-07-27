@@ -10,13 +10,11 @@ import {
 
 import { PageSection } from "../PageSection";
 
-interface IPageSectionsLayout {
+interface IPageSections {
   pageSections: Array<IPageSection>;
 }
 
-export const PageSectionsLayout: FC<IPageSectionsLayout> = ({
-  pageSections
-}) => {
+export const PageSections: FC<IPageSections> = ({ pageSections }) => {
   const {
     pageLayout: { columnGap }
   }: ITheme = useThemeContext();

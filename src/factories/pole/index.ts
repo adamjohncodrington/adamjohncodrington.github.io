@@ -1,4 +1,4 @@
-import { formatBasicListItems, formatVideoCards } from "utils";
+import { formatMiniCards, formatVideoCards } from "utils";
 
 import { IMPROV, EXOTIC, CONTEMPORARY } from "./videos";
 import { INSTRUCTORS } from "./instructors";
@@ -8,6 +8,6 @@ export const POLE = {
   EXOTIC: formatVideoCards(EXOTIC),
   CONTEMPORARY: formatVideoCards(CONTEMPORARY),
   IMPROV: formatVideoCards(IMPROV),
-  INSTRUCTORS: formatBasicListItems(INSTRUCTORS),
-  STUDIOS: formatBasicListItems(STUDIOS)
+  INSTRUCTORS: formatMiniCards(INSTRUCTORS),
+  STUDIOS: formatMiniCards(STUDIOS)
 };

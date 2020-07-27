@@ -12,8 +12,8 @@ const generateCities = (): { [city: string]: ICity } => {
 
 export const cities = generateCities();
 
-export const CITIES: Array<IBasicListItem> = Object.values(cities).map(
-  (city: ICity): IBasicListItem => {
+export const CITIES: Array<IMiniCard> = Object.values(cities).map(
+  (city: ICity): IMiniCard => {
     const { name, capital, insignificant } = city;
     return {
       text: name,

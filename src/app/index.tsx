@@ -2,7 +2,7 @@ import React, { FC } from "react";
 import styled, { css } from "styled-components";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
-import { PageHeader, PageSectionsLayout, NavBar } from "components";
+import { PageHeader, PageSections, NavBar } from "components";
 import { PAGES } from "pages";
 
 const PageShell = styled.main(
@@ -23,7 +23,7 @@ export const App: FC = () => (
           <PageShell data-test="page-content">
             <PageHeader titleText={title} count={count} />
 
-            <PageSectionsLayout pageSections={sections} />
+            <PageSections pageSections={sections} />
           </PageShell>
         </Route>
       ))}

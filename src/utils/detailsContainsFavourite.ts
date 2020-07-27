@@ -1,8 +1,8 @@
 export const detailsContainsFavourite = (
-  details: Array<IBasicListItemDetail>
+  details: Array<IMiniCardDetail>
 ): boolean => {
   const favouritedDetails = details.filter(
-    ({ favourite }: IBasicListItemDetail): boolean => !!favourite
+    ({ favourite }: IMiniCardDetail): boolean => !!favourite
   );
   return favouritedDetails.length > 0;
 };

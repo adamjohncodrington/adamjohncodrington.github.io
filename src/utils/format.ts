@@ -4,33 +4,29 @@ interface IFormatCLIOptions {
   isLeaderboard: boolean;
 }
 
-export const formatBasicListItems = (
-  basicListItems: Array<IBasicListItem>,
+export const formatMiniCards = (
+  miniCards: Array<IMiniCard>,
   options?: IFormatCLIOptions
-): Array<IBasicListItem> => {
+): Array<IMiniCard> => {
   const isLeaderboard: boolean = !!(options && options.isLeaderboard);
 
-  const reduced = basicListItems.reduce(
-    (newArray: Array<IBasicListItem>, current: IBasicListItem) => {
+  const reduced = miniCards.reduce(
+    (newArray: Array<IMiniCard>, current: IMiniCard) => {
       const duplicate = newArray.find(
-        (item: IBasicListItem): boolean => item.text === current.text
+        (item: IMiniCard): boolean => item.text === current.text
       );
       return duplicate ? newArray : [...newArray, current];
     },
     []
   );
 
-  const filtered: Array<IBasicListItem> = reduced.filter(
-    ({
-      futureCount,
-      pastCount,
-      countInfoIrrelevant
-    }: IBasicListItem): boolean =>
+  const filtered: Array<IMiniCard> = reduced.filter(
+    ({ futureCount, pastCount, countInfoIrrelevant }: IMiniCard): boolean =>
       countInfoIrrelevant || futureCount !== 0 || pastCount !== 0
   );
 
-  const sorted: Array<IBasicListItem> = filtered.sort(
-    (a: IBasicListItem, b: IBasicListItem): number =>
+  const sorted: Array<IMiniCard> = filtered.sort(
+    (a: IMiniCard, b: IMiniCard): number =>
       isLeaderboard
         ? a.pastCount > b.pastCount
           ? -1
@@ -48,27 +44,24 @@ export const formatBasicListItems = (
         : -1
   );
 
-  const translated: Array<IBasicListItem> = sorted.map(
-    (basicListItem: IBasicListItem): IBasicListItem => ({
-      ...basicListItem,
-      text: moveTheSuffixToPrefix(basicListItem.text)
+  const translated: Array<IMiniCard> = sorted.map(
+    (MiniCard: IMiniCard): IMiniCard => ({
+      ...MiniCard,
+      text: moveTheSuffixToPrefix(MiniCard.text)
     })
   );
 
-  const mapped: Array<IBasicListItem> = translated.map(
-    (basicListItem: IBasicListItem): IBasicListItem =>
-      isLeaderboard
-        ? { ...basicListItem, isLeaderboardItem: true }
-        : basicListItem
+  const mapped: Array<IMiniCard> = translated.map(
+    (MiniCard: IMiniCard): IMiniCard =>
+      isLeaderboard ? { ...MiniCard, isLeaderboardItem: true } : MiniCard
   );
 
-  const detailSorted: Array<IBasicListItem> = mapped.map(
-    ({ details, ...rest }: IBasicListItem): IBasicListItem => ({
+  const detailSorted: Array<IMiniCard> = mapped.map(
+    ({ details, ...rest }: IMiniCard): IMiniCard => ({
       ...rest,
       details: details
-        ? details.sort(
-            (a: IBasicListItemDetail, b: IBasicListItemDetail): number =>
-              a.dates[0].valueOf() > b.dates[0].valueOf() ? 1 : -1
+        ? details.sort((a: IMiniCardDetail, b: IMiniCardDetail): number =>
+            a.dates[0].valueOf() > b.dates[0].valueOf() ? 1 : -1
           )
         : undefined
     })

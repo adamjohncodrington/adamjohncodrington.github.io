@@ -1,5 +1,5 @@
 export const validPageSectionData = ({
-  basicListItems,
+  miniCards,
   gigsAndFestivals,
   recipes,
   theatreVisits,
@@ -7,7 +7,7 @@ export const validPageSectionData = ({
   vinylCards
 }: IPageSectionDataTypes): boolean =>
   !(
-    (basicListItems && basicListItems.length === 0) ||
+    (miniCards && miniCards.length === 0) ||
     (gigsAndFestivals && gigsAndFestivals.length === 0) ||
     (recipes &&
       recipes.filter((item: IRecipe): boolean => !item.hide).length === 0) ||

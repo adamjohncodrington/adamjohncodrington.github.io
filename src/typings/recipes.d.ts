@@ -10,8 +10,8 @@ interface IInventoryIngredient {
   knownCost?: IIngredientCost;
 }
 
-interface IListItemWithPaddingTopFlag {
-  text: string;
+interface IRecipeListItem {
+  listItemText: string;
   addPaddingTop?: boolean;
 }
 

@@ -18,9 +18,9 @@ const getFestivalMatches = (
   return festivalMatches;
 };
 
-const getFestivalDetails = (musician: IMusician): Array<IBasicListItemDetail> =>
+const getFestivalDetails = (musician: IMusician): Array<IMiniCardDetail> =>
   getFestivalMatches(musician).map(
-    (festival: IFestival): IBasicListItemDetail => {
+    (festival: IFestival): IMiniCardDetail => {
       const { dates, video } = festival;
       return {
         mainText: [getFestivalSubtitle(festival) || "TBC"],
@@ -30,10 +30,10 @@ const getFestivalDetails = (musician: IMusician): Array<IBasicListItemDetail> =>
     }
   );
 
-export const FESTIVALS: Array<IBasicListItem> = Object.values(festivals)
+export const FESTIVALS: Array<IMiniCard> = Object.values(festivals)
   .filter(({ insignificant }: IFestivalTitle): boolean => !insignificant)
   .map(
-    (festival: IFestivalTitle): IBasicListItem => ({
+    (festival: IFestivalTitle): IMiniCard => ({
       text: festival.name,
       ...getItemCounts({ item: { festival }, data: { festivals: DATA } }),
       details: getFestivalDetails(festival)

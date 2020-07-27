@@ -10,12 +10,10 @@ const getTheatreMatches = (theatre: ITheatre): Array<ITheatreVisit> => {
   return theatreMatches;
 };
 
-const getTheatreVenueDetails = (
-  play: ITheatre
-): Array<IBasicListItemDetail> => {
+const getTheatreVenueDetails = (play: ITheatre): Array<IMiniCardDetail> => {
   const theatreMatches: Array<ITheatreVisit> = getTheatreMatches(play);
   return theatreMatches.map(
-    (theatreVisit: ITheatreVisit): IBasicListItemDetail => {
+    (theatreVisit: ITheatreVisit): IMiniCardDetail => {
       const { date } = theatreVisit;
       return {
         mainText: [moveTheSuffixToPrefix(theatreVisit.play.name)],
@@ -25,8 +23,8 @@ const getTheatreVenueDetails = (
   );
 };
 
-export const VENUES: Array<IBasicListItem> = Object.values(venues).map(
-  (theatre: ITheatre): IBasicListItem => ({
+export const VENUES: Array<IMiniCard> = Object.values(venues).map(
+  (theatre: ITheatre): IMiniCard => ({
     text: theatre.name,
     ...getItemCounts({ item: { theatre }, data: { theatreVisits: DATA } }),
     details: getTheatreVenueDetails(theatre)

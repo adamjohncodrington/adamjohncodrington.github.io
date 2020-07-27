@@ -23,8 +23,8 @@ const islandsAll: Array<IIsland> = [
   ...islandsThatAreNotCountries
 ];
 
-export const ISLANDS: Array<IBasicListItem> = islandsAll.map(
-  (island: IIsland): IBasicListItem => {
+export const ISLANDS: Array<IMiniCard> = islandsAll.map(
+  (island: IIsland): IMiniCard => {
     const { name, insignificant } = island;
     return {
       text: name,

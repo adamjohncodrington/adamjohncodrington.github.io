@@ -1,6 +1,6 @@
 import React from "react";
 
-import { RoundedSymbol } from "../RoundedSymbol";
+import { Symbol } from "../Symbol";
 
 import { CardSymbolsContainer } from "./styles";
 
@@ -23,23 +23,17 @@ export const CardHeaderSymbols: React.FC<ICard> = ({
             a.initials > b.initials ? 1 : -1
           )
           .map(({ initials }: IFriend, index: number) => (
-            <RoundedSymbol key={index} type="friend" opacity="50%">
+            <Symbol key={index} type="friend" opacity="50%">
               {initials}
-            </RoundedSymbol>
+            </Symbol>
           ))}
 
       {photos && !hidePhotosIcon && (
-        <RoundedSymbol
-          type="photo"
-          opacity={!hideCompanySymbols ? "100%" : "50%"}
-        />
+        <Symbol type="photo" opacity={!hideCompanySymbols ? "100%" : "50%"} />
       )}
 
       {video && !hideVideoIcon && (
-        <RoundedSymbol
-          type="video"
-          opacity={!hideCompanySymbols ? "100%" : "50%"}
-        />
+        <Symbol type="video" opacity={!hideCompanySymbols ? "100%" : "50%"} />
       )}
     </CardSymbolsContainer>
   );

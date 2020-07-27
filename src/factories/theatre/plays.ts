@@ -28,10 +28,10 @@ const getPlayMatches = (play: IPlay): Array<ITheatreVisit> => {
   return playMatches;
 };
 
-const getPlayDetails = (play: IPlay): Array<IBasicListItemDetail> => {
+const getPlayDetails = (play: IPlay): Array<IMiniCardDetail> => {
   const playMatches: Array<ITheatreVisit> = getPlayMatches(play);
   return playMatches.map(
-    (theatreVisit: ITheatreVisit): IBasicListItemDetail => {
+    (theatreVisit: ITheatreVisit): IMiniCardDetail => {
       const { date } = theatreVisit;
       return {
         mainText: [moveTheSuffixToPrefix(theatreVisit.theatre.name)],
@@ -41,8 +41,8 @@ const getPlayDetails = (play: IPlay): Array<IBasicListItemDetail> => {
   );
 };
 
-export const PLAYS: Array<IBasicListItem> = Object.values(plays).map(
-  (play: IPlay): IBasicListItem => ({
+export const PLAYS: Array<IMiniCard> = Object.values(plays).map(
+  (play: IPlay): IMiniCard => ({
     text: play.name,
     favourite: playIsFavourited({ play, favouritedTheatreCards: FAVOURITES }),
     ...getItemCounts({ item: { play }, data: { theatreVisits: DATA } }),

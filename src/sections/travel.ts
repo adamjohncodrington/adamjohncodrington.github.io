@@ -6,49 +6,48 @@ import { isInFuture } from "utils";
 const BUCKET_LIST: IPageSection = {
   SvgIcon: SVG.STARS,
   title: PAGE_SECTION_TITLES.BUCKET_LIST,
-  data: { basicListItems: FACTORY.BUCKET_LIST }
+  data: { miniCards: FACTORY.BUCKET_LIST }
 };
 
 const CITIES: IPageSection = {
   SvgIcon: SVG.CITY,
   title: PAGE_SECTION_TITLES.CITIES,
-  data: { basicListItems: FACTORY.CITIES },
+  data: { miniCards: FACTORY.CITIES },
   count: FACTORY.CITIES.length,
-  starCount: FACTORY.CITIES.filter(
-    ({ star }: IBasicListItem): boolean => !!star
-  ).length
+  starCount: FACTORY.CITIES.filter(({ star }: IMiniCard): boolean => !!star)
+    .length
 };
 
 const COUNTRIES: IPageSection = {
   title: PAGE_SECTION_TITLES.COUNTRIES,
   SvgIcon: SVG.FLAG,
-  data: { basicListItems: FACTORY.COUNTRIES },
+  data: { miniCards: FACTORY.COUNTRIES },
   count: FACTORY.COUNTRIES.length
 };
 
 const FRIENDS: IPageSection = {
   SvgIcon: SVG.PEOPLE,
   title: PAGE_SECTION_TITLES.FRIENDS,
-  data: { basicListItems: FACTORY.FRIENDS }
+  data: { miniCards: FACTORY.FRIENDS }
 };
 
 const HIGHLIGHTS: IPageSection = {
   title: PAGE_SECTION_TITLES.HIGHLIGHTS,
   SvgIcon: SVG.MAP_PIN,
-  data: { basicListItems: FACTORY.HIGHLIGHTS }
+  data: { miniCards: FACTORY.HIGHLIGHTS }
 };
 
 const ISLANDS: IPageSection = {
   title: PAGE_SECTION_TITLES.ISLANDS,
   SvgIcon: SVG.PALM_TREE,
-  data: { basicListItems: FACTORY.ISLANDS }
+  data: { miniCards: FACTORY.ISLANDS }
 };
 
 const THEME_PARKS: IPageSection = {
   SvgIcon: SVG.ROLLER_COASTER,
   title: PAGE_SECTION_TITLES.THEME_PARKS,
   hide: true,
-  data: { basicListItems: FACTORY.THEME_PARKS },
+  data: { miniCards: FACTORY.THEME_PARKS },
   count: FACTORY.THEME_PARKS.length
 };
 

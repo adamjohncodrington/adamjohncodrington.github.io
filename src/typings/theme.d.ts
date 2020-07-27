@@ -6,7 +6,7 @@ type BoxShadowValue = string;
 type TransitionValue = string;
 type PercentageValue = string;
 
-interface IThemeBasicListItem {
+interface IThemeMiniCard {
   count: { margin: { left: PxValue }; width: PxValue };
 }
 
@@ -44,7 +44,7 @@ interface IThemePageSection {
   padding: { horizontal: PxValue; bottom: PxValue };
   panelList: {
     border: { bottom: PxValue };
-    basicListItems: { padding: { vertical: PxValue } };
+    miniCards: { padding: { vertical: PxValue } };
     padding: { bottom: PxValue };
     recipes: {
       firstRecipe: { padding: { top: PxValue } };
@@ -71,7 +71,7 @@ interface IThemeRecipe {
   portionCost: { margin: { top: PxValue } };
 }
 
-interface IThemeRoundedSymbol {
+interface IThemeSymbol {
   borderRadius: PercentageValue;
   fontSize: PercentageValue;
   size: PxValue;
@@ -85,14 +85,14 @@ interface IThemeVinylCard {
 
 interface ITheme {
   breakpoints: IBreakpoints;
-  basicListItem: IThemeBasicListItem;
+  MiniCard: IThemeMiniCard;
   card: IThemeCard;
   navBar: IThemeNavBar;
   pageHeader: IThemePageHeader;
   pageLayout: IThemePageLayout;
   pageSection: IThemePageSection;
   recipe: IThemeRecipe;
-  roundedSymbol: IThemeRoundedSymbol;
+  roundedSymbol: IThemeSymbol;
   vinyl: IThemeVinylCard;
 
   fadedOpacity: number;

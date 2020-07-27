@@ -15,17 +15,17 @@ const getMusicVenueMatches = (
 
 const getMusicVenueDetails = (
   musicVenue: IMusicVenue
-): Array<IBasicListItemDetail> =>
+): Array<IMiniCardDetail> =>
   getMusicVenueMatches(musicVenue).map(
-    ({ title, dates, video }: IGigOrFestival): IBasicListItemDetail => ({
+    ({ title, dates, video }: IGigOrFestival): IMiniCardDetail => ({
       mainText: [title],
       dates,
       video
     })
   );
 
-export const VENUES: Array<IBasicListItem> = Object.values(venues).map(
-  (musicVenue: IMusicVenue): IBasicListItem => {
+export const VENUES: Array<IMiniCard> = Object.values(venues).map(
+  (musicVenue: IMusicVenue): IMiniCard => {
     const { name, favourite } = musicVenue;
     return {
       text: name,

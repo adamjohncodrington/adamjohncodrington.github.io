@@ -5,7 +5,7 @@ import * as COLORS from "./colors";
 import { FONT_SIZES } from "./font-sizes";
 import { fontFamily, scrollbarSize } from "./GlobalStyle";
 
-const THEME_COUNTED_LIST_ITEM: IThemeBasicListItem = {
+const THEME_COUNTED_LIST_ITEM: IThemeMiniCard = {
   count: { margin: { left: "5px" }, width: "20px" }
 };
 
@@ -43,7 +43,7 @@ const THEME_PAGE_SECTION: IThemePageSection = {
   padding: { horizontal: "12px", bottom: "5px" },
   panelList: {
     border: { bottom: `1px dashed ${rgba("black", 0.25)}` },
-    basicListItems: { padding: { vertical: "5px" } },
+    miniCards: { padding: { vertical: "5px" } },
     padding: { bottom: "5px" },
     recipes: {
       firstRecipe: { padding: { top: "10px" } },
@@ -71,7 +71,7 @@ const THEME_RECIPE_CARD: IThemeRecipe = {
   portionCost: { margin: { top: "3px" } }
 };
 
-const THEME_ROUNDED_SYMBOL: IThemeRoundedSymbol = {
+const THEME_ROUNDED_SYMBOL: IThemeSymbol = {
   borderRadius: "25%",
   fontSize: "75%",
   size: "26px",
@@ -85,7 +85,7 @@ const THEME_VINYL_CARD: IThemeVinylCard = {
 
 export const THEME: ITheme = {
   breakpoints: BREAKPOINTS,
-  basicListItem: THEME_COUNTED_LIST_ITEM,
+  MiniCard: THEME_COUNTED_LIST_ITEM,
   card: THEME_CARD,
   navBar: THEME_NAV_BAR,
   pageHeader: THEME_PAGE_HEADER,

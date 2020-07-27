@@ -30,7 +30,7 @@ const getMusicianFestivalDate = (
   return new Date();
 };
 
-const getMusicianDetails = (musician: IMusician): Array<IBasicListItemDetail> =>
+const getMusicianDetails = (musician: IMusician): Array<IMiniCardDetail> =>
   getMusicianMatches(musician).map(
     ({
       dates,
@@ -39,7 +39,7 @@ const getMusicianDetails = (musician: IMusician): Array<IBasicListItemDetail> =>
       venue,
       favourite,
       video
-    }: IGigOrFestival): IBasicListItemDetail => ({
+    }: IGigOrFestival): IMiniCardDetail => ({
       mainText: [
         festival ? festival.title.name : moveTheSuffixToPrefix(venue.name)
       ],
@@ -49,10 +49,10 @@ const getMusicianDetails = (musician: IMusician): Array<IBasicListItemDetail> =>
     })
   );
 
-export const MUSICIANS: Array<IBasicListItem> = Object.values(musicians).map(
-  (musician: IMusician): IBasicListItem => {
+export const MUSICIANS: Array<IMiniCard> = Object.values(musicians).map(
+  (musician: IMusician): IMiniCard => {
     const { name, previousStageName, noLongerExists } = musician;
-    const details: Array<IBasicListItemDetail> = getMusicianDetails(musician);
+    const details: Array<IMiniCardDetail> = getMusicianDetails(musician);
     return {
       text: name,
       secondaryText: previousStageName && previousStageName.name,

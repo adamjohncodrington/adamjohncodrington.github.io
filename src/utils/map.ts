@@ -118,17 +118,17 @@ export const mapVinylCardToCard = ({
 
 export const mapMethodToListItems = (
   method: Array<string>
-): Array<IListItemWithPaddingTopFlag> =>
+): Array<IRecipeListItem> =>
   method.map(
-    (item: string): IListItemWithPaddingTopFlag => ({
-      text: item,
+    (item: string): IRecipeListItem => ({
+      listItemText: item,
       addPaddingTop: false
     })
   );
 
 export const mapServeWithToListItems = (
   serveWith: Array<Array<IRecipeIngredient>>
-): Array<IListItemWithPaddingTopFlag> => {
+): Array<IRecipeListItem> => {
   const getServeWithListItem = (
     lineOptions: Array<IRecipeIngredient>
   ): string => {
@@ -148,8 +148,8 @@ export const mapServeWithToListItems = (
   };
 
   return serveWith.map(
-    (lineOptions: Array<IRecipeIngredient>): IListItemWithPaddingTopFlag => ({
-      text: getServeWithListItem(lineOptions),
+    (lineOptions: Array<IRecipeIngredient>): IRecipeListItem => ({
+      listItemText: getServeWithListItem(lineOptions),
       addPaddingTop: false
     })
   );
@@ -157,15 +157,15 @@ export const mapServeWithToListItems = (
 
 export const mapIngredientsToListItems = (
   ingredientsGroups: Array<Array<IRecipeIngredient>>
-): Array<IListItemWithPaddingTopFlag> => {
-  let ingredientsWithPaddingFlags: Array<IListItemWithPaddingTopFlag> = [];
+): Array<IRecipeListItem> => {
+  let ingredientsWithPaddingFlags: Array<IRecipeListItem> = [];
 
   ingredientsGroups.forEach(
     (ingredientsGroup: Array<IRecipeIngredient>, INDEX_HIGH: number) => {
       ingredientsGroup.forEach(
         (ingredient: IRecipeIngredient, INDEX_LOW: number) => {
           ingredientsWithPaddingFlags.push({
-            text: generateIngredientListItem(ingredient),
+            listItemText: generateIngredientListItem(ingredient),
             addPaddingTop: INDEX_HIGH !== 0 && INDEX_LOW === 0
           });
         }

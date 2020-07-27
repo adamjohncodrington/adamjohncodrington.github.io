@@ -1,9 +1,7 @@
 import { INSTRUCTORS as instructors } from "@constants";
 
-export const INSTRUCTORS: Array<IBasicListItem> = Object.values(
-  instructors
-).map(
-  ({ name, stageName }: IPoleInstructor): IBasicListItem => ({
+export const INSTRUCTORS: Array<IMiniCard> = Object.values(instructors).map(
+  ({ name, stageName }: IPoleInstructor): IMiniCard => ({
     text: name,
     secondaryText: stageName,
     countInfoIrrelevant: true,

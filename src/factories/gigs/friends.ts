@@ -13,14 +13,9 @@ const getFriendMatches = (friend: IFriend): Array<IGigOrFestival> => {
   return friendMatches;
 };
 
-const getFriendDetails = (friend: IFriend): Array<IBasicListItemDetail> =>
+const getFriendDetails = (friend: IFriend): Array<IMiniCardDetail> =>
   getFriendMatches(friend).map(
-    ({
-      title,
-      dates,
-      video,
-      favourite
-    }: IGigOrFestival): IBasicListItemDetail => ({
+    ({ title, dates, video, favourite }: IGigOrFestival): IMiniCardDetail => ({
       mainText: [title],
       dates,
       favourite,
@@ -28,10 +23,10 @@ const getFriendDetails = (friend: IFriend): Array<IBasicListItemDetail> =>
     })
   );
 
-export const FRIENDS: Array<IBasicListItem> = Object.values(friends)
+export const FRIENDS: Array<IMiniCard> = Object.values(friends)
   .filter(({ gigs }: IFriend): boolean => !!gigs)
   .map(
-    (friend: IFriend): IBasicListItem => ({
+    (friend: IFriend): IMiniCard => ({
       text: friend.name,
       ...getItemCounts({ item: { friend }, data: { gigsAndFestivals: DATA } }),
       details: getFriendDetails(friend)

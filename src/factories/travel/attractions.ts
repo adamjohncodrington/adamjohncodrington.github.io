@@ -21,8 +21,8 @@ const highlights: Array<IAttraction> = attractions.filter(
   ({ highlight }: IAttraction): boolean => !!highlight
 );
 
-export const HIGHLIGHTS: Array<IBasicListItem> = highlights.map(
-  (highlight: IAttraction): IBasicListItem => ({
+export const HIGHLIGHTS: Array<IMiniCard> = highlights.map(
+  (highlight: IAttraction): IMiniCard => ({
     text: highlight.name,
     ...getItemCounts({
       item: { attraction: highlight },
@@ -31,8 +31,8 @@ export const HIGHLIGHTS: Array<IBasicListItem> = highlights.map(
   })
 );
 
-export const THEME_PARKS: Array<IBasicListItem> = themeParks.map(
-  (themePark: IAttraction): IBasicListItem => ({
+export const THEME_PARKS: Array<IMiniCard> = themeParks.map(
+  (themePark: IAttraction): IMiniCard => ({
     text: themePark.name,
     ...getItemCounts({
       item: { attraction: themePark },

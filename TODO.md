@@ -40,7 +40,7 @@
 ## Refactoring
 
 - review all instances of `.forEach`, potentially replace with `.reduce`, `.some` and/or `.every`
-- move `BasicListItemDetails` style values to theme??
+- move `BasicListItemPanel` style values to theme??
 - review semantics of page structure, landmarks, accessibility, etc.
 - rationalise `data-test` attributes
 

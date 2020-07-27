@@ -1,9 +1,49 @@
 import styled, { css } from "styled-components";
 
-import { Ul } from "primitives";
 import { PAGE_SECTION_PANEL_TYPES } from "@constants";
+import { FlexRow, H2, Ul } from "primitives";
 
-const { RECIPES, COUNTED_LIST_ITEMS } = PAGE_SECTION_PANEL_TYPES;
+export const PageSectionTitle = styled(H2)`
+  text-transform: lowercase;
+`;
+
+export const PageSectionHeaderContainer = styled(FlexRow)(
+  ({ theme: { pageSection } }: I_Theme) => css`
+    padding: ${pageSection.header.padding.vertical} 0;
+  `
+);
+
+export const PageSectionCount = styled.span(
+  ({ theme: { pageSection } }: I_Theme) => css`
+    margin-left: ${pageSection.count.margin.left};
+  `
+);
+
+export const PageSectionStarredCount = styled(PageSectionCount)(
+  ({ theme: { fadedOpacity } }: I_Theme) => css`
+    opacity: ${fadedOpacity};
+  `
+);
+
+export const PageSectionSvgContainer = styled.div(
+  ({
+    theme: {
+      pageSection: {
+        icon: { size }
+      }
+    }
+  }: I_Theme) => css`
+    display: flex;
+    align-items: center;
+
+    svg {
+      height: ${size};
+      width: ${size};
+    }
+  `
+);
+
+const { RECIPES, MINI_CARDS } = PAGE_SECTION_PANEL_TYPES;
 
 interface IPageSectionPanelList {
   pageSectionPanelType: string;
@@ -44,14 +84,14 @@ const CSS_RECIPE_CARDS = ({
 const CSS_COUNTED_LIST = ({
   theme: {
     pageSection: {
-      panelList: { padding, basicListItems }
+      panelList: { padding, miniCards }
     }
   }
 }: I_Theme) => css`
   padding-bottom: ${padding.bottom};
 
   > * {
-    padding: ${basicListItems.padding.vertical} 0;
+    padding: ${miniCards.padding.vertical} 0;
   }
 
   ${CSS_COMMON}
@@ -86,7 +126,7 @@ export const PageSectionPanelList = styled(
 )(({ pageSectionPanelType }: IPageSectionPanelList) =>
   pageSectionPanelType === RECIPES
     ? CSS_RECIPE_CARDS
-    : pageSectionPanelType === COUNTED_LIST_ITEMS
+    : pageSectionPanelType === MINI_CARDS
     ? CSS_COUNTED_LIST
     : CSS_REGULAR_CARDS
 );

@@ -9,7 +9,7 @@ import {
   mapIngredientsToListItems
 } from "utils";
 
-import { List } from "../List";
+import { List } from "./RecipeList";
 
 import {
   RecipePanelContainer,

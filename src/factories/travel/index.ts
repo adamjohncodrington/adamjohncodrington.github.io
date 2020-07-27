@@ -1,4 +1,4 @@
-import { formatBasicListItems, formatVideoCards } from "utils";
+import { formatMiniCards, formatVideoCards } from "utils";
 
 import { HIGHLIGHTS, THEME_PARKS } from "./attractions";
 import { BUCKET_LIST } from "./bucket-list";
@@ -12,14 +12,14 @@ import { VIDEOS } from "./videos";
 import { YEARS } from "./years";
 
 export const TRAVEL = {
-  BUCKET_LIST: formatBasicListItems(BUCKET_LIST),
-  CITIES: formatBasicListItems(CITIES),
-  COUNTRIES: formatBasicListItems(COUNTRIES),
-  FRIENDS: formatBasicListItems(FRIENDS, { isLeaderboard: true }),
-  HIGHLIGHTS: formatBasicListItems(HIGHLIGHTS),
-  ISLANDS: formatBasicListItems(ISLANDS),
+  BUCKET_LIST: formatMiniCards(BUCKET_LIST),
+  CITIES: formatMiniCards(CITIES),
+  COUNTRIES: formatMiniCards(COUNTRIES),
+  FRIENDS: formatMiniCards(FRIENDS, { isLeaderboard: true }),
+  HIGHLIGHTS: formatMiniCards(HIGHLIGHTS),
+  ISLANDS: formatMiniCards(ISLANDS),
   PHOTOS,
-  THEME_PARKS: formatBasicListItems(THEME_PARKS),
+  THEME_PARKS: formatMiniCards(THEME_PARKS),
   UP_NEXT,
   VIDEOS: formatVideoCards(VIDEOS),
   YEARS
