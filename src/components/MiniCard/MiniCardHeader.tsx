@@ -9,8 +9,6 @@ import {
   MiniCardFutureCount
 } from "./styles";
 
-interface IMiniCardHeader extends IMiniCard, IDisclosureHeader {}
-
 export const MiniCardHeader: FC<IMiniCardHeader> = ({
   text,
   secondaryText,

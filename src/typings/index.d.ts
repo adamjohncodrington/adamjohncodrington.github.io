@@ -142,6 +142,16 @@ interface IMiniCard
   details?: Array<IMiniCardDetail>;
 }
 
+interface IMiniCardHeader extends IMiniCard, IDisclosureHeader {}
+
+interface IMiniCardPanelItem extends IMiniCardDetail {
+  index?: number;
+}
+
+interface IMiniCardPanelItemHeader
+  extends IMiniCardPanelItem,
+    IDisclosureHeader {}
+
 interface IStartEndDate {
   start: Date;
   end: Date;

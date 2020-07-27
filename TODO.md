@@ -1,6 +1,6 @@
 # TO DO LIST
 
-- rationalise all instances of `<Disclosure Header={} />`
+- review whether parents or children should be styling the children across whole site
 
 - convert `DAYS TO GO` into a dark number symbol
 

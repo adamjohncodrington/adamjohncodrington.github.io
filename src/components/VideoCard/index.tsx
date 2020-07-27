@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
+import { CardTitle, CardSubtitle } from "primitives";
 import { getDatesText, moveTheSuffixToPrefix } from "utils";
 
-import { CardTitle, CardSubtitle } from "../styles";
 import { Disclosure } from "../Disclosure";
 import { YouTubeVideo } from "../YouTubeVideo";
 

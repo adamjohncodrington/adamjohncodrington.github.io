@@ -1,6 +1,6 @@
 import React from "react";
 
-import { CardTitle, CardSubtitle } from "../styles";
+import { CardTitle, CardSubtitle } from "primitives";
 
 import {
   CardNote,
