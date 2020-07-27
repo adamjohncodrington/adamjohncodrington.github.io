@@ -3,11 +3,11 @@ import React, { FC } from "react";
 import { PAGE_SECTION_PANEL_TYPES } from "@constants";
 import { Li } from "primitives";
 import {
-  mapMusicEventToCard,
-  mapTheatreVisitToCard,
-  mapTripLegToCard,
-  mapAlbumCardToCard,
-  mapPoleRoutinesToCards
+  mapPoleRoutinesToCards,
+  mapAlbumCardsToCards,
+  mapMusicEventsToCards,
+  mapTheatreVisitsToCards,
+  mapTripLegsToCards
 } from "utils";
 
 import { MiniCard } from "../MiniCard";
@@ -22,10 +22,12 @@ const { MINI_CARDS, RECIPES, CARDS } = PAGE_SECTION_PANEL_TYPES;
 
 export const PageSectionPanel: FC<IPageSection> = ({
   data: {
+    // PANEL TYPES
     cards,
     miniCards,
     recipes,
 
+    // DATA TYPES
     poleRoutines,
     musicEvents,
     theatreVisits,
@@ -48,22 +50,15 @@ export const PageSectionPanel: FC<IPageSection> = ({
     );
 
   const CARD_madetoolate: Array<ICard> | undefined = musicEvents
-    ? musicEvents.map(
-        (musicEvent: IMusicEvent): ICard => mapMusicEventToCard(musicEvent)
-      )
+    ? mapMusicEventsToCards(musicEvents)
     : poleRoutines
     ? mapPoleRoutinesToCards(poleRoutines)
     : theatreVisits
-    ? theatreVisits.map(
-        (theatreVisit: ITheatreVisit): ICard =>
-          mapTheatreVisitToCard(theatreVisit)
-      )
+    ? mapTheatreVisitsToCards(theatreVisits)
     : tripLegs
-    ? tripLegs.map((tripLeg: ITripLeg): ICard => mapTripLegToCard(tripLeg))
+    ? mapTripLegsToCards(tripLegs)
     : vinyls
-    ? vinyls.map(
-        (vinylCard: IAlbumCard): ICard => mapAlbumCardToCard(vinylCard)
-      )
+    ? mapAlbumCardsToCards(vinyls)
     : undefined;
 
   return (
