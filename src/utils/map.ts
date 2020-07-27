@@ -21,9 +21,9 @@ import { generateIngredientListItem } from "./generateIngredientListItem";
 export const mapPoleVideoToVideoCard = ({
   date,
   song: { musician, title },
-  ...rest
+  video
 }: IPoleVideo): IVideoCard => ({
-  ...rest,
+  video,
   title: musician.name,
   subtitle: title,
   dates: [date]
@@ -36,7 +36,9 @@ export const mapPoleVideosToVideoCards = (
     (poleVideo: IPoleVideo): IVideoCard => mapPoleVideoToVideoCard(poleVideo)
   );
 
-// export const mapVideoCardToCard = (videoCard: IVideoCard): ICard => ({});
+// export const mapVideoCardToCard = ({title}: IVideoCard): ICard => ({
+
+// });
 
 export const mapGigsToMusicEvents = (gigs: Array<IGig>): Array<IMusicEvent> =>
   gigs.map(

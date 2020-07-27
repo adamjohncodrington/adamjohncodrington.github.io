@@ -102,8 +102,9 @@ interface IVideo extends I_OrientationQuality {
   youtubeId: string;
 }
 
-interface IVideoCard extends IVideo, I_Dates {
+interface IVideoCard extends I_Dates {
   title: string;
+  video: IVideo;
   subtitle?: string;
 }
 
@@ -251,7 +252,8 @@ interface ISong {
   year: number;
 }
 
-interface IPoleVideo extends IVideo {
+interface IPoleVideo {
+  video: IVideo;
   date: Date;
   song: ISong;
   category: IPoleCategory;

@@ -21,7 +21,7 @@ export const VideoCard: React.FC<IVideoCard> = ({
   title,
   subtitle,
   dates,
-  ...video
+  video
 }) => (
   <Disclosure
     Header={({ panelVisible }) => (
