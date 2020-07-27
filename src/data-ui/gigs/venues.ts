@@ -4,8 +4,8 @@ import { getItemCounts } from "utils";
 
 const getMusicVenueMatches = (musicVenue: IMusicVenue): Array<IMusicEvent> => {
   const musicVenueMatches: Array<IMusicEvent> = [];
-  DATA.forEach((MusicEvent: IMusicEvent): void => {
-    if (MusicEvent.venue === musicVenue) musicVenueMatches.push(MusicEvent);
+  DATA.forEach((musicEvent: IMusicEvent): void => {
+    if (musicEvent.venue === musicVenue) musicVenueMatches.push(musicEvent);
   });
   return musicVenueMatches;
 };

@@ -5,8 +5,8 @@ import { getItemCounts } from "utils";
 const getFriendMatches = (friend: IFriend): Array<IMusicEvent> => {
   const friendMatches: Array<IMusicEvent> = [];
 
-  DATA.forEach((MusicEvent: IMusicEvent): void => {
-    if (MusicEvent.company.includes(friend)) friendMatches.push(MusicEvent);
+  DATA.forEach((musicEvent: IMusicEvent): void => {
+    if (musicEvent.company.includes(friend)) friendMatches.push(musicEvent);
   });
 
   return friendMatches;

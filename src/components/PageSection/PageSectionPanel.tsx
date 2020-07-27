@@ -46,7 +46,7 @@ export const PageSectionPanel: FC<IPageSection> = ({
 
   const cardsMadeTooLate: Array<ICard> | undefined = musicEvents
     ? musicEvents.map(
-        (MusicEvent: IMusicEvent): ICard => mapMusicEventToCard(MusicEvent)
+        (musicEvent: IMusicEvent): ICard => mapMusicEventToCard(musicEvent)
       )
     : theatreVisits
     ? theatreVisits.map(

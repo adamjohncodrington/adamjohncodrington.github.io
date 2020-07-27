@@ -59,14 +59,14 @@ export const splitMusicEventsIntoYears = (
   const years: Array<Array<IMusicEvent>> = [];
   let arrayIndex: number = 0;
   let arrayYear: number = sorted[0].dates[0].getFullYear();
-  sorted.forEach((MusicEvent: IMusicEvent): void => {
-    const year: number = MusicEvent.dates[0].getFullYear();
+  sorted.forEach((musicEvent: IMusicEvent): void => {
+    const year: number = musicEvent.dates[0].getFullYear();
     if (year !== arrayYear) {
       arrayIndex += 1;
       arrayYear = year;
     }
     if (!years[arrayIndex]) years[arrayIndex] = [];
-    years[arrayIndex].push(MusicEvent);
+    years[arrayIndex].push(musicEvent);
   });
   return years;
 };

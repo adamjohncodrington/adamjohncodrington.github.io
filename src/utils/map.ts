@@ -61,10 +61,10 @@ export const mapFestivalsToMusicEvents = (
     })
   );
 
-export const mapMusicEventToCard = (MusicEvent: IMusicEvent): ICard => {
-  const { venue, dates, ticketType } = MusicEvent;
+export const mapMusicEventToCard = (musicEvent: IMusicEvent): ICard => {
+  const { venue, dates, ticketType } = musicEvent;
   return {
-    ...MusicEvent,
+    ...musicEvent,
     body: moveTheSuffixToPrefix(venue.name),
     secondaryBody: getDatesText(dates),
     countdownText: getCountdownText(dates[0]),

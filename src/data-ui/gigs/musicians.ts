@@ -8,9 +8,9 @@ import {
 
 const getMusicianMatches = (musician: IMusician): Array<IMusicEvent> => {
   const musicianMatches: Array<IMusicEvent> = [];
-  DATA.forEach((MusicEvent: IMusicEvent): void => {
-    if (MusicEvent.musicians.includes(musician)) {
-      musicianMatches.push(MusicEvent);
+  DATA.forEach((musicEvent: IMusicEvent): void => {
+    if (musicEvent.musicians.includes(musician)) {
+      musicianMatches.push(musicEvent);
     }
   });
   return musicianMatches;
