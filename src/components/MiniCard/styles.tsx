@@ -4,6 +4,8 @@ import { UNICODE } from "@constants";
 import { FlexRow } from "primitives";
 import { getPseudoElementBefore, getPseudoElementAfter } from "styles";
 
+const { HEART, STAR, TRIANGLE_RIGHT } = UNICODE;
+
 interface IStyledMainText extends I_Theme, I__Favourite, I__Star {
   faded: boolean;
 }
@@ -30,8 +32,8 @@ export const StyledMainText = styled.span(
       `
     }
 
-    ${favourite && getPseudoElementBefore(UNICODE.HEART)}
-    ${star && getPseudoElementBefore(UNICODE.STAR)}
+    ${favourite && getPseudoElementBefore(HEART)}
+    ${star && getPseudoElementBefore(STAR)}
   `
 );
 
@@ -84,29 +86,35 @@ export const StyledLi = styled.li(
   `
 );
 
-export const StyledLevel1MainText = styled.div`
-  flex: 1;
-  margin-right: 15px;
-`;
+interface I__Media {
+  media?: boolean;
+}
+
+export const StyledLevel1MainText = styled.div(
+  ({ media }: I__Media) => css`
+    flex: 1;
+    margin-right: 15px;
+
+    ${media && getPseudoElementBefore(TRIANGLE_RIGHT)}
+  `
+);
 
 export const StyledIndex = styled.div`
   min-width: 25px;
 `;
 
-interface IStyledDateText extends I__Favourite {
-  video?: IVideo;
-}
+interface IStyledDateText extends I__Favourite, I__Media {}
 
 export const StyledDateText = styled.div(
-  ({ favourite, video }: IStyledDateText) =>
-    (favourite || video) &&
+  ({ favourite, media }: IStyledDateText) =>
+    (favourite || media) &&
     getPseudoElementAfter(
-      favourite && !video
-        ? UNICODE.HEART
-        : video && !favourite
-        ? UNICODE.TRIANGLE_RIGHT
-        : video && favourite
-        ? UNICODE.HEART + " " + UNICODE.TRIANGLE_RIGHT
+      favourite && !media
+        ? HEART
+        : media && !favourite
+        ? TRIANGLE_RIGHT
+        : media && favourite
+        ? HEART + " " + TRIANGLE_RIGHT
         : ""
     )
 );

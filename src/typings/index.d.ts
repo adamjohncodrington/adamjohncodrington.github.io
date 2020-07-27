@@ -126,9 +126,10 @@ interface I__ColumnCount {
 interface IMiniCardPanelItem extends I__Favourite {
   video?: IVideo;
   mainText?: Array<string>;
-  dates: Array<Date>;
+  dates?: Array<Date>;
   index?: number;
   headerLink?: string;
+  year?: number;
 }
 
 interface IMiniCard

@@ -51,7 +51,11 @@ export const formatMiniCards = (
       ...rest,
       details: details
         ? details.sort((a: IMiniCardPanelItem, b: IMiniCardPanelItem): number =>
-            a.dates[0].valueOf() > b.dates[0].valueOf() ? 1 : -1
+            a.dates && b.dates && a.dates[0].valueOf() > b.dates[0].valueOf()
+              ? 1
+              : a.year && b.year && a.year > b.year
+              ? 1
+              : -1
           )
         : undefined
     })

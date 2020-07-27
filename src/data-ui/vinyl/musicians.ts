@@ -15,7 +15,7 @@ const getMusicianDetails = (musician: IMusician): Array<IMiniCardPanelItem> =>
   getMusicianMatches(musician).map(
     ({ year, title, appleMusicId }: IVinyl): IMiniCardPanelItem => ({
       mainText: [title],
-      dates: [new Date(year)],
+      year,
       headerLink: APPLE_MUSIC_URL_PREFIX + appleMusicId
     })
   );

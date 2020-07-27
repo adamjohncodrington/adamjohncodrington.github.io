@@ -13,17 +13,27 @@ export const MiniCardPanelItemHeader: React.FC<IMiniCardPanelItemHeader> = ({
   headerLink,
   video,
   panelVisible,
+  year,
   isStatic
 }) => {
+  const isMediaListItem: boolean = !!headerLink;
+
   const HeaderContents: ReactElement = (
     <DynamicFontWeightFlexRow bold={!isStatic && panelVisible}>
-      {index && <StyledIndex>{index}.</StyledIndex>}
+      {index && !isMediaListItem && <StyledIndex>{index}.</StyledIndex>}
 
-      {mainText && <StyledLevel1MainText>{mainText[0]}</StyledLevel1MainText>}
+      {mainText && (
+        <StyledLevel1MainText media={isMediaListItem}>
+          {mainText[0]}
+        </StyledLevel1MainText>
+      )}
 
-      <StyledDateText favourite={favourite} video={video}>
-        {getDatesText(dates)}
-      </StyledDateText>
+      {dates ||
+        (year && (
+          <StyledDateText favourite={favourite} media={!!video}>
+            {dates ? getDatesText(dates) : year}
+          </StyledDateText>
+        ))}
     </DynamicFontWeightFlexRow>
   );
 
