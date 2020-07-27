@@ -1,29 +1,29 @@
 import { PAGE_SECTION_TITLES } from "@constants";
-import { POLE as FACTORY } from "factories";
+import { POLE as DATA } from "data-gen";
 import { SVG } from "resources";
 
 const INSTRUCTORS: IPageSection = {
   SvgIcon: SVG.PEOPLE,
   title: PAGE_SECTION_TITLES.INSTRUCTORS,
-  data: { miniCards: FACTORY.INSTRUCTORS }
+  data: { miniCards: DATA.INSTRUCTORS }
 };
 
 const STUDIOS: IPageSection = {
   SvgIcon: SVG.MAP_PIN,
   title: PAGE_SECTION_TITLES.STUDIOS,
-  data: { miniCards: FACTORY.STUDIOS }
+  data: { miniCards: DATA.STUDIOS }
 };
 
 const CONTEMPORARY: IPageSection = {
   title: PAGE_SECTION_TITLES.CONTEMPORARY,
   SvgIcon: SVG.DANCER_MALE_2,
-  data: { videoCards: FACTORY.CONTEMPORARY }
+  data: { videoCards: DATA.CONTEMPORARY }
 };
 
 const EXOTIC: IPageSection = {
   SvgIcon: SVG.HEELS,
   title: PAGE_SECTION_TITLES.EXOTIC,
-  data: { videoCards: FACTORY.EXOTIC }
+  data: { videoCards: DATA.EXOTIC }
 };
 
 const NON_POLE: IPageSection = {
@@ -41,7 +41,7 @@ const SONGS: IPageSection = {
 const IMPROV: IPageSection = {
   SvgIcon: SVG.DANCER_MALE_1,
   title: PAGE_SECTION_TITLES.IMPROV,
-  data: { videoCards: FACTORY.IMPROV }
+  data: { videoCards: DATA.IMPROV }
 };
 
 const PHOTOS: IPageSection = {

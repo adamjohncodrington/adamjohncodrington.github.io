@@ -1,6 +1,6 @@
 import { PAGE_SECTION_TITLES } from "@constants";
 import { RECIPES as DATA } from "data";
-import { RECIPES as FACTORY } from "factories";
+import { RECIPES as DATA_GEN } from "data-gen";
 import { SVG } from "resources";
 
 const MAINS: IPageSection = {
@@ -30,13 +30,13 @@ const SWEETS: IPageSection = {
 const PHOTOS: IPageSection = {
   title: PAGE_SECTION_TITLES.PHOTOS,
   SvgIcon: SVG.CAMERA,
-  data: { photoGrid: { photos: FACTORY.PHOTOS, columnCount: 3 } }
+  data: { photoGrid: { photos: DATA_GEN.PHOTOS, columnCount: 3 } }
 };
 
 const COMING_SOON: IPageSection = {
   title: PAGE_SECTION_TITLES.COMING_SOON,
   SvgIcon: SVG.NOTEPAD,
-  data: { miniCards: FACTORY.COMING_SOON }
+  data: { miniCards: DATA_GEN.COMING_SOON }
 };
 
 export const RECIPES: Array<IPageSection> = [
