@@ -11,10 +11,10 @@ const getActorMatches = (actor: IActor): Array<ITheatreVisit> => {
   return actorMatches;
 };
 
-const getActorDetails = (actor: IActor): Array<IMiniCardDetail> => {
+const getActorDetails = (actor: IActor): Array<IMiniCardPanelItem> => {
   const actorMatches: Array<ITheatreVisit> = getActorMatches(actor);
   return actorMatches.map(
-    (theatreVisit: ITheatreVisit): IMiniCardDetail => {
+    (theatreVisit: ITheatreVisit): IMiniCardPanelItem => {
       const { date } = theatreVisit;
       return { mainText: [getTheatreVisitTitle(theatreVisit)], dates: [date] };
     }

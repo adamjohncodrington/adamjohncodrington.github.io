@@ -8,7 +8,7 @@ export const MiniCardPanel: FC<IMiniCard> = ({ details }) => {
 
   return (
     <StyledOl>
-      {details.map((detail: IMiniCardDetail, index: number) => (
+      {details.map((detail: IMiniCardPanelItem, index: number) => (
         <MiniCardPanelItem
           key={index}
           index={details.length > 1 ? index + 1 : undefined}

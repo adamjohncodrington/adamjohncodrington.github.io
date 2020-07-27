@@ -12,9 +12,9 @@ const getMusicVenueMatches = (musicVenue: IMusicVenue): Array<IMusicEvent> => {
 
 const getMusicVenueDetails = (
   musicVenue: IMusicVenue
-): Array<IMiniCardDetail> =>
+): Array<IMiniCardPanelItem> =>
   getMusicVenueMatches(musicVenue).map(
-    ({ title, dates, video }: IMusicEvent): IMiniCardDetail => ({
+    ({ title, dates, video }: IMusicEvent): IMiniCardPanelItem => ({
       mainText: [title],
       dates,
       video

@@ -9,9 +9,8 @@ import {
 const getMusicianMatches = (musician: IMusician): Array<IMusicEvent> => {
   const musicianMatches: Array<IMusicEvent> = [];
   DATA.forEach((musicEvent: IMusicEvent): void => {
-    if (musicEvent.musicians.includes(musician)) {
+    if (musicEvent.musicians.includes(musician))
       musicianMatches.push(musicEvent);
-    }
   });
   return musicianMatches;
 };
@@ -30,7 +29,7 @@ const getMusicianFestivalDate = (
   return new Date();
 };
 
-const getMusicianDetails = (musician: IMusician): Array<IMiniCardDetail> =>
+const getMusicianDetails = (musician: IMusician): Array<IMiniCardPanelItem> =>
   getMusicianMatches(musician).map(
     ({
       dates,
@@ -39,7 +38,7 @@ const getMusicianDetails = (musician: IMusician): Array<IMiniCardDetail> =>
       venue,
       favourite,
       video
-    }: IMusicEvent): IMiniCardDetail => ({
+    }: IMusicEvent): IMiniCardPanelItem => ({
       mainText: [
         festival ? festival.title.name : moveTheSuffixToPrefix(venue.name)
       ],
@@ -52,7 +51,7 @@ const getMusicianDetails = (musician: IMusician): Array<IMiniCardDetail> =>
 export const MUSICIANS: Array<IMiniCard> = Object.values(musicians).map(
   (musician: IMusician): IMiniCard => {
     const { name, previousStageName, noLongerExists } = musician;
-    const details: Array<IMiniCardDetail> = getMusicianDetails(musician);
+    const details: Array<IMiniCardPanelItem> = getMusicianDetails(musician);
     return {
       text: name,
       secondaryText: previousStageName && previousStageName.name,

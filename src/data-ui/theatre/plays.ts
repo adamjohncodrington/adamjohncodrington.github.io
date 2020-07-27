@@ -28,10 +28,10 @@ const getPlayMatches = (play: IPlay): Array<ITheatreVisit> => {
   return playMatches;
 };
 
-const getPlayDetails = (play: IPlay): Array<IMiniCardDetail> => {
+const getPlayDetails = (play: IPlay): Array<IMiniCardPanelItem> => {
   const playMatches: Array<ITheatreVisit> = getPlayMatches(play);
   return playMatches.map(
-    (theatreVisit: ITheatreVisit): IMiniCardDetail => {
+    (theatreVisit: ITheatreVisit): IMiniCardPanelItem => {
       const { date } = theatreVisit;
       return {
         mainText: [moveTheSuffixToPrefix(theatreVisit.theatre.name)],

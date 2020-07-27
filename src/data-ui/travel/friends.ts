@@ -11,10 +11,10 @@ const getTripsMatchingFriend = (friend: IFriend): Array<ITripLeg> => {
   return tripsMatchingFriend;
 };
 
-const getFriendDetails = (friend: IFriend): Array<IMiniCardDetail> => {
+const getFriendDetails = (friend: IFriend): Array<IMiniCardPanelItem> => {
   const tripsMatchingFriend: Array<ITripLeg> = getTripsMatchingFriend(friend);
   return tripsMatchingFriend.map(
-    (trip: ITripLeg): IMiniCardDetail => {
+    (trip: ITripLeg): IMiniCardPanelItem => {
       const { dates, video } = trip;
       return {
         mainText: [getTripTitle(trip)],

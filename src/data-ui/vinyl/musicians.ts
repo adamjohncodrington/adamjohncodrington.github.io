@@ -5,16 +5,14 @@ import { getItemCounts } from "utils";
 const getMusicianMatches = (musician: IMusician): Array<IVinyl> => {
   const musicianMatches: Array<IVinyl> = [];
   DATA.forEach((vinyl: IVinyl): void => {
-    if (vinyl.musician === musician) {
-      musicianMatches.push(vinyl);
-    }
+    if (vinyl.musician === musician) musicianMatches.push(vinyl);
   });
   return musicianMatches;
 };
 
-const getMusicianDetails = (musician: IMusician): Array<IMiniCardDetail> =>
+const getMusicianDetails = (musician: IMusician): Array<IMiniCardPanelItem> =>
   getMusicianMatches(musician).map(
-    ({ year, title }: IVinyl): IMiniCardDetail => ({
+    ({ year, title }: IVinyl): IMiniCardPanelItem => ({
       mainText: [title],
       dates: [new Date(year)]
     })

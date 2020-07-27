@@ -10,18 +10,16 @@ export const concatenateQuantityAndMeasurement = (
     measurement === MEASUREMENTS.MILLILITRE ||
     measurement === MEASUREMENTS.CENTIMETRE ||
     measurement === MEASUREMENTS.LITRE
-  ) {
+  )
     // 2 + g = 2g
     return displayQuantity + measurement;
-  }
 
   if (
     measurement === MEASUREMENTS.TEASPOON ||
     measurement === MEASUREMENTS.TABLESPOON
-  ) {
+  )
     // 2 + tsp = 2 tsp
     return displayQuantity + " " + measurement;
-  }
 
   if (measurement === MEASUREMENTS.JAR || measurement === MEASUREMENTS.CAN) {
     if (parseInt(displayQuantity) > 1)

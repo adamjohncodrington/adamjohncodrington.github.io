@@ -12,9 +12,9 @@ const getFriendMatches = (friend: IFriend): Array<IMusicEvent> => {
   return friendMatches;
 };
 
-const getFriendDetails = (friend: IFriend): Array<IMiniCardDetail> =>
+const getFriendDetails = (friend: IFriend): Array<IMiniCardPanelItem> =>
   getFriendMatches(friend).map(
-    ({ title, dates, video, favourite }: IMusicEvent): IMiniCardDetail => ({
+    ({ title, dates, video, favourite }: IMusicEvent): IMiniCardPanelItem => ({
       mainText: [title],
       dates,
       favourite,

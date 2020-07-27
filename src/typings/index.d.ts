@@ -111,12 +111,6 @@ interface IVideoCards {
   videoCards: Array<IVideoCard>;
 }
 
-interface IMiniCardDetail extends I__Favourite {
-  video?: IVideo;
-  mainText?: Array<string>;
-  dates: Array<Date>;
-}
-
 interface I__Star {
   star?: boolean;
 }
@@ -129,6 +123,13 @@ interface I__ColumnCount {
   columnCount?: number;
 }
 
+interface IMiniCardPanelItem extends I__Favourite {
+  video?: IVideo;
+  mainText?: Array<string>;
+  dates: Array<Date>;
+  index?: number;
+}
+
 interface IMiniCard
   extends I__SecondaryText,
     I_PastFutureCounts,
@@ -139,19 +140,16 @@ interface IMiniCard
   countInfoIrrelevant?: boolean;
   noLongerExists?: boolean;
   isLeaderboardItem?: boolean;
-  headerLink?: string;
-  details?: Array<IMiniCardDetail>;
+  details?: Array<IMiniCardPanelItem>;
 }
 
 interface IMiniCardHeader extends IMiniCard, IDisclosureHeader {}
 
-interface IMiniCardPanelItem extends IMiniCardDetail {
-  index?: number;
-}
-
 interface IMiniCardPanelItemHeader
   extends IMiniCardPanelItem,
-    IDisclosureHeader {}
+    IDisclosureHeader {
+  headerLink?: string;
+}
 
 interface IStartEndDate {
   start: Date;

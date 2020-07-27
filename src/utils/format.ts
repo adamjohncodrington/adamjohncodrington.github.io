@@ -50,7 +50,7 @@ export const formatMiniCards = (
     ({ details, ...rest }: IMiniCard): IMiniCard => ({
       ...rest,
       details: details
-        ? details.sort((a: IMiniCardDetail, b: IMiniCardDetail): number =>
+        ? details.sort((a: IMiniCardPanelItem, b: IMiniCardPanelItem): number =>
             a.dates[0].valueOf() > b.dates[0].valueOf() ? 1 : -1
           )
         : undefined

@@ -10,17 +10,15 @@ const getFestivalMatches = (
   const festivalMatches: Array<IFestival> = [];
 
   DATA.forEach((festival: IFestival): void => {
-    if (festivalTitle === festival.title) {
-      festivalMatches.push(festival);
-    }
+    if (festivalTitle === festival.title) festivalMatches.push(festival);
   });
 
   return festivalMatches;
 };
 
-const getFestivalDetails = (musician: IMusician): Array<IMiniCardDetail> =>
+const getFestivalDetails = (musician: IMusician): Array<IMiniCardPanelItem> =>
   getFestivalMatches(musician).map(
-    (festival: IFestival): IMiniCardDetail => {
+    (festival: IFestival): IMiniCardPanelItem => {
       const { dates, video } = festival;
       return {
         mainText: [getFestivalSubtitle(festival) || "TBC"],
