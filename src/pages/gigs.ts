@@ -1,4 +1,4 @@
-import { GIGS as DATA } from "data-gen";
+import { GIGS as DATA } from "data-ui";
 import { SVG } from "resources";
 import { GIGS as sections } from "sections";
 

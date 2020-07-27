@@ -1,5 +1,5 @@
 import { PAGE_SECTION_TITLES } from "@constants";
-import { TRAVEL as DATA } from "data-gen";
+import { TRAVEL as DATA } from "data-ui";
 import { SVG } from "resources";
 import { isInFuture } from "utils";
 

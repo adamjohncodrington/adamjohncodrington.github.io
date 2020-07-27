@@ -44,7 +44,7 @@ export const PageSectionPanel: FC<IPageSection> = ({
       <StyledComingSoonPlaceholder>coming soon</StyledComingSoonPlaceholder>
     );
 
-  const cards: Array<ICard> | undefined = musicEvents
+  const cardsMadeTooLate: Array<ICard> | undefined = musicEvents
     ? musicEvents.map(
         (MusicEvent: IMusicEvent): ICard => mapMusicEventToCard(MusicEvent)
       )
@@ -63,8 +63,8 @@ export const PageSectionPanel: FC<IPageSection> = ({
 
   return (
     <PageSectionPanelList pageSectionPanelType={pageSectionPanelType}>
-      {cards &&
-        cards.map((card: ICard, index: number) => (
+      {cardsMadeTooLate &&
+        cardsMadeTooLate.map((card: ICard, index: number) => (
           <Li key={index}>
             <Card {...card} />
           </Li>

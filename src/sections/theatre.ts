@@ -1,5 +1,5 @@
 import { PAGE_SECTION_TITLES } from "@constants";
-import { THEATRE as DATA } from "data-gen";
+import { THEATRE as DATA } from "data-ui";
 import { SVG } from "resources";
 import { isInFuture } from "utils";
 

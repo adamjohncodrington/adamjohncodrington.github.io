@@ -1,5 +1,5 @@
 import { PAGE_SECTION_TITLES } from "@constants";
-import { VINYL as DATA } from "data-gen";
+import { VINYL as DATA } from "data-ui";
 import { SVG } from "resources";
 
 const MUSICIANS: IPageSection = {

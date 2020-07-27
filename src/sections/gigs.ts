@@ -1,5 +1,5 @@
 import { PAGE_SECTION_TITLES } from "@constants";
-import { GIGS as DATA } from "data-gen";
+import { GIGS as DATA } from "data-ui";
 import { SVG } from "resources";
 
 const BUCKET_LIST: IPageSection = {

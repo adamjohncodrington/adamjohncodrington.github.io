@@ -1,6 +1,6 @@
 import { PAGE_SECTION_TITLES } from "@constants";
 import { RECIPES as DATA } from "data-raw";
-import { RECIPES as DATA_GEN } from "data-gen";
+import { RECIPES as DATA_GEN } from "data-ui";
 import { SVG } from "resources";
 
 const MAINS: IPageSection = {
