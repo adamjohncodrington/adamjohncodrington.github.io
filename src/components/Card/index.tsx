@@ -7,12 +7,16 @@ import { CardPanel } from "./CardPanel";
 
 export const Card: React.FC<ICard> = props => {
   const { video, photos } = props;
-  const isStatic: boolean = !(video || (photos && photos.length > 0));
+  const isStaticProp: I__IsStatic = {
+    isStatic: !(video || (photos && photos.length > 0))
+  };
 
   return (
     <Disclosure
-      isStatic={isStatic}
-      Header={hProps => <CardHeader {...hProps} {...props} />}
+      {...isStaticProp}
+      Header={headerProps => (
+        <CardHeader {...headerProps} {...props} {...isStaticProp} />
+      )}
       Panel={() => <CardPanel {...props} />}
     />
   );

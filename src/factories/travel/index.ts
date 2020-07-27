@@ -1,4 +1,4 @@
-import { formatMiniCards, formatVideoCards } from "utils";
+import { formatMiniCards, formatCards } from "utils";
 
 import { HIGHLIGHTS, THEME_PARKS } from "./attractions";
 import { BUCKET_LIST } from "./bucket-list";
@@ -21,6 +21,6 @@ export const TRAVEL = {
   PHOTOS,
   THEME_PARKS: formatMiniCards(THEME_PARKS),
   UP_NEXT,
-  VIDEOS: formatVideoCards(VIDEOS),
+  VIDEOS: formatCards(VIDEOS),
   YEARS
 };

@@ -20,14 +20,11 @@ export const CardHeaderText: React.FC<ICardHeader> = props => {
     secondaryBody,
     note,
     countdownText,
-    video,
-    photos,
+    isStatic,
     hideBody,
     hideSecondaryBody,
     hideSubtitle
   } = props;
-
-  const isStatic: boolean = !(video || (photos && photos.length > 0));
 
   return (
     <CardTextContainer data-test="card-container">

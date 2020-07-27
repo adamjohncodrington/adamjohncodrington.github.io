@@ -1,4 +1,4 @@
-import { formatMiniCards, formatVideoCards } from "utils";
+import { formatMiniCards, formatCards } from "utils";
 
 import { BUCKET_LIST } from "./bucket-list";
 import { FAVOURITES } from "./favourites";
@@ -21,7 +21,7 @@ export const GIGS = {
   SOLO,
   UP_NEXT,
   VENUES: formatMiniCards(VENUES),
-  VIDEOS: formatVideoCards(VIDEOS),
+  VIDEOS: formatCards(VIDEOS),
   YEARS,
 
   pageCount

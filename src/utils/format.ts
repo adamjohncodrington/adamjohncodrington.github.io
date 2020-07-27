@@ -77,7 +77,7 @@ export const formatVinyls = (vinyls: Array<IVinyl>): Array<IVinyl> => {
   return sorted;
 };
 
-export const formatVideoCards = (
+export const formatCards = (
   videoCards: Array<IVideoCard>
 ): Array<IVideoCard> => {
   const sorted: Array<IVideoCard> = videoCards.sort(

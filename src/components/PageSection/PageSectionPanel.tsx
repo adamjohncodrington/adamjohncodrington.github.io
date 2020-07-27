@@ -13,7 +13,7 @@ import { MiniCard } from "../MiniCard";
 import { PhotoGrid } from "../PhotoGrid";
 import { Card } from "../Card";
 import { Recipe } from "../Recipe";
-import { VideoCard } from "../VideoCard";
+import { VideoCard } from "../Card/VideoCard";
 
 import { PageSectionPanelList, StyledComingSoonPlaceholder } from "./styles";
 

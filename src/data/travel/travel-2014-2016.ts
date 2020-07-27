@@ -22,6 +22,7 @@ export const THAILAND_LAOS: ITrip = [
       COUNTRIES.THAILAND.cities.CHIANG_MAI,
       COUNTRIES.THAILAND.towns.PAI
     ],
+    video: VIDEOS.TRAVEL.THAILAND_LAOS,
     showCountryAsTitle: true,
     secondaryLocations: [
       COUNTRIES.THAILAND.attractions.SKY_BAR,
@@ -39,6 +40,7 @@ export const THAILAND_LAOS: ITrip = [
   {
     country: COUNTRIES.LAOS,
     showCountryAsTitle: true,
+    video: VIDEOS.TRAVEL.THAILAND_LAOS,
     primaryLocations: [
       COUNTRIES.LAOS.cities.LUANG_PRABANG,
       COUNTRIES.LAOS.cities.VIENTIANE

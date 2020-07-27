@@ -5,20 +5,22 @@ import { getDatesText } from "utils";
 
 import { StyledLevel1MainText, StyledIndex, StyledDateText } from "./styles";
 
-export const MiniCardPanelItemHeader: React.FC<IMiniCardPanelItemHeader> = props => {
-  const { index, mainText, dates, favourite, video, panelIsVisible } = props;
+export const MiniCardPanelItemHeader: React.FC<IMiniCardPanelItemHeader> = ({
+  index,
+  mainText,
+  dates,
+  favourite,
+  video,
+  panelIsVisible,
+  isStatic
+}) => (
+  <DynamicFontWeightFlexRow bold={!isStatic && panelIsVisible}>
+    {index && <StyledIndex>{index}.</StyledIndex>}
 
-  const isStatic: boolean = !video;
+    {mainText && <StyledLevel1MainText>{mainText[0]}</StyledLevel1MainText>}
 
-  return (
-    <DynamicFontWeightFlexRow bold={!isStatic && panelIsVisible}>
-      {index && <StyledIndex>{index}.</StyledIndex>}
-
-      {mainText && <StyledLevel1MainText>{mainText[0]}</StyledLevel1MainText>}
-
-      <StyledDateText favourite={favourite} video={video}>
-        {getDatesText(dates)}
-      </StyledDateText>
-    </DynamicFontWeightFlexRow>
-  );
-};
+    <StyledDateText favourite={favourite} video={video}>
+      {getDatesText(dates)}
+    </StyledDateText>
+  </DynamicFontWeightFlexRow>
+);

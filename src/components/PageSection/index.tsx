@@ -25,7 +25,9 @@ export const PageSection: React.FC<IPageSection> = props => {
     <PageSectionContainer>
       <Disclosure
         autoExpand={autoExpand}
-        Header={hProps => <PageSectionHeader {...hProps} {...props} />}
+        Header={headerProps => (
+          <PageSectionHeader {...headerProps} {...props} />
+        )}
         Panel={() => <PageSectionPanel {...props} />}
       />
     </PageSectionContainer>
