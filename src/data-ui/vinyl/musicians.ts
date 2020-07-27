@@ -1,5 +1,6 @@
 import { MUSICIANS as musicians } from "@constants";
 import { VINYL_COLLECTION as DATA } from "data-raw";
+import { APPLE_MUSIC_URL_PREFIX } from "config";
 import { getItemCounts } from "utils";
 
 const getMusicianMatches = (musician: IMusician): Array<IVinyl> => {
@@ -12,9 +13,10 @@ const getMusicianMatches = (musician: IMusician): Array<IVinyl> => {
 
 const getMusicianDetails = (musician: IMusician): Array<IMiniCardPanelItem> =>
   getMusicianMatches(musician).map(
-    ({ year, title }: IVinyl): IMiniCardPanelItem => ({
+    ({ year, title, appleMusicId }: IVinyl): IMiniCardPanelItem => ({
       mainText: [title],
-      dates: [new Date(year)]
+      dates: [new Date(year)],
+      headerLink: APPLE_MUSIC_URL_PREFIX + appleMusicId
     })
   );
 
