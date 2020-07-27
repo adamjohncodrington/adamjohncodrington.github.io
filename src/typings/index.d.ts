@@ -1,40 +1,6 @@
 type ITicketType = string;
 type ISvgIcon = React.FC<React.SVGProps<SVGSVGElement>>;
 
-interface I__Favourite {
-  favourite?: boolean;
-}
-
-interface I_Name {
-  name: string;
-}
-
-interface I__Insignificant {
-  insignificant?: boolean;
-}
-
-interface I_PastFutureCounts {
-  futureCount: number;
-  pastCount: number;
-}
-
-interface IDetailItem {
-  text: string;
-  isInFuture: boolean;
-}
-
-interface I_Company {
-  company: Array<IFriend>;
-}
-
-interface I_Date {
-  date: Date;
-}
-
-interface I_Dates {
-  dates: Array<Date>;
-}
-
 interface ICardAll extends I_Company, I__Favourite {
   hideSubtitle?: boolean;
   photos?: Array<IPhoto>;
@@ -171,6 +137,7 @@ interface IPageSectionDataTypes {
   recipes?: Array<IRecipe>;
   theatreVisits?: Array<ITheatreVisit>;
   tripLegs?: Array<ITripLeg>;
+  poleRoutines?: Array<IPoleRoutine>;
   videoCards?: Array<IVideoCard>;
   vinyls?: Array<IAlbum>;
 
@@ -225,7 +192,8 @@ interface IGigVideo extends IVideo {
   musician: IMusician;
 }
 
-interface ITravelVideo extends IVideo {
+interface ITravelVideo {
+  video: IVideo;
   dates: IStartEndDate;
   locations: Array<ILocation>;
 }
@@ -252,7 +220,7 @@ interface ISong {
   year: number;
 }
 
-interface IPoleVideo {
+interface IPoleRoutine {
   video: IVideo;
   date: Date;
   song: ISong;

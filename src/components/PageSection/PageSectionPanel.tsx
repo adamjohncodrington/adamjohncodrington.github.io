@@ -6,7 +6,8 @@ import {
   mapMusicEventToCard,
   mapTheatreVisitToCard,
   mapTripLegToCard,
-  mapAlbumCardToCard
+  mapAlbumCardToCard,
+  mapPoleRoutinesToCards
 } from "utils";
 
 import { MiniCard } from "../MiniCard";
@@ -22,6 +23,8 @@ const { MINI_CARDS, RECIPES, CARDS } = PAGE_SECTION_PANEL_TYPES;
 export const PageSectionPanel: FC<IPageSection> = ({
   data: {
     miniCards,
+
+    poleRoutines,
 
     musicEvents,
     recipes,
@@ -44,10 +47,12 @@ export const PageSectionPanel: FC<IPageSection> = ({
       <StyledComingSoonPlaceholder>coming soon</StyledComingSoonPlaceholder>
     );
 
-  const cardsMadeTooLate: Array<ICard> | undefined = musicEvents
+  const CARD_madetoolate: Array<ICard> | undefined = musicEvents
     ? musicEvents.map(
         (musicEvent: IMusicEvent): ICard => mapMusicEventToCard(musicEvent)
       )
+    : poleRoutines
+    ? mapPoleRoutinesToCards(poleRoutines)
     : theatreVisits
     ? theatreVisits.map(
         (theatreVisit: ITheatreVisit): ICard =>
@@ -63,8 +68,8 @@ export const PageSectionPanel: FC<IPageSection> = ({
 
   return (
     <PageSectionPanelList pageSectionPanelType={pageSectionPanelType}>
-      {cardsMadeTooLate &&
-        cardsMadeTooLate.map((card: ICard, index: number) => (
+      {CARD_madetoolate &&
+        CARD_madetoolate.map((card: ICard, index: number) => (
           <Li key={index}>
             <Card {...card} />
           </Li>

@@ -1,13 +1,13 @@
-import { formatMiniCards, formatCards } from "utils";
+import { formatMiniCards } from "utils";
 
 import { IMPROV, EXOTIC, CONTEMPORARY } from "./videos";
 import { INSTRUCTORS } from "./instructors";
 import { STUDIOS } from "./studios";
 
 export const POLE = {
-  EXOTIC: formatCards(EXOTIC),
-  CONTEMPORARY: formatCards(CONTEMPORARY),
-  IMPROV: formatCards(IMPROV),
+  EXOTIC,
+  CONTEMPORARY,
+  IMPROV,
   INSTRUCTORS: formatMiniCards(INSTRUCTORS),
-  STUDIOS: formatMiniCards(STUDIOS)
+  STUDIOS
 };

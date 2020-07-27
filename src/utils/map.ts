@@ -18,27 +18,45 @@ import { moveTheSuffixToPrefix, getDatesText, getDateText } from "./basic";
 import { getCountdownText } from "./getCountdownText";
 import { generateIngredientListItem } from "./generateIngredientListItem";
 
-export const mapPoleVideoToVideoCard = ({
+export const mapPoleRoutineToCard = ({
   date,
   song: { musician, title },
   video
-}: IPoleVideo): IVideoCard => ({
+}: IPoleRoutine): ICard => ({
   video,
   title: musician.name,
   subtitle: title,
-  dates: [date]
+  secondaryBody: getDateText(date),
+  hideVideoIcon: true,
+  company: []
 });
 
-export const mapPoleVideosToVideoCards = (
-  poleVideos: Array<IPoleVideo>
-): Array<IVideoCard> =>
+export const mapPoleRoutinesToCards = (
+  poleVideos: Array<IPoleRoutine>
+): Array<ICard> =>
   poleVideos.map(
-    (poleVideo: IPoleVideo): IVideoCard => mapPoleVideoToVideoCard(poleVideo)
+    (poleVideo: IPoleRoutine): ICard => mapPoleRoutineToCard(poleVideo)
   );
 
-// export const mapVideoCardToCard = ({title}: IVideoCard): ICard => ({
-
+// export const mapVideoCardToCard = ({
+//   title,
+//   subtitle,
+//   video,
+//   dates
+// }: IVideoCard): ICard => ({
+//   title,
+//   subtitle,
+//   body: getDatesText(dates),
+//   video,
+//   company: []
 // });
+
+// export const mapVideoCardsToCards = (
+//   videoCards: Array<IVideoCard>
+// ): Array<ICard> =>
+//   videoCards.map(
+//     (videoCard: IVideoCard): ICard => mapVideoCardToCard(videoCard)
+//   );
 
 export const mapGigsToMusicEvents = (gigs: Array<IGig>): Array<IMusicEvent> =>
   gigs.map(

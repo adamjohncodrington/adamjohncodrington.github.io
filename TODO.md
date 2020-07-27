@@ -1,6 +1,6 @@
 # TO DO LIST
 
-- merge `VideoCard` into `Card`!!!!
+- ABANDON `VideoCard` and `IVideoCard` entirely!!!
 - do not export recipe data in nest
 
 
