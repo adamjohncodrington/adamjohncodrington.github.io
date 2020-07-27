@@ -26,3 +26,23 @@ interface I_Date {
 interface I_Dates {
   dates: Array<Date>;
 }
+
+interface I__Star {
+  star?: boolean;
+}
+
+interface I__SecondaryText {
+  secondaryText?: string;
+}
+
+interface I__ColumnCount {
+  columnCount?: number;
+}
+
+interface I_Bold {
+  bold: boolean;
+}
+
+interface I__ExcludeFromBucketList {
+  excludeFromBucketList?: boolean;
+}

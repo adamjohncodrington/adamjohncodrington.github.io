@@ -1,29 +1,6 @@
 type ITicketType = string;
 type ISvgIcon = React.FC<React.SVGProps<SVGSVGElement>>;
 
-interface ICardAll extends I_Company, I__Favourite {
-  hideSubtitle?: boolean;
-  photos?: Array<IPhoto>;
-  video?: IVideo;
-
-  hideCompanySymbols?: boolean;
-  hideBody?: boolean;
-  hideSecondaryBody?: boolean;
-  hideFavouriteIcon?: boolean;
-  hidePhotosIcon?: boolean;
-  hideVideoIcon?: boolean;
-}
-
-interface ICard extends ICardAll {
-  title: string;
-  subtitle?: string;
-  body?: string;
-  secondaryBody?: string;
-  countdownText?: string;
-  note?: string;
-  headerPhoto?: IPhotoLink;
-}
-
 interface IPhotoGrid {
   photos: Array<IPhoto>;
   columnCount: number;
@@ -78,80 +55,9 @@ interface IVideoCards {
   videoCards: Array<IVideoCard>;
 }
 
-interface I__Star {
-  star?: boolean;
-}
-
-interface I__SecondaryText {
-  secondaryText?: string;
-}
-
-interface I__ColumnCount {
-  columnCount?: number;
-}
-
-interface IMiniCardPanelItem extends I__Favourite {
-  video?: IVideo;
-  mainText?: Array<string>;
-  dates?: Array<Date>;
-  index?: number;
-  headerLink?: string;
-  year?: number;
-}
-
-interface IMiniCard
-  extends I__SecondaryText,
-    I_PastFutureCounts,
-    I__Favourite,
-    I__Star {
-  text: string;
-  doNotIncludeInList?: boolean;
-  countInfoIrrelevant?: boolean;
-  noLongerExists?: boolean;
-  isLeaderboardItem?: boolean;
-  details?: Array<IMiniCardPanelItem>;
-}
-
-interface IMiniCardHeader extends IMiniCard, IDisclosureHeader {}
-
-interface IMiniCardPanelItemHeader
-  extends IMiniCardPanelItem,
-    IDisclosureHeader {}
-
 interface IStartEndDate {
   start: Date;
   end: Date;
-}
-
-interface IPageSectionPanelTypes {
-  cards?: Array<ICard>;
-  miniCards?: Array<IMiniCard>;
-  recipes?: Array<IRecipe>;
-}
-
-interface IPageSectionDataTypes {
-  comingSoon?: boolean;
-  miniCards?: Array<IMiniCard>;
-  photoGrid?: { photos: Array<IPhoto>; columnCount: number };
-  musicEvents?: Array<IMusicEvent>;
-  recipes?: Array<IRecipe>;
-  theatreVisits?: Array<ITheatreVisit>;
-  tripLegs?: Array<ITripLeg>;
-  poleRoutines?: Array<IPoleRoutine>;
-  videoCards?: Array<IVideoCard>;
-  vinyls?: Array<IAlbum>;
-
-  festivals?: Array<IFestival>;
-  gigs?: Array<IGig>;
-}
-
-interface IPageSection extends I__AutoExpand {
-  title: string;
-  SvgIcon?: ISvgIcon;
-  data: IPageSectionDataTypes;
-  count?: number;
-  starCount?: number;
-  hide?: boolean;
 }
 
 interface IFestivalTitle extends I_Name, I__Insignificant {}
@@ -197,12 +103,6 @@ interface ITravelVideo {
   dates: IStartEndDate;
   locations: Array<ILocation>;
 }
-
-interface I_Bold {
-  bold: boolean;
-}
-
-interface ICardHeader extends ICard, IDisclosureHeader {}
 
 interface IRecipeHeader extends IRecipe, IDisclosureHeader {}
 
@@ -276,10 +176,6 @@ interface IVinyl extends IAlbum {
     | "blue-mist";
   sides: 2 | 4;
   inches: 10 | 12;
-}
-
-interface I__ExcludeFromBucketList {
-  excludeFromBucketList?: boolean;
 }
 
 interface ILocation

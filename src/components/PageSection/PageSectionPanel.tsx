@@ -22,12 +22,12 @@ const { MINI_CARDS, RECIPES, CARDS } = PAGE_SECTION_PANEL_TYPES;
 
 export const PageSectionPanel: FC<IPageSection> = ({
   data: {
+    cards,
     miniCards,
+    recipes,
 
     poleRoutines,
-
     musicEvents,
-    recipes,
     theatreVisits,
     tripLegs,
     vinyls,
@@ -74,12 +74,23 @@ export const PageSectionPanel: FC<IPageSection> = ({
             <Card {...card} />
           </Li>
         ))}
-
       {videoCards &&
         videoCards.map((videoCard: IVideoCard, index: number) => (
           <Li key={index}>
             <VideoCard {...videoCard} />
           </Li>
+        ))}
+      {photoGrid && <PhotoGrid {...photoGrid} />}
+
+      {/* BELOW IS WHAT WE WANT THIS FILE REDUCED TO */}
+      {cards &&
+        cards.map((card: ICard, index: number) => (
+          <Card key={index} {...card} />
+        ))}
+
+      {miniCards &&
+        miniCards.map((miniCard: IMiniCard, index: number) => (
+          <MiniCard key={index} {...miniCard} />
         ))}
 
       {recipes &&
@@ -91,13 +102,6 @@ export const PageSectionPanel: FC<IPageSection> = ({
               </Li>
             )
         )}
-
-      {miniCards &&
-        miniCards.map((miniCard: IMiniCard, index: number) => (
-          <MiniCard key={index} {...miniCard} />
-        ))}
-
-      {photoGrid && <PhotoGrid {...photoGrid} />}
     </PageSectionPanelList>
   );
 };
