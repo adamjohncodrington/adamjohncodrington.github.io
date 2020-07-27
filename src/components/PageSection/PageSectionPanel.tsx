@@ -6,7 +6,7 @@ import {
   mapMusicEventToCard,
   mapTheatreVisitToCard,
   mapTripLegToCard,
-  mapVinylCardToCard
+  mapAlbumCardToCard
 } from "utils";
 
 import { MiniCard } from "../MiniCard";
@@ -57,7 +57,7 @@ export const PageSectionPanel: FC<IPageSection> = ({
     ? tripLegs.map((tripLeg: ITripLeg): ICard => mapTripLegToCard(tripLeg))
     : vinyls
     ? vinyls.map(
-        (vinylCard: IVinylCard): ICard => mapVinylCardToCard(vinylCard)
+        (vinylCard: IAlbumCard): ICard => mapAlbumCardToCard(vinylCard)
       )
     : undefined;
 

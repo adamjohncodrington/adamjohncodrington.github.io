@@ -78,7 +78,7 @@ interface IThemeSymbol {
   textColor: ColorValue;
 }
 
-interface IThemeVinylCard {
+interface IThemeAlbumCard {
   artwork: { margin: { right: PxValue }; size: PxValue };
   notLastChild: { margin: { bottom: PxValue } };
 }
@@ -93,7 +93,7 @@ interface ITheme {
   pageSection: IThemePageSection;
   recipe: IThemeRecipe;
   roundedSymbol: IThemeSymbol;
-  vinyl: IThemeVinylCard;
+  vinyl: IThemeAlbumCard;
 
   fadedOpacity: number;
   fontFamily: IFontFamily;

@@ -78,7 +78,7 @@ const THEME_ROUNDED_SYMBOL: IThemeSymbol = {
   textColor: COLORS.WHITE
 };
 
-const THEME_VINYL_CARD: IThemeVinylCard = {
+const THEME_VINYL_CARD: IThemeAlbumCard = {
   artwork: { margin: { right: "10px" }, size: "100px" },
   notLastChild: { margin: { bottom: "5px" } }
 };

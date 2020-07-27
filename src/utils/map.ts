@@ -1,3 +1,5 @@
+import { APPLE_MUSIC_URL_PREFIX } from "config";
+
 import {
   getGigTitle,
   getGigSubtitle,
@@ -94,24 +96,21 @@ export const mapTripLegToCard = (tripLeg: ITripLeg): ICard => {
   };
 };
 
-export const mapVinylCardToCard = ({
+export const mapAlbumCardToCard = ({
   title,
   musician,
   year,
   artwork,
   hideYear,
   appleMusicId
-}: IVinylCard): ICard => ({
+}: IAlbumCard): ICard => ({
   title,
   subtitle: moveTheSuffixToPrefix(
     getMusicianStageNameAtTime({ musician, year })
   ),
   body: hideYear ? undefined : year.toString(),
   company: [],
-  headerPhoto: {
-    ...artwork,
-    href: "https://music.apple.com/gb/album/" + appleMusicId
-  }
+  headerPhoto: { ...artwork, href: APPLE_MUSIC_URL_PREFIX + appleMusicId }
 });
 
 export const mapMethodToListItems = (

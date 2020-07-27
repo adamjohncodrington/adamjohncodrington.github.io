@@ -139,6 +139,7 @@ interface IMiniCard
   countInfoIrrelevant?: boolean;
   noLongerExists?: boolean;
   isLeaderboardItem?: boolean;
+  headerLink?: string;
   details?: Array<IMiniCardDetail>;
 }
 
@@ -289,6 +290,10 @@ interface IAlbum {
   appleMusicId: string;
 }
 
+interface IAlbumCard extends IAlbum {
+  hideYear?: boolean;
+}
+
 interface IVinyl extends IAlbum {
   signed: boolean;
   color:
@@ -303,10 +308,6 @@ interface IVinyl extends IAlbum {
     | "blue-mist";
   sides: 2 | 4;
   inches: 10 | 12;
-}
-
-interface IVinylCard extends IAlbum {
-  hideYear?: boolean;
 }
 
 interface I__ExcludeFromBucketList {
