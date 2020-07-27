@@ -72,7 +72,6 @@ const islandMatchExists = (islandToMatch: IIsland, trip: ITripLeg): boolean => {
 };
 
 export const getItemCounts = ({
-  data: { festivals, musicEvents, theatreVisits, tripLegs, vinyls },
   item: {
     actor: actorToMatch,
     attraction: attractionToMatch,
@@ -85,7 +84,8 @@ export const getItemCounts = ({
     musicVenue: musicVenueToMatch,
     play: playToMatch,
     theatre: theatreToMatch
-  }
+  },
+  data: { festivals, musicEvents, theatreVisits, tripLegs, vinyls }
 }: IGetItemCounts): I_PastFutureCounts => {
   let pastCount: number = 0;
   let futureCount: number = 0;
@@ -93,18 +93,16 @@ export const getItemCounts = ({
   const incremementPastOrFutureCount = (date: Date): void => {
     if (isInFuture(date)) {
       futureCount += 1;
-    } else {
-      pastCount += 1;
+      return;
     }
+    pastCount += 1;
   };
 
-  // vinyls &&
-  //   musicianToMatch &&
-  //   vinyls.forEach(({ title, musicianToMatch }: IVinyl): void => {
-  //     if (festivalToMatch === title) {
-  //       incremementPastOrFutureCount(dates[0]);
-  //     }
-  //   });
+  vinyls &&
+    musicianToMatch &&
+    vinyls.forEach(({ musician }: IVinyl): void => {
+      if (musicianToMatch === musician) pastCount += 1;
+    });
 
   festivals &&
     festivalToMatch &&
