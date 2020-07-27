@@ -1,4 +1,4 @@
-import { GIGS_AND_FESTIVALS as DATA } from "data";
+import { MUSIC_EVENTS as DATA } from "data";
 
 import { UP_NEXT } from "./up-next";
 

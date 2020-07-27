@@ -8,7 +8,7 @@ interface I__IsStatic {
 
 interface IDisclosureHeader extends I__IsStatic {
   className?: string;
-  panelIsVisible: boolean;
+  panelVisible: boolean;
 }
 
 interface IDisclosure extends I__AutoExpand, I__IsStatic {

@@ -31,19 +31,19 @@ const FRIENDS: IPageSection = {
 const SOLO: IPageSection = {
   SvgIcon: SVG.SOLO,
   title: PAGE_SECTION_TITLES.SOLO,
-  data: { gigsAndFestivals: FACTORY.SOLO }
+  data: { MusicEvents: FACTORY.SOLO }
 };
 
 const FAVOURITES: IPageSection = {
   SvgIcon: SVG.HEART,
   title: PAGE_SECTION_TITLES.FAVOURITES,
-  data: { gigsAndFestivals: FACTORY.FAVOURITES }
+  data: { MusicEvents: FACTORY.FAVOURITES }
 };
 
 const UP_NEXT: IPageSection = {
   SvgIcon: SVG.NOTEPAD,
   title: PAGE_SECTION_TITLES.UP_NEXT,
-  data: { gigsAndFestivals: FACTORY.UP_NEXT },
+  data: { MusicEvents: FACTORY.UP_NEXT },
   count: FACTORY.UP_NEXT.length
 };
 
@@ -62,10 +62,10 @@ const VIDEOS: IPageSection = {
 };
 
 const YEARS: Array<IPageSection> = FACTORY.YEARS.map(
-  (year: Array<IGigOrFestival>): IPageSection => ({
+  (year: Array<IMusicEvent>): IPageSection => ({
     title: year[0].dates[0].getFullYear().toString(),
     count: year.length,
-    data: { gigsAndFestivals: year }
+    data: { MusicEvents: year }
   })
 );
 

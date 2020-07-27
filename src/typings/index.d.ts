@@ -161,7 +161,7 @@ interface IPageSectionDataTypes {
   comingSoon?: boolean;
   miniCards?: Array<IMiniCard>;
   photoGrid?: { photos: Array<IPhoto>; columnCount: number };
-  gigsAndFestivals?: Array<IGigOrFestival>;
+  MusicEvents?: Array<IMusicEvent>;
   recipes?: Array<IRecipe>;
   theatreVisits?: Array<ITheatreVisit>;
   tripLegs?: Array<ITripLeg>;
@@ -200,7 +200,7 @@ interface IGig extends IGigAndFestival, I_Date {
   support?: Array<IMusician>;
 }
 
-interface IGigOrFestival extends IGigAndFestival {
+interface IMusicEvent extends IGigAndFestival {
   gig?: IGig;
   festival?: IFestival;
   title: string;

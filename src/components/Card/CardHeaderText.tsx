@@ -11,7 +11,7 @@ import {
 
 export const CardHeaderText: React.FC<ICardHeader> = props => {
   const {
-    panelIsVisible,
+    panelVisible,
     title,
     subtitle,
     favourite,
@@ -29,7 +29,7 @@ export const CardHeaderText: React.FC<ICardHeader> = props => {
   return (
     <CardTextContainer data-test="card-container">
       <CardTitle
-        bold={!isStatic && panelIsVisible}
+        bold={!isStatic && panelVisible}
         data-test="card-title"
         favourite={!hideFavouriteIcon && favourite}
       >

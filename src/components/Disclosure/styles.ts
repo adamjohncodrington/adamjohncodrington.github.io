@@ -1,12 +1,12 @@
 import styled, { css } from "styled-components";
 
 interface IPanelContainer {
-  panelIsVisible: boolean;
+  panelVisible: boolean;
 }
 
 export const PanelContainer = styled.div(
-  ({ panelIsVisible }: IPanelContainer) =>
-    !panelIsVisible &&
+  ({ panelVisible }: IPanelContainer) =>
+    !panelVisible &&
     css`
       overflow: hidden;
       max-height: 0;

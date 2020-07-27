@@ -19,14 +19,14 @@ interface IPageSectionHeader extends IDisclosureHeader {
 
 export const PageSectionHeader: React.FC<IPageSectionHeader> = ({
   title,
-  panelIsVisible,
+  panelVisible,
   SvgIcon,
   count,
   starCount
 }) => (
   <PageSectionHeaderContainer>
     <FlexRowGrow data-test="section-header-title-and-counts">
-      <PageSectionTitle bold={panelIsVisible} data-test="section-header-title">
+      <PageSectionTitle bold={panelVisible} data-test="section-header-title">
         {title}
       </PageSectionTitle>
 

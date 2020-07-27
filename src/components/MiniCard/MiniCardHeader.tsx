@@ -13,7 +13,7 @@ export const MiniCardHeader: FC<IMiniCardHeader> = ({
   text,
   secondaryText,
   favourite,
-  panelIsVisible,
+  panelVisible,
   star,
   futureCount,
   pastCount,
@@ -28,7 +28,7 @@ export const MiniCardHeader: FC<IMiniCardHeader> = ({
     pastCount > 1 || (futureCount > 0 && pastCount > 0);
 
   return (
-    <DynamicFontWeightFlexRow bold={!isStatic && panelIsVisible}>
+    <DynamicFontWeightFlexRow bold={!isStatic && panelVisible}>
       <StyledTextContainer>
         <StyledMainText faded={fadedMainText} favourite={favourite} star={star}>
           {text}

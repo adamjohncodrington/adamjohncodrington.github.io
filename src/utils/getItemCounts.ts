@@ -63,7 +63,7 @@ const islandMatchExists = (island: IIsland, trip: ITripLeg): boolean => {
 };
 
 export const getItemCounts = ({
-  data: { festivals, gigsAndFestivals, theatreVisits, tripLegs },
+  data: { festivals, MusicEvents, theatreVisits, tripLegs },
   item: {
     actor,
     attraction,
@@ -97,10 +97,10 @@ export const getItemCounts = ({
       }
     });
 
-  gigsAndFestivals &&
+  MusicEvents &&
     (musician || friend || musicVenue) &&
-    gigsAndFestivals.forEach(
-      ({ dates, musicians, venue, company }: IGigOrFestival): void => {
+    MusicEvents.forEach(
+      ({ dates, musicians, venue, company }: IMusicEvent): void => {
         if (
           (musician && musicians.includes(musician)) ||
           (friend && company.includes(friend)) ||

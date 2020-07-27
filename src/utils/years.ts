@@ -46,27 +46,27 @@ export const splitTheatreIntoYears = (
   return years;
 };
 
-export const splitGigsAndFestivalsIntoYears = (
-  gigsAndFestivals: Array<IGigOrFestival>
-): Array<Array<IGigOrFestival>> => {
-  const filtered: Array<IGigOrFestival> = gigsAndFestivals.filter(
-    ({ dates }: IGigOrFestival): boolean => !isInFuture(dates[0])
+export const splitMusicEventsIntoYears = (
+  MusicEvents: Array<IMusicEvent>
+): Array<Array<IMusicEvent>> => {
+  const filtered: Array<IMusicEvent> = MusicEvents.filter(
+    ({ dates }: IMusicEvent): boolean => !isInFuture(dates[0])
   );
-  const sorted: Array<IGigOrFestival> = filtered.sort(
-    (a: IGigOrFestival, b: IGigOrFestival): number =>
+  const sorted: Array<IMusicEvent> = filtered.sort(
+    (a: IMusicEvent, b: IMusicEvent): number =>
       a.dates[0].valueOf() > b.dates[0].valueOf() ? 1 : -1
   );
-  const years: Array<Array<IGigOrFestival>> = [];
+  const years: Array<Array<IMusicEvent>> = [];
   let arrayIndex: number = 0;
   let arrayYear: number = sorted[0].dates[0].getFullYear();
-  sorted.forEach((gigOrFestival: IGigOrFestival): void => {
-    const year: number = gigOrFestival.dates[0].getFullYear();
+  sorted.forEach((MusicEvent: IMusicEvent): void => {
+    const year: number = MusicEvent.dates[0].getFullYear();
     if (year !== arrayYear) {
       arrayIndex += 1;
       arrayYear = year;
     }
     if (!years[arrayIndex]) years[arrayIndex] = [];
-    years[arrayIndex].push(gigOrFestival);
+    years[arrayIndex].push(MusicEvent);
   });
   return years;
 };

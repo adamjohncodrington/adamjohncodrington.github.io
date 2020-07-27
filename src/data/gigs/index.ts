@@ -1,7 +1,4 @@
-import {
-  mapGigsToGigsAndFestivals,
-  mapFestivalsToGigsAndFestivals
-} from "utils";
+import { mapGigsToMusicEvents, mapFestivalsToMusicEvents } from "utils";
 
 import * as festivals from "./festivals";
 import * as GIGS_2006_2010 from "./gigs-2006-2010";
@@ -20,7 +17,7 @@ export const GIGS: Array<IGig> = Object.values({
   ...GIGS_2020_2022
 });
 
-export const GIGS_AND_FESTIVALS: Array<IGigOrFestival> = [
-  ...mapGigsToGigsAndFestivals(GIGS),
-  ...mapFestivalsToGigsAndFestivals(FESTIVALS)
+export const MUSIC_EVENTS: Array<IMusicEvent> = [
+  ...mapGigsToMusicEvents(GIGS),
+  ...mapFestivalsToMusicEvents(FESTIVALS)
 ];

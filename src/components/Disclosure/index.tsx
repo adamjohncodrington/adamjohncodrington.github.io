@@ -10,34 +10,28 @@ export const Disclosure: FC<IDisclosure> = ({
   autoExpand,
   isStatic
 }) => {
-  const [panelIsVisible, switchPanelVisibility] = useState<boolean>(
-    !!(autoExpand || isStatic)
-  );
-  const onClick = (): void => switchPanelVisibility(!panelIsVisible);
+  const [panelVisible, switchPanelVisibility] = useState<boolean>(!!autoExpand);
 
   const ClickableHeader: FC = () => (
-    <StyledDiv onClick={onClick}>
-      <Header panelIsVisible={panelIsVisible} />
+    <StyledDiv onClick={() => switchPanelVisibility(!panelVisible)}>
+      <Header panelVisible={panelVisible} />
     </StyledDiv>
   );
 
   return isStatic ? (
     <>
-      <Header panelIsVisible={panelIsVisible} />
+      <Header panelVisible={true} />
       <Panel />
     </>
   ) : SPEED_UP_PAGE_LOAD ? (
     <>
       <ClickableHeader />
-      {panelIsVisible && <Panel />}
+      {panelVisible && <Panel />}
     </>
   ) : (
     <>
       {ClickableHeader}
-      <PanelContainer
-        data-test="disclosure-panel"
-        panelIsVisible={panelIsVisible}
-      >
+      <PanelContainer data-test="disclosure-panel" panelVisible={panelVisible}>
         <Panel />
       </PanelContainer>
     </>

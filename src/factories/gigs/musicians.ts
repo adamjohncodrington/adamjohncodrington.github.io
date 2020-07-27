@@ -1,16 +1,16 @@
 import { MUSICIANS as musicians } from "@constants";
-import { GIGS_AND_FESTIVALS as DATA } from "data";
+import { MUSIC_EVENTS as DATA } from "data";
 import {
   getItemCounts,
   moveTheSuffixToPrefix,
   detailsContainsFavourite
 } from "utils";
 
-const getMusicianMatches = (musician: IMusician): Array<IGigOrFestival> => {
-  const musicianMatches: Array<IGigOrFestival> = [];
-  DATA.forEach((gigOrFestival: IGigOrFestival): void => {
-    if (gigOrFestival.musicians.includes(musician)) {
-      musicianMatches.push(gigOrFestival);
+const getMusicianMatches = (musician: IMusician): Array<IMusicEvent> => {
+  const musicianMatches: Array<IMusicEvent> = [];
+  DATA.forEach((MusicEvent: IMusicEvent): void => {
+    if (MusicEvent.musicians.includes(musician)) {
+      musicianMatches.push(MusicEvent);
     }
   });
   return musicianMatches;
@@ -39,7 +39,7 @@ const getMusicianDetails = (musician: IMusician): Array<IMiniCardDetail> =>
       venue,
       favourite,
       video
-    }: IGigOrFestival): IMiniCardDetail => ({
+    }: IMusicEvent): IMiniCardDetail => ({
       mainText: [
         festival ? festival.title.name : moveTheSuffixToPrefix(venue.name)
       ],
@@ -59,7 +59,7 @@ export const MUSICIANS: Array<IMiniCard> = Object.values(musicians).map(
       favourite: detailsContainsFavourite(details),
       ...getItemCounts({
         item: { musician },
-        data: { gigsAndFestivals: DATA }
+        data: { MusicEvents: DATA }
       }),
       noLongerExists,
       details

@@ -8,11 +8,12 @@ import {
   getTheatreVisitTitle,
   getTripTitle,
   getTripSubtitle,
-  getTripBody
+  getTripBody,
+  getMusicianStageNameAtTime,
+  getTheatreVisitSubtitle
 } from "./get";
 import { moveTheSuffixToPrefix, getDatesText, getDateText } from "./basic";
 import { getCountdownText } from "./getCountdownText";
-import { getMusicianStageNameAtTime } from "./musician";
 import { generateIngredientListItem } from "./generateIngredientListItem";
 
 export const mapPoleVideoToVideoCard = ({
@@ -33,11 +34,11 @@ export const mapPoleVideosToVideoCards = (
     (poleVideo: IPoleVideo): IVideoCard => mapPoleVideoToVideoCard(poleVideo)
   );
 
-export const mapGigsToGigsAndFestivals = (
-  gigs: Array<IGig>
-): Array<IGigOrFestival> =>
+// export const mapVideoCardToCard = (videoCard: IVideoCard): ICard => ({});
+
+export const mapGigsToMusicEvents = (gigs: Array<IGig>): Array<IMusicEvent> =>
   gigs.map(
-    (gig: IGig): IGigOrFestival => ({
+    (gig: IGig): IMusicEvent => ({
       ...gig,
       gig,
       dates: [gig.date],
@@ -47,11 +48,11 @@ export const mapGigsToGigsAndFestivals = (
     })
   );
 
-export const mapFestivalsToGigsAndFestivals = (
+export const mapFestivalsToMusicEvents = (
   festivals: Array<IFestival>
-): Array<IGigOrFestival> =>
+): Array<IMusicEvent> =>
   festivals.map(
-    (festival: IFestival): IGigOrFestival => ({
+    (festival: IFestival): IMusicEvent => ({
       ...festival,
       festival,
       title: getFestivalTitle(festival),
@@ -60,12 +61,10 @@ export const mapFestivalsToGigsAndFestivals = (
     })
   );
 
-export const mapGigOrFestivalToCard = (
-  gigOrFestival: IGigOrFestival
-): ICard => {
-  const { venue, dates, ticketType } = gigOrFestival;
+export const mapMusicEventToCard = (MusicEvent: IMusicEvent): ICard => {
+  const { venue, dates, ticketType } = MusicEvent;
   return {
-    ...gigOrFestival,
+    ...MusicEvent,
     body: moveTheSuffixToPrefix(venue.name),
     secondaryBody: getDatesText(dates),
     countdownText: getCountdownText(dates[0]),
@@ -78,7 +77,7 @@ export const mapTheatreVisitToCard = (theatreVisit: ITheatreVisit): ICard => {
   return {
     ...theatreVisit,
     title: getTheatreVisitTitle(theatreVisit),
-    // subtitle={getTheatreVisitSubtitle(theatreVisit)}
+    subtitle: getTheatreVisitSubtitle(theatreVisit),
     body: moveTheSuffixToPrefix(theatre.name),
     secondaryBody: getDateText(date)
   };

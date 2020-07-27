@@ -1,13 +1,12 @@
 import { FRIENDS as friends } from "@constants";
-import { GIGS_AND_FESTIVALS as DATA } from "data";
+import { MUSIC_EVENTS as DATA } from "data";
 import { getItemCounts } from "utils";
 
-const getFriendMatches = (friend: IFriend): Array<IGigOrFestival> => {
-  const friendMatches: Array<IGigOrFestival> = [];
+const getFriendMatches = (friend: IFriend): Array<IMusicEvent> => {
+  const friendMatches: Array<IMusicEvent> = [];
 
-  DATA.forEach((gigOrFestival: IGigOrFestival): void => {
-    if (gigOrFestival.company.includes(friend))
-      friendMatches.push(gigOrFestival);
+  DATA.forEach((MusicEvent: IMusicEvent): void => {
+    if (MusicEvent.company.includes(friend)) friendMatches.push(MusicEvent);
   });
 
   return friendMatches;
@@ -15,7 +14,7 @@ const getFriendMatches = (friend: IFriend): Array<IGigOrFestival> => {
 
 const getFriendDetails = (friend: IFriend): Array<IMiniCardDetail> =>
   getFriendMatches(friend).map(
-    ({ title, dates, video, favourite }: IGigOrFestival): IMiniCardDetail => ({
+    ({ title, dates, video, favourite }: IMusicEvent): IMiniCardDetail => ({
       mainText: [title],
       dates,
       favourite,
@@ -28,7 +27,7 @@ export const FRIENDS: Array<IMiniCard> = Object.values(friends)
   .map(
     (friend: IFriend): IMiniCard => ({
       text: friend.name,
-      ...getItemCounts({ item: { friend }, data: { gigsAndFestivals: DATA } }),
+      ...getItemCounts({ item: { friend }, data: { MusicEvents: DATA } }),
       details: getFriendDetails(friend)
     })
   );

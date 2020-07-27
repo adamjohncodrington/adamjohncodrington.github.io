@@ -2,11 +2,9 @@
 
 - merge `VideoCard` into `Card`!!!!
 
-
-
+- refactor symbols!!
 - convert `DAYS TO GO` into a dark number symbol
 
-- implement `.reduce` to calculate a sum
 
 - add `shuffleContent` boolean to `IPageSetion`
 

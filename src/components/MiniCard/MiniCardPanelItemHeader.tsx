@@ -11,10 +11,10 @@ export const MiniCardPanelItemHeader: React.FC<IMiniCardPanelItemHeader> = ({
   dates,
   favourite,
   video,
-  panelIsVisible,
+  panelVisible,
   isStatic
 }) => (
-  <DynamicFontWeightFlexRow bold={!isStatic && panelIsVisible}>
+  <DynamicFontWeightFlexRow bold={!isStatic && panelVisible}>
     {index && <StyledIndex>{index}.</StyledIndex>}
 
     {mainText && <StyledLevel1MainText>{mainText[0]}</StyledLevel1MainText>}

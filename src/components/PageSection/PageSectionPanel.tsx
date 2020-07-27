@@ -3,7 +3,7 @@ import React, { FC } from "react";
 import { PAGE_SECTION_PANEL_TYPES } from "@constants";
 import { Li } from "primitives";
 import {
-  mapGigOrFestivalToCard,
+  mapMusicEventToCard,
   mapTheatreVisitToCard,
   mapTripLegToCard,
   mapVinylCardToCard
@@ -22,7 +22,7 @@ const { MINI_CARDS, RECIPES, CARDS } = PAGE_SECTION_PANEL_TYPES;
 export const PageSectionPanel: FC<IPageSection> = ({
   data: {
     miniCards,
-    gigsAndFestivals,
+    MusicEvents,
     recipes,
     theatreVisits,
     tripLegs,
@@ -43,10 +43,9 @@ export const PageSectionPanel: FC<IPageSection> = ({
       <StyledComingSoonPlaceholder>coming soon</StyledComingSoonPlaceholder>
     );
 
-  const cards: Array<ICard> | undefined = gigsAndFestivals
-    ? gigsAndFestivals.map(
-        (gigOrFestival: IGigOrFestival): ICard =>
-          mapGigOrFestivalToCard(gigOrFestival)
+  const cards: Array<ICard> | undefined = MusicEvents
+    ? MusicEvents.map(
+        (MusicEvent: IMusicEvent): ICard => mapMusicEventToCard(MusicEvent)
       )
     : theatreVisits
     ? theatreVisits.map(

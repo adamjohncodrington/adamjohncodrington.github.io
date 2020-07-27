@@ -24,14 +24,14 @@ export const VideoCard: React.FC<IVideoCard> = ({
   ...video
 }) => (
   <Disclosure
-    Header={({ panelIsVisible }) => (
+    Header={({ panelVisible }) => (
       <VideoCardHeaderContainer>
-        <CardTitle bold={panelIsVisible}>
+        <CardTitle bold={panelVisible}>
           {moveTheSuffixToPrefix(title)}
         </CardTitle>
 
         {subtitle && (
-          <CardSubtitle bold={panelIsVisible}>{subtitle}</CardSubtitle>
+          <CardSubtitle bold={panelVisible}>{subtitle}</CardSubtitle>
         )}
 
         <StyledDateText>{getDatesText(dates)}</StyledDateText>
