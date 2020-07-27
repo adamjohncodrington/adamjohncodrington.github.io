@@ -27,8 +27,8 @@ export const mapPoleRoutinesToCards = (
     video
   }: IPoleRoutine): ICard => ({
     video,
-    title: musician.name,
-    subtitle: title,
+    subtitle: musician.name,
+    title,
     secondaryBody: getDateText(date),
     hideVideoIcon: true,
     company: []
@@ -156,7 +156,6 @@ export const mapServeWithToListItems = (
     lineOptions: Array<IRecipeIngredient>
   ): string => {
     let output: string = "";
-
     lineOptions.forEach(
       ({ ingredient: { displayText } }: IRecipeIngredient, index: number) =>
         (output +=
@@ -169,7 +168,6 @@ export const mapServeWithToListItems = (
 
     return output;
   };
-
   return serveWith.map(
     (lineOptions: Array<IRecipeIngredient>): IRecipeListItem => ({
       listItemText: getServeWithListItem(lineOptions),
@@ -182,7 +180,6 @@ export const mapIngredientsToListItems = (
   ingredientsGroups: Array<Array<IRecipeIngredient>>
 ): Array<IRecipeListItem> => {
   let ingredientsWithPaddingFlags: Array<IRecipeListItem> = [];
-
   ingredientsGroups.forEach(
     (ingredientsGroup: Array<IRecipeIngredient>, INDEX_HIGH: number) => {
       ingredientsGroup.forEach(
@@ -195,6 +192,5 @@ export const mapIngredientsToListItems = (
       );
     }
   );
-
   return ingredientsWithPaddingFlags;
 };
