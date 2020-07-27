@@ -1,6 +1,7 @@
 # TO DO LIST
 
 - merge `VideoCard` into `Card`!!!!
+- do not export recipe data in nest
 
 - reinstate vinyl wish-list
 

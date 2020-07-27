@@ -1,16 +1,14 @@
-import { VINYL as DATA } from "data-raw";
+import { VINYL_COLLECTION, VINYL_WISH_LIST } from "data-raw";
 import { formatMiniCards, formatVinyls } from "utils";
 
 import { MUSICIANS } from "./musicians";
 import { SIGNED } from "./signed";
 import { YEARS } from "./years";
 
-console.log(formatMiniCards(MUSICIANS));
-
 export const VINYL = {
   MUSICIANS: formatMiniCards(MUSICIANS),
-  COLLECTION: formatVinyls(DATA.COLLECTION),
+  COLLECTION: formatVinyls(VINYL_COLLECTION),
   SIGNED,
-  WISH_LIST: DATA.WISH_LIST,
+  WISH_LIST: VINYL_WISH_LIST,
   YEARS
 };
