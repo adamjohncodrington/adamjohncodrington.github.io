@@ -11,7 +11,7 @@ export const Recipe: FC<IRecipe> = recipeProps => {
   return (
     <Disclosure
       autoExpand={newRecipe}
-      Header={headerProps => <RecipeHeader {...headerProps} {...recipeProps} />}
+      Header={hProps => <RecipeHeader {...hProps} {...recipeProps} />}
       Panel={() => <RecipePanel {...recipeProps} />}
     />
   );

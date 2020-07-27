@@ -19,16 +19,18 @@ import { PageSectionPanelList, StyledComingSoonPlaceholder } from "./styles";
 
 const { MINI_CARDS, RECIPES, CARDS } = PAGE_SECTION_PANEL_TYPES;
 
-export const PageSectionPanel: FC<IPageSectionDataTypes> = ({
-  miniCards,
-  gigsAndFestivals,
-  recipes,
-  theatreVisits,
-  tripLegs,
-  vinylCards,
-  photoGrid,
-  videoCards,
-  comingSoon
+export const PageSectionPanel: FC<IPageSection> = ({
+  data: {
+    miniCards,
+    gigsAndFestivals,
+    recipes,
+    theatreVisits,
+    tripLegs,
+    vinylCards,
+    photoGrid,
+    videoCards,
+    comingSoon
+  }
 }) => {
   const pageSectionPanelType: string = recipes
     ? RECIPES

@@ -15,7 +15,6 @@ interface IPageSectionHeader extends IDisclosureHeader {
   count?: number;
   starCount?: number;
   SvgIcon?: ISvgIcon;
-  dataTest: string;
 }
 
 export const PageSectionHeader: React.FC<IPageSectionHeader> = ({
@@ -23,10 +22,9 @@ export const PageSectionHeader: React.FC<IPageSectionHeader> = ({
   panelIsVisible,
   SvgIcon,
   count,
-  starCount,
-  dataTest
+  starCount
 }) => (
-  <PageSectionHeaderContainer data-test={dataTest}>
+  <PageSectionHeaderContainer>
     <FlexRowGrow data-test="section-header-title-and-counts">
       <PageSectionTitle bold={panelIsVisible} data-test="section-header-title">
         {title}

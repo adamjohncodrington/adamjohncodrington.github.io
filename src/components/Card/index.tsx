@@ -12,7 +12,7 @@ export const Card: React.FC<ICard> = cardProps => {
   return (
     <Disclosure
       isStatic={isStatic}
-      Header={headerProps => <CardHeader {...headerProps} {...cardProps} />}
+      Header={hProps => <CardHeader {...hProps} {...cardProps} />}
       Panel={() => <CardPanel {...cardProps} />}
     />
   );

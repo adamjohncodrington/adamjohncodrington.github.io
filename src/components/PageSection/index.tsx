@@ -19,29 +19,14 @@ const PageSectionContainer = styled.section(
   `
 );
 
-export const PageSection: React.FC<IPageSection> = ({
-  title,
-  SvgIcon,
-  autoExpand,
-  data,
-  count,
-  starCount
-}) => {
+export const PageSection: React.FC<IPageSection> = props => {
+  const { autoExpand } = props;
   return (
     <PageSectionContainer>
       <Disclosure
         autoExpand={autoExpand}
-        Header={headerProps => (
-          <PageSectionHeader
-            {...headerProps}
-            title={title}
-            count={count}
-            starCount={starCount}
-            SvgIcon={SvgIcon}
-            dataTest="section-header-container"
-          />
-        )}
-        Panel={() => <PageSectionPanel {...data} />}
+        Header={hProps => <PageSectionHeader {...hProps} {...props} />}
+        Panel={() => <PageSectionPanel {...props} />}
       />
     </PageSectionContainer>
   );
