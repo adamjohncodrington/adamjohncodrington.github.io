@@ -1,10 +1,13 @@
 # TO DO LIST
 
-- review whether parents or children should be styling the children across whole site
+- merge `VideoCard` into `Card`!!!!
+
+
 
 - convert `DAYS TO GO` into a dark number symbol
 
-- merge `VideoCard` into `Card`!!!!
+- implement `.reduce` to calculate a sum
+
 - add `shuffleContent` boolean to `IPageSetion`
 
 - add `details` to vinyl basic lists (artists)
@@ -39,6 +42,7 @@
 
 ## Refactoring
 
+- review whether parents or children should be styling the children across whole site
 - review all instances of `.forEach`, potentially replace with `.reduce`, `.some` and/or `.every`
 - move `BasicListItemPanel` style values to theme??
 - review semantics of page structure, landmarks, accessibility, etc.

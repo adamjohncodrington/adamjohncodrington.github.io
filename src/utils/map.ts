@@ -7,6 +7,7 @@ import {
   getFestivalMusicians,
   getTheatreVisitTitle,
   getTripTitle,
+  getTripSubtitle,
   getTripBody
 } from "./get";
 import { moveTheSuffixToPrefix, getDatesText, getDateText } from "./basic";
@@ -88,7 +89,7 @@ export const mapTripLegToCard = (tripLeg: ITripLeg): ICard => {
   return {
     ...tripLeg,
     title: getTripTitle(tripLeg),
-    // subtitle={getTripSubtitle(trip)}
+    subtitle: getTripSubtitle(tripLeg),
     secondaryBody: getTripBody(tripLeg),
     body: getDatesText(dates)
   };
@@ -101,20 +102,18 @@ export const mapVinylCardToCard = ({
   artwork,
   hideYear,
   appleMusicId
-}: IVinylCard): ICard => {
-  return {
-    title,
-    subtitle: moveTheSuffixToPrefix(
-      getMusicianStageNameAtTime({ musician, year })
-    ),
-    body: hideYear ? undefined : year.toString(),
-    company: [],
-    headerPhoto: {
-      ...artwork,
-      href: "https://music.apple.com/gb/album/" + appleMusicId
-    }
-  };
-};
+}: IVinylCard): ICard => ({
+  title,
+  subtitle: moveTheSuffixToPrefix(
+    getMusicianStageNameAtTime({ musician, year })
+  ),
+  body: hideYear ? undefined : year.toString(),
+  company: [],
+  headerPhoto: {
+    ...artwork,
+    href: "https://music.apple.com/gb/album/" + appleMusicId
+  }
+});
 
 export const mapMethodToListItems = (
   method: Array<string>
