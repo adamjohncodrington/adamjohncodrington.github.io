@@ -23,12 +23,12 @@ const SIGNED: IPageSection = {
   SvgIcon: SVG.PEN
 };
 
-// const WISH_LIST: IPageSection = {
-//   title: PAGE_SECTION_TITLES.WISH_LIST,
-//   SvgIcon: SVG.STARS,
-//   data: { vinyls: DATA.WISH_LIST },
-//   count: DATA.WISH_LIST.length
-// };
+const WISH_LIST: IPageSection = {
+  title: PAGE_SECTION_TITLES.WISH_LIST,
+  SvgIcon: SVG.STARS,
+  data: { vinyls: DATA.WISH_LIST },
+  count: DATA.WISH_LIST.length
+};
 
 const YEARS: Array<IPageSection> = DATA.YEARS.map(
   (yearGroup: Array<IVinyl>): IPageSection => ({
@@ -42,6 +42,6 @@ export const VINYL: Array<IPageSection> = [
   MUSICIANS,
   COLLECTION,
   SIGNED,
-  // WISH_LIST,
+  WISH_LIST,
   ...YEARS
 ];

@@ -3,15 +3,12 @@
 - merge `VideoCard` into `Card`!!!!
 - do not export recipe data in nest
 
-- reinstate vinyl wish-list
 
 - refactor symbols!!
 - convert `DAYS TO GO` into a dark number symbol
 
 
-- add `shuffleContent` boolean to `IPageSetion`
-
-- add `details` to vinyl basic lists (artists)
+- add `shuffleData` boolean to `IPageSetion`
 - reinstate vinyl shuffle functionality
 
 - `RECIPE LIST` / `CARD LIST` / `BASIC LIST`

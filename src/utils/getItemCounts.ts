@@ -100,7 +100,7 @@ export const getItemCounts = ({
 
   vinyls &&
     musicianToMatch &&
-    vinyls.forEach(({ musician }: IVinyl): void => {
+    vinyls.forEach(({ musician }: IAlbum): void => {
       if (musicianToMatch === musician) pastCount += 1;
     });
 

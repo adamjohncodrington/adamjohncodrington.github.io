@@ -171,7 +171,7 @@ interface IPageSectionDataTypes {
   theatreVisits?: Array<ITheatreVisit>;
   tripLegs?: Array<ITripLeg>;
   videoCards?: Array<IVideoCard>;
-  vinyls?: Array<IVinyl>;
+  vinyls?: Array<IAlbum>;
 
   festivals?: Array<IFestival>;
   gigs?: Array<IGig>;
