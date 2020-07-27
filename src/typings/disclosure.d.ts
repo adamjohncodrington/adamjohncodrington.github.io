@@ -1,15 +1,17 @@
-interface IDisclosureHeader {
-  className?: string;
-  panelIsVisible: boolean;
-}
-
 interface I__AutoExpand {
   autoExpand?: boolean;
 }
 
-interface IDisclosure extends I__AutoExpand {
+interface I__IsStatic {
+  isStatic?: boolean;
+}
+
+interface IDisclosureHeader extends I__IsStatic {
+  className?: string;
+  panelIsVisible: boolean;
+}
+
+interface IDisclosure extends I__AutoExpand, I__IsStatic {
   Header: React.FC<IDisclosureHeader>;
   Panel: React.FC;
-  autoExpand?: boolean;
-  isStatic?: boolean;
 }

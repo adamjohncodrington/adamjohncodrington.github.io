@@ -7,11 +7,18 @@ import { MiniCardHeader } from "./MiniCardHeader";
 
 export const MiniCard: FC<IMiniCard> = props => {
   const { details } = props;
+
+  const staticProp: I__IsStatic = {
+    isStatic: !details
+  };
+
   return (
     <li>
       <Disclosure
-        isStatic={!details}
-        Header={hProps => <MiniCardHeader {...hProps} {...props} />}
+        {...staticProp}
+        Header={hProps => (
+          <MiniCardHeader {...hProps} {...props} {...staticProp} />
+        )}
         Panel={() => <MiniCardPanel {...props} />}
       />
     </li>
