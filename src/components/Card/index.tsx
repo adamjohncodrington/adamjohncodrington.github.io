@@ -15,7 +15,7 @@ export const Card: React.FC<ICard> = props => {
     <Disclosure
       {...isStaticProp}
       Header={headerProps => (
-        <CardHeader {...headerProps} {...props} {...isStaticProp} />
+        <CardHeader {...props} {...headerProps} {...isStaticProp} />
       )}
       Panel={() => <CardPanel {...props} />}
     />

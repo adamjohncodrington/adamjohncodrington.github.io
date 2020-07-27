@@ -59,7 +59,7 @@ export const MUSICIANS: Array<IMiniCard> = Object.values(musicians).map(
       favourite: detailsContainsFavourite(details),
       ...getItemCounts({
         item: { musician },
-        data: { MusicEvents: DATA }
+        data: { musicEvents: DATA }
       }),
       noLongerExists,
       details

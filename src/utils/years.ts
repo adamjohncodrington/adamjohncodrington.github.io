@@ -47,9 +47,9 @@ export const splitTheatreIntoYears = (
 };
 
 export const splitMusicEventsIntoYears = (
-  MusicEvents: Array<IMusicEvent>
+  musicEvents: Array<IMusicEvent>
 ): Array<Array<IMusicEvent>> => {
-  const filtered: Array<IMusicEvent> = MusicEvents.filter(
+  const filtered: Array<IMusicEvent> = musicEvents.filter(
     ({ dates }: IMusicEvent): boolean => !isInFuture(dates[0])
   );
   const sorted: Array<IMusicEvent> = filtered.sort(

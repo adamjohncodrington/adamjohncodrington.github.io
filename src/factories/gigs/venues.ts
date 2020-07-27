@@ -29,7 +29,7 @@ export const VENUES: Array<IMiniCard> = Object.values(venues).map(
       favourite,
       ...getItemCounts({
         item: { musicVenue },
-        data: { MusicEvents: DATA }
+        data: { musicEvents: DATA }
       }),
       details: getMusicVenueDetails(musicVenue)
     };

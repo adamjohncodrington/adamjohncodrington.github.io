@@ -27,7 +27,7 @@ export const FRIENDS: Array<IMiniCard> = Object.values(friends)
   .map(
     (friend: IFriend): IMiniCard => ({
       text: friend.name,
-      ...getItemCounts({ item: { friend }, data: { MusicEvents: DATA } }),
+      ...getItemCounts({ item: { friend }, data: { musicEvents: DATA } }),
       details: getFriendDetails(friend)
     })
   );

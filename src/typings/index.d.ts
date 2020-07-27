@@ -161,7 +161,7 @@ interface IPageSectionDataTypes {
   comingSoon?: boolean;
   miniCards?: Array<IMiniCard>;
   photoGrid?: { photos: Array<IPhoto>; columnCount: number };
-  MusicEvents?: Array<IMusicEvent>;
+  musicEvents?: Array<IMusicEvent>;
   recipes?: Array<IRecipe>;
   theatreVisits?: Array<ITheatreVisit>;
   tripLegs?: Array<ITripLeg>;

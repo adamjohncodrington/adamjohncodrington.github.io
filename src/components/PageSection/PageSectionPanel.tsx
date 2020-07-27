@@ -22,7 +22,8 @@ const { MINI_CARDS, RECIPES, CARDS } = PAGE_SECTION_PANEL_TYPES;
 export const PageSectionPanel: FC<IPageSection> = ({
   data: {
     miniCards,
-    MusicEvents,
+
+    musicEvents,
     recipes,
     theatreVisits,
     tripLegs,
@@ -43,8 +44,8 @@ export const PageSectionPanel: FC<IPageSection> = ({
       <StyledComingSoonPlaceholder>coming soon</StyledComingSoonPlaceholder>
     );
 
-  const cards: Array<ICard> | undefined = MusicEvents
-    ? MusicEvents.map(
+  const cards: Array<ICard> | undefined = musicEvents
+    ? musicEvents.map(
         (MusicEvent: IMusicEvent): ICard => mapMusicEventToCard(MusicEvent)
       )
     : theatreVisits

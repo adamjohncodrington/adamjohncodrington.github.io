@@ -8,7 +8,7 @@ const musiciansForBucketList = Object.values(MUSICIANS)
   .map(
     (musician: IMusician): IMusicianCounted => ({
       ...musician,
-      ...getItemCounts({ item: { musician }, data: { MusicEvents: DATA } })
+      ...getItemCounts({ item: { musician }, data: { musicEvents: DATA } })
     })
   )
   .filter(

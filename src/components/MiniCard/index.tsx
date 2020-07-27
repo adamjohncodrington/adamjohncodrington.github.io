@@ -15,7 +15,7 @@ export const MiniCard: FC<IMiniCard> = props => {
       <Disclosure
         {...isStaticProp}
         Header={headerProps => (
-          <MiniCardHeader {...headerProps} {...props} {...isStaticProp} />
+          <MiniCardHeader {...props} {...headerProps} {...isStaticProp} />
         )}
         Panel={() => <MiniCardPanel {...props} />}
       />
