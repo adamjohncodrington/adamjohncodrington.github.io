@@ -2,6 +2,8 @@
 
 - merge `VideoCard` into `Card`!!!!
 
+- reinstate vinyl wish-list
+
 - refactor symbols!!
 - convert `DAYS TO GO` into a dark number symbol
 

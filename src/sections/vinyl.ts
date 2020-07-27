@@ -11,39 +11,29 @@ const MUSICIANS: IPageSection = {
 
 const COLLECTION: IPageSection = {
   title: PAGE_SECTION_TITLES.COLLECTION,
-  data: { vinylCards: { vinyls: DATA.COLLECTION, shuffle: true } },
+  data: { vinyls: DATA.COLLECTION },
   count: DATA.COLLECTION.length,
   SvgIcon: SVG.BRIEFCASE
 };
 
 const SIGNED: IPageSection = {
   title: PAGE_SECTION_TITLES.SIGNED,
-  data: { vinylCards: { vinyls: DATA.SIGNED, shuffle: true } },
+  data: { vinyls: DATA.SIGNED },
   count: DATA.SIGNED.length,
   SvgIcon: SVG.PEN
 };
 
-const WISH_LIST: IPageSection = {
-  title: PAGE_SECTION_TITLES.WISH_LIST,
-  SvgIcon: SVG.STARS,
-  data: { vinylCards: { vinyls: DATA.WISH_LIST, shuffle: true } },
-  count: DATA.WISH_LIST.length
-};
+// const WISH_LIST: IPageSection = {
+//   title: PAGE_SECTION_TITLES.WISH_LIST,
+//   SvgIcon: SVG.STARS,
+//   data: { vinyls: DATA.WISH_LIST },
+//   count: DATA.WISH_LIST.length
+// };
 
 const YEARS: Array<IPageSection> = DATA.YEARS.map(
   (yearGroup: Array<IVinyl>): IPageSection => ({
     title: yearGroup[0].year.toString(),
-    data: {
-      vinylCards: {
-        shuffle: false,
-        vinyls: yearGroup.map(
-          (vinyl: IVinyl): IVinylCard => ({
-            ...vinyl,
-            hideYear: true
-          })
-        )
-      }
-    },
+    data: { vinyls: yearGroup },
     count: yearGroup.length
   })
 );
@@ -52,6 +42,6 @@ export const VINYL: Array<IPageSection> = [
   MUSICIANS,
   COLLECTION,
   SIGNED,
-  WISH_LIST,
+  // WISH_LIST,
   ...YEARS
 ];

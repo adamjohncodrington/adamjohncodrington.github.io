@@ -10,17 +10,17 @@ export const formatMiniCards = (
 ): Array<IMiniCard> => {
   const isLeaderboard: boolean = !!(options && options.isLeaderboard);
 
-  const reduced = miniCards.reduce(
-    (newArray: Array<IMiniCard>, current: IMiniCard) => {
-      const duplicate = newArray.find(
-        (item: IMiniCard): boolean => item.text === current.text
-      );
-      return duplicate ? newArray : [...newArray, current];
-    },
-    []
-  );
+  // const reduced = miniCards.reduce(
+  //   (newArray: Array<IMiniCard>, current: IMiniCard) => {
+  //     const duplicate = newArray.find(
+  //       (item: IMiniCard): boolean => item.text === current.text
+  //     );
+  //     return duplicate ? newArray : [...newArray, current];
+  //   },
+  //   []
+  // );
 
-  const filtered: Array<IMiniCard> = reduced.filter(
+  const filtered: Array<IMiniCard> = miniCards.filter(
     ({ futureCount, pastCount, countInfoIrrelevant }: IMiniCard): boolean =>
       countInfoIrrelevant || futureCount !== 0 || pastCount !== 0
   );

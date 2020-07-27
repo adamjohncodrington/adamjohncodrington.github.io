@@ -4,7 +4,7 @@ export const validPageSectionData = ({
   recipes,
   theatreVisits,
   tripLegs,
-  vinylCards
+  vinyls
 }: IPageSectionDataTypes): boolean =>
   !(
     (miniCards && miniCards.length === 0) ||
@@ -13,5 +13,5 @@ export const validPageSectionData = ({
       recipes.filter((item: IRecipe): boolean => !item.hide).length === 0) ||
     (theatreVisits && theatreVisits.length === 0) ||
     (tripLegs && tripLegs.length === 0) ||
-    (vinylCards && vinylCards.vinyls.length === 0)
+    (vinyls && vinyls.length === 0)
   );

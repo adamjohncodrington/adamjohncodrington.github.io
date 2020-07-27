@@ -27,7 +27,7 @@ export const PageSectionPanel: FC<IPageSection> = ({
     recipes,
     theatreVisits,
     tripLegs,
-    vinylCards,
+    vinyls,
     photoGrid,
     videoCards,
     comingSoon
@@ -55,8 +55,8 @@ export const PageSectionPanel: FC<IPageSection> = ({
       )
     : tripLegs
     ? tripLegs.map((tripLeg: ITripLeg): ICard => mapTripLegToCard(tripLeg))
-    : vinylCards
-    ? vinylCards.vinyls.map(
+    : vinyls
+    ? vinyls.map(
         (vinylCard: IVinylCard): ICard => mapVinylCardToCard(vinylCard)
       )
     : undefined;

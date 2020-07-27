@@ -157,6 +157,12 @@ interface IStartEndDate {
   end: Date;
 }
 
+interface IPageSectionPanelTypes {
+  cards?: Array<ICard>;
+  miniCards?: Array<IMiniCard>;
+  recipes?: Array<IRecipe>;
+}
+
 interface IPageSectionDataTypes {
   comingSoon?: boolean;
   miniCards?: Array<IMiniCard>;
@@ -166,10 +172,8 @@ interface IPageSectionDataTypes {
   theatreVisits?: Array<ITheatreVisit>;
   tripLegs?: Array<ITripLeg>;
   videoCards?: Array<IVideoCard>;
-  vinylCards?: IVinylCards;
-}
+  vinyls?: Array<IVinyl>;
 
-interface IPageSectionDataTypesExtended extends IPageSectionDataTypes {
   festivals?: Array<IFestival>;
   gigs?: Array<IGig>;
 }
@@ -303,11 +307,6 @@ interface IVinyl extends IAlbum {
 
 interface IVinylCard extends IAlbum {
   hideYear?: boolean;
-}
-
-interface IVinylCards {
-  vinyls: Array<IVinylCard>;
-  shuffle: boolean;
 }
 
 interface I__ExcludeFromBucketList {
