@@ -1,13 +1,16 @@
-import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
-
-import { recipeMethodEntries } from "utils";
+import {
+  INGREDIENTS,
+  MEASUREMENTS,
+  DIETS,
+  RECIPE_METHOD_ENTRIES
+} from "@constants";
 
 const {
   preheatOven,
   FOLD_IN_FLOUR_MIX,
   transferToLoafTin,
   bakeForAbout
-} = recipeMethodEntries();
+} = RECIPE_METHOD_ENTRIES;
 
 const ingredients: Array<Array<IRecipeIngredient>> = [
   [

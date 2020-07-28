@@ -1,7 +1,11 @@
-import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
+import {
+  INGREDIENTS,
+  MEASUREMENTS,
+  DIETS,
+  RECIPE_METHOD_ENTRIES
+} from "@constants";
 import { PHOTOS } from "resources";
-
-import { recipeMethodEntries, calculateRecipeCost } from "utils";
+import { calculateRecipeCost } from "utils";
 
 const {
   LEAVE_TO_COOL_BEFORE_REMOVING_FROM_LOAF_TIN,
@@ -9,7 +13,7 @@ const {
   preheatOven,
   bakeForAbout,
   transferToLoafTin
-} = recipeMethodEntries();
+} = RECIPE_METHOD_ENTRIES;
 
 const ingredients: Array<Array<IRecipeIngredient>> = [
   [

@@ -9,7 +9,6 @@ export * from "./concatenateQuantityAndMeasurement";
 export * from "./media-queries";
 export * from "./getIngredientsHeader";
 export * from "./generateIngredientListItem";
-export * from "./recipeMethodEntries";
 
 export * from "./years";
 export * from "./format";

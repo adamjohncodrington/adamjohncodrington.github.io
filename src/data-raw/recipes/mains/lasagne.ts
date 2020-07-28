@@ -1,9 +1,14 @@
-import { INGREDIENTS, MEASUREMENTS, UNICODE, DIETS } from "@constants";
+import {
+  INGREDIENTS,
+  MEASUREMENTS,
+  UNICODE,
+  DIETS,
+  RECIPE_METHOD_ENTRIES
+} from "@constants";
 import { PHOTOS } from "resources";
+import { calculateRecipeCost } from "utils";
 
-import { recipeMethodEntries, calculateRecipeCost } from "utils";
-
-const { preheatOven } = recipeMethodEntries();
+const { preheatOven } = RECIPE_METHOD_ENTRIES;
 
 const ingredients: Array<Array<IRecipeIngredient>> = [
   [
