@@ -8,16 +8,12 @@
 
 - auto sort `Card`s by date
 
-- rationalise `IVideo` into `I_Video` and `I__Video`
+- make photo grid truncate the number of photos in the array based on the column count
 
 - refactor symbols!!
 - convert `DAYS TO GO` into a dark number symbol
 
 
-- add `shuffleData` boolean to `IPageSetion`
-- reinstate vinyl shuffle functionality
-
-- `RECIPE LIST` / `CARD LIST` / `BASIC LIST`
 - reinstate festival videos
 - add symbols to vinyl cards to indicate color and side count
 
@@ -25,9 +21,8 @@
 - review outstanding `//TODO:`s
 - split festivals into `IDayFestival`, `IMultiDayFestival`, `INightOut`, etc.
 - make festival dates prop `start/end`???
-- implement sorting at `PageSectionLayout` level
+- 
 - totally refactor `travel` in `@constants`
-- add Apple Music links and details to Vinyl `artists` section
 
 ## Enhancements
 

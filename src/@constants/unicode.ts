@@ -1,6 +1,6 @@
 // Characters
 export const HEART: string = "♥";
-export const TRIANGLE_RIGHT: string = "▶︎";
+export const TRIANGLE_PLAY: string = "▶︎";
 export const TRIANGLE_RIGHT_ALT: string = "►";
 export const SQUARE: string = "■";
 export const CIRCLE: string = "•";

@@ -4,7 +4,7 @@ import { UNICODE } from "@constants";
 import { FlexRow } from "primitives";
 import { getPseudoElementBefore, getPseudoElementAfter } from "styles";
 
-const { HEART, STAR, TRIANGLE_RIGHT } = UNICODE;
+const { HEART, STAR, TRIANGLE_PLAY } = UNICODE;
 
 interface IStyledMainText extends I_Theme, I__Favourite, I__Star {
   faded: boolean;
@@ -91,7 +91,7 @@ export const StyledLevel1MainText = styled.div(
     flex: 1;
     margin-right: 15px;
 
-    ${useTriangleAsBullet && getPseudoElementBefore(TRIANGLE_RIGHT)}
+    ${useTriangleAsBullet && getPseudoElementBefore(TRIANGLE_PLAY)}
   `
 );
 
@@ -102,17 +102,11 @@ export const StyledIndex = styled.div`
 interface IStyledDateText extends I__Favourite, I_ShowVideoSymbol {}
 
 export const StyledDateText = styled.div(
-  ({ favourite, showVideoSymbol: video }: IStyledDateText) =>
-    (favourite || video) &&
-    getPseudoElementAfter(
-      favourite && !video
-        ? HEART
-        : video && !favourite
-        ? TRIANGLE_RIGHT
-        : video && favourite
-        ? HEART + " " + TRIANGLE_RIGHT
-        : ""
-    )
+  ({ favourite, showVideoSymbol: video }: IStyledDateText) => css`
+    ${favourite && !video && getPseudoElementAfter(HEART)};
+    ${video && !favourite && getPseudoElementAfter(TRIANGLE_PLAY)};
+    ${favourite && video && getPseudoElementAfter(HEART + " " + TRIANGLE_PLAY)};
+  `
 );
 
 export const StyledPanelContainer = styled.div``;
