@@ -126,7 +126,7 @@ interface IPoleRoutine {
   song: ISong;
   category: IPoleCategory;
   studio: IPoleStudio;
-  instructor: IPoleInstructor | "none";
+  choreographer: IPoleInstructor;
 }
 
 interface IPoleStudio {
