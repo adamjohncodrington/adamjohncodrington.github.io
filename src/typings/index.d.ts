@@ -39,12 +39,6 @@ interface IVideo extends I_OrientationQuality {
   youtubeId: string;
 }
 
-interface IVideoCard extends I_Dates {
-  title: string;
-  video: IVideo;
-  subtitle?: string;
-}
-
 interface IStartEndDate {
   start: Date;
   end: Date;

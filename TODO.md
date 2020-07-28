@@ -1,6 +1,5 @@
 # TO DO LIST
 
-- ABANDON `VideoCard` and `IVideoCard` entirely!!!!!
 - do not export recipe data in nest
 
 - ditch `IPreCard` altogether
