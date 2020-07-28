@@ -2,12 +2,11 @@ import React, { FC } from "react";
 
 import { SquareImage } from "primitives";
 import {
-  getIngredientsHeader,
-  numberToCurrencyString,
   mapMethodToListItems,
   mapServeWithToListItems,
   mapIngredientsToListItems
-} from "utils";
+} from "data-factories";
+import { getIngredientsHeader, numberToCurrencyString } from "utils";
 
 import { List } from "./RecipeList";
 

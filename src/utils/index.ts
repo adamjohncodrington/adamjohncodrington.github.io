@@ -14,5 +14,4 @@ export * from "./recipeMethodEntries";
 
 export * from "./years";
 export * from "./format";
-export * from "./map";
 export * from "./get";

@@ -2,13 +2,14 @@ import React, { FC } from "react";
 
 import { PAGE_SECTION_PANEL_TYPES } from "@constants";
 import { Li } from "primitives";
+//TODO: we should not be importing factories at this UI level!!!
 import {
-  mapPoleRoutinesToCards,
   mapMusicEventsToCards,
+  mapPoleRoutinesToCards,
   mapTheatreVisitsToCards,
   mapTripLegsToCards,
   mapAlbumsToCards
-} from "utils";
+} from "data-factories";
 
 import { MiniCard } from "../MiniCard";
 import { PhotoGrid } from "../PhotoGrid";
