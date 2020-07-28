@@ -8,6 +8,7 @@ import {
   mapPoleRoutinesToCards,
   mapTheatreVisitsToCards,
   mapTripLegsToCards,
+  mapTravelVideosToCards,
   mapAlbumsToCards
 } from "data-factories";
 
@@ -31,6 +32,7 @@ export const PageSectionPanel: FC<IPageSection> = ({
     // DATA TYPES
     poleRoutines,
     musicEvents,
+    travelVideos,
     theatreVisits,
     tripLegs,
     vinyls,
@@ -60,6 +62,8 @@ export const PageSectionPanel: FC<IPageSection> = ({
     ? mapTripLegsToCards(tripLegs)
     : vinyls
     ? mapAlbumsToCards(vinyls)
+    : travelVideos
+    ? mapTravelVideosToCards(travelVideos)
     : undefined;
 
   return (

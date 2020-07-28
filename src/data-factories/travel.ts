@@ -22,6 +22,7 @@ export const mapTravelVideosToCards = (
       { useAmpersandsForPair: true }
     ),
     company: [],
+    hideVideoSymbol: true,
     secondaryBody: getDatesText([dates.start, dates.end])
   });
 

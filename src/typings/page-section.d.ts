@@ -12,6 +12,7 @@ interface IPageSectionDataTypes extends IPageSectionPanelTypes {
   tripLegs?: Array<ITripLeg>;
   poleRoutines?: Array<IPoleRoutine>;
   videoCards?: Array<IVideoCard>;
+  travelVideos?: Array<ITravelVideo>;
   vinyls?: Array<IAlbum>;
 
   festivals?: Array<IFestival>;

@@ -59,8 +59,7 @@ const UP_NEXT: IPageSection = {
 const VIDEOS: IPageSection = {
   SvgIcon: SVG.VIDEO_CAMERA,
   title: PAGE_SECTION_TITLES.VIDEOS,
-  //TODO: change
-  data: { videoCards: DATA.VIDEOS }
+  data: { travelVideos: DATA.VIDEOS }
 };
 
 const PHOTOS: IPageSection = {

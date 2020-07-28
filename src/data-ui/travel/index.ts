@@ -21,6 +21,6 @@ export const TRAVEL = {
   PHOTOS,
   THEME_PARKS: formatMiniCards(THEME_PARKS),
   UP_NEXT,
-  VIDEOS: formatCards(VIDEOS),
+  VIDEOS,
   YEARS
 };
