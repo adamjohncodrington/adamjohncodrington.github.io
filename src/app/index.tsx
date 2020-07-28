@@ -3,7 +3,7 @@ import styled, { css } from "styled-components";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 
 import { PageHeader, PageSections, NavBar } from "components";
-import { PAGES } from "pages";
+import { PAGES as pages } from "pages";
 
 const PageShell = styled.main(
   ({ theme: { navBar, pageLayout } }: I_Theme) => css`
@@ -13,22 +13,27 @@ const PageShell = styled.main(
   `
 );
 
-export const App: FC = () => (
-  <BrowserRouter>
-    <Switch>
-      {PAGES.map(({ title, path, count, sections }: IPage, index: number) => (
-        <Route key={index} path={path}>
-          <NavBar pages={PAGES} />
+export const App: FC = () => {
+  const PAGES: Array<IPage> = pages.filter(({ hide }: IPage): boolean => !hide);
+  return (
+    <BrowserRouter>
+      <Switch>
+        {PAGES.filter(({ hide }: IPage): boolean => !hide).map(
+          ({ title, path, count, sections }: IPage, index: number) => (
+            <Route key={index} path={path}>
+              <NavBar pages={PAGES} />
 
-          <PageShell data-test="page-content">
-            <PageHeader titleText={title} count={count} />
+              <PageShell data-test="page-content">
+                <PageHeader titleText={title} count={count} />
 
-            <PageSections pageSections={sections} />
-          </PageShell>
-        </Route>
-      ))}
+                <PageSections pageSections={sections} />
+              </PageShell>
+            </Route>
+          )
+        )}
 
-      <Redirect from="/" to={PAGES[0].path} />
-    </Switch>
-  </BrowserRouter>
-);
+        <Redirect from="/" to={PAGES[0].path} />
+      </Switch>
+    </BrowserRouter>
+  );
+};

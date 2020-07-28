@@ -11,7 +11,7 @@ interface IFriend extends IPerson {
   theatre?: boolean;
 }
 
-interface IPage {
+interface IPage extends I__Hide {
   title: string;
   path: string;
   SvgIcon: ISvgIcon;
