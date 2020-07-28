@@ -5,20 +5,22 @@ import * as COLORS from "./colors";
 import { FONT_SIZES } from "./font-sizes";
 import { fontFamily, scrollbarSize } from "./GlobalStyle";
 
+const { BOULDER, BLACK, GRAY, WHITE, GAINSBORO } = COLORS;
+
 const THEME_COUNTED_LIST_ITEM: IThemeMiniCard = {
   count: { margin: { left: "5px" }, width: "20px" }
 };
 
 const THEME_CARD: IThemeCard = {
-  companySymbol: { color: COLORS.BOULDER, spaceBetweenSymbols: "5px" },
+  companySymbol: { color: BOULDER, spaceBetweenSymbols: "5px" },
   notFirstChild: { margin: { top: "5px" } },
   photo: { size: "75px" }
 };
 
 const THEME_NAV_BAR: IThemeNavBar = {
-  background: COLORS.BLACK,
+  background: BLACK,
   icon: {
-    color: COLORS.WHITE,
+    color: WHITE,
     size: "32px",
     defaultHoverColor: "#aaa",
     hoverShrinkSize: "0"
@@ -32,9 +34,9 @@ const THEME_PAGE_HEADER: IThemePageHeader = {
 };
 
 const THEME_PAGE_SECTION: IThemePageSection = {
-  background: COLORS.GAINSBORO,
+  background: GAINSBORO,
   borderRadius: "10px",
-  boxShadow: `0 1px 2px ${rgba(COLORS.GRAY, 0.5)}`,
+  boxShadow: `0 1px 2px ${rgba(GRAY, 0.5)}`,
   comingSoon: { fontSize: FONT_SIZES.L },
   count: { margin: { left: "7px" } },
   header: { padding: { vertical: "12px" } },
@@ -76,7 +78,7 @@ const THEME_SYMBOL: IThemeSymbol = {
   fontSize: "75%",
   iconSize: "60%",
   size: "26px",
-  textColor: COLORS.WHITE
+  textColor: WHITE
 };
 
 const THEME_VINYL_CARD: IThemeAlbumCard = {

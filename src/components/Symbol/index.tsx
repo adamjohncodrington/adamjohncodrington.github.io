@@ -6,6 +6,8 @@ import { COLORS } from "styles";
 
 interface IStyledSymbol extends ISymbol, I_Theme {}
 
+const { BLACK } = COLORS;
+
 const StyledSymbol = styled.div(
   ({
     opacity,
@@ -13,7 +15,7 @@ const StyledSymbol = styled.div(
       roundedSymbol: { borderRadius, fontSize, iconSize, size, textColor }
     }
   }: IStyledSymbol) => css`
-    background: ${COLORS.BLACK};
+    background: ${BLACK};
     border-radius: ${borderRadius};
     color: ${textColor};
     font-size: ${fontSize};
