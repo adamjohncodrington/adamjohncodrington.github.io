@@ -1,7 +1,4 @@
-import {
-  mapGigsToMusicEvents,
-  mapFestivalsToMusicEvents
-} from "data-factories";
+import { mapGigsToMusicEvents, mapFestivalsToMusicEvents } from "data-utils";
 
 import * as festivals from "./festivals";
 import * as GIGS_2006_2010 from "./gigs-2006-2010";
