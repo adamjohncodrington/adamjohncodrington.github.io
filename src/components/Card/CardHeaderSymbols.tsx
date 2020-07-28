@@ -8,8 +8,8 @@ export const CardHeaderSymbols: React.FC<ICard> = ({
   company,
   video,
   photos,
-  hidePhotosIcon,
-  hideVideoIcon,
+  hidePhotoSymbol,
+  hideVideoSymbol,
   hideCompanySymbols
 }) => {
   if (!(company.length > 0 || video)) return null;
@@ -28,11 +28,11 @@ export const CardHeaderSymbols: React.FC<ICard> = ({
             </Symbol>
           ))}
 
-      {photos && !hidePhotosIcon && (
+      {photos && !hidePhotoSymbol && (
         <Symbol type="photo" opacity={!hideCompanySymbols ? "100%" : "50%"} />
       )}
 
-      {video && !hideVideoIcon && (
+      {video && !hideVideoSymbol && (
         <Symbol type="video" opacity={!hideCompanySymbols ? "100%" : "50%"} />
       )}
     </CardSymbolsContainer>

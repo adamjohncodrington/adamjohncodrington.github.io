@@ -14,29 +14,14 @@ import {
   getMusicianStageNameAtTime,
   getTheatreVisitSubtitle
 } from "./get";
-import { moveTheSuffixToPrefix, getDatesText, getDateText } from "./basic";
+import {
+  moveTheSuffixToPrefix,
+  getDatesText,
+  getDateText,
+  arrayToString
+} from "./basic";
 import { getCountdownText } from "./getCountdownText";
 import { generateIngredientListItem } from "./generateIngredientListItem";
-
-export const mapPoleRoutinesToCards = (
-  poleVideos: Array<IPoleRoutine>
-): Array<ICard> => {
-  const mapPoleRoutineToCard = ({
-    date,
-    song: { musician, title },
-    video
-  }: IPoleRoutine): ICard => ({
-    video,
-    subtitle: musician.name,
-    title,
-    secondaryBody: getDateText(date),
-    hideVideoIcon: true,
-    company: []
-  });
-  return poleVideos.map(
-    (poleVideo: IPoleRoutine): ICard => mapPoleRoutineToCard(poleVideo)
-  );
-};
 
 export const mapGigsToMusicEvents = (gigs: Array<IGig>): Array<IMusicEvent> => {
   const mapGigToMusicEvent = (gig: IGig): IMusicEvent => ({
@@ -62,6 +47,50 @@ export const mapFestivalsToMusicEvents = (
   });
   return festivals.map(
     (festival: IFestival): IMusicEvent => mapFestivalToMusicEvent(festival)
+  );
+};
+
+export const mapPoleRoutinesToCards = (
+  poleVideos: Array<IPoleRoutine>
+): Array<ICard> => {
+  const mapPoleRoutineToCard = ({
+    date,
+    song: { musician, title },
+    video
+  }: IPoleRoutine): ICard => ({
+    video,
+    subtitle: musician.name,
+    title,
+    secondaryBody: getDateText(date),
+    hideVideoSymbol: true,
+    company: []
+  });
+  return poleVideos.map(
+    (poleVideo: IPoleRoutine): ICard => mapPoleRoutineToCard(poleVideo)
+  );
+};
+
+export const mapTravelVideosToCards = (
+  travelVideos: Array<ITravelVideo>
+): Array<ICard> => {
+  const mapTravelVideoToCard = ({
+    dates,
+    locations,
+    ...video
+  }: ITravelVideo): ICard => ({
+    video,
+    title: arrayToString(
+      locations.map(
+        ({ name, shortName }: ILocation): string => shortName || name
+      ),
+      { useAmpersandsForPair: true }
+    ),
+    company: [],
+    secondaryBody: getDatesText([dates.start, dates.end])
+  });
+
+  return travelVideos.map(
+    (travelVideo: ITravelVideo): ICard => mapTravelVideoToCard(travelVideo)
   );
 };
 

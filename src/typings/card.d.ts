@@ -6,8 +6,8 @@ interface IPreCard extends I_Company, I__Favourite {
   hideBody?: boolean;
   hideSecondaryBody?: boolean;
   hideFavouriteIcon?: boolean;
-  hidePhotosIcon?: boolean;
-  hideVideoIcon?: boolean;
+  hidePhotoSymbol?: boolean;
+  hideVideoSymbol?: boolean;
 }
 
 interface ICard extends IPreCard {

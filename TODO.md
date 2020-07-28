@@ -3,6 +3,8 @@
 - ABANDON `VideoCard` and `IVideoCard` entirely!!!!!
 - do not export recipe data in nest
 
+- ditch `IPreCard` altogether
+
 - rename `pastCount` and `futureCount` on `MiniCard` as `primaryCount` and `secondaryCount` and make them non-compulsory
 
 - auto sort `Card`s by date

@@ -1,4 +1,4 @@
-// Greyscale
+// Grayscale
 export const BLACK: string = "#000000";
 export const BOULDER: string = "#000000";
 export const GRAY: string = "#808080";
