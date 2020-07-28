@@ -1,4 +1,4 @@
-import { formatMiniCards, formatCards } from "utils";
+import { formatMiniCards } from "utils";
 
 import { HIGHLIGHTS, THEME_PARKS } from "./attractions";
 import { BUCKET_LIST } from "./bucket-list";

@@ -8,18 +8,12 @@ export const CardPhotosContainer = styled(GridWithColumns)`
   margin-top: 10px;
 `;
 
-export const PhotoGrid = ({
-  photos,
-  columnCount,
-  shuffle = true
-}: IPhotoGrid) => {
-  const PHOTOS = shuffle ? shuffleArray(photos) : photos;
-
+export const PhotoGrid = ({ photos, columnCount }: IPhotoGrid) => {
   return (
     <CardPhotosContainer columnCount={columnCount}>
-      {PHOTOS.map((photo: IPhoto, index: number) => (
+      {shuffleArray(photos).map((photo: IPhoto, index: number) => (
         <div key={index} data-test="image-container">
-          <SquareImage photo={photo} size="100%" />
+          <SquareImage photo={photo} size="50%" />
         </div>
       ))}
     </CardPhotosContainer>

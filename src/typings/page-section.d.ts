@@ -21,6 +21,7 @@ interface IPageSectionDataTypes extends IPageSectionPanelTypes {
 
 interface IPageSection extends I__AutoExpand {
   title: string;
+  shuffle?: boolean;
   SvgIcon?: ISvgIcon;
   data: IPageSectionDataTypes;
   count?: number;

@@ -11,6 +11,7 @@ import {
   mapTravelVideosToCards,
   mapAlbumsToCards
 } from "data-factories";
+import { shuffleArray } from "utils";
 
 import { MiniCard } from "../MiniCard";
 import { PhotoGrid } from "../PhotoGrid";
@@ -20,14 +21,13 @@ import { VideoCard } from "../Card/VideoCard";
 
 import { PageSectionPanelList, StyledComingSoonPlaceholder } from "./styles";
 
-const { MINI_CARDS, RECIPES, CARDS } = PAGE_SECTION_PANEL_TYPES;
-
 export const PageSectionPanel: FC<IPageSection> = ({
   data: {
     // PANEL TYPES
     cards,
     miniCards,
     recipes,
+    photoGrid,
 
     // DATA TYPES
     poleRoutines,
@@ -36,23 +36,23 @@ export const PageSectionPanel: FC<IPageSection> = ({
     theatreVisits,
     tripLegs,
     vinyls,
-    photoGrid,
     videoCards,
     comingSoon
-  }
+  },
+  shuffle
 }) => {
   const pageSectionPanelType: string = recipes
-    ? RECIPES
+    ? PAGE_SECTION_PANEL_TYPES.RECIPES
     : miniCards
-    ? MINI_CARDS
-    : CARDS;
+    ? PAGE_SECTION_PANEL_TYPES.MINI_CARDS
+    : PAGE_SECTION_PANEL_TYPES.CARDS;
 
   if (comingSoon)
     return (
       <StyledComingSoonPlaceholder>coming soon</StyledComingSoonPlaceholder>
     );
 
-  const CARD_madetoolate: Array<ICard> | undefined = musicEvents
+  const CARDS_TOO_LATE: Array<ICard> | undefined = musicEvents
     ? mapMusicEventsToCards(musicEvents)
     : poleRoutines
     ? mapPoleRoutinesToCards(poleRoutines)
@@ -66,10 +66,22 @@ export const PageSectionPanel: FC<IPageSection> = ({
     ? mapTravelVideosToCards(travelVideos)
     : undefined;
 
+  const CARDS: Array<ICard> | undefined = CARDS_TOO_LATE
+    ? shuffle
+      ? shuffleArray(CARDS_TOO_LATE)
+      : CARDS_TOO_LATE
+    : undefined;
+
+  const MINI_CARDS: Array<IMiniCard> | undefined = miniCards
+    ? shuffle
+      ? shuffleArray(miniCards)
+      : miniCards
+    : undefined;
+
   return (
     <PageSectionPanelList pageSectionPanelType={pageSectionPanelType}>
-      {CARD_madetoolate &&
-        CARD_madetoolate.map((card: ICard, index: number) => (
+      {CARDS &&
+        CARDS.map((card: ICard, index: number) => (
           <Li key={index}>
             <Card {...card} />
           </Li>
@@ -88,8 +100,8 @@ export const PageSectionPanel: FC<IPageSection> = ({
           <Card key={index} {...card} />
         ))}
 
-      {miniCards &&
-        miniCards.map((miniCard: IMiniCard, index: number) => (
+      {MINI_CARDS &&
+        MINI_CARDS.map((miniCard: IMiniCard, index: number) => (
           <MiniCard key={index} {...miniCard} />
         ))}
 

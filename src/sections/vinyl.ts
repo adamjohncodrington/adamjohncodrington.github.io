@@ -13,21 +13,24 @@ const COLLECTION: IPageSection = {
   title: PAGE_SECTION_TITLES.COLLECTION,
   data: { vinyls: DATA.COLLECTION },
   count: DATA.COLLECTION.length,
-  SvgIcon: SVG.BRIEFCASE
+  SvgIcon: SVG.BRIEFCASE,
+  shuffle: true
 };
 
 const SIGNED: IPageSection = {
   title: PAGE_SECTION_TITLES.SIGNED,
   data: { vinyls: DATA.SIGNED },
   count: DATA.SIGNED.length,
-  SvgIcon: SVG.PEN
+  SvgIcon: SVG.PEN,
+  shuffle: true
 };
 
 const WISH_LIST: IPageSection = {
   title: PAGE_SECTION_TITLES.WISH_LIST,
   SvgIcon: SVG.STARS,
   data: { vinyls: DATA.WISH_LIST },
-  count: DATA.WISH_LIST.length
+  count: DATA.WISH_LIST.length,
+  shuffle: true
 };
 
 const YEARS: Array<IPageSection> = DATA.YEARS.map(
