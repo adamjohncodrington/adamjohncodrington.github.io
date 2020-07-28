@@ -124,7 +124,6 @@ export const mapAlbumsToCards = (
   options?: IMapAlbumsToCardsOptions
 ): Array<ICard> => {
   const hideYear: boolean = !!(options && options.hideYear);
-
   const mapAlbumToCard = ({
     title,
     musician,

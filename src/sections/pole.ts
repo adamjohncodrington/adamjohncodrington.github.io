@@ -35,7 +35,7 @@ const NON_POLE: IPageSection = {
 const SONGS: IPageSection = {
   SvgIcon: SVG.MUSIC,
   title: PAGE_SECTION_TITLES.SONGS,
-  data: { comingSoon: true }
+  data: { miniCards: DATA.SONGS }
 };
 
 const IMPROV: IPageSection = {

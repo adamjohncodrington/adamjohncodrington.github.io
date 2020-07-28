@@ -4,7 +4,7 @@ type ISvgIcon = React.FC<React.SVGProps<SVGSVGElement>>;
 interface IPhotoGrid {
   photos: Array<IPhoto>;
   columnCount: number;
-  randomise?: boolean;
+  shuffle?: boolean;
 }
 
 interface IPerson extends I_Name {
