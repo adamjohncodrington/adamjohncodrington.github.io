@@ -21,7 +21,6 @@
 - reinstate festival videos
 - add symbols to vinyl cards to indicate color and side count
 
-- define `IDates` as `{start, end, only}`
 - convert all `travel` data to use `IStartEndDate`
 - review outstanding `//TODO:`s
 - split festivals into `IDayFestival`, `IMultiDayFestival`, `INightOut`, etc.
@@ -46,6 +45,7 @@
 
 ## Refactoring
 
+- define `IDates` as `{start, end, only}`??
 - review whether parents or children should be styling the children across whole site
 - review all instances of `.forEach`, potentially replace with `.reduce`, `.some` and/or `.every`
 - move `BasicListItemPanel` style values to theme??

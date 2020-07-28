@@ -10,9 +10,8 @@ interface IPreCard extends I_Company, I__Favourite {
   hideVideoSymbol?: boolean;
 }
 
-interface ICard extends IPreCard {
+interface ICard extends IPreCard, I__Video {
   title: string;
-  video?: IVideo;
   subtitle?: string;
   body?: string;
   secondaryBody?: string;

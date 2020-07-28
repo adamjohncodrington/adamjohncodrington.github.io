@@ -1,5 +1,4 @@
-interface IMiniCardPanelItem extends I__Favourite {
-  video?: IVideo;
+interface IMiniCardPanelItem extends I__Favourite, I__Video {
   mainText?: Array<string>;
   dates?: Array<Date>;
   index?: number;

@@ -63,9 +63,8 @@ interface IGig extends IPreGigOrFestival, I_Date {
   support?: Array<IMusician>;
 }
 
-interface IMusicEvent extends IPreGigOrFestival {
+interface IMusicEvent extends IPreGigOrFestival, I__Video {
   title: string;
-  video?: IVideo;
   subtitle?: string;
   dates: Array<IDate>;
   musicians: Array<IMusician>;
@@ -113,8 +112,7 @@ interface ISong {
   year: number;
 }
 
-interface IPoleRoutine {
-  video: IVideo;
+interface IPoleRoutine extends I_Video {
   date: Date;
   song: ISong;
   category: IPoleCategory;

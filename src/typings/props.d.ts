@@ -54,3 +54,11 @@ interface I_UseTriangleAsBullet {
 interface I_ShowVideoSymbol {
   showVideoSymbol: boolean;
 }
+
+interface I_Video {
+  video: IVideo;
+}
+
+interface I__Video {
+  video?: IVideo;
+}
