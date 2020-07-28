@@ -4,10 +4,10 @@ import { PAGE_SECTION_PANEL_TYPES } from "@constants";
 import { Li } from "primitives";
 import {
   mapPoleRoutinesToCards,
-  mapAlbumCardsToCards,
   mapMusicEventsToCards,
   mapTheatreVisitsToCards,
-  mapTripLegsToCards
+  mapTripLegsToCards,
+  mapAlbumsToCards
 } from "utils";
 
 import { MiniCard } from "../MiniCard";
@@ -58,7 +58,7 @@ export const PageSectionPanel: FC<IPageSection> = ({
     : tripLegs
     ? mapTripLegsToCards(tripLegs)
     : vinyls
-    ? mapAlbumCardsToCards(vinyls)
+    ? mapAlbumsToCards(vinyls)
     : undefined;
 
   return (

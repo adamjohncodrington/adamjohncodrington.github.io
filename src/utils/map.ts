@@ -115,17 +115,23 @@ export const mapTripLegsToCards = (tripLegs: Array<ITripLeg>): Array<ICard> => {
   return tripLegs.map((tripLeg: ITripLeg): ICard => mapTripLegToCard(tripLeg));
 };
 
-export const mapAlbumCardsToCards = (
-  albumCards: Array<IAlbumCard>
+interface IMapAlbumsToCardsOptions {
+  hideYear?: boolean;
+}
+
+export const mapAlbumsToCards = (
+  albums: Array<IAlbum>,
+  options?: IMapAlbumsToCardsOptions
 ): Array<ICard> => {
-  const mapAlbumCardToCard = ({
+  const hideYear: boolean = !!(options && options.hideYear);
+
+  const mapAlbumToCard = ({
     title,
     musician,
     year,
     artwork,
-    hideYear,
     appleMusicId
-  }: IAlbumCard): ICard => ({
+  }: IAlbum): ICard => ({
     title,
     subtitle: moveTheSuffixToPrefix(
       getMusicianStageNameAtTime({ musician, year })
@@ -134,9 +140,7 @@ export const mapAlbumCardsToCards = (
     company: [],
     headerPhoto: { ...artwork, href: APPLE_MUSIC_URL_PREFIX + appleMusicId }
   });
-  return albumCards.map(
-    (albumCard: IAlbumCard): ICard => mapAlbumCardToCard(albumCard)
-  );
+  return albums.map((album: IAlbum): ICard => mapAlbumToCard(album));
 };
 
 export const mapMethodToListItems = (

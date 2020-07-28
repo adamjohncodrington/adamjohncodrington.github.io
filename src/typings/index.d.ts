@@ -158,10 +158,6 @@ interface IAlbum {
   appleMusicId: string;
 }
 
-interface IAlbumCard extends IAlbum {
-  hideYear?: boolean;
-}
-
 interface IVinyl extends IAlbum {
   signed: boolean;
   color:

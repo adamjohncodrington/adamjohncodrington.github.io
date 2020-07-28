@@ -48,3 +48,15 @@ export const SUFJAN_STEVENS_CARRIE_LOWELL: IVinyl = {
   inches: 12,
   year: 2015
 };
+
+export const BANKS_ALTAR: IVinyl = {
+  musician: MUSICIANS.BANKS,
+  artwork: PHOTOS.ALBUMS.BANKS_ALTAR,
+  appleMusicId: "the-altar/1440836872",
+  title: "The Altar",
+  signed: false,
+  color: "black",
+  sides: 2,
+  inches: 12,
+  year: 2016
+};

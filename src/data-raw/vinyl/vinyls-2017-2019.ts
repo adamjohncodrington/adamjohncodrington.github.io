@@ -120,3 +120,15 @@ export const KIM_PETRAS_CLARITY: IVinyl = {
   color: "photo",
   appleMusicId: "clarity/1469298192"
 };
+
+export const ARIANA_GRANDE_TUN: IVinyl = {
+  musician: MUSICIANS.ARIANA_GRANDE,
+  title: "thank u, next",
+  artwork: PHOTOS.ALBUMS.ArianaGrande_TUN,
+  appleMusicId: "thank-u-next/1450330588",
+  year: 2019,
+  sides: 4,
+  color: "black",
+  inches: 12,
+  signed: false
+};

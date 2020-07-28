@@ -106,3 +106,8 @@ export const TOURIST_U: IPhoto = { url: "https://iili.io/dfOzQI.jpg" };
 export const TROYE_SIVAN_IN_A_DREAM: IPhoto = {
   url: "https://iili.io/dfOTBt.jpg"
 };
+
+export const BANKS_ALTAR: IPhoto = { url: "https://iili.io/dA3xBS.jpg" };
+export const LADY_GAGA_FAME_MONSTER: IPhoto = {
+  url: "https://iili.io/dA3zE7.jpg"
+};

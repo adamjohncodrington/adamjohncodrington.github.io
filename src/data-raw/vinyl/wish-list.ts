@@ -25,14 +25,6 @@ export const KATY_PERRY_ONE_OF_THE_BOYS: IAlbum = {
   year: 2008
 };
 
-export const ARIANA_GRANDE_TUN: IAlbum = {
-  musician: MUSICIANS.ARIANA_GRANDE,
-  title: "thank u, next",
-  artwork: PHOTOS.ALBUMS.ArianaGrande_TUN,
-  appleMusicId: "thank-u-next/1450330588",
-  year: 2019
-};
-
 export const RIHANNA_RATED_R: IAlbum = {
   musician: MUSICIANS.RIHANNA,
   artwork: PHOTOS.ALBUMS.RIHANNA_RATED_R,
@@ -63,14 +55,6 @@ export const NATALIA_KILLS_PERFECTIONIST: IAlbum = {
   title: "Perfectionist",
   year: 2011,
   appleMusicId: "perfectionist/1443164533"
-};
-
-export const LADY_GAGA_BORN_THIS_WAY: IAlbum = {
-  musician: MUSICIANS.LADY_GAGA,
-  artwork: PHOTOS.ALBUMS.LADY_GAGA_BORN_THIS_WAY,
-  title: "Born This Way",
-  appleMusicId: "born-this-way-special-edition/1440857161",
-  year: 2011
 };
 
 export const ELLIE_GOULDING_HALCYON: IAlbum = {

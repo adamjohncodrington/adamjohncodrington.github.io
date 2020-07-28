@@ -36,3 +36,27 @@ export const LANA_BORN_TO_DIE: IVinyl = {
   year: 2012,
   artwork: PHOTOS.ALBUMS.LANA_BORN_TO_DIE
 };
+
+export const LADY_GAGA_BORN_THIS_WAY: IVinyl = {
+  musician: MUSICIANS.LADY_GAGA,
+  artwork: PHOTOS.ALBUMS.LADY_GAGA_BORN_THIS_WAY,
+  title: "Born This Way",
+  appleMusicId: "born-this-way-special-edition/1440857161",
+  year: 2011,
+  sides: 4,
+  color: "black",
+  inches: 12,
+  signed: false
+};
+
+export const LADY_GAGA_FAME_MONSTER: IVinyl = {
+  musician: MUSICIANS.LADY_GAGA,
+  artwork: PHOTOS.ALBUMS.LADY_GAGA_FAME_MONSTER,
+  title: "The Fame Monster",
+  appleMusicId: "the-fame-monster/1440860294",
+  year: 2009,
+  sides: 2,
+  color: "photo",
+  inches: 12,
+  signed: false
+};
