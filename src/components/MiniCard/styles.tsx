@@ -86,16 +86,12 @@ export const StyledLi = styled.li(
   `
 );
 
-interface I__Media {
-  media?: boolean;
-}
-
 export const StyledLevel1MainText = styled.div(
-  ({ media }: I__Media) => css`
+  ({ useTriangleAsBullet }: I_UseTriangleAsBullet) => css`
     flex: 1;
     margin-right: 15px;
 
-    ${media && getPseudoElementBefore(TRIANGLE_RIGHT)}
+    ${useTriangleAsBullet && getPseudoElementBefore(TRIANGLE_RIGHT)}
   `
 );
 
@@ -103,17 +99,17 @@ export const StyledIndex = styled.div`
   min-width: 25px;
 `;
 
-interface IStyledDateText extends I__Favourite, I__Media {}
+interface IStyledDateText extends I__Favourite, I_ShowVideoSymbol {}
 
 export const StyledDateText = styled.div(
-  ({ favourite, media }: IStyledDateText) =>
-    (favourite || media) &&
+  ({ favourite, showVideoSymbol: video }: IStyledDateText) =>
+    (favourite || video) &&
     getPseudoElementAfter(
-      favourite && !media
+      favourite && !video
         ? HEART
-        : media && !favourite
+        : video && !favourite
         ? TRIANGLE_RIGHT
-        : media && favourite
+        : video && favourite
         ? HEART + " " + TRIANGLE_RIGHT
         : ""
     )

@@ -16,24 +16,23 @@ export const MiniCardPanelItemHeader: React.FC<IMiniCardPanelItemHeader> = ({
   year,
   isStatic
 }) => {
-  const isMediaListItem: boolean = !!headerLink;
+  const useTriangleAsBullet: boolean = !!headerLink;
 
   const HeaderContents: ReactElement = (
     <DynamicFontWeightFlexRow bold={!isStatic && panelVisible}>
-      {index && !isMediaListItem && <StyledIndex>{index}.</StyledIndex>}
+      {index && !useTriangleAsBullet && <StyledIndex>{index}.</StyledIndex>}
 
       {mainText && (
-        <StyledLevel1MainText media={isMediaListItem}>
+        <StyledLevel1MainText useTriangleAsBullet={useTriangleAsBullet}>
           {mainText[0]}
         </StyledLevel1MainText>
       )}
 
-      {dates ||
-        (year && (
-          <StyledDateText favourite={favourite} media={!!video}>
-            {dates ? getDatesText(dates) : year}
-          </StyledDateText>
-        ))}
+      {(dates || year) && (
+        <StyledDateText favourite={favourite} showVideoSymbol={!!video}>
+          {dates ? getDatesText(dates) : year}
+        </StyledDateText>
+      )}
     </DynamicFontWeightFlexRow>
   );
 

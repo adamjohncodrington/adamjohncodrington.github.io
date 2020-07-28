@@ -46,3 +46,11 @@ interface I_Bold {
 interface I__ExcludeFromBucketList {
   excludeFromBucketList?: boolean;
 }
+
+interface I_UseTriangleAsBullet {
+  useTriangleAsBullet: boolean;
+}
+
+interface I_ShowVideoSymbol {
+  showVideoSymbol: boolean;
+}
