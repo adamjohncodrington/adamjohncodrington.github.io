@@ -74,6 +74,7 @@ interface IThemeRecipe {
 interface IThemeSymbol {
   borderRadius: PercentageValue;
   fontSize: PercentageValue;
+  iconSize: PxValue;
   size: PxValue;
   textColor: ColorValue;
 }

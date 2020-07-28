@@ -1,4 +1,5 @@
-interface ITripLeg extends ICardAll, I_Dates {
+interface ITripLeg extends IPreCard, I_Dates {
+  video?: ITravelVideo;
   country: ICountryTemplate;
   primaryLocations?: Array<ILocation>;
   secondaryLocations?: Array<ILocation>;

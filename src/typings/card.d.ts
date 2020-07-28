@@ -1,7 +1,6 @@
-interface ICardAll extends I_Company, I__Favourite {
+interface IPreCard extends I_Company, I__Favourite {
   hideSubtitle?: boolean;
   photos?: Array<IPhoto>;
-  video?: IVideo;
 
   hideCompanySymbols?: boolean;
   hideBody?: boolean;
@@ -11,8 +10,9 @@ interface ICardAll extends I_Company, I__Favourite {
   hideVideoIcon?: boolean;
 }
 
-interface ICard extends ICardAll {
+interface ICard extends IPreCard {
   title: string;
+  video?: IVideo;
   subtitle?: string;
   body?: string;
   secondaryBody?: string;

@@ -58,28 +58,32 @@ interface IStartEndDate {
 
 interface IFestivalTitle extends I_Name, I__Insignificant {}
 
-interface IGigAndFestival extends ICardAll {
+interface IPreGigOrFestival extends IPreCard {
   venue: IMusicVenue;
   ticketType?: ITicketType;
 }
 
-interface IFestival extends IGigAndFestival, I_Dates {
+interface IFestival extends IPreGigOrFestival, I_Dates {
   title: IFestivalTitle;
+  video?: IFestivalVideo;
   lineup: Array<Array<IMusician>>;
 }
 
-interface IGig extends IGigAndFestival, I_Date {
+interface IGig extends IPreGigOrFestival, I_Date {
   headline: IMusician;
+  video?: IGigVideo;
   support?: Array<IMusician>;
 }
 
-interface IMusicEvent extends IGigAndFestival {
-  gig?: IGig;
-  festival?: IFestival;
+interface IMusicEvent extends IPreGigOrFestival {
   title: string;
+  video?: IVideo;
   subtitle?: string;
   dates: Array<IDate>;
   musicians: Array<IMusician>;
+
+  gig?: IGig;
+  festival?: IFestival;
 }
 
 interface IMusicVenue extends I_Name, I__Favourite, I__Insignificant {}
@@ -92,6 +96,11 @@ interface IMusician extends I_Name, I__Favourite, I__ExcludeFromBucketList {
 interface IGigVideo extends IVideo {
   date: Date;
   musician: IMusician;
+}
+
+interface IFestivalVideo extends IVideo {
+  festival: IFestivalTitle;
+  dates: IStartEndDate;
 }
 
 interface ITravelVideo extends IVideo {
@@ -140,7 +149,7 @@ interface IPlay extends I_Name, I__Favourite {}
 
 interface ITheatre extends I_Name, I__Favourite {}
 
-interface ITheatreVisit extends I_Date, ICardAll {
+interface ITheatreVisit extends I_Date, IPreCard {
   play: IPlay;
   theatre: ITheatre;
   cast?: Array<IActor>;

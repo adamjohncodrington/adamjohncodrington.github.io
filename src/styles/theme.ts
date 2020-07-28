@@ -71,9 +71,10 @@ const THEME_RECIPE_CARD: IThemeRecipe = {
   portionCost: { margin: { top: "3px" } }
 };
 
-const THEME_ROUNDED_SYMBOL: IThemeSymbol = {
+const THEME_SYMBOL: IThemeSymbol = {
   borderRadius: "25%",
   fontSize: "75%",
+  iconSize: "60%",
   size: "26px",
   textColor: COLORS.WHITE
 };
@@ -92,7 +93,7 @@ export const THEME: ITheme = {
   pageSection: THEME_PAGE_SECTION,
   pageLayout: THEME_PAGE_LAYOUT,
   recipe: THEME_RECIPE_CARD,
-  roundedSymbol: THEME_ROUNDED_SYMBOL,
+  roundedSymbol: THEME_SYMBOL,
   vinyl: THEME_VINYL_CARD,
 
   fadedOpacity: 0.5,
