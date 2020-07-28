@@ -51,10 +51,6 @@ interface IVideoCard extends I_Dates {
   subtitle?: string;
 }
 
-interface IVideoCards {
-  videoCards: Array<IVideoCard>;
-}
-
 interface IStartEndDate {
   start: Date;
   end: Date;
@@ -98,8 +94,7 @@ interface IGigVideo extends IVideo {
   musician: IMusician;
 }
 
-interface ITravelVideo {
-  video: IVideo;
+interface ITravelVideo extends IVideo {
   dates: IStartEndDate;
   locations: Array<ILocation>;
 }
