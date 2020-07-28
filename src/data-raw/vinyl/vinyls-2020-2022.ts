@@ -37,3 +37,15 @@ export const TROYE_SIVAN_IN_A_DREAM: IVinyl = {
   //TODO: verify that it is 10" not 12"
   inches: 10
 };
+
+export const CHARLI_XCX_HOW_IM_FEELING_NOW: IVinyl = {
+  musician: MUSICIANS.CHARLI_XCX,
+  title: "how i'm feeling now",
+  year: 2020,
+  signed: false,
+  inches: 12,
+  sides: 2,
+  color: "orange",
+  artwork: PHOTOS.ALBUMS.CHARLI_XCX_HOW_IM_FEELING_NOW,
+  appleMusicId: "how-im-feeling-now/1513162098"
+};

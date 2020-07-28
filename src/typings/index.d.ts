@@ -158,6 +158,7 @@ interface IVinyl extends IAlbum {
     | "pink"
     | "black-and-clear"
     | "yellow"
+    | "orange"
     | "red"
     | "teal"
     | "blue-mist";

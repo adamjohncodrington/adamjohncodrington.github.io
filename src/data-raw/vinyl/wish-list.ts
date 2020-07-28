@@ -137,14 +137,6 @@ export const SOPHIE_OOEPUI: IAlbum = {
   year: 2018
 };
 
-export const CHARLI_XCX_HOW_IM_FEELING_NOW: IAlbum = {
-  musician: MUSICIANS.CHARLI_XCX,
-  title: "how i'm feeling now",
-  year: 2020,
-  artwork: PHOTOS.ALBUMS.CHARLI_XCX_HOW_IM_FEELING_NOW,
-  appleMusicId: "how-im-feeling-now/1513162098"
-};
-
 export const DUA_LIPA_FUTURE_NOSTALGIA: IAlbum = {
   musician: MUSICIANS.DUA_LIPA,
   title: "Future Nostalgia",
