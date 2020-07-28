@@ -3,11 +3,13 @@ import {
   getFestivalMusicians,
   moveTheSuffixToPrefix,
   getDatesText,
+  getDateText,
   getCountdownText,
   getGigTitle,
   getGigSubtitle,
   getFestivalTitle,
-  getFestivalSubtitle
+  getFestivalSubtitle,
+  getMusicianStageNameAtTime
 } from "utils";
 
 export const mapGigsToMusicEvents = (gigs: Array<IGig>): Array<IMusicEvent> => {
@@ -52,5 +54,25 @@ export const mapMusicEventsToCards = (
   };
   return musicEvents.map(
     (musicEvent: IMusicEvent): ICard => mapMusicEventToCard(musicEvent)
+  );
+};
+
+export const mapGigVideosToCards = (
+  gigVideos: Array<IGigVideo>
+): Array<ICard> => {
+  const mapGigVideoToCard = ({
+    date,
+    musician,
+    ...video
+  }: IGigVideo): ICard => ({
+    video,
+    title: getMusicianStageNameAtTime({ musician, year: date.getFullYear() }),
+    company: [],
+    hideVideoSymbol: true,
+    secondaryBody: getDateText(date)
+  });
+
+  return gigVideos.map(
+    (gigVideo: IGigVideo): ICard => mapGigVideoToCard(gigVideo)
   );
 };

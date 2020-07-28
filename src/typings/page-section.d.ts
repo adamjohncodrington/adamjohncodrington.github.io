@@ -1,17 +1,23 @@
+interface IPhotoGrid {
+  photos: Array<IPhoto>;
+  columnCount: number;
+}
+
 interface IPageSectionPanelTypes {
   cards?: Array<ICard>;
   miniCards?: Array<IMiniCard>;
   recipes?: Array<IRecipe>;
+  photoGrid?: IPhotoGrid;
 }
 
 interface IPageSectionDataTypes extends IPageSectionPanelTypes {
   comingSoon?: boolean;
-  photoGrid?: { photos: Array<IPhoto>; columnCount: number };
   musicEvents?: Array<IMusicEvent>;
   theatreVisits?: Array<ITheatreVisit>;
   tripLegs?: Array<ITripLeg>;
   poleRoutines?: Array<IPoleRoutine>;
-  videoCards?: Array<IVideoCard>;
+  gigVideos?: Array<IGigVideo>;
+  festivalVideos?: Array<IFestivalVideo>;
   travelVideos?: Array<ITravelVideo>;
   vinyls?: Array<IAlbum>;
 

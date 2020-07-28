@@ -9,7 +9,8 @@ import {
   mapTheatreVisitsToCards,
   mapTripLegsToCards,
   mapTravelVideosToCards,
-  mapAlbumsToCards
+  mapAlbumsToCards,
+  mapGigVideosToCards
 } from "data-factories";
 import { shuffleArray } from "utils";
 
@@ -17,7 +18,6 @@ import { MiniCard } from "../MiniCard";
 import { PhotoGrid } from "../PhotoGrid";
 import { Card } from "../Card";
 import { Recipe } from "../Recipe";
-import { VideoCard } from "../Card/VideoCard";
 
 import { PageSectionPanelList, StyledComingSoonPlaceholder } from "./styles";
 
@@ -35,8 +35,8 @@ export const PageSectionPanel: FC<IPageSection> = ({
     travelVideos,
     theatreVisits,
     tripLegs,
+    gigVideos,
     vinyls,
-    videoCards,
     comingSoon
   },
   shuffle
@@ -64,6 +64,8 @@ export const PageSectionPanel: FC<IPageSection> = ({
     ? mapAlbumsToCards(vinyls)
     : travelVideos
     ? mapTravelVideosToCards(travelVideos)
+    : gigVideos
+    ? mapGigVideosToCards(gigVideos)
     : undefined;
 
   const CARDS: Array<ICard> | undefined = CARDS_TOO_LATE
@@ -86,12 +88,7 @@ export const PageSectionPanel: FC<IPageSection> = ({
             <Card {...card} />
           </Li>
         ))}
-      {videoCards &&
-        videoCards.map((videoCard: IVideoCard, index: number) => (
-          <Li key={index}>
-            <VideoCard {...videoCard} />
-          </Li>
-        ))}
+
       {photoGrid && <PhotoGrid {...photoGrid} />}
 
       {/* BELOW IS WHAT WE WANT THIS FILE REDUCED TO */}

@@ -58,7 +58,7 @@ const VENUES: IPageSection = {
 const VIDEOS: IPageSection = {
   SvgIcon: SVG.VIDEO_CAMERA,
   title: PAGE_SECTION_TITLES.VIDEOS,
-  data: { videoCards: DATA.VIDEOS },
+  data: { gigVideos: DATA.VIDEOS },
   count: DATA.VIDEOS.length
 };
 

@@ -1,11 +1,6 @@
 type ITicketType = string;
 type ISvgIcon = React.FC<React.SVGProps<SVGSVGElement>>;
 
-interface IPhotoGrid {
-  photos: Array<IPhoto>;
-  columnCount: number;
-}
-
 interface IPerson extends I_Name {
   initials: string;
 }
