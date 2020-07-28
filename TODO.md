@@ -3,6 +3,7 @@
 - do not export recipe data in nest
 
 - ditch `IPreCard` altogether
+- refactor symbols!!
 
 - rename `pastCount` and `futureCount` on `MiniCard` as `primaryCount` and `secondaryCount` and make them non-compulsory
 
@@ -10,9 +11,7 @@
 
 - make photo grid truncate the number of photos in the array based on the column count
 
-- refactor symbols!!
 - convert `DAYS TO GO` into a dark number symbol
-
 
 - reinstate festival videos
 - add symbols to vinyl cards to indicate color and side count
@@ -26,7 +25,6 @@
 
 ## Enhancements
 
-- beef up POLE section
 - make YouTube videos play in HD
 - add images to theatre page (poster art)
 - display festival lineups by day????
