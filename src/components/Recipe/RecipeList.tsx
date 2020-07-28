@@ -18,7 +18,7 @@ const StyledRecipeListItem = styled(Li)(
 
 const StyledRecipeListItemRow = styled(FlexRow)`
   *:first-child {
-    margin-right: 50px;
+    margin-right: 6px;
   }
 `;
 
