@@ -47,7 +47,7 @@ const IMPROV: IPageSection = {
 const PHOTOS: IPageSection = {
   SvgIcon: SVG.CAMERA,
   title: PAGE_SECTION_TITLES.PHOTOS,
-  data: { comingSoon: true }
+  data: { photoGrid: { photos: DATA.PHOTOS, columnCount: 2 } }
 };
 
 const TRICKS: IPageSection = {

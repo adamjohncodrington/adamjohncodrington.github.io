@@ -9,11 +9,22 @@ export const CardPhotosContainer = styled(GridWithColumns)`
 `;
 
 export const PhotoGrid = ({ photos, columnCount }: IPhotoGrid) => {
+  const validPhotos: Array<IPhoto> = photos.filter(
+    ({ hide }: IPhoto): boolean => !hide
+  );
+  const validPhotoCount: number = validPhotos.length;
+  const numberOfPhotosToRemove: number = validPhotoCount % columnCount;
+  const shuffled: Array<IPhoto> = shuffleArray(validPhotos);
+  const filtered: Array<IPhoto> = shuffled.filter(
+    (photo: IPhoto, index: number) =>
+      index < validPhotoCount - numberOfPhotosToRemove
+  );
+
   return (
     <CardPhotosContainer columnCount={columnCount}>
-      {shuffleArray(photos).map((photo: IPhoto, index: number) => (
+      {filtered.map((photo: IPhoto, index: number) => (
         <div key={index} data-test="image-container">
-          <SquareImage photo={photo} size="50%" />
+          <SquareImage photo={photo} size="100%" />
         </div>
       ))}
     </CardPhotosContainer>

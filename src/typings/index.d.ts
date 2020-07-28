@@ -21,6 +21,7 @@ interface IPage {
 }
 
 interface IPhoto {
+  hide?: boolean;
   date?: Date;
   title?: string;
   url: string;

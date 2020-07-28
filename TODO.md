@@ -2,6 +2,8 @@
 
 - do not export recipe data in nest
 
+- add compulsory `date` prop to `IPhoto`
+
 - ditch `IPreCard` altogether
 - refactor symbols!!
 
