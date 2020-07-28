@@ -25,12 +25,11 @@ interface IPageSectionDataTypes extends IPageSectionPanelTypes {
   gigs?: Array<IGig>;
 }
 
-interface IPageSection extends I__AutoExpand {
+interface IPageSection extends I__AutoExpand, I__Hide {
   title: string;
   shuffle?: boolean;
   SvgIcon?: ISvgIcon;
   data: IPageSectionDataTypes;
   count?: number;
   starCount?: number;
-  hide?: boolean;
 }

@@ -23,6 +23,10 @@ interface I_Date {
   date: Date;
 }
 
+interface I__Hide {
+  hide?: boolean;
+}
+
 interface I_Dates {
   dates: Array<Date>;
 }

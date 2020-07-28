@@ -20,8 +20,7 @@ interface IPage {
   color?: ColorValue;
 }
 
-interface IPhoto {
-  hide?: boolean;
+interface IPhoto extends I__Hide {
   date?: Date;
   title?: string;
   url: string;

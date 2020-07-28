@@ -37,7 +37,7 @@ interface IRecipeMakes {
   measurement?: string;
 }
 
-interface IRecipe extends I__Favourite {
+interface IRecipe extends I__Favourite, I__Hide {
   title: string;
   makes?: IRecipeMakes;
   photo?: IPhoto;
@@ -46,7 +46,6 @@ interface IRecipe extends I__Favourite {
   diet: IRecipeDiet;
   method: Array<string>;
   newRecipe?: boolean;
-  hide?: boolean;
   totalCost?: number;
   portionCost?: number;
 }

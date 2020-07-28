@@ -31,14 +31,16 @@ const FRIENDS: IPageSection = {
 const SOLO: IPageSection = {
   SvgIcon: SVG.SOLO,
   title: PAGE_SECTION_TITLES.SOLO,
-  data: { musicEvents: DATA.SOLO }
+  data: { musicEvents: DATA.SOLO },
+  hide: true
 };
 
 const FAVOURITES: IPageSection = {
   SvgIcon: SVG.HEART,
   shuffle: true,
   title: PAGE_SECTION_TITLES.FAVOURITES,
-  data: { musicEvents: DATA.FAVOURITES }
+  data: { musicEvents: DATA.FAVOURITES },
+  hide: true
 };
 
 const UP_NEXT: IPageSection = {
