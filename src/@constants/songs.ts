@@ -35,3 +35,9 @@ export const TAIKO_NO_MORE: ISong = {
   title: "No More",
   year: 2017
 };
+
+export const JAMES_BLAKE_ARE_YOU_EVEN_REAL: ISong = {
+  musician: MUSICIANS.JAMES_BLAKE,
+  title: "Are You Even Real?",
+  year: 2020
+};

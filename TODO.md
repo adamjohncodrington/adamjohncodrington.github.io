@@ -3,6 +3,8 @@
 - ABANDON `VideoCard` and `IVideoCard` entirely!!!!!
 - do not export recipe data in nest
 
+- auto sort `Card`s by date
+
 - rationalise `IVideo` into `I_Video` and `I__Video`
 
 - refactor symbols!!

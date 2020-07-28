@@ -107,9 +107,10 @@ interface ITravelVideo {
 interface IRecipeHeader extends IRecipe, IDisclosureHeader {}
 
 type IPoleCategory =
-  | "contemporary"
-  | "exotic"
-  | "improv"
+  | "contemporary-class"
+  | "contemporary-improv"
+  | "exotic-class"
+  | "exotic-improv"
   | "non-pole"
   | "showcase"
   | "tricks";
