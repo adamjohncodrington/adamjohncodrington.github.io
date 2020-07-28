@@ -2,8 +2,6 @@ import { FESTIVAL_TITLES as festivals } from "@constants";
 import { FESTIVALS as DATA } from "data-raw";
 import { getItemCounts, getFestivalSubtitle } from "utils";
 
-export const TO_BE_FIXED: string = "TO BE FIXED";
-
 const getFestivalMatches = (
   festivalTitle: IFestivalTitle
 ): Array<IFestival> => {

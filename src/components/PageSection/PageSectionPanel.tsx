@@ -9,7 +9,7 @@ import {
   mapTheatreVisitsToCards,
   mapTripLegsToCards,
   mapAlbumsToCards
-} from "data-utils";
+} from "data-factories";
 
 import { MiniCard } from "../MiniCard";
 import { PhotoGrid } from "../PhotoGrid";

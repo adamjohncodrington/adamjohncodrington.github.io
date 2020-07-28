@@ -5,7 +5,7 @@ import {
   mapMethodToListItems,
   mapServeWithToListItems,
   mapIngredientsToListItems
-} from "data-utils";
+} from "data-factories";
 import { getIngredientsHeader, numberToCurrencyString } from "utils";
 
 import { List } from "./RecipeList";

@@ -1,13 +1,13 @@
 import {
-  getGigTitle,
-  getGigSubtitle,
   getGigMusicians,
-  getFestivalTitle,
-  getFestivalSubtitle,
   getFestivalMusicians,
   moveTheSuffixToPrefix,
   getDatesText,
-  getCountdownText
+  getCountdownText,
+  getGigTitle,
+  getGigSubtitle,
+  getFestivalTitle,
+  getFestivalSubtitle
 } from "utils";
 
 export const mapGigsToMusicEvents = (gigs: Array<IGig>): Array<IMusicEvent> => {
