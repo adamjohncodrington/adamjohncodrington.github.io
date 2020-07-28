@@ -3,6 +3,10 @@
 - do not export recipe data in nest
 
 - add compulsory `date` prop to `IPhoto`
+- reinstate festival videos
+
+- add more travel photos
+- convert `DAYS TO GO` into a dark number symbol and ditch countdown text as a prop and element in Card altogther
 
 - ditch `IPreCard` altogether
 - refactor symbols!!
@@ -11,18 +15,12 @@
 
 - auto sort `Card`s by date
 
-- make photo grid truncate the number of photos in the array based on the column count
-
-- convert `DAYS TO GO` into a dark number symbol
-
-- reinstate festival videos
 - add symbols to vinyl cards to indicate color and side count
 
-- convert all `travel` data to use `IStartEndDate`
+- convert all `travel` data to use `IStartEndDate`???????
 - review outstanding `//TODO:`s
-- split festivals into `IDayFestival`, `IMultiDayFestival`, `INightOut`, etc.
+- split festivals into `IDayFestival`, `IMultiDayFestival`, `INightOut`, etc.??????
 - make festival dates prop `start/end`???
-- 
 - totally refactor `travel` in `@constants`
 
 ## Enhancements
