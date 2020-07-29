@@ -49,14 +49,14 @@ interface IMiniCardPastCount extends I_Theme {
 }
 
 export const MiniCardPastCount = styled.span(
-  ({ isLeaderboardItem, theme: { MiniCard } }: IMiniCardPastCount) => css`
+  ({ isLeaderboardItem, theme: { miniCard } }: IMiniCardPastCount) => css`
     text-align: right;
-    width: ${MiniCard.count.width};
+    width: ${miniCard.count.width};
     margin-left: ${isLeaderboardItem
       ? css`
-          calc(3 * ${MiniCard.count.margin.left})
+          calc(3 * ${miniCard.count.margin.left})
         `
-      : MiniCard.count.margin.left};
+      : miniCard.count.margin.left};
   `
 );
 

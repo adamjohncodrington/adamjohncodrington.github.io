@@ -35,15 +35,15 @@ export const formatMiniCards = (
   );
 
   const translated: Array<IMiniCard> = sorted.map(
-    (MiniCard: IMiniCard): IMiniCard => ({
-      ...MiniCard,
-      text: moveTheSuffixToPrefix(MiniCard.text)
+    (miniCard: IMiniCard): IMiniCard => ({
+      ...miniCard,
+      text: moveTheSuffixToPrefix(miniCard.text)
     })
   );
 
   const mapped: Array<IMiniCard> = translated.map(
-    (MiniCard: IMiniCard): IMiniCard =>
-      isLeaderboard ? { ...MiniCard, isLeaderboardItem: true } : MiniCard
+    (miniCard: IMiniCard): IMiniCard =>
+      isLeaderboard ? { ...miniCard, isLeaderboardItem: true } : miniCard
   );
 
   const detailSorted: Array<IMiniCard> = mapped.map(

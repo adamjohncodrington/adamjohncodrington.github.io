@@ -86,7 +86,7 @@ interface IThemeAlbumCard {
 
 interface ITheme {
   breakpoints: IBreakpoints;
-  MiniCard: IThemeMiniCard;
+  miniCard: IThemeMiniCard;
   card: IThemeCard;
   navBar: IThemeNavBar;
   pageHeader: IThemePageHeader;

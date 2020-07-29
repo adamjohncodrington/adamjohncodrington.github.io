@@ -88,7 +88,7 @@ const THEME_VINYL_CARD: IThemeAlbumCard = {
 
 export const THEME: ITheme = {
   breakpoints: BREAKPOINTS,
-  MiniCard: THEME_MINI_CARD_ITEM,
+  miniCard: THEME_MINI_CARD_ITEM,
   card: THEME_CARD,
   navBar: THEME_NAV_BAR,
   pageHeader: THEME_PAGE_HEADER,
