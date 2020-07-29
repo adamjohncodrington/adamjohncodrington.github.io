@@ -1,5 +1,5 @@
 import { mapTripLegsToCards, mapTravelVideosToCards } from "data-factories";
-import { formatMiniCards } from "utils";
+import { filterMiniCards } from "utils";
 
 import { HIGHLIGHTS, THEME_PARKS } from "./attractions";
 import { BUCKET_LIST } from "./bucket-list";
@@ -13,14 +13,14 @@ import { VIDEOS } from "./videos";
 import { YEARS } from "./years";
 
 export const TRAVEL = {
-  BUCKET_LIST: formatMiniCards(BUCKET_LIST),
-  CITIES: formatMiniCards(CITIES),
-  COUNTRIES: formatMiniCards(COUNTRIES),
-  FRIENDS: formatMiniCards(FRIENDS),
-  HIGHLIGHTS: formatMiniCards(HIGHLIGHTS),
-  ISLANDS: formatMiniCards(ISLANDS),
+  BUCKET_LIST: filterMiniCards(BUCKET_LIST),
+  CITIES: filterMiniCards(CITIES),
+  COUNTRIES: filterMiniCards(COUNTRIES),
+  FRIENDS: filterMiniCards(FRIENDS),
+  HIGHLIGHTS: filterMiniCards(HIGHLIGHTS),
+  ISLANDS: filterMiniCards(ISLANDS),
   PHOTOS,
-  THEME_PARKS: formatMiniCards(THEME_PARKS),
+  THEME_PARKS: filterMiniCards(THEME_PARKS),
   UP_NEXT: mapTripLegsToCards(UP_NEXT),
   VIDEOS: mapTravelVideosToCards(VIDEOS),
   YEARS: YEARS.map(

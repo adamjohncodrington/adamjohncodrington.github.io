@@ -1,5 +1,5 @@
 import { mapTheatreVisitsToCards } from "data-factories";
-import { formatMiniCards } from "utils";
+import { filterMiniCards } from "utils";
 
 import { ACTORS } from "./actors";
 import { FRIENDS } from "./friends";
@@ -9,10 +9,10 @@ import { UP_NEXT } from "./up-next";
 import { YEARS } from "./years";
 
 export const THEATRE = {
-  ACTORS: formatMiniCards(ACTORS),
-  FRIENDS: formatMiniCards(FRIENDS),
-  PLAYS: formatMiniCards(PLAYS),
-  VENUES: formatMiniCards(VENUES),
+  ACTORS: filterMiniCards(ACTORS),
+  FRIENDS: filterMiniCards(FRIENDS),
+  PLAYS: filterMiniCards(PLAYS),
+  VENUES: filterMiniCards(VENUES),
   UP_NEXT: mapTheatreVisitsToCards(UP_NEXT),
   YEARS: YEARS.map(
     (year: Array<ITheatreVisit>): Array<ICard> => mapTheatreVisitsToCards(year)

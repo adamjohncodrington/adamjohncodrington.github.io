@@ -1,5 +1,5 @@
 import { mapPoleRoutinesToCards } from "data-factories";
-import { formatMiniCards } from "utils";
+import { filterMiniCards } from "utils";
 
 import { CONTEMPORARY, EXOTIC, IMPROV } from "./videos";
 import { INSTRUCTORS } from "./instructors";
@@ -11,8 +11,8 @@ export const POLE = {
   CONTEMPORARY: mapPoleRoutinesToCards(CONTEMPORARY),
   EXOTIC: mapPoleRoutinesToCards(EXOTIC),
   IMPROV: mapPoleRoutinesToCards(IMPROV),
-  INSTRUCTORS: formatMiniCards(INSTRUCTORS),
+  INSTRUCTORS: filterMiniCards(INSTRUCTORS),
   PHOTOS,
-  SONGS: formatMiniCards(SONGS),
-  STUDIOS: formatMiniCards(STUDIOS)
+  SONGS: filterMiniCards(SONGS),
+  STUDIOS: filterMiniCards(STUDIOS)
 };
