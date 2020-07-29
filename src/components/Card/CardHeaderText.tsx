@@ -9,56 +9,48 @@ import {
   CardSecondaryBody
 } from "./styles";
 
-export const CardHeaderText: React.FC<ICardHeader> = props => {
-  const {
-    panelVisible,
-    title,
-    subtitle,
-    favourite,
-    hideFavouriteIcon,
-    body,
-    secondaryBody,
-    note,
-    countdownText,
-    isStatic,
-    hideBody,
-    hideSecondaryBody,
-    hideSubtitle
-  } = props;
+export const CardHeaderText: React.FC<ICardHeader> = ({
+  panelVisible,
+  title,
+  subtitle,
+  favourite,
+  body,
+  secondaryBody,
+  note,
+  countdownText,
+  isStatic
+}) => (
+  <CardTextContainer data-test="card-container">
+    <CardTitle
+      bold={!isStatic && panelVisible}
+      data-test="card-title"
+      favourite={favourite}
+    >
+      {title}
+    </CardTitle>
 
-  return (
-    <CardTextContainer data-test="card-container">
-      <CardTitle
-        bold={!isStatic && panelVisible}
-        data-test="card-title"
-        favourite={!hideFavouriteIcon && favourite}
-      >
-        {title}
-      </CardTitle>
+    {subtitle && (
+      <CardSubtitle bold={false} data-test="card-subtitle">
+        {subtitle}
+      </CardSubtitle>
+    )}
 
-      {subtitle && !hideSubtitle && (
-        <CardSubtitle bold={false} data-test="card-subtitle">
-          {subtitle}
-        </CardSubtitle>
-      )}
+    {body && <span data-test="card-body">{body}</span>}
 
-      {body && !hideBody && <span data-test="card-body">{body}</span>}
+    {secondaryBody && (
+      <CardSecondaryBody data-test="card-secondary-body">
+        {secondaryBody}
+      </CardSecondaryBody>
+    )}
 
-      {secondaryBody && !hideSecondaryBody && (
-        <CardSecondaryBody data-test="card-secondary-body">
-          {secondaryBody}
-        </CardSecondaryBody>
-      )}
+    {countdownText && (
+      <>
+        <CardCountdown data-test="card-countdown">
+          {countdownText}
+        </CardCountdown>
 
-      {countdownText && (
-        <>
-          <CardCountdown data-test="card-countdown">
-            {countdownText}
-          </CardCountdown>
-
-          {note && <CardNote data-test="card-note">{`(${note})`}</CardNote>}
-        </>
-      )}
-    </CardTextContainer>
-  );
-};
+        {note && <CardNote data-test="card-note">{`(${note})`}</CardNote>}
+      </>
+    )}
+  </CardTextContainer>
+);

@@ -3,7 +3,8 @@ import {
   getTripSubtitle,
   getTripBody,
   getDatesText,
-  arrayToString
+  arrayToString,
+  mapCompanyToSymbols
 } from "utils";
 
 export const mapTravelVideosToCards = (
@@ -21,8 +22,6 @@ export const mapTravelVideosToCards = (
       ),
       { useAmpersandsForPair: true }
     ),
-    company: [],
-    hideVideoSymbol: true,
     secondaryBody: getDatesText([dates.start, dates.end])
   });
 
@@ -33,9 +32,10 @@ export const mapTravelVideosToCards = (
 
 export const mapTripLegsToCards = (tripLegs: Array<ITripLeg>): Array<ICard> => {
   const mapTripLegToCard = (tripLeg: ITripLeg): ICard => {
-    const { dates } = tripLeg;
+    const { dates, company } = tripLeg;
     return {
       ...tripLeg,
+      symbols: mapCompanyToSymbols(company),
       title: getTripTitle(tripLeg),
       subtitle: getTripSubtitle(tripLeg),
       secondaryBody: getTripBody(tripLeg),

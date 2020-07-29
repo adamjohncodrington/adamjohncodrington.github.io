@@ -9,6 +9,7 @@ import {
   getGigSubtitle,
   getFestivalTitle,
   getFestivalSubtitle,
+  mapCompanyToSymbols,
   getMusicianStageNameAtTime
 } from "utils";
 
@@ -43,9 +44,10 @@ export const mapMusicEventsToCards = (
   musicEvents: Array<IMusicEvent>
 ): Array<ICard> => {
   const mapMusicEventToCard = (musicEvent: IMusicEvent): ICard => {
-    const { venue, dates, ticketType } = musicEvent;
+    const { venue, dates, ticketType, company } = musicEvent;
     return {
       ...musicEvent,
+      symbols: mapCompanyToSymbols(company),
       body: moveTheSuffixToPrefix(venue.name),
       secondaryBody: getDatesText(dates),
       countdownText: getCountdownText(dates[0]),
@@ -67,8 +69,6 @@ export const mapGigVideosToCards = (
   }: IGigVideo): ICard => ({
     video,
     title: getMusicianStageNameAtTime({ musician, year: date.getFullYear() }),
-    company: [],
-    hideVideoSymbol: true,
     secondaryBody: getDateText(date)
   });
 

@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 import { SVG } from "resources";
 import { COLORS } from "styles";
 
-interface IStyledSymbol extends ISymbol, I_Theme {}
+interface IStyledSymbol extends I_Opacity, I_Theme {}
 
 const { BLACK } = COLORS;
 
@@ -36,23 +36,21 @@ const StyledSymbol = styled.div(
   `
 );
 
-type IOpacityOptions = "100%" | "50%";
-
-interface ISymbol {
-  opacity: IOpacityOptions;
-  type: "diet" | "friend" | "photo" | "video";
-}
-
 export const Symbol: React.FC<ISymbol> = props => {
-  const { children, type } = props;
-  const isSvg: boolean = type === "video" || type === "photo";
+  const {
+    content: { text, icon },
+    opacity
+  } = props;
 
-  return isSvg ? (
-    <StyledSymbol {...props}>
-      {type === "photo" && <SVG.CAMERA />}
-      {type === "video" && <SVG.VIDEO_CAMERA />}
+  return (
+    <StyledSymbol opacity={opacity}>
+      {icon === "photo" ? (
+        <SVG.CAMERA />
+      ) : icon === "video" ? (
+        <SVG.VIDEO_CAMERA />
+      ) : (
+        text
+      )}
     </StyledSymbol>
-  ) : (
-    <StyledSymbol {...props}>{children}</StyledSymbol>
   );
 };

@@ -24,7 +24,6 @@ export const mapAlbumsToCards = (
       getMusicianStageNameAtTime({ musician, year })
     ),
     body: hideYear ? undefined : year.toString(),
-    company: [],
     headerPhoto: { ...artwork, href: APPLE_MUSIC_URL_PREFIX + appleMusicId }
   });
   return albums.map((album: IAlbum): ICard => mapAlbumToCard(album));

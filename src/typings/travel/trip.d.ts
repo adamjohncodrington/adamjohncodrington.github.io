@@ -1,4 +1,4 @@
-interface ITripLeg extends IPreCard, I_Dates {
+interface ITripLeg extends I__Favourite, I__Photos, I_Dates, I_Company {
   video?: ITravelVideo;
   country: ICountryTemplate;
   primaryLocations?: Array<ILocation>;
@@ -8,4 +8,4 @@ interface ITripLeg extends IPreCard, I_Dates {
   showCountryAsTitle?: boolean;
 }
 
-type ITrip = Array<ITripLegLeg>;
+type ITrip = Array<ITripLeg>;

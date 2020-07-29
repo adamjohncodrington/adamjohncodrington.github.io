@@ -11,9 +11,7 @@ export const mapPoleRoutinesToCards = (
     video,
     subtitle: musician.name,
     title,
-    secondaryBody: getDateText(date),
-    hideVideoSymbol: true,
-    company: []
+    secondaryBody: getDateText(date)
   });
   return poleVideos.map(
     (poleVideo: IPoleRoutine): ICard => mapPoleRoutineToCard(poleVideo)

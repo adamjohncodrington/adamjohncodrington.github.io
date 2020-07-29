@@ -12,4 +12,5 @@ export * from "./generateIngredientListItem";
 
 export * from "./years";
 export * from "./format";
+export * from "./sort";
 export * from "./get";

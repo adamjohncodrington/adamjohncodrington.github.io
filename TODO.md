@@ -1,11 +1,12 @@
 # TO DO LIST
 
-- remove all of the hide props on Card as the mappers should address this
+- reinstate all photo symbols etc
 
-- do not export recipe data in nest
 - remove hidden recipes from group higher up in the app
 
 - add `details` to pole songs section
+
+- add `sortString` and `subSortString` prop to `Card` and `MiniCard`???
 
 - add compulsory `date` prop to `IPhoto`
 - reinstate festival videos
@@ -13,8 +14,6 @@
 - add more travel photos
 - convert `DAYS TO GO` into a dark number symbol and ditch countdown text as a prop and element in Card altogther
 
-- ditch `IPreCard` altogether
-- refactor symbols!!
 
 - rename `pastCount` and `futureCount` on `MiniCard` as `primaryCount` and `secondaryCount` and make them non-compulsory
 
@@ -43,6 +42,7 @@
 
 ## Refactoring
 
+- do not export recipe data in nest
 - define `IDates` as `{start, end, only}`??
 - review whether parents or children should be styling the children across whole site
 - review all instances of `.forEach`, potentially replace with `.reduce`, `.some` and/or `.every`

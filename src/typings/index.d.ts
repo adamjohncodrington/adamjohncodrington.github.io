@@ -46,24 +46,24 @@ interface IStartEndDate {
 
 interface IFestivalTitle extends I_Name, I__Insignificant {}
 
-interface IPreGigOrFestival extends IPreCard {
+interface IGigOrFestival extends I__Favourite, I_Company {
   venue: IMusicVenue;
   ticketType?: ITicketType;
 }
 
-interface IFestival extends IPreGigOrFestival, I_Dates {
+interface IFestival extends IGigOrFestival, I_Dates {
   title: IFestivalTitle;
   video?: IFestivalVideo;
   lineup: Array<Array<IMusician>>;
 }
 
-interface IGig extends IPreGigOrFestival, I_Date {
+interface IGig extends IGigOrFestival, I_Date {
   headline: IMusician;
   video?: IGigVideo;
   support?: Array<IMusician>;
 }
 
-interface IMusicEvent extends IPreGigOrFestival, I__Video {
+interface IMusicEvent extends IGigOrFestival, I__Video {
   title: string;
   subtitle?: string;
   dates: Array<IDate>;
@@ -133,9 +133,13 @@ interface IActor extends I_Name, I__Favourite {}
 
 interface IPlay extends I_Name, I__Favourite {}
 
+interface ISymbol extends I_Opacity {
+  content: { text?: string; icon?: "photo" | "video" };
+}
+
 interface ITheatre extends I_Name, I__Favourite {}
 
-interface ITheatreVisit extends I_Date, IPreCard {
+interface ITheatreVisit extends I_Date, I__Favourite, I_Company {
   play: IPlay;
   theatre: ITheatre;
   cast?: Array<IActor>;

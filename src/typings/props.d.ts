@@ -19,6 +19,10 @@ interface I_Company {
   company: Array<IFriend>;
 }
 
+interface I__Photos {
+  photos?: Array<IPhoto>;
+}
+
 interface I_Date {
   date: Date;
 }
@@ -37,6 +41,12 @@ interface I__Star {
 
 interface I__SecondaryText {
   secondaryText?: string;
+}
+
+type IOpacityOptions = "100%" | "50%";
+
+interface I_Opacity {
+  opacity: IOpacityOptions;
 }
 
 interface I__ColumnCount {

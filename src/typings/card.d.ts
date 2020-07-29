@@ -1,16 +1,6 @@
-interface IPreCard extends I_Company, I__Favourite {
-  hideSubtitle?: boolean;
-  photos?: Array<IPhoto>;
+interface ICard extends I__Photos, I__Favourite, I__Video {
+  symbols?: Array<ISymbol>;
 
-  hideCompanySymbols?: boolean;
-  hideBody?: boolean;
-  hideSecondaryBody?: boolean;
-  hideFavouriteIcon?: boolean;
-  hidePhotoSymbol?: boolean;
-  hideVideoSymbol?: boolean;
-}
-
-interface ICard extends IPreCard, I__Video {
   dates?: Array<Date>;
   year?: number;
 
