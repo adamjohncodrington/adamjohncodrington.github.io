@@ -12,14 +12,12 @@ export const MiniCard: FC<IMiniCard> = props => {
   };
 
   return (
-    <li>
-      <Disclosure
-        {...isStaticProp}
-        Header={headerProps => (
-          <MiniCardHeader {...props} {...headerProps} {...isStaticProp} />
-        )}
-        Panel={() => <MiniCardPanel {...props} />}
-      />
-    </li>
+    <Disclosure
+      {...isStaticProp}
+      Header={headerProps => (
+        <MiniCardHeader {...props} {...headerProps} {...isStaticProp} />
+      )}
+      Panel={() => <MiniCardPanel {...props} />}
+    />
   );
 };

@@ -27,12 +27,16 @@ export const PageSectionPanel: FC<IPageSection> = ({ panelData, shuffle }) => {
     <PageSectionPanelList {...panelData}>
       {CARDS &&
         CARDS.map((card: ICard, index: number) => (
-          <Card key={index} {...card} />
+          <Li key={index}>
+            <Card {...card} />
+          </Li>
         ))}
 
       {miniCards &&
         miniCards.map((miniCard: IMiniCard, index: number) => (
-          <MiniCard key={index} {...miniCard} />
+          <Li key={index}>
+            <MiniCard {...miniCard} />
+          </Li>
         ))}
 
       {recipes &&
@@ -40,7 +44,7 @@ export const PageSectionPanel: FC<IPageSection> = ({ panelData, shuffle }) => {
           (recipe: IRecipe, index: number) =>
             !recipe.hide && (
               <Li key={index}>
-                <Recipe key={index} {...recipe} />
+                <Recipe {...recipe} />
               </Li>
             )
         )}
