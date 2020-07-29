@@ -19,6 +19,10 @@ interface I_Company {
   company: Array<IFriend>;
 }
 
+interface I__Company {
+  company?: Array<IFriend>;
+}
+
 interface I__Photos {
   photos?: Array<IPhoto>;
 }

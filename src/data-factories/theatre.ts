@@ -3,7 +3,7 @@ import {
   // getTheatreVisitSubtitle,
   moveTheSuffixToPrefix,
   getDateText,
-  mapCompanyToSymbols
+  getSymbols
 } from "utils";
 
 export const mapTheatreVisitsToCards = (
@@ -14,7 +14,7 @@ export const mapTheatreVisitsToCards = (
     return {
       ...theatreVisit,
       dates: [date],
-      symbols: mapCompanyToSymbols(company),
+      symbols: getSymbols({ company }),
       title: getTheatreVisitTitle(theatreVisit),
       // subtitle: getTheatreVisitSubtitle(theatreVisit),
       body: moveTheSuffixToPrefix(theatre.name),

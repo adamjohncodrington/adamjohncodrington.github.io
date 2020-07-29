@@ -4,7 +4,7 @@ import {
   getTripBody,
   getDatesText,
   arrayToString,
-  mapCompanyToSymbols
+  getSymbols
 } from "utils";
 
 export const mapTravelVideosToCards = (
@@ -32,10 +32,10 @@ export const mapTravelVideosToCards = (
 
 export const mapTripLegsToCards = (tripLegs: Array<ITripLeg>): Array<ICard> => {
   const mapTripLegToCard = (tripLeg: ITripLeg): ICard => {
-    const { dates, company } = tripLeg;
+    const { dates, company, photos, video } = tripLeg;
     return {
       ...tripLeg,
-      symbols: mapCompanyToSymbols(company),
+      symbols: getSymbols({ company, photos, video }),
       title: getTripTitle(tripLeg),
       subtitle: getTripSubtitle(tripLeg),
       secondaryBody: getTripBody(tripLeg),
