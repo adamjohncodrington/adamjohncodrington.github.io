@@ -1,5 +1,7 @@
 # TO DO LIST
 
+- remove all of the hide props on Card as the mappers should address this
+
 - do not export recipe data in nest
 - remove hidden recipes from group higher up in the app
 

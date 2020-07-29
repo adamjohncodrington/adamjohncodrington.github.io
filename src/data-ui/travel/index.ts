@@ -24,6 +24,6 @@ export const TRAVEL = {
   UP_NEXT: mapTripLegsToCards(UP_NEXT),
   VIDEOS: mapTravelVideosToCards(VIDEOS),
   YEARS: YEARS.map(
-    (year: Array<ITripLeg>): Array<ICard> => mapTripLegsToCards(year)
+    (year: Array<ITrip>): Array<ICard> => mapTripLegsToCards(year.flat())
   )
 };
