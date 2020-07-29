@@ -1,5 +1,7 @@
 # TO DO LIST
 
+- move all the `mapTo` defs to the files that they are used in, otherwise to a generalised `map.ts` file :)
+
 - reinstate festival videos
 - add compulsory `date` prop to `IPhoto`
 - add compulsory sort prop to `IMiniCard`
