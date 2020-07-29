@@ -10,6 +10,10 @@ interface I__Insignificant {
   insignificant?: boolean;
 }
 
+interface I_Sort {
+  sort: string | number;
+}
+
 interface I_PastFutureCounts {
   futureCount: number;
   pastCount: number;

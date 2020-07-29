@@ -12,12 +12,11 @@ const getSongMatches = (song: ISong): Array<IPoleRoutine> => {
 export const SONGS: Array<IMiniCard> = Object.values(songs).map(
   (song: ISong): IMiniCard => {
     const { musician, title } = song;
-
     const songMatches: Array<IPoleRoutine> = getSongMatches(song);
-    // const [poleRoutine] = getSongMatches(song);
-
+    const artistAndSong: string = `${musician.name} - ${title}`;
     return {
-      text: `${musician.name} - ${title}`,
+      text: artistAndSong,
+      sort: artistAndSong,
       pastCount: songMatches.length,
       video: songMatches[0].video,
       futureCount: 0

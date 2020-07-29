@@ -17,6 +17,7 @@ const getFriendDetails = (friend: IFriend): Array<IMiniCardPanelDetail> => {
     (trip: ITripLeg): IMiniCardPanelDetail => {
       const { dates, video } = trip;
       return {
+        sort: dates[0].valueOf(),
         mainText: [getTripTitle(trip)],
         dates,
         video
@@ -28,12 +29,18 @@ const getFriendDetails = (friend: IFriend): Array<IMiniCardPanelDetail> => {
 export const FRIENDS: Array<IMiniCard> = Object.values(friends)
   .filter(({ travel }: IFriend): boolean => !!travel)
   .map(
-    (friend: IFriend): IMiniCard => ({
-      text: friend.name,
-      ...getItemCounts({
+    (friend: IFriend): IMiniCard => {
+      const { name } = friend;
+      const { pastCount, futureCount } = getItemCounts({
         item: { friend },
         data: { tripLegs: DATA }
-      }),
-      details: getFriendDetails(friend)
-    })
+      });
+      return {
+        text: name,
+        sort: pastCount + "-" + futureCount,
+        pastCount,
+        futureCount,
+        details: getFriendDetails(friend)
+      };
+    }
   );

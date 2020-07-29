@@ -16,6 +16,7 @@ const getMusicianDetails = (musician: IMusician): Array<IMiniCardPanelDetail> =>
     ({ year, title, appleMusicId }: IVinyl): IMiniCardPanelDetail => ({
       mainText: [title],
       year,
+      sort: year,
       headerLink: APPLE_MUSIC_URL_PREFIX + appleMusicId
     })
   );
@@ -25,6 +26,7 @@ export const MUSICIANS: Array<IMiniCard> = Object.values(musicians).map(
     const { name, previousStageName } = musician;
     return {
       text: name,
+      sort: name,
       secondaryText: previousStageName && previousStageName.name,
       ...getItemCounts({ item: { musician }, data: { vinyls: DATA } }),
       details: getMusicianDetails(musician)

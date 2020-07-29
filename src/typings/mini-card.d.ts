@@ -1,4 +1,4 @@
-interface IMiniCardPanelDetail extends I__Favourite, I__Video {
+interface IMiniCardPanelDetail extends I_Sort, I__Favourite, I__Video {
   mainText?: Array<string>;
   dates?: Array<Date>;
   index?: number;
@@ -12,6 +12,7 @@ interface IMiniCard
     I__Favourite,
     I__Video,
     I__Star {
+  sort: string | number;
   text: string;
   doNotIncludeInList?: boolean;
   countInfoIrrelevant?: boolean;

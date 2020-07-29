@@ -1,6 +1,4 @@
-interface ICard extends I__Photos, I__Favourite, I__Video {
-  sort: string | number;
-
+interface ICard extends I__Photos, I_Sort, I__Favourite, I__Video {
   symbols?: Array<ISymbol>;
 
   dates?: Array<Date>;

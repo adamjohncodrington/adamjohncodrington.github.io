@@ -22,21 +22,29 @@ const highlights: Array<IAttraction> = attractions.filter(
 );
 
 export const HIGHLIGHTS: Array<IMiniCard> = highlights.map(
-  (highlight: IAttraction): IMiniCard => ({
-    text: highlight.name,
-    ...getItemCounts({
-      item: { attraction: highlight },
-      data: { tripLegs: DATA }
-    })
-  })
+  (highlight: IAttraction): IMiniCard => {
+    const { name } = highlight;
+    return {
+      text: name,
+      sort: name,
+      ...getItemCounts({
+        item: { attraction: highlight },
+        data: { tripLegs: DATA }
+      })
+    };
+  }
 );
 
 export const THEME_PARKS: Array<IMiniCard> = themeParks.map(
-  (themePark: IAttraction): IMiniCard => ({
-    text: themePark.name,
-    ...getItemCounts({
-      item: { attraction: themePark },
-      data: { tripLegs: DATA }
-    })
-  })
+  (themePark: IAttraction): IMiniCard => {
+    const { name } = themePark;
+    return {
+      text: name,
+      sort: name,
+      ...getItemCounts({
+        item: { attraction: themePark },
+        data: { tripLegs: DATA }
+      })
+    };
+  }
 );

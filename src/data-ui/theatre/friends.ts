@@ -15,7 +15,11 @@ const getFriendDetails = (friend: IFriend): Array<IMiniCardPanelDetail> => {
   return friendMatches.map(
     (theatreVisit: ITheatreVisit): IMiniCardPanelDetail => {
       const { date } = theatreVisit;
-      return { mainText: [getTheatreVisitTitle(theatreVisit)], dates: [date] };
+      return {
+        mainText: [getTheatreVisitTitle(theatreVisit)],
+        sort: date.valueOf(),
+        dates: [date]
+      };
     }
   );
 };
@@ -23,9 +27,17 @@ const getFriendDetails = (friend: IFriend): Array<IMiniCardPanelDetail> => {
 export const FRIENDS: Array<IMiniCard> = Object.values(friends)
   .filter(({ theatre }: IFriend): boolean => !!theatre)
   .map(
-    (friend: IFriend): IMiniCard => ({
-      text: friend.name,
-      ...getItemCounts({ item: { friend }, data: { theatreVisits: DATA } }),
-      details: getFriendDetails(friend)
-    })
+    (friend: IFriend): IMiniCard => {
+      const { pastCount, futureCount } = getItemCounts({
+        item: { friend },
+        data: { theatreVisits: DATA }
+      });
+      return {
+        text: friend.name,
+        sort: pastCount + "-" + futureCount,
+        pastCount,
+        futureCount,
+        details: getFriendDetails(friend)
+      };
+    }
   );
