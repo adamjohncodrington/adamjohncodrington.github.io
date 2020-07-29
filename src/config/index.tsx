@@ -6,3 +6,5 @@ export const SPEED_UP_PAGE_LOAD: boolean = true;
 
 export const APPLE_MUSIC_URL_PREFIX: string =
   "https://music.apple.com/gb/album/";
+
+export const FREE_IMAGE_HOST_URL_PREFIX: string = "https://iili.io/";

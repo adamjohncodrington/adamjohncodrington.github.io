@@ -66,7 +66,7 @@ export const getTripTitle = ({
         ),
         { useAmpersandsForPair: true }
       )
-    : "TRIP TITLE MISSING";
+    : "PAGE SECTION TITLE MISSING";
 
 export const getTripSubtitle = ({
   country,

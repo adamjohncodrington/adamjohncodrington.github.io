@@ -1,113 +1,113 @@
 export const _1975_BRIEF_INQUIRY: IPhoto = {
-  url: "https://iili.io/dfNYzB.jpg"
+  freeimagehostId: "dfNYzB.jpg"
 };
-export const ADELE_19: IPhoto = { url: "https://iili.io/dfNcs1.jpg" };
+export const ADELE_19: IPhoto = { freeimagehostId: "dfNcs1.jpg" };
 export const ALLIE_X_SUPER_SUNSET: IPhoto = {
-  url: "https://iili.io/dfN0qF.jpg"
+  freeimagehostId: "dfN0qF.jpg"
 };
 export const AMY_WINEHOUSE_BACK_TO_BLACK: IPhoto = {
-  url: "https://iili.io/dfNaWP.jpg"
+  freeimagehostId: "dfNaWP.jpg"
 };
 export const ARCTIC_MONKEYS_FAVOURITE_WORST_NIGHTMARE: IPhoto = {
-  url: "https://iili.io/dfN10g.jpg"
+  freeimagehostId: "dfN10g.jpg"
 };
 export const LYKKE_LI_SO_SAD_SO_SEXY: IPhoto = {
-  url: "https://iili.io/dIuyCb.jpg"
+  freeimagehostId: "dIuyCb.jpg"
 };
 export const TAYLOR_SWIFT_FOLKLORE: IPhoto = {
-  url: "https://iili.io/dIumZu.jpg"
+  freeimagehostId: "dIumZu.jpg"
 };
 export const ArianaGrande_TUN: IPhoto = {
-  url: "https://iili.io/dfNEga.jpg"
+  freeimagehostId: "dfNEga.jpg"
 };
-export const BANKS_III: IPhoto = { url: "https://iili.io/dfNMdJ.jpg" };
+export const BANKS_III: IPhoto = { freeimagehostId: "dfNMdJ.jpg" };
 export const BEN_HOWARD_EVERY_KINGDOM: IPhoto = {
-  url: "https://iili.io/dfNV5v.jpg"
+  freeimagehostId: "dfNV5v.jpg"
 };
 export const BEYONCE_LEMONADE: IPhoto = {
-  url: "https://iili.io/dfNWeR.jpg"
+  freeimagehostId: "dfNWeR.jpg"
 };
 export const CARIBOU_OUR_LOVE: IPhoto = {
-  url: "https://iili.io/dfNXbp.jpg"
+  freeimagehostId: "dfNXbp.jpg"
 };
 export const CAROLINE_POLACHEK_PANG: IPhoto = {
-  url: "https://iili.io/dfNjzN.jpg"
+  freeimagehostId: "dfNjzN.jpg"
 };
 export const CHARLI_XCX_HOW_IM_FEELING_NOW: IPhoto = {
-  url: "https://iili.io/dfNwXI.jpg"
+  freeimagehostId: "dfNwXI.jpg"
 };
 export const DUA_LIPA_FUTURE_NOSTALGIA: IPhoto = {
-  url: "https://iili.io/dfNNst.jpg"
+  freeimagehostId: "dfNNst.jpg"
 };
 export const ELLIE_GOULDING_HALCYON: IPhoto = {
-  url: "https://iili.io/dfNeqX.jpg"
+  freeimagehostId: "dfNeqX.jpg"
 };
 export const FKA_TWIGS_MAGDALENE: IPhoto = {
-  url: "https://iili.io/dfNk1n.jpg"
+  freeimagehostId: "dfNk1n.jpg"
 };
-export const FLORENCE_LUNGS: IPhoto = { url: "https://iili.io/dfNvgs.jpg" };
+export const FLORENCE_LUNGS: IPhoto = { freeimagehostId: "dfNvgs.jpg" };
 export const GEORGE_FITZGERALD_ALL_THAT_MUST_BE: IPhoto = {
-  url: "https://iili.io/dfNSdG.jpg"
+  freeimagehostId: "dfNSdG.jpg"
 };
 export const GRIMES_ART_ANGELS: IPhoto = {
-  url: "https://iili.io/dfNU7f.jpg"
+  freeimagehostId: "dfNU7f.jpg"
 };
-export const HAIM_WIMPIII: IPhoto = { url: "https://iili.io/dfNge4.jpg" };
+export const HAIM_WIMPIII: IPhoto = { freeimagehostId: "dfNge4.jpg" };
 export const JON_HOPKINS_SINGULARITY: IPhoto = {
-  url: "https://iili.io/dfNrml.jpg"
+  freeimagehostId: "dfNrml.jpg"
 };
 export const KATE_NASH_MADE_OF_BRICKS: IPhoto = {
-  url: "https://iili.io/dfN6I2.jpg"
+  freeimagehostId: "dfN6I2.jpg"
 };
 export const KATY_PERRY_ONE_OF_THE_BOYS: IPhoto = {
-  url: "https://iili.io/dfNPXS.jpg"
+  freeimagehostId: "dfNPXS.jpg"
 };
 export const KIM_PETRAS_CLARITY: IPhoto = {
-  url: "https://iili.io/dfNiL7.jpg"
+  freeimagehostId: "dfNiL7.jpg"
 };
 export const LADY_GAGA_BORN_THIS_WAY: IPhoto = {
-  url: "https://iili.io/dfNLB9.jpg"
+  freeimagehostId: "dfNLB9.jpg"
 };
-export const LANA_BORN_TO_DIE: IPhoto = { url: "https://iili.io/dfNQ1e.jpg" };
-export const LANE_8_RISE: IPhoto = { url: "https://iili.io/dfNDdb.jpg" };
-export const LANY_MALIBU_NIGHTS: IPhoto = { url: "https://iili.io/dfNZru.jpg" };
+export const LANA_BORN_TO_DIE: IPhoto = { freeimagehostId: "dfNQ1e.jpg" };
+export const LANE_8_RISE: IPhoto = { freeimagehostId: "dfNDdb.jpg" };
+export const LANY_MALIBU_NIGHTS: IPhoto = { freeimagehostId: "dfNZru.jpg" };
 export const LENNON_STELLA_THREE_TWO_ONE: IPhoto = {
-  url: "https://iili.io/dfNb7j.jpg"
+  freeimagehostId: "dfNb7j.jpg"
 };
-export const LEON_LEON: IPhoto = { url: "https://iili.io/dfNmkx.jpg" };
+export const LEON_LEON: IPhoto = { freeimagehostId: "dfNmkx.jpg" };
 export const LISSIE_CATCHING_A_TIGER: IPhoto = {
-  url: "https://iili.io/dfNpmQ.jpg"
+  freeimagehostId: "dfNpmQ.jpg"
 };
-export const LORDE_PURE_HEROINE: IPhoto = { url: "https://iili.io/dfO9IV.jpg" };
+export const LORDE_PURE_HEROINE: IPhoto = { freeimagehostId: "dfO9IV.jpg" };
 export const MARINA_ELECTRA_HEART: IPhoto = {
-  url: "https://iili.io/dfOJLP.jpg"
+  freeimagehostId: "dfOJLP.jpg"
 };
-export const MUNA_ABOUT_U: IPhoto = { url: "https://iili.io/dfOHhB.jpg" };
+export const MUNA_ABOUT_U: IPhoto = { freeimagehostId: "dfOHhB.jpg" };
 export const NATALIA_KILLS_PERFECTIONIST: IPhoto = {
-  url: "https://iili.io/dfO2B1.jpg"
+  freeimagehostId: "dfO2B1.jpg"
 };
 export const PANIC_AT_THE_DISCO_AFYCSO: IPhoto = {
-  url: "https://iili.io/dfO3EF.jpg"
+  freeimagehostId: "dfO3EF.jpg"
 };
-export const PARAMORE_RIOT: IPhoto = { url: "https://iili.io/dfOFrg.jpg" };
+export const PARAMORE_RIOT: IPhoto = { freeimagehostId: "dfOFrg.jpg" };
 export const PVRIS_AWKOHAWNOH: IPhoto = {
-  url: "https://iili.io/dfOf2a.jpg"
+  freeimagehostId: "dfOf2a.jpg"
 };
-export const RIHANNA_RATED_R: IPhoto = { url: "https://iili.io/dfOqYJ.jpg" };
-export const RYN_WEAVER_FOOL: IPhoto = { url: "https://iili.io/dfOBkv.jpg" };
-export const SOPHIE_OOEPUI: IPhoto = { url: "https://iili.io/dfOCpR.jpg" };
+export const RIHANNA_RATED_R: IPhoto = { freeimagehostId: "dfOqYJ.jpg" };
+export const RYN_WEAVER_FOOL: IPhoto = { freeimagehostId: "dfOBkv.jpg" };
+export const SOPHIE_OOEPUI: IPhoto = { freeimagehostId: "dfOCpR.jpg" };
 export const SUFJAN_STEVENS_CARRIE_LOWELL: IPhoto = {
-  url: "https://iili.io/dfOoIp.jpg"
+  freeimagehostId: "dfOoIp.jpg"
 };
 export const TAYLOR_SWIFT_1989: IPhoto = {
-  url: "https://iili.io/dfOxhN.jpg"
+  freeimagehostId: "dfOxhN.jpg"
 };
-export const TOURIST_U: IPhoto = { url: "https://iili.io/dfOzQI.jpg" };
+export const TOURIST_U: IPhoto = { freeimagehostId: "dfOzQI.jpg" };
 export const TROYE_SIVAN_IN_A_DREAM: IPhoto = {
-  url: "https://iili.io/dfOTBt.jpg"
+  freeimagehostId: "dfOTBt.jpg"
 };
 
-export const BANKS_ALTAR: IPhoto = { url: "https://iili.io/dA3xBS.jpg" };
+export const BANKS_ALTAR: IPhoto = { freeimagehostId: "dA3xBS.jpg" };
 export const LADY_GAGA_FAME_MONSTER: IPhoto = {
-  url: "https://iili.io/dA3zE7.jpg"
+  freeimagehostId: "dA3zE7.jpg"
 };

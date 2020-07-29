@@ -121,14 +121,14 @@ const CSS_REGULAR_CARDS = ({
   ${CSS_COMMON}
 `;
 
-export const PageSectionPanelList = styled(
-  Ul
-)(({ pageSectionPanelType }: IPageSectionPanelList) =>
-  pageSectionPanelType === RECIPES
-    ? CSS_RECIPE_CARDS
-    : pageSectionPanelType === MINI_CARDS
-    ? CSS_COUNTED_LIST
-    : CSS_REGULAR_CARDS
+export const PageSectionPanelList = styled(Ul)(
+  ({ pageSectionPanelType }: IPageSectionPanelList) => {
+    return pageSectionPanelType === RECIPES
+      ? CSS_RECIPE_CARDS
+      : pageSectionPanelType === MINI_CARDS
+      ? CSS_COUNTED_LIST
+      : CSS_REGULAR_CARDS;
+  }
 );
 
 export const StyledComingSoonPlaceholder = styled.div(

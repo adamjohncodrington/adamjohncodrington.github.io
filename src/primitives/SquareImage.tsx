@@ -1,5 +1,6 @@
 import React from "react";
 import styled, { css } from "styled-components";
+import { FREE_IMAGE_HOST_URL_PREFIX } from "config";
 
 interface IStyledImage {
   size: string;
@@ -24,13 +25,13 @@ interface ISquareImage {
 export const SquareImage = ({
   className,
   dataTest,
-  photo: { url },
+  photo: { freeimagehostId },
   size
 }: ISquareImage) => (
   <StyledImage
     className={className}
     data-test={dataTest}
-    src={url}
+    src={FREE_IMAGE_HOST_URL_PREFIX + freeimagehostId}
     size={size}
   />
 );

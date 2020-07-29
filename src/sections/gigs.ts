@@ -31,7 +31,7 @@ const FRIENDS: IPageSection = {
 const SOLO: IPageSection = {
   SvgIcon: SVG.SOLO,
   title: PAGE_SECTION_TITLES.SOLO,
-  data: { musicEvents: DATA.SOLO },
+  data: { cards: DATA.SOLO },
   hide: true
 };
 
@@ -39,14 +39,20 @@ const FAVOURITES: IPageSection = {
   SvgIcon: SVG.HEART,
   shuffle: true,
   title: PAGE_SECTION_TITLES.FAVOURITES,
-  data: { musicEvents: DATA.FAVOURITES },
+  data: { cards: DATA.FAVOURITES },
   hide: true
+};
+
+const PHOTOS: IPageSection = {
+  SvgIcon: SVG.CAMERA,
+  title: PAGE_SECTION_TITLES.PHOTOS,
+  data: { comingSoon: true }
 };
 
 const UP_NEXT: IPageSection = {
   SvgIcon: SVG.NOTEPAD,
   title: PAGE_SECTION_TITLES.UP_NEXT,
-  data: { musicEvents: DATA.UP_NEXT },
+  data: { cards: DATA.UP_NEXT },
   count: DATA.UP_NEXT.length
 };
 
@@ -60,15 +66,17 @@ const VENUES: IPageSection = {
 const VIDEOS: IPageSection = {
   SvgIcon: SVG.VIDEO_CAMERA,
   title: PAGE_SECTION_TITLES.VIDEOS,
-  data: { gigVideos: DATA.VIDEOS },
+  data: { cards: DATA.VIDEOS },
   count: DATA.VIDEOS.length
 };
 
 const YEARS: Array<IPageSection> = DATA.YEARS.map(
-  (year: Array<IMusicEvent>): IPageSection => ({
-    title: year[0].dates[0].getFullYear().toString(),
+  (year: Array<ICard>): IPageSection => ({
+    title: year[0].dates
+      ? year[0].dates[0].getFullYear().toString()
+      : "ERROR RETRIEVING PAGE SECTION YEAR",
     count: year.length,
-    data: { musicEvents: year }
+    data: { cards: year }
   })
 );
 
@@ -78,6 +86,7 @@ export const GIGS: Array<IPageSection> = [
   FAVOURITES,
   FESTIVALS,
   FRIENDS,
+  PHOTOS,
   SOLO,
   UP_NEXT,
   VENUES,

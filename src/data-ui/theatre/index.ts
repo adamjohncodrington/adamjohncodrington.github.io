@@ -1,3 +1,4 @@
+import { mapTheatreVisitsToCards } from "data-factories";
 import { formatMiniCards } from "utils";
 
 import { ACTORS } from "./actors";
@@ -12,6 +13,8 @@ export const THEATRE = {
   FRIENDS: formatMiniCards(FRIENDS, { isLeaderboard: true }),
   PLAYS: formatMiniCards(PLAYS),
   VENUES: formatMiniCards(VENUES),
-  UP_NEXT,
-  YEARS
+  UP_NEXT: mapTheatreVisitsToCards(UP_NEXT),
+  YEARS: YEARS.map(
+    (year: Array<ITheatreVisit>): Array<ICard> => mapTheatreVisitsToCards(year)
+  )
 };

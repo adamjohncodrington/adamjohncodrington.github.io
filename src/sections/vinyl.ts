@@ -19,7 +19,7 @@ const COLLECTION: IPageSection = {
 
 const SIGNED: IPageSection = {
   title: PAGE_SECTION_TITLES.SIGNED,
-  data: { vinyls: DATA.SIGNED },
+  data: { cards: DATA.SIGNED },
   count: DATA.SIGNED.length,
   SvgIcon: SVG.PEN,
   shuffle: true
@@ -28,16 +28,18 @@ const SIGNED: IPageSection = {
 const WISH_LIST: IPageSection = {
   title: PAGE_SECTION_TITLES.WISH_LIST,
   SvgIcon: SVG.STARS,
-  data: { vinyls: DATA.WISH_LIST },
+  data: { cards: DATA.WISH_LIST },
   count: DATA.WISH_LIST.length,
   shuffle: true
 };
 
 const YEARS: Array<IPageSection> = DATA.YEARS.map(
-  (yearGroup: Array<IVinyl>): IPageSection => ({
-    title: yearGroup[0].year.toString(),
-    data: { vinyls: yearGroup },
-    count: yearGroup.length
+  (year: Array<ICard>): IPageSection => ({
+    title: year[0].year
+      ? year[0].year.toString()
+      : "PAGE SECTION TITLE MISSING",
+    data: { cards: year },
+    count: year.length
   })
 );
 

@@ -23,7 +23,7 @@ interface IPage extends I__Hide {
 interface IPhoto extends I__Hide {
   date?: Date;
   title?: string;
-  url: string;
+  freeimagehostId: string;
 }
 
 interface IPhotoLink extends IPhoto {

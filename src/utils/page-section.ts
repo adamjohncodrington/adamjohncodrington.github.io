@@ -1,12 +1,14 @@
 export const validPageSectionData = ({
+  cards,
   miniCards,
   musicEvents,
   recipes,
   theatreVisits,
   tripLegs,
   vinyls
-}: IPageSectionDataTypes): boolean =>
+}: IPageSectionPanelTypes): boolean =>
   !(
+    (cards && cards.length === 0) ||
     (miniCards && miniCards.length === 0) ||
     (musicEvents && musicEvents.length === 0) ||
     (recipes &&

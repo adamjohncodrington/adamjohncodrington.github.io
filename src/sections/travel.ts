@@ -1,7 +1,6 @@
 import { PAGE_SECTION_TITLES } from "@constants";
 import { TRAVEL as DATA } from "data-ui";
 import { SVG } from "resources";
-import { isInFuture } from "utils";
 
 const BUCKET_LIST: IPageSection = {
   SvgIcon: SVG.STARS,
@@ -53,13 +52,13 @@ const THEME_PARKS: IPageSection = {
 const UP_NEXT: IPageSection = {
   SvgIcon: SVG.NOTEPAD,
   title: PAGE_SECTION_TITLES.UP_NEXT,
-  data: { tripLegs: DATA.UP_NEXT }
+  data: { cards: DATA.UP_NEXT }
 };
 
 const VIDEOS: IPageSection = {
   SvgIcon: SVG.VIDEO_CAMERA,
   title: PAGE_SECTION_TITLES.VIDEOS,
-  data: { travelVideos: DATA.VIDEOS }
+  data: { cards: DATA.VIDEOS }
 };
 
 const PHOTOS: IPageSection = {
@@ -69,13 +68,13 @@ const PHOTOS: IPageSection = {
 };
 
 const YEARS: Array<IPageSection> = DATA.YEARS.map(
-  (year: Array<ITrip>): IPageSection => ({
-    title: year[0][0].dates[0].getFullYear().toString(),
+  (year: Array<ICard>): IPageSection => ({
+    title: year[0].dates
+      ? year[0].dates[0].getFullYear().toString()
+      : "PAGE SECTION TITLE MISSING",
     count: year.length,
     data: {
-      tripLegs: year
-        .flat()
-        .filter(({ dates }: ITripLeg): boolean => !isInFuture(dates[0]))
+      cards: year
     }
   })
 );

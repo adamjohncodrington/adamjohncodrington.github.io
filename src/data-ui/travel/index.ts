@@ -1,3 +1,4 @@
+import { mapTripLegsToCards, mapTravelVideosToCards } from "data-factories";
 import { formatMiniCards } from "utils";
 
 import { HIGHLIGHTS, THEME_PARKS } from "./attractions";
@@ -20,7 +21,9 @@ export const TRAVEL = {
   ISLANDS: formatMiniCards(ISLANDS),
   PHOTOS,
   THEME_PARKS: formatMiniCards(THEME_PARKS),
-  UP_NEXT,
-  VIDEOS,
-  YEARS
+  UP_NEXT: mapTripLegsToCards(UP_NEXT),
+  VIDEOS: mapTravelVideosToCards(VIDEOS),
+  YEARS: YEARS.map(
+    (year: Array<ITripLeg>): Array<ICard> => mapTripLegsToCards(year)
+  )
 };

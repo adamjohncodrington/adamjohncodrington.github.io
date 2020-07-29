@@ -11,6 +11,9 @@ interface IPreCard extends I_Company, I__Favourite {
 }
 
 interface ICard extends IPreCard, I__Video {
+  dates?: Array<Date>;
+  year?: number;
+
   title: string;
   subtitle?: string;
   body?: string;

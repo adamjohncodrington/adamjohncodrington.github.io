@@ -1,7 +1,6 @@
 import { PAGE_SECTION_TITLES } from "@constants";
 import { THEATRE as DATA } from "data-ui";
 import { SVG } from "resources";
-import { isInFuture } from "utils";
 
 const ACTORS: IPageSection = {
   title: PAGE_SECTION_TITLES.ACTORS,
@@ -32,17 +31,17 @@ const THEATRES: IPageSection = {
 const UP_NEXT: IPageSection = {
   SvgIcon: SVG.NOTEPAD,
   title: PAGE_SECTION_TITLES.UP_NEXT,
-  data: { theatreVisits: DATA.UP_NEXT }
+  data: { cards: DATA.UP_NEXT }
 };
 
 const YEARS: Array<IPageSection> = DATA.YEARS.map(
-  (year: Array<ITheatreVisit>): IPageSection => ({
-    title: year[0].date.getFullYear().toString(),
+  (year: Array<ICard>): IPageSection => ({
+    title: year[0].dates
+      ? year[0].dates[0].getFullYear().toString()
+      : "ERROR RETRIEVING PAGE SECTION YEAR",
     count: year.length,
     data: {
-      theatreVisits: year.filter(
-        ({ date }: ITheatreVisit): boolean => !isInFuture(date)
-      )
+      cards: year
     }
   })
 );

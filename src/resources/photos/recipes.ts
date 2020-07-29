@@ -1,38 +1,38 @@
-export const BAKED_BEANS: IPhoto = { url: "https://iili.io/dfwMtS.jpg" };
-export const BANANA_CAKE: IPhoto = { url: "https://iili.io/dfwXV9.jpg" };
+export const BAKED_BEANS: IPhoto = { freeimagehostId: "dfwMtS.jpg" };
+export const BANANA_CAKE: IPhoto = { freeimagehostId: "dfwXV9.jpg" };
 export const BANG_BANG_CAULI: IPhoto = {
-  url: "https://iili.io/dfwWo7.jpg"
+  freeimagehostId: "dfwWo7.jpg"
 };
-export const BOLOGNESE: IPhoto = { url: "https://iili.io/dfwkHx.jpg" };
+export const BOLOGNESE: IPhoto = { freeimagehostId: "dfwkHx.jpg" };
 export const BLUEBERRY_PANCAKES: IPhoto = {
-  url: "https://iili.io/dfwhPe.jpg"
+  freeimagehostId: "dfwhPe.jpg"
 };
-export const CRUMBLE: IPhoto = { url: "https://iili.io/dfwNcb.jpg" };
-export const FLAPJACKS: IPhoto = { url: "https://iili.io/dfwwKu.jpg" };
+export const CRUMBLE: IPhoto = { freeimagehostId: "dfwNcb.jpg" };
+export const FLAPJACKS: IPhoto = { freeimagehostId: "dfwwKu.jpg" };
 export const KALE_CRISPY_ALT: IPhoto = {
-  url: "https://iili.io/dfwSDB.jpg",
+  freeimagehostId: "dfwSDB.jpg",
   hide: true
 };
-export const KALE_CRISPY: IPhoto = { url: "https://iili.io/dAN3KJ.jpg" };
-export const LASAGNE: IPhoto = { url: "https://iili.io/dfw8NV.jpg" };
-export const MASHED_POTATO: IPhoto = { url: "https://iili.io/dfwvAQ.jpg" };
-export const PIRI_PIRI: IPhoto = { url: "https://iili.io/dfwPKg.jpg" };
-export const PORRIDGE: IPhoto = { url: "https://iili.io/dfwgoP.jpg" };
-export const POTATO_SALAD: IPhoto = { url: "https://iili.io/dfwrV1.jpg" };
-export const RATATOUILLE: IPhoto = { url: "https://iili.io/dfw4iF.jpg" };
-export const ROGAN_JOSH: IPhoto = { url: "https://iili.io/dfwila.jpg" };
-export const BROWNIES: IPhoto = { url: "https://iili.io/dAwyt1.jpg" };
-export const CREPE: IPhoto = { url: "https://iili.io/dAwmAB.jpg", hide: true };
-export const FISH_CHIPS: IPhoto = { url: "https://iili.io/dAwb9V.jpg" };
-export const FISH_PIE: IPhoto = { url: "https://iili.io/dAwpwP.jpg" };
-export const GINGERBREAD: IPhoto = { url: "https://iili.io/dANHoF.jpg" };
-export const MACARONI_CHEESE: IPhoto = { url: "https://iili.io/dANJMg.jpg" };
-export const MACARONS: IPhoto = { url: "https://iili.io/dANdPa.jpg" };
+export const KALE_CRISPY: IPhoto = { freeimagehostId: "dAN3KJ.jpg" };
+export const LASAGNE: IPhoto = { freeimagehostId: "dfw8NV.jpg" };
+export const MASHED_POTATO: IPhoto = { freeimagehostId: "dfwvAQ.jpg" };
+export const PIRI_PIRI: IPhoto = { freeimagehostId: "dfwPKg.jpg" };
+export const PORRIDGE: IPhoto = { freeimagehostId: "dfwgoP.jpg" };
+export const POTATO_SALAD: IPhoto = { freeimagehostId: "dfwrV1.jpg" };
+export const RATATOUILLE: IPhoto = { freeimagehostId: "dfw4iF.jpg" };
+export const ROGAN_JOSH: IPhoto = { freeimagehostId: "dfwila.jpg" };
+export const BROWNIES: IPhoto = { freeimagehostId: "dAwyt1.jpg" };
+export const CREPE: IPhoto = { freeimagehostId: "dAwmAB.jpg", hide: true };
+export const FISH_CHIPS: IPhoto = { freeimagehostId: "dAwb9V.jpg" };
+export const FISH_PIE: IPhoto = { freeimagehostId: "dAwpwP.jpg" };
+export const GINGERBREAD: IPhoto = { freeimagehostId: "dANHoF.jpg" };
+export const MACARONI_CHEESE: IPhoto = { freeimagehostId: "dANJMg.jpg" };
+export const MACARONS: IPhoto = { freeimagehostId: "dANdPa.jpg" };
 export const POACHED_EGGS_ASPARAGUS: IPhoto = {
-  url: "https://iili.io/dANFcv.jpg"
+  freeimagehostId: "dANFcv.jpg"
 };
-export const QUICHE: IPhoto = { url: "https://iili.io/dANKSR.jpg" };
-export const SCRAMBLED_EGG: IPhoto = { url: "https://iili.io/dANq9p.jpg" };
-export const SHEPHERDS_PIE: IPhoto = { url: "https://iili.io/dANCNI.jpg" };
-export const SMOOTHIES: IPhoto = { url: "https://iili.io/dANBAN.jpg" };
-export const SWEET_SOUR_CHICKEN: IPhoto = { url: "https://iili.io/dANntt.jpg" };
+export const QUICHE: IPhoto = { freeimagehostId: "dANKSR.jpg" };
+export const SCRAMBLED_EGG: IPhoto = { freeimagehostId: "dANq9p.jpg" };
+export const SHEPHERDS_PIE: IPhoto = { freeimagehostId: "dANCNI.jpg" };
+export const SMOOTHIES: IPhoto = { freeimagehostId: "dANBAN.jpg" };
+export const SWEET_SOUR_CHICKEN: IPhoto = { freeimagehostId: "dANntt.jpg" };

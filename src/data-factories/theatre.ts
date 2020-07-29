@@ -1,6 +1,6 @@
 import {
   getTheatreVisitTitle,
-  getTheatreVisitSubtitle,
+  // getTheatreVisitSubtitle,
   moveTheSuffixToPrefix,
   getDateText
 } from "utils";
@@ -12,8 +12,9 @@ export const mapTheatreVisitsToCards = (
     const { theatre, date } = theatreVisit;
     return {
       ...theatreVisit,
+      dates: [date],
       title: getTheatreVisitTitle(theatreVisit),
-      subtitle: getTheatreVisitSubtitle(theatreVisit),
+      // subtitle: getTheatreVisitSubtitle(theatreVisit),
       body: moveTheSuffixToPrefix(theatre.name),
       secondaryBody: getDateText(date)
     };

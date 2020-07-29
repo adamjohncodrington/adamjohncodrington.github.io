@@ -1,3 +1,4 @@
+import { mapPoleRoutinesToCards } from "data-factories";
 import { formatMiniCards } from "utils";
 
 import { CONTEMPORARY, EXOTIC, IMPROV } from "./videos";
@@ -7,11 +8,11 @@ import { SONGS } from "./songs";
 import { STUDIOS } from "./studios";
 
 export const POLE = {
-  CONTEMPORARY,
-  EXOTIC,
-  IMPROV,
+  CONTEMPORARY: mapPoleRoutinesToCards(CONTEMPORARY),
+  EXOTIC: mapPoleRoutinesToCards(EXOTIC),
+  IMPROV: mapPoleRoutinesToCards(IMPROV),
   INSTRUCTORS: formatMiniCards(INSTRUCTORS),
   PHOTOS,
   SONGS: formatMiniCards(SONGS),
-  STUDIOS
+  STUDIOS: formatMiniCards(STUDIOS)
 };

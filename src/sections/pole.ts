@@ -17,13 +17,13 @@ const STUDIOS: IPageSection = {
 const CONTEMPORARY: IPageSection = {
   title: PAGE_SECTION_TITLES.CONTEMPORARY,
   SvgIcon: SVG.DANCER_MALE_2,
-  data: { poleRoutines: DATA.CONTEMPORARY }
+  data: { cards: DATA.CONTEMPORARY }
 };
 
 const EXOTIC: IPageSection = {
   SvgIcon: SVG.HEELS,
   title: PAGE_SECTION_TITLES.EXOTIC,
-  data: { poleRoutines: DATA.EXOTIC }
+  data: { cards: DATA.EXOTIC }
 };
 
 const NON_POLE: IPageSection = {
@@ -41,13 +41,13 @@ const SONGS: IPageSection = {
 const IMPROV: IPageSection = {
   SvgIcon: SVG.DANCER_MALE_1,
   title: PAGE_SECTION_TITLES.IMPROV,
-  data: { poleRoutines: DATA.IMPROV }
+  data: { cards: DATA.IMPROV }
 };
 
 const PHOTOS: IPageSection = {
   SvgIcon: SVG.CAMERA,
   title: PAGE_SECTION_TITLES.PHOTOS,
-  data: { photoGrid: { photos: DATA.PHOTOS, columnCount: 2 } }
+  data: { photoGrid: { photos: DATA.PHOTOS, columnCount: 3 } }
 };
 
 const TRICKS: IPageSection = {
