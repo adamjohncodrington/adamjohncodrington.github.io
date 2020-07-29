@@ -12,6 +12,7 @@ import {
 export const MiniCardHeader: FC<IMiniCardHeader> = ({
   text,
   secondaryText,
+  video,
   favourite,
   panelVisible,
   star,
@@ -30,7 +31,12 @@ export const MiniCardHeader: FC<IMiniCardHeader> = ({
   return (
     <DynamicFontWeightFlexRow bold={!isStatic && panelVisible}>
       <StyledTextContainer>
-        <StyledMainText faded={fadedMainText} favourite={favourite} star={star}>
+        <StyledMainText
+          faded={fadedMainText}
+          favourite={favourite}
+          star={star}
+          video={video}
+        >
           {text}
         </StyledMainText>
 

@@ -6,10 +6,6 @@ import { getPseudoElementBefore, getPseudoElementAfter } from "styles";
 
 const { HEART, STAR, TRIANGLE_PLAY } = UNICODE;
 
-interface IStyledMainText extends I_Theme, I__Favourite, I__Star {
-  faded: boolean;
-}
-
 export const StyledTextContainer = styled(FlexRow)`
   flex: 1;
   align-items: baseline;
@@ -23,8 +19,18 @@ export const StyledSecondaryText = styled.span(
   `
 );
 
+interface IStyledMainText extends I_Theme, I__Video, I__Favourite, I__Star {
+  faded: boolean;
+}
+
 export const StyledMainText = styled.span(
-  ({ favourite, star, faded, theme: { fadedOpacity } }: IStyledMainText) => css`
+  ({
+    favourite,
+    star,
+    faded,
+    video,
+    theme: { fadedOpacity }
+  }: IStyledMainText) => css`
     ${
       faded &&
       css`
@@ -32,6 +38,7 @@ export const StyledMainText = styled.span(
       `
     }
 
+    ${video && getPseudoElementBefore(TRIANGLE_PLAY)}
     ${favourite && getPseudoElementBefore(HEART)}
     ${star && getPseudoElementBefore(STAR)}
   `
