@@ -4,13 +4,13 @@ import {
   moveTheSuffixToPrefix,
   getDatesText,
   getDateText,
-  getCountdownText,
   getGigTitle,
   getGigSubtitle,
   getFestivalTitle,
   getFestivalSubtitle,
   getSymbols,
-  getMusicianStageNameAtTime
+  getMusicianStageNameAtTime,
+  isInFuture
 } from "utils";
 
 export const mapGigsToMusicEvents = (gigs: Array<IGig>): Array<IMusicEvent> => {
@@ -47,11 +47,10 @@ export const mapMusicEventsToCards = (
     const { venue, dates, ticketType, company, video } = musicEvent;
     return {
       ...musicEvent,
-      symbols: getSymbols({ company, video }),
+      symbols: getSymbols({ company, video, date: dates[0] }),
       body: moveTheSuffixToPrefix(venue.name),
       secondaryBody: getDatesText(dates),
-      countdownText: getCountdownText(dates[0]),
-      note: ticketType
+      disclaimer: isInFuture(dates[0]) ? ticketType : undefined
     };
   };
   return musicEvents.map(

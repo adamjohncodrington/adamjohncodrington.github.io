@@ -16,11 +16,15 @@ interface I_PastFutureCounts {
 }
 
 interface I_Company {
-  company: Array<IFriend>;
+  company: Array<IPerson>;
 }
 
 interface I__Company {
   company?: Array<IFriend>;
+}
+
+interface I__Date {
+  date?: Date;
 }
 
 interface I__Photos {

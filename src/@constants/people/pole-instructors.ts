@@ -8,12 +8,12 @@ export const LAETITIA: IPoleInstructor = {
 };
 export const MARINE: IPoleInstructor = {
   name: "Marine Canaguier",
-  initials: "MC",
+  initials: "NJ",
   stageName: "Nanar Jinx"
 };
 export const MEL: IPoleInstructor = {
   name: "Mel Hua",
-  initials: "MH",
+  initials: "EF",
   stageName: "Elly Flowers"
 };
 export const SARAH_ELLIOTT: IPoleInstructor = {

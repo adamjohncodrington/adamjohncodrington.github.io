@@ -93,14 +93,14 @@ const CSS_MINI_CARDS = ({
 const CSS_REGULAR_CARDS = ({
   theme: {
     pageSection: {
-      panelList: { padding, regularCards }
+      panelList: { padding, cards }
     }
   }
 }: I_Theme) => css`
   padding-bottom: ${padding.bottom};
 
   > * {
-    padding: ${regularCards.padding.vertical} 0;
+    padding: ${cards.padding.vertical} 0;
   }
 
   > *:first-child {
@@ -108,7 +108,7 @@ const CSS_REGULAR_CARDS = ({
   }
 
   > *:last-child {
-    padding-bottom: ${regularCards.lastRegularCard.padding.bottom};
+    padding-bottom: ${cards.lastRegularCard.padding.bottom};
   }
 
   ${CSS_COMMON}

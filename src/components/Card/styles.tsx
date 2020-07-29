@@ -3,12 +3,8 @@ import styled, { css } from "styled-components";
 import { FlexColumn, FlexRow, GridColumnDiv } from "primitives";
 import { CSS } from "styles";
 
-export const CardNote = styled.div`
-  ${CSS.FONT_SIZE_75_PERCENT}
-`;
-
-export const CardCountdown = styled.div`
-  font-weight: bold;
+export const CardDisclaimer = styled.div`
+  ${CSS.FONT_SIZE_65_PERCENT}
 `;
 
 export const CardTextContainer = styled(FlexColumn)(
@@ -46,4 +42,5 @@ export const StyledCardHeaderContainer = styled(FlexRow)``;
 
 export const StyledCardHeaderTextSymbolsContainer = styled(GridColumnDiv)`
   flex: 1;
+  column-gap: 5px;
 `;

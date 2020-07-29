@@ -52,7 +52,7 @@ const THEME_PAGE_SECTION: IThemePageSection = {
       lastRecipe: { padding: { bottom: "15px" } },
       padding: { vertical: "10px" }
     },
-    regularCards: {
+    cards: {
       lastRegularCard: { padding: { bottom: "5px" } },
       padding: { vertical: "10px" }
     }

@@ -2,12 +2,7 @@ import React from "react";
 
 import { CardTitle, CardSubtitle } from "primitives";
 
-import {
-  CardNote,
-  CardCountdown,
-  CardTextContainer,
-  CardSecondaryBody
-} from "./styles";
+import { CardDisclaimer, CardTextContainer, CardSecondaryBody } from "./styles";
 
 export const CardHeaderText: React.FC<ICardHeader> = ({
   panelVisible,
@@ -16,8 +11,7 @@ export const CardHeaderText: React.FC<ICardHeader> = ({
   favourite,
   body,
   secondaryBody,
-  note,
-  countdownText,
+  disclaimer,
   isStatic
 }) => (
   <CardTextContainer data-test="card-container">
@@ -28,29 +22,19 @@ export const CardHeaderText: React.FC<ICardHeader> = ({
     >
       {title}
     </CardTitle>
-
     {subtitle && (
       <CardSubtitle bold={false} data-test="card-subtitle">
         {subtitle}
       </CardSubtitle>
     )}
-
     {body && <span data-test="card-body">{body}</span>}
-
     {secondaryBody && (
       <CardSecondaryBody data-test="card-secondary-body">
         {secondaryBody}
       </CardSecondaryBody>
     )}
-
-    {countdownText && (
-      <>
-        <CardCountdown data-test="card-countdown">
-          {countdownText}
-        </CardCountdown>
-
-        {note && <CardNote data-test="card-note">{`(${note})`}</CardNote>}
-      </>
+    {disclaimer && (
+      <CardDisclaimer data-test="card-disclaimer">{`(${disclaimer})`}</CardDisclaimer>
     )}
   </CardTextContainer>
 );

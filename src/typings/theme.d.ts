@@ -51,7 +51,7 @@ interface IThemePageSection {
       lastRecipe: { padding: { bottom: PxValue } };
       padding: { vertical: PxValue };
     };
-    regularCards: {
+    cards: {
       lastRegularCard: { padding: { bottom: PxValue } };
       padding: { vertical: PxValue };
     };

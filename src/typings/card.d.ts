@@ -8,8 +8,7 @@ interface ICard extends I__Photos, I__Favourite, I__Video {
   subtitle?: string;
   body?: string;
   secondaryBody?: string;
-  countdownText?: string;
-  note?: string;
+  disclaimer?: string;
   headerPhoto?: IPhotoLink;
 }
 

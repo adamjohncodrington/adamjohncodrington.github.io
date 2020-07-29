@@ -18,6 +18,9 @@ const GRID_COLUMN = css`
 `;
 
 export const CSS = {
+  FONT_SIZE_65_PERCENT: css`
+    font-size: 65%;
+  `,
   FONT_SIZE_75_PERCENT: css`
     font-size: 75%;
   `,

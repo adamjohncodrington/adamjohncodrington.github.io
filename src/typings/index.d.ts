@@ -20,8 +20,8 @@ interface IPage extends I__Hide {
   color?: ColorValue;
 }
 
-interface IPhoto extends I__Hide {
-  date?: Date;
+//TODO: make this compulsory
+interface IPhoto extends I__Hide, I__Date {
   title?: string;
   freeimagehostId: string;
 }

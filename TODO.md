@@ -1,19 +1,18 @@
 # TO DO LIST
 
-- reinstate all photo symbols etc
 
 - remove hidden recipes from group higher up in the app
-
-- add `details` to pole songs section
 
 - add `sortString` and `subSortString` prop to `Card` and `MiniCard`???
 
 - add compulsory `date` prop to `IPhoto`
 - reinstate festival videos
 
-- add more travel photos
-- convert `DAYS TO GO` into a dark number symbol and ditch countdown text as a prop and element in Card altogther
+- add mini card details to pole instructors and pole songs
 
+- add more travel photos
+
+- rationalise theme further
 
 - rename `pastCount` and `futureCount` on `MiniCard` as `primaryCount` and `secondaryCount` and make them non-compulsory
 
