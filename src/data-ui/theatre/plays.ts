@@ -35,7 +35,7 @@ const getPlayDetails = (play: IPlay): Array<IMiniCardPanelDetail> => {
       const { date } = theatreVisit;
       return {
         mainText: [moveTheSuffixToPrefix(theatreVisit.theatre.name)],
-        sort: date.valueOf(),
+        sort: [date.valueOf()],
         dates: [date]
       };
     }
@@ -47,7 +47,7 @@ export const PLAYS: Array<IMiniCard> = Object.values(plays).map(
     const { name } = play;
     return {
       text: name,
-      sort: name,
+      sort: [name],
       favourite: playIsFavourited({ play, favouritedTheatreCards: FAVOURITES }),
       ...getItemCounts({ item: { play }, data: { theatreVisits: DATA } }),
       details: getPlayDetails(play)

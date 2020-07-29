@@ -17,7 +17,7 @@ const getMusicVenueDetails = (
     ({ title, dates, video }: IMusicEvent): IMiniCardPanelDetail => ({
       mainText: [title],
       dates,
-      sort: dates[0].valueOf(),
+      sort: [dates[0].valueOf()],
       video
     })
   );
@@ -27,7 +27,7 @@ export const VENUES: Array<IMiniCard> = Object.values(venues).map(
     const { name, favourite } = musicVenue;
     return {
       text: name,
-      sort: name,
+      sort: [name],
       favourite,
       ...getItemCounts({
         item: { musicVenue },

@@ -18,7 +18,7 @@ export const CITIES: Array<IMiniCard> = Object.values(cities).map(
     return {
       text: name,
       star: capital,
-      sort: name,
+      sort: [name],
       countInfoIrrelevant: insignificant,
       ...getItemCounts({ item: { city }, data: { tripLegs: DATA } })
     };

@@ -31,9 +31,6 @@ export const PageSections: FC<IPageSections> = ({ pageSections }) => {
   const validPageSectionCount: number = datafulPageSections.length;
 
   const sortedValidPageSections: Array<IPageSection> = datafulPageSections;
-  // .sort(
-  //   (a: IPageSection, b: IPageSection): number => (a.title > b.title ? 1 : -1)
-  // );
 
   const pageSectionsCol1: Array<IPageSection> = sortedValidPageSections.filter(
     (pageSection: IPageSection, index: number): boolean =>

@@ -26,7 +26,7 @@ export const HIGHLIGHTS: Array<IMiniCard> = highlights.map(
     const { name } = highlight;
     return {
       text: name,
-      sort: name,
+      sort: [name],
       ...getItemCounts({
         item: { attraction: highlight },
         data: { tripLegs: DATA }
@@ -40,7 +40,7 @@ export const THEME_PARKS: Array<IMiniCard> = themeParks.map(
     const { name } = themePark;
     return {
       text: name,
-      sort: name,
+      sort: [name],
       ...getItemCounts({
         item: { attraction: themePark },
         data: { tripLegs: DATA }

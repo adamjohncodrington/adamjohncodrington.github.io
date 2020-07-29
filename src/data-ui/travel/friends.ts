@@ -17,7 +17,7 @@ const getFriendDetails = (friend: IFriend): Array<IMiniCardPanelDetail> => {
     (trip: ITripLeg): IMiniCardPanelDetail => {
       const { dates, video } = trip;
       return {
-        sort: dates[0].valueOf(),
+        sort: [dates[0].valueOf()],
         mainText: [getTripTitle(trip)],
         dates,
         video
@@ -37,7 +37,7 @@ export const FRIENDS: Array<IMiniCard> = Object.values(friends)
       });
       return {
         text: name,
-        sort: pastCount + "-" + futureCount,
+        sort: [-pastCount, -futureCount],
         pastCount,
         futureCount,
         details: getFriendDetails(friend)

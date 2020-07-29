@@ -42,7 +42,7 @@ const getMusicianDetails = (musician: IMusician): Array<IMiniCardPanelDetail> =>
       mainText: [
         festival ? festival.title.name : moveTheSuffixToPrefix(venue.name)
       ],
-      sort: dates[0].valueOf(),
+      sort: [dates[0].valueOf()],
       dates: festival ? [getMusicianFestivalDate(musician, festival)] : dates,
       video: gig ? (gig.headline === musician ? video : undefined) : undefined,
       favourite: favourite && gig && gig.headline === musician
@@ -55,7 +55,7 @@ export const MUSICIANS: Array<IMiniCard> = Object.values(musicians).map(
     const details: Array<IMiniCardPanelDetail> = getMusicianDetails(musician);
     return {
       text: name,
-      sort: name,
+      sort: [name],
       secondaryText: previousStageName && previousStageName.name,
       favourite: detailsContainsFavourite(details),
       ...getItemCounts({

@@ -25,7 +25,7 @@ const getInstructorDetails = (
     }: IPoleRoutine): IMiniCardPanelDetail => ({
       mainText: [`${name} - ${title}`],
       dates: [date],
-      sort: date.valueOf(),
+      sort: [date.valueOf()],
       video
     })
   );
@@ -37,7 +37,7 @@ export const INSTRUCTORS: Array<IMiniCard> = Object.values(instructors).map(
     const instructorName: string = stageName || name;
     return {
       text: instructorName,
-      sort: instructorName,
+      sort: [instructorName],
       secondaryText: stageName ? name : undefined,
       pastCount: details.length || 1,
       details: details.length > 0 ? details : undefined,

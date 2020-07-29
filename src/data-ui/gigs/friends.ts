@@ -21,7 +21,7 @@ const getFriendDetails = (friend: IFriend): Array<IMiniCardPanelDetail> =>
       favourite
     }: IMusicEvent): IMiniCardPanelDetail => ({
       mainText: [title],
-      sort: dates[0].valueOf(),
+      sort: [dates[0].valueOf()],
       dates,
       favourite,
       video
@@ -40,7 +40,7 @@ export const FRIENDS: Array<IMiniCard> = Object.values(friends)
         text: friend.name,
         pastCount,
         futureCount,
-        sort: pastCount + "-" + futureCount,
+        sort: [-pastCount, -futureCount],
         details: getFriendDetails(friend)
       };
     }

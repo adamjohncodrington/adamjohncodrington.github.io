@@ -10,9 +10,9 @@ interface IMiniCard
   extends I__SecondaryText,
     I_PastFutureCounts,
     I__Favourite,
+    I_Sort,
     I__Video,
     I__Star {
-  sort: string | number;
   text: string;
   doNotIncludeInList?: boolean;
   countInfoIrrelevant?: boolean;

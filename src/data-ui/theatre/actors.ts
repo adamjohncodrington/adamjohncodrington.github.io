@@ -18,7 +18,7 @@ const getActorDetails = (actor: IActor): Array<IMiniCardPanelDetail> => {
       const { date } = theatreVisit;
       return {
         mainText: [getTheatreVisitTitle(theatreVisit)],
-        sort: date.valueOf(),
+        sort: [date.valueOf()],
         dates: [date]
       };
     }
@@ -30,7 +30,7 @@ export const ACTORS: Array<IMiniCard> = Object.values(actors).map(
     const { name, favourite } = actor;
     return {
       text: name,
-      sort: name,
+      sort: [name],
       favourite,
       ...getItemCounts({ item: { actor }, data: { theatreVisits: DATA } }),
       details: getActorDetails(actor)

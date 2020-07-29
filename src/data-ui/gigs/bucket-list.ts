@@ -31,7 +31,7 @@ export const BUCKET_LIST: Array<IMiniCard> = musiciansForBucketList.map(
     futureCount,
     favourite
   }: IMusicianCounted): IMiniCard => ({
-    sort: name,
+    sort: [name],
     text: name,
     favourite,
     pastCount,

@@ -28,7 +28,7 @@ export const ISLANDS: Array<IMiniCard> = islandsAll.map(
     const { name, insignificant } = island;
     return {
       text: name,
-      sort: name,
+      sort: [name],
       countInfoIrrelevant: insignificant,
       ...getItemCounts({ item: { island }, data: { tripLegs: DATA } })
     };

@@ -17,7 +17,7 @@ const getFriendDetails = (friend: IFriend): Array<IMiniCardPanelDetail> => {
       const { date } = theatreVisit;
       return {
         mainText: [getTheatreVisitTitle(theatreVisit)],
-        sort: date.valueOf(),
+        sort: [date.valueOf()],
         dates: [date]
       };
     }
@@ -34,7 +34,7 @@ export const FRIENDS: Array<IMiniCard> = Object.values(friends)
       });
       return {
         text: friend.name,
-        sort: pastCount + "-" + futureCount,
+        sort: [-pastCount, -futureCount],
         pastCount,
         futureCount,
         details: getFriendDetails(friend)

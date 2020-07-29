@@ -19,7 +19,7 @@ const getTheatreVenueDetails = (
       const { date } = theatreVisit;
       return {
         mainText: [moveTheSuffixToPrefix(theatreVisit.play.name)],
-        sort: date.valueOf(),
+        sort: [date.valueOf()],
         dates: [date]
       };
     }
@@ -31,7 +31,7 @@ export const VENUES: Array<IMiniCard> = Object.values(venues).map(
     const { name } = theatre;
     return {
       text: name,
-      sort: name,
+      sort: [name],
       ...getItemCounts({ item: { theatre }, data: { theatreVisits: DATA } }),
       details: getTheatreVenueDetails(theatre)
     };

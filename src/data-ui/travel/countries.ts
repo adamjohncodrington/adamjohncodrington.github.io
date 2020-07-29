@@ -32,7 +32,7 @@ const getCountryDetails = (
           ? [tripSubtitle]
           : undefined,
         favourite,
-        sort: dates[0].valueOf(),
+        sort: [dates[0].valueOf()],
         video,
         dates
       };
@@ -46,7 +46,7 @@ export const COUNTRIES: Array<IMiniCard> = Object.values(countries).map(
     const { name } = country;
     return {
       text: name,
-      sort: name,
+      sort: [name],
       favourite: detailsContainsFavourite(details),
       ...getItemCounts({ item: { country }, data: { tripLegs: DATA } }),
       details

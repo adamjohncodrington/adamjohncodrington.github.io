@@ -13,13 +13,15 @@ const COLLECTION: IPageSection = {
   title: PAGE_SECTION_TITLES.COLLECTION,
   panelData: { cards: DATA.COLLECTION },
   count: DATA.COLLECTION.length,
-  SvgIcon: SVG.BRIEFCASE
+  SvgIcon: SVG.BRIEFCASE,
+  shuffle: true
 };
 
 const SIGNED: IPageSection = {
   title: PAGE_SECTION_TITLES.SIGNED,
   panelData: { cards: DATA.SIGNED },
   count: DATA.SIGNED.length,
+  shuffle: true,
   SvgIcon: SVG.PEN
 };
 
@@ -27,6 +29,7 @@ const WISH_LIST: IPageSection = {
   title: PAGE_SECTION_TITLES.WISH_LIST,
   SvgIcon: SVG.STARS,
   panelData: { cards: DATA.WISH_LIST },
+  shuffle: true,
   count: DATA.WISH_LIST.length
 };
 

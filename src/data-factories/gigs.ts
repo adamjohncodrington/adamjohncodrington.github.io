@@ -47,7 +47,7 @@ export const mapMusicEventsToCards = (
     const { venue, dates, ticketType, company, video } = musicEvent;
     return {
       ...musicEvent,
-      sort: dates[0].valueOf(),
+      sort: [dates[0].valueOf()],
       symbols: getSymbols({ company, video, date: dates[0] }),
       body: moveTheSuffixToPrefix(venue.name),
       secondaryBody: getDatesText(dates),
@@ -66,12 +66,18 @@ export const mapGigVideosToCards = (
     date,
     musician,
     ...video
-  }: IGigVideo): ICard => ({
-    video,
-    sort: date.valueOf(),
-    title: getMusicianStageNameAtTime({ musician, year: date.getFullYear() }),
-    secondaryBody: getDateText(date)
-  });
+  }: IGigVideo): ICard => {
+    const musicianName: string = getMusicianStageNameAtTime({
+      musician,
+      year: date.getFullYear()
+    });
+    return {
+      title: musicianName,
+      sort: [musicianName],
+      video,
+      secondaryBody: getDateText(date)
+    };
+  };
 
   return gigVideos.map(
     (gigVideo: IGigVideo): ICard => mapGigVideoToCard(gigVideo)

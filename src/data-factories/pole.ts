@@ -10,7 +10,7 @@ export const mapPoleRoutinesToCards = (
     video
   }: IPoleRoutine): ICard => ({
     video,
-    sort: date.valueOf(),
+    sort: [date.valueOf()],
     symbols: getSymbols({ company: [choreographer] }),
     subtitle: musician.name,
     title,

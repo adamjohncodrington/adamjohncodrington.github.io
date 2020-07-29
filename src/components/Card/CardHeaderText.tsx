@@ -1,6 +1,7 @@
 import React from "react";
 
 import { CardTitle, CardSubtitle } from "primitives";
+import { moveTheSuffixToPrefix } from "utils";
 
 import { CardDisclaimer, CardTextContainer, CardSecondaryBody } from "./styles";
 
@@ -20,21 +21,23 @@ export const CardHeaderText: React.FC<ICardHeader> = ({
       data-test="card-title"
       favourite={favourite}
     >
-      {title}
+      {moveTheSuffixToPrefix(title)}
     </CardTitle>
     {subtitle && (
       <CardSubtitle bold={false} data-test="card-subtitle">
-        {subtitle}
+        {moveTheSuffixToPrefix(subtitle)}
       </CardSubtitle>
     )}
     {body && <span data-test="card-body">{body}</span>}
     {secondaryBody && (
       <CardSecondaryBody data-test="card-secondary-body">
-        {secondaryBody}
+        {moveTheSuffixToPrefix(secondaryBody)}
       </CardSecondaryBody>
     )}
     {disclaimer && (
-      <CardDisclaimer data-test="card-disclaimer">{`(${disclaimer})`}</CardDisclaimer>
+      <CardDisclaimer data-test="card-disclaimer">{`(${moveTheSuffixToPrefix(
+        disclaimer
+      )})`}</CardDisclaimer>
     )}
   </CardTextContainer>
 );

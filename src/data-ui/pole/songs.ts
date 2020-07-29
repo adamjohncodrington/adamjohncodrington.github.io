@@ -16,7 +16,7 @@ export const SONGS: Array<IMiniCard> = Object.values(songs).map(
     const artistAndSong: string = `${musician.name} - ${title}`;
     return {
       text: artistAndSong,
-      sort: artistAndSong,
+      sort: [artistAndSong],
       pastCount: songMatches.length,
       video: songMatches[0].video,
       futureCount: 0

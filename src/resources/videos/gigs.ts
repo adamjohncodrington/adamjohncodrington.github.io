@@ -196,6 +196,13 @@ export const FKA_TWIGS_2019_11: IGigVideo = {
   musician: MUSICIANS.FKA_TWIGS
 };
 
+export const FKA_TWIGS_2019_05: IGigVideo = {
+  youtubeId: "onq0QD8FMwg",
+  date: DATES.GIGS.FKA_TWIGS_2019_05,
+  musician: MUSICIANS.FKA_TWIGS,
+  ...PORTRAIT_1080P
+};
+
 export const NAAZ: IGigVideo = {
   ...PORTRAIT_1080P,
   date: DATES.GIGS.NAAZ,
@@ -340,13 +347,6 @@ export const MARINA_2019: IGigVideo = {
   youtubeId: "rvvJboVvG6U",
   date: DATES.GIGS.MARINA_2019,
   musician: MUSICIANS.MARINA,
-  ...PORTRAIT_1080P
-};
-
-export const FKA_TWIGS_2019_05: IGigVideo = {
-  youtubeId: "onq0QD8FMwg",
-  date: DATES.GIGS.FKA_TWIGS_2019_05,
-  musician: MUSICIANS.FKA_TWIGS,
   ...PORTRAIT_1080P
 };
 

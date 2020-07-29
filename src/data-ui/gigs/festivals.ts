@@ -19,7 +19,7 @@ const getFestivalDetails = (musician: IMusician): Array<IMiniCardPanelDetail> =>
     (festival: IFestival): IMiniCardPanelDetail => {
       const { dates, video } = festival;
       return {
-        sort: dates[0].valueOf(),
+        sort: [dates[0].valueOf()],
         mainText: [getFestivalSubtitle(festival) || "TBC"],
         dates,
         video
@@ -30,10 +30,13 @@ const getFestivalDetails = (musician: IMusician): Array<IMiniCardPanelDetail> =>
 export const FESTIVALS: Array<IMiniCard> = Object.values(festivals)
   .filter(({ insignificant }: IFestivalTitle): boolean => !insignificant)
   .map(
-    (festival: IFestivalTitle): IMiniCard => ({
-      text: festival.name,
-      sort: festival.name,
-      ...getItemCounts({ item: { festival }, data: { festivals: DATA } }),
-      details: getFestivalDetails(festival)
-    })
+    (festival: IFestivalTitle): IMiniCard => {
+      const { name } = festival;
+      return {
+        text: name,
+        sort: [name],
+        ...getItemCounts({ item: { festival }, data: { festivals: DATA } }),
+        details: getFestivalDetails(festival)
+      };
+    }
   );
