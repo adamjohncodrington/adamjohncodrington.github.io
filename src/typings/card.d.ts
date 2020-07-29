@@ -1,4 +1,6 @@
 interface ICard extends I__Photos, I__Favourite, I__Video {
+  sort: string | number;
+
   symbols?: Array<ISymbol>;
 
   dates?: Array<Date>;

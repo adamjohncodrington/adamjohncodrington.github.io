@@ -37,7 +37,6 @@ const SOLO: IPageSection = {
 
 const FAVOURITES: IPageSection = {
   SvgIcon: SVG.HEART,
-  shuffle: true,
   title: PAGE_SECTION_TITLES.FAVOURITES,
   panelData: { cards: DATA.FAVOURITES },
   hide: true

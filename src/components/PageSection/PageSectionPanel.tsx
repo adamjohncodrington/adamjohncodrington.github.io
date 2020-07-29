@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 
 import { Li } from "primitives";
-import { shuffleArray, shuffleArrayIf } from "utils";
+import { shuffleArrayIf } from "utils";
 
 import { Card } from "../Card";
 import { MiniCard } from "../MiniCard";

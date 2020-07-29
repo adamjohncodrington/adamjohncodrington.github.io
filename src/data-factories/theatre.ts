@@ -14,6 +14,7 @@ export const mapTheatreVisitsToCards = (
     return {
       ...theatreVisit,
       dates: [date],
+      sort: date.valueOf(),
       symbols: getSymbols({ company }),
       title: getTheatreVisitTitle(theatreVisit),
       // subtitle: getTheatreVisitSubtitle(theatreVisit),
