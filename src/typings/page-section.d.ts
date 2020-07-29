@@ -3,9 +3,7 @@ interface IPhotoGrid {
   columnCount: number;
 }
 
-//RATIONALISE
 interface IPageSectionDataTypes {
-  comingSoon?: boolean;
   musicEvents?: Array<IMusicEvent>;
   theatreVisits?: Array<ITheatreVisit>;
   tripLegs?: Array<ITripLeg>;
@@ -14,12 +12,12 @@ interface IPageSectionDataTypes {
   festivalVideos?: Array<IFestivalVideo>;
   travelVideos?: Array<ITravelVideo>;
   vinyls?: Array<IAlbum>;
-
   festivals?: Array<IFestival>;
   gigs?: Array<IGig>;
 }
 
-interface IPageSectionPanelTypes extends IPageSectionDataTypes {
+interface IPageSectionPanelTypes {
+  comingSoon?: boolean;
   cards?: Array<ICard>;
   miniCards?: Array<IMiniCard>;
   recipes?: Array<IRecipe>;
@@ -30,7 +28,7 @@ interface IPageSection extends I__AutoExpand, I__Hide {
   title: string;
   shuffle?: boolean;
   SvgIcon?: ISvgIcon;
-  data: IPageSectionPanelTypes;
+  panelData: IPageSectionPanelTypes;
   count?: number;
   starCount?: number;
 }

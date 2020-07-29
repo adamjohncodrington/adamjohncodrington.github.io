@@ -5,33 +5,33 @@ import { SVG } from "resources";
 const ACTORS: IPageSection = {
   title: PAGE_SECTION_TITLES.ACTORS,
   SvgIcon: SVG.ARTIST,
-  data: { miniCards: DATA.ACTORS }
+  panelData: { miniCards: DATA.ACTORS }
 };
 
 const FRIENDS: IPageSection = {
   title: PAGE_SECTION_TITLES.FRIENDS,
   SvgIcon: SVG.PEOPLE,
-  data: { miniCards: DATA.FRIENDS }
+  panelData: { miniCards: DATA.FRIENDS }
 };
 
 const PLAYS: IPageSection = {
   title: PAGE_SECTION_TITLES.PLAYS,
   SvgIcon: SVG.BOOK,
-  data: { miniCards: DATA.PLAYS },
+  panelData: { miniCards: DATA.PLAYS },
   count: DATA.PLAYS.length
 };
 
 const THEATRES: IPageSection = {
   title: PAGE_SECTION_TITLES.THEATRES,
   SvgIcon: SVG.THEATRE,
-  data: { miniCards: DATA.VENUES },
+  panelData: { miniCards: DATA.VENUES },
   count: DATA.VENUES.length
 };
 
 const UP_NEXT: IPageSection = {
   SvgIcon: SVG.NOTEPAD,
   title: PAGE_SECTION_TITLES.UP_NEXT,
-  data: { cards: DATA.UP_NEXT }
+  panelData: { cards: DATA.UP_NEXT }
 };
 
 const YEARS: Array<IPageSection> = DATA.YEARS.map(
@@ -40,7 +40,7 @@ const YEARS: Array<IPageSection> = DATA.YEARS.map(
       ? year[0].dates[0].getFullYear().toString()
       : "ERROR RETRIEVING PAGE SECTION YEAR",
     count: year.length,
-    data: {
+    panelData: {
       cards: year
     }
   })

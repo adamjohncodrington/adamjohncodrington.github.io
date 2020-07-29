@@ -11,14 +11,13 @@ import { Recipe } from "../Recipe";
 
 import { PageSectionPanelList, StyledComingSoonPlaceholder } from "./styles";
 
-export const PageSectionPanel: FC<IPageSection> = ({
-  data: { cards: unshuffledCards, comingSoon, miniCards, recipes, photoGrid },
-  shuffle
-}) => {
-  const cards: Array<ICard> | undefined = unshuffledCards
+export const PageSectionPanel: FC<IPageSection> = ({ panelData, shuffle }) => {
+  const { cards, comingSoon, miniCards, recipes, photoGrid } = panelData;
+
+  const CARDS: Array<ICard> | undefined = cards
     ? shuffle
-      ? shuffleArray(unshuffledCards)
-      : unshuffledCards
+      ? shuffleArray(cards)
+      : cards
     : undefined;
 
   const pageSectionPanelType: string = recipes
@@ -33,8 +32,8 @@ export const PageSectionPanel: FC<IPageSection> = ({
     <PhotoGrid {...photoGrid} />
   ) : (
     <PageSectionPanelList pageSectionPanelType={pageSectionPanelType}>
-      {cards &&
-        cards.map((card: ICard, index: number) => (
+      {CARDS &&
+        CARDS.map((card: ICard, index: number) => (
           <Card key={index} {...card} />
         ))}
 

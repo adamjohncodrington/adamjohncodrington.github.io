@@ -63,10 +63,3 @@ export const formatMiniCards = (
 
   return detailSorted;
 };
-
-export const sortVinyls = (vinyls: Array<IVinyl>): Array<IVinyl> => {
-  const sorted: Array<IVinyl> = vinyls.sort((a: IVinyl, b: IVinyl): number =>
-    a.title < b.title ? 1 : -1
-  );
-  return sorted;
-};

@@ -19,6 +19,7 @@ export const mapAlbumsToCards = (
     appleMusicId
   }: IAlbum): ICard => ({
     title,
+    year,
     subtitle: moveTheSuffixToPrefix(
       getMusicianStageNameAtTime({ musician, year })
     ),
