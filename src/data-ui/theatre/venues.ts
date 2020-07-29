@@ -10,10 +10,12 @@ const getTheatreMatches = (theatre: ITheatre): Array<ITheatreVisit> => {
   return theatreMatches;
 };
 
-const getTheatreVenueDetails = (play: ITheatre): Array<IMiniCardPanelItem> => {
+const getTheatreVenueDetails = (
+  play: ITheatre
+): Array<IMiniCardPanelDetail> => {
   const theatreMatches: Array<ITheatreVisit> = getTheatreMatches(play);
   return theatreMatches.map(
-    (theatreVisit: ITheatreVisit): IMiniCardPanelItem => {
+    (theatreVisit: ITheatreVisit): IMiniCardPanelDetail => {
       const { date } = theatreVisit;
       return {
         mainText: [moveTheSuffixToPrefix(theatreVisit.play.name)],

@@ -14,9 +14,9 @@ const getFestivalMatches = (
   return festivalMatches;
 };
 
-const getFestivalDetails = (musician: IMusician): Array<IMiniCardPanelItem> =>
+const getFestivalDetails = (musician: IMusician): Array<IMiniCardPanelDetail> =>
   getFestivalMatches(musician).map(
-    (festival: IFestival): IMiniCardPanelItem => {
+    (festival: IFestival): IMiniCardPanelDetail => {
       const { dates, video } = festival;
       return {
         mainText: [getFestivalSubtitle(festival) || "TBC"],

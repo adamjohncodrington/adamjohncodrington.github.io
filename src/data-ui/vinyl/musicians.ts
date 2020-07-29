@@ -11,9 +11,9 @@ const getMusicianMatches = (musician: IMusician): Array<IVinyl> => {
   return musicianMatches;
 };
 
-const getMusicianDetails = (musician: IMusician): Array<IMiniCardPanelItem> =>
+const getMusicianDetails = (musician: IMusician): Array<IMiniCardPanelDetail> =>
   getMusicianMatches(musician).map(
-    ({ year, title, appleMusicId }: IVinyl): IMiniCardPanelItem => ({
+    ({ year, title, appleMusicId }: IVinyl): IMiniCardPanelDetail => ({
       mainText: [title],
       year,
       headerLink: APPLE_MUSIC_URL_PREFIX + appleMusicId

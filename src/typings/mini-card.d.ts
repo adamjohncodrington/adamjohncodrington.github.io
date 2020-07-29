@@ -1,4 +1,4 @@
-interface IMiniCardPanelItem extends I__Favourite, I__Video {
+interface IMiniCardPanelDetail extends I__Favourite, I__Video {
   mainText?: Array<string>;
   dates?: Array<Date>;
   index?: number;
@@ -10,17 +10,18 @@ interface IMiniCard
   extends I__SecondaryText,
     I_PastFutureCounts,
     I__Favourite,
+    I__Video,
     I__Star {
   text: string;
   doNotIncludeInList?: boolean;
   countInfoIrrelevant?: boolean;
   noLongerExists?: boolean;
   isLeaderboardItem?: boolean;
-  details?: Array<IMiniCardPanelItem>;
+  details?: Array<IMiniCardPanelDetail>;
 }
 
 interface IMiniCardHeader extends IMiniCard, IDisclosureHeader {}
 
-interface IMiniCardPanelItemHeader
-  extends IMiniCardPanelItem,
+interface IMiniCardPanelDetailHeader
+  extends IMiniCardPanelDetail,
     IDisclosureHeader {}

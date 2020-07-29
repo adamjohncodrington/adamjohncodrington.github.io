@@ -6,9 +6,9 @@ import { MiniCardPanel } from "./MiniCardPanel";
 import { MiniCardHeader } from "./MiniCardHeader";
 
 export const MiniCard: FC<IMiniCard> = props => {
-  const { details } = props;
+  const { details, video } = props;
   const isStaticProp: I__IsStatic = {
-    isStatic: !details
+    isStatic: !details && !video
   };
 
   return (

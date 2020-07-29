@@ -1,20 +1,25 @@
 import React, { FC } from "react";
 
-import { MiniCardPanelItem } from "./MiniCardPanelItem";
+import { YouTubeVideo } from "../YouTubeVideo";
+
+import { MiniCardPanelDetail } from "./MiniCardPanelDetail";
 import { StyledOl } from "./styles";
 
-export const MiniCardPanel: FC<IMiniCard> = ({ details }) => {
-  if (!details) return null;
+export const MiniCardPanel: FC<IMiniCard> = ({ details, video }) => {
+  if (video) return <YouTubeVideo {...video} marginTop="5px" />;
 
-  return (
-    <StyledOl>
-      {details.map((detail: IMiniCardPanelItem, index: number) => (
-        <MiniCardPanelItem
-          key={index}
-          index={details.length > 1 ? index + 1 : undefined}
-          {...detail}
-        />
-      ))}
-    </StyledOl>
-  );
+  if (details)
+    return (
+      <StyledOl>
+        {details.map((detail: IMiniCardPanelDetail, i: number) => (
+          <MiniCardPanelDetail
+            key={i}
+            index={details.length > 1 ? i + 1 : undefined}
+            {...detail}
+          />
+        ))}
+      </StyledOl>
+    );
+
+  return null;
 };

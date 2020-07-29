@@ -10,10 +10,10 @@ const getFriendMatches = (friend: IFriend): Array<ITheatreVisit> => {
   return friendMatches;
 };
 
-const getFriendDetails = (friend: IFriend): Array<IMiniCardPanelItem> => {
+const getFriendDetails = (friend: IFriend): Array<IMiniCardPanelDetail> => {
   const friendMatches: Array<ITheatreVisit> = getFriendMatches(friend);
   return friendMatches.map(
-    (theatreVisit: ITheatreVisit): IMiniCardPanelItem => {
+    (theatreVisit: ITheatreVisit): IMiniCardPanelDetail => {
       const { date } = theatreVisit;
       return { mainText: [getTheatreVisitTitle(theatreVisit)], dates: [date] };
     }

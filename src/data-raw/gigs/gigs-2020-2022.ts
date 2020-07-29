@@ -83,14 +83,6 @@ export const GEORGIA: IGig = {
   ticketType: TICKET_TYPES.DICE_APP
 };
 
-export const CARIBOU: IGig = {
-  headline: MUSICIANS.CARIBOU,
-  venue: MUSIC_VENUES.BRIXTON_ACADEMY,
-  date: new Date("2020-09-13"),
-  company: [FRIENDS.DARREN_TAYLOR],
-  ticketType: TICKET_TYPES.TICKETMASTER_ETICKET
-};
-
 export const SOPHIE_2020: IGig = {
   headline: MUSICIANS.SOPHIE,
   support: [MUSICIANS.EARTHEATER],
@@ -166,4 +158,12 @@ export const SOPHIE_ELLIS_BEXTOR: IGig = {
   date: new Date("2021-05-13"),
   company: [FRIENDS.DARREN_TAYLOR],
   ticketType: TICKET_TYPES.TICKETMASTER_POSTAL
+};
+
+export const CARIBOU: IGig = {
+  headline: MUSICIANS.CARIBOU,
+  venue: MUSIC_VENUES.BRIXTON_ACADEMY,
+  date: new Date("2021-05-10"),
+  company: [FRIENDS.DARREN_TAYLOR],
+  ticketType: TICKET_TYPES.TICKETMASTER_ETICKET
 };

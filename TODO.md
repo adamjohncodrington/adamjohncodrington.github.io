@@ -1,6 +1,6 @@
 # TO DO LIST
 
-
+- remove `countInfoIrrelevant` prop altogether and all instances of hard-coded `pastCount: 0`, `futureCount: 0`
 - remove hidden recipes from group higher up in the app
 
 - add `sortString` and `subSortString` prop to `Card` and `MiniCard`???

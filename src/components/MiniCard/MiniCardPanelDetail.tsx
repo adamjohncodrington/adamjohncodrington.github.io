@@ -4,11 +4,11 @@ import { isInFuture } from "utils";
 
 import { Disclosure } from "../Disclosure";
 
-import { MiniCardPanelItemHeader } from "./MiniCardPanelItemHeader";
-import { MiniCardPanelItemPanel } from "./MiniCardPanelItemPanel";
+import { MiniCardPanelDetailHeader } from "./MiniCardPanelDetailHeader";
+import { MiniCardPanelDetailPanel } from "./MiniCardPanelDetailPanel";
 import { StyledLi } from "./styles";
 
-export const MiniCardPanelItem: React.FC<IMiniCardPanelItem> = props => {
+export const MiniCardPanelDetail: React.FC<IMiniCardPanelDetail> = props => {
   const { index, dates, video } = props;
   const IS_IN_FUTURE: boolean = !!(dates && isInFuture(dates[0]));
 
@@ -21,13 +21,13 @@ export const MiniCardPanelItem: React.FC<IMiniCardPanelItem> = props => {
       <Disclosure
         {...isStaticProp}
         Header={headerProps => (
-          <MiniCardPanelItemHeader
+          <MiniCardPanelDetailHeader
             {...headerProps}
             {...props}
             {...isStaticProp}
           />
         )}
-        Panel={() => <MiniCardPanelItemPanel {...props} />}
+        Panel={() => <MiniCardPanelDetailPanel {...props} />}
       />
     </StyledLi>
   );

@@ -5,7 +5,7 @@ import { getDatesText } from "utils";
 
 import { StyledLevel1MainText, StyledIndex, StyledDateText } from "./styles";
 
-export const MiniCardPanelItemHeader: React.FC<IMiniCardPanelItemHeader> = ({
+export const MiniCardPanelDetailHeader: React.FC<IMiniCardPanelDetailHeader> = ({
   index,
   mainText,
   dates,
