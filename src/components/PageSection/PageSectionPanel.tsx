@@ -1,7 +1,7 @@
 import React, { FC } from "react";
 
 import { Li } from "primitives";
-import { shuffleArrayIf } from "utils";
+import { shuffleArray, sortCards } from "utils";
 
 import { Card } from "../Card";
 import { MiniCard } from "../MiniCard";
@@ -20,11 +20,13 @@ export const PageSectionPanel: FC<IPageSection> = ({ panelData, shuffle }) => {
   ) : (
     <PageSectionPanelList {...panelData}>
       {cards &&
-        shuffleArrayIf(cards, !!shuffle).map((card: ICard, index: number) => (
-          <Li key={index}>
-            <Card {...card} />
-          </Li>
-        ))}
+        (shuffle ? shuffleArray(cards) : sortCards(cards)).map(
+          (card: ICard, index: number) => (
+            <Li key={index}>
+              <Card {...card} />
+            </Li>
+          )
+        )}
 
       {miniCards &&
         miniCards.map((miniCard: IMiniCard, index: number) => (
