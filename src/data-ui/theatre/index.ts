@@ -10,7 +10,7 @@ import { YEARS } from "./years";
 
 export const THEATRE = {
   ACTORS: formatMiniCards(ACTORS),
-  FRIENDS: formatMiniCards(FRIENDS, { isLeaderboard: true }),
+  FRIENDS: formatMiniCards(FRIENDS),
   PLAYS: formatMiniCards(PLAYS),
   VENUES: formatMiniCards(VENUES),
   UP_NEXT: mapTheatreVisitsToCards(UP_NEXT),

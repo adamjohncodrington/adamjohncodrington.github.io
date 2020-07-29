@@ -32,7 +32,7 @@ const getCountryDetails = (
           ? [tripSubtitle]
           : undefined,
         favourite,
-        sort: [dates[0].valueOf()],
+        sort: [dates[0]],
         video,
         dates
       };

@@ -17,7 +17,7 @@ const getMusicVenueDetails = (
     ({ title, dates, video }: IMusicEvent): IMiniCardPanelDetail => ({
       mainText: [title],
       dates,
-      sort: [dates[0].valueOf()],
+      sort: [dates[0]],
       video
     })
   );

@@ -11,7 +11,7 @@ interface I__Insignificant {
 }
 
 interface I_Sort {
-  sort: Array<string | number>;
+  sort: Array<string | number | Date>;
 }
 
 interface I_PastFutureCounts {

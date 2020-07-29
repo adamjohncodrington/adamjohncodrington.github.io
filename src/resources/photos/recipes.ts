@@ -13,6 +13,7 @@ export const KALE_CRISPY_ALT: IPhoto = {
   freeimagehostId: "dfwSDB.jpg",
   hide: true
 };
+export const SEA_BASS: IPhoto = { freeimagehostId: "dRfUJt.jpg" };
 export const KALE_CRISPY: IPhoto = { freeimagehostId: "dAN3KJ.jpg" };
 export const LASAGNE: IPhoto = { freeimagehostId: "dfw8NV.jpg" };
 export const MASHED_POTATO: IPhoto = { freeimagehostId: "dfwvAQ.jpg" };

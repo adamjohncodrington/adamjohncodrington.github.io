@@ -35,7 +35,7 @@ const getPlayDetails = (play: IPlay): Array<IMiniCardPanelDetail> => {
       const { date } = theatreVisit;
       return {
         mainText: [moveTheSuffixToPrefix(theatreVisit.theatre.name)],
-        sort: [date.valueOf()],
+        sort: [date],
         dates: [date]
       };
     }

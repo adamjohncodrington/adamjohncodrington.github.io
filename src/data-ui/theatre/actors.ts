@@ -18,7 +18,7 @@ const getActorDetails = (actor: IActor): Array<IMiniCardPanelDetail> => {
       const { date } = theatreVisit;
       return {
         mainText: [getTheatreVisitTitle(theatreVisit)],
-        sort: [date.valueOf()],
+        sort: [date],
         dates: [date]
       };
     }

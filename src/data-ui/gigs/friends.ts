@@ -21,7 +21,7 @@ const getFriendDetails = (friend: IFriend): Array<IMiniCardPanelDetail> =>
       favourite
     }: IMusicEvent): IMiniCardPanelDetail => ({
       mainText: [title],
-      sort: [dates[0].valueOf()],
+      sort: [dates[0]],
       dates,
       favourite,
       video

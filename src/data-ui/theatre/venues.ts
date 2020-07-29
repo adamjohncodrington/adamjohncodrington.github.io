@@ -19,7 +19,7 @@ const getTheatreVenueDetails = (
       const { date } = theatreVisit;
       return {
         mainText: [moveTheSuffixToPrefix(theatreVisit.play.name)],
-        sort: [date.valueOf()],
+        sort: [date],
         dates: [date]
       };
     }

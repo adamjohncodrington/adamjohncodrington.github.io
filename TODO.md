@@ -1,25 +1,22 @@
 # TO DO LIST
 
+- reinstate festival videos
+- add compulsory `date` prop to `IPhoto`
 - add compulsory sort prop to `IMiniCard`
 - add compulsory sort prop to `IMiniCardDetail`
+- move `data-factories` to just `factory.ts` files within `data-ui`, same with `utils`, anything shared can then be relegated to `utils`
+- or just move the `map` defs into the locations where they are used, thus eliminating ALL needs to `import`!!!!!
+
+- organise utils
 
 - remove `countInfoIrrelevant` prop altogether and all instances of hard-coded `pastCount: 0`, `futureCount: 0`
 - remove hidden recipes from group higher up in the app
 
-- add `sortString` and `subSortString` prop to `Card` and `MiniCard`???
-
-- add compulsory `date` prop to `IPhoto`
-- reinstate festival videos
-
 - add mini card details to pole instructors and pole songs
-
 - add more travel photos
-
 - rationalise theme further
 
 - rename `pastCount` and `futureCount` on `MiniCard` as `primaryCount` and `secondaryCount` and make them non-compulsory
-
-- auto sort `Card`s by date
 
 - add symbols to vinyl cards to indicate color and side count
 

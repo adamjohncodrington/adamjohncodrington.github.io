@@ -47,7 +47,7 @@ export const mapMusicEventsToCards = (
     const { venue, dates, ticketType, company, video } = musicEvent;
     return {
       ...musicEvent,
-      sort: [dates[0].valueOf()],
+      sort: [dates[0]],
       symbols: getSymbols({ company, video, date: dates[0] }),
       body: moveTheSuffixToPrefix(venue.name),
       secondaryBody: getDatesText(dates),
@@ -73,7 +73,7 @@ export const mapGigVideosToCards = (
     });
     return {
       title: musicianName,
-      sort: [musicianName],
+      sort: [musicianName, date],
       video,
       secondaryBody: getDateText(date)
     };

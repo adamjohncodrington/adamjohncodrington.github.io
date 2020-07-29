@@ -16,7 +16,7 @@ export const TRAVEL = {
   BUCKET_LIST: formatMiniCards(BUCKET_LIST),
   CITIES: formatMiniCards(CITIES),
   COUNTRIES: formatMiniCards(COUNTRIES),
-  FRIENDS: formatMiniCards(FRIENDS, { isLeaderboard: true }),
+  FRIENDS: formatMiniCards(FRIENDS),
   HIGHLIGHTS: formatMiniCards(HIGHLIGHTS),
   ISLANDS: formatMiniCards(ISLANDS),
   PHOTOS,

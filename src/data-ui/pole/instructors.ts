@@ -25,7 +25,7 @@ const getInstructorDetails = (
     }: IPoleRoutine): IMiniCardPanelDetail => ({
       mainText: [`${name} - ${title}`],
       dates: [date],
-      sort: [date.valueOf()],
+      sort: [-date],
       video
     })
   );

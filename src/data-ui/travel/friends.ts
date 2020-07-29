@@ -17,7 +17,7 @@ const getFriendDetails = (friend: IFriend): Array<IMiniCardPanelDetail> => {
     (trip: ITripLeg): IMiniCardPanelDetail => {
       const { dates, video } = trip;
       return {
-        sort: [dates[0].valueOf()],
+        sort: [dates[0]],
         mainText: [getTripTitle(trip)],
         dates,
         video

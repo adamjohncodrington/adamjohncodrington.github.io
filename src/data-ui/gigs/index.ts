@@ -17,7 +17,7 @@ export const GIGS = {
   BUCKET_LIST: formatMiniCards(BUCKET_LIST),
   FAVOURITES: mapMusicEventsToCards(FAVOURITES),
   FESTIVALS: formatMiniCards(FESTIVALS),
-  FRIENDS: formatMiniCards(FRIENDS, { isLeaderboard: true }),
+  FRIENDS: formatMiniCards(FRIENDS),
   MUSICIANS: formatMiniCards(MUSICIANS),
   SOLO: mapMusicEventsToCards(SOLO),
   UP_NEXT: mapMusicEventsToCards(UP_NEXT),

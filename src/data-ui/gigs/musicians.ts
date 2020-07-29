@@ -42,7 +42,7 @@ const getMusicianDetails = (musician: IMusician): Array<IMiniCardPanelDetail> =>
       mainText: [
         festival ? festival.title.name : moveTheSuffixToPrefix(venue.name)
       ],
-      sort: [dates[0].valueOf()],
+      sort: [dates[0]],
       dates: festival ? [getMusicianFestivalDate(musician, festival)] : dates,
       video: gig ? (gig.headline === musician ? video : undefined) : undefined,
       favourite: favourite && gig && gig.headline === musician

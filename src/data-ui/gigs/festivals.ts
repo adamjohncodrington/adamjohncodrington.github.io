@@ -19,7 +19,7 @@ const getFestivalDetails = (musician: IMusician): Array<IMiniCardPanelDetail> =>
     (festival: IFestival): IMiniCardPanelDetail => {
       const { dates, video } = festival;
       return {
-        sort: [dates[0].valueOf()],
+        sort: [dates[0]],
         mainText: [getFestivalSubtitle(festival) || "TBC"],
         dates,
         video
