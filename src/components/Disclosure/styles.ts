@@ -16,3 +16,5 @@ export const PanelContainer = styled.div(
 export const StyledDiv = styled.div`
   cursor: pointer;
 `;
+
+export const DisclosureContainer = styled.div``;
