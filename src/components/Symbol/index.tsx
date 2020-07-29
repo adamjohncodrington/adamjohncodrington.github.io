@@ -12,7 +12,7 @@ const StyledSymbol = styled.div(
   ({
     opacity,
     theme: {
-      roundedSymbol: { borderRadius, fontSize, iconSize, size, textColor }
+      symbol: { borderRadius, fontSize, iconSize, size, textColor }
     }
   }: IStyledSymbol) => css`
     background: ${BLACK};

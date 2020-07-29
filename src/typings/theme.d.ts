@@ -93,7 +93,7 @@ interface ITheme {
   pageLayout: IThemePageLayout;
   pageSection: IThemePageSection;
   recipe: IThemeRecipe;
-  roundedSymbol: IThemeSymbol;
+  symbol: IThemeSymbol;
   vinyl: IThemeAlbumCard;
 
   fadedOpacity: number;

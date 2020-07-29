@@ -75,7 +75,7 @@ const THEME_RECIPE_CARD: IThemeRecipe = {
 
 const THEME_SYMBOL: IThemeSymbol = {
   borderRadius: "25%",
-  fontSize: "75%",
+  fontSize: "70%",
   iconSize: "60%",
   size: "26px",
   textColor: WHITE
@@ -95,7 +95,7 @@ export const THEME: ITheme = {
   pageSection: THEME_PAGE_SECTION,
   pageLayout: THEME_PAGE_LAYOUT,
   recipe: THEME_RECIPE_CARD,
-  roundedSymbol: THEME_SYMBOL,
+  symbol: THEME_SYMBOL,
   vinyl: THEME_VINYL_CARD,
 
   fadedOpacity: 0.5,
