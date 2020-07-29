@@ -3,7 +3,7 @@ interface IPhotoGrid {
   columnCount: number;
 }
 
-interface IPageSectionDataTypes {
+interface IPageSectionItemDataTypes {
   musicEvents?: Array<IMusicEvent>;
   theatreVisits?: Array<ITheatreVisit>;
   tripLegs?: Array<ITripLeg>;
@@ -16,7 +16,7 @@ interface IPageSectionDataTypes {
   gigs?: Array<IGig>;
 }
 
-interface IPageSectionPanelTypes {
+interface IPageSectionPanelDataTypes {
   comingSoon?: boolean;
   cards?: Array<ICard>;
   miniCards?: Array<IMiniCard>;
@@ -28,7 +28,7 @@ interface IPageSection extends I__AutoExpand, I__Hide {
   title: string;
   shuffle?: boolean;
   SvgIcon?: ISvgIcon;
-  panelData: IPageSectionPanelTypes;
+  panelData: IPageSectionPanelDataTypes;
   count?: number;
   starCount?: number;
 }

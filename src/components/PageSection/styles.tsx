@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 
-import { PAGE_SECTION_PANEL_TYPES } from "@constants";
 import { FlexRow, H2, Ul } from "primitives";
 
 export const PageSectionTitle = styled(H2)`
@@ -43,12 +42,6 @@ export const PageSectionSvgContainer = styled.div(
   `
 );
 
-const { RECIPES, MINI_CARDS } = PAGE_SECTION_PANEL_TYPES;
-
-interface IPageSectionPanelList {
-  pageSectionPanelType: string;
-}
-
 const CSS_COMMON = ({ theme: { pageSection } }: I_Theme) => css`
   > * {
     border-bottom: ${pageSection.panelList.border.bottom};
@@ -81,7 +74,7 @@ const CSS_RECIPE_CARDS = ({
   ${CSS_COMMON}
 `;
 
-const CSS_COUNTED_LIST = ({
+const CSS_MINI_CARDS = ({
   theme: {
     pageSection: {
       panelList: { padding, miniCards }
@@ -121,14 +114,10 @@ const CSS_REGULAR_CARDS = ({
   ${CSS_COMMON}
 `;
 
-export const PageSectionPanelList = styled(Ul)(
-  ({ pageSectionPanelType }: IPageSectionPanelList) => {
-    return pageSectionPanelType === RECIPES
-      ? CSS_RECIPE_CARDS
-      : pageSectionPanelType === MINI_CARDS
-      ? CSS_COUNTED_LIST
-      : CSS_REGULAR_CARDS;
-  }
+export const PageSectionPanelList = styled(
+  Ul
+)(({ recipes, miniCards }: IPageSectionPanelDataTypes) =>
+  recipes ? CSS_RECIPE_CARDS : miniCards ? CSS_MINI_CARDS : CSS_REGULAR_CARDS
 );
 
 export const StyledComingSoonPlaceholder = styled.div(

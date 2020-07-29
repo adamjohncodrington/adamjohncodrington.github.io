@@ -1,7 +1,7 @@
 import { isInFuture } from "./basic";
 
 interface IGetItemCounts {
-  data: IPageSectionDataTypes;
+  data: IPageSectionItemDataTypes;
   item: {
     actor?: IActor;
     attraction?: IAttraction;

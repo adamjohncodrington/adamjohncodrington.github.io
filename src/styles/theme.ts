@@ -7,7 +7,7 @@ import { fontFamily, scrollbarSize } from "./GlobalStyle";
 
 const { BOULDER, BLACK, GRAY, WHITE, GAINSBORO } = COLORS;
 
-const THEME_COUNTED_LIST_ITEM: IThemeMiniCard = {
+const THEME_MINI_CARD_ITEM: IThemeMiniCard = {
   count: { margin: { left: "5px" }, width: "20px" }
 };
 
@@ -88,7 +88,7 @@ const THEME_VINYL_CARD: IThemeAlbumCard = {
 
 export const THEME: ITheme = {
   breakpoints: BREAKPOINTS,
-  MiniCard: THEME_COUNTED_LIST_ITEM,
+  MiniCard: THEME_MINI_CARD_ITEM,
   card: THEME_CARD,
   navBar: THEME_NAV_BAR,
   pageHeader: THEME_PAGE_HEADER,

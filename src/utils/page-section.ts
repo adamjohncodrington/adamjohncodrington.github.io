@@ -2,7 +2,7 @@ export const validPageSectionData = ({
   cards,
   miniCards,
   recipes
-}: IPageSectionPanelTypes): boolean =>
+}: IPageSectionPanelDataTypes): boolean =>
   !(
     (cards && cards.length === 0) ||
     (miniCards && miniCards.length === 0) ||

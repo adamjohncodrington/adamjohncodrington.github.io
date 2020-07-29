@@ -3,6 +3,8 @@
 - do not export recipe data in nest
 - remove hidden recipes from group higher up in the app
 
+- add `details` to pole songs section
+
 - add compulsory `date` prop to `IPhoto`
 - reinstate festival videos
 

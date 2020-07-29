@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 
-import { PAGE_SECTION_PANEL_TYPES } from "@constants";
 import { Li } from "primitives";
 import { shuffleArray } from "utils";
 
@@ -20,18 +19,12 @@ export const PageSectionPanel: FC<IPageSection> = ({ panelData, shuffle }) => {
       : cards
     : undefined;
 
-  const pageSectionPanelType: string = recipes
-    ? PAGE_SECTION_PANEL_TYPES.RECIPES
-    : miniCards
-    ? PAGE_SECTION_PANEL_TYPES.MINI_CARDS
-    : PAGE_SECTION_PANEL_TYPES.CARDS;
-
   return comingSoon ? (
     <StyledComingSoonPlaceholder>coming soon</StyledComingSoonPlaceholder>
   ) : photoGrid ? (
     <PhotoGrid {...photoGrid} />
   ) : (
-    <PageSectionPanelList pageSectionPanelType={pageSectionPanelType}>
+    <PageSectionPanelList {...panelData}>
       {CARDS &&
         CARDS.map((card: ICard, index: number) => (
           <Card key={index} {...card} />
