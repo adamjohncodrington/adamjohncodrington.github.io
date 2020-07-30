@@ -3,6 +3,7 @@ import { COLORS } from "styles";
 import { isInFuture } from "./basic";
 import { daysToGo } from "./daysToGo";
 import { vinylColorIsSpecial } from "./vinyl";
+import { FREE_IMAGE_HOST_URL_PREFIX } from "config";
 
 const { BLACK, GRAY_MEDIUM, GRAY_MEDIUM_LIGHT } = COLORS;
 
@@ -45,14 +46,27 @@ export const getTwoColorDiagonal = (color1: string, color2: string): string =>
 //TODO: these should not live here!!!
 const BORDER_HALF_PX_SOLID_GREY: string = `0.5px solid ${GRAY_MEDIUM_LIGHT}`;
 
-const getVinylColorSymbolBackground = (colors: Array<string>): string =>
-  colors.length > 1
-    ? getTwoColorDiagonal(colors[0], colors[1])
-    : colors[0] === COLORS.VINYL.PHOTO
-    ? "black"
-    : colors[0];
+const getBackgoundImageUrl = (photo: IPhoto): string =>
+  `url("${FREE_IMAGE_HOST_URL_PREFIX + photo.freeimagehostId}")`;
 
-const getVinylColorSymbolBorder = (colors: Array<string>): string =>
+const getVinylSymbolBackground = ({
+  colors,
+  photo: { discPhoto }
+}: IVinyl): string => {
+  const photoBackground: string | undefined = !!discPhoto
+    ? getBackgoundImageUrl(discPhoto)
+    : undefined;
+
+  console.log(photoBackground);
+
+  return !!photoBackground
+    ? photoBackground
+    : colors.length > 1
+    ? getTwoColorDiagonal(colors[0], colors[1])
+    : colors[0];
+};
+
+const getVinylSymbolBorder = (colors: Array<string>): string =>
   colors[0] === COLORS.CLEAR
     ? BORDER_HALF_PX_SOLID_GREY
     : // : colors === COLORS.VINYL.PVRIS_AWKOHAWNOH
@@ -85,8 +99,8 @@ export const getSymbols = ({
 
     if (vinylColorIsSpecial(colors))
       symbols.push({
-        background: getVinylColorSymbolBackground(colors),
-        border: getVinylColorSymbolBorder(colors),
+        background: getVinylSymbolBackground(vinyl),
+        border: getVinylSymbolBorder(colors),
         borderRadius: "50%",
         svgFill: BLACK,
         contents: {}

@@ -26,9 +26,8 @@ interface IPhoto extends I__Hide, I__Date {
   freeimagehostId: string;
 }
 
-interface IVinylPhoto extends IPhoto {
-  sideA?: IPhoto;
-  sideB?: IPhoto;
+interface IAlbumPhoto extends IPhoto {
+  discPhoto?: IPhoto;
 }
 
 interface IPhotoLink extends IPhoto {
@@ -153,7 +152,7 @@ interface IAlbum {
   musician: IMusician;
   title: string;
   year: number;
-  photo: IPhoto;
+  photo: IAlbumPhoto;
   appleMusicId: string;
 }
 
