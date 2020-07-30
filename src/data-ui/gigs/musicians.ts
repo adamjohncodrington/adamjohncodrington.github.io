@@ -1,10 +1,6 @@
 import { MUSICIANS as musicians } from "@constants";
 import { MUSIC_EVENTS as DATA } from "data-raw";
-import {
-  getItemCounts,
-  moveTheSuffixToPrefix,
-  detailsContainsFavourite
-} from "utils";
+import { getItemCounts, detailsContainsFavourite } from "utils";
 
 const getMusicianMatches = (musician: IMusician): Array<IMusicEvent> => {
   const musicianMatches: Array<IMusicEvent> = [];
@@ -39,9 +35,7 @@ const getMusicianDetails = (musician: IMusician): Array<IMiniCardPanelDetail> =>
       favourite,
       video
     }: IMusicEvent): IMiniCardPanelDetail => ({
-      mainText: [
-        festival ? festival.title.name : moveTheSuffixToPrefix(venue.name)
-      ],
+      mainText: [festival ? festival.title.name : venue.name],
       sort: [dates[0]],
       dates: festival ? [getMusicianFestivalDate(musician, festival)] : dates,
       video: gig ? (gig.headline === musician ? video : undefined) : undefined,

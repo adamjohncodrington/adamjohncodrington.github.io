@@ -1,6 +1,7 @@
 import React, { FC } from "react";
 
 import { DynamicFontWeightFlexRow } from "primitives";
+import { moveTheSuffixToPrefix } from "utils";
 import {
   StyledMainText,
   StyledSecondaryText,
@@ -37,11 +38,13 @@ export const MiniCardHeader: FC<IMiniCardHeader> = ({
           star={star}
           video={video}
         >
-          {text}
+          {moveTheSuffixToPrefix(text)}
         </StyledMainText>
 
         {secondaryText && (
-          <StyledSecondaryText>({secondaryText})</StyledSecondaryText>
+          <StyledSecondaryText>
+            ({moveTheSuffixToPrefix(secondaryText)})
+          </StyledSecondaryText>
         )}
       </StyledTextContainer>
 

@@ -1,7 +1,6 @@
 import {
   getGigMusicians,
   getFestivalMusicians,
-  moveTheSuffixToPrefix,
   getDatesText,
   getDateText,
   getGigTitle,
@@ -49,7 +48,7 @@ export const mapMusicEventsToCards = (
       ...musicEvent,
       sort: [dates[0]],
       symbols: getSymbols({ company, video, date: dates[0] }),
-      body: moveTheSuffixToPrefix(venue.name),
+      body: venue.name,
       secondaryBody: getDatesText(dates),
       disclaimer: isInFuture(dates[0]) ? ticketType : undefined
     };

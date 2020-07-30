@@ -1,7 +1,7 @@
 import React, { ReactElement } from "react";
 
 import { DynamicFontWeightFlexRow, Link } from "primitives";
-import { getDatesText } from "utils";
+import { getDatesText, moveTheSuffixToPrefix } from "utils";
 
 import { StyledLevel1MainText, StyledIndex, StyledDateText } from "./styles";
 
@@ -24,7 +24,7 @@ export const MiniCardPanelDetailHeader: React.FC<IMiniCardPanelDetailHeader> = (
 
       {mainText && (
         <StyledLevel1MainText useTriangleAsBullet={useTriangleAsBullet}>
-          {mainText[0]}
+          {moveTheSuffixToPrefix(mainText[0])}
         </StyledLevel1MainText>
       )}
 
@@ -36,7 +36,9 @@ export const MiniCardPanelDetailHeader: React.FC<IMiniCardPanelDetailHeader> = (
     </DynamicFontWeightFlexRow>
   );
 
-  if (!headerLink) return HeaderContents;
-
-  return <Link href={headerLink}>{HeaderContents}</Link>;
+  return headerLink ? (
+    <Link href={headerLink}>{HeaderContents}</Link>
+  ) : (
+    HeaderContents
+  );
 };

@@ -1,4 +1,4 @@
-import { arrayToString, moveTheSuffixToPrefix } from "./basic";
+import { arrayToString } from "./basic";
 
 interface IGetMusicianStageNameAtTime {
   musician: IMusician;
@@ -16,40 +16,29 @@ export const getMusicianStageNameAtTime = ({
 };
 
 export const getGigTitle = ({ headline, date }: IGig): string =>
-  moveTheSuffixToPrefix(
-    getMusicianStageNameAtTime({
-      musician: headline,
-      year: date.getFullYear()
-    })
-  );
+  getMusicianStageNameAtTime({
+    musician: headline,
+    year: date.getFullYear()
+  });
 
 export const getFestivalTitle = ({ title }: IFestival): string => title.name;
 
 export const getGigSubtitle = ({ support }: IGig): string | undefined =>
-  support &&
-  arrayToString(
-    support.map(({ name }: IMusician): string => moveTheSuffixToPrefix(name))
-  );
+  support && arrayToString(support.map(({ name }: IMusician): string => name));
 
 export const getFestivalSubtitle = ({ lineup }: IFestival): string =>
   lineup[0].length > 0
-    ? arrayToString(
-        lineup
-          .flat()
-          .map(({ name }: IMusician): string => moveTheSuffixToPrefix(name))
-      )
+    ? arrayToString(lineup.flat().map(({ name }: IMusician): string => name))
     : "TBC";
 
-export const getTheatreVisitTitle = ({ play }: ITheatreVisit): string =>
-  moveTheSuffixToPrefix(play.name);
+export const getTheatreVisitTitle = ({
+  play: { name }
+}: ITheatreVisit): string => name;
 
 export const getTheatreVisitSubtitle = ({
   cast
 }: ITheatreVisit): string | undefined =>
-  cast &&
-  arrayToString(
-    cast.map(({ name }: IActor): string => moveTheSuffixToPrefix(name))
-  );
+  cast && arrayToString(cast.map(({ name }: IActor): string => name));
 
 export const getTripTitle = ({
   country,

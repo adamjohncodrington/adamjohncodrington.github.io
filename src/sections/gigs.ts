@@ -5,8 +5,7 @@ import { SVG } from "resources";
 const BUCKET_LIST: IPageSection = {
   title: PAGE_SECTION_TITLES.BUCKET_LIST,
   SvgIcon: SVG.STARS,
-  panelData: { miniCards: DATA.BUCKET_LIST },
-  count: DATA.BUCKET_LIST.length
+  panelData: { miniCards: DATA.BUCKET_LIST }
 };
 
 const FESTIVALS: IPageSection = {

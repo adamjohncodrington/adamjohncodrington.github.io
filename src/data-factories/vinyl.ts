@@ -1,6 +1,6 @@
 import { APPLE_MUSIC_URL_PREFIX } from "config";
 
-import { getMusicianStageNameAtTime, moveTheSuffixToPrefix } from "utils";
+import { getMusicianStageNameAtTime } from "utils";
 
 interface IMapAlbumsToCardsOptions {
   hideYear?: boolean;
@@ -21,9 +21,7 @@ export const mapAlbumsToCards = (
     title,
     year,
     sort: [year],
-    subtitle: moveTheSuffixToPrefix(
-      getMusicianStageNameAtTime({ musician, year })
-    ),
+    subtitle: getMusicianStageNameAtTime({ musician, year }),
     body: hideYear ? undefined : year.toString(),
     headerPhoto: { ...artwork, href: APPLE_MUSIC_URL_PREFIX + appleMusicId }
   });

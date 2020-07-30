@@ -1,6 +1,6 @@
 import { PLAYS as plays } from "@constants";
 import { THEATRE as DATA } from "data-raw";
-import { getItemCounts, moveTheSuffixToPrefix } from "utils";
+import { getItemCounts } from "utils";
 
 import { FAVOURITES } from "./favourites";
 
@@ -34,7 +34,7 @@ const getPlayDetails = (play: IPlay): Array<IMiniCardPanelDetail> => {
     (theatreVisit: ITheatreVisit): IMiniCardPanelDetail => {
       const { date } = theatreVisit;
       return {
-        mainText: [moveTheSuffixToPrefix(theatreVisit.theatre.name)],
+        mainText: [theatreVisit.theatre.name],
         sort: [date],
         dates: [date]
       };

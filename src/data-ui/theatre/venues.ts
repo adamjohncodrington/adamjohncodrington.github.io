@@ -1,6 +1,6 @@
 import { THEATRE_VENUES as venues } from "@constants";
 import { THEATRE as DATA } from "data-raw";
-import { getItemCounts, moveTheSuffixToPrefix } from "utils";
+import { getItemCounts } from "utils";
 
 const getTheatreMatches = (theatre: ITheatre): Array<ITheatreVisit> => {
   const theatreMatches: Array<ITheatreVisit> = [];
@@ -18,7 +18,7 @@ const getTheatreVenueDetails = (
     (theatreVisit: ITheatreVisit): IMiniCardPanelDetail => {
       const { date } = theatreVisit;
       return {
-        mainText: [moveTheSuffixToPrefix(theatreVisit.play.name)],
+        mainText: [theatreVisit.play.name],
         sort: [date],
         dates: [date]
       };
