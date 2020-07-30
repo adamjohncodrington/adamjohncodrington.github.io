@@ -65,7 +65,6 @@ const CSS_GlobalStyle = css`
     width: 100%;
     height: 100%;
     z-index: -10;
-    /* background: linear-gradient(white, lightGrey) no-repeat center center; */
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;

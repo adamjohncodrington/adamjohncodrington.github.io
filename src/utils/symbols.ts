@@ -57,8 +57,6 @@ const getVinylSymbolBackground = ({
     ? getBackgoundImageUrl(discPhoto)
     : undefined;
 
-  console.log(photoBackground);
-
   return !!photoBackground
     ? photoBackground
     : colors.length > 1

@@ -86,7 +86,7 @@ const THEME_VINYL_CARD: IThemeAlbumCard = {
 
 export const THEME: ITheme = {
   breakpoints: BREAKPOINTS,
-  boxShadow: `0 1px 2px ${rgba(GRAY_MEDIUM, 0.5)}`,
+  boxShadow: `0 1px 5px ${rgba(GRAY_MEDIUM, 0.7)}`,
   miniCard: THEME_MINI_CARD_ITEM,
   card: THEME_CARD,
   navBar: THEME_NAV_BAR,
