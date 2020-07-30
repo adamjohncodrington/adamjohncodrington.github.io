@@ -10,6 +10,8 @@ export const SONGS: string = "Songs";
 export const VIDEOS: string = "Videos";
 export const SOLO: string = "Solo";
 export const COLORS: string = "Colours";
+export const RETAILERS: string = "Retailers";
+export const COST: string = "Cost";
 
 // Gigs
 export const FESTIVALS: string = "Festivals";

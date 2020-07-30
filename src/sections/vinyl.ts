@@ -25,6 +25,18 @@ const COLLECTION: IPageSection = {
   shuffle: true
 };
 
+const COST: IPageSection = {
+  title: PAGE_SECTION_TITLES.COST,
+  SvgIcon: SVG.MONEY,
+  panelData: { comingSoon: true }
+};
+
+const RETAILERS: IPageSection = {
+  title: PAGE_SECTION_TITLES.RETAILERS,
+  SvgIcon: SVG.SHOPPING_BAG,
+  panelData: { comingSoon: true }
+};
+
 const SIGNED: IPageSection = {
   title: PAGE_SECTION_TITLES.SIGNED,
   panelData: { cards: DATA.SIGNED },
@@ -55,6 +67,8 @@ export const VINYL: Array<IPageSection> = [
   MUSICIANS,
   COLORS,
   COLLECTION,
+  COST,
+  RETAILERS,
   SIGNED,
   WISH_LIST,
   ...YEARS

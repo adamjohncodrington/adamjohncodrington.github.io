@@ -28,6 +28,7 @@ export { ReactComponent as HOME } from "./home.svg";
 // M
 export { ReactComponent as MAP_PIN } from "./map-pin.svg";
 export { ReactComponent as MICROPHONE } from "./microphone.svg";
+export { ReactComponent as MONEY } from "./money-2.svg";
 export { ReactComponent as MUSIC } from "./music-1.svg";
 // N
 export { ReactComponent as NOTEPAD } from "./notepad.svg";
@@ -44,6 +45,7 @@ export { ReactComponent as ROLLER_COASTER } from "./roller-coaster.svg";
 // S
 export { ReactComponent as SAUCE } from "./sauce.svg";
 export { ReactComponent as SHOES_FLAMENCO } from "./shoes-flamenco.svg";
+export { ReactComponent as SHOPPING_BAG } from "./shopping-bag.svg";
 export { ReactComponent as SOLO } from "./solo.svg";
 export { ReactComponent as STADIUM } from "./stadium.svg";
 export { ReactComponent as STARS } from "./stars.svg";

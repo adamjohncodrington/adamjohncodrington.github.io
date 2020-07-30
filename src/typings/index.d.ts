@@ -157,14 +157,14 @@ interface ISymbol extends I_Background, I__Border, I__BorderRadius {
   };
 }
 
-interface IVinylRetailer extends I_Name {
+interface IRetailer extends I_Name {
   online: boolean;
   branch?: string;
 }
 
 interface IVinyl extends I_Colors, IAlbum, I_Signed {
-  costExcDelivery?: number;
-  retailer?: IVinylRetailer;
+  costExcDelivery: number;
+  retailer: IRetailer;
   sides: 2 | 4;
   inches: 10 | 12;
 }
