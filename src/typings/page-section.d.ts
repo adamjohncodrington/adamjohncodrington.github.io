@@ -16,8 +16,15 @@ interface IPageSectionItemDataTypes {
   gigs?: Array<IGig>;
 }
 
+interface ICosts {
+  totalCost: string;
+  unitCost: string;
+  unit: string;
+}
+
 interface IPageSectionPanelDataTypes {
-  headline?: IHeadline;
+  comingSoon?: boolean;
+  costs?: ICosts;
   cards?: Array<ICard>;
   miniCards?: Array<IMiniCard>;
   recipes?: Array<IRecipe>;

@@ -47,7 +47,7 @@ const FAVOURITES: IPageSection = {
 const PHOTOS: IPageSection = {
   SvgIcon: SVG.CAMERA,
   title: PAGE_SECTION_TITLES.PHOTOS,
-  panelData: { headline: COMING_SOON }
+  panelData: { comingSoon: true }
 };
 
 const UP_NEXT: IPageSection = {

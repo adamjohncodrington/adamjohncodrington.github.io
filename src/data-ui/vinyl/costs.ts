@@ -7,9 +7,10 @@ const totalCost: number = DATA.reduce(
   0
 );
 
-const costPerVinyl = totalCost / DATA.length;
+const unitCost = totalCost / DATA.length;
 
-export const COST: IHeadline = {
-  text: `${numberToCurrencyString(totalCost, 0)} spent so far`,
-  subText: `approx ${numberToCurrencyString(costPerVinyl, 0)} per vinyl`
+export const COSTS: ICosts = {
+  totalCost: numberToCurrencyString(totalCost, 0),
+  unitCost: numberToCurrencyString(unitCost, 0),
+  unit: "vinyl"
 };

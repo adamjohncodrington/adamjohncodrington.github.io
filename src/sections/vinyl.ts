@@ -40,7 +40,7 @@ const COLLECTION: IPageSection = {
 const COST: IPageSection = {
   title: PAGE_SECTION_TITLES.COST,
   SvgIcon: SVG.MONEY,
-  panelData: { headline: DATA.COST }
+  panelData: { costs: DATA.COSTS }
 };
 
 const RETAILERS: IPageSection = {

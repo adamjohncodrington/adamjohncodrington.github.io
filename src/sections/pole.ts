@@ -31,7 +31,7 @@ const EXOTIC: IPageSection = {
 const NON_POLE: IPageSection = {
   SvgIcon: SVG.HOME,
   title: PAGE_SECTION_TITLES.NON_POLE,
-  panelData: { headline: COMING_SOON }
+  panelData: { comingSoon: true }
 };
 
 const SONGS: IPageSection = {
@@ -55,13 +55,13 @@ const PHOTOS: IPageSection = {
 const TRICKS: IPageSection = {
   SvgIcon: SVG.POLE_VAULT,
   title: PAGE_SECTION_TITLES.TRICKS,
-  panelData: { headline: COMING_SOON }
+  panelData: { comingSoon: true }
 };
 
 const SHOWCASE: IPageSection = {
   SvgIcon: SVG.STARS,
   title: PAGE_SECTION_TITLES.SHOWCASE,
-  panelData: { headline: COMING_SOON }
+  panelData: { comingSoon: true }
 };
 
 export const POLE: Array<IPageSection> = [

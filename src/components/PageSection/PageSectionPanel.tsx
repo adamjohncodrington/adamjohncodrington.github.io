@@ -15,14 +15,25 @@ import {
 } from "./styles";
 
 export const PageSectionPanel: FC<IPageSection> = ({ panelData, shuffle }) => {
-  const { cards, headline, miniCards, recipes, photoGrid } = panelData;
+  const { cards, comingSoon, costs, miniCards, recipes, photoGrid } = panelData;
 
-  if (headline) {
-    const { faded, text, subText } = headline;
+  if (comingSoon)
     return (
-      <StyledHeadlineTextContainer faded={!!faded}>
-        <div>{text}</div>
-        {subText && <div>({subText})</div>}
+      <StyledHeadlineTextContainer faded={true}>
+        coming soon
+      </StyledHeadlineTextContainer>
+    );
+
+  if (costs) {
+    const { totalCost, unit, unitCost } = costs;
+    return (
+      <StyledHeadlineTextContainer faded={false}>
+        <div>
+          <strong>{totalCost}</strong> spent so far
+        </div>
+        <div>
+          (approx <strong>{unitCost}</strong> per {unit})
+        </div>
       </StyledHeadlineTextContainer>
     );
   }

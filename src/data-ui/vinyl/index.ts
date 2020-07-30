@@ -3,7 +3,7 @@ import { VINYL_COLLECTION, VINYL_WISH_LIST } from "data-raw";
 import { filterMiniCards } from "utils";
 
 import { ARTWORK } from "./artwork";
-import { COST } from "./cost";
+import { COSTS } from "./costs";
 import { COLORS } from "./colors";
 import { GIFTS } from "./gifts";
 import { MUSICIANS } from "./musicians";
@@ -17,7 +17,7 @@ export const VINYL = {
     hideSignedIcon: true,
     hideGiftSymbol: true
   }),
-  COST,
+  COSTS,
   GIFTS: mapVinylsToCards(GIFTS, { hideGiftSymbol: true, showGiftFrom: true }),
   MUSICIANS: filterMiniCards(MUSICIANS),
   RETAILERS: filterMiniCards(RETAILERS),
