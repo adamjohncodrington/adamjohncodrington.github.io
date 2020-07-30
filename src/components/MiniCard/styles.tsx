@@ -16,6 +16,7 @@ export const StyledSecondaryText = styled.span(
     opacity: ${fadedOpacity};
     margin-left: 5px;
     font-size: 75%;
+    font-weight: normal;
   `
 );
 

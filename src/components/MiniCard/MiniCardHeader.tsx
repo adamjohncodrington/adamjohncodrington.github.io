@@ -36,11 +36,10 @@ export const MiniCardHeader: FC<IMiniCardHeader> = ({
     secondaryCount > 0 &&
     primaryCount > 0;
 
+  const bold: boolean = !isStatic && panelVisible;
+
   return (
-    <DynamicFontWeightFlexRow
-      italic={!!anomaly}
-      bold={!isStatic && panelVisible}
-    >
+    <DynamicFontWeightFlexRow italic={!!anomaly} bold={bold}>
       <StyledTextContainer>
         <StyledPrimaryText
           faded={faded}
