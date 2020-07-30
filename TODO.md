@@ -2,17 +2,11 @@
 
 - deprecate `getItemCounts`???????? in favour of `details.length`????
 
-- remove all instances of `comingSoon` :)
-
-- add `gift?` prop to `IVinyl`, find a `gift` SVG
-
 - move `data-factories` to just `factory.ts` files within `data-ui`, same with `utils`, anything shared can then be relegated to `utils`
 - or just move the `map` defs into the locations where they are used, thus eliminating ALL needs to `import`!!!!!
 - review all instances of `filterMiniCards`
 - move all the `mapTo` defs to the files that they are used in, otherwise to a generalised `map.ts` file :)
 - organise utils
-
-- add shop/cost props to IVinyl?????
 
 ## Priorities
 
