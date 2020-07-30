@@ -20,7 +20,7 @@ interface IPage extends I__Hide {
   color?: ColorValue;
 }
 
-//TODO: make this compulsory
+//TODO: make date prop and title for alt purposes
 interface IPhoto extends I__Hide, I__Date {
   title?: string;
   freeimagehostId: string;
@@ -157,7 +157,14 @@ interface ISymbol extends I_Background, I__Border, I__BorderRadius {
   };
 }
 
+interface IVinylRetailer extends I_Name {
+  online: boolean;
+  branch?: string;
+}
+
 interface IVinyl extends I_Colors, IAlbum, I_Signed {
+  costExcDelivery?: number;
+  retailer?: IVinylRetailer;
   sides: 2 | 4;
   inches: 10 | 12;
 }

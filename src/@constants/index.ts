@@ -10,6 +10,7 @@ import * as STUDIOS from "./pole-studios";
 import * as SONGS from "./songs";
 import * as TICKET_TYPES from "./ticket-types";
 import * as UNICODE from "./unicode";
+import * as VINYL_RETAILERS from "./vinyl-retailers";
 
 export * from "./ingredients";
 export * from "./music-venues";
@@ -30,7 +31,8 @@ export {
   STUDIOS,
   SONGS,
   TICKET_TYPES,
-  UNICODE
+  UNICODE,
+  VINYL_RETAILERS
 };
 
 export * from "./diets";
