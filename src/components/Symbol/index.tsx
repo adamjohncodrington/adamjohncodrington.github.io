@@ -16,12 +16,14 @@ const StyledSymbol = styled.div(
     borderRadius = "25%",
     svgFill = rgba(WHITE, 0.85),
     theme: {
+      boxShadow,
       symbol: { fontSize, iconSize, size, textColor }
     }
   }: IStyledSymbol) => css`
     background: ${background};
     border-radius: ${borderRadius};
     border: ${border};
+    box-shadow: ${boxShadow};
     color: ${textColor};
     font-size: ${fontSize};
     height: ${size};

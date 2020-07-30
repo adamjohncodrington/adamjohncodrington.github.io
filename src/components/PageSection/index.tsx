@@ -8,7 +8,8 @@ import { PageSectionPanel } from "./PageSectionPanel";
 const PageSectionContainer = styled.section(
   ({
     theme: {
-      pageSection: { background, boxShadow, borderRadius, padding, margin }
+      boxShadow,
+      pageSection: { background, borderRadius, padding, margin }
     }
   }) => css`
     background: ${background};

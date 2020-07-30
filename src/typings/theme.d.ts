@@ -34,7 +34,6 @@ interface IThemePageHeader {
 interface IThemePageSection {
   background: ColorValue;
   borderRadius: PxValue;
-  boxShadow: BoxShadowValue;
   headline: { fontSize: PxValue };
   count: { margin: { left: PxValue } };
   header: { padding: { vertical: PxValue } };
@@ -85,6 +84,7 @@ interface IThemeAlbumCard {
 
 interface ITheme {
   breakpoints: IBreakpoints;
+  boxShadow: BoxShadowValue;
   miniCard: IThemeMiniCard;
   card: IThemeCard;
   navBar: IThemeNavBar;

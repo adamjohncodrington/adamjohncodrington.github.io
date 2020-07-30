@@ -1,8 +1,6 @@
-import { PAGE_SECTION_TITLES, PAGE_SECTION_TEMPLATES } from "@constants";
+import { PAGE_SECTION_TITLES } from "@constants";
 import { VINYL as DATA } from "data-ui";
 import { SVG } from "resources";
-
-const { COMING_SOON } = PAGE_SECTION_TEMPLATES;
 
 const MUSICIANS: IPageSection = {
   title: PAGE_SECTION_TITLES.MUSICIANS,
@@ -17,6 +15,13 @@ const COLORS: IPageSection = {
   count: DATA.COLORS.length,
   SvgIcon: SVG.PALETTE,
   shuffle: true
+};
+
+const GIFTS: IPageSection = {
+  title: PAGE_SECTION_TITLES.GIFTS,
+  SvgIcon: SVG.GIFT,
+  shuffle: true,
+  panelData: { cards: DATA.GIFTS }
 };
 
 const COLLECTION: IPageSection = {
@@ -36,7 +41,7 @@ const COST: IPageSection = {
 const RETAILERS: IPageSection = {
   title: PAGE_SECTION_TITLES.RETAILERS,
   SvgIcon: SVG.SHOPPING_BAG,
-  panelData: { headline: COMING_SOON }
+  panelData: { miniCards: DATA.RETAILERS }
 };
 
 const SIGNED: IPageSection = {
@@ -70,6 +75,7 @@ export const VINYL: Array<IPageSection> = [
   COLORS,
   COLLECTION,
   COST,
+  GIFTS,
   RETAILERS,
   SIGNED,
   WISH_LIST,

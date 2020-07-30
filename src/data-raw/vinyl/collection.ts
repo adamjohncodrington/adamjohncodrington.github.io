@@ -1,5 +1,5 @@
+import { MUSICIANS, RETAILERS, FRIENDS } from "@constants";
 import { PHOTOS } from "resources";
-import { MUSICIANS, RETAILERS } from "@constants";
 import { COLORS } from "styles";
 
 const {
@@ -9,7 +9,7 @@ const {
   AMAZON,
   EBAY,
   RECORDSTORE_ONLINE,
-  MUSICIAN_ONLINE_STORE,
+  MUSICIAN_WEB_STORE,
   ROUGH_TRADE_EAST,
   ROUGH_TRADE_NOTTINGHAM
 } = RETAILERS;
@@ -87,7 +87,7 @@ export const FLORENCE_LUNGS: IVinyl = {
 
 export const MARINA_ELECTRA_HEART: IVinyl = {
   musician: MUSICIANS.MARINA,
-  retailer: MUSICIAN_ONLINE_STORE,
+  retailer: MUSICIAN_WEB_STORE,
   costExcDelivery: 18.99,
   title: "Electra Heart",
   photo: PHOTOS.ALBUMS.MARINA_ELECTRA_HEART,
@@ -144,6 +144,7 @@ export const LADY_GAGA_FAME_MONSTER: IVinyl = {
 
 export const LORDE_PURE_HEROINE: IVinyl = {
   musician: MUSICIANS.LORDE,
+  gift: { from: FRIENDS.MUM },
   costExcDelivery: 8,
   retailer: RECORDSTORE_ONLINE,
   title: "Pure Heroine",
@@ -158,6 +159,7 @@ export const LORDE_PURE_HEROINE: IVinyl = {
 
 export const TAYLOR_SWIFT_1989: IVinyl = {
   musician: MUSICIANS.TAYLOR_SWIFT,
+  gift: { from: FRIENDS.MUM },
   title: "1989",
   costExcDelivery: 14.99,
   retailer: RECORDSTORE_ONLINE,
@@ -187,6 +189,7 @@ export const GRIMES_ART_ANGELS: IVinyl = {
 export const MUNA_ABOUT_U: IVinyl = {
   musician: MUSICIANS.MUNA,
   title: "About U",
+  gift: { from: FRIENDS.MUM },
   sides: 4,
   retailer: EBAY,
   costExcDelivery: 22.89,
@@ -200,7 +203,7 @@ export const MUNA_ABOUT_U: IVinyl = {
 
 export const PVRIS_AWKOHAWNOH: IVinyl = {
   musician: MUSICIANS.PVRIS,
-  retailer: MUSICIAN_ONLINE_STORE,
+  retailer: MUSICIAN_WEB_STORE,
   costExcDelivery: 21.99,
   title: "All We Know of Heaven, All We Need of Hell",
   photo: PHOTOS.ALBUMS.PVRIS_AWKOHAWNOH,
@@ -219,7 +222,7 @@ export const _1975_BRIEF_INQUIRY: IVinyl = {
   appleMusicId: "a-brief-inquiry-into-online-relationships/1435546528",
   year: 2018,
   costExcDelivery: 25.99,
-  retailer: MUSICIAN_ONLINE_STORE,
+  retailer: MUSICIAN_WEB_STORE,
   sides: 4,
   inches: 12,
   signed: false,
@@ -228,7 +231,7 @@ export const _1975_BRIEF_INQUIRY: IVinyl = {
 
 export const ALLIE_X_SUPER_SUNSET: IVinyl = {
   musician: MUSICIANS.ALLIE_X,
-  retailer: MUSICIAN_ONLINE_STORE,
+  retailer: MUSICIAN_WEB_STORE,
   costExcDelivery: 20,
   title: "Super Sunset",
   colors: [COLORS.VINYL.ALLIE_X_SUPER_SUNSET],
@@ -255,6 +258,7 @@ export const BANKS_III: IVinyl = {
 };
 
 export const LEON_LEON: IVinyl = {
+  gift: { from: FRIENDS.MUM },
   musician: MUSICIANS.LEON,
   retailer: HIVE,
   costExcDelivery: 15.75,
@@ -285,8 +289,9 @@ export const LYKKE_LI_SO_SAD_SO_SEXY: IVinyl = {
 export const FKA_TWIGS_MAGDALENE: IVinyl = {
   musician: MUSICIANS.FKA_TWIGS,
   title: "Magdalene",
+  gift: { from: FRIENDS.MUM },
   costExcDelivery: 16,
-  retailer: MUSICIAN_ONLINE_STORE,
+  retailer: MUSICIAN_WEB_STORE,
   appleMusicId: "magdalene/1477652618",
   year: 2019,
   signed: false,
@@ -340,7 +345,7 @@ export const ARIANA_GRANDE_TUN: IVinyl = {
 
 export const HAIM_WIMPIII: IVinyl = {
   musician: MUSICIANS.HAIM,
-  retailer: MUSICIAN_ONLINE_STORE,
+  retailer: MUSICIAN_WEB_STORE,
   costExcDelivery: 25,
   title: "Women In Music Pt. III",
   appleMusicId: "women-in-music-pt-iii/1500020581",
@@ -356,7 +361,7 @@ export const TAYLOR_SWIFT_FOLKLORE: IVinyl = {
   musician: MUSICIANS.TAYLOR_SWIFT,
   title: "folklore",
   costExcDelivery: 26.99,
-  retailer: MUSICIAN_ONLINE_STORE,
+  retailer: MUSICIAN_WEB_STORE,
   appleMusicId: "folklore/1524801260",
   year: 2020,
   colors: [COLORS.VINYL.TAYLOR_SWIFT_FOLKLORE],
@@ -373,7 +378,7 @@ export const TROYE_SIVAN_IN_A_DREAM: IVinyl = {
   appleMusicId: "in-a-dream-ep/1523003841",
   year: 2020,
   costExcDelivery: 21.99,
-  retailer: MUSICIAN_ONLINE_STORE,
+  retailer: MUSICIAN_WEB_STORE,
   colors: COLORS.VINYL.TROYE_SIVAN_IN_A_DREAM,
   sides: 2,
   signed: true,
@@ -384,7 +389,7 @@ export const TROYE_SIVAN_IN_A_DREAM: IVinyl = {
 export const CHARLI_XCX_HOW_IM_FEELING_NOW: IVinyl = {
   musician: MUSICIANS.CHARLI_XCX,
   title: "how i'm feeling now",
-  retailer: MUSICIAN_ONLINE_STORE,
+  retailer: MUSICIAN_WEB_STORE,
   year: 2020,
   costExcDelivery: 18.99,
   signed: false,

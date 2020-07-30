@@ -164,12 +164,14 @@ interface ISymbol extends I_Background, I__Border, I__BorderRadius {
 
 interface IRetailer extends I_Name {
   online: boolean;
+  umbrella?: boolean;
   branch?: string;
 }
 
 interface IVinyl extends I_Colors, IAlbum, I_Signed {
   costExcDelivery: number;
   retailer: IRetailer;
+  gift?: { from: IFriend };
   sides: 2 | 4;
   inches: 10 | 12;
 }

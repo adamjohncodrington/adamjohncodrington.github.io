@@ -21,6 +21,8 @@ export { ReactComponent as DANCER_MALE_2 } from "./dancer-male-2.svg";
 export { ReactComponent as DANCER_POSE } from "./dancer-pose.svg";
 // F
 export { ReactComponent as FLAG } from "./flag.svg";
+// F
+export { ReactComponent as GIFT } from "./gift.svg";
 // H
 export { ReactComponent as HEART } from "./heart-3.svg";
 export { ReactComponent as HEELS } from "./heels.svg";
@@ -28,7 +30,7 @@ export { ReactComponent as HOME } from "./home.svg";
 // M
 export { ReactComponent as MAP_PIN } from "./map-pin.svg";
 export { ReactComponent as MICROPHONE } from "./microphone.svg";
-export { ReactComponent as MONEY } from "./money-2.svg";
+export { ReactComponent as MONEY } from "./money-4.svg";
 export { ReactComponent as MUSIC } from "./music-1.svg";
 // N
 export { ReactComponent as NOTEPAD } from "./notepad.svg";

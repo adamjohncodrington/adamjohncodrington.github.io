@@ -7,7 +7,9 @@ export const filterMiniCards = (
       secondaryCount,
       countInfoIrrelevant
     }: IMiniCard): boolean =>
-      countInfoIrrelevant || secondaryCount !== 0 || primaryCount !== 0
+      countInfoIrrelevant ||
+      (!!primaryCount && primaryCount !== 0) ||
+      (!!secondaryCount && secondaryCount !== 0)
   );
   return filtered;
 };

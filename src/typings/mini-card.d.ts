@@ -13,6 +13,7 @@ interface IMiniCard
     I__Video,
     I__Star {
   primaryText: string;
+  anomaly?: boolean;
   details?: Array<IMiniCardPanelDetail>;
   primaryCount?: number;
   secondaryCount?: number;

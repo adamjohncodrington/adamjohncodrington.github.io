@@ -29,12 +29,22 @@ export const FlexLiGrow = styled(Li)`
   flex: 1;
 `;
 
+interface IDynamicFlexRow extends I_Bold, I_Italic {}
+
 export const DynamicFontWeightFlexRow = styled(FlexRow)(
-  ({ bold }: I_Bold) =>
-    bold &&
+  ({ bold, italic }: IDynamicFlexRow) => css`
+    ${bold &&
     css`
       * {
         font-weight: bold;
       }
-    `
+    `}
+
+    ${italic &&
+    css`
+      * {
+        font-style: italic;
+      }
+    `}
+  `
 );

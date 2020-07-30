@@ -4,14 +4,18 @@ import { filterMiniCards } from "utils";
 
 import { COST } from "./cost";
 import { COLORS } from "./colors";
+import { GIFTS } from "./gifts";
 import { MUSICIANS } from "./musicians";
+import { RETAILERS } from "./retailers";
 import { SIGNED } from "./signed";
 import { YEARS } from "./years";
 
 export const VINYL = {
   COLORS: mapVinylsToCards(COLORS, { hideSignedIcon: true }),
   COST,
+  GIFTS: mapVinylsToCards(GIFTS),
   MUSICIANS: filterMiniCards(MUSICIANS),
+  RETAILERS: filterMiniCards(RETAILERS),
   COLLECTION: mapVinylsToCards(VINYL_COLLECTION),
   SIGNED: mapVinylsToCards(SIGNED, { hideSignedIcon: true }),
   WISH_LIST: mapAlbumsToCards(VINYL_WISH_LIST),

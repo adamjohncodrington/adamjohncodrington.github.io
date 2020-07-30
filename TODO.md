@@ -1,5 +1,7 @@
 # TO DO LIST
 
+- deprecate `getItemCounts`???????? in favour of `details.length`????
+
 - remove all instances of `comingSoon` :)
 
 - add `gift?` prop to `IVinyl`, find a `gift` SVG

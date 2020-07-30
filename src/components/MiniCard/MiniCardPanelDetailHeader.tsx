@@ -19,7 +19,7 @@ export const MiniCardPanelDetailHeader: React.FC<IMiniCardPanelDetailHeader> = (
   const useTriangleAsBullet: boolean = !!headerLink;
 
   const HeaderContents: ReactElement = (
-    <DynamicFontWeightFlexRow bold={!isStatic && panelVisible}>
+    <DynamicFontWeightFlexRow bold={!isStatic && panelVisible} italic={false}>
       {index && !useTriangleAsBullet && <StyledIndex>{index}.</StyledIndex>}
 
       {mainText && (

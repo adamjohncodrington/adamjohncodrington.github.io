@@ -15,6 +15,7 @@ export const MiniCardHeader: FC<IMiniCardHeader> = ({
   secondaryText,
   video,
   favourite,
+  anomaly,
   panelVisible,
   star,
   primaryCount,
@@ -36,7 +37,10 @@ export const MiniCardHeader: FC<IMiniCardHeader> = ({
     primaryCount > 0;
 
   return (
-    <DynamicFontWeightFlexRow bold={!isStatic && panelVisible}>
+    <DynamicFontWeightFlexRow
+      italic={!!anomaly}
+      bold={!isStatic && panelVisible}
+    >
       <StyledTextContainer>
         <StyledPrimaryText
           faded={faded}

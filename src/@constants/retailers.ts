@@ -20,8 +20,8 @@ export const EBAY: IRetailer = {
   online: true
 };
 
-export const MUSICIAN_ONLINE_STORE: IRetailer = {
-  name: "Musician Online Store",
+export const MUSICIAN_WEB_STORE: IRetailer = {
+  name: "Web Store for Artist",
   online: true
 };
 

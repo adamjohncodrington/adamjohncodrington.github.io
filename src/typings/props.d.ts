@@ -11,7 +11,7 @@ interface I__Insignificant {
 }
 
 interface I_Sort {
-  sort: Array<string | number | Date>;
+  sort: Array<string | number | Date | boolean>;
 }
 
 interface I_Signed {
@@ -97,6 +97,10 @@ interface I__ColumnCount {
 
 interface I_Bold {
   bold: boolean;
+}
+
+interface I_Italic {
+  italic: boolean;
 }
 
 interface I__ExcludeFromBucketList {
