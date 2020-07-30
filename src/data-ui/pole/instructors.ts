@@ -33,7 +33,7 @@ const getInstructorDetails = (
 export const INSTRUCTORS: Array<IMiniCard> = Object.values(instructors).map(
   (instructor: IPoleInstructor): IMiniCard => {
     const { name, stageName } = instructor;
-    const details: Array<IMiniCardPanelDetail> = getInstructorDetails(
+    const panelDetails: Array<IMiniCardPanelDetail> = getInstructorDetails(
       instructor
     );
     const instructorName: string = stageName || name;
@@ -41,8 +41,8 @@ export const INSTRUCTORS: Array<IMiniCard> = Object.values(instructors).map(
       primaryText: instructorName,
       sort: [instructorName],
       secondaryText: stageName ? name : undefined,
-      primaryCount: details.length || undefined,
-      details: details.length > 0 ? details : undefined
+      primaryCount: panelDetails.length || undefined,
+      panelDetails: panelDetails.length > 0 ? panelDetails : undefined
     };
   }
 );

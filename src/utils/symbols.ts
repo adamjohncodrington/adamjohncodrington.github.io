@@ -8,22 +8,22 @@ const { BLACK, GRAY_MEDIUM, GRAY_MEDIUM_LIGHT } = COLORS;
 
 const SYMBOL_PHOTO: ISymbol = {
   background: BLACK,
-  content: { icon: "photo" }
+  contents: { icon: "photo" }
 };
 
 const SYMBOL_VIDEO: ISymbol = {
   background: BLACK,
-  content: { icon: "video" }
+  contents: { icon: "video" }
 };
 
 const SYMBOL_SIGNED: ISymbol = {
   background: BLACK,
-  content: { icon: "pen" }
+  contents: { icon: "pen" }
 };
 
 const SYMBOL_GIFT: ISymbol = {
   background: BLACK,
-  content: { icon: "gift" }
+  contents: { icon: "gift" }
 };
 
 const sortCompany = (company: Array<IPerson>): Array<IFriend> =>
@@ -35,7 +35,7 @@ const getCompanySymbols = (company: Array<IPerson>): Array<ISymbol> =>
   sortCompany(company).map(
     ({ initials }: IFriend): ISymbol => ({
       background: GRAY_MEDIUM,
-      content: { text: initials }
+      contents: { text: initials }
     })
   );
 
@@ -89,7 +89,7 @@ export const getSymbols = ({
         border: getVinylColorSymbolBorder(colors),
         borderRadius: "50%",
         svgFill: BLACK,
-        content: {}
+        contents: {}
       });
   }
 
@@ -100,7 +100,7 @@ export const getSymbols = ({
   if (date && isInFuture(date))
     symbols.push({
       background: "black",
-      content: { text: daysToGo(date).toString() }
+      contents: { text: daysToGo(date).toString() }
     });
 
   if (signed) symbols.push(SYMBOL_SIGNED);

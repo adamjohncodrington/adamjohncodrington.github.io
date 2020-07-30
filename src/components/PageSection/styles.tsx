@@ -138,7 +138,6 @@ export const StyledHeadlineTextContainer = styled.div(
 
     > *:not(:first-child) {
       padding-top: 7px;
-      opacity: ${fadedOpacity};
       font-size: 75%;
     }
 

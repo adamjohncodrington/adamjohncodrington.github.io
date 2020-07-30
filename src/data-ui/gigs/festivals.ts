@@ -42,7 +42,7 @@ export const FESTIVALS: Array<IMiniCard> = Object.values(festivals)
         sort: [name],
         primaryCount,
         secondaryCount,
-        details: getFestivalDetails(festival)
+        panelDetails: getFestivalDetails(festival)
       };
     }
   );

@@ -156,7 +156,7 @@ interface IHeadline extends I__Faded {
 
 interface ISymbol extends I_Background, I__Border, I__BorderRadius {
   svgFill?: string;
-  content: {
+  contents: {
     text?: string;
     icon?: "photo" | "video" | "pen" | "gift";
   };

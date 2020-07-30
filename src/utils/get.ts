@@ -1,4 +1,4 @@
-import { arrayToString } from "./basic";
+import { arrayToString, moveTheSuffixToPrefix } from "./basic";
 
 interface IGetMusicianStageNameAtTime {
   musician: IMusician;
@@ -24,11 +24,18 @@ export const getGigTitle = ({ headline, date }: IGig): string =>
 export const getFestivalTitle = ({ title }: IFestival): string => title.name;
 
 export const getGigSubtitle = ({ support }: IGig): string | undefined =>
-  support && arrayToString(support.map(({ name }: IMusician): string => name));
+  support &&
+  arrayToString(
+    support.map(({ name }: IMusician): string => moveTheSuffixToPrefix(name))
+  );
 
 export const getFestivalSubtitle = ({ lineup }: IFestival): string =>
   lineup[0].length > 0
-    ? arrayToString(lineup.flat().map(({ name }: IMusician): string => name))
+    ? arrayToString(
+        lineup
+          .flat()
+          .map(({ name }: IMusician): string => moveTheSuffixToPrefix(name))
+      )
     : "TBC";
 
 export const getTheatreVisitTitle = ({

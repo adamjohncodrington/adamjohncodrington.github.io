@@ -1,6 +1,8 @@
 # TO DO LIST
 
-- deprecate `getItemCounts`???????? in favour of `details.length`????
+- reinstate colors on recipe dietary symbols
+
+- deprecate `getItemCounts`???????? in favour of `panelDetails.length`????
 
 - move `data-factories` to just `factory.ts` files within `data-ui`, same with `utils`, anything shared can then be relegated to `utils`
 - or just move the `map` defs into the locations where they are used, thus eliminating ALL needs to `import`!!!!!

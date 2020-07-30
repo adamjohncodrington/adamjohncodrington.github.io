@@ -38,7 +38,7 @@ export const ACTORS: Array<IMiniCard> = Object.values(actors).map(
       favourite,
       primaryCount,
       secondaryCount,
-      details: getActorDetails(actor)
+      panelDetails: getActorDetails(actor)
     };
   }
 );

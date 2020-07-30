@@ -38,7 +38,7 @@ export const VENUES: Array<IMiniCard> = Object.values(venues).map(
       favourite,
       primaryCount,
       secondaryCount,
-      details: getMusicVenueDetails(musicVenue)
+      panelDetails: getMusicVenueDetails(musicVenue)
     };
   }
 );

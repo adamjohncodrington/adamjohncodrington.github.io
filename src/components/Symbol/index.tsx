@@ -44,7 +44,7 @@ const StyledSymbol = styled.div(
 export const Symbol: FC<ISymbol> = props => {
   const {
     background,
-    content: { text, icon }
+    contents: { text, icon }
   } = props;
   return (
     <StyledSymbol {...props}>

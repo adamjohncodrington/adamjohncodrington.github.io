@@ -11,7 +11,10 @@ import { SIGNED } from "./signed";
 import { YEARS } from "./years";
 
 export const VINYL = {
-  COLORS: mapVinylsToCards(COLORS, { hideSignedIcon: true }),
+  COLORS: mapVinylsToCards(COLORS, {
+    hideSignedIcon: true,
+    hideGiftSymbol: true
+  }),
   COST,
   GIFTS: mapVinylsToCards(GIFTS, { hideGiftSymbol: true, showGiftFrom: true }),
   MUSICIANS: filterMiniCards(MUSICIANS),

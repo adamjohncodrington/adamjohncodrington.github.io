@@ -42,7 +42,9 @@ const getCountryDetails = (
 
 export const COUNTRIES: Array<IMiniCard> = Object.values(countries).map(
   (country: ICountryTemplate): IMiniCard => {
-    const details: Array<IMiniCardPanelDetail> = getCountryDetails(country);
+    const panelDetails: Array<IMiniCardPanelDetail> = getCountryDetails(
+      country
+    );
     const { name } = country;
     const {
       pastCount: primaryCount,
@@ -51,10 +53,10 @@ export const COUNTRIES: Array<IMiniCard> = Object.values(countries).map(
     return {
       primaryText: name,
       sort: [name],
-      favourite: detailsContainsFavourite(details),
+      favourite: detailsContainsFavourite(panelDetails),
       primaryCount,
       secondaryCount,
-      details
+      panelDetails
     };
   }
 );

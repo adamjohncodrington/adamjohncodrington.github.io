@@ -55,7 +55,7 @@ export const PLAYS: Array<IMiniCard> = Object.values(plays).map(
       primaryCount,
       secondaryCount,
       favourite: playIsFavourited({ play, favouritedTheatreCards: FAVOURITES }),
-      details: getPlayDetails(play)
+      panelDetails: getPlayDetails(play)
     };
   }
 );
