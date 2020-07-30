@@ -2,7 +2,7 @@ import { rgba } from "polished";
 
 import { BREAKPOINTS } from "./breakpoints";
 import { COLORS } from "./colors";
-import { FONT_SIZES } from "./font-sizes";
+import * as FONT_SIZES from "./font-sizes";
 import { fontFamily, scrollbarSize } from "./GlobalStyle";
 
 const { BLACK, GRAY_MEDIUM, WHITE, GRAY_LIGHT } = COLORS;
@@ -35,7 +35,7 @@ const THEME_PAGE_HEADER: IThemePageHeader = {
 const THEME_PAGE_SECTION: IThemePageSection = {
   background: GRAY_LIGHT,
   borderRadius: "10px",
-  headline: { fontSize: FONT_SIZES.L },
+  headline: { fontSize: FONT_SIZES.ML },
   count: { margin: { left: "7px" } },
   header: { padding: { vertical: "12px" } },
   icon: { size: "32px" },
