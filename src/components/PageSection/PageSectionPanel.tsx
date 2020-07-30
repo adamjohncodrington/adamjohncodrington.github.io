@@ -8,7 +8,11 @@ import { MiniCard } from "../MiniCard";
 import { PhotoGrid } from "../PhotoGrid";
 import { Recipe } from "../Recipe";
 
-import { PageSectionPanelList, StyledHeadlineTextContainer } from "./styles";
+import {
+  PageSectionPanelList,
+  StyledHeadlineTextContainer,
+  PanelPhotoGridContainer
+} from "./styles";
 
 export const PageSectionPanel: FC<IPageSection> = ({ panelData, shuffle }) => {
   const { cards, headline, miniCards, recipes, photoGrid } = panelData;
@@ -24,7 +28,9 @@ export const PageSectionPanel: FC<IPageSection> = ({ panelData, shuffle }) => {
   }
 
   return photoGrid ? (
-    <PhotoGrid {...photoGrid} />
+    <PanelPhotoGridContainer>
+      <PhotoGrid {...photoGrid} />
+    </PanelPhotoGridContainer>
   ) : (
     <PageSectionPanelList {...panelData}>
       {cards &&

@@ -2,16 +2,17 @@ import React from "react";
 import styled, { css } from "styled-components";
 import { FREE_IMAGE_HOST_URL_PREFIX } from "config";
 
-interface IStyledImage {
+interface IStyledImage extends I_Theme {
   size: string;
 }
 
 const StyledImage = styled.img(
-  ({ size }: IStyledImage) => css`
+  ({ size, theme: { boxShadow } }: IStyledImage) => css`
     height: ${size};
     width: ${size};
     margin: 0;
     display: block;
+    box-shadow: ${boxShadow};
   `
 );
 
