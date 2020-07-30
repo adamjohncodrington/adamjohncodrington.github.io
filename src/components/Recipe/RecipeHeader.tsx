@@ -12,6 +12,6 @@ export const RecipeHeader: FC<IRecipeHeader> = ({
 }) => (
   <RecipeHeaderContainer className={className}>
     <RecipeTitle bold={panelVisible}>{title}</RecipeTitle>
-    <Symbol color="grey" content={{ text: diet.abbreviation }} />
+    <Symbol background="grey" content={{ text: diet.abbreviation }} />
   </RecipeHeaderContainer>
 );

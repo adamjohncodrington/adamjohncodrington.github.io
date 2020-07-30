@@ -1,5 +1,6 @@
 import { PHOTOS } from "resources";
 import { MUSICIANS } from "@constants";
+import { COLORS } from "styles";
 
 export const LORDE_PURE_HEROINE: IVinyl = {
   musician: MUSICIANS.LORDE,
@@ -9,7 +10,7 @@ export const LORDE_PURE_HEROINE: IVinyl = {
   signed: false,
   sides: 2,
   inches: 12,
-  color: "black",
+  colors: [COLORS.BLACK],
   photo: PHOTOS.ALBUMS.LORDE_PURE_HEROINE
 };
 
@@ -19,7 +20,7 @@ export const TAYLOR_SWIFT_1989: IVinyl = {
   photo: PHOTOS.ALBUMS.TAYLOR_SWIFT_1989,
   year: 2014,
   sides: 4,
-  color: "black",
+  colors: [COLORS.BLACK],
   inches: 12,
   signed: false,
   appleMusicId: "1989/1445888258"
@@ -33,7 +34,7 @@ export const GRIMES_ART_ANGELS: IVinyl = {
   year: 2015,
   inches: 12,
   sides: 2,
-  color: "black",
+  colors: [COLORS.BLACK],
   signed: false
 };
 
@@ -43,7 +44,7 @@ export const SUFJAN_STEVENS_CARRIE_LOWELL: IVinyl = {
   appleMusicId: "carrie-lowell/955572616",
   title: "Carrie & Lowell",
   signed: false,
-  color: "black",
+  colors: [COLORS.BLACK],
   sides: 2,
   inches: 12,
   year: 2015
@@ -55,7 +56,7 @@ export const BANKS_ALTAR: IVinyl = {
   appleMusicId: "the-altar/1440836872",
   title: "The Altar",
   signed: false,
-  color: "black",
+  colors: [COLORS.BLACK],
   sides: 2,
   inches: 12,
   year: 2016

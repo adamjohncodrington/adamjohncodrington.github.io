@@ -149,33 +149,15 @@ interface IAlbum {
   appleMusicId: string;
 }
 
-type IColorOptions =
-  | "black"
-  | "dark-grey"
-  | "grey"
-  | "photo"
-  | "clear"
-  | "pink"
-  | "black-and-clear"
-  | "yellow"
-  | "orange"
-  | "red"
-  | "teal"
-  | "blue-mist";
-
-interface I_ColorOptions {
-  color: IColorOptions;
-}
-
-interface ISymbol extends I_ColorOptions {
+interface ISymbol extends I_Background, I__Border, I__BorderRadius {
+  svgFill?: string;
   content: {
-    isVinyl?: boolean;
     text?: string;
     icon?: "photo" | "video" | "pen";
   };
 }
 
-interface IVinyl extends I_ColorOptions, IAlbum, I_Signed {
+interface IVinyl extends I_Colors, IAlbum, I_Signed {
   sides: 2 | 4;
   inches: 10 | 12;
 }

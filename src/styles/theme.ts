@@ -1,18 +1,17 @@
 import { rgba } from "polished";
 
 import { BREAKPOINTS } from "./breakpoints";
-import * as COLORS from "./colors";
+import { COLORS } from "./colors";
 import { FONT_SIZES } from "./font-sizes";
 import { fontFamily, scrollbarSize } from "./GlobalStyle";
 
-const { BOULDER, BLACK, GRAY, WHITE, GAINSBORO } = COLORS;
+const { BLACK, GRAY, WHITE, LIGHT_GRAY } = COLORS;
 
 const THEME_MINI_CARD_ITEM: IThemeMiniCard = {
   count: { margin: { left: "5px" }, width: "20px" }
 };
 
 const THEME_CARD: IThemeCard = {
-  companySymbol: { color: BOULDER, spaceBetweenSymbols: "5px" },
   notFirstChild: { margin: { top: "5px" } },
   photo: { size: "75px" }
 };
@@ -34,7 +33,7 @@ const THEME_PAGE_HEADER: IThemePageHeader = {
 };
 
 const THEME_PAGE_SECTION: IThemePageSection = {
-  background: GAINSBORO,
+  background: LIGHT_GRAY,
   borderRadius: "10px",
   boxShadow: `0 1px 2px ${rgba(GRAY, 0.5)}`,
   comingSoon: { fontSize: FONT_SIZES.L },
@@ -74,10 +73,10 @@ const THEME_RECIPE_CARD: IThemeRecipe = {
 };
 
 const THEME_SYMBOL: IThemeSymbol = {
-  borderRadius: "25%",
   fontSize: "70%",
   iconSize: "60%",
   size: "26px",
+  spaceBetweenSymbols: "5px",
   textColor: WHITE
 };
 

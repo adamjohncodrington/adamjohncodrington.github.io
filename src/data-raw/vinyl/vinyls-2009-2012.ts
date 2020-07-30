@@ -1,11 +1,12 @@
 import { PHOTOS } from "resources";
 import { MUSICIANS } from "@constants";
+import { COLORS } from "styles";
 
 export const FLORENCE_LUNGS: IVinyl = {
   musician: MUSICIANS.FLORENCE_AND_THE_MACHINE,
   title: "Lungs",
   sides: 2,
-  color: "black",
+  colors: [COLORS.BLACK],
   signed: false,
   inches: 12,
   photo: PHOTOS.ALBUMS.FLORENCE_LUNGS,
@@ -22,13 +23,13 @@ export const MARINA_ELECTRA_HEART: IVinyl = {
   inches: 12,
   sides: 4,
   signed: false,
-  color: "black"
+  colors: [COLORS.BLACK]
 };
 
 export const LANA_BORN_TO_DIE: IVinyl = {
   musician: MUSICIANS.LANA_DEL_REY,
   signed: false,
-  color: "black",
+  colors: [COLORS.BLACK],
   sides: 4,
   inches: 12,
   title: "Born to Die",
@@ -44,7 +45,7 @@ export const LADY_GAGA_BORN_THIS_WAY: IVinyl = {
   appleMusicId: "born-this-way-special-edition/1440857161",
   year: 2011,
   sides: 4,
-  color: "black",
+  colors: [COLORS.BLACK],
   inches: 12,
   signed: false
 };
@@ -56,7 +57,7 @@ export const LADY_GAGA_FAME_MONSTER: IVinyl = {
   appleMusicId: "the-fame-monster/1440860294",
   year: 2009,
   sides: 2,
-  color: "photo",
+  colors: [COLORS.VINYL.PHOTO],
   inches: 12,
   signed: false
 };

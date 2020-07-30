@@ -10,6 +10,7 @@ export * from "./media-queries";
 export * from "./getIngredientsHeader";
 export * from "./generateIngredientListItem";
 
+export * from "./vinyl";
 export * from "./years";
 export * from "./format";
 export * from "./symbols";

@@ -51,6 +51,26 @@ interface I__Hide {
   hide?: boolean;
 }
 
+interface I_Background {
+  background: string;
+}
+
+interface I_Color {
+  color: string;
+}
+
+interface I__Border {
+  border?: string;
+}
+
+interface I__BorderRadius {
+  borderRadius?: string;
+}
+
+interface I_Colors {
+  colors: Array<string>;
+}
+
 interface I_Dates {
   dates: Array<Date>;
 }

@@ -1,12 +1,13 @@
 import { PHOTOS } from "resources";
 import { MUSICIANS } from "@constants";
+import { COLORS } from "styles";
 
 export const HAIM_WIMPIII: IVinyl = {
   musician: MUSICIANS.HAIM,
   title: "Women In Music Pt. III",
   appleMusicId: "women-in-music-pt-iii/1500020581",
   year: 2020,
-  color: "red",
+  colors: [COLORS.VINYL.HAIM_WIMPIII],
   inches: 12,
   sides: 4,
   photo: PHOTOS.ALBUMS.HAIM_WIMPIII,
@@ -18,7 +19,7 @@ export const TAYLOR_SWIFT_FOLKLORE: IVinyl = {
   title: "folklore",
   appleMusicId: "folklore/1524801260",
   year: 2020,
-  color: "teal",
+  colors: [COLORS.VINYL.TAYLOR_SWIFT_FOLKLORE],
   inches: 12,
   sides: 4,
   photo: PHOTOS.ALBUMS.TAYLOR_SWIFT_FOLKLORE,
@@ -31,7 +32,7 @@ export const TROYE_SIVAN_IN_A_DREAM: IVinyl = {
   photo: PHOTOS.ALBUMS.TROYE_SIVAN_IN_A_DREAM,
   appleMusicId: "in-a-dream-ep/1523003841",
   year: 2020,
-  color: "blue-mist",
+  colors: COLORS.VINYL.TROYE_SIVAN_IN_A_DREAM,
   sides: 2,
   signed: true,
   //TODO: verify that it is 10" not 12"
@@ -45,7 +46,7 @@ export const CHARLI_XCX_HOW_IM_FEELING_NOW: IVinyl = {
   signed: false,
   inches: 12,
   sides: 2,
-  color: "orange",
+  colors: [COLORS.VINYL.CHARLI_XCX_HOW_IM_FEELING_NOW],
   photo: PHOTOS.ALBUMS.CHARLI_XCX_HOW_IM_FEELING_NOW,
   appleMusicId: "how-im-feeling-now/1513162098"
 };

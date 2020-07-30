@@ -22,9 +22,7 @@ export const CardSecondaryBody = styled.div`
 export const CardSymbolsContainer = styled(FlexRow)(
   ({
     theme: {
-      card: {
-        companySymbol: { spaceBetweenSymbols }
-      }
+      symbol: { spaceBetweenSymbols }
     }
   }: I_Theme) => css`
     flex-wrap: wrap;

@@ -1,5 +1,6 @@
 import { PHOTOS } from "resources";
 import { MUSICIANS } from "@constants";
+import { COLORS } from "styles";
 
 export const AMY_WINEHOUSE_BACK_TO_BLACK: IVinyl = {
   musician: MUSICIANS.AMY_WINEHOUSE,
@@ -8,7 +9,7 @@ export const AMY_WINEHOUSE_BACK_TO_BLACK: IVinyl = {
   appleMusicId: "back-to-black/1006515289",
   year: 2006,
   signed: false,
-  color: "black",
+  colors: [COLORS.BLACK],
   inches: 12,
   sides: 2
 };
@@ -19,7 +20,7 @@ export const ARCTIC_MONKEYS_FAVOURITE_WORST_NIGHTMARE: IVinyl = {
   appleMusicId: "favourite-worst-nightmare/251126923",
   year: 2007,
   sides: 2,
-  color: "black",
+  colors: [COLORS.BLACK],
   inches: 12,
   signed: false,
   photo: PHOTOS.ALBUMS.ARCTIC_MONKEYS_FAVOURITE_WORST_NIGHTMARE
@@ -34,7 +35,7 @@ export const KATE_NASH_MADE_OF_BRICKS: IVinyl = {
   inches: 12,
   sides: 2,
   signed: false,
-  color: "black"
+  colors: [COLORS.BLACK]
 };
 
 export const ADELE_19: IVinyl = {
@@ -46,5 +47,5 @@ export const ADELE_19: IVinyl = {
   inches: 12,
   sides: 2,
   signed: false,
-  color: "black"
+  colors: [COLORS.BLACK]
 };

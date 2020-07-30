@@ -11,7 +11,6 @@ interface IThemeMiniCard {
 }
 
 interface IThemeCard {
-  companySymbol: { color: ColorValue; spaceBetweenSymbols: PxValue };
   notFirstChild: { margin: { top: PxValue } };
   photo: { size: PxValue };
 }
@@ -72,10 +71,10 @@ interface IThemeRecipe {
 }
 
 interface IThemeSymbol {
-  borderRadius: PercentageValue;
   fontSize: PercentageValue;
   iconSize: PxValue;
   size: PxValue;
+  spaceBetweenSymbols: PxValue;
   textColor: ColorValue;
 }
 

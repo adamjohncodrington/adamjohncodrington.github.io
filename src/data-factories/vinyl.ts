@@ -5,6 +5,7 @@ import { getMusicianStageNameAtTime, getSymbols } from "utils";
 interface IOptions {
   hideYear?: boolean;
   hideSignedIcon?: boolean;
+  hideColorSymbols?: boolean;
 }
 
 const mapAlbumToCard = (
@@ -23,13 +24,14 @@ const mapAlbumToCard = (
 };
 
 const mapVinylToCard = (vinyl: IVinyl, options?: IOptions): ICard => {
-  const { signed, color } = vinyl;
+  const { signed, colors } = vinyl;
   const hideSignedIcon: boolean = !!(options && options.hideSignedIcon);
+  const hideColorSymbols: boolean = !!(options && options.hideColorSymbols);
   return {
     ...mapAlbumToCard(vinyl, options),
     symbols: getSymbols({
       signed: hideSignedIcon ? undefined : signed,
-      vinyl: color
+      colorCircle: hideColorSymbols ? undefined : { colors }
     })
   };
 };

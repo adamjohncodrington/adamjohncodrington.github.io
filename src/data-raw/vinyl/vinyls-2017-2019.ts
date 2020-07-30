@@ -1,5 +1,6 @@
 import { PHOTOS } from "resources";
 import { MUSICIANS } from "@constants";
+import { COLORS } from "styles";
 
 export const MUNA_ABOUT_U: IVinyl = {
   musician: MUSICIANS.MUNA,
@@ -7,7 +8,7 @@ export const MUNA_ABOUT_U: IVinyl = {
   sides: 4,
   inches: 12,
   signed: false,
-  color: "pink",
+  colors: [COLORS.PINK],
   photo: PHOTOS.ALBUMS.MUNA_ABOUT_U,
   appleMusicId: "about-u/1171832662",
   year: 2017
@@ -19,7 +20,7 @@ export const PVRIS_AWKOHAWNOH: IVinyl = {
   photo: PHOTOS.ALBUMS.PVRIS_AWKOHAWNOH,
   appleMusicId: "all-we-know-of-heaven-all-we-need-of-hell/1227528237",
   year: 2017,
-  color: "black-and-clear",
+  colors: COLORS.VINYL.PVRIS_AWKOHAWNOH,
   inches: 12,
   sides: 2,
   signed: true
@@ -34,13 +35,13 @@ export const _1975_BRIEF_INQUIRY: IVinyl = {
   sides: 4,
   inches: 12,
   signed: false,
-  color: "clear"
+  colors: [COLORS.CLEAR]
 };
 
 export const ALLIE_X_SUPER_SUNSET: IVinyl = {
   musician: MUSICIANS.ALLIE_X,
   title: "Super Sunset",
-  color: "yellow",
+  colors: [COLORS.VINYL.ALLIE_X_SUPER_SUNSET],
   photo: PHOTOS.ALBUMS.ALLIE_X_SUPER_SUNSET,
   appleMusicId: "super-sunset/1421851140",
   year: 2018,
@@ -58,7 +59,7 @@ export const BANKS_III: IVinyl = {
   signed: true,
   sides: 2,
   inches: 12,
-  color: "clear"
+  colors: [COLORS.CLEAR]
 };
 
 export const LEON_LEON: IVinyl = {
@@ -69,7 +70,7 @@ export const LEON_LEON: IVinyl = {
   signed: false,
   sides: 2,
   inches: 12,
-  color: "black",
+  colors: [COLORS.BLACK],
   photo: PHOTOS.ALBUMS.LEON_LEON
 };
 
@@ -81,7 +82,7 @@ export const LYKKE_LI_SO_SAD_SO_SEXY: IVinyl = {
   signed: false,
   sides: 2,
   inches: 12,
-  color: "black",
+  colors: [COLORS.BLACK],
   photo: PHOTOS.ALBUMS.LYKKE_LI_SO_SAD_SO_SEXY
 };
 
@@ -92,7 +93,7 @@ export const FKA_TWIGS_MAGDALENE: IVinyl = {
   year: 2019,
   signed: false,
   sides: 2,
-  color: "black",
+  colors: [COLORS.BLACK],
   inches: 12,
   photo: PHOTOS.ALBUMS.FKA_TWIGS_MAGDALENE
 };
@@ -105,8 +106,8 @@ export const CAROLINE_POLACHEK_PANG: IVinyl = {
   year: 2019,
   sides: 2,
   signed: false,
-  inches: 12,
-  color: "black"
+  colors: [COLORS.BLACK],
+  inches: 12
 };
 
 export const KIM_PETRAS_CLARITY: IVinyl = {
@@ -117,7 +118,7 @@ export const KIM_PETRAS_CLARITY: IVinyl = {
   signed: false,
   inches: 12,
   sides: 2,
-  color: "photo",
+  colors: [COLORS.VINYL.PHOTO],
   appleMusicId: "clarity/1469298192"
 };
 
@@ -128,7 +129,7 @@ export const ARIANA_GRANDE_TUN: IVinyl = {
   appleMusicId: "thank-u-next/1450330588",
   year: 2019,
   sides: 4,
-  color: "black",
+  colors: [COLORS.BLACK],
   inches: 12,
   signed: false
 };
