@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 
-import { GridWithColumns, SquareImage } from "primitives";
+import { PhotoLink } from "../PhotoLink";
+
+import { GridWithColumns } from "primitives";
 import { shuffleArray } from "utils";
 
 export const CardPhotosContainer = styled(GridWithColumns)`
@@ -24,7 +26,7 @@ export const PhotoGrid = ({ photos, columnCount }: IPhotoGrid) => {
     <CardPhotosContainer columnCount={columnCount}>
       {filtered.map((photo: IPhoto, index: number) => (
         <div key={index} data-test="image-container">
-          <SquareImage photo={photo} size="100%" />
+          <PhotoLink photo={photo} />
         </div>
       ))}
     </CardPhotosContainer>

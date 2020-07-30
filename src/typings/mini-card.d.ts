@@ -1,5 +1,6 @@
 interface IMiniCardPanelDetail extends I_Sort, I__Favourite, I__Video {
-  mainText?: Array<string>;
+  mainText: Array<string>;
+  secondaryText?: string;
   dates?: Array<Date>;
   index?: number;
   headerLink?: string;

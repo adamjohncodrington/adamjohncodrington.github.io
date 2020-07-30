@@ -3,7 +3,11 @@ import React, { ReactElement } from "react";
 import { DynamicFontWeightFlexRow, Link } from "primitives";
 import { getDatesText, moveTheSuffixToPrefix } from "utils";
 
-import { StyledLevel1MainText, StyledIndex, StyledDateText } from "./styles";
+import {
+  StyledLevel1MainText,
+  StyledIndex,
+  StyledPanelSecondaryText
+} from "./styles";
 
 export const MiniCardPanelDetailHeader: React.FC<IMiniCardPanelDetailHeader> = ({
   index,
@@ -12,6 +16,7 @@ export const MiniCardPanelDetailHeader: React.FC<IMiniCardPanelDetailHeader> = (
   favourite,
   headerLink,
   video,
+  secondaryText,
   panelVisible,
   year,
   isStatic
@@ -29,9 +34,12 @@ export const MiniCardPanelDetailHeader: React.FC<IMiniCardPanelDetailHeader> = (
       )}
 
       {(dates || year) && (
-        <StyledDateText favourite={favourite} showVideoSymbol={!!video}>
-          {dates ? getDatesText(dates) : year}
-        </StyledDateText>
+        <StyledPanelSecondaryText
+          favourite={favourite}
+          showVideoSymbol={!!video}
+        >
+          {secondaryText ? secondaryText : dates ? getDatesText(dates) : year}
+        </StyledPanelSecondaryText>
       )}
     </DynamicFontWeightFlexRow>
   );

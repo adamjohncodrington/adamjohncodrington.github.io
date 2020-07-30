@@ -1,18 +1,24 @@
 import { APPLE_MUSIC_URL_PREFIX } from "config";
-import { getMusicianStageNameAtTime, moveTheSuffixToPrefix } from "utils";
+import {
+  getMusicianStageNameAtTime,
+  moveTheSuffixToPrefix,
+  numberToCurrencyString
+} from "utils";
 
 interface IOptions {
   showMusicianName: boolean;
+  showCost?: boolean;
 }
 
 export const mapVinylsToMiniCardPanelDetails = (
   vinyls: Array<IVinyl>,
-  { showMusicianName }: IOptions
+  { showMusicianName, showCost = false }: IOptions
 ): Array<IMiniCardPanelDetail> => {
   const mapVinylToMiniCardPanelDetail = ({
     year,
     musician,
     title,
+    costExcDelivery,
     appleMusicId
   }: IVinyl): IMiniCardPanelDetail => {
     const mainText: string = showMusicianName
@@ -22,6 +28,7 @@ export const mapVinylsToMiniCardPanelDetails = (
       : title;
     return {
       mainText: [mainText],
+      secondaryText: numberToCurrencyString(costExcDelivery, 0),
       year,
       sort: showMusicianName ? [musician.name, title] : [year],
       headerLink: APPLE_MUSIC_URL_PREFIX + appleMusicId

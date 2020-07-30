@@ -4,7 +4,7 @@ import { filterMiniCards } from "utils";
 
 import { ARTWORK } from "./artwork";
 import { COSTS } from "./costs";
-import { COLORS } from "./colors";
+import { COLORED } from "./colored";
 import { GIFTS } from "./gifts";
 import { MUSICIANS } from "./musicians";
 import { RETAILERS } from "./retailers";
@@ -13,15 +13,23 @@ import { YEARS } from "./years";
 
 export const VINYL = {
   ARTWORK,
-  COLORS: mapVinylsToCards(COLORS, {
+  COLORED: mapVinylsToCards(COLORED, {
     hideSignedIcon: true,
     hideGiftSymbol: true
   }),
   COSTS,
-  GIFTS: mapVinylsToCards(GIFTS, { hideGiftSymbol: true, showGiftFrom: true }),
+  GIFTS: mapVinylsToCards(GIFTS, {
+    hideGiftSymbol: true,
+    showGiftFrom: true,
+    hideColorSymbol: true
+  }),
   MUSICIANS: filterMiniCards(MUSICIANS),
   RETAILERS: filterMiniCards(RETAILERS),
-  COLLECTION: mapVinylsToCards(VINYL_COLLECTION),
+  COLLECTION: mapVinylsToCards(VINYL_COLLECTION, {
+    hideColorSymbol: true,
+    hideGiftSymbol: true,
+    hideSignedIcon: true
+  }),
   SIGNED: mapVinylsToCards(SIGNED, { hideSignedIcon: true }),
   WISH_LIST: mapAlbumsToCards(VINYL_WISH_LIST),
   YEARS: YEARS.map(

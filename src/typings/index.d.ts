@@ -22,16 +22,13 @@ interface IPage extends I__Hide {
 
 //TODO: make date prop and title for alt purposes
 interface IPhoto extends I__Hide, I__Date {
+  href?: string;
   title?: string;
   freeimagehostId: string;
 }
 
 interface IAlbumPhoto extends IPhoto {
   discPhoto?: IPhoto;
-}
-
-interface IPhotoLink extends IPhoto {
-  href: string;
 }
 
 interface I_OrientationQuality {

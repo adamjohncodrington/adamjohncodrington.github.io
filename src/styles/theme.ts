@@ -12,8 +12,7 @@ const THEME_MINI_CARD_ITEM: IThemeMiniCard = {
 };
 
 const THEME_CARD: IThemeCard = {
-  notFirstChild: { margin: { top: "5px" } },
-  photo: { size: "75px" }
+  notFirstChild: { margin: { top: "5px" } }
 };
 
 const THEME_NAV_BAR: IThemeNavBar = {

@@ -12,7 +12,6 @@ interface IThemeMiniCard {
 
 interface IThemeCard {
   notFirstChild: { margin: { top: PxValue } };
-  photo: { size: PxValue };
 }
 
 interface IThemeNavBar {

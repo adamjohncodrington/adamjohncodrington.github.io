@@ -9,7 +9,7 @@ interface ICard extends I__Photos, I_Sort, I__Favourite, I__Video {
   body?: string;
   secondaryBody?: string;
   disclaimer?: string;
-  headerPhoto?: IPhotoLink;
+  headerPhoto?: IPhoto;
 }
 
 interface ICardHeader extends ICard, IDisclosureHeader {}

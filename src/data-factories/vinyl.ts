@@ -21,7 +21,10 @@ const mapAlbumToCard = (
     sort: [year],
     subtitle: getMusicianStageNameAtTime({ musician, year }),
     body: hideYear ? undefined : year.toString(),
-    headerPhoto: { ...photo, href: APPLE_MUSIC_URL_PREFIX + appleMusicId }
+    headerPhoto: {
+      ...photo,
+      href: APPLE_MUSIC_URL_PREFIX + appleMusicId
+    }
   };
 };
 

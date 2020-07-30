@@ -109,7 +109,7 @@ export const StyledIndex = styled.div`
 
 interface IStyledDateText extends I__Favourite, I_ShowVideoSymbol {}
 
-export const StyledDateText = styled.div(
+export const StyledPanelSecondaryText = styled.div(
   ({ favourite, showVideoSymbol: video }: IStyledDateText) => css`
     ${favourite && !video && getPseudoElementAfter(HEART)};
     ${video && !favourite && getPseudoElementAfter(TRIANGLE_PLAY)};

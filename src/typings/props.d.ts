@@ -130,3 +130,7 @@ interface I_Video {
 interface I__Video {
   video?: IVideo;
 }
+
+interface I_Photo {
+  photo: IPhoto;
+}

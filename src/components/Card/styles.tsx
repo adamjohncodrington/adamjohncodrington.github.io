@@ -36,7 +36,11 @@ export const CardSymbolsContainer = styled(FlexRow)(
   `
 );
 
-export const StyledCardHeaderContainer = styled(FlexRow)``;
+export const StyledCardHeaderContainer = styled(FlexRow)`
+  a {
+    margin-right: 10px;
+  }
+`;
 
 export const StyledCardHeaderTextSymbolsContainer = styled(GridColumnDiv)`
   flex: 1;

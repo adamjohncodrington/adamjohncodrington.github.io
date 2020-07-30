@@ -10,8 +10,8 @@ const MUSICIANS: IPageSection = {
 };
 
 const COLORS: IPageSection = {
-  title: PAGE_SECTION_TITLES.COLORS,
-  panelData: { cards: DATA.COLORS },
+  title: PAGE_SECTION_TITLES.COLORED,
+  panelData: { cards: DATA.COLORED },
   SvgIcon: SVG.PALETTE,
   shuffle: true
 };
