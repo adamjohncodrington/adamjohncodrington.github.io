@@ -8,7 +8,7 @@ export const MUNA_ABOUT_U: IVinyl = {
   inches: 12,
   signed: false,
   color: "pink",
-  artwork: PHOTOS.ALBUMS.MUNA_ABOUT_U,
+  photo: PHOTOS.ALBUMS.MUNA_ABOUT_U,
   appleMusicId: "about-u/1171832662",
   year: 2017
 };
@@ -16,7 +16,7 @@ export const MUNA_ABOUT_U: IVinyl = {
 export const PVRIS_AWKOHAWNOH: IVinyl = {
   musician: MUSICIANS.PVRIS,
   title: "All We Know of Heaven, All We Need of Hell",
-  artwork: PHOTOS.ALBUMS.PVRIS_AWKOHAWNOH,
+  photo: PHOTOS.ALBUMS.PVRIS_AWKOHAWNOH,
   appleMusicId: "all-we-know-of-heaven-all-we-need-of-hell/1227528237",
   year: 2017,
   color: "black-and-clear",
@@ -28,7 +28,7 @@ export const PVRIS_AWKOHAWNOH: IVinyl = {
 export const _1975_BRIEF_INQUIRY: IVinyl = {
   musician: MUSICIANS._1975_THE,
   title: "A Brief Inquiry Into Online Relationships",
-  artwork: PHOTOS.ALBUMS._1975_BRIEF_INQUIRY,
+  photo: PHOTOS.ALBUMS._1975_BRIEF_INQUIRY,
   appleMusicId: "a-brief-inquiry-into-online-relationships/1435546528",
   year: 2018,
   sides: 4,
@@ -41,7 +41,7 @@ export const ALLIE_X_SUPER_SUNSET: IVinyl = {
   musician: MUSICIANS.ALLIE_X,
   title: "Super Sunset",
   color: "yellow",
-  artwork: PHOTOS.ALBUMS.ALLIE_X_SUPER_SUNSET,
+  photo: PHOTOS.ALBUMS.ALLIE_X_SUPER_SUNSET,
   appleMusicId: "super-sunset/1421851140",
   year: 2018,
   inches: 10,
@@ -53,7 +53,7 @@ export const BANKS_III: IVinyl = {
   musician: MUSICIANS.BANKS,
   appleMusicId: "iii/1467547466",
   title: "III",
-  artwork: PHOTOS.ALBUMS.BANKS_III,
+  photo: PHOTOS.ALBUMS.BANKS_III,
   year: 2019,
   signed: true,
   sides: 2,
@@ -70,7 +70,7 @@ export const LEON_LEON: IVinyl = {
   sides: 2,
   inches: 12,
   color: "black",
-  artwork: PHOTOS.ALBUMS.LEON_LEON
+  photo: PHOTOS.ALBUMS.LEON_LEON
 };
 
 export const LYKKE_LI_SO_SAD_SO_SEXY: IVinyl = {
@@ -82,7 +82,7 @@ export const LYKKE_LI_SO_SAD_SO_SEXY: IVinyl = {
   sides: 2,
   inches: 12,
   color: "black",
-  artwork: PHOTOS.ALBUMS.LYKKE_LI_SO_SAD_SO_SEXY
+  photo: PHOTOS.ALBUMS.LYKKE_LI_SO_SAD_SO_SEXY
 };
 
 export const FKA_TWIGS_MAGDALENE: IVinyl = {
@@ -94,13 +94,13 @@ export const FKA_TWIGS_MAGDALENE: IVinyl = {
   sides: 2,
   color: "black",
   inches: 12,
-  artwork: PHOTOS.ALBUMS.FKA_TWIGS_MAGDALENE
+  photo: PHOTOS.ALBUMS.FKA_TWIGS_MAGDALENE
 };
 
 export const CAROLINE_POLACHEK_PANG: IVinyl = {
   musician: MUSICIANS.CAROLINE_POLACHEK,
   title: "Pang",
-  artwork: PHOTOS.ALBUMS.CAROLINE_POLACHEK_PANG,
+  photo: PHOTOS.ALBUMS.CAROLINE_POLACHEK_PANG,
   appleMusicId: "pang/1482421639",
   year: 2019,
   sides: 2,
@@ -112,7 +112,7 @@ export const CAROLINE_POLACHEK_PANG: IVinyl = {
 export const KIM_PETRAS_CLARITY: IVinyl = {
   musician: MUSICIANS.KIM_PETRAS,
   title: "Clarity",
-  artwork: PHOTOS.ALBUMS.KIM_PETRAS_CLARITY,
+  photo: PHOTOS.ALBUMS.KIM_PETRAS_CLARITY,
   year: 2019,
   signed: false,
   inches: 12,
@@ -124,7 +124,7 @@ export const KIM_PETRAS_CLARITY: IVinyl = {
 export const ARIANA_GRANDE_TUN: IVinyl = {
   musician: MUSICIANS.ARIANA_GRANDE,
   title: "thank u, next",
-  artwork: PHOTOS.ALBUMS.ArianaGrande_TUN,
+  photo: PHOTOS.ALBUMS.ArianaGrande_TUN,
   appleMusicId: "thank-u-next/1450330588",
   year: 2019,
   sides: 4,

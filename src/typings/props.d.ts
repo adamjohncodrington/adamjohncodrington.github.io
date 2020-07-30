@@ -14,6 +14,14 @@ interface I_Sort {
   sort: Array<string | number | Date>;
 }
 
+interface I_Signed {
+  signed: boolean;
+}
+
+interface I__Signed {
+  signed?: boolean;
+}
+
 interface I_PastFutureCounts {
   futureCount: number;
   pastCount: number;

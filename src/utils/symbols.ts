@@ -1,4 +1,4 @@
-import { SYMBOL_PHOTO, SYMBOL_VIDEO } from "config";
+import { SYMBOL_PHOTO, SYMBOL_VIDEO, SYMBOL_SIGNED } from "config";
 import { isInFuture } from "./basic";
 import { daysToGo } from "./daysToGo";
 
@@ -15,12 +15,18 @@ const getCompanySymbols = (company: Array<IPerson>): Array<ISymbol> =>
     })
   );
 
-interface IGetSymbols extends I__Company, I__Date, I__Photos, I__Video {}
+interface IGetSymbols
+  extends I__Company,
+    I__Date,
+    I__Signed,
+    I__Photos,
+    I__Video {}
 
 export const getSymbols = ({
   company,
   date,
   photos,
+  signed,
   video
 }: IGetSymbols): Array<ISymbol> => {
   let symbols: Array<ISymbol> = [];
@@ -30,6 +36,7 @@ export const getSymbols = ({
       opacity: "100%",
       content: { text: daysToGo(date).toString() }
     });
+  if (signed) symbols.push(SYMBOL_SIGNED);
   if (photos) symbols.push(SYMBOL_PHOTO);
   if (video) symbols.push(SYMBOL_VIDEO);
   return symbols;

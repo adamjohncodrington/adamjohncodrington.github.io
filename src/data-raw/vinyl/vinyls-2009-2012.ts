@@ -8,7 +8,7 @@ export const FLORENCE_LUNGS: IVinyl = {
   color: "black",
   signed: false,
   inches: 12,
-  artwork: PHOTOS.ALBUMS.FLORENCE_LUNGS,
+  photo: PHOTOS.ALBUMS.FLORENCE_LUNGS,
   appleMusicId: "lungs/1440982056",
   year: 2009
 };
@@ -16,7 +16,7 @@ export const FLORENCE_LUNGS: IVinyl = {
 export const MARINA_ELECTRA_HEART: IVinyl = {
   musician: MUSICIANS.MARINA,
   title: "Electra Heart",
-  artwork: PHOTOS.ALBUMS.MARINA_ELECTRA_HEART,
+  photo: PHOTOS.ALBUMS.MARINA_ELECTRA_HEART,
   appleMusicId: "electra-heart/612448612",
   year: 2012,
   inches: 12,
@@ -34,12 +34,12 @@ export const LANA_BORN_TO_DIE: IVinyl = {
   title: "Born to Die",
   appleMusicId: "born-to-die/1440809572",
   year: 2012,
-  artwork: PHOTOS.ALBUMS.LANA_BORN_TO_DIE
+  photo: PHOTOS.ALBUMS.LANA_BORN_TO_DIE
 };
 
 export const LADY_GAGA_BORN_THIS_WAY: IVinyl = {
   musician: MUSICIANS.LADY_GAGA,
-  artwork: PHOTOS.ALBUMS.LADY_GAGA_BORN_THIS_WAY,
+  photo: PHOTOS.ALBUMS.LADY_GAGA_BORN_THIS_WAY,
   title: "Born This Way",
   appleMusicId: "born-this-way-special-edition/1440857161",
   year: 2011,
@@ -51,7 +51,7 @@ export const LADY_GAGA_BORN_THIS_WAY: IVinyl = {
 
 export const LADY_GAGA_FAME_MONSTER: IVinyl = {
   musician: MUSICIANS.LADY_GAGA,
-  artwork: PHOTOS.ALBUMS.LADY_GAGA_FAME_MONSTER,
+  photo: PHOTOS.ALBUMS.LADY_GAGA_FAME_MONSTER,
   title: "The Fame Monster",
   appleMusicId: "the-fame-monster/1440860294",
   year: 2009,

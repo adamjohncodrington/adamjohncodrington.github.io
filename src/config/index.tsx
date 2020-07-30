@@ -18,3 +18,8 @@ export const SYMBOL_VIDEO: ISymbol = {
   opacity: "100%",
   content: { icon: "video" }
 };
+
+export const SYMBOL_SIGNED: ISymbol = {
+  opacity: "100%",
+  content: { icon: "pen" }
+};

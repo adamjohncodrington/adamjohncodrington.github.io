@@ -2,28 +2,27 @@ import { APPLE_MUSIC_URL_PREFIX } from "config";
 
 import { getMusicianStageNameAtTime } from "utils";
 
-interface IMapAlbumsToCardsOptions {
+interface IOptions {
   hideYear?: boolean;
 }
 
-export const mapAlbumsToCards = (
-  albums: Array<IAlbum>,
-  options?: IMapAlbumsToCardsOptions
-): Array<ICard> => {
+const mapAlbumToCard = (
+  { title, musician, year, photo, appleMusicId }: IAlbum,
+  options?: IOptions
+): ICard => {
   const hideYear: boolean = !!(options && options.hideYear);
-  const mapAlbumToCard = ({
-    title,
-    musician,
-    year,
-    artwork,
-    appleMusicId
-  }: IAlbum): ICard => ({
+  return {
     title,
     year,
     sort: [year],
     subtitle: getMusicianStageNameAtTime({ musician, year }),
     body: hideYear ? undefined : year.toString(),
-    headerPhoto: { ...artwork, href: APPLE_MUSIC_URL_PREFIX + appleMusicId }
-  });
-  return albums.map((album: IAlbum): ICard => mapAlbumToCard(album));
+    headerPhoto: { ...photo, href: APPLE_MUSIC_URL_PREFIX + appleMusicId }
+  };
 };
+
+export const mapAlbumsToCards = (
+  albums: Array<IAlbum>,
+  options?: IOptions
+): Array<ICard> =>
+  albums.map((album: IAlbum): ICard => mapAlbumToCard(album, options));

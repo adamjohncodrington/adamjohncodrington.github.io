@@ -1,6 +1,6 @@
 # TO DO LIST
 
-- address bulow/xx/okaywill sorting
+- add symbols to vinyl cards
 - move `data-factories` to just `factory.ts` files within `data-ui`, same with `utils`, anything shared can then be relegated to `utils`
 - or just move the `map` defs into the locations where they are used, thus eliminating ALL needs to `import`!!!!!
 - review all instances of `filterMiniCards`
@@ -10,16 +10,15 @@
 ## Priorities
 
 - reinstate festival videos
+- make festival dates prop `start/end`???
 - add compulsory `date` prop to `IPhoto`
 - remove hidden recipes from group higher up in the app
 - add more travel photos
-- rationalise theme further
 - add symbols to vinyl cards to indicate color and side count
 - convert all `travel` data to use `IStartEndDate`???????
 - review outstanding `//TODO:`s
-- split festivals into `IDayFestival`, `IMultiDayFestival`, `INightOut`, etc.??????
-- make festival dates prop `start/end`???
-- totally refactor `travel` in `@constants`
+- totally refactor `travel` into `@constants`
+- rationalise theme further
 
 ## Enhancements
 

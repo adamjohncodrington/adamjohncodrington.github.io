@@ -80,7 +80,7 @@ interface IThemeSymbol {
 }
 
 interface IThemeAlbumCard {
-  artwork: { margin: { right: PxValue }; size: PxValue };
+  photo: { margin: { right: PxValue }; size: PxValue };
   notLastChild: { margin: { bottom: PxValue } };
 }
 

@@ -7,20 +7,20 @@ import { Link, SquareImage } from "primitives";
 const CardHeaderPhotoLink = styled(Link)(
   ({ theme: { vinyl } }: I_Theme) =>
     css`
-      margin-right: ${vinyl.artwork.margin.right};
+      margin-right: ${vinyl.photo.margin.right};
     `
 );
 
 export const CardHeaderPhoto: React.FC<ICard> = ({ headerPhoto }) => {
   const {
-    vinyl: { artwork }
+    vinyl: { photo }
   }: ITheme = useThemeContext();
 
   if (!headerPhoto) return null;
 
   return (
     <CardHeaderPhotoLink href={headerPhoto.href}>
-      <SquareImage size={artwork.size} photo={headerPhoto} />
+      <SquareImage size={photo.size} photo={headerPhoto} />
     </CardHeaderPhotoLink>
   );
 };

@@ -12,6 +12,7 @@ export const VINYL = {
   SIGNED: mapAlbumsToCards(SIGNED),
   WISH_LIST: mapAlbumsToCards(VINYL_WISH_LIST),
   YEARS: YEARS.map(
-    (year: Array<IAlbum>): Array<ICard> => mapAlbumsToCards(year)
+    (year: Array<IAlbum>): Array<ICard> =>
+      mapAlbumsToCards(year, { hideYear: true })
   )
 };

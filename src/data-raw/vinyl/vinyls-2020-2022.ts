@@ -9,7 +9,7 @@ export const HAIM_WIMPIII: IVinyl = {
   color: "red",
   inches: 12,
   sides: 4,
-  artwork: PHOTOS.ALBUMS.HAIM_WIMPIII,
+  photo: PHOTOS.ALBUMS.HAIM_WIMPIII,
   signed: true
 };
 
@@ -21,14 +21,14 @@ export const TAYLOR_SWIFT_FOLKLORE: IVinyl = {
   color: "teal",
   inches: 12,
   sides: 4,
-  artwork: PHOTOS.ALBUMS.TAYLOR_SWIFT_FOLKLORE,
+  photo: PHOTOS.ALBUMS.TAYLOR_SWIFT_FOLKLORE,
   signed: false
 };
 
 export const TROYE_SIVAN_IN_A_DREAM: IVinyl = {
   musician: MUSICIANS.TROYE_SIVAN,
   title: "In a Dream",
-  artwork: PHOTOS.ALBUMS.TROYE_SIVAN_IN_A_DREAM,
+  photo: PHOTOS.ALBUMS.TROYE_SIVAN_IN_A_DREAM,
   appleMusicId: "in-a-dream-ep/1523003841",
   year: 2020,
   color: "blue-mist",
@@ -46,6 +46,6 @@ export const CHARLI_XCX_HOW_IM_FEELING_NOW: IVinyl = {
   inches: 12,
   sides: 2,
   color: "orange",
-  artwork: PHOTOS.ALBUMS.CHARLI_XCX_HOW_IM_FEELING_NOW,
+  photo: PHOTOS.ALBUMS.CHARLI_XCX_HOW_IM_FEELING_NOW,
   appleMusicId: "how-im-feeling-now/1513162098"
 };

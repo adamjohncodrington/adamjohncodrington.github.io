@@ -134,7 +134,7 @@ interface IActor extends I_Name, I__Favourite {}
 interface IPlay extends I_Name, I__Favourite {}
 
 interface ISymbol extends I_Opacity {
-  content: { text?: string; icon?: "photo" | "video" };
+  content: { text?: string; icon?: "photo" | "video" | "pen" };
 }
 
 interface ITheatre extends I_Name, I__Favourite {}
@@ -149,12 +149,11 @@ interface IAlbum {
   musician: IMusician;
   title: string;
   year: number;
-  artwork: IPhoto;
+  photo: IPhoto;
   appleMusicId: string;
 }
 
-interface IVinyl extends IAlbum {
-  signed: boolean;
+interface IVinyl extends IAlbum, I_Signed {
   color:
     | "black"
     | "photo"
