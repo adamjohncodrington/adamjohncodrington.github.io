@@ -7,6 +7,8 @@
 - move all the `mapTo` defs to the files that they are used in, otherwise to a generalised `map.ts` file :)
 - organise utils
 
+- add shop/cost props to IVinyl?????
+
 ## Priorities
 
 - reinstate festival videos

@@ -9,6 +9,14 @@ const MUSICIANS: IPageSection = {
   SvgIcon: SVG.ARTIST
 };
 
+const COLORS: IPageSection = {
+  title: PAGE_SECTION_TITLES.COLORS,
+  panelData: { cards: DATA.COLORS },
+  count: DATA.COLORS.length,
+  SvgIcon: SVG.PALETTE,
+  shuffle: true
+};
+
 const COLLECTION: IPageSection = {
   title: PAGE_SECTION_TITLES.COLLECTION,
   panelData: { cards: DATA.COLLECTION },
@@ -22,7 +30,7 @@ const SIGNED: IPageSection = {
   panelData: { cards: DATA.SIGNED },
   count: DATA.SIGNED.length,
   shuffle: true,
-  SvgIcon: SVG.PEN
+  SvgIcon: SVG.PEN_WRITING
 };
 
 const WISH_LIST: IPageSection = {
@@ -45,6 +53,7 @@ const YEARS: Array<IPageSection> = DATA.YEARS.map(
 
 export const VINYL: Array<IPageSection> = [
   MUSICIANS,
+  COLORS,
   COLLECTION,
   SIGNED,
   WISH_LIST,

@@ -9,6 +9,7 @@ export const UP_NEXT: string = "Up Next";
 export const SONGS: string = "Songs";
 export const VIDEOS: string = "Videos";
 export const SOLO: string = "Solo";
+export const COLORS: string = "Colours";
 
 // Gigs
 export const FESTIVALS: string = "Festivals";

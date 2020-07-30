@@ -32,9 +32,11 @@ export { ReactComponent as MUSIC } from "./music-1.svg";
 // N
 export { ReactComponent as NOTEPAD } from "./notepad.svg";
 // P
+export { ReactComponent as PALETTE } from "./palette.svg";
 export { ReactComponent as PALM_TREE } from "./palm-tree.svg";
 export { ReactComponent as PEACE_SIGN } from "./peace-sign.svg";
-export { ReactComponent as PEN } from "./pen.svg";
+export { ReactComponent as PEN } from "./pen-2.svg";
+export { ReactComponent as PEN_WRITING } from "./pen-writing-1.svg";
 export { ReactComponent as PEOPLE } from "./people.svg";
 export { ReactComponent as POLE_VAULT } from "./pole-vault.svg";
 // R

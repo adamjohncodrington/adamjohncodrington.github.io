@@ -133,10 +133,6 @@ interface IActor extends I_Name, I__Favourite {}
 
 interface IPlay extends I_Name, I__Favourite {}
 
-interface ISymbol extends I_Opacity {
-  content: { text?: string; icon?: "photo" | "video" | "pen" };
-}
-
 interface ITheatre extends I_Name, I__Favourite {}
 
 interface ITheatreVisit extends I_Date, I__Favourite, I_Company {
@@ -153,18 +149,33 @@ interface IAlbum {
   appleMusicId: string;
 }
 
-interface IVinyl extends IAlbum, I_Signed {
-  color:
-    | "black"
-    | "photo"
-    | "clear"
-    | "pink"
-    | "black-and-clear"
-    | "yellow"
-    | "orange"
-    | "red"
-    | "teal"
-    | "blue-mist";
+type IColorOptions =
+  | "black"
+  | "dark-grey"
+  | "grey"
+  | "photo"
+  | "clear"
+  | "pink"
+  | "black-and-clear"
+  | "yellow"
+  | "orange"
+  | "red"
+  | "teal"
+  | "blue-mist";
+
+interface I_ColorOptions {
+  color: IColorOptions;
+}
+
+interface ISymbol extends I_ColorOptions {
+  content: {
+    isVinyl?: boolean;
+    text?: string;
+    icon?: "photo" | "video" | "pen";
+  };
+}
+
+interface IVinyl extends I_ColorOptions, IAlbum, I_Signed {
   sides: 2 | 4;
   inches: 10 | 12;
 }

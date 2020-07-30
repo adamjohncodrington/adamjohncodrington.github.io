@@ -82,7 +82,7 @@ const THEME_SYMBOL: IThemeSymbol = {
 };
 
 const THEME_VINYL_CARD: IThemeAlbumCard = {
-  photo: { margin: { right: "10px" }, size: "100px" },
+  photo: { margin: { right: "10px" }, size: "85px" },
   notLastChild: { margin: { bottom: "5px" } }
 };
 

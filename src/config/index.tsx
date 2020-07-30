@@ -10,16 +10,16 @@ export const APPLE_MUSIC_URL_PREFIX: string =
 export const FREE_IMAGE_HOST_URL_PREFIX: string = "https://iili.io/";
 
 export const SYMBOL_PHOTO: ISymbol = {
-  opacity: "100%",
+  color: "black",
   content: { icon: "photo" }
 };
 
 export const SYMBOL_VIDEO: ISymbol = {
-  opacity: "100%",
+  color: "black",
   content: { icon: "video" }
 };
 
 export const SYMBOL_SIGNED: ISymbol = {
-  opacity: "100%",
+  color: "black",
   content: { icon: "pen" }
 };
