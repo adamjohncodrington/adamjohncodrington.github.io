@@ -1,6 +1,8 @@
-import { PAGE_SECTION_TITLES } from "@constants";
+import { PAGE_SECTION_TITLES, PAGE_SECTION_TEMPLATES } from "@constants";
 import { POLE as DATA } from "data-ui";
 import { SVG } from "resources";
+
+const { COMING_SOON } = PAGE_SECTION_TEMPLATES;
 
 const INSTRUCTORS: IPageSection = {
   SvgIcon: SVG.PEOPLE,
@@ -29,7 +31,7 @@ const EXOTIC: IPageSection = {
 const NON_POLE: IPageSection = {
   SvgIcon: SVG.HOME,
   title: PAGE_SECTION_TITLES.NON_POLE,
-  panelData: { comingSoon: true }
+  panelData: { headline: COMING_SOON }
 };
 
 const SONGS: IPageSection = {
@@ -53,13 +55,13 @@ const PHOTOS: IPageSection = {
 const TRICKS: IPageSection = {
   SvgIcon: SVG.POLE_VAULT,
   title: PAGE_SECTION_TITLES.TRICKS,
-  panelData: { comingSoon: true }
+  panelData: { headline: COMING_SOON }
 };
 
 const SHOWCASE: IPageSection = {
   SvgIcon: SVG.STARS,
   title: PAGE_SECTION_TITLES.SHOWCASE,
-  panelData: { comingSoon: true }
+  panelData: { headline: COMING_SOON }
 };
 
 export const POLE: Array<IPageSection> = [

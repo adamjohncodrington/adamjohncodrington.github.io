@@ -36,7 +36,7 @@ const THEME_PAGE_SECTION: IThemePageSection = {
   background: LIGHT_GRAY,
   borderRadius: "10px",
   boxShadow: `0 1px 2px ${rgba(GRAY, 0.5)}`,
-  comingSoon: { fontSize: FONT_SIZES.L },
+  headline: { fontSize: FONT_SIZES.L },
   count: { margin: { left: "7px" } },
   header: { padding: { vertical: "12px" } },
   icon: { size: "32px" },

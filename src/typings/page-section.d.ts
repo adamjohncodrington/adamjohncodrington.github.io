@@ -17,7 +17,7 @@ interface IPageSectionItemDataTypes {
 }
 
 interface IPageSectionPanelDataTypes {
-  comingSoon?: boolean;
+  headline?: IHeadline;
   cards?: Array<ICard>;
   miniCards?: Array<IMiniCard>;
   recipes?: Array<IRecipe>;

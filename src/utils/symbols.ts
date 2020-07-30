@@ -36,7 +36,11 @@ const BORDER_HALF_PX_SOLID_GREY: string = "0.5px solid grey";
 const BORDER_HALF_PX_SOLID_BLACK: string = "0.5px solid black";
 
 const getVinylColorSymbolBackground = (colors: Array<string>): string =>
-  colors.length > 1 ? getTwoColorDiagonal(colors[0], colors[1]) : colors[0];
+  colors.length > 1
+    ? getTwoColorDiagonal(colors[0], colors[1])
+    : // : colors[0] === COLORS.VINYL.PHOTO
+      // ? "red"
+      colors[0];
 
 const getVinylColorSymbolBorder = (colors: Array<string>): string =>
   colors[0] === COLORS.CLEAR

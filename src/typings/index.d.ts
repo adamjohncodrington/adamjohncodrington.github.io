@@ -149,6 +149,11 @@ interface IAlbum {
   appleMusicId: string;
 }
 
+interface IHeadline extends I__Faded {
+  text: string;
+  subText?: string;
+}
+
 interface ISymbol extends I_Background, I__Border, I__BorderRadius {
   svgFill?: string;
   content: {

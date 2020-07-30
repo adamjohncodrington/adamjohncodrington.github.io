@@ -1,6 +1,8 @@
-import { PAGE_SECTION_TITLES } from "@constants";
+import { PAGE_SECTION_TITLES, PAGE_SECTION_TEMPLATES } from "@constants";
 import { VINYL as DATA } from "data-ui";
 import { SVG } from "resources";
+
+const { COMING_SOON } = PAGE_SECTION_TEMPLATES;
 
 const MUSICIANS: IPageSection = {
   title: PAGE_SECTION_TITLES.MUSICIANS,
@@ -28,13 +30,13 @@ const COLLECTION: IPageSection = {
 const COST: IPageSection = {
   title: PAGE_SECTION_TITLES.COST,
   SvgIcon: SVG.MONEY,
-  panelData: { comingSoon: true }
+  panelData: { headline: DATA.COST }
 };
 
 const RETAILERS: IPageSection = {
   title: PAGE_SECTION_TITLES.RETAILERS,
   SvgIcon: SVG.SHOPPING_BAG,
-  panelData: { comingSoon: true }
+  panelData: { headline: COMING_SOON }
 };
 
 const SIGNED: IPageSection = {

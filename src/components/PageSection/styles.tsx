@@ -120,18 +120,30 @@ export const PageSectionPanelList = styled(
   recipes ? CSS_RECIPE_CARDS : miniCards ? CSS_MINI_CARDS : CSS_REGULAR_CARDS
 );
 
-export const StyledComingSoonPlaceholder = styled.div(
+interface IStyledHeadline extends I_Theme, I_Faded {}
+
+export const StyledHeadlineTextContainer = styled.div(
   ({
+    faded,
     theme: {
       fadedOpacity,
       pageSection: {
-        comingSoon: { fontSize }
+        headline: { fontSize }
       }
     }
-  }: I_Theme) => css`
-    opacity: ${fadedOpacity};
+  }: IStyledHeadline) => css`
     padding-top: 5px;
     padding-bottom: 10px;
     font-size: ${fontSize};
+
+    > *:not(:first-child) {
+      padding-top: 5px;
+      font-size: 75%;
+    }
+
+    ${faded &&
+    css`
+      opacity: ${fadedOpacity};
+    `}
   `
 );

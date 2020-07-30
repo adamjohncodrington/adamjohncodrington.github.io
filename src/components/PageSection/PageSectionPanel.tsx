@@ -8,14 +8,22 @@ import { MiniCard } from "../MiniCard";
 import { PhotoGrid } from "../PhotoGrid";
 import { Recipe } from "../Recipe";
 
-import { PageSectionPanelList, StyledComingSoonPlaceholder } from "./styles";
+import { PageSectionPanelList, StyledHeadlineTextContainer } from "./styles";
 
 export const PageSectionPanel: FC<IPageSection> = ({ panelData, shuffle }) => {
-  const { cards, comingSoon, miniCards, recipes, photoGrid } = panelData;
+  const { cards, headline, miniCards, recipes, photoGrid } = panelData;
 
-  return comingSoon ? (
-    <StyledComingSoonPlaceholder>coming soon</StyledComingSoonPlaceholder>
-  ) : photoGrid ? (
+  if (headline) {
+    const { faded, text, subText } = headline;
+    return (
+      <StyledHeadlineTextContainer faded={!!faded}>
+        <div>{text}</div>
+        {subText && <div>({subText})</div>}
+      </StyledHeadlineTextContainer>
+    );
+  }
+
+  return photoGrid ? (
     <PhotoGrid {...photoGrid} />
   ) : (
     <PageSectionPanelList {...panelData}>

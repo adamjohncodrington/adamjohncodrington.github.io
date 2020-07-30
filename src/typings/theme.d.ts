@@ -35,7 +35,7 @@ interface IThemePageSection {
   background: ColorValue;
   borderRadius: PxValue;
   boxShadow: BoxShadowValue;
-  comingSoon: { fontSize: PxValue };
+  headline: { fontSize: PxValue };
   count: { margin: { left: PxValue } };
   header: { padding: { vertical: PxValue } };
   icon: { size: PxValue };

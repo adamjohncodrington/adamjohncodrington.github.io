@@ -55,6 +55,14 @@ interface I_Background {
   background: string;
 }
 
+interface I_Faded {
+  faded: boolean;
+}
+
+interface I__Faded {
+  faded?: boolean;
+}
+
 interface I_Color {
   color: string;
 }
