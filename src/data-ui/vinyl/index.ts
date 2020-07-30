@@ -2,6 +2,7 @@ import { mapAlbumsToCards, mapVinylsToCards } from "data-factories";
 import { VINYL_COLLECTION, VINYL_WISH_LIST } from "data-raw";
 import { filterMiniCards } from "utils";
 
+import { ARTWORK } from "./artwork";
 import { COST } from "./cost";
 import { COLORS } from "./colors";
 import { GIFTS } from "./gifts";
@@ -11,6 +12,7 @@ import { SIGNED } from "./signed";
 import { YEARS } from "./years";
 
 export const VINYL = {
+  ARTWORK,
   COLORS: mapVinylsToCards(COLORS, {
     hideSignedIcon: true,
     hideGiftSymbol: true

@@ -47,6 +47,7 @@ export const ISLANDS: string = "Islands";
 export const THEME_PARKS: string = "Theme Parks";
 
 // Vinyl
+export const ARTWORK: string = "Artwork";
 export const COLLECTION: string = "Collection";
 export const SIGNED: string = "Signed";
 export const WISH_LIST: string = "Wish List";

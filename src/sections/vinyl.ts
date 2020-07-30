@@ -16,6 +16,12 @@ const COLORS: IPageSection = {
   shuffle: true
 };
 
+const ARTWORK: IPageSection = {
+  title: PAGE_SECTION_TITLES.ARTWORK,
+  panelData: { photoGrid: { photos: DATA.ARTWORK, columnCount: 3 } },
+  SvgIcon: SVG.CAMERA
+};
+
 const GIFTS: IPageSection = {
   title: PAGE_SECTION_TITLES.GIFTS,
   SvgIcon: SVG.GIFT,
@@ -71,6 +77,7 @@ const YEARS: Array<IPageSection> = DATA.YEARS.map(
 
 export const VINYL: Array<IPageSection> = [
   MUSICIANS,
+  ARTWORK,
   COLORS,
   COLLECTION,
   COST,

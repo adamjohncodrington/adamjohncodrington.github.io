@@ -26,7 +26,7 @@ const mapAlbumToCard = (
 };
 
 const mapVinylToCard = (vinyl: IVinyl, options?: IOptions): ICard => {
-  const { signed, colors, gift } = vinyl;
+  const { signed, gift } = vinyl;
   const hideSignedIcon: boolean = !!(options && options.hideSignedIcon);
   const hideColorSymbol: boolean = !!(options && options.hideColorSymbol);
   const hideGiftSymbol: boolean = !!(options && options.hideGiftSymbol);
@@ -37,7 +37,7 @@ const mapVinylToCard = (vinyl: IVinyl, options?: IOptions): ICard => {
       company: !!gift && showGiftFrom ? [gift.from] : undefined,
       gift: hideGiftSymbol ? undefined : gift,
       signed: hideSignedIcon ? undefined : signed,
-      colorCircle: hideColorSymbol ? undefined : { colors }
+      vinyl: hideColorSymbol ? undefined : vinyl
     })
   };
 };

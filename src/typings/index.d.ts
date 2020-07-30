@@ -26,6 +26,11 @@ interface IPhoto extends I__Hide, I__Date {
   freeimagehostId: string;
 }
 
+interface IVinylPhoto extends IPhoto {
+  sideA?: IPhoto;
+  sideB?: IPhoto;
+}
+
 interface IPhotoLink extends IPhoto {
   href: string;
 }

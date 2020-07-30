@@ -20,7 +20,10 @@ const StyledSymbol = styled.div(
       symbol: { fontSize, iconSize, size, textColor }
     }
   }: IStyledSymbol) => css`
-    background: ${background};
+    background: ${background} center;
+
+    background-size: ${size} ${size};
+
     border-radius: ${borderRadius};
     border: ${border};
     box-shadow: ${boxShadow};
@@ -43,12 +46,11 @@ const StyledSymbol = styled.div(
 
 export const Symbol: FC<ISymbol> = props => {
   const {
-    background,
     contents: { text, icon }
   } = props;
   return (
     <StyledSymbol {...props}>
-      {icon === "photo" || background === COLORS.VINYL.PHOTO ? (
+      {icon === "photo" ? (
         <SVG.CAMERA />
       ) : icon === "video" ? (
         <SVG.VIDEO_CAMERA />

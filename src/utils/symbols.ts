@@ -66,11 +66,11 @@ interface IGetSymbols
     I__Photos,
     I__Gift,
     I__Video {
-  colorCircle?: { colors: Array<string> };
+  vinyl?: IVinyl;
 }
 
 export const getSymbols = ({
-  colorCircle,
+  vinyl,
   company,
   date,
   photos,
@@ -80,8 +80,8 @@ export const getSymbols = ({
 }: IGetSymbols): Array<ISymbol> => {
   let symbols: Array<ISymbol> = [];
 
-  if (colorCircle) {
-    const { colors } = colorCircle;
+  if (vinyl) {
+    const { colors } = vinyl;
 
     if (vinylColorIsSpecial(colors))
       symbols.push({

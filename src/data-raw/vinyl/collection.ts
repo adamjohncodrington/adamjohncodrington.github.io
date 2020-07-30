@@ -19,7 +19,7 @@ export const AMY_WINEHOUSE_BACK_TO_BLACK: IVinyl = {
   retailer: AMAZON,
   costExcDelivery: 12.99,
   title: "Back to Black",
-  photo: PHOTOS.ALBUMS.AMY_WINEHOUSE_BACK_TO_BLACK,
+  photo: PHOTOS.ALBUM_ARTWORK.AMY_WINEHOUSE_BACK_TO_BLACK,
   appleMusicId: "back-to-black/1006515289",
   year: 2006,
   signed: false,
@@ -40,13 +40,13 @@ export const ARCTIC_MONKEYS_FAVOURITE_WORST_NIGHTMARE: IVinyl = {
   colors: [COLORS.BLACK],
   inches: 12,
   signed: false,
-  photo: PHOTOS.ALBUMS.ARCTIC_MONKEYS_FAVOURITE_WORST_NIGHTMARE
+  photo: PHOTOS.ALBUM_ARTWORK.ARCTIC_MONKEYS_FAVOURITE_WORST_NIGHTMARE
 };
 
 export const KATE_NASH_MADE_OF_BRICKS: IVinyl = {
   musician: MUSICIANS.KATE_NASH,
   title: "Made of Bricks",
-  photo: PHOTOS.ALBUMS.KATE_NASH_MADE_OF_BRICKS,
+  photo: PHOTOS.ALBUM_ARTWORK.KATE_NASH_MADE_OF_BRICKS,
   appleMusicId: "made-of-bricks-bonus-track-version/1440791847",
   year: 2007,
   inches: 12,
@@ -62,7 +62,7 @@ export const ADELE_19: IVinyl = {
   title: "19",
   retailer: NORMAN_ONLINE,
   costExcDelivery: 15.49,
-  photo: PHOTOS.ALBUMS.ADELE_19,
+  photo: PHOTOS.ALBUM_ARTWORK.ADELE_19,
   appleMusicId: "19/269864356",
   year: 2008,
   inches: 12,
@@ -80,7 +80,7 @@ export const FLORENCE_LUNGS: IVinyl = {
   colors: [COLORS.BLACK],
   signed: false,
   inches: 12,
-  photo: PHOTOS.ALBUMS.FLORENCE_LUNGS,
+  photo: PHOTOS.ALBUM_ARTWORK.FLORENCE_LUNGS,
   appleMusicId: "lungs/1440982056",
   year: 2009
 };
@@ -90,7 +90,7 @@ export const MARINA_ELECTRA_HEART: IVinyl = {
   retailer: MUSICIAN_WEB_STORE,
   costExcDelivery: 18.99,
   title: "Electra Heart",
-  photo: PHOTOS.ALBUMS.MARINA_ELECTRA_HEART,
+  photo: PHOTOS.ALBUM_ARTWORK.MARINA_ELECTRA_HEART,
   appleMusicId: "electra-heart/612448612",
   year: 2012,
   inches: 12,
@@ -111,13 +111,13 @@ export const LANA_BORN_TO_DIE: IVinyl = {
   title: "Born to Die",
   appleMusicId: "born-to-die/1440809572",
   year: 2012,
-  photo: PHOTOS.ALBUMS.LANA_BORN_TO_DIE
+  photo: PHOTOS.ALBUM_ARTWORK.LANA_BORN_TO_DIE
 };
 
 export const LADY_GAGA_BORN_THIS_WAY: IVinyl = {
   musician: MUSICIANS.LADY_GAGA,
   retailer: JUNO_ONLINE,
-  photo: PHOTOS.ALBUMS.LADY_GAGA_BORN_THIS_WAY,
+  photo: PHOTOS.ALBUM_ARTWORK.LADY_GAGA_BORN_THIS_WAY,
   title: "Born This Way",
   appleMusicId: "born-this-way-special-edition/1440857161",
   year: 2011,
@@ -130,7 +130,7 @@ export const LADY_GAGA_BORN_THIS_WAY: IVinyl = {
 
 export const LADY_GAGA_FAME_MONSTER: IVinyl = {
   musician: MUSICIANS.LADY_GAGA,
-  photo: PHOTOS.ALBUMS.LADY_GAGA_FAME_MONSTER,
+  photo: PHOTOS.ALBUM_ARTWORK.LADY_GAGA_FAME_MONSTER,
   retailer: JUNO_ONLINE,
   costExcDelivery: 29.25,
   title: "The Fame Monster",
@@ -154,7 +154,7 @@ export const LORDE_PURE_HEROINE: IVinyl = {
   sides: 2,
   inches: 12,
   colors: [COLORS.BLACK],
-  photo: PHOTOS.ALBUMS.LORDE_PURE_HEROINE
+  photo: PHOTOS.ALBUM_ARTWORK.LORDE_PURE_HEROINE
 };
 
 export const TAYLOR_SWIFT_1989: IVinyl = {
@@ -163,7 +163,7 @@ export const TAYLOR_SWIFT_1989: IVinyl = {
   title: "1989",
   costExcDelivery: 14.99,
   retailer: RECORDSTORE_ONLINE,
-  photo: PHOTOS.ALBUMS.TAYLOR_SWIFT_1989,
+  photo: PHOTOS.ALBUM_ARTWORK.TAYLOR_SWIFT_1989,
   year: 2014,
   sides: 4,
   colors: [COLORS.BLACK],
@@ -177,7 +177,7 @@ export const GRIMES_ART_ANGELS: IVinyl = {
   title: "Art Angels",
   retailer: NORMAN_ONLINE,
   costExcDelivery: 19.89,
-  photo: PHOTOS.ALBUMS.GRIMES_ART_ANGELS,
+  photo: PHOTOS.ALBUM_ARTWORK.GRIMES_ART_ANGELS,
   appleMusicId: "art-angels/1051022913",
   year: 2015,
   inches: 12,
@@ -196,7 +196,7 @@ export const MUNA_ABOUT_U: IVinyl = {
   inches: 12,
   signed: false,
   colors: [COLORS.PINK],
-  photo: PHOTOS.ALBUMS.MUNA_ABOUT_U,
+  photo: PHOTOS.ALBUM_ARTWORK.MUNA_ABOUT_U,
   appleMusicId: "about-u/1171832662",
   year: 2017
 };
@@ -206,7 +206,7 @@ export const PVRIS_AWKOHAWNOH: IVinyl = {
   retailer: MUSICIAN_WEB_STORE,
   costExcDelivery: 21.99,
   title: "All We Know of Heaven, All We Need of Hell",
-  photo: PHOTOS.ALBUMS.PVRIS_AWKOHAWNOH,
+  photo: PHOTOS.ALBUM_ARTWORK.PVRIS_AWKOHAWNOH,
   appleMusicId: "all-we-know-of-heaven-all-we-need-of-hell/1227528237",
   year: 2017,
   colors: COLORS.VINYL.PVRIS_AWKOHAWNOH,
@@ -218,7 +218,7 @@ export const PVRIS_AWKOHAWNOH: IVinyl = {
 export const _1975_BRIEF_INQUIRY: IVinyl = {
   musician: MUSICIANS._1975_THE,
   title: "A Brief Inquiry Into Online Relationships",
-  photo: PHOTOS.ALBUMS._1975_BRIEF_INQUIRY,
+  photo: PHOTOS.ALBUM_ARTWORK._1975_BRIEF_INQUIRY,
   appleMusicId: "a-brief-inquiry-into-online-relationships/1435546528",
   year: 2018,
   costExcDelivery: 25.99,
@@ -235,7 +235,7 @@ export const ALLIE_X_SUPER_SUNSET: IVinyl = {
   costExcDelivery: 20,
   title: "Super Sunset",
   colors: [COLORS.VINYL.ALLIE_X_SUPER_SUNSET],
-  photo: PHOTOS.ALBUMS.ALLIE_X_SUPER_SUNSET,
+  photo: PHOTOS.ALBUM_ARTWORK.ALLIE_X_SUPER_SUNSET,
   appleMusicId: "super-sunset/1421851140",
   year: 2018,
   inches: 10,
@@ -248,7 +248,7 @@ export const BANKS_III: IVinyl = {
   appleMusicId: "iii/1467547466",
   title: "III",
   retailer: ROUGH_TRADE_EAST,
-  photo: PHOTOS.ALBUMS.BANKS_III,
+  photo: PHOTOS.ALBUM_ARTWORK.BANKS_III,
   year: 2019,
   signed: true,
   costExcDelivery: 20.99,
@@ -269,7 +269,7 @@ export const LEON_LEON: IVinyl = {
   sides: 2,
   inches: 12,
   colors: [COLORS.BLACK],
-  photo: PHOTOS.ALBUMS.LEON_LEON
+  photo: PHOTOS.ALBUM_ARTWORK.LEON_LEON
 };
 
 export const LYKKE_LI_SO_SAD_SO_SEXY: IVinyl = {
@@ -283,7 +283,7 @@ export const LYKKE_LI_SO_SAD_SO_SEXY: IVinyl = {
   sides: 2,
   inches: 12,
   colors: [COLORS.BLACK],
-  photo: PHOTOS.ALBUMS.LYKKE_LI_SO_SAD_SO_SEXY
+  photo: PHOTOS.ALBUM_ARTWORK.LYKKE_LI_SO_SAD_SO_SEXY
 };
 
 export const FKA_TWIGS_MAGDALENE: IVinyl = {
@@ -298,14 +298,14 @@ export const FKA_TWIGS_MAGDALENE: IVinyl = {
   sides: 2,
   colors: [COLORS.BLACK],
   inches: 12,
-  photo: PHOTOS.ALBUMS.FKA_TWIGS_MAGDALENE
+  photo: PHOTOS.ALBUM_ARTWORK.FKA_TWIGS_MAGDALENE
 };
 
 export const CAROLINE_POLACHEK_PANG: IVinyl = {
   musician: MUSICIANS.CAROLINE_POLACHEK,
   retailer: NORMAN_ONLINE,
   title: "Pang",
-  photo: PHOTOS.ALBUMS.CAROLINE_POLACHEK_PANG,
+  photo: PHOTOS.ALBUM_ARTWORK.CAROLINE_POLACHEK_PANG,
   appleMusicId: "pang/1482421639",
   year: 2019,
   costExcDelivery: 17.49,
@@ -319,7 +319,7 @@ export const KIM_PETRAS_CLARITY: IVinyl = {
   musician: MUSICIANS.KIM_PETRAS,
   retailer: NORMAN_ONLINE,
   title: "Clarity",
-  photo: PHOTOS.ALBUMS.KIM_PETRAS_CLARITY,
+  photo: PHOTOS.ALBUM_ARTWORK.KIM_PETRAS_CLARITY,
   costExcDelivery: 18.18,
   year: 2019,
   signed: false,
@@ -334,7 +334,7 @@ export const ARIANA_GRANDE_TUN: IVinyl = {
   costExcDelivery: 18.75,
   musician: MUSICIANS.ARIANA_GRANDE,
   title: "thank u, next",
-  photo: PHOTOS.ALBUMS.ArianaGrande_TUN,
+  photo: PHOTOS.ALBUM_ARTWORK.ArianaGrande_TUN,
   appleMusicId: "thank-u-next/1450330588",
   year: 2019,
   sides: 4,
@@ -353,7 +353,7 @@ export const HAIM_WIMPIII: IVinyl = {
   colors: [COLORS.VINYL.HAIM_WIMPIII],
   inches: 12,
   sides: 4,
-  photo: PHOTOS.ALBUMS.HAIM_WIMPIII,
+  photo: PHOTOS.ALBUM_ARTWORK.HAIM_WIMPIII,
   signed: true
 };
 
@@ -367,14 +367,14 @@ export const TAYLOR_SWIFT_FOLKLORE: IVinyl = {
   colors: [COLORS.VINYL.TAYLOR_SWIFT_FOLKLORE],
   inches: 12,
   sides: 4,
-  photo: PHOTOS.ALBUMS.TAYLOR_SWIFT_FOLKLORE,
+  photo: PHOTOS.ALBUM_ARTWORK.TAYLOR_SWIFT_FOLKLORE,
   signed: false
 };
 
 export const TROYE_SIVAN_IN_A_DREAM: IVinyl = {
   musician: MUSICIANS.TROYE_SIVAN,
   title: "In a Dream",
-  photo: PHOTOS.ALBUMS.TROYE_SIVAN_IN_A_DREAM,
+  photo: PHOTOS.ALBUM_ARTWORK.TROYE_SIVAN_IN_A_DREAM,
   appleMusicId: "in-a-dream-ep/1523003841",
   year: 2020,
   costExcDelivery: 21.99,
@@ -396,13 +396,13 @@ export const CHARLI_XCX_HOW_IM_FEELING_NOW: IVinyl = {
   inches: 12,
   sides: 2,
   colors: [COLORS.VINYL.CHARLI_XCX_HOW_IM_FEELING_NOW],
-  photo: PHOTOS.ALBUMS.CHARLI_XCX_HOW_IM_FEELING_NOW,
+  photo: PHOTOS.ALBUM_ARTWORK.CHARLI_XCX_HOW_IM_FEELING_NOW,
   appleMusicId: "how-im-feeling-now/1513162098"
 };
 
 export const SUFJAN_STEVENS_CARRIE_LOWELL: IVinyl = {
   musician: MUSICIANS.SUFJAN_STEVENS,
-  photo: PHOTOS.ALBUMS.SUFJAN_STEVENS_CARRIE_LOWELL,
+  photo: PHOTOS.ALBUM_ARTWORK.SUFJAN_STEVENS_CARRIE_LOWELL,
   appleMusicId: "carrie-lowell/955572616",
   retailer: NORMAN_ONLINE,
   costExcDelivery: 15.73,
@@ -416,7 +416,7 @@ export const SUFJAN_STEVENS_CARRIE_LOWELL: IVinyl = {
 
 export const BANKS_ALTAR: IVinyl = {
   musician: MUSICIANS.BANKS,
-  photo: PHOTOS.ALBUMS.BANKS_ALTAR,
+  photo: PHOTOS.ALBUM_ARTWORK.BANKS_ALTAR,
   appleMusicId: "the-altar/1440836872",
   title: "The Altar",
   signed: false,

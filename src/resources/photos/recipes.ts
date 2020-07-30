@@ -37,3 +37,10 @@ export const SCRAMBLED_EGG: IPhoto = { freeimagehostId: "dANq9p.jpg" };
 export const SHEPHERDS_PIE: IPhoto = { freeimagehostId: "dANCNI.jpg" };
 export const SMOOTHIES: IPhoto = { freeimagehostId: "dANBAN.jpg" };
 export const SWEET_SOUR_CHICKEN: IPhoto = { freeimagehostId: "dANntt.jpg" };
+export const AVOCADO_EGG_SOURDOUGH_1: IPhoto = {
+  freeimagehostId: "d5f2Y7.jpg",
+  hide: true
+};
+export const AVOCADO_EGG_SOURDOUGH_2: IPhoto = {
+  freeimagehostId: "d5fd2S.jpg"
+};

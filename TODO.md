@@ -1,6 +1,6 @@
 # TO DO LIST
 
-- reinstate colors on recipe dietary symbols
+- fix photo vinyl icon
 
 - deprecate `getItemCounts`???????? in favour of `panelDetails.length`????
 
