@@ -3,7 +3,6 @@ import * as DATES from "./dates";
 import * as FESTIVAL_TITLES from "./festival-titles";
 import * as MEASUREMENTS from "./measurements";
 import * as MUSICIANS from "./musicians";
-import * as PAGE_SECTION_TEMPLATES from "./page-section-templates";
 import * as PAGE_SECTION_TITLES from "./page-section-titles";
 import * as PLAYS from "./plays";
 import * as RECIPE_METHOD_ENTRIES from "./recipe-method-entries";
@@ -26,7 +25,6 @@ export {
   FESTIVAL_TITLES,
   MEASUREMENTS,
   MUSICIANS,
-  PAGE_SECTION_TEMPLATES,
   PAGE_SECTION_TITLES,
   PLAYS,
   RECIPE_METHOD_ENTRIES,
