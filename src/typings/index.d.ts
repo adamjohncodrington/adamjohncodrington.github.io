@@ -158,7 +158,7 @@ interface ISymbol extends I_Background, I__Border, I__BorderRadius {
   svgFill?: string;
   content: {
     text?: string;
-    icon?: "photo" | "video" | "pen";
+    icon?: "photo" | "video" | "pen" | "gift";
   };
 }
 
@@ -171,7 +171,7 @@ interface IRetailer extends I_Name {
 interface IVinyl extends I_Colors, IAlbum, I_Signed {
   costExcDelivery: number;
   retailer: IRetailer;
-  gift?: { from: IFriend };
+  gift?: IGift;
   sides: 2 | 4;
   inches: 10 | 12;
 }

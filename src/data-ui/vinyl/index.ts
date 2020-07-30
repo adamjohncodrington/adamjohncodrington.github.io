@@ -13,7 +13,7 @@ import { YEARS } from "./years";
 export const VINYL = {
   COLORS: mapVinylsToCards(COLORS, { hideSignedIcon: true }),
   COST,
-  GIFTS: mapVinylsToCards(GIFTS),
+  GIFTS: mapVinylsToCards(GIFTS, { hideGiftSymbol: true, showGiftFrom: true }),
   MUSICIANS: filterMiniCards(MUSICIANS),
   RETAILERS: filterMiniCards(RETAILERS),
   COLLECTION: mapVinylsToCards(VINYL_COLLECTION),

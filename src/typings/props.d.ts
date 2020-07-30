@@ -10,6 +10,14 @@ interface I__Insignificant {
   insignificant?: boolean;
 }
 
+interface IGift {
+  from: IFriend;
+}
+
+interface I__Gift {
+  gift?: IGift;
+}
+
 interface I_Sort {
   sort: Array<string | number | Date | boolean>;
 }

@@ -5,7 +5,7 @@ import { COLORS } from "./colors";
 import { FONT_SIZES } from "./font-sizes";
 import { fontFamily, scrollbarSize } from "./GlobalStyle";
 
-const { BLACK, GRAY, WHITE, LIGHT_GRAY } = COLORS;
+const { BLACK, GRAY_MEDIUM, WHITE, GRAY_LIGHT } = COLORS;
 
 const THEME_MINI_CARD_ITEM: IThemeMiniCard = {
   count: { margin: { left: "5px" }, width: "20px" }
@@ -33,7 +33,7 @@ const THEME_PAGE_HEADER: IThemePageHeader = {
 };
 
 const THEME_PAGE_SECTION: IThemePageSection = {
-  background: LIGHT_GRAY,
+  background: GRAY_LIGHT,
   borderRadius: "10px",
   headline: { fontSize: FONT_SIZES.L },
   count: { margin: { left: "7px" } },
@@ -86,7 +86,7 @@ const THEME_VINYL_CARD: IThemeAlbumCard = {
 
 export const THEME: ITheme = {
   breakpoints: BREAKPOINTS,
-  boxShadow: `0 1px 2px ${rgba(GRAY, 0.5)}`,
+  boxShadow: `0 1px 2px ${rgba(GRAY_MEDIUM, 0.5)}`,
   miniCard: THEME_MINI_CARD_ITEM,
   card: THEME_CARD,
   navBar: THEME_NAV_BAR,

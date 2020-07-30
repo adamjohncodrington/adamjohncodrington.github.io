@@ -1,8 +1,12 @@
 import React, { FC } from "react";
 
+import { COLORS } from "styles";
+
 import { Symbol } from "../Symbol";
 
 import { RecipeHeaderContainer, RecipeTitle } from "./styles";
+
+const { GRAY_MEDIUM } = COLORS;
 
 export const RecipeHeader: FC<IRecipeHeader> = ({
   panelVisible,
@@ -12,6 +16,6 @@ export const RecipeHeader: FC<IRecipeHeader> = ({
 }) => (
   <RecipeHeaderContainer className={className}>
     <RecipeTitle bold={panelVisible}>{title}</RecipeTitle>
-    <Symbol background="grey" content={{ text: diet.abbreviation }} />
+    <Symbol background={GRAY_MEDIUM} content={{ text: diet.abbreviation }} />
   </RecipeHeaderContainer>
 );

@@ -8,18 +8,3 @@ export const APPLE_MUSIC_URL_PREFIX: string =
   "https://music.apple.com/gb/album/";
 
 export const FREE_IMAGE_HOST_URL_PREFIX: string = "https://iili.io/";
-
-export const SYMBOL_PHOTO: ISymbol = {
-  background: "black",
-  content: { icon: "photo" }
-};
-
-export const SYMBOL_VIDEO: ISymbol = {
-  background: "black",
-  content: { icon: "video" }
-};
-
-export const SYMBOL_SIGNED: ISymbol = {
-  background: "black",
-  content: { icon: "pen" }
-};

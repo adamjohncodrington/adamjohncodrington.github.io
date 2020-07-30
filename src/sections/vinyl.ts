@@ -12,7 +12,6 @@ const MUSICIANS: IPageSection = {
 const COLORS: IPageSection = {
   title: PAGE_SECTION_TITLES.COLORS,
   panelData: { cards: DATA.COLORS },
-  count: DATA.COLORS.length,
   SvgIcon: SVG.PALETTE,
   shuffle: true
 };

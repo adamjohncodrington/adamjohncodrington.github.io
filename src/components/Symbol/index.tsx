@@ -54,8 +54,8 @@ export const Symbol: FC<ISymbol> = props => {
         <SVG.VIDEO_CAMERA />
       ) : icon === "pen" ? (
         <SVG.PEN />
-      ) : icon === "vinyl" ? (
-        <SVG.VINYL />
+      ) : icon === "gift" ? (
+        <SVG.GIFT />
       ) : (
         text
       )}
