@@ -47,6 +47,8 @@ export { ReactComponent as ROLLER_COASTER } from "./roller-coaster.svg";
 // S
 export { ReactComponent as SAUCE } from "./sauce.svg";
 export { ReactComponent as SHOES_FLAMENCO } from "./shoes-flamenco.svg";
+export { ReactComponent as SHOP } from "./shop.svg";
+export { ReactComponent as SHOP_TAG } from "./shop-tag.svg";
 export { ReactComponent as SHOPPING_BAG } from "./shopping-bag.svg";
 export { ReactComponent as SOLO } from "./solo.svg";
 export { ReactComponent as STADIUM } from "./stadium.svg";

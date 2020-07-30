@@ -15,3 +15,4 @@ export const SMOOTHIE_BREAKFAST: string = "breakfast smoothie";
 export const DAHL: string = "dahl";
 export const VICTORIA_SPONGE: string = "victoria sponge";
 export const CURRY_THAI_GREEN: string = "thai green curry";
+export const KATSU_CURRY_SAUCE: string = "katsu curry sauce";

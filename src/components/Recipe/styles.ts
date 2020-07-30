@@ -9,10 +9,10 @@ export const RecipeTitle = styled(H3)`
 
 export const RecipePanelContainer = styled.div(
   ({ theme: { recipe } }: I_Theme) => css`
-    padding-top: ${recipe.panel.padding.top};
+    margin-top: ${recipe.panel.padding.top};
 
     > * {
-      padding-top: ${recipe.panel.children.padding.top};
+      margin-top: ${recipe.panel.children.padding.top};
     }
   `
 );
