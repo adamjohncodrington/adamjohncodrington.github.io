@@ -10,14 +10,16 @@ export const validPageSectionData = ({
       recipes.filter((item: IRecipe): boolean => !item.hide).length === 0)
   );
 
-const compare = (a: any, b: any): number =>
-  a.sort[0] > b.sort[0]
-    ? 1
-    : a.sort[0] === b.sort[0]
-    ? a.sort[1] > b.sort[1]
-      ? 1
-      : -1
-    : -1;
+const lowerCaseIfString = (variable: any): any =>
+  typeof variable === "string" ? variable.toLowerCase() : variable;
+
+const compare = (a: any, b: any): number => {
+  const A0 = lowerCaseIfString(a.sort[0]);
+  const A1 = lowerCaseIfString(a.sort[1]);
+  const B0 = lowerCaseIfString(b.sort[0]);
+  const B1 = lowerCaseIfString(b.sort[1]);
+  return A0 > B0 ? 1 : A0 === B0 ? (A1 > B1 ? 1 : -1) : -1;
+};
 
 export const sortCards = (cards: Array<ICard>): Array<ICard> =>
   cards.sort((a: ICard, b: ICard): number => compare(a, b));
