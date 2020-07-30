@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a6e4baf8fc5c41f5e03ae6ec56beebe0",
+    "revision": "b10d9635bada4c06af4dd8c1e0a91d21",
     "url": "/index.html"
   },
   {
-    "revision": "2232f2f48d7371d9ed2e",
-    "url": "/static/js/2.bf4c686d.chunk.js"
+    "revision": "1455d55e027159b8c4a0",
+    "url": "/static/js/2.46a298a9.chunk.js"
   },
   {
     "revision": "4bf00ea42f5dad8ab33d5f32afec9baf",
-    "url": "/static/js/2.bf4c686d.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.46a298a9.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "f92dec6a8a8a7fa99573",
-    "url": "/static/js/main.4c203866.chunk.js"
+    "revision": "0aafa798e5f4886a737e",
+    "url": "/static/js/main.355288e3.chunk.js"
   },
   {
     "revision": "3cf57b419839acabd216",
@@ -92,6 +92,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/flag.b4a08446.svg"
   },
   {
+    "revision": "990437ca331321ef7ec6232cef337b4f",
+    "url": "/static/media/gift.990437ca.svg"
+  },
+  {
     "revision": "f4a2e05c3cfa14a554a716ed8edd5538",
     "url": "/static/media/heart-3.f4a2e05c.svg"
   },
@@ -116,12 +120,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/microphone.45f98fc5.svg"
   },
   {
+    "revision": "e915a0e44b337644992a9b6bc1196eff",
+    "url": "/static/media/money-4.e915a0e4.svg"
+  },
+  {
     "revision": "76a8a7ab01e0f50000b4ef97d855b09d",
     "url": "/static/media/music-1.76a8a7ab.svg"
   },
   {
     "revision": "4eca818e3bf5d99cae9b0fc8d9bb7722",
     "url": "/static/media/notepad.4eca818e.svg"
+  },
+  {
+    "revision": "24e9617b63a38b1e89c7fe118c55efa4",
+    "url": "/static/media/palette.24e9617b.svg"
   },
   {
     "revision": "4f07f7324d947faaf84be3d251658418",
@@ -132,8 +144,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/peace-sign.045db1fc.svg"
   },
   {
-    "revision": "6f1e4b8c9a209586e490d5aa5625114e",
-    "url": "/static/media/pen.6f1e4b8c.svg"
+    "revision": "8a08b23fa17ac8b1613b20cb8e98867a",
+    "url": "/static/media/pen-2.8a08b23f.svg"
+  },
+  {
+    "revision": "3b1abd275b1bba1eff97e0b5e9485554",
+    "url": "/static/media/pen-writing-1.3b1abd27.svg"
   },
   {
     "revision": "0b77c72022d7c64b9cf5ced8d1214707",
@@ -154,6 +170,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "92e030e6bd5162fe87b5462694d25d5a",
     "url": "/static/media/shoes-flamenco.92e030e6.svg"
+  },
+  {
+    "revision": "b601c3f5cb7900fc3c59a4155690faf8",
+    "url": "/static/media/shop-tag.b601c3f5.svg"
+  },
+  {
+    "revision": "2c278f009460667148abf76cc494ac16",
+    "url": "/static/media/shop.2c278f00.svg"
+  },
+  {
+    "revision": "32eed8d815d0aaa7ac7bf1e79fced19f",
+    "url": "/static/media/shopping-bag.32eed8d8.svg"
   },
   {
     "revision": "3706a2d60a0e548c184e963b534b881f",
