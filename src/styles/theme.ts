@@ -97,7 +97,7 @@ export const THEME: ITheme = {
   symbol: THEME_SYMBOL,
   vinyl: THEME_VINYL_CARD,
 
-  fadedOpacity: 0.5,
+  fadedOpacity: 0.6,
   fontFamily,
   listItemGroupVerticalSpacing: "10px",
   scrollbarSize
