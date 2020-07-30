@@ -25,17 +25,9 @@ const musiciansForBucketList = Object.values(MUSICIANS)
   );
 
 export const BUCKET_LIST: Array<IMiniCard> = musiciansForBucketList.map(
-  ({
-    name,
-    pastCount,
-    futureCount,
-    favourite
-  }: IMusicianCounted): IMiniCard => ({
+  ({ name, favourite }: IMusicianCounted): IMiniCard => ({
     sort: [name],
-    text: name,
-    favourite,
-    pastCount,
-    futureCount,
-    countInfoIrrelevant: true
+    primaryText: name,
+    favourite
   })
 );

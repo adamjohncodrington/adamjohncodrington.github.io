@@ -26,11 +26,16 @@ const islandsAll: Array<IIsland> = [
 export const ISLANDS: Array<IMiniCard> = islandsAll.map(
   (island: IIsland): IMiniCard => {
     const { name, insignificant } = island;
+    const {
+      pastCount: primaryCount,
+      futureCount: secondaryCount
+    } = getItemCounts({ item: { island }, data: { tripLegs: DATA } });
     return {
-      text: name,
+      primaryText: name,
       sort: [name],
       countInfoIrrelevant: insignificant,
-      ...getItemCounts({ item: { island }, data: { tripLegs: DATA } })
+      primaryCount,
+      secondaryCount
     };
   }
 );

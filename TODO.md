@@ -1,5 +1,9 @@
 # TO DO LIST
 
+- address bulow/xx/okaywill sorting
+
+- review all instances of `filterMiniCards`
+
 - move all the `mapTo` defs to the files that they are used in, otherwise to a generalised `map.ts` file :)
 
 - reinstate festival videos

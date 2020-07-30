@@ -15,11 +15,10 @@ export const SONGS: Array<IMiniCard> = Object.values(songs).map(
     const songMatches: Array<IPoleRoutine> = getSongMatches(song);
     const artistAndSong: string = `${musician.name} - ${title}`;
     return {
-      text: artistAndSong,
+      primaryText: artistAndSong,
       sort: [artistAndSong],
-      pastCount: songMatches.length,
-      video: songMatches[0].video,
-      futureCount: 0
+      primaryCount: songMatches.length,
+      video: songMatches[0].video
     };
   }
 );

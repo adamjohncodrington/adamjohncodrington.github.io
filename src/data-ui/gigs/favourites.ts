@@ -1,5 +1,8 @@
 import { MUSIC_EVENTS as DATA } from "data-raw";
+import { mapMusicEventsToCards } from "./utils";
 
-export const FAVOURITES: Array<IMusicEvent> = DATA.filter(
+const favourites: Array<IMusicEvent> = DATA.filter(
   ({ favourite }: IMusicEvent): boolean => !!favourite
 );
+
+export const FAVOURITES: Array<ICard> = mapMusicEventsToCards(favourites);

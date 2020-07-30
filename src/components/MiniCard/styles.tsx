@@ -19,18 +19,18 @@ export const StyledSecondaryText = styled.span(
   `
 );
 
-interface IStyledMainText extends I_Theme, I__Video, I__Favourite, I__Star {
+interface IStyledPrimaryText extends I_Theme, I__Video, I__Favourite, I__Star {
   faded: boolean;
 }
 
-export const StyledMainText = styled.span(
+export const StyledPrimaryText = styled.span(
   ({
     favourite,
     star,
     faded,
     video,
     theme: { fadedOpacity }
-  }: IStyledMainText) => css`
+  }: IStyledPrimaryText) => css`
     ${
       faded &&
       css`
@@ -48,7 +48,7 @@ interface IMiniCardPastCount extends I_Theme {
   isLeaderboardItem?: boolean;
 }
 
-export const MiniCardPastCount = styled.span(
+export const StyledPrimaryCount = styled.span(
   ({ isLeaderboardItem, theme: { miniCard } }: IMiniCardPastCount) => css`
     text-align: right;
     width: ${miniCard.count.width};
@@ -60,7 +60,7 @@ export const MiniCardPastCount = styled.span(
   `
 );
 
-export const MiniCardFutureCount = styled(MiniCardPastCount)(
+export const StyledSecondaryCount = styled(StyledPrimaryCount)(
   ({ theme: { fadedOpacity } }: I_Theme) => css`
     opacity: ${fadedOpacity};
   `

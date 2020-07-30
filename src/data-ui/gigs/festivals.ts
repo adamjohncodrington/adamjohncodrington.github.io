@@ -6,11 +6,9 @@ const getFestivalMatches = (
   festivalTitle: IFestivalTitle
 ): Array<IFestival> => {
   const festivalMatches: Array<IFestival> = [];
-
   DATA.forEach((festival: IFestival): void => {
     if (festivalTitle === festival.title) festivalMatches.push(festival);
   });
-
   return festivalMatches;
 };
 
@@ -32,10 +30,18 @@ export const FESTIVALS: Array<IMiniCard> = Object.values(festivals)
   .map(
     (festival: IFestivalTitle): IMiniCard => {
       const { name } = festival;
+      const {
+        pastCount: primaryCount,
+        futureCount: secondaryCount
+      } = getItemCounts({
+        item: { festival },
+        data: { festivals: DATA }
+      });
       return {
-        text: name,
+        primaryText: name,
         sort: [name],
-        ...getItemCounts({ item: { festival }, data: { festivals: DATA } }),
+        primaryCount,
+        secondaryCount,
         details: getFestivalDetails(festival)
       };
     }

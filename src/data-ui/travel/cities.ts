@@ -15,12 +15,17 @@ export const cities = generateCities();
 export const CITIES: Array<IMiniCard> = Object.values(cities).map(
   (city: ICity): IMiniCard => {
     const { name, capital, insignificant } = city;
+    const {
+      pastCount: primaryCount,
+      futureCount: secondaryCount
+    } = getItemCounts({ item: { city }, data: { tripLegs: DATA } });
     return {
-      text: name,
+      primaryText: name,
       star: capital,
       sort: [name],
-      countInfoIrrelevant: insignificant,
-      ...getItemCounts({ item: { city }, data: { tripLegs: DATA } })
+      primaryCount,
+      secondaryCount,
+      countInfoIrrelevant: insignificant
     };
   }
 );

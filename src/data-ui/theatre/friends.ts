@@ -28,15 +28,18 @@ export const FRIENDS: Array<IMiniCard> = Object.values(friends)
   .filter(({ theatre }: IFriend): boolean => !!theatre)
   .map(
     (friend: IFriend): IMiniCard => {
-      const { pastCount, futureCount } = getItemCounts({
+      const {
+        pastCount: primaryCount,
+        futureCount: secondaryCount
+      } = getItemCounts({
         item: { friend },
         data: { theatreVisits: DATA }
       });
       return {
-        text: friend.name,
-        sort: [-pastCount, -futureCount],
-        pastCount,
-        futureCount,
+        primaryText: friend.name,
+        sort: [-primaryCount, -secondaryCount],
+        primaryCount,
+        secondaryCount,
         details: getFriendDetails(friend)
       };
     }

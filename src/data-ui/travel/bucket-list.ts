@@ -22,10 +22,10 @@ const bucketListCountries: Array<ICountryCounted> = Object.values(countries)
 
 const BUCKET_LIST_COUNTRIES: Array<IMiniCard> = bucketListCountries.map(
   ({ name, pastCount, futureCount }: ICountryCounted): IMiniCard => ({
-    text: name,
+    primaryText: name,
     sort: [name],
-    pastCount,
-    futureCount,
+    primaryCount: pastCount,
+    secondaryCount: futureCount,
     countInfoIrrelevant: true
   })
 );
@@ -52,11 +52,11 @@ const bucketListCities: Array<ICityCounted> = Object.values(cities)
 
 const BUCKET_LIST_CITIES: Array<IMiniCard> = bucketListCities.map(
   ({ name, capital, pastCount, futureCount }: ICityCounted): IMiniCard => ({
-    text: name,
+    primaryText: name,
     sort: [name],
     star: capital,
-    pastCount,
-    futureCount,
+    primaryCount: pastCount,
+    secondaryCount: futureCount,
     countInfoIrrelevant: true
   })
 );

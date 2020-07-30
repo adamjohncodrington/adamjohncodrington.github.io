@@ -24,13 +24,18 @@ const highlights: Array<IAttraction> = attractions.filter(
 export const HIGHLIGHTS: Array<IMiniCard> = highlights.map(
   (highlight: IAttraction): IMiniCard => {
     const { name } = highlight;
+    const {
+      pastCount: primaryCount,
+      futureCount: secondaryCount
+    } = getItemCounts({
+      item: { attraction: highlight },
+      data: { tripLegs: DATA }
+    });
     return {
-      text: name,
-      sort: [name],
-      ...getItemCounts({
-        item: { attraction: highlight },
-        data: { tripLegs: DATA }
-      })
+      primaryText: name,
+      primaryCount,
+      secondaryCount,
+      sort: [name]
     };
   }
 );
@@ -38,13 +43,18 @@ export const HIGHLIGHTS: Array<IMiniCard> = highlights.map(
 export const THEME_PARKS: Array<IMiniCard> = themeParks.map(
   (themePark: IAttraction): IMiniCard => {
     const { name } = themePark;
+    const {
+      pastCount: primaryCount,
+      futureCount: secondaryCount
+    } = getItemCounts({
+      item: { attraction: themePark },
+      data: { tripLegs: DATA }
+    });
     return {
-      text: name,
+      primaryText: name,
       sort: [name],
-      ...getItemCounts({
-        item: { attraction: themePark },
-        data: { tripLegs: DATA }
-      })
+      primaryCount,
+      secondaryCount
     };
   }
 );

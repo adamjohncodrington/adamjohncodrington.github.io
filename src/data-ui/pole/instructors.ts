@@ -25,7 +25,7 @@ const getInstructorDetails = (
     }: IPoleRoutine): IMiniCardPanelDetail => ({
       mainText: [`${name} - ${title}`],
       dates: [date],
-      sort: [-date],
+      sort: [date],
       video
     })
   );
@@ -33,15 +33,16 @@ const getInstructorDetails = (
 export const INSTRUCTORS: Array<IMiniCard> = Object.values(instructors).map(
   (instructor: IPoleInstructor): IMiniCard => {
     const { name, stageName } = instructor;
-    const details = getInstructorDetails(instructor);
+    const details: Array<IMiniCardPanelDetail> = getInstructorDetails(
+      instructor
+    );
     const instructorName: string = stageName || name;
     return {
-      text: instructorName,
+      primaryText: instructorName,
       sort: [instructorName],
       secondaryText: stageName ? name : undefined,
-      pastCount: details.length || 1,
-      details: details.length > 0 ? details : undefined,
-      futureCount: 0
+      primaryCount: details.length || undefined,
+      details: details.length > 0 ? details : undefined
     };
   }
 );

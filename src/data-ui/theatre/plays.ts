@@ -45,11 +45,16 @@ const getPlayDetails = (play: IPlay): Array<IMiniCardPanelDetail> => {
 export const PLAYS: Array<IMiniCard> = Object.values(plays).map(
   (play: IPlay): IMiniCard => {
     const { name } = play;
+    const {
+      pastCount: primaryCount,
+      futureCount: secondaryCount
+    } = getItemCounts({ item: { play }, data: { theatreVisits: DATA } });
     return {
-      text: name,
+      primaryText: name,
       sort: [name],
+      primaryCount,
+      secondaryCount,
       favourite: playIsFavourited({ play, favouritedTheatreCards: FAVOURITES }),
-      ...getItemCounts({ item: { play }, data: { theatreVisits: DATA } }),
       details: getPlayDetails(play)
     };
   }

@@ -1,8 +1,11 @@
 import { MUSIC_EVENTS as DATA } from "data-raw";
+import { mapMusicEventsToCards } from "./utils";
 
-export const SOLO: Array<IMusicEvent> = DATA.filter(
+const solo: Array<IMusicEvent> = DATA.filter(
   ({ company }: IMusicEvent): boolean => company.length === 0
 ).map((musicEvent: IMusicEvent) => ({
   ...musicEvent,
   hideCompanySymbols: true
 }));
+
+export const SOLO: Array<ICard> = mapMusicEventsToCards(solo);

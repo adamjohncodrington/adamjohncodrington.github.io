@@ -24,11 +24,16 @@ const getMusicianDetails = (musician: IMusician): Array<IMiniCardPanelDetail> =>
 export const MUSICIANS: Array<IMiniCard> = Object.values(musicians).map(
   (musician: IMusician): IMiniCard => {
     const { name, previousStageName } = musician;
+    const {
+      pastCount: primaryCount,
+      futureCount: secondaryCount
+    } = getItemCounts({ item: { musician }, data: { vinyls: DATA } });
     return {
-      text: name,
+      primaryText: name,
       sort: [name],
+      primaryCount,
+      secondaryCount,
       secondaryText: previousStageName && previousStageName.name,
-      ...getItemCounts({ item: { musician }, data: { vinyls: DATA } }),
       details: getMusicianDetails(musician)
     };
   }

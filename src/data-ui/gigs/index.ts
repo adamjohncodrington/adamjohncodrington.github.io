@@ -1,4 +1,4 @@
-import { mapMusicEventsToCards, mapGigVideosToCards } from "data-factories";
+import { mapMusicEventsToCards } from "data-factories";
 import { filterMiniCards } from "utils";
 
 import { BUCKET_LIST } from "./bucket-list";
@@ -14,15 +14,16 @@ import { VIDEOS } from "./videos";
 import { YEARS } from "./years";
 
 export const GIGS = {
-  BUCKET_LIST: filterMiniCards(BUCKET_LIST),
-  FAVOURITES: mapMusicEventsToCards(FAVOURITES),
+  FAVOURITES,
+  SOLO,
+  VIDEOS,
+  BUCKET_LIST,
+
   FESTIVALS: filterMiniCards(FESTIVALS),
   FRIENDS: filterMiniCards(FRIENDS),
   MUSICIANS: filterMiniCards(MUSICIANS),
-  SOLO: mapMusicEventsToCards(SOLO),
   UP_NEXT: mapMusicEventsToCards(UP_NEXT),
   VENUES: filterMiniCards(VENUES),
-  VIDEOS: mapGigVideosToCards(VIDEOS),
   YEARS: YEARS.map(
     (year: Array<IMusicEvent>): Array<ICard> => mapMusicEventsToCards(year)
   ),

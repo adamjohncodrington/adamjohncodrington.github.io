@@ -28,11 +28,16 @@ const getActorDetails = (actor: IActor): Array<IMiniCardPanelDetail> => {
 export const ACTORS: Array<IMiniCard> = Object.values(actors).map(
   (actor: IActor): IMiniCard => {
     const { name, favourite } = actor;
+    const {
+      pastCount: primaryCount,
+      futureCount: secondaryCount
+    } = getItemCounts({ item: { actor }, data: { theatreVisits: DATA } });
     return {
-      text: name,
+      primaryText: name,
       sort: [name],
       favourite,
-      ...getItemCounts({ item: { actor }, data: { theatreVisits: DATA } }),
+      primaryCount,
+      secondaryCount,
       details: getActorDetails(actor)
     };
   }

@@ -29,10 +29,15 @@ const getTheatreVenueDetails = (
 export const VENUES: Array<IMiniCard> = Object.values(venues).map(
   (theatre: ITheatre): IMiniCard => {
     const { name } = theatre;
+    const {
+      pastCount: primaryCount,
+      futureCount: secondaryCount
+    } = getItemCounts({ item: { theatre }, data: { theatreVisits: DATA } });
     return {
-      text: name,
+      primaryText: name,
       sort: [name],
-      ...getItemCounts({ item: { theatre }, data: { theatreVisits: DATA } }),
+      primaryCount,
+      secondaryCount,
       details: getTheatreVenueDetails(theatre)
     };
   }

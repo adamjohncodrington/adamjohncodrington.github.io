@@ -8,17 +8,18 @@ interface IMiniCardPanelDetail extends I_Sort, I__Favourite, I__Video {
 
 interface IMiniCard
   extends I__SecondaryText,
-    I_PastFutureCounts,
     I__Favourite,
     I_Sort,
     I__Video,
     I__Star {
-  text: string;
-  doNotIncludeInList?: boolean;
+  primaryText: string;
+  details?: Array<IMiniCardPanelDetail>;
+  primaryCount?: number;
+  secondaryCount?: number;
+
   countInfoIrrelevant?: boolean;
   noLongerExists?: boolean;
   isLeaderboardItem?: boolean;
-  details?: Array<IMiniCardPanelDetail>;
 }
 
 interface IMiniCardHeader extends IMiniCard, IDisclosureHeader {}

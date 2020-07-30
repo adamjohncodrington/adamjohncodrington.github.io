@@ -31,15 +31,18 @@ export const FRIENDS: Array<IMiniCard> = Object.values(friends)
   .map(
     (friend: IFriend): IMiniCard => {
       const { name } = friend;
-      const { pastCount, futureCount } = getItemCounts({
+      const {
+        pastCount: primaryCount,
+        futureCount: secondaryCount
+      } = getItemCounts({
         item: { friend },
         data: { tripLegs: DATA }
       });
       return {
-        text: name,
-        sort: [-pastCount, -futureCount],
-        pastCount,
-        futureCount,
+        primaryText: name,
+        sort: [-primaryCount, -secondaryCount],
+        primaryCount,
+        secondaryCount,
         details: getFriendDetails(friend)
       };
     }
