@@ -112,17 +112,20 @@ interface ISong {
   year: number;
 }
 
-interface IPoleRoutine extends I_Video {
-  date: Date;
-  song: ISong;
-  category: IPoleCategory;
-  studio: IPoleStudio;
-  choreographer: IPoleInstructor;
-}
-
 interface IPoleStudio {
   name: string;
   location?: string;
+}
+
+interface IPoleVideo extends I_Video {
+  studio: IPoleStudio;
+  category: IPoleCategory;
+}
+
+interface IPoleRoutine extends IPoleVideo {
+  date: Date;
+  song: ISong;
+  choreographer: IPoleInstructor;
 }
 
 interface IPoleInstructor extends IPerson {

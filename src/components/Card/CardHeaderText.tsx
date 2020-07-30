@@ -28,7 +28,7 @@ export const CardHeaderText: React.FC<ICardHeader> = ({
         {moveTheSuffixToPrefix(subtitle)}
       </CardSubtitle>
     )}
-    {body && <span data-test="card-body">{body}</span>}
+    {body && <span data-test="card-body">{moveTheSuffixToPrefix(body)}</span>}
     {secondaryBody && (
       <CardSecondaryBody data-test="card-secondary-body">
         {moveTheSuffixToPrefix(secondaryBody)}
