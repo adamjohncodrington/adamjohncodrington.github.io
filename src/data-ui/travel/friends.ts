@@ -41,6 +41,7 @@ export const FRIENDS: Array<IMiniCard> = Object.values(friends)
       return {
         primaryText: name,
         sort: [-primaryCount, -secondaryCount],
+        greaterCountPadding: true,
         primaryCount,
         secondaryCount,
         details: getFriendDetails(friend)

@@ -44,6 +44,7 @@ export const FRIENDS: Array<IMiniCard> = Object.values(friends)
         primaryCount,
         secondaryCount,
         sort: [-primaryCount, -secondaryCount],
+        greaterCountPadding: true,
         details: getFriendDetails(friend)
       };
     }

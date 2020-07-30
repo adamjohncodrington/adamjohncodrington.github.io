@@ -19,7 +19,7 @@ interface IMiniCard
 
   countInfoIrrelevant?: boolean;
   noLongerExists?: boolean;
-  isLeaderboardItem?: boolean;
+  greaterCountPadding?: boolean;
 }
 
 interface IMiniCardHeader extends IMiniCard, IDisclosureHeader {}

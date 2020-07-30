@@ -21,25 +21,25 @@ export const MiniCardHeader: FC<IMiniCardHeader> = ({
   secondaryCount,
   isStatic,
   countInfoIrrelevant,
-  isLeaderboardItem
+  greaterCountPadding
 }) => {
-  // const fadedText: boolean = !countInfoIrrelevant && primaryCount === 0;
-  // const showPrimaryCount: boolean =
-  //   !!primaryCount &&
-  //   !!secondaryCount &&
-  //   (primaryCount > 1 || (secondaryCount > 0 && primaryCount > 0));
-  // const showSecondaryCount: boolean =
-  //   !!primaryCount &&
-  //   !!secondaryCount &&
-  //   secondaryCount > 0 &&
-  //   primaryCount > 0;
+  const faded: boolean = !countInfoIrrelevant && primaryCount === 0;
+
+  const showPrimaryCount: boolean =
+    !!primaryCount &&
+    (primaryCount > 1 || (!!secondaryCount && secondaryCount > 0));
+
+  const showSecondaryCount: boolean =
+    !!primaryCount &&
+    !!secondaryCount &&
+    secondaryCount > 0 &&
+    primaryCount > 0;
 
   return (
     <DynamicFontWeightFlexRow bold={!isStatic && panelVisible}>
       <StyledTextContainer>
         <StyledPrimaryText
-          //TODO: fix
-          faded={false}
+          faded={faded}
           favourite={favourite}
           star={star}
           video={video}
@@ -54,12 +54,12 @@ export const MiniCardHeader: FC<IMiniCardHeader> = ({
         )}
       </StyledTextContainer>
 
-      {secondaryCount && !countInfoIrrelevant && (
+      {showSecondaryCount && (
         <StyledSecondaryCount>{secondaryCount}</StyledSecondaryCount>
       )}
 
-      {primaryCount && !countInfoIrrelevant && (
-        <StyledPrimaryCount isLeaderboardItem={isLeaderboardItem}>
+      {showPrimaryCount && (
+        <StyledPrimaryCount greaterCountPadding={greaterCountPadding}>
           {primaryCount}
         </StyledPrimaryCount>
       )}

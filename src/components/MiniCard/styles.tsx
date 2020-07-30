@@ -45,14 +45,14 @@ export const StyledPrimaryText = styled.span(
 );
 
 interface IMiniCardPastCount extends I_Theme {
-  isLeaderboardItem?: boolean;
+  greaterCountPadding?: boolean;
 }
 
 export const StyledPrimaryCount = styled.span(
-  ({ isLeaderboardItem, theme: { miniCard } }: IMiniCardPastCount) => css`
+  ({ greaterCountPadding, theme: { miniCard } }: IMiniCardPastCount) => css`
     text-align: right;
     width: ${miniCard.count.width};
-    margin-left: ${isLeaderboardItem
+    margin-left: ${!!greaterCountPadding
       ? css`
           calc(3 * ${miniCard.count.margin.left})
         `
