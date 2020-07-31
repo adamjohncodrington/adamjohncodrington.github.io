@@ -200,7 +200,8 @@ export const ECUADOR_PERU: ITrip = [
     showCountryAsTitle: true,
     video: VIDEOS.TRAVEL.ECUADOR_PERU,
     dates: [DATES.TRAVEL.ECUADOR.start, DATES.TRAVEL.ECUADOR.end],
-    company: []
+    company: [],
+    photos: PHOTOS.TRAVEL.ECUADOR
   },
   {
     country: COUNTRIES.PERU,

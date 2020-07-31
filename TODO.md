@@ -3,6 +3,7 @@
 - reinstate festival videos
 - add more travel photos
 - more pole videos
+- review photoGrid props
 
 ## Necessary refactoring
 
@@ -26,6 +27,7 @@
 
 ## Enhancements
 
+- beef up theatre page: actors, artwork, symbols?
 - make YouTube videos play in HD
 - add images to theatre page (poster art)
 - display festival lineups by day????

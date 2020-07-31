@@ -1,7 +1,4 @@
-interface IPhotoGrid {
-  photos: Array<IPhoto>;
-  columnCount: number;
-}
+interface IPhotoGrid extends I_Photos {}
 
 interface IPageSectionItemDataTypes {
   musicEvents?: Array<IMusicEvent>;

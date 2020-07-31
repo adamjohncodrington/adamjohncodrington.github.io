@@ -18,13 +18,15 @@ export const GridColumnDiv = styled.div(
   `
 );
 
-export const GridWithColumns = styled.div(({ columnCount }: I__ColumnCount) => {
+export const GridWithColumns = styled.div(({ columnCount }: I_ColumnCount) => {
   const gridTemplateAreas: string =
     columnCount === 4
       ? `"col1 col2 col3 col4"`
       : columnCount === 3
       ? `"col1 col2 col3"`
-      : `"col1 col2"`;
+      : columnCount === 2
+      ? `"col1 col2"`
+      : `"col1"`;
 
   return css`
     display: grid;

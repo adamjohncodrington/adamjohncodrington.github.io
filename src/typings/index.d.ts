@@ -52,19 +52,19 @@ interface IGigOrFestival extends I__Favourite, I_Company {
   ticketType?: ITicketType;
 }
 
-interface IFestival extends IGigOrFestival, I_Dates {
+interface IFestival extends IGigOrFestival, I_Dates, I__Photos {
   title: IFestivalTitle;
   video?: IFestivalVideo;
   lineup: Array<Array<IMusician>>;
 }
 
-interface IGig extends IGigOrFestival, I_Date {
+interface IGig extends IGigOrFestival, I_Date, I__Photos {
   headline: IMusician;
   video?: IGigVideo;
   support?: Array<IMusician>;
 }
 
-interface IMusicEvent extends IGigOrFestival, I__Video {
+interface IMusicEvent extends IGigOrFestival, I__Video, I__Photos {
   title: string;
   subtitle?: string;
   dates: Array<IDate>;

@@ -1,6 +1,6 @@
 import {
   getTheatreVisitTitle,
-  // getTheatreVisitSubtitle,
+  getTheatreVisitSubtitle,
   getDateText,
   getSymbols
 } from "utils";
@@ -16,9 +16,9 @@ export const mapTheatreVisitsToCards = (
       sort: [date],
       symbols: getSymbols({ company }),
       title: getTheatreVisitTitle(theatreVisit),
-      // subtitle: getTheatreVisitSubtitle(theatreVisit),
-      body: theatre.name,
-      secondaryBody: getDateText(date)
+      secondaryBody: getTheatreVisitSubtitle(theatreVisit),
+      subtitle: theatre.name,
+      body: getDateText(date)
     };
   };
   return theatreVisits.map(

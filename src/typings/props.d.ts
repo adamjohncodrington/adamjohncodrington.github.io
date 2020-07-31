@@ -47,6 +47,10 @@ interface I__Date {
   date?: Date;
 }
 
+interface I_Photos {
+  photos: Array<IPhoto>;
+}
+
 interface I__Photos {
   photos?: Array<IPhoto>;
 }
@@ -99,8 +103,8 @@ interface I__SecondaryText {
   secondaryText?: string;
 }
 
-interface I__ColumnCount {
-  columnCount?: number;
+interface I_ColumnCount {
+  columnCount: number;
 }
 
 interface I_Bold {

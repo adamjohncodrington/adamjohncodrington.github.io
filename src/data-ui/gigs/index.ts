@@ -8,6 +8,7 @@ import { FRIENDS } from "./friends";
 import { MUSICIANS } from "./musicians";
 import { SOLO } from "./solo";
 import { pageCount } from "./page-count";
+import { PHOTOS } from "./photos";
 import { UP_NEXT } from "./up-next";
 import { VENUES } from "./venues";
 import { VIDEOS } from "./videos";
@@ -18,6 +19,7 @@ export const GIGS = {
   SOLO,
   VIDEOS,
   BUCKET_LIST,
+  PHOTOS,
 
   FESTIVALS: filterMiniCards(FESTIVALS),
   FRIENDS: filterMiniCards(FRIENDS),

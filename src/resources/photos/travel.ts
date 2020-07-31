@@ -46,3 +46,10 @@ export const PERU: Array<IPhoto> = [
   { freeimagehostId: "dC3mQa.jpg" },
   { freeimagehostId: "dCFH4R.jpg" }
 ];
+
+export const ECUADOR: Array<IPhoto> = [
+  { freeimagehostId: "d7wmhB.jpg" },
+  { freeimagehostId: "d7wpLP.jpg" },
+  { freeimagehostId: "d7N9B1.jpg" },
+  { freeimagehostId: "d7wbIV.jpg" }
+];

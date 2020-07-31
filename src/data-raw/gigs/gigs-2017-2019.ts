@@ -1,5 +1,5 @@
 import { FRIENDS, MUSICIANS, MUSIC_VENUES, DATES } from "@constants";
-import { VIDEOS } from "resources";
+import { VIDEOS, PHOTOS } from "resources";
 
 export const JONAS_BLUE: IGig = {
   headline: MUSICIANS.JONAS_BLUE,
@@ -330,6 +330,7 @@ export const TROYE_SIVAN: IGig = {
 export const THE_1975_2019: IGig = {
   headline: MUSICIANS._1975_THE,
   venue: MUSIC_VENUES.O2_THE,
+  photos: PHOTOS.GIGS.THE_1975_2019,
   date: new Date("2019-01-19"),
   company: [FRIENDS.JERRY_EDWARDS]
 };
