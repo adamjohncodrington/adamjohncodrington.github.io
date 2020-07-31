@@ -16,7 +16,7 @@ import { VIDEOS } from "resources";
 export const CELESTE: IGig = {
   headline: MUSICIANS.CELESTE,
   venue: MUSIC_VENUES.SHEPHERDS_BUSH_EMPIRE,
-  date: new Date("2020-08-11"),
+  date: new Date("2021-04-21"),
   company: [FRIENDS.DARREN_TAYLOR],
   ticketType: TICKET_TYPES.DICE_POSTAL
 };
