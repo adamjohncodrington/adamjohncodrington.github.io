@@ -11,9 +11,8 @@ const getActorMatches = (actor: IActor): Array<ITheatreVisit> => {
   return actorMatches;
 };
 
-const getActorDetails = (actor: IActor): Array<IMiniCardPanelDetail> => {
-  const actorMatches: Array<ITheatreVisit> = getActorMatches(actor);
-  return actorMatches.map(
+const getActorDetails = (actor: IActor): Array<IMiniCardPanelDetail> =>
+  getActorMatches(actor).map(
     (theatreVisit: ITheatreVisit): IMiniCardPanelDetail => {
       const { date } = theatreVisit;
       return {
@@ -23,7 +22,6 @@ const getActorDetails = (actor: IActor): Array<IMiniCardPanelDetail> => {
       };
     }
   );
-};
 
 export const ACTORS: Array<IMiniCard> = Object.values(actors).map(
   (actor: IActor): IMiniCard => {

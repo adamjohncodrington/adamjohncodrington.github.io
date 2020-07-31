@@ -2,15 +2,12 @@ import { FRIENDS as friends } from "@constants";
 import { MUSIC_EVENTS as DATA } from "data-raw";
 import { getItemCounts } from "utils";
 
-const getFriendMatches = (friend: IFriend): Array<IMusicEvent> => {
-  const friendMatches: Array<IMusicEvent> = [];
-
-  DATA.forEach((musicEvent: IMusicEvent): void => {
-    if (musicEvent.company.includes(friend)) friendMatches.push(musicEvent);
-  });
-
-  return friendMatches;
-};
+const getFriendMatches = (friend: IFriend): Array<IMusicEvent> =>
+  DATA.reduce(
+    (matches: Array<IMusicEvent>, musicEvent: IMusicEvent) =>
+      musicEvent.company.includes(friend) ? [...matches, musicEvent] : matches,
+    []
+  );
 
 const getFriendDetails = (friend: IFriend): Array<IMiniCardPanelDetail> =>
   getFriendMatches(friend).map(

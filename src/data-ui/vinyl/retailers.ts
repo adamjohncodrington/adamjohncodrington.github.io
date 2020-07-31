@@ -3,13 +3,12 @@ import { VINYL_COLLECTION as DATA } from "data-raw";
 
 import { mapVinylsToMiniCardPanelDetails } from "./utils";
 
-const getRetailerMatches = (retailer: IRetailer): Array<IVinyl> => {
-  const retailerMatches: Array<IVinyl> = [];
-  DATA.forEach((vinyl: IVinyl): void => {
-    if (vinyl.retailer === retailer) retailerMatches.push(vinyl);
-  });
-  return retailerMatches;
-};
+const getRetailerMatches = (retailer: IRetailer): Array<IVinyl> =>
+  DATA.reduce(
+    (matches: Array<IVinyl>, vinyl: IVinyl) =>
+      vinyl.retailer === retailer ? [...matches, vinyl] : matches,
+    []
+  );
 
 export const RETAILERS: Array<IMiniCard> = Object.values(retailers).map(
   (retailer: IRetailer): IMiniCard => {

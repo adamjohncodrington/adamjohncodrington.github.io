@@ -2,14 +2,14 @@ import { MUSICIANS as musicians } from "@constants";
 import { MUSIC_EVENTS as DATA } from "data-raw";
 import { getItemCounts, detailsContainsFavourite } from "utils";
 
-const getMusicianMatches = (musician: IMusician): Array<IMusicEvent> => {
-  const musicianMatches: Array<IMusicEvent> = [];
-  DATA.forEach((musicEvent: IMusicEvent): void => {
-    if (musicEvent.musicians.includes(musician))
-      musicianMatches.push(musicEvent);
-  });
-  return musicianMatches;
-};
+const getMusicianMatches = (musician: IMusician): Array<IMusicEvent> =>
+  DATA.reduce(
+    (matches: Array<IMusicEvent>, musicEvent: IMusicEvent) =>
+      musicEvent.musicians.includes(musician)
+        ? [...matches, musicEvent]
+        : matches,
+    []
+  );
 
 const getMusicianFestivalDate = (
   musician: IMusician,

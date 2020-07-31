@@ -7,7 +7,7 @@ const totalCost: number = DATA.reduce(
   0
 );
 
-const unitCost = totalCost / DATA.length;
+const unitCost: number = totalCost / DATA.length;
 
 export const COSTS: ICosts = {
   totalCost: numberToCurrencyString(totalCost, 0),

@@ -6,19 +6,16 @@ import { FAVOURITES } from "./favourites";
 
 interface IPlayIsFavourited {
   play: IPlay;
-  favouritedTheatreCards: Array<ITheatreVisit>;
+  favouriteTheatreVisits: Array<ITheatreVisit>;
 }
 
 const playIsFavourited = ({
   play,
-  favouritedTheatreCards
-}: IPlayIsFavourited): boolean => {
-  let itemIsFavourited: boolean = false;
-  favouritedTheatreCards.forEach((theatreVisit: ITheatreVisit) => {
-    if (play === theatreVisit.play) itemIsFavourited = true;
-  });
-  return itemIsFavourited;
-};
+  favouriteTheatreVisits
+}: IPlayIsFavourited): boolean =>
+  favouriteTheatreVisits.some(
+    (theatreVisit: ITheatreVisit): boolean => theatreVisit.play === play
+  );
 
 const getPlayMatches = (play: IPlay): Array<ITheatreVisit> => {
   const playMatches: Array<ITheatreVisit> = [];
@@ -28,9 +25,8 @@ const getPlayMatches = (play: IPlay): Array<ITheatreVisit> => {
   return playMatches;
 };
 
-const getPlayDetails = (play: IPlay): Array<IMiniCardPanelDetail> => {
-  const playMatches: Array<ITheatreVisit> = getPlayMatches(play);
-  return playMatches.map(
+const getPlayDetails = (play: IPlay): Array<IMiniCardPanelDetail> =>
+  getPlayMatches(play).map(
     (theatreVisit: ITheatreVisit): IMiniCardPanelDetail => {
       const { date } = theatreVisit;
       return {
@@ -40,7 +36,6 @@ const getPlayDetails = (play: IPlay): Array<IMiniCardPanelDetail> => {
       };
     }
   );
-};
 
 export const PLAYS: Array<IMiniCard> = Object.values(plays).map(
   (play: IPlay): IMiniCard => {
@@ -54,7 +49,7 @@ export const PLAYS: Array<IMiniCard> = Object.values(plays).map(
       sort: [name],
       primaryCount,
       secondaryCount,
-      favourite: playIsFavourited({ play, favouritedTheatreCards: FAVOURITES }),
+      favourite: playIsFavourited({ play, favouriteTheatreVisits: FAVOURITES }),
       panelDetails: getPlayDetails(play)
     };
   }
