@@ -33,6 +33,14 @@ export const RIHANNA_RATED_R: IAlbum = {
   year: 2009
 };
 
+export const CHRISTINE_AND_THE_QUEENS_LA_VITA_NUOVA: IAlbum = {
+  musician: MUSICIANS.CHRISTINE_AND_THE_QUEENS,
+  photo: PHOTOS.ALBUM_ARTWORK.CHRISTINE_AND_THE_QUEENS_LA_VITA_NUOVA,
+  title: "La vita nuova",
+  year: 2020,
+  appleMusicId: "la-vita-nuova-ep/1497744921"
+};
+
 export const LISSIE_CATCHING_A_TIGER: IAlbum = {
   musician: MUSICIANS.LISSIE,
   photo: PHOTOS.ALBUM_ARTWORK.LISSIE_CATCHING_A_TIGER,

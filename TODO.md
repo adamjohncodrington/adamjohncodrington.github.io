@@ -1,5 +1,11 @@
 # TO DO LIST
 
+- reinstate festival videos
+- add more travel photos
+- more pole videos
+
+## Necessary refactoring
+
 - deprecate `getItemCounts`???????? in favour of `panelDetails.length`????
 - move `data-factories` to just `factory.ts` files within `data-ui`, same with `utils`, anything shared can then be relegated to `utils`
 - or just move the `map` defs into the locations where they are used, thus eliminating ALL needs to `import`!!!!!
@@ -9,11 +15,9 @@
 
 ## Priorities
 
-- reinstate festival videos
 - make festival dates prop `start/end`???
 - add compulsory `date` prop to `IPhoto`
 - remove hidden recipes from group higher up in the app
-- add more travel photos
 - add symbols to vinyl cards to indicate color and side count
 - convert all `travel` data to use `IStartEndDate`???????
 - review outstanding `//TODO:`s

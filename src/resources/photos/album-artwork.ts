@@ -118,3 +118,6 @@ export const KIM_PETRAS_CLARITY: IAlbumPhoto = {
   freeimagehostId: "dfNiL7.jpg",
   discPhoto: { freeimagehostId: "d5qnNn.jpg" }
 };
+export const CHRISTINE_AND_THE_QUEENS_LA_VITA_NUOVA: IAlbumPhoto = {
+  freeimagehostId: "d7Ezrl.jpg"
+};
