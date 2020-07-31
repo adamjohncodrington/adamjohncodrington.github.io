@@ -17,7 +17,7 @@ export const RETAILERS: Array<IMiniCard> = Object.values(retailers).map(
     const retailerMatches: Array<IVinyl> = getRetailerMatches(retailer);
     const panelDetails: Array<IMiniCardPanelDetail> = mapVinylsToMiniCardPanelDetails(
       retailerMatches,
-      { showMusicianName: true }
+      { showMusicianName: true, showCost: true }
     );
     return {
       primaryText: name,

@@ -28,7 +28,9 @@ export const mapVinylsToMiniCardPanelDetails = (
       : title;
     return {
       mainText: [mainText],
-      secondaryText: numberToCurrencyString(costExcDelivery, 0),
+      secondaryText: showCost
+        ? numberToCurrencyString(costExcDelivery, 0)
+        : year.toString(),
       year,
       sort: showMusicianName ? [musician.name, title] : [year],
       headerLink: APPLE_MUSIC_URL_PREFIX + appleMusicId
