@@ -48,23 +48,24 @@ interface IStartEndDate {
 interface IFestivalTitle extends I_Name, I__Insignificant {}
 
 interface IGigOrFestival extends I__Favourite, I_Company {
+  photos?: Array<IPhoto>;
   venue: IMusicVenue;
   ticketType?: ITicketType;
 }
 
-interface IFestival extends IGigOrFestival, I_Dates, I__Photos {
+interface IFestival extends IGigOrFestival, I_Dates {
   title: IFestivalTitle;
   video?: IFestivalVideo;
   lineup: Array<Array<IMusician>>;
 }
 
-interface IGig extends IGigOrFestival, I_Date, I__Photos {
+interface IGig extends IGigOrFestival, I_Date {
   headline: IMusician;
   video?: IGigVideo;
   support?: Array<IMusician>;
 }
 
-interface IMusicEvent extends IGigOrFestival, I__Video, I__Photos {
+interface IMusicEvent extends IGigOrFestival, I__Video {
   title: string;
   subtitle?: string;
   dates: Array<IDate>;

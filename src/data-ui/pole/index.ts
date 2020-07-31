@@ -1,4 +1,4 @@
-import { mapPoleRoutinesToCards } from "data-factories";
+import { mapPoleRoutinesToCards } from "MIGRATE_FOLDER_CONTENTS";
 import { filterMiniCards } from "utils";
 
 import { CONTEMPORARY, EXOTIC, IMPROV } from "./videos";

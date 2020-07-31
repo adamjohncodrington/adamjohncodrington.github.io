@@ -1,4 +1,4 @@
-import { mapAlbumsToCards, mapVinylsToCards } from "data-factories";
+import { mapAlbumsToCards, mapVinylsToCards } from "MIGRATE_FOLDER_CONTENTS";
 import { VINYL_COLLECTION, VINYL_WISH_LIST } from "data-raw";
 import { filterMiniCards } from "utils";
 

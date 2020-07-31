@@ -1,4 +1,4 @@
-import { mapMusicEventsToCards } from "data-factories";
+import { mapMusicEventsToCards } from "./utils";
 import { filterMiniCards } from "utils";
 
 import { BUCKET_LIST } from "./bucket-list";

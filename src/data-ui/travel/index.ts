@@ -1,4 +1,7 @@
-import { mapTripLegsToCards, mapTravelVideosToCards } from "data-factories";
+import {
+  mapTripLegsToCards,
+  mapTravelVideosToCards
+} from "MIGRATE_FOLDER_CONTENTS";
 import { filterMiniCards } from "utils";
 
 import { HIGHLIGHTS, THEME_PARKS } from "./attractions";

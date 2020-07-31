@@ -1,4 +1,3 @@
-export * from "./gigs";
 export * from "./pole";
 export * from "./recipes";
 export * from "./theatre";

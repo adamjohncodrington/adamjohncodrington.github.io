@@ -1,4 +1,4 @@
-import { mapTheatreVisitsToCards } from "data-factories";
+import { mapTheatreVisitsToCards } from "MIGRATE_FOLDER_CONTENTS";
 import { filterMiniCards } from "utils";
 
 import { ACTORS } from "./actors";

@@ -10,6 +10,7 @@ export const GALLANT: IMusician = {
   name: "Gallant",
   excludeFromBucketList: true
 };
+export const GRIFF: IMusician = { name: "Griff" };
 export const TAIKO: IMusician = { name: "Taiko", excludeFromBucketList: true };
 export const ALL_TIME_LOW: IMusician = { name: "All Time Low" };
 export const ALMA: IMusician = { name: "Alma" };
