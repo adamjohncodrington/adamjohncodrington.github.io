@@ -1,15 +1,14 @@
 import React, { FC } from "react";
 
 import { SquareImage } from "primitives";
+import { getIngredientsHeader, numberToCurrencyString } from "utils";
+
+import { List } from "./RecipeList";
 import {
   mapMethodToListItems,
   mapServeWithToListItems,
   mapIngredientsToListItems
-} from "MIGRATE_FOLDER_CONTENTS";
-import { getIngredientsHeader, numberToCurrencyString } from "utils";
-
-import { List } from "./RecipeList";
-
+} from "./utils";
 import {
   RecipePanelContainer,
   RecipePortionCost,

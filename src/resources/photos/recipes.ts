@@ -1,4 +1,7 @@
-export const BAKED_BEANS: IPhoto = { freeimagehostId: "dfwMtS.jpg" };
+export const BAKED_BEANS: IPhoto = {
+  freeimagehostId: "dfwMtS.jpg",
+  hide: true
+};
 export const BANANA_CAKE: IPhoto = { freeimagehostId: "dfwXV9.jpg" };
 export const BANG_BANG_CAULI: IPhoto = {
   freeimagehostId: "dfwWo7.jpg"
