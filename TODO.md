@@ -1,21 +1,15 @@
 # TO DO LIST
 
-- refactor travel and vinyl data-ui folders
-
 - reinstate festival videos
 - add more travel photos
 - more pole videos
 - review photoGrid props
-
 - add full year to vinyl release date
 
 ## Necessary refactoring
 
 - deprecate `getItemCounts`???????? in favour of `details.length`????
-- move `MIGRATE_FOLDER_CONTENTS` to just `factory.ts` files within `data-ui`, same with `utils`, anything shared can then be relegated to `utils`
-- or just move the `map` defs into the locations where they are used, thus eliminating ALL needs to `import`!!!!!
-- review all instances of `filterMiniCards`
-- move all the `mapTo` defs to the files that they are used in, otherwise to a generalised `map.ts` file :)
+- review all instances of `filterMiniCards`?
 - organise utils
 
 ## Priorities
@@ -39,7 +33,7 @@
 - reinstate 49 abroad trips page count
 - add more travel photos!!!
 - add alt text to all photos
-- add tooltips to `RoundedSymbol`s
+- add tooltips to `RoundedSymbol`s?
 - refine Nav Bar (colors persist for active page, mobile behaviour)
 - prevent `Router` from allowing you to go back between pages?
 
