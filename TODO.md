@@ -7,6 +7,8 @@
 - more pole videos
 - review photoGrid props
 
+- add full year to vinyl release date
+
 ## Necessary refactoring
 
 - deprecate `getItemCounts`???????? in favour of `details.length`????

@@ -18,6 +18,15 @@ export const AMY_WINEHOUSE_LOVE_IS_A_LOSING_GAME: IPoleRoutine = {
   video: { youtubeId: "ju-1nlmZfW8", ...PORTRAIT_1080P }
 };
 
+export const BILLIE_EILISH_MY_FUTURE: IPoleRoutine = {
+  studio: STUDIOS.DAN_LEA_STUDIO,
+  date: new Date("2020-08-03"),
+  category: "contemporary-improv",
+  song: SONGS.BILLIE_EILISH_MY_FUTURE,
+  choreographer: ME,
+  video: { youtubeId: "XeGzy7-ACPQ", ...PORTRAIT_1080P }
+};
+
 export const ELLIE_GOULDING_START: IPoleRoutine = {
   studio: STUDIOS.DAN_LEA_STUDIO,
   date: new Date("2020-07-20"),

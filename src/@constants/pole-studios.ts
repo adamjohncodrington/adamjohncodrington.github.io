@@ -1,5 +1,10 @@
 const exotica: string = "Exotica Pole & Dance School";
 
+export const EXOTICA_BERMONDSEY: IPoleStudio = {
+  name: exotica,
+  location: "Bermondsey"
+};
+
 export const EXOTICA_HACKNEY: IPoleStudio = {
   name: exotica,
   location: "Hackney Wick"
@@ -23,9 +28,4 @@ export const MY_GRAVITY: IPoleStudio = {
 export const POLE_FIT_LONDON: IPoleStudio = {
   name: "Pole Fit London",
   location: "Stockwell"
-};
-
-export const EXOTICA_BERMONDSEY: IPoleStudio = {
-  name: exotica,
-  location: "Bermondsey"
 };

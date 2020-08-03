@@ -18,6 +18,12 @@ export const BILLIE_EILISH_WISH_YOU_WERE_GAY: ISong = {
   year: 2019
 };
 
+export const BILLIE_EILISH_MY_FUTURE: ISong = {
+  musician: MUSICIANS.BILLIE_EILISH,
+  title: "my future",
+  year: 2020
+};
+
 export const GALLANT_WEIGHT_IN_GOLD: ISong = {
   musician: MUSICIANS.GALLANT,
   title: "Weight in Gold",

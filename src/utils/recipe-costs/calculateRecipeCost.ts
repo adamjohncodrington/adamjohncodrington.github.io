@@ -10,15 +10,14 @@ export const calculateRecipeCost = (
 ): number => {
   if (title) consoleLogRecipeTitle(title);
 
-  let totalRecipeCost: number = 0;
-  ingredients.forEach((ingredientSection: Array<IRecipeIngredient>): void => {
-    ingredientSection.forEach((recipeIngredient: IRecipeIngredient): void => {
-      const ingredientCost: number = calculateIngredientCost(recipeIngredient);
-      totalRecipeCost += ingredientCost;
+  const flatIngredients: Array<IRecipeIngredient> = ingredients.flat();
 
-      consoleLogCostedIngredient({ ...recipeIngredient, cost: ingredientCost });
-    });
-  });
-
-  return totalRecipeCost;
+  return flatIngredients.reduce(
+    (runningCost: number, ingredient: IRecipeIngredient): number => {
+      const ingredientCost: number = calculateIngredientCost(ingredient);
+      consoleLogCostedIngredient({ ...ingredient, cost: ingredientCost });
+      return runningCost + ingredientCost;
+    },
+    0
+  );
 };
