@@ -14,7 +14,7 @@ export const RETAILERS: Array<IMiniCard> = Object.values(retailers).map(
   (retailer: IRetailer): IMiniCard => {
     const { name, umbrella } = retailer;
     const retailerMatches: Array<IVinyl> = getRetailerMatches(retailer);
-    const panelDetails: Array<IMiniCardPanelDetail> = mapVinylsToMiniCardPanelDetails(
+    const details: Array<IMiniCardPanelDetail> = mapVinylsToMiniCardPanelDetails(
       retailerMatches,
       { showMusicianName: true, showCost: true }
     );
@@ -23,7 +23,7 @@ export const RETAILERS: Array<IMiniCard> = Object.values(retailers).map(
       primaryCount: retailerMatches.length,
       anomaly: umbrella,
       sort: [!!umbrella, name],
-      panelDetails
+      details
     };
   }
 );

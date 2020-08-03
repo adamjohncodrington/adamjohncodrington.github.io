@@ -1,13 +1,12 @@
 import { SONGS as songs } from "@constants";
 import { POLE_ROUTINES as DATA } from "data-raw";
 
-const getSongMatches = (song: ISong): Array<IPoleRoutine> => {
-  const songMatches: Array<IPoleRoutine> = [];
-  DATA.forEach((routine: IPoleRoutine): void => {
-    if (routine.song === song) songMatches.push(routine);
-  });
-  return songMatches;
-};
+const getSongMatches = (song: ISong): Array<IPoleRoutine> =>
+  DATA.reduce(
+    (matches: Array<IPoleRoutine>, routine: IPoleRoutine) =>
+      routine.song === song ? [...matches, routine] : matches,
+    []
+  );
 
 export const SONGS: Array<IMiniCard> = Object.values(songs).map(
   (song: ISong): IMiniCard => {

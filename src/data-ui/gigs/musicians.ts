@@ -46,9 +46,7 @@ const getMusicianDetails = (musician: IMusician): Array<IMiniCardPanelDetail> =>
 export const MUSICIANS: Array<IMiniCard> = Object.values(musicians).map(
   (musician: IMusician): IMiniCard => {
     const { name, previousStageName, noLongerExists } = musician;
-    const panelDetails: Array<IMiniCardPanelDetail> = getMusicianDetails(
-      musician
-    );
+    const details: Array<IMiniCardPanelDetail> = getMusicianDetails(musician);
     const {
       pastCount: primaryCount,
       futureCount: secondaryCount
@@ -60,11 +58,11 @@ export const MUSICIANS: Array<IMiniCard> = Object.values(musicians).map(
       primaryText: name,
       sort: [name],
       secondaryText: previousStageName && previousStageName.name,
-      favourite: detailsContainsFavourite(panelDetails),
+      favourite: detailsContainsFavourite(details),
       primaryCount,
       secondaryCount,
       noLongerExists,
-      panelDetails
+      details
     };
   }
 );

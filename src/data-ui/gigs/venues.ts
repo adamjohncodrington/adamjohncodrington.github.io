@@ -2,13 +2,12 @@ import { MUSIC_VENUES as venues } from "@constants";
 import { MUSIC_EVENTS as DATA } from "data-raw";
 import { getItemCounts } from "utils";
 
-const getMusicVenueMatches = (musicVenue: IMusicVenue): Array<IMusicEvent> => {
-  const musicVenueMatches: Array<IMusicEvent> = [];
-  DATA.forEach((musicEvent: IMusicEvent): void => {
-    if (musicEvent.venue === musicVenue) musicVenueMatches.push(musicEvent);
-  });
-  return musicVenueMatches;
-};
+const getMusicVenueMatches = (musicVenue: IMusicVenue): Array<IMusicEvent> =>
+  DATA.reduce(
+    (matches: Array<IMusicEvent>, musicEvent: IMusicEvent) =>
+      musicEvent.venue === musicVenue ? [...matches, musicEvent] : matches,
+    []
+  );
 
 const getMusicVenueDetails = (
   musicVenue: IMusicVenue
@@ -38,7 +37,7 @@ export const VENUES: Array<IMiniCard> = Object.values(venues).map(
       favourite,
       primaryCount,
       secondaryCount,
-      panelDetails: getMusicVenueDetails(musicVenue)
+      details: getMusicVenueDetails(musicVenue)
     };
   }
 );

@@ -38,7 +38,7 @@ export const VENUES: Array<IMiniCard> = Object.values(venues).map(
       sort: [name],
       primaryCount,
       secondaryCount,
-      panelDetails: getTheatreVenueDetails(theatre)
+      details: getTheatreVenueDetails(theatre)
     };
   }
 );

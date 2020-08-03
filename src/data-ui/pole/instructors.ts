@@ -3,13 +3,12 @@ import { POLE_ROUTINES as DATA } from "data-raw";
 
 const getInstructorMatches = (
   instructor: IPoleInstructor
-): Array<IPoleRoutine> => {
-  const instructorMatches: Array<IPoleRoutine> = [];
-  DATA.forEach((routine: IPoleRoutine): void => {
-    if (routine.choreographer === instructor) instructorMatches.push(routine);
-  });
-  return instructorMatches;
-};
+): Array<IPoleRoutine> =>
+  DATA.reduce(
+    (matches: Array<IPoleRoutine>, routine: IPoleRoutine) =>
+      routine.choreographer === instructor ? [...matches, routine] : matches,
+    []
+  );
 
 const getInstructorDetails = (
   instructor: IPoleInstructor
@@ -33,7 +32,7 @@ const getInstructorDetails = (
 export const INSTRUCTORS: Array<IMiniCard> = Object.values(instructors).map(
   (instructor: IPoleInstructor): IMiniCard => {
     const { name, stageName } = instructor;
-    const panelDetails: Array<IMiniCardPanelDetail> = getInstructorDetails(
+    const details: Array<IMiniCardPanelDetail> = getInstructorDetails(
       instructor
     );
     const instructorName: string = stageName || name;
@@ -41,8 +40,8 @@ export const INSTRUCTORS: Array<IMiniCard> = Object.values(instructors).map(
       primaryText: instructorName,
       sort: [instructorName],
       secondaryText: stageName ? name : undefined,
-      primaryCount: panelDetails.length || undefined,
-      panelDetails: panelDetails.length > 0 ? panelDetails : undefined
+      primaryCount: details.length || undefined,
+      details: details.length > 0 ? details : undefined
     };
   }
 );

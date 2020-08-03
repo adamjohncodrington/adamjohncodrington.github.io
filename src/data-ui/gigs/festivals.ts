@@ -2,15 +2,12 @@ import { FESTIVAL_TITLES as festivals } from "@constants";
 import { FESTIVALS as DATA } from "data-raw";
 import { getItemCounts, getFestivalSubtitle } from "utils";
 
-const getFestivalMatches = (
-  festivalTitle: IFestivalTitle
-): Array<IFestival> => {
-  const festivalMatches: Array<IFestival> = [];
-  DATA.forEach((festival: IFestival): void => {
-    if (festivalTitle === festival.title) festivalMatches.push(festival);
-  });
-  return festivalMatches;
-};
+const getFestivalMatches = (festivalTitle: IFestivalTitle): Array<IFestival> =>
+  DATA.reduce(
+    (matches: Array<IFestival>, festival: IFestival) =>
+      festival.title === festivalTitle ? [...matches, festival] : matches,
+    []
+  );
 
 const getFestivalDetails = (musician: IMusician): Array<IMiniCardPanelDetail> =>
   getFestivalMatches(musician).map(
@@ -42,7 +39,7 @@ export const FESTIVALS: Array<IMiniCard> = Object.values(festivals)
         sort: [name],
         primaryCount,
         secondaryCount,
-        panelDetails: getFestivalDetails(festival)
+        details: getFestivalDetails(festival)
       };
     }
   );

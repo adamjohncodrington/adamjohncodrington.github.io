@@ -7,16 +7,16 @@ import { YouTubeVideo } from "../YouTubeVideo";
 import { MiniCardPanelDetail } from "./MiniCardPanelDetail";
 import { StyledOl } from "./styles";
 
-export const MiniCardPanel: FC<IMiniCard> = ({ panelDetails, video }) =>
+export const MiniCardPanel: FC<IMiniCard> = ({ details, video }) =>
   video ? (
     <YouTubeVideo {...video} marginTop="5px" />
-  ) : panelDetails ? (
+  ) : details ? (
     <StyledOl>
-      {sortMiniCardPanelDetails(panelDetails).map(
+      {sortMiniCardPanelDetails(details).map(
         (detail: IMiniCardPanelDetail, i: number) => (
           <MiniCardPanelDetail
             key={i}
-            index={panelDetails.length > 1 ? i + 1 : undefined}
+            index={details.length > 1 ? i + 1 : undefined}
             {...detail}
           />
         )
