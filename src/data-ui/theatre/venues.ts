@@ -4,7 +4,10 @@ import { getItemCounts } from "utils";
 
 const getTheatreMatches = (theatre: ITheatre): Array<ITheatreVisit> =>
   DATA.reduce(
-    (matches: Array<ITheatreVisit>, theatreVisit: ITheatreVisit) =>
+    (
+      matches: Array<ITheatreVisit>,
+      theatreVisit: ITheatreVisit
+    ): Array<ITheatreVisit> =>
       theatreVisit.theatre === theatre ? [...matches, theatreVisit] : matches,
     []
   );

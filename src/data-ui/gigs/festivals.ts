@@ -4,7 +4,7 @@ import { getItemCounts, getFestivalSubtitle } from "utils";
 
 const getFestivalMatches = (festivalTitle: IFestivalTitle): Array<IFestival> =>
   DATA.reduce(
-    (matches: Array<IFestival>, festival: IFestival) =>
+    (matches: Array<IFestival>, festival: IFestival): Array<IFestival> =>
       festival.title === festivalTitle ? [...matches, festival] : matches,
     []
   );

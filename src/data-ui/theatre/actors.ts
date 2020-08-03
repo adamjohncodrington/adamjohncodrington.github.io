@@ -3,10 +3,18 @@ import { THEATRE as DATA } from "data-raw";
 import { getItemCounts, getTheatreVisitTitle } from "utils";
 
 const getActorMatches = (actor: IActor): Array<ITheatreVisit> =>
-  DATA.reduce((matches: Array<ITheatreVisit>, theatreVisit: ITheatreVisit) => {
-    const { cast } = theatreVisit;
-    return cast && cast.includes(actor) ? [...matches, theatreVisit] : matches;
-  }, []);
+  DATA.reduce(
+    (
+      matches: Array<ITheatreVisit>,
+      theatreVisit: ITheatreVisit
+    ): Array<ITheatreVisit> => {
+      const { cast } = theatreVisit;
+      return cast && cast.includes(actor)
+        ? [...matches, theatreVisit]
+        : matches;
+    },
+    []
+  );
 
 const getActorDetails = (actor: IActor): Array<IMiniCardPanelDetail> =>
   getActorMatches(actor).map(

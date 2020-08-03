@@ -4,7 +4,10 @@ import { getItemCounts } from "utils";
 
 const getMusicVenueMatches = (musicVenue: IMusicVenue): Array<IMusicEvent> =>
   DATA.reduce(
-    (matches: Array<IMusicEvent>, musicEvent: IMusicEvent) =>
+    (
+      matches: Array<IMusicEvent>,
+      musicEvent: IMusicEvent
+    ): Array<IMusicEvent> =>
       musicEvent.venue === musicVenue ? [...matches, musicEvent] : matches,
     []
   );

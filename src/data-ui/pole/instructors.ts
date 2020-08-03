@@ -5,7 +5,10 @@ const getInstructorMatches = (
   instructor: IPoleInstructor
 ): Array<IPoleRoutine> =>
   DATA.reduce(
-    (matches: Array<IPoleRoutine>, routine: IPoleRoutine) =>
+    (
+      matches: Array<IPoleRoutine>,
+      routine: IPoleRoutine
+    ): Array<IPoleRoutine> =>
       routine.choreographer === instructor ? [...matches, routine] : matches,
     []
   );

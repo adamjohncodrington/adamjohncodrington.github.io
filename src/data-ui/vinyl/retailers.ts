@@ -5,7 +5,7 @@ import { mapVinylsToMiniCardPanelDetails } from "./utils";
 
 const getRetailerMatches = (retailer: IRetailer): Array<IVinyl> =>
   DATA.reduce(
-    (matches: Array<IVinyl>, vinyl: IVinyl) =>
+    (matches: Array<IVinyl>, vinyl: IVinyl): Array<IVinyl> =>
       vinyl.retailer === retailer ? [...matches, vinyl] : matches,
     []
   );

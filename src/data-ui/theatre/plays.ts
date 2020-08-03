@@ -19,7 +19,10 @@ const playIsFavourited = ({
 
 const getPlayMatches = (play: IPlay): Array<ITheatreVisit> =>
   DATA.reduce(
-    (matches: Array<ITheatreVisit>, theatreVisit: ITheatreVisit) =>
+    (
+      matches: Array<ITheatreVisit>,
+      theatreVisit: ITheatreVisit
+    ): Array<ITheatreVisit> =>
       theatreVisit.play === play ? [...matches, theatreVisit] : matches,
     []
   );

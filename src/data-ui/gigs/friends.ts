@@ -4,7 +4,10 @@ import { getItemCounts } from "utils";
 
 const getFriendMatches = (friend: IFriend): Array<IMusicEvent> =>
   DATA.reduce(
-    (matches: Array<IMusicEvent>, musicEvent: IMusicEvent) =>
+    (
+      matches: Array<IMusicEvent>,
+      musicEvent: IMusicEvent
+    ): Array<IMusicEvent> =>
       musicEvent.company.includes(friend) ? [...matches, musicEvent] : matches,
     []
   );

@@ -2,7 +2,7 @@ import { VINYL_COLLECTION as DATA } from "data-raw";
 import { numberToCurrencyString } from "utils";
 
 const totalCost: number = DATA.reduce(
-  (currentTotal: number, { costExcDelivery }: IVinyl) =>
+  (currentTotal: number, { costExcDelivery }: IVinyl): number =>
     currentTotal + costExcDelivery,
   0
 );

@@ -4,7 +4,10 @@ import { getItemCounts, detailsContainsFavourite } from "utils";
 
 const getMusicianMatches = (musician: IMusician): Array<IMusicEvent> =>
   DATA.reduce(
-    (matches: Array<IMusicEvent>, musicEvent: IMusicEvent) =>
+    (
+      matches: Array<IMusicEvent>,
+      musicEvent: IMusicEvent
+    ): Array<IMusicEvent> =>
       musicEvent.musicians.includes(musician)
         ? [...matches, musicEvent]
         : matches,

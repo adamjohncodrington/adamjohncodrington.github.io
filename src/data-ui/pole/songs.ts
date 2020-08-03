@@ -3,7 +3,10 @@ import { POLE_ROUTINES as DATA } from "data-raw";
 
 const getSongMatches = (song: ISong): Array<IPoleRoutine> =>
   DATA.reduce(
-    (matches: Array<IPoleRoutine>, routine: IPoleRoutine) =>
+    (
+      matches: Array<IPoleRoutine>,
+      routine: IPoleRoutine
+    ): Array<IPoleRoutine> =>
       routine.song === song ? [...matches, routine] : matches,
     []
   );
