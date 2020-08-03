@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/static/js/main.7d88353b.chunk.js",
-    "main.js.map": "/static/js/main.7d88353b.chunk.js.map",
+    "main.js": "/static/js/main.62d14148.chunk.js",
+    "main.js.map": "/static/js/main.62d14148.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.27f1f56c.js",
     "runtime-main.js.map": "/static/js/runtime-main.27f1f56c.js.map",
-    "static/js/2.abad9c8c.chunk.js": "/static/js/2.abad9c8c.chunk.js",
-    "static/js/2.abad9c8c.chunk.js.map": "/static/js/2.abad9c8c.chunk.js.map",
+    "static/js/2.533c8b84.chunk.js": "/static/js/2.533c8b84.chunk.js",
+    "static/js/2.533c8b84.chunk.js.map": "/static/js/2.533c8b84.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.f4b76eab6ee9a406a5b4b6689222a257.js": "/precache-manifest.f4b76eab6ee9a406a5b4b6689222a257.js",
+    "precache-manifest.f78e3900676627f9989c9734b71d923c.js": "/precache-manifest.f78e3900676627f9989c9734b71d923c.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.abad9c8c.chunk.js.LICENSE.txt": "/static/js/2.abad9c8c.chunk.js.LICENSE.txt",
+    "static/js/2.533c8b84.chunk.js.LICENSE.txt": "/static/js/2.533c8b84.chunk.js.LICENSE.txt",
     "static/media/artist.6b1569d5.svg": "/static/media/artist.6b1569d5.svg",
     "static/media/book.a7bef01b.svg": "/static/media/book.a7bef01b.svg",
     "static/media/bowl-3.5441026d.svg": "/static/media/bowl-3.5441026d.svg",
@@ -36,7 +36,7 @@
     "static/media/masks.b3a48fe0.svg": "/static/media/masks.b3a48fe0.svg",
     "static/media/microphone.45f98fc5.svg": "/static/media/microphone.45f98fc5.svg",
     "static/media/money-4.e915a0e4.svg": "/static/media/money-4.e915a0e4.svg",
-    "static/media/music-1.76a8a7ab.svg": "/static/media/music-1.76a8a7ab.svg",
+    "static/media/music-3.218e670b.svg": "/static/media/music-3.218e670b.svg",
     "static/media/notepad.4eca818e.svg": "/static/media/notepad.4eca818e.svg",
     "static/media/palette.24e9617b.svg": "/static/media/palette.24e9617b.svg",
     "static/media/palm-tree.4f07f732.svg": "/static/media/palm-tree.4f07f732.svg",
@@ -61,7 +61,7 @@
   },
   "entrypoints": [
     "static/js/runtime-main.27f1f56c.js",
-    "static/js/2.abad9c8c.chunk.js",
-    "static/js/main.7d88353b.chunk.js"
+    "static/js/2.533c8b84.chunk.js",
+    "static/js/main.62d14148.chunk.js"
   ]
 }
