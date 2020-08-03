@@ -1,5 +1,7 @@
 # TO DO LIST
 
+- refactor travel and vinyl data-ui folders
+
 - reinstate festival videos
 - add more travel photos
 - more pole videos

@@ -17,13 +17,12 @@ const playIsFavourited = ({
     (theatreVisit: ITheatreVisit): boolean => theatreVisit.play === play
   );
 
-const getPlayMatches = (play: IPlay): Array<ITheatreVisit> => {
-  const playMatches: Array<ITheatreVisit> = [];
-  DATA.forEach((theatreVisit: ITheatreVisit): void => {
-    if (theatreVisit.play === play) playMatches.push(theatreVisit);
-  });
-  return playMatches;
-};
+const getPlayMatches = (play: IPlay): Array<ITheatreVisit> =>
+  DATA.reduce(
+    (matches: Array<ITheatreVisit>, theatreVisit: ITheatreVisit) =>
+      theatreVisit.play === play ? [...matches, theatreVisit] : matches,
+    []
+  );
 
 const getPlayDetails = (play: IPlay): Array<IMiniCardPanelDetail> =>
   getPlayMatches(play).map(
