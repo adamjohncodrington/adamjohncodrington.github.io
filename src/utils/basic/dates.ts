@@ -22,7 +22,9 @@ export const getDateText = (date: Date, options?: IOptions): string => {
   const year: number = date.getFullYear();
 
   return hideDay
-    ? monthString + " " + year
+    ? hideYear
+      ? monthString
+      : monthString + " " + year
     : hideMonth
     ? weekdayAndDayString
     : hideYear
@@ -44,13 +46,11 @@ const getDateTextFor2Dates = (
   secondDate: Date,
   options?: IOptions
 ): string => {
-  const firstDateString: string = getDateText(
-    firstDate,
-    options || {
-      hideMonth: firstDate.getMonth() === secondDate.getMonth(),
-      hideYear: firstDate.getFullYear() === secondDate.getFullYear()
-    }
-  );
+  const firstDateString: string = getDateText(firstDate, {
+    hideMonth: firstDate.getMonth() === secondDate.getMonth(),
+    hideYear: firstDate.getFullYear() === secondDate.getFullYear(),
+    ...options
+  });
 
   return firstDateString + " - " + getDateText(secondDate, options);
 };

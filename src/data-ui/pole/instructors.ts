@@ -1,6 +1,10 @@
 import { INSTRUCTORS as instructors } from "@constants";
 import { POLE_ROUTINES, POLE_TRICKS_VIDEOS } from "data-raw";
-import { getDatesText } from "utils";
+
+import {
+  mapPoleRoutineToMiniCardDetail,
+  mapPoleTricksVideoToMiniCardDetail
+} from "./utils";
 
 const getInstructorRoutineMatches = (
   instructor: IPoleInstructor
@@ -32,30 +36,12 @@ const getInstructorDetails = (
   instructor: IPoleInstructor
 ): Array<IMiniCardPanelDetail> => [
   ...getInstructorRoutineMatches(instructor).map(
-    ({
-      song: {
-        musician: { name },
-        title
-      },
-      date,
-      video
-    }: IPoleRoutine): IMiniCardPanelDetail => ({
-      mainText: [`${name} - ${title}`],
-      dates: [date],
-      sort: [date],
-      video
-    })
+    (poleRoutine: IPoleRoutine): IMiniCardPanelDetail =>
+      mapPoleRoutineToMiniCardDetail(poleRoutine)
   ),
   ...getInstructorTricksMatches(instructor).map(
-    ({
-      dates: { start, end },
-      video
-    }: IPoleTricksVideo): IMiniCardPanelDetail => ({
-      mainText: ["Tricks"],
-      secondaryText: getDatesText([start, end], { hideDay: true }),
-      sort: [start],
-      video
-    })
+    (poleTricksVideo: IPoleTricksVideo): IMiniCardPanelDetail =>
+      mapPoleTricksVideoToMiniCardDetail(poleTricksVideo)
   )
 ];
 

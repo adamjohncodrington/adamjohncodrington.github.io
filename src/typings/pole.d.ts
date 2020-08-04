@@ -5,6 +5,7 @@ type IPoleCategory =
   | "exotic-improv"
   | "non-pole"
   | "showcase"
+  | "rock"
   | "tricks";
 
 interface IPoleStudio {

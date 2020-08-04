@@ -41,3 +41,27 @@ export const mapPoleTricksVideosToCards = (
       mapPoleTricksVideoToCard(poleTricksVideo)
   );
 };
+
+export const mapPoleRoutineToMiniCardDetail = ({
+  song: {
+    musician: { name },
+    title
+  },
+  date,
+  video
+}: IPoleRoutine): IMiniCardPanelDetail => ({
+  mainText: [`${name} - ${title}`],
+  secondaryText: getDateText(date, { hideDay: true }),
+  sort: [date],
+  video
+});
+
+export const mapPoleTricksVideoToMiniCardDetail = ({
+  dates: { start, end },
+  video
+}: IPoleTricksVideo): IMiniCardPanelDetail => ({
+  mainText: ["Tricks"],
+  secondaryText: getDatesText([start, end], { hideDay: true }),
+  sort: [start],
+  video
+});

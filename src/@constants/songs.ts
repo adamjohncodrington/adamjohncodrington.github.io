@@ -6,6 +6,12 @@ export const AMY_WINEHOUSE_LOVE_IS_A_LOSING_GAME: ISong = {
   year: 2006
 };
 
+export const MOTORHEAD_HELLRAISER: ISong = {
+  musician: MUSICIANS.MOTORHEAD,
+  title: "Hellraiser",
+  year: 1992
+};
+
 export const ELLIE_GOULDING_START: ISong = {
   musician: MUSICIANS.ELLIE_GOULDING,
   title: "Start",

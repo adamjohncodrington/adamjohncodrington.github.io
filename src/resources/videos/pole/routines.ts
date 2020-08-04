@@ -1,4 +1,5 @@
 import { PORTRAIT_1080P, STUDIOS, ME, SONGS, INSTRUCTORS } from "@constants";
+import { LAETITIA } from "@constants/people/pole-instructors";
 
 export const JAMES_BLAKE_ARE_YOU_EVEN_REAL: IPoleRoutine = {
   studio: STUDIOS.DAN_LEA_STUDIO,
@@ -7,6 +8,15 @@ export const JAMES_BLAKE_ARE_YOU_EVEN_REAL: IPoleRoutine = {
   song: SONGS.JAMES_BLAKE_ARE_YOU_EVEN_REAL,
   choreographer: ME,
   video: { youtubeId: "LeomyYPrc3M", ...PORTRAIT_1080P }
+};
+
+export const MOTORHEAD_HELLRAISER: IPoleRoutine = {
+  studio: STUDIOS.TIGRA_GST,
+  date: new Date("2018-06-21"),
+  category: "rock",
+  song: SONGS.MOTORHEAD_HELLRAISER,
+  choreographer: LAETITIA,
+  video: { youtubeId: "MkPp9Mtkn3g", ...PORTRAIT_1080P }
 };
 
 export const AMY_WINEHOUSE_LOVE_IS_A_LOSING_GAME: IPoleRoutine = {

@@ -15,6 +15,6 @@ export const POLE = {
   INSTRUCTORS: filterMiniCards(INSTRUCTORS),
   PHOTOS,
   SONGS: filterMiniCards(SONGS),
-  STUDIOS,
+  STUDIOS: filterMiniCards(STUDIOS),
   TRICKS: mapPoleTricksVideosToCards(POLE_TRICKS_VIDEOS)
 };
