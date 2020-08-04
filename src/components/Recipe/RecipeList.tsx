@@ -9,17 +9,28 @@ interface IStyledLi extends I_Theme {
 }
 
 const StyledRecipeListItem = styled(Li)(
-  ({ addPaddingTop, theme: { listItemGroupVerticalSpacing } }: IStyledLi) =>
-    addPaddingTop &&
+  ({
+    addPaddingTop,
+    theme: { listItemGroupVerticalSpacing }
+  }: IStyledLi) => css`
+    font-size: 85%;
+
+    ${addPaddingTop &&
     css`
       padding-top: ${listItemGroupVerticalSpacing};
-    `
+    `}
+  `
 );
 
 const StyledRecipeListItemRow = styled(FlexRow)`
   *:first-child {
     margin-right: 6px;
   }
+`;
+
+const StyledListTitle = styled.div`
+  padding-bottom: 2px;
+  font-weight: bold;
 `;
 
 interface IRecipeList {
@@ -30,7 +41,7 @@ interface IRecipeList {
 
 export const List: FC<IRecipeList> = ({ title, listItems, showBullets }) => (
   <Ul>
-    <strong>{title}</strong>
+    <StyledListTitle>{title}</StyledListTitle>
 
     {listItems.map(
       ({ listItemText, addPaddingTop }: IRecipeListItem, index: number) => (

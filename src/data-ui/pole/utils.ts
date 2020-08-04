@@ -10,7 +10,7 @@ export const mapPoleRoutinesToCards = (
     video
   }: IPoleRoutine): ICard => ({
     video,
-    sort: [date],
+    sort: [-date],
     symbols: getSymbols({ company: [choreographer] }),
     subtitle: musician.name,
     title,
@@ -27,12 +27,14 @@ export const mapPoleTricksVideosToCards = (
   const mapPoleTricksVideoToCard = ({
     dates: { start, end },
     instructor,
+    studio,
     video
   }: IPoleTricksVideo): ICard => ({
     video,
-    sort: [start],
+    sort: [-start],
     symbols: getSymbols({ company: [instructor] }),
-    title: getDatesText([start, end])
+    title: getDatesText([start, end], { hideDay: true }),
+    body: studio.name
   });
   return poleTricksVideos.map(
     (poleTricksVideo: IPoleTricksVideo): ICard =>

@@ -1,13 +1,19 @@
 # TO DO LIST
 
-- reinstate festival videos
-- add more travel photos
-- more pole videos
-- review photoGrid props
-- add full year to vinyl release date
+
+## Media to add
+
+- festival videos
+- all pole tricks videos
+- all pole routine videos
+- gig photos
+- more travel photos
+- theatre artwork?
 
 ## Necessary refactoring
 
+- add full year to vinyl release date
+- review photoGrid props
 - deprecate `getItemCounts`???????? in favour of `details.length`????
 - review all instances of `filterMiniCards`?
 - organise utils
