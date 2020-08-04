@@ -53,7 +53,7 @@ const PHOTOS: IPageSection = {
 const TRICKS: IPageSection = {
   SvgIcon: SVG.POLE_VAULT,
   title: PAGE_SECTION_TITLES.TRICKS,
-  panelData: { comingSoon: true }
+  panelData: { cards: DATA.TRICKS }
 };
 
 const SHOWCASE: IPageSection = {

@@ -11,15 +11,6 @@ interface IFriend extends IPerson {
   theatre?: boolean;
 }
 
-interface IPage extends I__Hide {
-  title: string;
-  path: string;
-  SvgIcon: ISvgIcon;
-  sections: Array<IPageSection>;
-  count?: number;
-  color?: ColorValue;
-}
-
 //TODO: make date prop and title for alt purposes
 interface IPhoto extends I__Hide, I__Date {
   href?: string;
@@ -40,93 +31,16 @@ interface IVideo extends I_OrientationQuality {
   youtubeId: string;
 }
 
-interface IFestivalTitle extends I_Name, I__Insignificant {}
-
-interface IGigOrFestival extends I__Favourite, I_Company {
-  photos?: Array<IPhoto>;
-  venue: IMusicVenue;
-  ticketType?: ITicketType;
-}
-
-interface IFestival extends IGigOrFestival, I_Dates {
-  title: IFestivalTitle;
-  video?: IFestivalVideo;
-  lineup: Array<Array<IMusician>>;
-}
-
-interface IGig extends IGigOrFestival, I_Date {
-  headline: IMusician;
-  video?: IGigVideo;
-  support?: Array<IMusician>;
-}
-
-interface IMusicEvent extends IGigOrFestival, I__Video {
-  title: string;
-  subtitle?: string;
-  dates: Array<IDate>;
-  musicians: Array<IMusician>;
-
-  gig?: IGig;
-  festival?: IFestival;
-}
-
-interface IMusicVenue extends I_Name, I__Favourite, I__Insignificant {}
-
-interface IMusician extends I_Name, I__Favourite, I__ExcludeFromBucketList {
-  previousStageName?: { name: string; yearDeprecated: number };
-  noLongerExists?: boolean;
-}
-
-interface IGigVideo extends IVideo {
-  date: Date;
-  musician: IMusician;
-}
-
-interface IFestivalVideo extends IVideo, I_StartEndDates {
-  dates: IStartEndDate;
-}
-
 interface ITravelVideo extends IVideo, I_StartEndDates {
   locations: Array<ILocation>;
 }
 
 interface IRecipeHeader extends IRecipe, IDisclosureHeader {}
 
-type IPoleCategory =
-  | "contemporary-class"
-  | "contemporary-improv"
-  | "exotic-class"
-  | "exotic-improv"
-  | "non-pole"
-  | "showcase"
-  | "tricks";
-
 interface ISong {
   musician: IMusician;
   title: string;
   year: number;
-}
-
-interface IPoleStudio {
-  name: string;
-  location?: string;
-}
-
-interface IPoleVideo extends I_Video {
-  studio: IPoleStudio;
-  category: IPoleCategory;
-}
-
-interface IPoleTricksVideo extends IPoleVideo, I_StartEndDates {}
-
-interface IPoleRoutine extends IPoleVideo {
-  date: Date;
-  song: ISong;
-  choreographer: IPoleInstructor;
-}
-
-interface IPoleInstructor extends IPerson {
-  stageName?: string;
 }
 
 interface IActor extends I_Name, I__Favourite {}

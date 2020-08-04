@@ -1,4 +1,4 @@
-import { getDateText, getSymbols } from "utils";
+import { getDateText, getSymbols, getDatesText } from "utils";
 
 export const mapPoleRoutinesToCards = (
   poleVideos: Array<IPoleRoutine>
@@ -18,5 +18,24 @@ export const mapPoleRoutinesToCards = (
   });
   return poleVideos.map(
     (poleVideo: IPoleRoutine): ICard => mapPoleRoutineToCard(poleVideo)
+  );
+};
+
+export const mapPoleTricksVideosToCards = (
+  poleTricksVideos: Array<IPoleTricksVideo>
+): Array<ICard> => {
+  const mapPoleTricksVideoToCard = ({
+    dates: { start, end },
+    instructor,
+    video
+  }: IPoleTricksVideo): ICard => ({
+    video,
+    sort: [start],
+    symbols: getSymbols({ company: [instructor] }),
+    title: getDatesText([start, end])
+  });
+  return poleTricksVideos.map(
+    (poleTricksVideo: IPoleTricksVideo): ICard =>
+      mapPoleTricksVideoToCard(poleTricksVideo)
   );
 };

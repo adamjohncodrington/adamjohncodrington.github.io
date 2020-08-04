@@ -1,5 +1,14 @@
 interface IPhotoGrid extends I_Photos {}
 
+interface IPage extends I__Hide {
+  title: string;
+  path: string;
+  SvgIcon: ISvgIcon;
+  sections: Array<IPageSection>;
+  count?: number;
+  color?: ColorValue;
+}
+
 interface IPageSectionItemDataTypes {
   musicEvents?: Array<IMusicEvent>;
   theatreVisits?: Array<ITheatreVisit>;

@@ -1,5 +1,5 @@
 export { arrayToString } from "./arrayToString";
-export * from "./dates-to-strings";
+export * from "./dates";
 export { decimalToFractionString } from "./decimalToFractionString";
 export { isInFuture } from "./isInFuture";
 export { moveTheSuffixToPrefix } from "./moveTheSuffixToPrefix";

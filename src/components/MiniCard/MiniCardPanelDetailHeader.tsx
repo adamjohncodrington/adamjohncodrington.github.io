@@ -33,7 +33,7 @@ export const MiniCardPanelDetailHeader: React.FC<IMiniCardPanelDetailHeader> = (
         </StyledLevel1MainText>
       )}
 
-      {(dates || year) && (
+      {(dates || year || secondaryText) && (
         <StyledPanelSecondaryText
           favourite={favourite}
           showVideoSymbol={!!video}

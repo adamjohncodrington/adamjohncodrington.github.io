@@ -1,10 +1,11 @@
 import { INSTRUCTORS as instructors } from "@constants";
-import { POLE_ROUTINES as DATA } from "data-raw";
+import { POLE_ROUTINES, POLE_TRICKS_VIDEOS } from "data-raw";
+import { getDatesText } from "utils";
 
-const getInstructorMatches = (
+const getInstructorRoutineMatches = (
   instructor: IPoleInstructor
 ): Array<IPoleRoutine> =>
-  DATA.reduce(
+  POLE_ROUTINES.reduce(
     (
       matches: Array<IPoleRoutine>,
       routine: IPoleRoutine
@@ -13,10 +14,24 @@ const getInstructorMatches = (
     []
   );
 
+const getInstructorTricksMatches = (
+  instructor: IPoleInstructor
+): Array<IPoleTricksVideo> =>
+  POLE_TRICKS_VIDEOS.reduce(
+    (
+      matches: Array<IPoleTricksVideo>,
+      tricksVideo: IPoleTricksVideo
+    ): Array<IPoleTricksVideo> =>
+      tricksVideo.instructor === instructor
+        ? [...matches, tricksVideo]
+        : matches,
+    []
+  );
+
 const getInstructorDetails = (
   instructor: IPoleInstructor
-): Array<IMiniCardPanelDetail> =>
-  getInstructorMatches(instructor).map(
+): Array<IMiniCardPanelDetail> => [
+  ...getInstructorRoutineMatches(instructor).map(
     ({
       song: {
         musician: { name },
@@ -30,7 +45,19 @@ const getInstructorDetails = (
       sort: [date],
       video
     })
-  );
+  ),
+  ...getInstructorTricksMatches(instructor).map(
+    ({
+      dates: { start, end },
+      video
+    }: IPoleTricksVideo): IMiniCardPanelDetail => ({
+      mainText: ["Tricks"],
+      secondaryText: getDatesText([start, end]),
+      sort: [start],
+      video
+    })
+  )
+];
 
 export const INSTRUCTORS: Array<IMiniCard> = Object.values(instructors).map(
   (instructor: IPoleInstructor): IMiniCard => {
