@@ -1,3 +1,5 @@
 import { VIDEOS } from "resources";
 
-export const POLE_ROUTINES: Array<IPoleRoutine> = Object.values(VIDEOS.POLE);
+export const POLE_ROUTINES: Array<IPoleRoutine> = Object.values(
+  VIDEOS.POLE.ROUTINES
+);

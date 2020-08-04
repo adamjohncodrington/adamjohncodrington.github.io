@@ -40,11 +40,6 @@ interface IVideo extends I_OrientationQuality {
   youtubeId: string;
 }
 
-interface IStartEndDate {
-  start: Date;
-  end: Date;
-}
-
 interface IFestivalTitle extends I_Name, I__Insignificant {}
 
 interface IGigOrFestival extends I__Favourite, I_Company {
@@ -87,13 +82,11 @@ interface IGigVideo extends IVideo {
   musician: IMusician;
 }
 
-interface IFestivalVideo extends IVideo {
-  festival: IFestivalTitle;
+interface IFestivalVideo extends IVideo, I_StartEndDates {
   dates: IStartEndDate;
 }
 
-interface ITravelVideo extends IVideo {
-  dates: IStartEndDate;
+interface ITravelVideo extends IVideo, I_StartEndDates {
   locations: Array<ILocation>;
 }
 
@@ -123,6 +116,8 @@ interface IPoleVideo extends I_Video {
   studio: IPoleStudio;
   category: IPoleCategory;
 }
+
+interface IPoleTricksVideo extends IPoleVideo, I_StartEndDates {}
 
 interface IPoleRoutine extends IPoleVideo {
   date: Date;

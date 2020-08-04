@@ -26,6 +26,15 @@ interface I_Signed {
   signed: boolean;
 }
 
+interface IStartEndDate {
+  start: Date;
+  end: Date;
+}
+
+interface I_StartEndDates {
+  dates: IStartEndDate;
+}
+
 interface I__Signed {
   signed?: boolean;
 }

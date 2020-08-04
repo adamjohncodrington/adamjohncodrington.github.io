@@ -38,10 +38,10 @@ const SONGS: IPageSection = {
   panelData: { miniCards: DATA.SONGS }
 };
 
-const IMPROV: IPageSection = {
+const IMPROVISATION: IPageSection = {
   SvgIcon: SVG.DANCER_MALE_1,
-  title: PAGE_SECTION_TITLES.IMPROV,
-  panelData: { cards: DATA.IMPROV }
+  title: PAGE_SECTION_TITLES.IMPROVISATION,
+  panelData: { cards: DATA.IMPROVISATION }
 };
 
 const PHOTOS: IPageSection = {
@@ -66,7 +66,7 @@ export const POLE: Array<IPageSection> = [
   TRICKS,
   CONTEMPORARY,
   EXOTIC,
-  IMPROV,
+  IMPROVISATION,
   PHOTOS,
   SHOWCASE,
   SONGS,

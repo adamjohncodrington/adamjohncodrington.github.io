@@ -1,6 +1,6 @@
 import { filterMiniCards } from "utils";
 
-import { CONTEMPORARY, EXOTIC, IMPROV } from "./videos";
+import { CONTEMPORARY, EXOTIC, IMPROVISATION } from "./routines";
 import { INSTRUCTORS } from "./instructors";
 import { PHOTOS } from "./photos";
 import { SONGS } from "./songs";
@@ -10,7 +10,7 @@ import { mapPoleRoutinesToCards } from "./utils";
 export const POLE = {
   CONTEMPORARY: mapPoleRoutinesToCards(CONTEMPORARY),
   EXOTIC: mapPoleRoutinesToCards(EXOTIC),
-  IMPROV: mapPoleRoutinesToCards(IMPROV),
+  IMPROVISATION: mapPoleRoutinesToCards(IMPROVISATION),
   INSTRUCTORS: filterMiniCards(INSTRUCTORS),
   PHOTOS,
   SONGS: filterMiniCards(SONGS),
