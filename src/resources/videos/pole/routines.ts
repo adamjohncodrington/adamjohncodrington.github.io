@@ -16,7 +16,7 @@ export const MOTORHEAD_HELLRAISER: IPoleRoutine = {
   category: "rock",
   song: SONGS.MOTORHEAD_HELLRAISER,
   choreographer: LAETITIA,
-  video: { youtubeId: "MkPp9Mtkn3g", ...PORTRAIT_1080P }
+  video: { youtubeId: "5B-QCrrKYNE", ...PORTRAIT_1080P }
 };
 
 export const AMY_WINEHOUSE_LOVE_IS_A_LOSING_GAME: IPoleRoutine = {
