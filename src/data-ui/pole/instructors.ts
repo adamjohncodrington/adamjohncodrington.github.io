@@ -52,7 +52,7 @@ const getInstructorDetails = (
       video
     }: IPoleTricksVideo): IMiniCardPanelDetail => ({
       mainText: ["Tricks"],
-      secondaryText: getDatesText([start, end]),
+      secondaryText: getDatesText([start, end], { hideDay: true }),
       sort: [start],
       video
     })
