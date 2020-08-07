@@ -49,14 +49,6 @@ export const CHRISTINE_AND_THE_QUEENS_LA_VITA_NUOVA: IAlbum = {
   appleMusicId: "la-vita-nuova-ep/1497744921"
 };
 
-export const LISSIE_CATCHING_A_TIGER: IAlbum = {
-  musician: MUSICIANS.LISSIE,
-  photo: PHOTOS.ALBUM_ARTWORK.LISSIE_CATCHING_A_TIGER,
-  appleMusicId: "catching-a-tiger/372594767",
-  title: "Catching a Tiger",
-  year: 2010
-};
-
 export const NATALIA_KILLS_PERFECTIONIST: IAlbum = {
   musician: MUSICIANS.NATALIA_KILLS,
   photo: PHOTOS.ALBUM_ARTWORK.NATALIA_KILLS_PERFECTIONIST,

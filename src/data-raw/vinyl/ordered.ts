@@ -3,7 +3,12 @@ import { PHOTOS } from "resources";
 import { COLORS } from "styles";
 
 const { BLACK, CLEAR } = COLORS;
-const { MUSICIAN_WEB_STORE, ROUGH_TRADE_WEST, MUSIC_MAGPIE } = RETAILERS;
+const {
+  MUSICIAN_WEB_STORE,
+  ROUGH_TRADE_WEST,
+  MUSIC_MAGPIE,
+  FAT_POSSUM
+} = RETAILERS;
 
 export const BEN_HOWARD_EVERY_KINGDOM: IVinyl = {
   musician: MUSICIANS.BEN_HOWARD,
@@ -18,6 +23,21 @@ export const BEN_HOWARD_EVERY_KINGDOM: IVinyl = {
   costExcDelivery: 9.99,
   sides: 2,
   year: 2011
+};
+
+export const LISSIE_CATCHING_A_TIGER: IVinyl = {
+  musician: MUSICIANS.LISSIE,
+  photo: PHOTOS.ALBUM_ARTWORK.LISSIE_CATCHING_A_TIGER,
+  appleMusicId: "catching-a-tiger/372594767",
+  title: "Catching a Tiger",
+  year: 2010,
+  sides: 2,
+  inches: 12,
+  signed: false,
+  colors: [BLACK],
+  arrived: false,
+  costExcDelivery: 12.99,
+  retailer: FAT_POSSUM
 };
 
 export const LANY_MALIBU_NIGHTS: IVinyl = {
