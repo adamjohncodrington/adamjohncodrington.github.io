@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "28e9308db3a0534445df1848a2a0ed38",
+    "revision": "fe65db29f82705fcdfdd9d73642e6d9a",
     "url": "/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.533c8b84.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "da019ec16226d106dc20",
-    "url": "/static/js/main.d67e33f1.chunk.js"
+    "revision": "f3da949afff4372aa2cd",
+    "url": "/static/js/main.d328cc31.chunk.js"
   },
   {
     "revision": "3cf57b419839acabd216",
@@ -86,6 +86,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "95e5965d742949695bfd6dcd49b6b2aa",
     "url": "/static/media/dancer-pose.95e5965d.svg"
+  },
+  {
+    "revision": "3a581809f6e90518e2c09ad31bd88ece",
+    "url": "/static/media/delivery-van-3.3a581809.svg"
   },
   {
     "revision": "b4a08446e705d2ce79cb5b12eefeb881",

@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.d67e33f1.chunk.js",
-    "main.js.map": "/static/js/main.d67e33f1.chunk.js.map",
+    "main.js": "/static/js/main.d328cc31.chunk.js",
+    "main.js.map": "/static/js/main.d328cc31.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.27f1f56c.js",
     "runtime-main.js.map": "/static/js/runtime-main.27f1f56c.js.map",
     "static/js/2.533c8b84.chunk.js": "/static/js/2.533c8b84.chunk.js",
     "static/js/2.533c8b84.chunk.js.map": "/static/js/2.533c8b84.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.e89e42250e6e190039cf9179bec58bb1.js": "/precache-manifest.e89e42250e6e190039cf9179bec58bb1.js",
+    "precache-manifest.664ac5c869db92d779ee8f1ae5e04b0e.js": "/precache-manifest.664ac5c869db92d779ee8f1ae5e04b0e.js",
     "service-worker.js": "/service-worker.js",
     "static/js/2.533c8b84.chunk.js.LICENSE.txt": "/static/js/2.533c8b84.chunk.js.LICENSE.txt",
     "static/media/artist.6b1569d5.svg": "/static/media/artist.6b1569d5.svg",
@@ -27,6 +27,7 @@
     "static/media/dancer-male-1.e332ed1d.svg": "/static/media/dancer-male-1.e332ed1d.svg",
     "static/media/dancer-male-2.2126bb76.svg": "/static/media/dancer-male-2.2126bb76.svg",
     "static/media/dancer-pose.95e5965d.svg": "/static/media/dancer-pose.95e5965d.svg",
+    "static/media/delivery-van-3.3a581809.svg": "/static/media/delivery-van-3.3a581809.svg",
     "static/media/flag.b4a08446.svg": "/static/media/flag.b4a08446.svg",
     "static/media/gift.990437ca.svg": "/static/media/gift.990437ca.svg",
     "static/media/heart-3.f4a2e05c.svg": "/static/media/heart-3.f4a2e05c.svg",
@@ -62,6 +63,6 @@
   "entrypoints": [
     "static/js/runtime-main.27f1f56c.js",
     "static/js/2.533c8b84.chunk.js",
-    "static/js/main.d67e33f1.chunk.js"
+    "static/js/main.d328cc31.chunk.js"
   ]
 }
