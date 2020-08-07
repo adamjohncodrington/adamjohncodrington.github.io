@@ -55,6 +55,7 @@ export const TENERIFE_2017: ITrip = [
 export const COPENHAGEN: ITrip = [
   {
     primaryLocations: [COUNTRIES.DENMARK.cities.COPENHAGEN],
+    photos: PHOTOS.TRAVEL.COPENHAGEN,
     country: COUNTRIES.DENMARK,
     dates: [new Date("2018-01-19"), new Date("2018-01-22")],
     company: [FRIENDS.LUKE_STERN],
@@ -67,6 +68,7 @@ export const PAPHOS: ITrip = [
     primaryLocations: [COUNTRIES.CYPRUS.cities.PAPHOS],
     country: COUNTRIES.CYPRUS,
     dates: [new Date("2018-05-17"), new Date("2018-05-21")],
+    photos: PHOTOS.TRAVEL.PAPHOS,
     company: [FRIENDS.SIAN_RODWAY_SMITH],
     secondaryLocations: [
       COUNTRIES.CYPRUS.attractions.PAPHOS_ARCHAEOLOGICAL_PARK
@@ -81,6 +83,7 @@ export const DUBROVNIK: ITrip = [
     country: COUNTRIES.CROATIA,
     dates: [new Date("2018-06-02"), new Date("2018-06-09")],
     company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON],
+    photos: PHOTOS.TRAVEL.DUBROVNIK,
     secondaryLocations: [
       COUNTRIES.CROATIA.attractions.DUBROVNIK_WALLS,
       COUNTRIES.CROATIA.attractions.DUBROVNIK_CABLE_CAR
@@ -94,7 +97,8 @@ export const GRONINGEN: ITrip = [
     country: COUNTRIES.NETHERLANDS,
     secondaryLocations: [COUNTRIES.NETHERLANDS.attractions.GRONINGEN_MUSEUM],
     dates: [new Date("2018-07-14"), new Date("2018-07-16")],
-    company: [FRIENDS.CARMEN_DALGLISH]
+    company: [FRIENDS.CARMEN_DALGLISH],
+    photos: PHOTOS.TRAVEL.GRONINGEN
   }
 ];
 

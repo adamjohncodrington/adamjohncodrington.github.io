@@ -53,3 +53,29 @@ export const ECUADOR: Array<IPhoto> = [
   { freeimagehostId: "d7N9B1.jpg" },
   { freeimagehostId: "d7wbIV.jpg" }
 ];
+
+export const GRONINGEN: Array<IPhoto> = [
+  { freeimagehostId: "d1L2wv.jpg" },
+  { freeimagehostId: "d1L3tR.jpg" }
+];
+
+export const DUBROVNIK: Array<IPhoto> = [
+  { freeimagehostId: "d1L98g.jpg" },
+  { freeimagehostId: "d1LJ9a.jpg" },
+  { freeimagehostId: "d1LdAJ.jpg" },
+  { freeimagehostId: "d1LKnp.jpg" }
+];
+
+export const PAPHOS: Array<IPhoto> = [
+  { freeimagehostId: "d1LfMN.jpg" },
+  { freeimagehostId: "d1LqPI.jpg" },
+  { freeimagehostId: "d1LncX.jpg" },
+  { freeimagehostId: "d1LCFt.jpg" }
+];
+
+export const COPENHAGEN: Array<IPhoto> = [
+  { freeimagehostId: "d1sycF.jpg" },
+  { freeimagehostId: "d1sb6P.jpg" },
+  { freeimagehostId: "d1sDMB.jpg" },
+  { freeimagehostId: "d1spF1.jpg" }
+];
