@@ -17,6 +17,14 @@ export const PARAMORE_RIOT: IAlbum = {
   year: 2007
 };
 
+export const LEON_APART: IAlbum = {
+  musician: MUSICIANS.LEON,
+  photo: PHOTOS.ALBUM_ARTWORK.LEON_APART,
+  appleMusicId: "apart/1525538383",
+  title: "Apart",
+  year: 2020
+};
+
 export const KATY_PERRY_ONE_OF_THE_BOYS: IAlbum = {
   musician: MUSICIANS.KATY_PERRY,
   photo: PHOTOS.ALBUM_ARTWORK.KATY_PERRY_ONE_OF_THE_BOYS,
@@ -49,14 +57,6 @@ export const LISSIE_CATCHING_A_TIGER: IAlbum = {
   year: 2010
 };
 
-export const BEN_HOWARD_EVERY_KINGDOM: IAlbum = {
-  musician: MUSICIANS.BEN_HOWARD,
-  photo: PHOTOS.ALBUM_ARTWORK.BEN_HOWARD_EVERY_KINGDOM,
-  appleMusicId: "every-kingdom/1440804636",
-  title: "Every Kingdom",
-  year: 2011
-};
-
 export const NATALIA_KILLS_PERFECTIONIST: IAlbum = {
   musician: MUSICIANS.NATALIA_KILLS,
   photo: PHOTOS.ALBUM_ARTWORK.NATALIA_KILLS_PERFECTIONIST,
@@ -79,14 +79,6 @@ export const LANE_8: IAlbum = {
   title: "Rise",
   appleMusicId: "rise/988732595",
   year: 2015
-};
-
-export const CARIBOU: IAlbum = {
-  musician: MUSICIANS.CARIBOU,
-  photo: PHOTOS.ALBUM_ARTWORK.CARIBOU_OUR_LOVE,
-  appleMusicId: "our-love/1276611236",
-  title: "Our Love",
-  year: 2014
 };
 
 export const RYN_WEAVER_FOOL: IAlbum = {
@@ -126,14 +118,6 @@ export const JON_HOPKINS_SINGULARITY: IAlbum = {
   title: "Singularity",
   photo: PHOTOS.ALBUM_ARTWORK.JON_HOPKINS_SINGULARITY,
   appleMusicId: "singularity/1349736537",
-  year: 2018
-};
-
-export const LANY_MALIBU_NIGHTS: IAlbum = {
-  musician: MUSICIANS.LANY,
-  title: "Malibu Nights",
-  photo: PHOTOS.ALBUM_ARTWORK.LANY_MALIBU_NIGHTS,
-  appleMusicId: "malibu-nights/1435482172",
   year: 2018
 };
 

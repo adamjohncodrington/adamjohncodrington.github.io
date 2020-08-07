@@ -1,4 +1,4 @@
-import { VINYL_COLLECTION, VINYL_WISH_LIST } from "data-raw";
+import { VINYL_COLLECTION, VINYL_WISH_LIST, VINYL_ORDERED } from "data-raw";
 import { filterMiniCards } from "utils";
 
 import { ARTWORK } from "./artwork";
@@ -30,6 +30,8 @@ export const VINYL = {
     hideGiftSymbol: true,
     hideSignedIcon: true
   }),
+  //TODO: add this to site, and LEON to wish list
+  ORDERED: mapVinylsToCards(VINYL_ORDERED),
   SIGNED: mapVinylsToCards(SIGNED, { hideSignedIcon: true }),
   WISH_LIST: mapAlbumsToCards(VINYL_WISH_LIST),
   YEARS: YEARS.map(

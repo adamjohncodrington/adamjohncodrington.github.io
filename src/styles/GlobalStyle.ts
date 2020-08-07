@@ -1,7 +1,7 @@
 import { createGlobalStyle, css } from "styled-components";
 import { normalize } from "polished";
 
-export const fontFamily: string = "-apple-system, Helvetica, sans-serif";
+export const fontFamily: string = `-apple-system, "Helvetica Neue", Helvetica, sans-serif`;
 export const scrollbarSize: PxValue = "10px";
 
 export const CSS_scrollbar = css`

@@ -25,7 +25,7 @@ export const PageSections: FC<IPageSections> = ({ pageSections }) => {
   );
 
   const datafulPageSections: Array<IPageSection> = unhiddenPageSections.filter(
-    ({ panelData }: IPageSection): boolean => validPageSectionData(panelData)
+    ({ data }: IPageSection): boolean => validPageSectionData(data)
   );
 
   const validPageSectionCount: number = datafulPageSections.length;

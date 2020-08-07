@@ -14,8 +14,8 @@ import {
   PanelPhotoGridContainer
 } from "./styles";
 
-export const PageSectionPanel: FC<IPageSection> = ({ panelData, shuffle }) => {
-  const { cards, comingSoon, costs, miniCards, recipes, photoGrid } = panelData;
+export const PageSectionPanel: FC<IPageSection> = ({ data, shuffle }) => {
+  const { cards, comingSoon, costs, miniCards, recipes, photoGrid } = data;
 
   if (comingSoon)
     return (
@@ -43,7 +43,7 @@ export const PageSectionPanel: FC<IPageSection> = ({ panelData, shuffle }) => {
       <PhotoGrid {...photoGrid} />
     </PanelPhotoGridContainer>
   ) : (
-    <PageSectionPanelList {...panelData}>
+    <PageSectionPanelList {...data}>
       {cards &&
         (shuffle ? shuffleArray(cards) : sortCards(cards)).map(
           (card: ICard, index: number) => (

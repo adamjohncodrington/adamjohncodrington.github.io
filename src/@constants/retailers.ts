@@ -15,6 +15,11 @@ export const RECORDSTORE_ONLINE: IRetailer = {
   online: true
 };
 
+export const MUSIC_MAGPIE: IRetailer = {
+  name: "Music Magpie",
+  online: true
+};
+
 export const EBAY: IRetailer = {
   name: "eBay",
   online: true

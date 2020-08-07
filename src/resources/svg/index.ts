@@ -19,6 +19,7 @@ export { ReactComponent as DANCER_JUMPING } from "./dancer-jumping.svg";
 export { ReactComponent as DANCER_MALE_1 } from "./dancer-male-1.svg";
 export { ReactComponent as DANCER_MALE_2 } from "./dancer-male-2.svg";
 export { ReactComponent as DANCER_POSE } from "./dancer-pose.svg";
+export { ReactComponent as DELIVERY_VAN } from "./delivery-van-3.svg";
 // F
 export { ReactComponent as FLAG } from "./flag.svg";
 // F

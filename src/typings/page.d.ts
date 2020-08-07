@@ -41,7 +41,7 @@ interface IPageSection extends I__AutoExpand, I__Hide {
   title: string;
   shuffle?: boolean;
   SvgIcon?: ISvgIcon;
-  panelData: IPageSectionPanelDataTypes;
+  data: IPageSectionPanelDataTypes;
   count?: number;
   starCount?: number;
 }

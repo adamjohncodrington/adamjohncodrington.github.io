@@ -12,6 +12,7 @@ export const SOLO: string = "Solo";
 export const COLORED: string = "Coloured";
 export const RETAILERS: string = "Retailers";
 export const COST: string = "Cost";
+export const ORDERED: string = "Ordered";
 export const GIFTS: string = "Gifts";
 
 // Gigs

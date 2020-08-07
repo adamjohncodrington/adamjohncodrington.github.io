@@ -1,5 +1,5 @@
 import { RETAILERS as retailers } from "@constants";
-import { VINYL_COLLECTION as DATA } from "data-raw";
+import { VINYL_PURCHASED as DATA } from "data-raw";
 
 import { mapVinylsToMiniCardPanelDetails } from "./utils";
 

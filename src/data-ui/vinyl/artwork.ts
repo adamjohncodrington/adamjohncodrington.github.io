@@ -1,4 +1,4 @@
-import { VINYL_COLLECTION as DATA } from "data-raw";
+import { VINYL_PURCHASED as DATA } from "data-raw";
 import { APPLE_MUSIC_URL_PREFIX } from "config";
 
 export const ARTWORK: Array<IPhoto> = DATA.map(

@@ -88,6 +88,7 @@ interface IVinyl extends I_Colors, IAlbum, I_Signed {
   gift?: IGift;
   sides: 2 | 4;
   inches: 10 | 12;
+  arrived: boolean;
 }
 
 interface ILocation

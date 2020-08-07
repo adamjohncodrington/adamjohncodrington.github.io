@@ -1,5 +1,5 @@
 import { MUSICIANS as musicians } from "@constants";
-import { VINYL_COLLECTION as DATA } from "data-raw";
+import { VINYL_PURCHASED as DATA } from "data-raw";
 import { getItemCounts } from "utils";
 
 import { mapVinylsToMiniCardPanelDetails } from "./utils";
