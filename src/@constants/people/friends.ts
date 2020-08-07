@@ -78,6 +78,7 @@ export const DARREN_TAYLOR: IFriend = {
   gigs: true,
   theatre: true
 };
+export const LUCY_TWAITE: IFriend = { name: "Lucy Twaite", initials: "LT" };
 export const DAN_SPARROW: IFriend = {
   name: "Dan Sparrow",
   initials: "DS",
