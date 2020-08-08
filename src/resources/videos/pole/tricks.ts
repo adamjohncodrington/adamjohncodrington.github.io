@@ -15,3 +15,19 @@ export const TIGRA_GST: IPoleTricksVideo = {
   instructor: INSTRUCTORS.LAETITIA,
   video: { youtubeId: "FPTjIDKUgXo", ...PORTRAIT_1080P }
 };
+
+export const EXOTICA_1: IPoleTricksVideo = {
+  studio: STUDIOS.EXOTICA_BERMONDSEY,
+  dates: { start: new Date("2018-08-14"), end: new Date("2018-11-27") },
+  category: "tricks",
+  instructor: INSTRUCTORS.VERONICA,
+  video: { youtubeId: "hFsoQH-b3bQ", ...PORTRAIT_1080P }
+};
+
+export const EXOTICA_2: IPoleTricksVideo = {
+  studio: STUDIOS.EXOTICA_BERMONDSEY,
+  dates: { start: new Date("2019-01-28"), end: new Date("2019-04-07") },
+  category: "tricks",
+  instructor: INSTRUCTORS.VERONICA,
+  video: { youtubeId: "F6jSO01xU5I", ...PORTRAIT_1080P }
+};
