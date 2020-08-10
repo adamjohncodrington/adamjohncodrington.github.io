@@ -12,8 +12,39 @@ const {
   RECORDSTORE_ONLINE,
   MUSICIAN_WEB_STORE,
   ROUGH_TRADE_EAST,
+  ROUGH_TRADE_WEST,
   ROUGH_TRADE_NOTTINGHAM
 } = RETAILERS;
+
+export const CARIBOU_OUR_LOVE: IVinyl = {
+  musician: MUSICIANS.CARIBOU,
+  photo: PHOTOS.ALBUM_ARTWORK.CARIBOU_OUR_LOVE,
+  appleMusicId: "our-love/1276611236",
+  title: "Our Love",
+  sides: 2,
+  arrived: true,
+  colors: [BLACK],
+  signed: false,
+  costExcDelivery: 12.99,
+  retailer: ROUGH_TRADE_WEST,
+  inches: 12,
+  year: 2014
+};
+
+export const BEN_HOWARD_EVERY_KINGDOM: IVinyl = {
+  musician: MUSICIANS.BEN_HOWARD,
+  photo: PHOTOS.ALBUM_ARTWORK.BEN_HOWARD_EVERY_KINGDOM,
+  appleMusicId: "every-kingdom/1440804636",
+  title: "Every Kingdom",
+  arrived: true,
+  colors: [BLACK],
+  retailer: MUSICIAN_WEB_STORE,
+  signed: false,
+  inches: 12,
+  costExcDelivery: 9.99,
+  sides: 2,
+  year: 2011
+};
 
 export const AMY_WINEHOUSE_BACK_TO_BLACK: IVinyl = {
   musician: MUSICIANS.AMY_WINEHOUSE,

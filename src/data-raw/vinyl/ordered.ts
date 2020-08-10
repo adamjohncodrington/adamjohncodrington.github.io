@@ -3,27 +3,7 @@ import { PHOTOS } from "resources";
 import { COLORS } from "styles";
 
 const { BLACK, CLEAR } = COLORS;
-const {
-  MUSICIAN_WEB_STORE,
-  ROUGH_TRADE_WEST,
-  MUSIC_MAGPIE,
-  FAT_POSSUM
-} = RETAILERS;
-
-export const BEN_HOWARD_EVERY_KINGDOM: IVinyl = {
-  musician: MUSICIANS.BEN_HOWARD,
-  photo: PHOTOS.ALBUM_ARTWORK.BEN_HOWARD_EVERY_KINGDOM,
-  appleMusicId: "every-kingdom/1440804636",
-  title: "Every Kingdom",
-  arrived: false,
-  colors: [BLACK],
-  retailer: MUSICIAN_WEB_STORE,
-  signed: false,
-  inches: 12,
-  costExcDelivery: 9.99,
-  sides: 2,
-  year: 2011
-};
+const { MUSICIAN_WEB_STORE, MUSIC_MAGPIE, FAT_POSSUM } = RETAILERS;
 
 export const LISSIE_CATCHING_A_TIGER: IVinyl = {
   musician: MUSICIANS.LISSIE,
@@ -54,21 +34,6 @@ export const LANY_MALIBU_NIGHTS: IVinyl = {
   //TODO: VERIFY THAT IT IS CLEAR
   colors: [CLEAR],
   signed: false
-};
-
-export const CARIBOU_OUR_LOVE: IVinyl = {
-  musician: MUSICIANS.CARIBOU,
-  photo: PHOTOS.ALBUM_ARTWORK.CARIBOU_OUR_LOVE,
-  appleMusicId: "our-love/1276611236",
-  title: "Our Love",
-  sides: 2,
-  arrived: false,
-  colors: [BLACK],
-  signed: false,
-  costExcDelivery: 12.99,
-  retailer: ROUGH_TRADE_WEST,
-  inches: 12,
-  year: 2014
 };
 
 export const TAYLOR_SWIFT_FOLKLORE: IVinyl = {
