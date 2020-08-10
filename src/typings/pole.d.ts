@@ -6,11 +6,11 @@ type IPoleCategory =
   | "non-pole"
   | "showcase"
   | "rock"
+  | "quarantine"
   | "tricks";
 
-interface IPoleStudio {
-  name: string;
-  location?: string;
+interface IPoleStudio extends ILocation {
+  branch?: string;
 }
 
 interface IPoleVideo extends I_Video {

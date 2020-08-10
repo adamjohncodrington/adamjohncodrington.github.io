@@ -29,7 +29,7 @@ const EXOTIC: IPageSection = {
 const NON_POLE: IPageSection = {
   SvgIcon: SVG.HOME,
   title: PAGE_SECTION_TITLES.NON_POLE,
-  data: { comingSoon: true }
+  data: { cards: DATA.QUARANTINE }
 };
 
 const SONGS: IPageSection = {

@@ -7,10 +7,12 @@ export const IMPROVISATION: Array<IPoleRoutine> = DATA.filter(
 
 export const EXOTIC: Array<IPoleRoutine> = DATA.filter(
   ({ category }: IPoleRoutine): boolean => category === "exotic-class"
-  // || category === "exotic-improv"
 );
 
 export const CONTEMPORARY: Array<IPoleRoutine> = DATA.filter(
   ({ category }: IPoleRoutine): boolean => category === "contemporary-class"
-  // || category === "contemporary-improv"
+);
+
+export const QUARANTINE: Array<IPoleRoutine> = DATA.filter(
+  ({ category }: IPoleRoutine): boolean => category === "quarantine"
 );

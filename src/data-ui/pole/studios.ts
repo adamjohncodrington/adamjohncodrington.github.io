@@ -39,12 +39,12 @@ const getStudioDetails = (studio: IPoleStudio): Array<IMiniCardPanelDetail> => [
 
 export const STUDIOS: Array<IMiniCard> = Object.values(studios).map(
   (studio: IPoleStudio): IMiniCard => {
-    const { name, location } = studio;
+    const { name, branch } = studio;
     const details: Array<IMiniCardPanelDetail> = getStudioDetails(studio);
     return {
       primaryText: name,
-      sort: [name, location],
-      secondaryText: location,
+      sort: [name, branch],
+      secondaryText: branch,
       primaryCount: details.length,
       details
     };

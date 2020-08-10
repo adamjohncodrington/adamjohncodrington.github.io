@@ -53,3 +53,57 @@ export const JAMES_BLAKE_ARE_YOU_EVEN_REAL: ISong = {
   title: "Are You Even Real?",
   year: 2020
 };
+
+export const SEREDA_I_GOT_YOU: ISong = {
+  musician: MUSICIANS.SEREDA,
+  title: "I Got You",
+  year: 2017
+};
+
+export const CHARLI_XCX_5_IN_THE_MORNING: ISong = {
+  musician: MUSICIANS.CHARLI_XCX,
+  title: "5 in the Morning",
+  year: 2018
+};
+
+export const HER_FOCUS: ISong = {
+  musician: MUSICIANS.HER,
+  title: "Focus",
+  year: 2016
+};
+
+export const JP_COOPER_BIRTHDAY: ISong = {
+  musician: MUSICIANS.JP_COOPER,
+  title: "Birthday",
+  year: 2017
+};
+
+export const NICKI_MINAJ_CHUN_LI: ISong = {
+  musician: MUSICIANS.NICKI_MINAJ,
+  title: "Chun-Li",
+  year: 2018
+};
+
+export const JESSIE_REYEZ_FIGURES: ISong = {
+  musician: MUSICIANS.JESSIE_REYEZ,
+  title: "Figures",
+  year: 2016
+};
+
+export const JUSTIN_BIEBER_YUMMY: ISong = {
+  musician: MUSICIANS.JUSTIN_BIEBER,
+  title: "Yummy",
+  year: 2020
+};
+
+export const TRUTH_LOOK_AROUND: ISong = {
+  musician: MUSICIANS.TRUTH,
+  title: "Look Around",
+  year: 2015
+};
+
+export const TOMMEE_PROFITT_PULL_THAT_TRIGGER: ISong = {
+  musician: MUSICIANS.TOMMEE_PROFITT,
+  title: "Pull That Trigger",
+  year: 2019
+};

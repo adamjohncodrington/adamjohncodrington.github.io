@@ -12,6 +12,8 @@ import * as TICKET_TYPES from "./ticket-types";
 import * as UNICODE from "./unicode";
 import * as RETAILERS from "./retailers";
 
+export const HOME: ILocation = { name: "Home" };
+
 export * from "./ingredients";
 export * from "./music-venues";
 export * from "./sainsburys";

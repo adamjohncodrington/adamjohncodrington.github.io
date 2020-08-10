@@ -21,6 +21,24 @@ export const ALMA: IMusician = { name: "Alma" };
 export const AMOS_LEE: IMusician = { name: "Amos Lee" };
 export const ANNA_OF_THE_NORTH: IMusician = { name: "Anna of the North" };
 export const ANASTACIA: IMusician = { name: "Anastacia" };
+export const HER: IMusician = { name: "H.E.R.", excludeFromBucketList: true };
+export const TRUTH: IMusician = { name: "Truth", excludeFromBucketList: true };
+export const TOMMEE_PROFITT: IMusician = {
+  name: "Tommee Profitt",
+  excludeFromBucketList: true
+};
+export const SEREDA: IMusician = {
+  name: "Sereda",
+  excludeFromBucketList: true
+};
+export const JESSIE_REYEZ: IMusician = {
+  name: "Jessie Reyez",
+  excludeFromBucketList: true
+};
+export const JP_COOPER: IMusician = {
+  name: "JP Cooper",
+  excludeFromBucketList: true
+};
 export const ANNE_MARIE: IMusician = { name: "Anne-Marie" };
 export const AQUILO: IMusician = { name: "Aquilo" };
 export const AUDITION_THE: IMusician = { name: "Audition, The" };
