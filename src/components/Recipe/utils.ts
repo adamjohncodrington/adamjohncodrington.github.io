@@ -1,8 +1,6 @@
 import { generateIngredientListItem } from "utils";
 
-export const mapMethodToListItems = (
-  method: Array<string>
-): Array<IRecipeListItem> =>
+export const mapMethodToListItems = (method: string[]): IRecipeListItem[] =>
   method.map(
     (item: string): IRecipeListItem => ({
       listItemText: item,
@@ -11,8 +9,8 @@ export const mapMethodToListItems = (
   );
 
 export const mapServeWithToListItems = (
-  serveWith: Array<Array<IRecipeIngredient>>
-): Array<IRecipeListItem> => {
+  serveWith: IRecipeIngredient[][]
+): IRecipeListItem[] => {
   const getServeWithListItem = (
     lineOptions: Array<IRecipeIngredient>
   ): string => {
@@ -38,9 +36,9 @@ export const mapServeWithToListItems = (
 };
 
 export const mapIngredientsToListItems = (
-  ingredientsGroups: Array<Array<IRecipeIngredient>>
-): Array<IRecipeListItem> => {
-  let ingredientsWithPaddingFlags: Array<IRecipeListItem> = [];
+  ingredientsGroups: IRecipeIngredient[][]
+): IRecipeListItem[] => {
+  let ingredientsWithPaddingFlags: IRecipeListItem[] = [];
   ingredientsGroups.forEach(
     (ingredientsGroup: Array<IRecipeIngredient>, INDEX_HIGH: number) => {
       ingredientsGroup.forEach(

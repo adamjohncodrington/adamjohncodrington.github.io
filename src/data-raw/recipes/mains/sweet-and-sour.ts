@@ -1,7 +1,7 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
 import { calculateRecipeCost } from "utils";
 
-const ingredients: Array<Array<IRecipeIngredient>> = [
+const ingredients: IRecipeIngredient[][] = [
   [
     {
       ingredient: INGREDIENTS.CORNFLOUR,
@@ -83,7 +83,7 @@ const serveWith: Array<Array<IServeWithItem>> = [
   [{ ingredient: INGREDIENTS.RICE_BASMATI }]
 ];
 
-const method: Array<string> = [
+const method: string[] = [
   "mix cornflour with water, set solution aside",
   "fry crushed garlic and grated ginger in a small saucepan for 1 minute",
   "pour over soy, vinegar, ketchup, crushed chillis and water",

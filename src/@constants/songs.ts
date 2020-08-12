@@ -78,6 +78,42 @@ export const JP_COOPER_BIRTHDAY: ISong = {
   year: 2017
 };
 
+export const CRUEL_YOUTH_DEVIL_IN_PARADISE: ISong = {
+  musician: MUSICIANS.CRUEL_YOUTH,
+  title: "Devil in Paradise",
+  year: 2018
+};
+
+export const JANIS_JOPLIN_GET_IT_WHILE_YOU_CAN: ISong = {
+  musician: MUSICIANS.JANIS_JOPLIN,
+  title: "Get it While You Can",
+  year: 1971
+};
+
+export const LUDOVICO_EINAUDI_I_GIORNI: ISong = {
+  musician: MUSICIANS.LUDOVICO_EINAUDI,
+  title: "I Giorni",
+  year: 2018
+};
+
+export const VANESSA_WAGNER_ELF_DANCE: ISong = {
+  musician: MUSICIANS.VANESSA_WAGNER,
+  title: "Elf Dance",
+  year: 2019
+};
+
+export const JUDY_GARLAND_HAVE_YOURSELF_A_MERRY_LITTLE_CHRISTMAS: ISong = {
+  musician: MUSICIANS.JUDY_GARLAND,
+  title: "Have Yourself a Merry Little Christmas",
+  year: 1943
+};
+
+export const ANNIE_LENNOX_I_PUT_A_SPELL_ON_YOU: ISong = {
+  musician: MUSICIANS.ANNIE_LENNOX,
+  title: "I Put a Spell on You",
+  year: 2015
+};
+
 export const NICKI_MINAJ_CHUN_LI: ISong = {
   musician: MUSICIANS.NICKI_MINAJ,
   title: "Chun-Li",

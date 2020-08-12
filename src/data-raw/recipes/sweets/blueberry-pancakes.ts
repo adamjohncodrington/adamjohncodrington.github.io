@@ -2,7 +2,7 @@ import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
 import { PHOTOS } from "resources";
 import { calculateRecipeCost } from "utils";
 
-const ingredients: Array<Array<IRecipeIngredient>> = [
+const ingredients: IRecipeIngredient[][] = [
   [
     {
       ingredient: INGREDIENTS.FLOUR_SELF_RAISING,
@@ -44,7 +44,7 @@ const serveWith: Array<Array<IServeWithItem>> = [
   [{ ingredient: INGREDIENTS.CINNAMON_GROUND }]
 ];
 
-const method: Array<string> = [
+const method: string[] = [
   "whisk all ingredients except blueberries",
   "fold blueberries into pancake batter",
   "brush frying pan with sunflower oil and heat",

@@ -5,7 +5,7 @@ interface IArrayToStringOptions {
 }
 
 export const arrayToString = (
-  stringArray: Array<string>,
+  stringArray: string[],
   options?: IArrayToStringOptions
 ): string => {
   const useAmpersandsForPair: boolean = !!(

@@ -9,7 +9,7 @@ import { calculateRecipeCost } from "utils";
 
 const { preheatOven } = RECIPE_METHOD_ENTRIES;
 
-const ingredients: Array<Array<IRecipeIngredient>> = [
+const ingredients: IRecipeIngredient[][] = [
   [
     {
       ingredient: INGREDIENTS.FLOUR_PLAIN,
@@ -68,7 +68,7 @@ const serveWith: Array<Array<IServeWithItem>> = [
   [{ ingredient: INGREDIENTS.CREAM_OAT }]
 ];
 
-const method: Array<string> = [
+const method: string[] = [
   preheatOven({ degreesCelcius: 160 }),
   "mix sieved flour and sieved caster sugar",
   "introduce chunks of butter, use fingertips to form light crumble but don't overwork",

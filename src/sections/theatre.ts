@@ -34,7 +34,7 @@ const UP_NEXT: IPageSection = {
   data: { cards: DATA.UP_NEXT }
 };
 
-const YEARS: Array<IPageSection> = DATA.YEARS.map(
+const YEARS: IPageSection[] = DATA.YEARS.map(
   (year: Array<ICard>): IPageSection => ({
     title: year[0].dates
       ? year[0].dates[0].getFullYear().toString()
@@ -46,7 +46,7 @@ const YEARS: Array<IPageSection> = DATA.YEARS.map(
   })
 );
 
-export const THEATRE: Array<IPageSection> = [
+export const THEATRE: IPageSection[] = [
   ACTORS,
   FRIENDS,
   PLAYS,

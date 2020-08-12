@@ -69,7 +69,7 @@ const VIDEOS: IPageSection = {
   count: DATA.VIDEOS.length
 };
 
-const YEARS: Array<IPageSection> = DATA.YEARS.map(
+const YEARS: IPageSection[] = DATA.YEARS.map(
   (year: Array<ICard>): IPageSection => ({
     title: year[0].dates
       ? year[0].dates[0].getFullYear().toString()
@@ -79,7 +79,7 @@ const YEARS: Array<IPageSection> = DATA.YEARS.map(
   })
 );
 
-export const GIGS: Array<IPageSection> = [
+export const GIGS: IPageSection[] = [
   MUSICIANS,
   BUCKET_LIST,
   FAVOURITES,

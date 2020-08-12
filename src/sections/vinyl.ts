@@ -73,7 +73,7 @@ const WISH_LIST: IPageSection = {
   count: DATA.WISH_LIST.length
 };
 
-const YEARS: Array<IPageSection> = DATA.YEARS.map(
+const YEARS: IPageSection[] = DATA.YEARS.map(
   (year: Array<ICard>): IPageSection => ({
     title: year[0].year
       ? year[0].year.toString()
@@ -83,7 +83,7 @@ const YEARS: Array<IPageSection> = DATA.YEARS.map(
   })
 );
 
-export const VINYL: Array<IPageSection> = [
+export const VINYL: IPageSection[] = [
   MUSICIANS,
   ARTWORK,
   COLORS,

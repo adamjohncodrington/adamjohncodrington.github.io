@@ -7,7 +7,7 @@ import {
 
 const { preheatOven, FOLD_IN_FLOUR_MIX, bakeForAbout } = RECIPE_METHOD_ENTRIES;
 
-const ingredients: Array<Array<IRecipeIngredient>> = [
+const ingredients: IRecipeIngredient[][] = [
   [
     {
       ingredient: INGREDIENTS.CHOCOLATE_DARK,
@@ -59,7 +59,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   ]
 ];
 
-const method: Array<string> = [
+const method: string[] = [
   preheatOven({ degreesCelcius: 150 }),
   "in a large mixing bowl, add chocolate (broken into chunks), oil and butter",
   "rest the large mixing bowl over a small saucepan of hot (not boiling) water and stir until melted, then remove from heat",

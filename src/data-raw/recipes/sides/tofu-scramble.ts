@@ -1,7 +1,7 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
 import { calculateRecipeCost } from "utils";
 
-const ingredients: Array<Array<IRecipeIngredient>> = [
+const ingredients: IRecipeIngredient[][] = [
   [
     {
       ingredient: INGREDIENTS.TOFU,
@@ -56,7 +56,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   ]
 ];
 
-const method: Array<string> = [
+const method: string[] = [
   "drain tofu, crumble into small pieces (using both fingers) into a large mixing bowl",
   "in a small jug, make paste from yeast, turmeric, paprika, salt, pepper, thyme, water and oil",
   "pour the paste over the crumbled tofu and stir until evenly covered",

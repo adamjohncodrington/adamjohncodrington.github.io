@@ -10,7 +10,7 @@ import { calculateRecipeCost } from "utils";
 
 const { preheatOven } = RECIPE_METHOD_ENTRIES;
 
-const ingredients: Array<Array<IRecipeIngredient>> = [
+const ingredients: IRecipeIngredient[][] = [
   [
     { ingredient: INGREDIENTS.ONION_WHITE_MEDIUM, quantity: 2 },
     { ingredient: INGREDIENTS.PEPPER_MIXED, quantity: 3 },
@@ -111,7 +111,7 @@ const serveWith: Array<Array<IServeWithItem>> = [
   [{ ingredient: INGREDIENTS.BREAD_GARLIC }]
 ];
 
-const method: Array<string> = [
+const method: string[] = [
   "fry diced onion in oil and water for at least 5 minutes",
   "add diced peppers, mushrooms, crushed garlic and fry for at least 10 minutes (replenishing the water to prevent burning)",
   `blend basil with stock powder, dried herbs, soy sauce, black pepper, balsamic vinegar, ${UNICODE.TOMATO_PUREE}, sugar and some water`,

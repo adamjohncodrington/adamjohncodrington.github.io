@@ -41,10 +41,10 @@ interface IRecipe extends I__Favourite, I__Hide {
   title: string;
   makes?: IRecipeMakes;
   photo?: IPhoto;
-  ingredients: Array<Array<IRecipeIngredient>>;
+  ingredients: IRecipeIngredient[][];
   serveWith?: Array<Array<IServeWithItem>>;
   diet: IRecipeDiet;
-  method: Array<string>;
+  method: string[];
   newRecipe?: boolean;
   totalCost?: number;
   portionCost?: number;

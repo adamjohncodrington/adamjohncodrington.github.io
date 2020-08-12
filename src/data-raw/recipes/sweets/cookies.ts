@@ -8,7 +8,7 @@ import { calculateRecipeCost } from "utils";
 
 const { preheatOven, bakeForAbout } = RECIPE_METHOD_ENTRIES;
 
-const ingredients: Array<Array<IRecipeIngredient>> = [
+const ingredients: IRecipeIngredient[][] = [
   [
     {
       ingredient: INGREDIENTS.FLOUR_PLAIN,
@@ -67,7 +67,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
 const title: string = "Cookies";
 const makes: IRecipeMakes = { quantity: 20 };
 const diet: IRecipeDiet = DIETS.VEGETARIAN;
-const method: Array<string> = [
+const method: string[] = [
   "in a small mixing bowl, combine flour with cinnamon, baking soda and salt",
   "in a large mixing bowl, cream butter with both types of sugar for 1-2 minutes",
   "whisk in egg and vanilla extract to wet ingredients",

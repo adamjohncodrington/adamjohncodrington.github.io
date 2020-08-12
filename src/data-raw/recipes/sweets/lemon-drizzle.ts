@@ -12,7 +12,7 @@ const {
   bakeForAbout
 } = RECIPE_METHOD_ENTRIES;
 
-const ingredients: Array<Array<IRecipeIngredient>> = [
+const ingredients: IRecipeIngredient[][] = [
   [
     {
       ingredient: INGREDIENTS.MILK_COCONUT_CANNED,
@@ -75,7 +75,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   ]
 ];
 
-const method: Array<string> = [
+const method: string[] = [
   preheatOven({ degreesCelcius: 150 }),
   "in a large mixing bowl, whisk the coconut milk with the sugar, oil and lemon juice for at least 3 minutes",
   "stir in the lemon zest, vanilla extract and lemon extract",

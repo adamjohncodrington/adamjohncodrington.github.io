@@ -35,7 +35,7 @@ const StyledRouterLink = styled(RouterLink)(
 );
 
 interface INavBar {
-  pages: Array<IPage>;
+  pages: IPage[];
 }
 
 export const NavBar: React.FC<INavBar> = ({ pages }) => (

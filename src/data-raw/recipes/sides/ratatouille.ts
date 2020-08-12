@@ -9,7 +9,7 @@ import { calculateRecipeCost } from "utils";
 
 const { preheatOven } = RECIPE_METHOD_ENTRIES;
 
-const ingredients: Array<Array<IRecipeIngredient>> = [
+const ingredients: IRecipeIngredient[][] = [
   [
     { ingredient: INGREDIENTS.AUBERGINE, quantity: 1 },
     { ingredient: INGREDIENTS.PEPPER_RED, quantity: 1 },
@@ -71,7 +71,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   ]
 ];
 
-const method: Array<string> = [
+const method: string[] = [
   preheatOven({ degreesCelcius: 180 }),
   "chunkily chop the aubergine, courgette, peppers and onions and distribute evenly across 2 baking trays",
   "drizzle the vegetables in oil, ensuring they are evenly coated, plus season with salt and pepper",

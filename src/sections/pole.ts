@@ -59,10 +59,10 @@ const TRICKS: IPageSection = {
 const SHOWCASE: IPageSection = {
   SvgIcon: SVG.STARS,
   title: PAGE_SECTION_TITLES.SHOWCASE,
-  data: { comingSoon: true }
+  data: { cards: DATA.SHOWCASE }
 };
 
-export const POLE: Array<IPageSection> = [
+export const POLE: IPageSection[] = [
   TRICKS,
   CONTEMPORARY,
   EXOTIC,

@@ -2,7 +2,7 @@ import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
 import { PHOTOS } from "resources";
 import { calculateRecipeCost } from "utils";
 
-const ingredients: Array<Array<IRecipeIngredient>> = [
+const ingredients: IRecipeIngredient[][] = [
   [
     {
       ingredient: INGREDIENTS.OIL_OLIVE,
@@ -65,7 +65,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   ]
 ];
 
-const method: Array<string> = [
+const method: string[] = [
   "fry diced onion, garlic and pepper in oil (and some water if need be) for 5-10 minutes",
   "transfer to slow cooker along with drained beans, passata and seasoning",
   "cook on low for 8 hours or medium for 5 hours"

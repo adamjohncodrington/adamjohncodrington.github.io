@@ -4,6 +4,6 @@ import { SIDES } from "./sides";
 import { SWEETS } from "./sweets";
 import * as comingSoon from "./coming-soon";
 
-const COMING_SOON: Array<string> = Object.values(comingSoon);
+const COMING_SOON: string[] = Object.values(comingSoon);
 
 export const RECIPES = { MAINS, SAUCES, SIDES, SWEETS, COMING_SOON };

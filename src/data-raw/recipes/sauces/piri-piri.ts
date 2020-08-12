@@ -2,7 +2,7 @@ import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
 import { PHOTOS } from "resources";
 import { calculateRecipeCost } from "utils";
 
-const ingredients: Array<Array<IRecipeIngredient>> = [
+const ingredients: IRecipeIngredient[][] = [
   [
     { ingredient: INGREDIENTS.PEPPER_RED, quantity: 1 },
     { ingredient: INGREDIENTS.ONION_WHITE_MEDIUM, quantity: 1 },
@@ -49,7 +49,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   ]
 ];
 
-const method: Array<string> = [
+const method: string[] = [
   "transfer all ingredients to blender and blitz until smooth",
   "transfer to a saucepan and heat on low for about 20 minutes",
   "remove from heat, leave to cool",

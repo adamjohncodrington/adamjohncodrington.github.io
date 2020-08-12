@@ -1,3 +1,3 @@
 import { PHOTOS as photos } from "resources";
 
-export const PHOTOS: Array<IPhoto> = Object.values(photos.RECIPES);
+export const PHOTOS: IPhoto[] = Object.values(photos.RECIPES);

@@ -9,7 +9,7 @@ import { calculateRecipeCost } from "utils";
 
 const { preheatOven } = RECIPE_METHOD_ENTRIES;
 
-const ingredients: Array<Array<IRecipeIngredient>> = [
+const ingredients: IRecipeIngredient[][] = [
   [
     {
       ingredient: INGREDIENTS.APRICOTS_DRIED,
@@ -54,7 +54,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   ]
 ];
 
-const method: Array<string> = [
+const method: string[] = [
   preheatOven({ degreesCelcius: 150 }),
   "in a large mixing bowl, stir finely chopped fruit and salt into the oats",
   "melt butter in a saucepan with golden syrup and sugar",

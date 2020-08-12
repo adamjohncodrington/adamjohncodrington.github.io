@@ -7,7 +7,7 @@ import {
   getFestivalSubtitle
 } from "utils";
 
-export const mapGigsToMusicEvents = (gigs: Array<IGig>): Array<IMusicEvent> => {
+export const mapGigsToMusicEvents = (gigs: IGig[]): Array<IMusicEvent> => {
   const mapGigToMusicEvent = (gig: IGig): IMusicEvent => ({
     ...gig,
     gig,
@@ -20,7 +20,7 @@ export const mapGigsToMusicEvents = (gigs: Array<IGig>): Array<IMusicEvent> => {
 };
 
 export const mapFestivalsToMusicEvents = (
-  festivals: Array<IFestival>
+  festivals: IFestival[]
 ): Array<IMusicEvent> => {
   const mapFestivalToMusicEvent = (festival: IFestival): IMusicEvent => ({
     ...festival,

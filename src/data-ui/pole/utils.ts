@@ -1,7 +1,7 @@
 import { getDateText, getSymbols, getDatesText } from "utils";
 
 export const mapPoleRoutinesToCards = (
-  poleVideos: Array<IPoleRoutine>
+  poleVideos: IPoleRoutine[]
 ): Array<ICard> => {
   const mapPoleRoutineToCard = ({
     date,
@@ -22,7 +22,7 @@ export const mapPoleRoutinesToCards = (
 };
 
 export const mapPoleTricksVideosToCards = (
-  poleTricksVideos: Array<IPoleTricksVideo>
+  poleTricksVideos: IPoleTricksVideo[]
 ): Array<ICard> => {
   const mapPoleTricksVideoToCard = ({
     dates: { start, end },

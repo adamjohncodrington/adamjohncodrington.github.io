@@ -39,7 +39,7 @@ const COMING_SOON: IPageSection = {
   data: { miniCards: DATA_GEN.COMING_SOON }
 };
 
-export const RECIPES: Array<IPageSection> = [
+export const RECIPES: IPageSection[] = [
   MAINS,
   SIDES,
   SAUCES,

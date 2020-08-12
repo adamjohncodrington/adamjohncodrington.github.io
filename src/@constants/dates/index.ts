@@ -3,7 +3,7 @@ import * as TRAVEL from "./travel";
 
 export { GIGS, TRAVEL };
 
-export const DAYS_OF_THE_WEEK: Array<string> = [
+export const DAYS_OF_THE_WEEK: string[] = [
   "Sun",
   "Mon",
   "Tue",
@@ -13,7 +13,7 @@ export const DAYS_OF_THE_WEEK: Array<string> = [
   "Sat"
 ];
 
-export const MONTHS: Array<string> = [
+export const MONTHS: string[] = [
   "Jan",
   "Feb",
   "Mar",

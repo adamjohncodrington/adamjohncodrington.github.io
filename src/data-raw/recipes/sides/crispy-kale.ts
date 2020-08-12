@@ -9,7 +9,7 @@ import { calculateRecipeCost } from "utils";
 
 const { preheatOven } = RECIPE_METHOD_ENTRIES;
 
-const ingredients: Array<Array<IRecipeIngredient>> = [
+const ingredients: IRecipeIngredient[][] = [
   [
     {
       ingredient: INGREDIENTS.KALE,
@@ -51,7 +51,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   ]
 ];
 
-const method: Array<string> = [
+const method: string[] = [
   preheatOven({ degreesCelcius: 100 }),
   "wash and dry kale thoroughly, discard large stems, transfer to large mixing bowl",
   "mix oil with seasoning in a small jug",

@@ -10,6 +10,26 @@ export const GALLANT: IMusician = {
   name: "Gallant",
   excludeFromBucketList: true
 };
+export const VANESSA_WAGNER: IMusician = {
+  name: "Vanessa Wagner",
+  excludeFromBucketList: true
+};
+export const LUDOVICO_EINAUDI: IMusician = {
+  name: "Ludovico Einaudi",
+  excludeFromBucketList: true
+};
+export const JANIS_JOPLIN: IMusician = {
+  name: "Janis Joplin",
+  excludeFromBucketList: true
+};
+export const JUDY_GARLAND: IMusician = {
+  name: "Judy Garland",
+  excludeFromBucketList: true
+};
+export const ANNIE_LENNOX: IMusician = {
+  name: "Annie Lennox",
+  excludeFromBucketList: true
+};
 export const GRIFF: IMusician = { name: "Griff" };
 export const MOTORHEAD: IMusician = {
   name: "Motörhead",

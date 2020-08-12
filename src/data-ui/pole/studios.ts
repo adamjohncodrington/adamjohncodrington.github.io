@@ -6,22 +6,19 @@ import {
   mapPoleTricksVideoToMiniCardDetail
 } from "./utils";
 
-const getStudioRoutineMatches = (studio: IPoleStudio): Array<IPoleRoutine> =>
+const getStudioRoutineMatches = (studio: IPoleStudio): IPoleRoutine[] =>
   POLE_ROUTINES.reduce(
-    (
-      matches: Array<IPoleRoutine>,
-      routine: IPoleRoutine
-    ): Array<IPoleRoutine> =>
+    (matches: IPoleRoutine[], routine: IPoleRoutine): IPoleRoutine[] =>
       routine.studio === studio ? [...matches, routine] : matches,
     []
   );
 
-const getStudioTricksMatches = (studio: IPoleStudio): Array<IPoleTricksVideo> =>
+const getStudioTricksMatches = (studio: IPoleStudio): IPoleTricksVideo[] =>
   POLE_TRICKS_VIDEOS.reduce(
     (
-      matches: Array<IPoleTricksVideo>,
+      matches: IPoleTricksVideo[],
       tricksVideo: IPoleTricksVideo
-    ): Array<IPoleTricksVideo> =>
+    ): IPoleTricksVideo[] =>
       tricksVideo.studio === studio ? [...matches, tricksVideo] : matches,
     []
   );

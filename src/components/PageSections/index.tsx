@@ -11,7 +11,7 @@ import {
 import { PageSection } from "../PageSection";
 
 interface IPageSections {
-  pageSections: Array<IPageSection>;
+  pageSections: IPageSection[];
 }
 
 export const PageSections: FC<IPageSections> = ({ pageSections }) => {
@@ -20,28 +20,28 @@ export const PageSections: FC<IPageSections> = ({ pageSections }) => {
   }: ITheme = useThemeContext();
   const { pageUses2Columns } = useMediaQueries();
 
-  const unhiddenPageSections: Array<IPageSection> = pageSections.filter(
+  const unhiddenPageSections: IPageSection[] = pageSections.filter(
     ({ hide }: IPageSection): boolean => !hide
   );
 
-  const datafulPageSections: Array<IPageSection> = unhiddenPageSections.filter(
+  const datafulPageSections: IPageSection[] = unhiddenPageSections.filter(
     ({ data }: IPageSection): boolean => validPageSectionData(data)
   );
 
   const validPageSectionCount: number = datafulPageSections.length;
 
-  const sortedValidPageSections: Array<IPageSection> = datafulPageSections;
+  const sortedValidPageSections: IPageSection[] = datafulPageSections;
 
-  const pageSectionsCol1: Array<IPageSection> = sortedValidPageSections.filter(
+  const pageSectionsCol1: IPageSection[] = sortedValidPageSections.filter(
     (pageSection: IPageSection, index: number): boolean =>
       index < validPageSectionCount / 2
   );
-  const pageSectionsCol2: Array<IPageSection> = sortedValidPageSections.filter(
+  const pageSectionsCol2: IPageSection[] = sortedValidPageSections.filter(
     (pageSection: IPageSection): boolean =>
       !pageSectionsCol1.includes(pageSection)
   );
 
-  const pageSectionColumns: Array<Array<IPageSection>> = pageUses2Columns
+  const pageSectionColumns: IPageSection[][] = pageUses2Columns
     ? [pageSectionsCol1, pageSectionsCol2]
     : [sortedValidPageSections];
 
@@ -52,7 +52,7 @@ export const PageSections: FC<IPageSections> = ({ pageSections }) => {
       equalWidthColumns={true}
     >
       {pageSectionColumns.map(
-        (pageSectionColumn: Array<IPageSection>, index: number) => (
+        (pageSectionColumn: IPageSection[], index: number) => (
           <Ul key={index} data-test={"page-column-" + (index + 1)}>
             {pageSectionColumn.map(
               (pageSection: IPageSection, index: number) => (

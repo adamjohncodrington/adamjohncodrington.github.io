@@ -19,7 +19,7 @@ const PageShell = styled.main(
 );
 
 export const App: FC = () => {
-  const PAGES: Array<IPage> = pages.filter(({ hide }: IPage): boolean => !hide);
+  const PAGES: IPage[] = pages.filter(({ hide }: IPage): boolean => !hide);
   return (
     <BrowserRouter>
       <Switch>

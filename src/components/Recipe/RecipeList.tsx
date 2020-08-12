@@ -35,7 +35,7 @@ const StyledListTitle = styled.div`
 
 interface IRecipeList {
   title: string;
-  listItems: Array<IRecipeListItem>;
+  listItems: IRecipeListItem[];
   showBullets?: boolean;
 }
 

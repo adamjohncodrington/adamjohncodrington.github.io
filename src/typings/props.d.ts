@@ -57,11 +57,11 @@ interface I__Date {
 }
 
 interface I_Photos {
-  photos: Array<IPhoto>;
+  photos: IPhoto[];
 }
 
 interface I__Photos {
-  photos?: Array<IPhoto>;
+  photos?: IPhoto[];
 }
 
 interface I_Date {
@@ -97,7 +97,7 @@ interface I__BorderRadius {
 }
 
 interface I_Colors {
-  colors: Array<string>;
+  colors: string[];
 }
 
 interface I_Dates {

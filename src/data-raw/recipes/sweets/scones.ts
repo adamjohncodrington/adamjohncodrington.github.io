@@ -8,7 +8,7 @@ import { calculateRecipeCost } from "utils";
 
 const { preheatOven, bakeForAbout } = RECIPE_METHOD_ENTRIES;
 
-const ingredients: Array<Array<IRecipeIngredient>> = [
+const ingredients: IRecipeIngredient[][] = [
   [
     {
       ingredient: INGREDIENTS.FLOUR_PLAIN,
@@ -48,7 +48,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   ]
 ];
 
-const method: Array<string> = [
+const method: string[] = [
   preheatOven({ degreesCelcius: 200, bakingTray: true }),
   "sieve flour and baking powder, combine with sugar and salt",
   "add butter, use fingertips to form fine crumbs",

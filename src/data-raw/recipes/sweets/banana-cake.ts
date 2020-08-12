@@ -15,7 +15,7 @@ const {
   transferToLoafTin
 } = RECIPE_METHOD_ENTRIES;
 
-const ingredients: Array<Array<IRecipeIngredient>> = [
+const ingredients: IRecipeIngredient[][] = [
   [
     { ingredient: INGREDIENTS.BANANA, quantity: 4, notes: "very ripe" },
     {
@@ -91,7 +91,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   ]
 ];
 
-const method: Array<string> = [
+const method: string[] = [
   preheatOven({ degreesCelcius: 150 }),
   "blend (peeled) bananas with butter, sugar, oil and vanilla",
   "in a small mixing bowl, weigh flour and stir in the baking powder, bicarbonate of soda, cinnamon and nutmeg",

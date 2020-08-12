@@ -2,7 +2,7 @@ import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
 import { PHOTOS } from "resources";
 import { calculateRecipeCost } from "utils";
 
-const ingredients: Array<Array<IRecipeIngredient>> = [
+const ingredients: IRecipeIngredient[][] = [
   [
     { ingredient: INGREDIENTS.POTATO_BAKING, quantity: 3 },
     {
@@ -24,7 +24,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   ]
 ];
 
-const method: Array<string> = [
+const method: string[] = [
   "peel potatoes and chop into small-ish chunks (to speed up the boiling process)",
   "submerge potato chunks in boiling water for at least 25 minutes (until soft enough to easily mash)",
   "drain the boiling water, then use a masher to break down the potato",

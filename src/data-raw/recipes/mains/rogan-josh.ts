@@ -2,7 +2,7 @@ import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
 import { PHOTOS } from "resources";
 import { calculateRecipeCost } from "utils";
 
-const ingredients: Array<Array<IRecipeIngredient>> = [
+const ingredients: IRecipeIngredient[][] = [
   [
     {
       ingredient: INGREDIENTS.OIL_OLIVE,
@@ -63,7 +63,7 @@ const serveWith: Array<Array<IServeWithItem>> = [
   [{ ingredient: INGREDIENTS.KALE }, { ingredient: INGREDIENTS.POPPADOMS }]
 ];
 
-const method: Array<string> = [
+const method: string[] = [
   "fry diced onion in oil, curry paste and some water on a medium heat for at least 10 minutes",
   "meanwhile, blend coriander with some water",
   "add grated ginger, diced sweet potato, drained chickpeas and blended coriander to frying pan",

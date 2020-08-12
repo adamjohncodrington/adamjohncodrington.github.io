@@ -5,7 +5,7 @@ import {
 } from "./console-logs";
 
 export const calculateRecipeCost = (
-  ingredients: Array<Array<IRecipeIngredient>>,
+  ingredients: IRecipeIngredient[][],
   title: string
 ): number => {
   if (title) consoleLogRecipeTitle(title);

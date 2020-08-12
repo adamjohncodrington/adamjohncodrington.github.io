@@ -64,7 +64,7 @@ const getVinylSymbolBackground = ({
     : colors[0];
 };
 
-const getVinylSymbolBorder = (colors: Array<string>): string =>
+const getVinylSymbolBorder = (colors: string[]): string =>
   colors[0] === COLORS.CLEAR
     ? BORDER_HALF_PX_SOLID_GREY
     : // : colors === COLORS.VINYL.PVRIS_AWKOHAWNOH

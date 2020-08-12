@@ -3,7 +3,7 @@ import { PHOTOS } from "resources";
 
 import { calculateRecipeCost } from "utils";
 
-const ingredients: Array<Array<IRecipeIngredient>> = [
+const ingredients: IRecipeIngredient[][] = [
   [
     {
       ingredient: INGREDIENTS.OATS,
@@ -34,11 +34,11 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   ]
 ];
 
-const serveWith: Array<Array<IRecipeIngredient>> = [
+const serveWith: IRecipeIngredient[][] = [
   [{ ingredient: INGREDIENTS.NECTAR_AGAVE }]
 ];
 
-const method: Array<string> = [
+const method: string[] = [
   "transfer measured oats, water and Oatly to saucepan",
   "heat moderately and continuously stir so it never sticks to the pan",
   "add frozen raspberries and cinnamon shortly after",

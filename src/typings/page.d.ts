@@ -4,7 +4,7 @@ interface IPage extends I__Hide {
   title: string;
   path: string;
   SvgIcon: ISvgIcon;
-  sections: Array<IPageSection>;
+  sections: IPageSection[];
   count?: number;
   color?: ColorValue;
 }
@@ -13,13 +13,13 @@ interface IPageSectionItemDataTypes {
   musicEvents?: Array<IMusicEvent>;
   theatreVisits?: Array<ITheatreVisit>;
   tripLegs?: Array<ITripLeg>;
-  poleRoutines?: Array<IPoleRoutine>;
+  poleRoutines?: IPoleRoutine[];
   gigVideos?: Array<IGigVideo>;
   festivalVideos?: Array<IFestivalVideo>;
   travelVideos?: Array<ITravelVideo>;
   vinyls?: Array<IAlbum>;
-  festivals?: Array<IFestival>;
-  gigs?: Array<IGig>;
+  festivals?: IFestival[];
+  gigs?: IGig[];
 }
 
 interface ICosts {

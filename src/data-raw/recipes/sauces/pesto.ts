@@ -1,7 +1,7 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
 import { calculateRecipeCost } from "utils";
 
-const ingredients: Array<Array<IRecipeIngredient>> = [
+const ingredients: IRecipeIngredient[][] = [
   [
     {
       ingredient: INGREDIENTS.BASIL_FRESH,
@@ -56,7 +56,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   ]
 ];
 
-const method: Array<string> = [
+const method: string[] = [
   "transfer all ingredients to blender",
   "blend until smooth",
   "store in refrigerator for up to 1 week"

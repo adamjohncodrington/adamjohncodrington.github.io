@@ -2,9 +2,9 @@ import { FESTIVAL_TITLES as festivals } from "@constants";
 import { FESTIVALS as DATA } from "data-raw";
 import { getItemCounts, getFestivalSubtitle } from "utils";
 
-const getFestivalMatches = (festivalTitle: IFestivalTitle): Array<IFestival> =>
+const getFestivalMatches = (festivalTitle: IFestivalTitle): IFestival[] =>
   DATA.reduce(
-    (matches: Array<IFestival>, festival: IFestival): Array<IFestival> =>
+    (matches: IFestival[], festival: IFestival): IFestival[] =>
       festival.title === festivalTitle ? [...matches, festival] : matches,
     []
   );

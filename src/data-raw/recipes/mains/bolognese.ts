@@ -10,7 +10,7 @@ import { calculateRecipeCost } from "utils";
 
 const { preheatOven } = RECIPE_METHOD_ENTRIES;
 
-const ingredients: Array<Array<IRecipeIngredient>> = [
+const ingredients: IRecipeIngredient[][] = [
   [
     {
       ingredient: INGREDIENTS.YEAST_NUTRITIONAL,
@@ -92,7 +92,7 @@ const serveWith: Array<Array<IServeWithItem>> = [
   [{ ingredient: INGREDIENTS.BREAD_GARLIC }]
 ];
 
-const method: Array<string> = [
+const method: string[] = [
   preheatOven({ degreesCelcius: 180 }),
   "make paste from yeast, soy, oil, crushed garlic, chilli powder, liquid smoke",
   "drain tofu, use both fingers to crumble into small pieces",

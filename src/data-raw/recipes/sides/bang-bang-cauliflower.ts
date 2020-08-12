@@ -9,7 +9,7 @@ import { calculateRecipeCost } from "utils";
 
 const { preheatOven } = RECIPE_METHOD_ENTRIES;
 
-const ingredients: Array<Array<IRecipeIngredient>> = [
+const ingredients: IRecipeIngredient[][] = [
   [
     { ingredient: INGREDIENTS.CAULIFLOWER_REGULAR, quantity: 1 },
     {
@@ -67,7 +67,7 @@ const ingredients: Array<Array<IRecipeIngredient>> = [
   ]
 ];
 
-const method: Array<string> = [
+const method: string[] = [
   preheatOven({ degreesCelcius: 200 }),
   "mix flour, almond milk, salt, pepper, turmeric, paprika in large bowl to make batter",
   "remove all leaves from cauliflower, cut vertically around the stem to release florets",

@@ -1,7 +1,7 @@
 interface IFestivalTitle extends I_Name, I__Insignificant {}
 
 interface IGigOrFestival extends I__Favourite, I_Company {
-  photos?: Array<IPhoto>;
+  photos?: IPhoto[];
   venue: IMusicVenue;
   ticketType?: ITicketType;
 }

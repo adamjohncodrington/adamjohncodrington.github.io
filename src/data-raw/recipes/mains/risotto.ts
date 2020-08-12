@@ -8,7 +8,7 @@ import { calculateRecipeCost } from "utils";
 
 const { preheatOven } = RECIPE_METHOD_ENTRIES;
 
-const ingredients: Array<Array<IRecipeIngredient>> = [
+const ingredients: IRecipeIngredient[][] = [
   [
     {
       ingredient: INGREDIENTS.BUTTERNUT_SQUASH,
@@ -75,7 +75,7 @@ const serveWith: Array<Array<IServeWithItem>> = [
   [{ ingredient: INGREDIENTS.SAGE_FRESH, notes: "crispy" }]
 ];
 
-const method: Array<string> = [
+const method: string[] = [
   preheatOven({ degreesCelcius: 200 }),
   "roast evenly-cubed squash for 40 minutes (in some olive oil, salt and pepper)",
   "fry diced onion and leek with crushed garlic in half the butter (and some water) for about 10 minutes until soft",

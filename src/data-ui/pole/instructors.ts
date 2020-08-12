@@ -8,24 +8,21 @@ import {
 
 const getInstructorRoutineMatches = (
   instructor: IPoleInstructor
-): Array<IPoleRoutine> =>
+): IPoleRoutine[] =>
   POLE_ROUTINES.reduce(
-    (
-      matches: Array<IPoleRoutine>,
-      routine: IPoleRoutine
-    ): Array<IPoleRoutine> =>
+    (matches: IPoleRoutine[], routine: IPoleRoutine): IPoleRoutine[] =>
       routine.choreographer === instructor ? [...matches, routine] : matches,
     []
   );
 
 const getInstructorTricksMatches = (
   instructor: IPoleInstructor
-): Array<IPoleTricksVideo> =>
+): IPoleTricksVideo[] =>
   POLE_TRICKS_VIDEOS.reduce(
     (
-      matches: Array<IPoleTricksVideo>,
+      matches: IPoleTricksVideo[],
       tricksVideo: IPoleTricksVideo
-    ): Array<IPoleTricksVideo> =>
+    ): IPoleTricksVideo[] =>
       tricksVideo.instructor === instructor
         ? [...matches, tricksVideo]
         : matches,

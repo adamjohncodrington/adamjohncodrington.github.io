@@ -1,6 +1,6 @@
 import { INGREDIENTS, MEASUREMENTS, DIETS } from "@constants";
 
-const ingredients: Array<Array<IRecipeIngredient>> = [
+const ingredients: IRecipeIngredient[][] = [
   [
     {
       ingredient: INGREDIENTS.TOMATO_SUN_DRIED,
@@ -102,7 +102,7 @@ const serveWith: Array<Array<IServeWithItem>> = [
   ]
 ];
 
-const method: Array<string> = [
+const method: string[] = [
   "thoroughly drain sun dried tomatoes from oil",
   "chop tomatoes into many smaller pieces",
   "marinade tomatoes in soy sauce and liquid smoke",
