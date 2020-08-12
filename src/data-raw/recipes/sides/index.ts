@@ -6,7 +6,7 @@ import { POTATO_SALAD } from "./potato-salad";
 import { RATATOUILLE } from "./ratatouille";
 import { TOFU_SCRAMBLE } from "./tofu-scramble";
 
-export const SIDES: Array<IRecipe> = [
+export const SIDES: IRecipe[] = [
   BAKED_BEANS,
   BANG_BANG_CAULIFLOWER,
   CRISPY_KALE,

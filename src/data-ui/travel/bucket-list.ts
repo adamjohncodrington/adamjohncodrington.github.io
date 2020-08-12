@@ -4,7 +4,7 @@ import { getItemCounts } from "utils";
 
 import { cities } from "./cities";
 
-const bucketListCountries: Array<ICountryCounted> = Object.values(countries)
+const bucketListCountries: ICountryCounted[] = Object.values(countries)
   .map(
     (country: ICountryTemplate): ICountryCounted => ({
       ...country,
@@ -20,7 +20,7 @@ const bucketListCountries: Array<ICountryCounted> = Object.values(countries)
       pastCount === 0 && futureCount === 0 && !excludeFromBucketList
   );
 
-const BUCKET_LIST_COUNTRIES: Array<IMiniCard> = bucketListCountries.map(
+const BUCKET_LIST_COUNTRIES: IMiniCard[] = bucketListCountries.map(
   ({ name, pastCount, futureCount }: ICountryCounted): IMiniCard => ({
     primaryText: name,
     sort: [name],
@@ -30,7 +30,7 @@ const BUCKET_LIST_COUNTRIES: Array<IMiniCard> = bucketListCountries.map(
   })
 );
 
-const bucketListCities: Array<ICityCounted> = Object.values(cities)
+const bucketListCities: ICityCounted[] = Object.values(cities)
   .map(
     (city: ICity): ICityCounted => ({
       ...city,
@@ -50,7 +50,7 @@ const bucketListCities: Array<ICityCounted> = Object.values(cities)
       !insignificant
   );
 
-const BUCKET_LIST_CITIES: Array<IMiniCard> = bucketListCities.map(
+const BUCKET_LIST_CITIES: IMiniCard[] = bucketListCities.map(
   ({ name, capital, pastCount, futureCount }: ICityCounted): IMiniCard => ({
     primaryText: name,
     sort: [name],
@@ -61,7 +61,7 @@ const BUCKET_LIST_CITIES: Array<IMiniCard> = bucketListCities.map(
   })
 );
 
-export const BUCKET_LIST: Array<IMiniCard> = [
+export const BUCKET_LIST: IMiniCard[] = [
   ...BUCKET_LIST_COUNTRIES,
   ...BUCKET_LIST_CITIES
 ];

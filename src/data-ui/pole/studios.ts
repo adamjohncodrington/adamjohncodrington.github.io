@@ -23,7 +23,7 @@ const getStudioTricksMatches = (studio: IPoleStudio): IPoleTricksVideo[] =>
     []
   );
 
-const getStudioDetails = (studio: IPoleStudio): Array<IMiniCardPanelDetail> => [
+const getStudioDetails = (studio: IPoleStudio): IMiniCardPanelDetail[] => [
   ...getStudioRoutineMatches(studio).map(
     (poleRoutine: IPoleRoutine): IMiniCardPanelDetail =>
       mapPoleRoutineToMiniCardDetail(poleRoutine)
@@ -34,10 +34,10 @@ const getStudioDetails = (studio: IPoleStudio): Array<IMiniCardPanelDetail> => [
   )
 ];
 
-export const STUDIOS: Array<IMiniCard> = Object.values(studios).map(
+export const STUDIOS: IMiniCard[] = Object.values(studios).map(
   (studio: IPoleStudio): IMiniCard => {
     const { name, branch } = studio;
-    const details: Array<IMiniCardPanelDetail> = getStudioDetails(studio);
+    const details: IMiniCardPanelDetail[] = getStudioDetails(studio);
     return {
       primaryText: name,
       sort: [name, branch],

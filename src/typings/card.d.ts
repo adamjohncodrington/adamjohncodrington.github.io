@@ -1,5 +1,5 @@
 interface ICard extends I__Photos, I_Sort, I__Favourite, I__Video {
-  symbols?: Array<ISymbol>;
+  symbols?: ISymbol[];
 
   dates?: Array<Date>;
   year?: number;

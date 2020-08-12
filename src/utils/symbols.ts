@@ -27,12 +27,12 @@ const SYMBOL_GIFT: ISymbol = {
   contents: { icon: "gift" }
 };
 
-const sortCompany = (company: Array<IPerson>): Array<IFriend> =>
+const sortCompany = (company: Array<IPerson>): IFriend[] =>
   company.sort((a: IFriend, b: IFriend): number =>
     a.initials > b.initials ? 1 : -1
   );
 
-const getCompanySymbols = (company: Array<IPerson>): Array<ISymbol> =>
+const getCompanySymbols = (company: Array<IPerson>): ISymbol[] =>
   sortCompany(company).map(
     ({ initials }: IFriend): ISymbol => ({
       background: GRAY_MEDIUM,
@@ -89,8 +89,8 @@ export const getSymbols = ({
   signed,
   gift,
   video
-}: IGetSymbols): Array<ISymbol> => {
-  let symbols: Array<ISymbol> = [];
+}: IGetSymbols): ISymbol[] => {
+  let symbols: ISymbol[] = [];
 
   if (vinyl) {
     const { colors } = vinyl;

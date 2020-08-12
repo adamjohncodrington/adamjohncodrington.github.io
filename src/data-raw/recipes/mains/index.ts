@@ -5,7 +5,7 @@ import { RISOTTO } from "./risotto";
 import { ROGAN_JOSH } from "./rogan-josh";
 import { SWEET_AND_SOUR } from "./sweet-and-sour";
 
-export const MAINS: Array<IRecipe> = [
+export const MAINS: IRecipe[] = [
   BOLOGNESE,
   CARBONARA,
   LASAGNE,

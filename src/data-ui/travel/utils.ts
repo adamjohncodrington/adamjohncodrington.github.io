@@ -8,8 +8,8 @@ import {
 } from "utils";
 
 export const mapTravelVideosToCards = (
-  travelVideos: Array<ITravelVideo>
-): Array<ICard> => {
+  travelVideos: ITravelVideo[]
+): ICard[] => {
   const mapTravelVideoToCard = ({
     dates,
     locations,
@@ -31,7 +31,7 @@ export const mapTravelVideosToCards = (
   );
 };
 
-export const mapTripLegsToCards = (tripLegs: Array<ITripLeg>): Array<ICard> => {
+export const mapTripLegsToCards = (tripLegs: ITripLeg[]): ICard[] => {
   const mapTripLegToCard = (tripLeg: ITripLeg): ICard => {
     const { dates, company, photos, video } = tripLeg;
     return {

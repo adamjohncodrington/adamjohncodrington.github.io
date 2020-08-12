@@ -1,10 +1,10 @@
 import { VINYL_COLLECTION as DATA } from "data-raw";
 
-const splitVinylsIntoYears = (vinyls: Array<IVinyl>): Array<Array<IVinyl>> => {
-  const sorted: Array<IVinyl> = vinyls.sort((a: IVinyl, b: IVinyl): number =>
+const splitVinylsIntoYears = (vinyls: IVinyl[]): IVinyl[][] => {
+  const sorted: IVinyl[] = vinyls.sort((a: IVinyl, b: IVinyl): number =>
     a.year > b.year ? 1 : -1
   );
-  const years: Array<Array<IVinyl>> = [];
+  const years: IVinyl[][] = [];
   let arrayIndex: number = 0;
   let arrayYear: number = sorted[0].year;
   sorted.forEach((vinyl: IVinyl): void => {
@@ -19,4 +19,4 @@ const splitVinylsIntoYears = (vinyls: Array<IVinyl>): Array<Array<IVinyl>> => {
   return years;
 };
 
-export const YEARS: Array<Array<IVinyl>> = splitVinylsIntoYears(DATA);
+export const YEARS: IVinyl[][] = splitVinylsIntoYears(DATA);

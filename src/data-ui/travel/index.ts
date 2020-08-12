@@ -23,7 +23,5 @@ export const TRAVEL = {
   THEME_PARKS: filterMiniCards(THEME_PARKS),
   UP_NEXT: mapTripLegsToCards(UP_NEXT),
   VIDEOS: mapTravelVideosToCards(VIDEOS),
-  YEARS: YEARS.map(
-    (year: Array<ITrip>): Array<ICard> => mapTripLegsToCards(year.flat())
-  )
+  YEARS: YEARS.map((year: ITrip[]): ICard[] => mapTripLegsToCards(year.flat()))
 };

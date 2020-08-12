@@ -84,11 +84,8 @@ export const getTripBody = ({
   secondaryLocations &&
   arrayToString(secondaryLocations.map(({ name }: ILocation) => name));
 
-export const getGigMusicians = ({
-  headline,
-  support
-}: IGig): Array<IMusician> => {
-  const musicians: Array<IMusician> = [];
+export const getGigMusicians = ({ headline, support }: IGig): IMusician[] => {
+  const musicians: IMusician[] = [];
 
   musicians.push(headline);
 
@@ -101,12 +98,10 @@ export const getGigMusicians = ({
   return musicians;
 };
 
-export const getFestivalMusicians = ({
-  lineup
-}: IFestival): Array<IMusician> => {
-  const musicians: Array<IMusician> = [];
+export const getFestivalMusicians = ({ lineup }: IFestival): IMusician[] => {
+  const musicians: IMusician[] = [];
 
-  lineup.forEach((day: Array<IMusician>): void => {
+  lineup.forEach((day: IMusician[]): void => {
     day.forEach((musician: IMusician): void => {
       musicians.push(musician);
     });

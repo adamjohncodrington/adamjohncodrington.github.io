@@ -15,7 +15,7 @@ interface IMiniCard
     I__Star {
   primaryText: string;
   anomaly?: boolean;
-  details?: Array<IMiniCardPanelDetail>;
+  details?: IMiniCardPanelDetail[];
   primaryCount?: number;
   secondaryCount?: number;
 

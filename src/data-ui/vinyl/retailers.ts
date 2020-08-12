@@ -3,18 +3,18 @@ import { VINYL_PURCHASED as DATA } from "data-raw";
 
 import { mapVinylsToMiniCardPanelDetails } from "./utils";
 
-const getRetailerMatches = (retailer: IRetailer): Array<IVinyl> =>
+const getRetailerMatches = (retailer: IRetailer): IVinyl[] =>
   DATA.reduce(
-    (matches: Array<IVinyl>, vinyl: IVinyl): Array<IVinyl> =>
+    (matches: IVinyl[], vinyl: IVinyl): IVinyl[] =>
       vinyl.retailer === retailer ? [...matches, vinyl] : matches,
     []
   );
 
-export const RETAILERS: Array<IMiniCard> = Object.values(retailers).map(
+export const RETAILERS: IMiniCard[] = Object.values(retailers).map(
   (retailer: IRetailer): IMiniCard => {
     const { name, umbrella } = retailer;
-    const retailerMatches: Array<IVinyl> = getRetailerMatches(retailer);
-    const details: Array<IMiniCardPanelDetail> = mapVinylsToMiniCardPanelDetails(
+    const retailerMatches: IVinyl[] = getRetailerMatches(retailer);
+    const details: IMiniCardPanelDetail[] = mapVinylsToMiniCardPanelDetails(
       retailerMatches,
       { showMusicianName: true, showCost: true }
     );

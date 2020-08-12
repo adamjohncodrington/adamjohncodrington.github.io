@@ -25,8 +25,8 @@ export const GIGS = {
   MUSICIANS: filterMiniCards(MUSICIANS),
   UP_NEXT: mapMusicEventsToCards(UP_NEXT),
   VENUES: filterMiniCards(VENUES),
-  YEARS: YEARS.map(
-    (year: Array<IMusicEvent>): Array<ICard> => mapMusicEventsToCards(year)
+  YEARS: YEARS.map((year: IMusicEvent[]): ICard[] =>
+    mapMusicEventsToCards(year)
   ),
   pageCount
 };

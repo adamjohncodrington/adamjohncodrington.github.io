@@ -6,8 +6,8 @@ import {
 } from "utils";
 
 export const mapTheatreVisitsToCards = (
-  theatreVisits: Array<ITheatreVisit>
-): Array<ICard> => {
+  theatreVisits: ITheatreVisit[]
+): ICard[] => {
   const mapTheatreVisitToCard = (theatreVisit: ITheatreVisit): ICard => {
     const { theatre, company, date } = theatreVisit;
     return {

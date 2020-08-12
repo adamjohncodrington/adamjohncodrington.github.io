@@ -2,13 +2,13 @@ import { MUSIC_EVENTS as DATA } from "data-raw";
 import { isInFuture } from "utils";
 
 const splitMusicEventsIntoYears = (
-  musicEvents: Array<IMusicEvent>
-): Array<Array<IMusicEvent>> => {
-  const filtered: Array<IMusicEvent> = musicEvents.filter(
+  musicEvents: IMusicEvent[]
+): IMusicEvent[][] => {
+  const filtered: IMusicEvent[] = musicEvents.filter(
     ({ dates }: IMusicEvent): boolean => !isInFuture(dates[0])
   );
 
-  const sorted: Array<IMusicEvent> = filtered.sort(
+  const sorted: IMusicEvent[] = filtered.sort(
     (a: IMusicEvent, b: IMusicEvent): number =>
       a.dates[0] > b.dates[0] ? 1 : -1
   );
@@ -18,15 +18,15 @@ const splitMusicEventsIntoYears = (
 
   // return sorted.reduce(
   //   (
-  //     years: Array<Array<IMusicEvent>>,
+  //     years: IMusicEvent[][],
   //     musicEvent: IMusicEvent
-  //   ): Array<Array<IMusicEvent>> => {
+  //   ): IMusicEvent[][] => {
   //     return years;
   //   },
   //   []
   // );
 
-  const years: Array<Array<IMusicEvent>> = [];
+  const years: IMusicEvent[][] = [];
 
   sorted.forEach((musicEvent: IMusicEvent): void => {
     const year: number = musicEvent.dates[0].getFullYear();
@@ -40,4 +40,4 @@ const splitMusicEventsIntoYears = (
   return years;
 };
 
-export const YEARS: Array<Array<IMusicEvent>> = splitMusicEventsIntoYears(DATA);
+export const YEARS: IMusicEvent[][] = splitMusicEventsIntoYears(DATA);

@@ -10,7 +10,7 @@ export const calculateRecipeCost = (
 ): number => {
   if (title) consoleLogRecipeTitle(title);
 
-  const flatIngredients: Array<IRecipeIngredient> = ingredients.flat();
+  const flatIngredients: IRecipeIngredient[] = ingredients.flat();
 
   return flatIngredients.reduce(
     (runningCost: number, ingredient: IRecipeIngredient): number => {

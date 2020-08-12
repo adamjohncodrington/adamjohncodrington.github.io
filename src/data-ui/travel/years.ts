@@ -1,14 +1,14 @@
 import { TRIPS as DATA } from "data-raw";
 import { isInFuture } from "utils";
 
-const splitTripsIntoYears = (trips: Array<ITrip>): Array<Array<ITrip>> => {
-  const filtered: Array<ITrip> = trips.filter(
+const splitTripsIntoYears = (trips: ITrip[]): ITrip[][] => {
+  const filtered: ITrip[] = trips.filter(
     (trip: ITrip): boolean => !isInFuture(trip[0].dates[0])
   );
-  const sorted: Array<ITrip> = filtered.sort((a: ITrip, b: ITrip): number =>
+  const sorted: ITrip[] = filtered.sort((a: ITrip, b: ITrip): number =>
     a[0].dates[0] > b[0].dates[0] ? 1 : -1
   );
-  const years: Array<Array<ITrip>> = [];
+  const years: ITrip[][] = [];
   let arrayIndex: number = 0;
   let arrayYear: number = sorted[0][0].dates[0].getFullYear();
   sorted.forEach((trip: ITrip): void => {
@@ -23,4 +23,4 @@ const splitTripsIntoYears = (trips: Array<ITrip>): Array<Array<ITrip>> => {
   return years;
 };
 
-export const YEARS: Array<Array<ITrip>> = splitTripsIntoYears(DATA);
+export const YEARS: ITrip[][] = splitTripsIntoYears(DATA);

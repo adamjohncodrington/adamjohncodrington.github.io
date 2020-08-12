@@ -8,7 +8,7 @@ const getSongMatches = (song: ISong): IPoleRoutine[] =>
     []
   );
 
-export const SONGS: Array<IMiniCard> = Object.values(songs).map(
+export const SONGS: IMiniCard[] = Object.values(songs).map(
   (song: ISong): IMiniCard => {
     const { musician, title } = song;
     const artistAndSong: string = `${musician.name} - ${title}`;

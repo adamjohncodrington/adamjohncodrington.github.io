@@ -68,7 +68,7 @@ const PHOTOS: IPageSection = {
 };
 
 const YEARS: IPageSection[] = DATA.YEARS.map(
-  (year: Array<ICard>): IPageSection => ({
+  (year: ICard[]): IPageSection => ({
     title: year[0].dates
       ? year[0].dates[0].getFullYear().toString()
       : "PAGE SECTION TITLE MISSING",

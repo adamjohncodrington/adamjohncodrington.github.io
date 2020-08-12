@@ -1,5 +1,5 @@
 export const detailsContainsFavourite = (
-  details: Array<IMiniCardPanelDetail>
+  details: IMiniCardPanelDetail[]
 ): boolean => {
   const favouritedDetails = details.filter(
     ({ favourite }: IMiniCardPanelDetail): boolean => !!favourite

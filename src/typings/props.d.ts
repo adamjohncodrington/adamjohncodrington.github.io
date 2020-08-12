@@ -49,7 +49,7 @@ interface I_Company {
 }
 
 interface I__Company {
-  company?: Array<IFriend>;
+  company?: IFriend[];
 }
 
 interface I__Date {

@@ -32,7 +32,7 @@ interface IVideo extends I_OrientationQuality {
 }
 
 interface ITravelVideo extends IVideo, I_StartEndDates {
-  locations: Array<ILocation>;
+  locations: ILocation[];
 }
 
 interface IRecipeHeader extends IRecipe, IDisclosureHeader {}
@@ -52,7 +52,7 @@ interface ITheatre extends I_Name, I__Favourite {}
 interface ITheatreVisit extends I_Date, I__Favourite, I_Company {
   play: IPlay;
   theatre: ITheatre;
-  cast?: Array<IActor>;
+  cast?: IActor[];
 }
 
 interface IAlbum {

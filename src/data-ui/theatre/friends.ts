@@ -2,19 +2,16 @@ import { FRIENDS as friends } from "@constants";
 import { THEATRE as DATA } from "data-raw";
 import { getItemCounts, getTheatreVisitTitle } from "utils";
 
-const getFriendMatches = (friend: IFriend): Array<ITheatreVisit> =>
+const getFriendMatches = (friend: IFriend): ITheatreVisit[] =>
   DATA.reduce(
-    (
-      matches: Array<ITheatreVisit>,
-      theatreVisit: ITheatreVisit
-    ): Array<ITheatreVisit> =>
+    (matches: ITheatreVisit[], theatreVisit: ITheatreVisit): ITheatreVisit[] =>
       theatreVisit.company.includes(friend)
         ? [...matches, theatreVisit]
         : matches,
     []
   );
 
-const getFriendDetails = (friend: IFriend): Array<IMiniCardPanelDetail> =>
+const getFriendDetails = (friend: IFriend): IMiniCardPanelDetail[] =>
   getFriendMatches(friend).map(
     (theatreVisit: ITheatreVisit): IMiniCardPanelDetail => {
       const { date } = theatreVisit;
@@ -26,7 +23,7 @@ const getFriendDetails = (friend: IFriend): Array<IMiniCardPanelDetail> =>
     }
   );
 
-export const FRIENDS: Array<IMiniCard> = Object.values(friends)
+export const FRIENDS: IMiniCard[] = Object.values(friends)
   .filter(({ theatre }: IFriend): boolean => !!theatre)
   .map(
     (friend: IFriend): IMiniCard => {

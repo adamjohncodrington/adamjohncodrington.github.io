@@ -79,7 +79,7 @@ const method: string[] = [
   "pour over fried spring onion and sesame seeds"
 ];
 
-const serveWith: Array<Array<IServeWithItem>> = [
+const serveWith: IServeWithItem[][] = [
   [{ ingredient: INGREDIENTS.ONION_SPRING }],
   [{ ingredient: INGREDIENTS.SEEDS_SESAME }]
 ];

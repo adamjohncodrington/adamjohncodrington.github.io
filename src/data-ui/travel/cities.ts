@@ -12,7 +12,7 @@ const generateCities = (): { [city: string]: ICity } => {
 
 export const cities = generateCities();
 
-export const CITIES: Array<IMiniCard> = Object.values(cities).map(
+export const CITIES: IMiniCard[] = Object.values(cities).map(
   (city: ICity): IMiniCard => {
     const { name, capital, insignificant } = city;
     const {

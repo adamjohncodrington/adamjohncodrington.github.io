@@ -24,7 +24,7 @@ const musiciansForBucketList = Object.values(MUSICIANS)
       !excludeFromBucketList
   );
 
-export const BUCKET_LIST: Array<IMiniCard> = musiciansForBucketList.map(
+export const BUCKET_LIST: IMiniCard[] = musiciansForBucketList.map(
   ({ name, favourite }: IMusicianCounted): IMiniCard => ({
     sort: [name],
     primaryText: name,

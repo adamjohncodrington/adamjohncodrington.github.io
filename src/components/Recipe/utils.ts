@@ -11,9 +11,7 @@ export const mapMethodToListItems = (method: string[]): IRecipeListItem[] =>
 export const mapServeWithToListItems = (
   serveWith: IRecipeIngredient[][]
 ): IRecipeListItem[] => {
-  const getServeWithListItem = (
-    lineOptions: Array<IRecipeIngredient>
-  ): string => {
+  const getServeWithListItem = (lineOptions: IRecipeIngredient[]): string => {
     let output: string = "";
     lineOptions.forEach(
       ({ ingredient: { displayText } }: IRecipeIngredient, index: number) =>
@@ -28,7 +26,7 @@ export const mapServeWithToListItems = (
     return output;
   };
   return serveWith.map(
-    (lineOptions: Array<IRecipeIngredient>): IRecipeListItem => ({
+    (lineOptions: IRecipeIngredient[]): IRecipeListItem => ({
       listItemText: getServeWithListItem(lineOptions),
       addPaddingTop: false
     })
@@ -40,7 +38,7 @@ export const mapIngredientsToListItems = (
 ): IRecipeListItem[] => {
   let ingredientsWithPaddingFlags: IRecipeListItem[] = [];
   ingredientsGroups.forEach(
-    (ingredientsGroup: Array<IRecipeIngredient>, INDEX_HIGH: number) => {
+    (ingredientsGroup: IRecipeIngredient[], INDEX_HIGH: number) => {
       ingredientsGroup.forEach(
         (ingredient: IRecipeIngredient, INDEX_LOW: number) => {
           ingredientsWithPaddingFlags.push({

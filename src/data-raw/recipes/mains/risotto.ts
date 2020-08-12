@@ -69,7 +69,7 @@ const ingredients: IRecipeIngredient[][] = [
   ]
 ];
 
-const serveWith: Array<Array<IServeWithItem>> = [
+const serveWith: IServeWithItem[][] = [
   [{ ingredient: INGREDIENTS.SALT_ROCK_FRESH }],
   [{ ingredient: INGREDIENTS.PEPPER_BLACK_FRESH }],
   [{ ingredient: INGREDIENTS.SAGE_FRESH, notes: "crispy" }]

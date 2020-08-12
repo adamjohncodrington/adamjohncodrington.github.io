@@ -12,18 +12,18 @@ const generateIslands = (): { [island: string]: IIsland } => {
 
 const islands = generateIslands();
 
-const islandsThatAreCountries: Array<ICountryTemplate> = Object.values(
+const islandsThatAreCountries: ICountryTemplate[] = Object.values(
   countries
 ).filter(({ island }: ICountryTemplate): boolean => !!island);
 
-const islandsThatAreNotCountries: Array<IIsland> = Object.values(islands);
+const islandsThatAreNotCountries: IIsland[] = Object.values(islands);
 
-const islandsAll: Array<IIsland> = [
+const islandsAll: IIsland[] = [
   ...islandsThatAreCountries,
   ...islandsThatAreNotCountries
 ];
 
-export const ISLANDS: Array<IMiniCard> = islandsAll.map(
+export const ISLANDS: IMiniCard[] = islandsAll.map(
   (island: IIsland): IMiniCard => {
     const { name, insignificant } = island;
     const {

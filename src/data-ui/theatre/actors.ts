@@ -2,12 +2,12 @@ import { ACTORS as actors } from "@constants";
 import { THEATRE as DATA } from "data-raw";
 import { getItemCounts, getTheatreVisitTitle } from "utils";
 
-const getActorMatches = (actor: IActor): Array<ITheatreVisit> =>
+const getActorMatches = (actor: IActor): ITheatreVisit[] =>
   DATA.reduce(
     (
-      matches: Array<ITheatreVisit>,
+      matches: ITheatreVisit[],
       theatreVisit: ITheatreVisit
-    ): Array<ITheatreVisit> => {
+    ): ITheatreVisit[] => {
       const { cast } = theatreVisit;
       return cast && cast.includes(actor)
         ? [...matches, theatreVisit]
@@ -16,7 +16,7 @@ const getActorMatches = (actor: IActor): Array<ITheatreVisit> =>
     []
   );
 
-const getActorDetails = (actor: IActor): Array<IMiniCardPanelDetail> =>
+const getActorDetails = (actor: IActor): IMiniCardPanelDetail[] =>
   getActorMatches(actor).map(
     (theatreVisit: ITheatreVisit): IMiniCardPanelDetail => {
       const { date } = theatreVisit;
@@ -28,7 +28,7 @@ const getActorDetails = (actor: IActor): Array<IMiniCardPanelDetail> =>
     }
   );
 
-export const ACTORS: Array<IMiniCard> = Object.values(actors).map(
+export const ACTORS: IMiniCard[] = Object.values(actors).map(
   (actor: IActor): IMiniCard => {
     const { name, favourite } = actor;
     const {

@@ -4,17 +4,17 @@ import { getItemCounts } from "utils";
 
 import { mapVinylsToMiniCardPanelDetails } from "./utils";
 
-const getMusicianMatches = (musician: IMusician): Array<IVinyl> =>
+const getMusicianMatches = (musician: IMusician): IVinyl[] =>
   DATA.reduce(
-    (matches: Array<IVinyl>, vinyl: IVinyl): Array<IVinyl> =>
+    (matches: IVinyl[], vinyl: IVinyl): IVinyl[] =>
       vinyl.musician === musician ? [...matches, vinyl] : matches,
     []
   );
 
-export const MUSICIANS: Array<IMiniCard> = Object.values(musicians).map(
+export const MUSICIANS: IMiniCard[] = Object.values(musicians).map(
   (musician: IMusician): IMiniCard => {
     const { name, previousStageName } = musician;
-    const details: Array<IMiniCardPanelDetail> = mapVinylsToMiniCardPanelDetails(
+    const details: IMiniCardPanelDetail[] = mapVinylsToMiniCardPanelDetails(
       getMusicianMatches(musician),
       { showMusicianName: false }
     );

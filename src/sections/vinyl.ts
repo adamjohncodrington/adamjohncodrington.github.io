@@ -74,7 +74,7 @@ const WISH_LIST: IPageSection = {
 };
 
 const YEARS: IPageSection[] = DATA.YEARS.map(
-  (year: Array<ICard>): IPageSection => ({
+  (year: ICard[]): IPageSection => ({
     title: year[0].year
       ? year[0].year.toString()
       : "PAGE SECTION TITLE MISSING",

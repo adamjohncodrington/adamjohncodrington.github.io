@@ -1,7 +1,7 @@
 import { VIDEOS as videosObject } from "resources";
 import { getMusicianStageNameAtTime, getDateText } from "utils";
 
-const mapGigVideosToCards = (gigVideos: Array<IGigVideo>): Array<ICard> => {
+const mapGigVideosToCards = (gigVideos: IGigVideo[]): ICard[] => {
   const mapGigVideoToCard = ({
     date,
     musician,
@@ -23,6 +23,6 @@ const mapGigVideosToCards = (gigVideos: Array<IGigVideo>): Array<ICard> => {
   );
 };
 
-const videos: Array<IGigVideo> = Object.values(videosObject.GIGS);
+const videos: IGigVideo[] = Object.values(videosObject.GIGS);
 
-export const VIDEOS: Array<ICard> = mapGigVideosToCards(videos);
+export const VIDEOS: ICard[] = mapGigVideosToCards(videos);

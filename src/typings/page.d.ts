@@ -10,14 +10,14 @@ interface IPage extends I__Hide {
 }
 
 interface IPageSectionItemDataTypes {
-  musicEvents?: Array<IMusicEvent>;
-  theatreVisits?: Array<ITheatreVisit>;
-  tripLegs?: Array<ITripLeg>;
+  musicEvents?: IMusicEvent[];
+  theatreVisits?: ITheatreVisit[];
+  tripLegs?: ITripLeg[];
   poleRoutines?: IPoleRoutine[];
-  gigVideos?: Array<IGigVideo>;
+  gigVideos?: IGigVideo[];
   festivalVideos?: Array<IFestivalVideo>;
-  travelVideos?: Array<ITravelVideo>;
-  vinyls?: Array<IAlbum>;
+  travelVideos?: ITravelVideo[];
+  vinyls?: IAlbum[];
   festivals?: IFestival[];
   gigs?: IGig[];
 }
@@ -31,9 +31,9 @@ interface ICosts {
 interface IPageSectionPanelDataTypes {
   comingSoon?: boolean;
   costs?: ICosts;
-  cards?: Array<ICard>;
-  miniCards?: Array<IMiniCard>;
-  recipes?: Array<IRecipe>;
+  cards?: ICard[];
+  miniCards?: IMiniCard[];
+  recipes?: IRecipe[];
   photoGrid?: IPhotoGrid;
 }
 

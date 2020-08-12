@@ -11,17 +11,17 @@ const generateAttractions = (): { [attraction: string]: IAttraction } => {
   return attractions;
 };
 
-const attractions: Array<IAttraction> = Object.values(generateAttractions());
+const attractions: IAttraction[] = Object.values(generateAttractions());
 
-const themeParks: Array<IAttraction> = attractions.filter(
+const themeParks: IAttraction[] = attractions.filter(
   ({ themePark }: IAttraction): boolean => !!themePark
 );
 
-const highlights: Array<IAttraction> = attractions.filter(
+const highlights: IAttraction[] = attractions.filter(
   ({ highlight }: IAttraction): boolean => !!highlight
 );
 
-export const HIGHLIGHTS: Array<IMiniCard> = highlights.map(
+export const HIGHLIGHTS: IMiniCard[] = highlights.map(
   (highlight: IAttraction): IMiniCard => {
     const { name } = highlight;
     const {
@@ -40,7 +40,7 @@ export const HIGHLIGHTS: Array<IMiniCard> = highlights.map(
   }
 );
 
-export const THEME_PARKS: Array<IMiniCard> = themeParks.map(
+export const THEME_PARKS: IMiniCard[] = themeParks.map(
   (themePark: IAttraction): IMiniCard => {
     const { name } = themePark;
     const {

@@ -8,7 +8,7 @@ import { LEMON_DRIZZLE } from "./lemon-drizzle";
 import { PORRIDGE } from "./porridge";
 import { SCONES } from "./scones";
 
-export const SWEETS: Array<IRecipe> = [
+export const SWEETS: IRecipe[] = [
   BANANA_CAKE,
   BLUEBERRY_PANCAKES,
   BROWNIES,

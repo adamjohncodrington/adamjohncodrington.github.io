@@ -6,9 +6,7 @@ import {
   isInFuture
 } from "utils";
 
-export const mapMusicEventsToCards = (
-  musicEvents: Array<IMusicEvent>
-): Array<ICard> => {
+export const mapMusicEventsToCards = (musicEvents: IMusicEvent[]): ICard[] => {
   const mapMusicEventToCard = (musicEvent: IMusicEvent): ICard => {
     const { venue, dates, ticketType, company, video, photos } = musicEvent;
     return {
@@ -25,9 +23,7 @@ export const mapMusicEventsToCards = (
   );
 };
 
-export const mapGigVideosToCards = (
-  gigVideos: Array<IGigVideo>
-): Array<ICard> => {
+export const mapGigVideosToCards = (gigVideos: IGigVideo[]): ICard[] => {
   const mapGigVideoToCard = ({
     date,
     musician,

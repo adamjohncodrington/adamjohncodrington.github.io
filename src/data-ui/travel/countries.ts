@@ -8,8 +8,8 @@ import {
   detailsContainsFavourite
 } from "utils";
 
-const getCountryMatches = (country: ICountryTemplate): Array<ITripLeg> => {
-  const countryMatches: Array<ITripLeg> = [];
+const getCountryMatches = (country: ICountryTemplate): ITripLeg[] => {
+  const countryMatches: ITripLeg[] = [];
   DATA.forEach((trip: ITripLeg): void => {
     if (countryMatchExists(country, trip)) countryMatches.push(trip);
   });
@@ -18,8 +18,8 @@ const getCountryMatches = (country: ICountryTemplate): Array<ITripLeg> => {
 
 const getCountryDetails = (
   country: ICountryTemplate
-): Array<IMiniCardPanelDetail> => {
-  const countryMatches: Array<ITripLeg> = getCountryMatches(country);
+): IMiniCardPanelDetail[] => {
+  const countryMatches: ITripLeg[] = getCountryMatches(country);
   return countryMatches.map(
     (trip: ITripLeg): IMiniCardPanelDetail => {
       const { dates, favourite, video } = trip;
@@ -40,9 +40,9 @@ const getCountryDetails = (
   );
 };
 
-export const COUNTRIES: Array<IMiniCard> = Object.values(countries).map(
+export const COUNTRIES: IMiniCard[] = Object.values(countries).map(
   (country: ICountryTemplate): IMiniCard => {
-    const details: Array<IMiniCardPanelDetail> = getCountryDetails(country);
+    const details: IMiniCardPanelDetail[] = getCountryDetails(country);
     const { name } = country;
     const {
       pastCount: primaryCount,

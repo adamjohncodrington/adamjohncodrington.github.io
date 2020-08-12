@@ -21,15 +21,15 @@ const compare = (a: any, b: any): number => {
   return A0 > B0 ? 1 : A0 === B0 ? (A1 > B1 ? 1 : -1) : -1;
 };
 
-export const sortCards = (cards: Array<ICard>): Array<ICard> =>
+export const sortCards = (cards: ICard[]): ICard[] =>
   cards.sort((a: ICard, b: ICard): number => compare(a, b));
 
-export const sortMiniCards = (miniCards: Array<IMiniCard>): Array<IMiniCard> =>
+export const sortMiniCards = (miniCards: IMiniCard[]): IMiniCard[] =>
   miniCards.sort((a: IMiniCard, b: IMiniCard): number => compare(a, b));
 
 export const sortMiniCardPanelDetails = (
-  miniCardPanelDetails: Array<IMiniCardPanelDetail>
-): Array<IMiniCardPanelDetail> =>
+  miniCardPanelDetails: IMiniCardPanelDetail[]
+): IMiniCardPanelDetail[] =>
   miniCardPanelDetails.sort(
     (a: IMiniCardPanelDetail, b: IMiniCardPanelDetail): number => compare(a, b)
   );

@@ -1,7 +1,5 @@
-export const filterMiniCards = (
-  miniCards: Array<IMiniCard>
-): Array<IMiniCard> => {
-  const filtered: Array<IMiniCard> = miniCards.filter(
+export const filterMiniCards = (miniCards: IMiniCard[]): IMiniCard[] => {
+  const filtered: IMiniCard[] = miniCards.filter(
     ({
       primaryCount,
       secondaryCount,

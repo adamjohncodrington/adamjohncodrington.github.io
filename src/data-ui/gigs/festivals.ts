@@ -9,7 +9,7 @@ const getFestivalMatches = (festivalTitle: IFestivalTitle): IFestival[] =>
     []
   );
 
-const getFestivalDetails = (musician: IMusician): Array<IMiniCardPanelDetail> =>
+const getFestivalDetails = (musician: IMusician): IMiniCardPanelDetail[] =>
   getFestivalMatches(musician).map(
     (festival: IFestival): IMiniCardPanelDetail => {
       const { dates, video } = festival;
@@ -22,7 +22,7 @@ const getFestivalDetails = (musician: IMusician): Array<IMiniCardPanelDetail> =>
     }
   );
 
-export const FESTIVALS: Array<IMiniCard> = Object.values(festivals)
+export const FESTIVALS: IMiniCard[] = Object.values(festivals)
   .filter(({ insignificant }: IFestivalTitle): boolean => !insignificant)
   .map(
     (festival: IFestivalTitle): IMiniCard => {

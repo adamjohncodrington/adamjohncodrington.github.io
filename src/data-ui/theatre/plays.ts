@@ -6,7 +6,7 @@ import { FAVOURITES } from "./favourites";
 
 interface IPlayIsFavourited {
   play: IPlay;
-  favouriteTheatreVisits: Array<ITheatreVisit>;
+  favouriteTheatreVisits: ITheatreVisit[];
 }
 
 const playIsFavourited = ({
@@ -17,17 +17,14 @@ const playIsFavourited = ({
     (theatreVisit: ITheatreVisit): boolean => theatreVisit.play === play
   );
 
-const getPlayMatches = (play: IPlay): Array<ITheatreVisit> =>
+const getPlayMatches = (play: IPlay): ITheatreVisit[] =>
   DATA.reduce(
-    (
-      matches: Array<ITheatreVisit>,
-      theatreVisit: ITheatreVisit
-    ): Array<ITheatreVisit> =>
+    (matches: ITheatreVisit[], theatreVisit: ITheatreVisit): ITheatreVisit[] =>
       theatreVisit.play === play ? [...matches, theatreVisit] : matches,
     []
   );
 
-const getPlayDetails = (play: IPlay): Array<IMiniCardPanelDetail> =>
+const getPlayDetails = (play: IPlay): IMiniCardPanelDetail[] =>
   getPlayMatches(play).map(
     (theatreVisit: ITheatreVisit): IMiniCardPanelDetail => {
       const { date } = theatreVisit;
@@ -39,7 +36,7 @@ const getPlayDetails = (play: IPlay): Array<IMiniCardPanelDetail> =>
     }
   );
 
-export const PLAYS: Array<IMiniCard> = Object.values(plays).map(
+export const PLAYS: IMiniCard[] = Object.values(plays).map(
   (play: IPlay): IMiniCard => {
     const { name } = play;
     const {

@@ -31,7 +31,7 @@ const getInstructorTricksMatches = (
 
 const getInstructorDetails = (
   instructor: IPoleInstructor
-): Array<IMiniCardPanelDetail> => [
+): IMiniCardPanelDetail[] => [
   ...getInstructorRoutineMatches(instructor).map(
     (poleRoutine: IPoleRoutine): IMiniCardPanelDetail =>
       mapPoleRoutineToMiniCardDetail(poleRoutine)
@@ -42,12 +42,10 @@ const getInstructorDetails = (
   )
 ];
 
-export const INSTRUCTORS: Array<IMiniCard> = Object.values(instructors).map(
+export const INSTRUCTORS: IMiniCard[] = Object.values(instructors).map(
   (instructor: IPoleInstructor): IMiniCard => {
     const { name, stageName } = instructor;
-    const details: Array<IMiniCardPanelDetail> = getInstructorDetails(
-      instructor
-    );
+    const details: IMiniCardPanelDetail[] = getInstructorDetails(instructor);
     const instructorName: string = stageName || name;
     return {
       primaryText: instructorName,

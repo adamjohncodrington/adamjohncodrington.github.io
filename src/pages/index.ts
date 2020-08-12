@@ -5,7 +5,7 @@ import { THEATRE } from "./theatre";
 import { TRAVEL } from "./travel";
 import { VINYL } from "./vinyl";
 
-export const PAGES: Array<IPage> = [
+export const PAGES: IPage[] = [
   GIGS,
   POLE,
   RECIPES,

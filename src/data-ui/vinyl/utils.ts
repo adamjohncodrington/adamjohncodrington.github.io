@@ -50,15 +50,15 @@ const mapVinylToCard = (vinyl: IVinyl, options?: IOptions): ICard => {
 };
 
 export const mapAlbumsToCards = (
-  albums: Array<IAlbum>,
+  albums: IAlbum[],
   options?: IOptions
-): Array<ICard> =>
+): ICard[] =>
   albums.map((album: IAlbum): ICard => mapAlbumToCard(album, options));
 
 export const mapVinylsToCards = (
-  vinyls: Array<IVinyl>,
+  vinyls: IVinyl[],
   options?: IOptions
-): Array<ICard> =>
+): ICard[] =>
   vinyls.map((vinyl: IVinyl): ICard => mapVinylToCard(vinyl, options));
 
 interface IOptions2 {
@@ -67,9 +67,9 @@ interface IOptions2 {
 }
 
 export const mapVinylsToMiniCardPanelDetails = (
-  vinyls: Array<IVinyl>,
+  vinyls: IVinyl[],
   { showMusicianName, showCost = false }: IOptions2
-): Array<IMiniCardPanelDetail> => {
+): IMiniCardPanelDetail[] => {
   const mapVinylToMiniCardPanelDetail = ({
     year,
     musician,
