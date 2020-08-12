@@ -27,12 +27,12 @@ const SYMBOL_GIFT: ISymbol = {
   contents: { icon: "gift" }
 };
 
-const sortCompany = (company: Array<IPerson>): IFriend[] =>
+const sortCompany = (company: IPerson[]): IFriend[] =>
   company.sort((a: IFriend, b: IFriend): number =>
     a.initials > b.initials ? 1 : -1
   );
 
-const getCompanySymbols = (company: Array<IPerson>): ISymbol[] =>
+const getCompanySymbols = (company: IPerson[]): ISymbol[] =>
   sortCompany(company).map(
     ({ initials }: IFriend): ISymbol => ({
       background: GRAY_MEDIUM,

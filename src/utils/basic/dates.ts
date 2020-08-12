@@ -32,10 +32,7 @@ export const getDateText = (date: Date, options?: IOptions): string => {
     : weekdayAndDayString + " " + monthString + " " + year;
 };
 
-export const getDatesText = (
-  dates: Array<Date>,
-  options?: IOptions
-): string => {
+export const getDatesText = (dates: Date[], options?: IOptions): string => {
   if (dates.length === 1) return getDateText(dates[0], options);
 
   return getDateTextFor2Dates(dates[0], dates[dates.length - 1], options);

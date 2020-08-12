@@ -1,7 +1,7 @@
 interface ICard extends I__Photos, I_Sort, I__Favourite, I__Video {
   symbols?: ISymbol[];
 
-  dates?: Array<Date>;
+  dates?: Date[];
   year?: number;
 
   title: string;

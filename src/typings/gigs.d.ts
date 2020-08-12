@@ -9,7 +9,7 @@ interface IGigOrFestival extends I__Favourite, I_Company {
 interface IFestival extends IGigOrFestival, I_Dates {
   title: IFestivalTitle;
   video?: IFestivalVideo;
-  lineup: Array<IMusician[]>;
+  lineup: IMusician[][];
 }
 
 interface IGig extends IGigOrFestival, I_Date {
@@ -21,7 +21,7 @@ interface IGig extends IGigOrFestival, I_Date {
 interface IMusicEvent extends IGigOrFestival, I__Video {
   title: string;
   subtitle?: string;
-  dates: Array<IDate>;
+  dates: IDate[];
   musicians: IMusician[];
 
   gig?: IGig;

@@ -15,7 +15,7 @@ interface IPageSectionItemDataTypes {
   tripLegs?: ITripLeg[];
   poleRoutines?: IPoleRoutine[];
   gigVideos?: IGigVideo[];
-  festivalVideos?: Array<IFestivalVideo>;
+  festivalVideos?: IFestivalVideo[];
   travelVideos?: ITravelVideo[];
   vinyls?: IAlbum[];
   festivals?: IFestival[];

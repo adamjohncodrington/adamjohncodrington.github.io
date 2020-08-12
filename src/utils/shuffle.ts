@@ -1,4 +1,4 @@
-export const shuffleArray = (array: Array<any>): Array<any> => {
+export const shuffleArray = (array: any[]): any[] => {
   let currentIndex: number = array.length;
   let temporaryValue: any, randomIndex: number;
 
@@ -13,7 +13,5 @@ export const shuffleArray = (array: Array<any>): Array<any> => {
   return array;
 };
 
-export const shuffleArrayIf = (
-  array: Array<any>,
-  shuffle: boolean
-): Array<any> => (shuffle ? shuffleArray(array) : array);
+export const shuffleArrayIf = (array: any[], shuffle: boolean): any[] =>
+  shuffle ? shuffleArray(array) : array;

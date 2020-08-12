@@ -19,7 +19,7 @@ interface I__Gift {
 }
 
 interface I_Sort {
-  sort: Array<string | number | Date | boolean | undefined>;
+  sort: (string | number | Date | boolean | undefined)[];
 }
 
 interface I_Signed {
@@ -45,7 +45,7 @@ interface I_PastFutureCounts {
 }
 
 interface I_Company {
-  company: Array<IPerson>;
+  company: IPerson[];
 }
 
 interface I__Company {
@@ -101,7 +101,7 @@ interface I_Colors {
 }
 
 interface I_Dates {
-  dates: Array<Date>;
+  dates: Date[];
 }
 
 interface I__Star {
