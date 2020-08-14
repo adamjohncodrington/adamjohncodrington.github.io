@@ -41,7 +41,7 @@ const THEME_PAGE_SECTION: IThemePageSection = {
   margin: { bottom: "20px" },
   padding: { horizontal: "12px", bottom: "5px" },
   panelList: {
-    border: { bottom: `1px dashed ${rgba("black", 0.25)}` },
+    border: { bottom: `1px solid ${rgba("black", 0.1)}` },
     miniCards: { padding: { vertical: "5px" } },
     padding: { bottom: "5px" },
     recipes: {

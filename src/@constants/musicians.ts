@@ -241,7 +241,10 @@ export const NOEL_GALLAGHERS_HIGH_FLYING_BIRDS: IMusician = {
 };
 export const OH_ANNIE_OH: IMusician = { name: "Oh Annie Oh" };
 export const OKAYWILL: IMusician = { name: "okaywill" };
-export const PALE_WAVES: IMusician = { name: "Pale Waves" };
+export const PALE_WAVES: IMusician = {
+  name: "Pale Waves",
+  excludeFromBucketList: true
+};
 export const PALOMA_FAITH: IMusician = { name: "Paloma Faith" };
 export const PAUL_WOOLFORD: IMusician = { name: "Paul Woolford" };
 export const PET_SHOP_BOYS: IMusician = { name: "Pet Shop Boys" };
