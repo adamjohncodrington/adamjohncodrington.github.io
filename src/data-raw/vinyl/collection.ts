@@ -2,11 +2,12 @@ import { MUSICIANS, RETAILERS, FRIENDS } from "@constants";
 import { PHOTOS } from "resources";
 import { COLORS } from "styles";
 
-const { BLACK, PINK } = COLORS;
+const { BLACK, PINK, CLEAR } = COLORS;
 const {
   NORMAN_ONLINE,
   JUNO_ONLINE,
   HIVE,
+  MUSIC_MAGPIE,
   AMAZON,
   EBAY,
   RECORDSTORE_ONLINE,
@@ -197,6 +198,21 @@ export const LORDE_PURE_HEROINE: IVinyl = {
   arrived: true,
   colors: [BLACK],
   photo: PHOTOS.ALBUM_ARTWORK.LORDE_PURE_HEROINE
+};
+
+export const LANY_MALIBU_NIGHTS: IVinyl = {
+  musician: MUSICIANS.LANY,
+  title: "Malibu Nights",
+  photo: PHOTOS.ALBUM_ARTWORK.LANY_MALIBU_NIGHTS,
+  appleMusicId: "malibu-nights/1435482172",
+  year: 2018,
+  arrived: true,
+  sides: 2,
+  retailer: MUSIC_MAGPIE,
+  costExcDelivery: 21.39,
+  inches: 12,
+  colors: [CLEAR],
+  signed: false
 };
 
 export const TAYLOR_SWIFT_1989: IVinyl = {

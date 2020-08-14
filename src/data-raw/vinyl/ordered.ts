@@ -2,8 +2,8 @@ import { MUSICIANS, RETAILERS } from "@constants";
 import { PHOTOS } from "resources";
 import { COLORS } from "styles";
 
-const { BLACK, CLEAR } = COLORS;
-const { MUSICIAN_WEB_STORE, MUSIC_MAGPIE, FAT_POSSUM } = RETAILERS;
+const { BLACK } = COLORS;
+const { MUSICIAN_WEB_STORE, FAT_POSSUM } = RETAILERS;
 
 export const LISSIE_CATCHING_A_TIGER: IVinyl = {
   musician: MUSICIANS.LISSIE,
@@ -18,22 +18,6 @@ export const LISSIE_CATCHING_A_TIGER: IVinyl = {
   arrived: false,
   costExcDelivery: 12.99,
   retailer: FAT_POSSUM
-};
-
-export const LANY_MALIBU_NIGHTS: IVinyl = {
-  musician: MUSICIANS.LANY,
-  title: "Malibu Nights",
-  photo: PHOTOS.ALBUM_ARTWORK.LANY_MALIBU_NIGHTS,
-  appleMusicId: "malibu-nights/1435482172",
-  year: 2018,
-  arrived: false,
-  sides: 2,
-  retailer: MUSIC_MAGPIE,
-  costExcDelivery: 21.39,
-  inches: 12,
-  //TODO: VERIFY THAT IT IS CLEAR
-  colors: [CLEAR],
-  signed: false
 };
 
 export const TAYLOR_SWIFT_FOLKLORE: IVinyl = {
