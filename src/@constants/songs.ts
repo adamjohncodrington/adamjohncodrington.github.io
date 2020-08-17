@@ -143,3 +143,93 @@ export const TOMMEE_PROFITT_PULL_THAT_TRIGGER: ISong = {
   title: "Pull That Trigger",
   year: 2019
 };
+
+export const A_BOOGIE_WIT_DA_HOODIE_LOOK_BACK_AT_IT: ISong = {
+  musician: MUSICIANS.A_BOOGIE_WIT_DA_HOODIE,
+  title: "Look Back At It",
+  year: 2018
+};
+
+export const ASAP_ROCKY_LSD: ISong = {
+  musician: MUSICIANS.ASAP_ROCKY,
+  title: "L$D",
+  year: 2015
+};
+
+export const ARIANA_GRANDE_7_RINGS: ISong = {
+  musician: MUSICIANS.ARIANA_GRANDE,
+  title: "7 rings",
+  year: 2019
+};
+
+export const BANKS_DROWNING: ISong = {
+  musician: MUSICIANS.BANKS,
+  title: "Drowning",
+  year: 2014
+};
+
+export const CHRISTINA_AGUILERA_DIRTY: ISong = {
+  musician: MUSICIANS.CHRISTINA_AGUILERA,
+  title: "Dirrty",
+  year: 2002
+};
+
+export const FERAL_FAUNA_TINCTURE: ISong = {
+  musician: MUSICIANS.FERAL_FAUNA,
+  title: "Tincture",
+  year: 2014
+};
+
+export const JOHNNY_BALIK_HONEY: ISong = {
+  musician: MUSICIANS.JOHNNY_BALIK,
+  title: "Honey",
+  year: 2018
+};
+
+export const LAUV_MISS_ME: ISong = {
+  musician: MUSICIANS.LAUV,
+  title: "miss me",
+  year: 2020
+};
+
+export const SKOTT_AMELIA: ISong = {
+  musician: MUSICIANS.SKOTT,
+  title: "Amelia",
+  year: 2016
+};
+
+export const RIHANNA_RUDE_BOY: ISong = {
+  musician: MUSICIANS.RIHANNA,
+  title: "Rude Boy",
+  year: 2009
+};
+
+export const SLEEPING_AT_LAST_ALREADY_GONE: ISong = {
+  musician: MUSICIANS.SLEEPING_AT_LAST,
+  title: "Already Gone",
+  year: 2015
+};
+
+export const SOAP_AND_SKIN_ME_AND_THE_DEVIL: ISong = {
+  musician: MUSICIANS.SOAP_AND_SKIN,
+  title: "Me and the Devil",
+  year: 2013
+};
+
+export const SUB_URBAN_ISOLATE: ISong = {
+  musician: MUSICIANS.SUB_URBAN,
+  title: "Isolate",
+  year: 2019
+};
+
+export const THE_WEEKND_I_FEEL_IT_COMING: ISong = {
+  musician: MUSICIANS.THE_WEEKND,
+  title: "I Feel It Coming",
+  year: 2016
+};
+
+export const USHER_BAD_GIRL: ISong = {
+  musician: MUSICIANS.USHER,
+  title: "Bad Girl",
+  year: 2004
+};

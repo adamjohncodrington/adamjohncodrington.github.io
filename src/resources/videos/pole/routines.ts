@@ -6,6 +6,7 @@ import {
   SONGS,
   INSTRUCTORS
 } from "@constants";
+import { EXOTICA_HACKNEY } from "@constants/pole-studios";
 
 const { LAETITIA, VERONICA, SARAH_ELLIOTT, MEL, MARINE } = INSTRUCTORS;
 const { EXOTICA_BERMONDSEY, DAN_LEA_STUDIO, TIGRA_GST } = STUDIOS;
@@ -71,6 +72,15 @@ export const JORJA_SMITH_TOMORROW: IPoleRoutine = {
   song: SONGS.JORJA_SMITH_TOMORROW,
   choreographer: MARINE,
   video: { youtubeId: "BR1YB5hJlmc", ...PORTRAIT_1080P }
+};
+
+export const SOAP_AND_SKIN_ME_AND_THE_DEVIL: IPoleRoutine = {
+  studio: EXOTICA_BERMONDSEY,
+  date: new Date("2019-11-14"),
+  category: "contemporary-class",
+  song: SONGS.SOAP_AND_SKIN_ME_AND_THE_DEVIL,
+  choreographer: MARINE,
+  video: { youtubeId: "G9SgOhE1_aM", ...PORTRAIT_1080P }
 };
 
 export const BILLIE_EILISH_WISH_YOU_WERE_GAY: IPoleRoutine = {
@@ -217,11 +227,146 @@ export const JUDY_GARLAND_HAVE_YOURSELF_A_MERRY_LITTLE_CHRISTMAS: IPoleRoutine =
   video: { youtubeId: "E8Pu7j4WDlk", ...PORTRAIT_1080P }
 };
 
-export const VANESSA_WAGNER_ELF_DANCE: IPoleRoutine = {
+export const VANESSA_WAGNER_ELF_DANCE_SHOWCASE: IPoleRoutine = {
   studio: EXOTICA_BERMONDSEY,
   date: new Date("2019-12-07"),
   category: "showcase",
   song: SONGS.VANESSA_WAGNER_ELF_DANCE,
   choreographer: MARINE,
   video: { youtubeId: "heRUwlr2wiU", ...PORTRAIT_1080P }
+};
+
+// export const VANESSA_WAGNER_ELF_DANCE_CLASS: IPoleRoutine = {
+//   studio: EXOTICA_BERMONDSEY,
+//   date: new Date("2019-11-21"),
+//   category: "contemporary-class",
+//   song: SONGS.VANESSA_WAGNER_ELF_DANCE,
+//   choreographer: MARINE,
+//   video: { youtubeId: "gTub-KawW78", ...PORTRAIT_1080P }
+// };
+
+export const A_BOOGIE_WIT_DA_HOODIE_LOOK_BACK_AT_IT: IPoleRoutine = {
+  studio: EXOTICA_BERMONDSEY,
+  date: new Date("2019-06-05"),
+  category: "exotic-class",
+  song: SONGS.A_BOOGIE_WIT_DA_HOODIE_LOOK_BACK_AT_IT,
+  choreographer: SARAH_ELLIOTT,
+  video: { youtubeId: "9HtbfKEBSLI", ...PORTRAIT_1080P }
+};
+
+export const ASAP_ROCKY_LSD: IPoleRoutine = {
+  studio: HOME,
+  date: new Date("2020-03-25"),
+  category: "quarantine",
+  song: SONGS.ASAP_ROCKY_LSD,
+  choreographer: ME,
+  video: { youtubeId: "yer6sW5WAM8", ...PORTRAIT_1080P }
+};
+
+export const ARIANA_GRANDE_7_RINGS: IPoleRoutine = {
+  studio: HOME,
+  date: new Date("2020-03-25"),
+  category: "quarantine",
+  song: SONGS.ARIANA_GRANDE_7_RINGS,
+  choreographer: MARINE,
+  video: { youtubeId: "qiVyMn6av_k", ...PORTRAIT_1080P }
+};
+
+export const BANKS_DROWNING: IPoleRoutine = {
+  studio: HOME,
+  date: new Date("2020-04-01"),
+  category: "quarantine",
+  song: SONGS.BANKS_DROWNING,
+  choreographer: MEL,
+  video: { youtubeId: "D8q3xS3bNHQ", ...PORTRAIT_1080P }
+};
+
+export const FERAL_FAUNA_TINCTURE: IPoleRoutine = {
+  studio: HOME,
+  date: new Date("2020-04-08"),
+  category: "quarantine",
+  song: SONGS.FERAL_FAUNA_TINCTURE,
+  choreographer: MARINE,
+  video: { youtubeId: "6zqQl1T8OeU", ...PORTRAIT_1080P }
+};
+
+export const SLEEPING_AT_LAST_ALREADY_GONE: IPoleRoutine = {
+  studio: HOME,
+  date: new Date("2020-04-15"),
+  category: "quarantine",
+  song: SONGS.SLEEPING_AT_LAST_ALREADY_GONE,
+  choreographer: MEL,
+  video: { youtubeId: "NRzyrSDwhB0", ...PORTRAIT_1080P }
+};
+
+export const LAUV_MISS_ME: IPoleRoutine = {
+  studio: HOME,
+  date: new Date("2020-04-15"),
+  category: "quarantine",
+  song: SONGS.LAUV_MISS_ME,
+  choreographer: ME,
+  video: { youtubeId: "qSsM6ogPt-s", ...PORTRAIT_1080P }
+};
+
+export const CHRISTINA_AGUILERA_DIRTY: IPoleRoutine = {
+  studio: EXOTICA_BERMONDSEY,
+  date: new Date("2019-09-04"),
+  category: "exotic-class",
+  song: SONGS.CHRISTINA_AGUILERA_DIRTY,
+  choreographer: SARAH_ELLIOTT,
+  video: { youtubeId: "pue4_Nzg4qs", ...PORTRAIT_1080P }
+};
+
+export const RIHANNA_RUDE_BOY: IPoleRoutine = {
+  studio: EXOTICA_BERMONDSEY,
+  date: new Date("2019-05-22"),
+  category: "exotic-class",
+  song: SONGS.RIHANNA_RUDE_BOY,
+  choreographer: SARAH_ELLIOTT,
+  video: { youtubeId: "AtdiGPfDm7s", ...PORTRAIT_1080P }
+};
+
+export const USHER_BAD_GIRL: IPoleRoutine = {
+  studio: EXOTICA_BERMONDSEY,
+  date: new Date("2019-04-24"),
+  category: "exotic-class",
+  song: SONGS.USHER_BAD_GIRL,
+  choreographer: SARAH_ELLIOTT,
+  video: { youtubeId: "5sFil9iYlzk", ...PORTRAIT_1080P }
+};
+
+export const THE_WEEKND_I_FEEL_IT_COMING: IPoleRoutine = {
+  studio: EXOTICA_BERMONDSEY,
+  date: new Date("2019-05-08"),
+  category: "exotic-class",
+  song: SONGS.THE_WEEKND_I_FEEL_IT_COMING,
+  choreographer: SARAH_ELLIOTT,
+  video: { youtubeId: "281EClS-0wo", ...PORTRAIT_1080P }
+};
+
+export const JOHNNY_BALIK_HONEY: IPoleRoutine = {
+  studio: EXOTICA_HACKNEY,
+  date: new Date("2020-08-15"),
+  category: "exotic-class",
+  song: SONGS.JOHNNY_BALIK_HONEY,
+  choreographer: VERONICA,
+  video: { youtubeId: "e9CLQVXUSUM", ...PORTRAIT_1080P }
+};
+
+export const SKOTT_AMELIA: IPoleRoutine = {
+  studio: EXOTICA_BERMONDSEY,
+  date: new Date("2019-10-06"),
+  category: "exotic-class",
+  song: SONGS.SKOTT_AMELIA,
+  choreographer: VERONICA,
+  video: { youtubeId: "v23f_9U_6CY", ...PORTRAIT_1080P }
+};
+
+export const SUB_URBAN_ISOLATE: IPoleRoutine = {
+  studio: EXOTICA_BERMONDSEY,
+  date: new Date("2019-10-12"),
+  category: "exotic-class",
+  song: SONGS.SUB_URBAN_ISOLATE,
+  choreographer: VERONICA,
+  video: { youtubeId: "x1h7IF0nklQ", ...PORTRAIT_1080P }
 };

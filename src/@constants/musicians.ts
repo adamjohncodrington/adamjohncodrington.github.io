@@ -10,6 +10,50 @@ export const GALLANT: IMusician = {
   name: "Gallant",
   excludeFromBucketList: true
 };
+export const ASAP_ROCKY: IMusician = {
+  name: "A$AP Rocky",
+  excludeFromBucketList: true
+};
+export const A_BOOGIE_WIT_DA_HOODIE: IMusician = {
+  name: "A Boogie wit da Hoodie",
+  excludeFromBucketList: true
+};
+export const CHRISTINA_AGUILERA: IMusician = {
+  name: "Christina Aguilera",
+  excludeFromBucketList: true
+};
+export const FERAL_FAUNA: IMusician = {
+  name: "Feral Fauna",
+  excludeFromBucketList: true
+};
+export const JOHNNY_BALIK: IMusician = {
+  name: "Johnny Balik",
+  excludeFromBucketList: true
+};
+export const SKOTT: IMusician = {
+  name: "Skott",
+  excludeFromBucketList: true
+};
+export const SLEEPING_AT_LAST: IMusician = {
+  name: "Sleeping At Last",
+  excludeFromBucketList: true
+};
+export const SOAP_AND_SKIN: IMusician = {
+  name: "Soap&Skin",
+  excludeFromBucketList: true
+};
+export const SUB_URBAN: IMusician = {
+  name: "Sub Urban",
+  excludeFromBucketList: true
+};
+export const THE_WEEKND: IMusician = {
+  name: "The Weeknd",
+  excludeFromBucketList: true
+};
+export const USHER: IMusician = {
+  name: "Usher",
+  excludeFromBucketList: true
+};
 export const VANESSA_WAGNER: IMusician = {
   name: "Vanessa Wagner",
   excludeFromBucketList: true

@@ -26,7 +26,7 @@ export const INSTRUCTORS: string = "Instructors";
 export const IMPROVISATION: string = "Improvisation";
 export const SHOWCASE: string = "Showcase";
 export const TRICKS: string = "Tricks & Combos";
-export const NON_POLE: string = "Non-Pole";
+export const QUARANTINE: string = "Non-Pole";
 export const STUDIOS: string = "Studios";
 
 // Recipes

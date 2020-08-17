@@ -26,9 +26,9 @@ const EXOTIC: IPageSection = {
   data: { cards: DATA.EXOTIC }
 };
 
-const NON_POLE: IPageSection = {
+const QUARANTINE: IPageSection = {
   SvgIcon: SVG.HOME,
-  title: PAGE_SECTION_TITLES.NON_POLE,
+  title: PAGE_SECTION_TITLES.QUARANTINE,
   data: { cards: DATA.QUARANTINE }
 };
 
@@ -72,7 +72,7 @@ export const POLE: IPageSection[] = [
   SONGS,
   STUDIOS,
   INSTRUCTORS,
-  NON_POLE
+  QUARANTINE
 ].sort((a: IPageSection, b: IPageSection): number =>
   a.title > b.title ? 1 : -1
 );
