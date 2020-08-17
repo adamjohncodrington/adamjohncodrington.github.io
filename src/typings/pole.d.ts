@@ -28,6 +28,10 @@ interface IPoleRoutine extends IPoleVideo {
   choreographer: IPoleInstructor;
 }
 
+interface IPoleRoutineOrTricksVideo extends IPoleVideo {
+  date: Date;
+}
+
 interface IPoleInstructor extends IPerson {
   stageName?: string;
 }

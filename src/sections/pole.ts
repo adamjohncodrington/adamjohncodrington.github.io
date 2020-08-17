@@ -62,6 +62,12 @@ const SHOWCASE: IPageSection = {
   data: { cards: DATA.SHOWCASE }
 };
 
+const YEARS: IPageSection = {
+  title: "Years",
+  data: { cards: DATA.YEARS },
+  hide: true
+};
+
 export const POLE: IPageSection[] = [
   TRICKS,
   CONTEMPORARY,
@@ -72,7 +78,8 @@ export const POLE: IPageSection[] = [
   SONGS,
   STUDIOS,
   INSTRUCTORS,
-  QUARANTINE
+  QUARANTINE,
+  YEARS
 ].sort((a: IPageSection, b: IPageSection): number =>
   a.title > b.title ? 1 : -1
 );

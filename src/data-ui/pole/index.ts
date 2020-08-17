@@ -12,6 +12,7 @@ import { INSTRUCTORS } from "./instructors";
 import { PHOTOS } from "./photos";
 import { SONGS } from "./songs";
 import { STUDIOS } from "./studios";
+import { YEARS } from "./years";
 import { mapPoleRoutinesToCards, mapPoleTricksVideosToCards } from "./utils";
 
 export const POLE = {
@@ -24,5 +25,6 @@ export const POLE = {
   PHOTOS,
   SONGS: filterMiniCards(SONGS),
   STUDIOS: filterMiniCards(STUDIOS),
-  TRICKS: mapPoleTricksVideosToCards(POLE_TRICKS_VIDEOS)
+  TRICKS: mapPoleTricksVideosToCards(POLE_TRICKS_VIDEOS),
+  YEARS
 };

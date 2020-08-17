@@ -16,16 +16,6 @@ const splitMusicEventsIntoYears = (
   let arrayIndex: number = 0;
   let arrayYear: number = sorted[0].dates[0].getFullYear();
 
-  // return sorted.reduce(
-  //   (
-  //     years: IMusicEvent[][],
-  //     musicEvent: IMusicEvent
-  //   ): IMusicEvent[][] => {
-  //     return years;
-  //   },
-  //   []
-  // );
-
   const years: IMusicEvent[][] = [];
 
   sorted.forEach((musicEvent: IMusicEvent): void => {

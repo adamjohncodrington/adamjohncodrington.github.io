@@ -1,7 +1,5 @@
 import { POLE_ROUTINES as DATA } from "data-raw";
 
-export const ROUTINES_ALL: IPoleRoutine[] = DATA;
-
 export const IMPROVISATION: IPoleRoutine[] = DATA.filter(
   ({ category }: IPoleRoutine): boolean =>
     category === "contemporary-improv" || category === "exotic-improv"
