@@ -1,14 +1,11 @@
 # TO DO LIST
 
-- add years section to `POLE`
-
 ## Media to add
 
 - festival videos
 - all pole tricks videos
-- all pole routine videos
-- gig photos
-- more travel photos
+- loads more gig photos
+- loads more travel photos
 - theatre artwork?
 
 ## Necessary refactoring

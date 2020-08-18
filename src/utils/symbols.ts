@@ -1,12 +1,16 @@
-import { COLORS, getTwoColorDiagonal } from "styles";
+import {
+  COLORS,
+  getTwoColorDiagonal,
+  BORDER_HALF_PX_SOLID_GREY,
+  getBackgoundImageUrl
+} from "styles";
 import { SYMBOLS } from "@constants";
 
 import { isInFuture } from "./basic";
 import { daysToGo } from "./daysToGo";
 import { vinylColorIsSpecial } from "./vinyl";
-import { FREE_IMAGE_HOST_URL_PREFIX } from "config";
 
-const { BLACK, GRAY_MEDIUM, GRAY_MEDIUM_LIGHT } = COLORS;
+const { BLACK, GRAY_MEDIUM } = COLORS;
 
 const sortCompany = (company: IPerson[]): IFriend[] =>
   company.sort((a: IFriend, b: IFriend): number =>
@@ -20,12 +24,6 @@ const getCompanySymbols = (company: IPerson[]): ISymbol[] =>
       contents: { text: initials }
     })
   );
-
-//TODO: these should not live here!!!
-const BORDER_HALF_PX_SOLID_GREY: string = `0.5px solid ${GRAY_MEDIUM_LIGHT}`;
-
-const getBackgoundImageUrl = (photo: IPhoto): string =>
-  `url("${FREE_IMAGE_HOST_URL_PREFIX + photo.freeimagehostId}")`;
 
 const getVinylSymbolBackground = ({
   colors,
@@ -42,9 +40,6 @@ const getVinylSymbolBackground = ({
     : colors[0];
 };
 
-const getVinylSymbolBorder = (colors: string[]): string =>
-  colors[0] === COLORS.CLEAR ? BORDER_HALF_PX_SOLID_GREY : "none";
-
 interface IGetSymbols
   extends I__Company,
     I__Date,
@@ -52,6 +47,7 @@ interface IGetSymbols
     I__Photos,
     I__Gift,
     I__Video {
+  poleCategory?: IPoleCategory;
   vinyl?: IVinyl;
 }
 
@@ -62,6 +58,7 @@ export const getSymbols = ({
   photos,
   signed,
   gift,
+  poleCategory,
   video
 }: IGetSymbols): ISymbol[] => {
   let symbols: ISymbol[] = [];
@@ -72,7 +69,7 @@ export const getSymbols = ({
     if (vinylColorIsSpecial(colors))
       symbols.push({
         background: getVinylSymbolBackground(vinyl),
-        border: getVinylSymbolBorder(colors),
+        border: colors[0] === COLORS.CLEAR ? BORDER_HALF_PX_SOLID_GREY : "none",
         borderRadius: "50%",
         svgFill: BLACK,
         contents: {}
@@ -92,6 +89,20 @@ export const getSymbols = ({
   if (signed) symbols.push(SYMBOLS.SIGNED);
   if (photos) symbols.push(SYMBOLS.PHOTO);
   if (video) symbols.push(SYMBOLS.VIDEO);
+
+  if (poleCategory) {
+    if (poleCategory === "quarantine") symbols.push(SYMBOLS.HOME);
+    if (poleCategory === "exotic-class" || poleCategory === "exotic-improv")
+      symbols.push(SYMBOLS.EXOTIC);
+    if (
+      poleCategory === "contemporary-class" ||
+      poleCategory === "contemporary-improv"
+    )
+      symbols.push(SYMBOLS.CONTEMPORARY);
+    if (poleCategory === "showcase") symbols.push(SYMBOLS.STARS);
+    if (poleCategory === "rock") symbols.push(SYMBOLS.GUITAR);
+    if (poleCategory === "tricks") symbols.push(SYMBOLS.TRICKS);
+  }
 
   return symbols;
 };

@@ -24,6 +24,7 @@ export { ReactComponent as DELIVERY_VAN } from "./delivery-van-3.svg";
 export { ReactComponent as FLAG } from "./flag.svg";
 // F
 export { ReactComponent as GIFT } from "./gift.svg";
+export { ReactComponent as GUITAR } from "./guitar-1.svg";
 // H
 export { ReactComponent as HEART } from "./heart-3.svg";
 export { ReactComponent as HEELS } from "./heels.svg";

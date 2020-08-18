@@ -59,7 +59,7 @@ const THEME_PAGE_SECTION: IThemePageSection = {
 const pageLayoutHorizontalSpacing: PxValue = "20px";
 const THEME_PAGE_LAYOUT: IThemePageLayout = {
   columnGap: pageLayoutHorizontalSpacing,
-  padding: { all: `15px ${pageLayoutHorizontalSpacing} 25px` }
+  padding: { all: `15px ${pageLayoutHorizontalSpacing} 35px` }
 };
 
 const THEME_RECIPE_CARD: IThemeRecipe = {

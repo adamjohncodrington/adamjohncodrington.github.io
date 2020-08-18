@@ -2,22 +2,27 @@ import { getDateText, getSymbols, getDatesText } from "utils";
 
 interface IOptions {
   sort: "asc" | "desc";
+  showCategorySymbol: boolean;
 }
 
 export const mapPoleRoutinesToCards = (
   poleVideos: IPoleRoutine[],
-  { sort }: IOptions
+  { sort, showCategorySymbol }: IOptions
 ): ICard[] => {
   const mapPoleRoutineToCard = ({
     date,
     choreographer,
+    category,
     song: { musician, title },
     video
   }: IPoleRoutine): ICard => ({
     video,
     year: date.getFullYear(),
     sort: [sort === "asc" ? date : -date],
-    symbols: getSymbols({ company: [choreographer] }),
+    symbols: getSymbols({
+      company: [choreographer],
+      poleCategory: showCategorySymbol ? category : undefined
+    }),
     subtitle: musician.name,
     title,
     secondaryBody: getDateText(date)
@@ -29,18 +34,22 @@ export const mapPoleRoutinesToCards = (
 
 export const mapPoleTricksVideosToCards = (
   poleTricksVideos: IPoleTricksVideo[],
-  { sort }: IOptions
+  { sort, showCategorySymbol }: IOptions
 ): ICard[] => {
   const mapPoleTricksVideoToCard = ({
     dates: { start, end },
     instructor,
+    category,
     studio,
     video
   }: IPoleTricksVideo): ICard => ({
     video,
     year: start.getFullYear(),
     sort: [sort === "asc" ? start : -start],
-    symbols: getSymbols({ company: [instructor] }),
+    symbols: getSymbols({
+      company: [instructor],
+      poleCategory: showCategorySymbol ? category : undefined
+    }),
     title: getDatesText([start, end], { hideDay: true }),
     body: studio.name
   });

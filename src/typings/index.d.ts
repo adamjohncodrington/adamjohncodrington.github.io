@@ -72,7 +72,18 @@ interface ISymbol extends I_Background, I__Border, I__BorderRadius {
   svgFill?: string;
   contents: {
     text?: string;
-    icon?: "photo" | "video" | "pen" | "gift";
+    icon?:
+      | "photo"
+      | "video"
+      | "pen"
+      | "gift"
+      | "home"
+      | "exotic"
+      | "improvisation"
+      | "contemporary"
+      | "stars"
+      | "guitar"
+      | "tricks";
   };
 }
 

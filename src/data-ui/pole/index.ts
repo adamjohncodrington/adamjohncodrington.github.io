@@ -16,15 +16,33 @@ import { YEARS } from "./years";
 import { mapPoleRoutinesToCards, mapPoleTricksVideosToCards } from "./utils";
 
 export const POLE = {
-  CONTEMPORARY: mapPoleRoutinesToCards(CONTEMPORARY, { sort: "desc" }),
-  QUARANTINE: mapPoleRoutinesToCards(QUARANTINE, { sort: "asc" }),
-  SHOWCASE: mapPoleRoutinesToCards(SHOWCASE, { sort: "desc" }),
-  EXOTIC: mapPoleRoutinesToCards(EXOTIC, { sort: "desc" }),
-  IMPROVISATION: mapPoleRoutinesToCards(IMPROVISATION, { sort: "desc" }),
+  CONTEMPORARY: mapPoleRoutinesToCards(CONTEMPORARY, {
+    sort: "desc",
+    showCategorySymbol: false
+  }),
+  QUARANTINE: mapPoleRoutinesToCards(QUARANTINE, {
+    sort: "asc",
+    showCategorySymbol: false
+  }),
+  SHOWCASE: mapPoleRoutinesToCards(SHOWCASE, {
+    sort: "desc",
+    showCategorySymbol: false
+  }),
+  EXOTIC: mapPoleRoutinesToCards(EXOTIC, {
+    sort: "desc",
+    showCategorySymbol: false
+  }),
+  IMPROVISATION: mapPoleRoutinesToCards(IMPROVISATION, {
+    sort: "desc",
+    showCategorySymbol: false
+  }),
   INSTRUCTORS: filterMiniCards(INSTRUCTORS),
   PHOTOS,
   SONGS: filterMiniCards(SONGS),
   STUDIOS: filterMiniCards(STUDIOS),
-  TRICKS: mapPoleTricksVideosToCards(POLE_TRICKS_VIDEOS, { sort: "desc" }),
+  TRICKS: mapPoleTricksVideosToCards(POLE_TRICKS_VIDEOS, {
+    sort: "desc",
+    showCategorySymbol: false
+  }),
   YEARS
 };

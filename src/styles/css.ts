@@ -1,5 +1,9 @@
 import { css } from "styled-components";
 
+import { COLORS } from "./colors";
+
+const { GRAY_MEDIUM_LIGHT } = COLORS;
+
 export const getPseudoElementAfter = (element: string) => css`
   ::after {
     content: " ${element}";
@@ -34,3 +38,5 @@ export const CSS = {
     padding: 0;
   `
 };
+
+export const BORDER_HALF_PX_SOLID_GREY: string = `0.5px solid ${GRAY_MEDIUM_LIGHT}`;

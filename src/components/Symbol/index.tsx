@@ -58,6 +58,20 @@ export const Symbol: FC<ISymbol> = props => {
         <SVG.PEN />
       ) : icon === "gift" ? (
         <SVG.GIFT />
+      ) : icon === "home" ? (
+        <SVG.HOME />
+      ) : icon === "improvisation" ? (
+        <SVG.DANCER_MALE_1 />
+      ) : icon === "stars" ? (
+        <SVG.STARS />
+      ) : icon === "guitar" ? (
+        <SVG.GUITAR />
+      ) : icon === "tricks" ? (
+        <SVG.POLE_VAULT />
+      ) : icon === "contemporary" ? (
+        <SVG.DANCER_MALE_2 />
+      ) : icon === "exotic" ? (
+        <SVG.HEELS />
       ) : (
         text
       )}
