@@ -1,4 +1,5 @@
-import { COLORS } from "styles";
+import { COLORS, getTwoColorDiagonal } from "styles";
+import { SYMBOLS } from "@constants";
 
 import { isInFuture } from "./basic";
 import { daysToGo } from "./daysToGo";
@@ -19,9 +20,6 @@ const getCompanySymbols = (company: IPerson[]): ISymbol[] =>
       contents: { text: initials }
     })
   );
-
-export const getTwoColorDiagonal = (color1: string, color2: string): string =>
-  `linear-gradient(to bottom right, ${color1} 50%, ${color2} 50%)`;
 
 //TODO: these should not live here!!!
 const BORDER_HALF_PX_SOLID_GREY: string = `0.5px solid ${GRAY_MEDIUM_LIGHT}`;
@@ -83,7 +81,7 @@ export const getSymbols = ({
 
   if (company) symbols.push(...getCompanySymbols(company));
 
-  if (gift) symbols.push(SYMBOL_GIFT);
+  if (gift) symbols.push(SYMBOLS.GIFT);
 
   if (date && isInFuture(date))
     symbols.push({
@@ -91,9 +89,9 @@ export const getSymbols = ({
       contents: { text: daysToGo(date).toString() }
     });
 
-  if (signed) symbols.push(SYMBOL_SIGNED);
-  if (photos) symbols.push(SYMBOL_PHOTO);
-  if (video) symbols.push(SYMBOL_VIDEO);
+  if (signed) symbols.push(SYMBOLS.SIGNED);
+  if (photos) symbols.push(SYMBOLS.PHOTO);
+  if (video) symbols.push(SYMBOLS.VIDEO);
 
   return symbols;
 };
