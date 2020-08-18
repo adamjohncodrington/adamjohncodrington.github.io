@@ -11,3 +11,22 @@ export const filterMiniCards = (miniCards: IMiniCard[]): IMiniCard[] => {
   );
   return filtered;
 };
+
+export const splitCardsIntoYears = (cards: ICard[]): ICard[][] => {
+  let arrayIndex: number = 0;
+  let arrayYear: number = cards[0].year;
+
+  const years: ICard[][] = [];
+
+  cards.forEach((card: ICard): void => {
+    const { year } = card;
+    if (year !== arrayYear) {
+      arrayIndex += 1;
+      arrayYear = year;
+    }
+    if (!years[arrayIndex]) years[arrayIndex] = [];
+    years[arrayIndex].push(card);
+  });
+
+  return years;
+};

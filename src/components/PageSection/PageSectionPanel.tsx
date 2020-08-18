@@ -38,11 +38,14 @@ export const PageSectionPanel: FC<IPageSection> = ({ data, shuffle }) => {
     );
   }
 
-  return photoGrid ? (
-    <PanelPhotoGridContainer>
-      <PhotoGrid {...photoGrid} />
-    </PanelPhotoGridContainer>
-  ) : (
+  if (photoGrid)
+    return (
+      <PanelPhotoGridContainer>
+        <PhotoGrid {...photoGrid} />
+      </PanelPhotoGridContainer>
+    );
+
+  return (
     <PageSectionPanelList {...data}>
       {cards &&
         (shuffle ? shuffleArray(cards) : sortCards(cards)).map(

@@ -4,14 +4,15 @@ import { DynamicFontWeightFlexRow } from "primitives";
 import { moveTheSuffixToPrefix } from "utils";
 import {
   StyledPrimaryText,
-  StyledSecondaryText,
-  StyledTextContainer,
+  StyledPrimaryAltText,
+  StyledPrimaryTextContainer,
   StyledPrimaryCount,
   StyledSecondaryCount
 } from "./styles";
 
 export const MiniCardHeader: FC<IMiniCardHeader> = ({
   primaryText,
+  primaryTextAlt,
   secondaryText,
   video,
   favourite,
@@ -40,7 +41,7 @@ export const MiniCardHeader: FC<IMiniCardHeader> = ({
 
   return (
     <DynamicFontWeightFlexRow italic={!!anomaly} bold={bold}>
-      <StyledTextContainer>
+      <StyledPrimaryTextContainer>
         <StyledPrimaryText
           faded={faded}
           favourite={favourite}
@@ -50,12 +51,12 @@ export const MiniCardHeader: FC<IMiniCardHeader> = ({
           {moveTheSuffixToPrefix(primaryText)}
         </StyledPrimaryText>
 
-        {secondaryText && (
-          <StyledSecondaryText>
-            ({moveTheSuffixToPrefix(secondaryText)})
-          </StyledSecondaryText>
+        {primaryTextAlt && (
+          <StyledPrimaryAltText>
+            ({moveTheSuffixToPrefix(primaryTextAlt)})
+          </StyledPrimaryAltText>
         )}
-      </StyledTextContainer>
+      </StyledPrimaryTextContainer>
 
       {showSecondaryCount && (
         <StyledSecondaryCount>{secondaryCount}</StyledSecondaryCount>
@@ -66,6 +67,8 @@ export const MiniCardHeader: FC<IMiniCardHeader> = ({
           {primaryCount}
         </StyledPrimaryCount>
       )}
+
+      {secondaryText}
     </DynamicFontWeightFlexRow>
   );
 };

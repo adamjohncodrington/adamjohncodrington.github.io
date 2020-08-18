@@ -1,26 +1,15 @@
-import { TRIPS as DATA } from "data-raw";
-import { isInFuture } from "utils";
+import { TRIP_LEGS as DATA } from "data-raw";
+import { isInFuture, splitCardsIntoYears } from "utils";
 
-const splitTripsIntoYears = (trips: ITrip[]): ITrip[][] => {
-  const filtered: ITrip[] = trips.filter(
-    (trip: ITrip): boolean => !isInFuture(trip[0].dates[0])
-  );
-  const sorted: ITrip[] = filtered.sort((a: ITrip, b: ITrip): number =>
-    a[0].dates[0] > b[0].dates[0] ? 1 : -1
-  );
-  const years: ITrip[][] = [];
-  let arrayIndex: number = 0;
-  let arrayYear: number = sorted[0][0].dates[0].getFullYear();
-  sorted.forEach((trip: ITrip): void => {
-    const year: number = trip[0].dates[0].getFullYear();
-    if (year !== arrayYear) {
-      arrayIndex += 1;
-      arrayYear = year;
-    }
-    if (!years[arrayIndex]) years[arrayIndex] = [];
-    years[arrayIndex].push(trip);
-  });
-  return years;
-};
+import { mapTripLegsToCards } from "./utils";
 
-export const YEARS: ITrip[][] = splitTripsIntoYears(DATA);
+const past: ITripLeg[] = DATA.filter(
+  ({ dates }: ITripLeg): boolean => !isInFuture(dates[0])
+);
+const sorted: ITripLeg[] = past.sort((a: ITripLeg, b: ITripLeg): number =>
+  a.dates[0] > b.dates[0] ? 1 : -1
+);
+
+const cards: ICard[] = mapTripLegsToCards(sorted);
+
+export const YEARS: ICard[][] = splitCardsIntoYears(cards);

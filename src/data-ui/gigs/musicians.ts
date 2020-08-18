@@ -56,8 +56,8 @@ export const MUSICIANS: IMiniCard[] = Object.values(musicians).map(
     });
     return {
       primaryText: name,
+      primaryTextAlt: previousStageName && previousStageName.name,
       sort: [name],
-      secondaryText: previousStageName && previousStageName.name,
       favourite: detailsContainsFavourite(details),
       primaryCount,
       secondaryCount,

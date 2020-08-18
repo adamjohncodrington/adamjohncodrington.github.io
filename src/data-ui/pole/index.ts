@@ -16,15 +16,15 @@ import { YEARS } from "./years";
 import { mapPoleRoutinesToCards, mapPoleTricksVideosToCards } from "./utils";
 
 export const POLE = {
-  CONTEMPORARY: mapPoleRoutinesToCards(CONTEMPORARY),
-  QUARANTINE: mapPoleRoutinesToCards(QUARANTINE),
-  SHOWCASE: mapPoleRoutinesToCards(SHOWCASE),
-  EXOTIC: mapPoleRoutinesToCards(EXOTIC),
-  IMPROVISATION: mapPoleRoutinesToCards(IMPROVISATION),
+  CONTEMPORARY: mapPoleRoutinesToCards(CONTEMPORARY, { sort: "desc" }),
+  QUARANTINE: mapPoleRoutinesToCards(QUARANTINE, { sort: "asc" }),
+  SHOWCASE: mapPoleRoutinesToCards(SHOWCASE, { sort: "desc" }),
+  EXOTIC: mapPoleRoutinesToCards(EXOTIC, { sort: "desc" }),
+  IMPROVISATION: mapPoleRoutinesToCards(IMPROVISATION, { sort: "desc" }),
   INSTRUCTORS: filterMiniCards(INSTRUCTORS),
   PHOTOS,
   SONGS: filterMiniCards(SONGS),
   STUDIOS: filterMiniCards(STUDIOS),
-  TRICKS: mapPoleTricksVideosToCards(POLE_TRICKS_VIDEOS),
+  TRICKS: mapPoleTricksVideosToCards(POLE_TRICKS_VIDEOS, { sort: "desc" }),
   YEARS
 };

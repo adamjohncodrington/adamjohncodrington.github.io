@@ -11,6 +11,7 @@ export const mapMusicEventsToCards = (musicEvents: IMusicEvent[]): ICard[] => {
     const { venue, dates, ticketType, company, video, photos } = musicEvent;
     return {
       ...musicEvent,
+      year: dates[0].getFullYear(),
       sort: [dates[0]],
       symbols: getSymbols({ company, photos, video, date: dates[0] }),
       body: venue.name,
@@ -35,6 +36,7 @@ export const mapGigVideosToCards = (gigVideos: IGigVideo[]): ICard[] => {
     });
     return {
       title: musicianName,
+      year: date.getFullYear(),
       sort: [musicianName, date],
       video,
       secondaryBody: getDateText(date)

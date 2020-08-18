@@ -12,4 +12,4 @@ export const PAGES: IPage[] = [
   THEATRE,
   TRAVEL,
   VINYL
-].sort((a: IPage, b: IPage): number => (a.title > b.title ? 1 : -1));
+].sort((a: IPage, b: IPage): number => a.title.localeCompare(b.title));

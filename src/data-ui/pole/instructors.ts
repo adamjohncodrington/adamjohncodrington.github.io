@@ -49,8 +49,8 @@ export const INSTRUCTORS: IMiniCard[] = Object.values(instructors).map(
     const instructorName: string = stageName || name;
     return {
       primaryText: instructorName,
+      primaryTextAlt: stageName ? name : undefined,
       sort: [instructorName],
-      secondaryText: stageName ? name : undefined,
       primaryCount: details.length || undefined,
       details: details.length > 0 ? details : undefined
     };

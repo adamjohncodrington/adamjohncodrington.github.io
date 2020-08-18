@@ -24,10 +24,10 @@ export const MUSICIANS: IMiniCard[] = Object.values(musicians).map(
     } = getItemCounts({ item: { musician }, data: { vinyls: DATA } });
     return {
       primaryText: name,
+      primaryTextAlt: previousStageName && previousStageName.name,
       sort: [name],
       primaryCount,
       secondaryCount,
-      secondaryText: previousStageName && previousStageName.name,
       details
     };
   }

@@ -62,11 +62,12 @@ const SHOWCASE: IPageSection = {
   data: { cards: DATA.SHOWCASE }
 };
 
-const YEARS: IPageSection = {
-  title: "Years",
-  data: { cards: DATA.YEARS },
-  hide: true
-};
+const YEARS: IPageSection[] = DATA.YEARS.map(
+  (year: ICard[]): IPageSection => ({
+    title: year[0].year.toString(),
+    data: { cards: year }
+  })
+);
 
 export const POLE: IPageSection[] = [
   TRICKS,
@@ -78,8 +79,9 @@ export const POLE: IPageSection[] = [
   SONGS,
   STUDIOS,
   INSTRUCTORS,
-  QUARANTINE,
-  YEARS
-].sort((a: IPageSection, b: IPageSection): number =>
-  a.title > b.title ? 1 : -1
-);
+  QUARANTINE
+]
+  .sort((a: IPageSection, b: IPageSection): number =>
+    a.title.localeCompare(b.title)
+  )
+  .concat(YEARS);

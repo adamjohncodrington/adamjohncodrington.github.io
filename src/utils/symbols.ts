@@ -29,7 +29,7 @@ const SYMBOL_GIFT: ISymbol = {
 
 const sortCompany = (company: IPerson[]): IFriend[] =>
   company.sort((a: IFriend, b: IFriend): number =>
-    a.initials > b.initials ? 1 : -1
+    a.initials.localeCompare(b.initials)
   );
 
 const getCompanySymbols = (company: IPerson[]): ISymbol[] =>

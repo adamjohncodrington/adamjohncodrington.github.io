@@ -33,7 +33,7 @@ const THEME_PAGE_HEADER: IThemePageHeader = {
 
 const THEME_PAGE_SECTION: IThemePageSection = {
   background: GRAY_LIGHT,
-  borderRadius: "10px",
+  borderRadius: "0.25rem",
   headline: { fontSize: FONT_SIZES.ML },
   count: { margin: { left: "7px" } },
   header: { padding: { vertical: "12px" } },

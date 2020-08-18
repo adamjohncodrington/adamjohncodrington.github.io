@@ -34,7 +34,5 @@ export const VINYL = {
   ORDERED: mapVinylsToCards(VINYL_ORDERED),
   SIGNED: mapVinylsToCards(SIGNED, { hideSignedIcon: true }),
   WISH_LIST: mapAlbumsToCards(VINYL_WISH_LIST),
-  YEARS: YEARS.map((year: IVinyl[]): ICard[] =>
-    mapVinylsToCards(year, { hideYear: true })
-  )
+  YEARS
 };

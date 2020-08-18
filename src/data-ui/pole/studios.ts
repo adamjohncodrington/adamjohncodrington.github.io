@@ -40,8 +40,8 @@ export const STUDIOS: IMiniCard[] = Object.values(studios).map(
     const details: IMiniCardPanelDetail[] = getStudioDetails(studio);
     return {
       primaryText: name,
+      primaryTextAlt: branch,
       sort: [name, branch],
-      secondaryText: branch,
       primaryCount: details.length,
       details
     };

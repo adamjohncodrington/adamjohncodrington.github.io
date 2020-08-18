@@ -1,28 +1,28 @@
 import { VIDEOS as videosObject } from "resources";
 import { getMusicianStageNameAtTime, getDateText } from "utils";
 
-const mapGigVideosToCards = (gigVideos: IGigVideo[]): ICard[] => {
+const mapGigVideosToMiniCards = (gigVideos: IGigVideo[]): IMiniCard[] => {
   const mapGigVideoToCard = ({
     date,
     musician,
     ...video
-  }: IGigVideo): ICard => {
+  }: IGigVideo): IMiniCard => {
     const musicianName: string = getMusicianStageNameAtTime({
       musician,
       year: date.getFullYear()
     });
     return {
-      title: musicianName,
+      primaryText: musicianName,
       sort: [musicianName, date],
       video,
-      secondaryBody: getDateText(date)
+      secondaryText: getDateText(date, { hideDay: true })
     };
   };
   return gigVideos.map(
-    (gigVideo: IGigVideo): ICard => mapGigVideoToCard(gigVideo)
+    (gigVideo: IGigVideo): IMiniCard => mapGigVideoToCard(gigVideo)
   );
 };
 
 const videos: IGigVideo[] = Object.values(videosObject.GIGS);
 
-export const VIDEOS: ICard[] = mapGigVideosToCards(videos);
+export const VIDEOS: IMiniCard[] = mapGigVideosToMiniCards(videos);

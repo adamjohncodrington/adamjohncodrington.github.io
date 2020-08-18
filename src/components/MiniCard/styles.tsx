@@ -6,12 +6,12 @@ import { getPseudoElementBefore, getPseudoElementAfter } from "styles";
 
 const { HEART, STAR, TRIANGLE_PLAY } = UNICODE;
 
-export const StyledTextContainer = styled(FlexRow)`
+export const StyledPrimaryTextContainer = styled(FlexRow)`
   flex: 1;
   align-items: baseline;
 `;
 
-export const StyledSecondaryText = styled.span(
+export const StyledPrimaryAltText = styled.span(
   ({ theme: { fadedOpacity } }: I_Theme) => css`
     opacity: ${fadedOpacity};
     margin-left: 5px;

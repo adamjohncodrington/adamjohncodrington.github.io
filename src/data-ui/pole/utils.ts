@@ -1,6 +1,13 @@
 import { getDateText, getSymbols, getDatesText } from "utils";
 
-export const mapPoleRoutinesToCards = (poleVideos: IPoleRoutine[]): ICard[] => {
+interface IOptions {
+  sort: "asc" | "desc";
+}
+
+export const mapPoleRoutinesToCards = (
+  poleVideos: IPoleRoutine[],
+  { sort }: IOptions
+): ICard[] => {
   const mapPoleRoutineToCard = ({
     date,
     choreographer,
@@ -8,7 +15,8 @@ export const mapPoleRoutinesToCards = (poleVideos: IPoleRoutine[]): ICard[] => {
     video
   }: IPoleRoutine): ICard => ({
     video,
-    sort: [-date],
+    year: date.getFullYear(),
+    sort: [sort === "asc" ? date : -date],
     symbols: getSymbols({ company: [choreographer] }),
     subtitle: musician.name,
     title,
@@ -20,7 +28,8 @@ export const mapPoleRoutinesToCards = (poleVideos: IPoleRoutine[]): ICard[] => {
 };
 
 export const mapPoleTricksVideosToCards = (
-  poleTricksVideos: IPoleTricksVideo[]
+  poleTricksVideos: IPoleTricksVideo[],
+  { sort }: IOptions
 ): ICard[] => {
   const mapPoleTricksVideoToCard = ({
     dates: { start, end },
@@ -29,7 +38,8 @@ export const mapPoleTricksVideosToCards = (
     video
   }: IPoleTricksVideo): ICard => ({
     video,
-    sort: [-start],
+    year: start.getFullYear(),
+    sort: [sort === "asc" ? start : -start],
     symbols: getSymbols({ company: [instructor] }),
     title: getDatesText([start, end], { hideDay: true }),
     body: studio.name

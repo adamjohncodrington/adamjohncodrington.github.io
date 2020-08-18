@@ -1,33 +1,16 @@
 import { MUSIC_EVENTS as DATA } from "data-raw";
-import { isInFuture } from "utils";
+import { isInFuture, splitCardsIntoYears } from "utils";
 
-const splitMusicEventsIntoYears = (
-  musicEvents: IMusicEvent[]
-): IMusicEvent[][] => {
-  const filtered: IMusicEvent[] = musicEvents.filter(
-    ({ dates }: IMusicEvent): boolean => !isInFuture(dates[0])
-  );
+import { mapMusicEventsToCards } from "./utils";
 
-  const sorted: IMusicEvent[] = filtered.sort(
-    (a: IMusicEvent, b: IMusicEvent): number =>
-      a.dates[0] > b.dates[0] ? 1 : -1
-  );
+const past: IMusicEvent[] = DATA.filter(
+  ({ dates }: IMusicEvent): boolean => !isInFuture(dates[0])
+);
 
-  let arrayIndex: number = 0;
-  let arrayYear: number = sorted[0].dates[0].getFullYear();
+const sorted: IMusicEvent[] = past.sort(
+  (a: IMusicEvent, b: IMusicEvent): number => (a.dates[0] > b.dates[0] ? 1 : -1)
+);
 
-  const years: IMusicEvent[][] = [];
+const cards: ICard[] = mapMusicEventsToCards(sorted);
 
-  sorted.forEach((musicEvent: IMusicEvent): void => {
-    const year: number = musicEvent.dates[0].getFullYear();
-    if (year !== arrayYear) {
-      arrayIndex += 1;
-      arrayYear = year;
-    }
-    if (!years[arrayIndex]) years[arrayIndex] = [];
-    years[arrayIndex].push(musicEvent);
-  });
-  return years;
-};
-
-export const YEARS: IMusicEvent[][] = splitMusicEventsIntoYears(DATA);
+export const YEARS: ICard[][] = splitCardsIntoYears(cards);

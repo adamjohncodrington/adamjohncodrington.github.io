@@ -14,7 +14,5 @@ export const THEATRE = {
   PLAYS: filterMiniCards(PLAYS),
   VENUES: filterMiniCards(VENUES),
   UP_NEXT: mapTheatreVisitsToCards(UP_NEXT),
-  YEARS: YEARS.map((year: ITheatreVisit[]): ICard[] =>
-    mapTheatreVisitsToCards(year)
-  )
+  YEARS
 };
