@@ -7,26 +7,6 @@ import { FREE_IMAGE_HOST_URL_PREFIX } from "config";
 
 const { BLACK, GRAY_MEDIUM, GRAY_MEDIUM_LIGHT } = COLORS;
 
-const SYMBOL_PHOTO: ISymbol = {
-  background: BLACK,
-  contents: { icon: "photo" }
-};
-
-const SYMBOL_VIDEO: ISymbol = {
-  background: BLACK,
-  contents: { icon: "video" }
-};
-
-const SYMBOL_SIGNED: ISymbol = {
-  background: BLACK,
-  contents: { icon: "pen" }
-};
-
-const SYMBOL_GIFT: ISymbol = {
-  background: BLACK,
-  contents: { icon: "gift" }
-};
-
 const sortCompany = (company: IPerson[]): IFriend[] =>
   company.sort((a: IFriend, b: IFriend): number =>
     a.initials.localeCompare(b.initials)
@@ -65,11 +45,7 @@ const getVinylSymbolBackground = ({
 };
 
 const getVinylSymbolBorder = (colors: string[]): string =>
-  colors[0] === COLORS.CLEAR
-    ? BORDER_HALF_PX_SOLID_GREY
-    : // : colors === COLORS.VINYL.PVRIS_AWKOHAWNOH
-      // ? BORDER_HALF_PX_SOLID_BLACK
-      "none";
+  colors[0] === COLORS.CLEAR ? BORDER_HALF_PX_SOLID_GREY : "none";
 
 interface IGetSymbols
   extends I__Company,

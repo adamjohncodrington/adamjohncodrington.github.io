@@ -6,20 +6,12 @@ import * as MUSICIANS from "./musicians";
 import * as PAGE_SECTION_TITLES from "./page-section-titles";
 import * as PLAYS from "./plays";
 import * as RECIPE_METHOD_ENTRIES from "./recipe-method-entries";
+import * as SYMBOLS from "./symbols";
 import * as STUDIOS from "./pole-studios";
 import * as SONGS from "./songs";
 import * as TICKET_TYPES from "./ticket-types";
 import * as UNICODE from "./unicode";
 import * as RETAILERS from "./retailers";
-
-export const HOME: ILocation = { name: "Home" };
-
-export * from "./ingredients";
-export * from "./music-venues";
-export * from "./sainsburys";
-export * from "./theatres";
-export * from "./people";
-export * from "./video";
 
 export {
   ACTORS,
@@ -33,9 +25,18 @@ export {
   STUDIOS,
   SONGS,
   TICKET_TYPES,
+  SYMBOLS,
   UNICODE,
   RETAILERS
 };
 
+export * from "./ingredients";
+export * from "./music-venues";
+export * from "./sainsburys";
+export * from "./theatres";
+export * from "./people";
+export * from "./video";
 export * from "./diets";
 export * from "./locations";
+
+export const HOME: ILocation = { name: "Home" };
