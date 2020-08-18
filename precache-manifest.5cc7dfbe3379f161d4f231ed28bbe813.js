@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e5f0d9af81303f7b51a37e262e0f6b3b",
+    "revision": "5c0e4e18d3926e8ac96fee3b05b2c271",
     "url": "/index.html"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.533c8b84.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "88fb25a2998ad7d3d4c9",
-    "url": "/static/js/main.7e1b7e35.chunk.js"
+    "revision": "ad392be391f7d7970dd7",
+    "url": "/static/js/main.f73ccdf4.chunk.js"
   },
   {
     "revision": "3cf57b419839acabd216",
@@ -24,8 +24,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/artist.6b1569d5.svg"
   },
   {
-    "revision": "a7bef01bba3d9aee14f481bfe76d3ee3",
-    "url": "/static/media/book.a7bef01b.svg"
+    "revision": "139739fcdbd32d61ed3ac519687b8794",
+    "url": "/static/media/book.139739fc.svg"
   },
   {
     "revision": "5441026de621b4b1335d073ed998a333",
@@ -68,12 +68,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/cutlery-2.16ffbe35.svg"
   },
   {
-    "revision": "1c88ddb6165f1b34befd28db6493d33c",
-    "url": "/static/media/dancer-ballet.1c88ddb6.svg"
+    "revision": "1e62fb24228d7a92ff3807079a540b67",
+    "url": "/static/media/dancer-ballet.1e62fb24.svg"
   },
   {
-    "revision": "f93a8480dedda933146b64dedd5b94a3",
-    "url": "/static/media/dancer-jumping.f93a8480.svg"
+    "revision": "7026903bd474ebecdb61a99942796509",
+    "url": "/static/media/dancer-jumping.7026903b.svg"
   },
   {
     "revision": "e332ed1df7efda732bb85e81c19a05ab",
@@ -98,6 +98,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "990437ca331321ef7ec6232cef337b4f",
     "url": "/static/media/gift.990437ca.svg"
+  },
+  {
+    "revision": "9ab15158c68e17fe87ada28a0f7613db",
+    "url": "/static/media/guitar-1.9ab15158.svg"
   },
   {
     "revision": "f4a2e05c3cfa14a554a716ed8edd5538",
@@ -140,8 +144,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/palette.24e9617b.svg"
   },
   {
-    "revision": "4f07f7324d947faaf84be3d251658418",
-    "url": "/static/media/palm-tree.4f07f732.svg"
+    "revision": "10f9fe336c03d969e70cc827d3dc62ca",
+    "url": "/static/media/palm-tree.10f9fe33.svg"
   },
   {
     "revision": "045db1fc595731246a893222fabef3ee",
@@ -176,16 +180,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/shoes-flamenco.92e030e6.svg"
   },
   {
-    "revision": "b601c3f5cb7900fc3c59a4155690faf8",
-    "url": "/static/media/shop-tag.b601c3f5.svg"
+    "revision": "a334aa7dbf932f858b377e8b6dfc39f3",
+    "url": "/static/media/shop-tag.a334aa7d.svg"
   },
   {
     "revision": "2c278f009460667148abf76cc494ac16",
     "url": "/static/media/shop.2c278f00.svg"
   },
   {
-    "revision": "32eed8d815d0aaa7ac7bf1e79fced19f",
-    "url": "/static/media/shopping-bag.32eed8d8.svg"
+    "revision": "5ec1335ac4f23b921fb2681a301a49ed",
+    "url": "/static/media/shopping-bag.5ec1335a.svg"
   },
   {
     "revision": "3706a2d60a0e548c184e963b534b881f",
