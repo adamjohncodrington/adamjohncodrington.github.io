@@ -6,11 +6,12 @@ interface IGigOrFestival extends I__Favourite, I_Company {
   ticketType?: ITicketType;
 }
 
-interface IFestival extends IGigOrFestival, I_Dates {
+interface IFestivalWithoutVideo extends IGigOrFestival, I_Dates {
   title: IFestivalTitle;
-  video?: IFestivalVideo;
   lineup: IMusician[][];
 }
+interface IFestivalWithVideo extends IFestivalWithoutVideo, I_Video {}
+interface IFestival extends IFestivalWithoutVideo, I__Video {}
 
 interface IGig extends IGigOrFestival, I_Date {
   headline: IMusician;
@@ -38,8 +39,4 @@ interface IMusician extends I_Name, I__Favourite, I__ExcludeFromBucketList {
 interface IGigVideo extends IVideo {
   date: Date;
   musician: IMusician;
-}
-
-interface IFestivalVideo extends IVideo, I_StartEndDates {
-  dates: IStartEndDate;
 }

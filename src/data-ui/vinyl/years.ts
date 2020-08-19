@@ -1,4 +1,4 @@
-import { VINYL_COLLECTION as DATA } from "data-raw";
+import { VINYL_PURCHASED as DATA } from "data-raw";
 import { splitCardsIntoYears } from "utils";
 
 import { mapVinylsToCards } from "./utils";

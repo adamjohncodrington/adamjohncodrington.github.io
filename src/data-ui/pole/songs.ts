@@ -14,9 +14,9 @@ export const SONGS: IMiniCard[] = Object.values(songs).map(
     const songMatches: IPoleRoutine[] = getSongMatches(song);
     const video: IVideo = songMatches[0] && songMatches[0].video;
     return {
-      primaryText: title,
-      secondaryText: musician.name,
-      sort: [title, musician.name],
+      secondaryText: title,
+      primaryText: musician.name,
+      sort: [musician.name, title],
       primaryCount: songMatches.length,
       video
     };

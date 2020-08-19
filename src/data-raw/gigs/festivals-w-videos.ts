@@ -1,0 +1,172 @@
+import {
+  FRIENDS,
+  FESTIVAL_TITLES,
+  MUSICIANS,
+  MUSIC_VENUES,
+  LANDSCAPE_720P
+} from "@constants";
+
+export const GLASTONBURY_2016: IFestivalWithVideo = {
+  title: FESTIVAL_TITLES.GLASTONBURY,
+  video: { youtubeId: "CcjqpflHGwA", ...LANDSCAPE_720P },
+  lineup: [
+    [
+      MUSICIANS.NAO,
+      MUSICIANS.CHRISTINE_AND_THE_QUEENS,
+      MUSICIANS.AURORA,
+      MUSICIANS.DAUGHTER,
+      MUSICIANS.DISCLOSURE,
+      MUSICIANS.CARL_COX,
+      MUSICIANS.FOUR_TET,
+      MUSICIANS.MACEO_PLEX
+    ],
+    [
+      MUSICIANS.ALESSIA_CARA,
+      MUSICIANS.TOM_ODELL,
+      MUSICIANS._1975_THE,
+      MUSICIANS.WILL_YOUNG,
+      MUSICIANS.ADELE
+    ],
+    [
+      MUSICIANS.RALEIGH_RITCHIE,
+      MUSICIANS.YEARS_AND_YEARS,
+      MUSICIANS.ELLIE_GOULDING,
+      MUSICIANS.GRIMES
+    ]
+  ],
+  venue: MUSIC_VENUES.WORTHY_FARM,
+  company: [
+    FRIENDS.TONYA_FRANCE,
+    FRIENDS.ELLIE_GURKIN,
+    FRIENDS.GRACE_HULME,
+    FRIENDS.CAITLIN_MCCAIG,
+    FRIENDS.ELLIE_PEARCE,
+    FRIENDS.THOM_STEPHANAKIS
+  ],
+  dates: [
+    new Date("2016-06-24"),
+    new Date("2016-06-25"),
+    new Date("2016-06-26")
+  ]
+};
+
+export const LOVEBOX: IFestivalWithVideo = {
+  title: FESTIVAL_TITLES.LOVEBOX,
+  video: { youtubeId: "Udliwez_5BM", ...LANDSCAPE_720P },
+  lineup: [
+    [
+      MUSICIANS.MO,
+      MUSICIANS.RITON,
+      MUSICIANS.DIPLO,
+      MUSICIANS.PAUL_WOOLFORD,
+      MUSICIANS.HEIDI,
+      MUSICIANS.HANNAH_WANTS,
+      MUSICIANS.JORIS_VOORN,
+      MUSICIANS.MAJOR_LAZER
+    ]
+  ],
+  venue: MUSIC_VENUES.VICTORIA_PARK,
+  company: [
+    FRIENDS.TONYA_FRANCE,
+    FRIENDS.TOM_CHINDA_COUTTS,
+    FRIENDS.RYAN_MILLS,
+    FRIENDS.LAURA_CAPECE_GALEOTA,
+    FRIENDS.LUKE_JONES,
+    FRIENDS.ALICE_RODER
+  ],
+  dates: [new Date("2016-07-15")]
+};
+
+export const BRIGHTON_PRIDE_2016: IFestivalWithVideo = {
+  title: FESTIVAL_TITLES.BRIGHTON_PRIDE,
+  lineup: [
+    [MUSICIANS.DUA_LIPA, MUSICIANS.CARLY_RAE_JEPSEN, MUSICIANS.SISTER_SLEDGE]
+  ],
+  video: { youtubeId: "9__FQwNSa44", ...LANDSCAPE_720P },
+  venue: MUSIC_VENUES.PRESTON_PARK,
+  company: [
+    FRIENDS.ELLIE_GURKIN,
+    FRIENDS.POOJA_DHIR,
+    FRIENDS.GRACE_HULME,
+    FRIENDS.SIAN_RODWAY_SMITH,
+    FRIENDS.TONYA_FRANCE,
+    FRIENDS.ALICE_RODER
+  ],
+  dates: [new Date("2016-08-06")]
+};
+
+export const V_FESTIVAL: IFestivalWithVideo = {
+  title: FESTIVAL_TITLES.V_FESTIVAL,
+  video: { youtubeId: "MYDY3lBavQ0", ...LANDSCAPE_720P },
+  lineup: [
+    [
+      MUSICIANS.MIKE_POSNER,
+      MUSICIANS.MNEK,
+      MUSICIANS.ZARA_LARSSON,
+      MUSICIANS.PHILIP_GEORGE,
+      MUSICIANS.JESS_GLYNNE,
+      MUSICIANS.FLIGHT_FACILITIES,
+      MUSICIANS.SIA,
+      MUSICIANS.JUSTIN_BIEBER
+    ]
+  ],
+  venue: MUSIC_VENUES.WESTON_PARK,
+  company: [FRIENDS.SARAH_WHITAKER, FRIENDS.CHELSEA_CUNNINGHAM],
+  dates: [new Date("2016-08-21")]
+};
+
+export const WHP_2016: IFestivalWithVideo = {
+  title: FESTIVAL_TITLES.WAREHOUSE_PROJECT,
+  lineup: [[MUSICIANS.DUSKY, MUSICIANS.DANIEL_AVERY]],
+  venue: MUSIC_VENUES.STORE_STREET,
+  video: { youtubeId: "4PbG79luzoM", ...LANDSCAPE_720P },
+  company: [FRIENDS.DAN_SPARROW],
+  dates: [new Date("2016-09-30")]
+};
+
+export const BESTIVAL: IFestivalWithVideo = {
+  title: FESTIVAL_TITLES.BESTIVAL,
+  lineup: [
+    [
+      MUSICIANS.ALMA,
+      MUSICIANS.LITTLE_DRAGON,
+      MUSICIANS.KOLSCH,
+      MUSICIANS.XX_THE,
+      MUSICIANS.MACEO_PLEX,
+      MUSICIANS.JOE_GODDARD
+    ],
+    [
+      MUSICIANS.FOURS,
+      MUSICIANS.ANNA_OF_THE_NORTH,
+      MUSICIANS.LUCY_ROSE,
+      MUSICIANS.DIZZEE_RASCAL,
+      MUSICIANS.DUSKY,
+      MUSICIANS.CHARLOTTE_CHURCH
+    ],
+    [MUSICIANS.SOUL_WAX, MUSICIANS.PET_SHOP_BOYS]
+  ],
+  video: { youtubeId: "uFjIdpIjY8Y", ...LANDSCAPE_720P },
+  dates: [
+    new Date("2017-09-08"),
+    new Date("2017-09-09"),
+    new Date("2017-09-10")
+  ],
+  venue: MUSIC_VENUES.LULWORTH_ESTATE,
+  company: [
+    FRIENDS.TONYA_FRANCE,
+    FRIENDS.RYAN_MILLS,
+    FRIENDS.DAN_SPARROW,
+    FRIENDS.MARIA_TAYLOR,
+    FRIENDS.CAITLIN_MCCAIG,
+    FRIENDS.CAITY_DALBY
+  ]
+};
+
+export const ON_THE_RUN_II: IFestivalWithVideo = {
+  title: FESTIVAL_TITLES.ON_THE_RUN_II,
+  lineup: [[MUSICIANS.JAY_Z, MUSICIANS.BEYONCE]],
+  venue: MUSIC_VENUES.LONDON_STADIUM,
+  dates: [new Date("2018-06-16")],
+  video: { youtubeId: "_Oj9VOXXu2o", ...LANDSCAPE_720P },
+  company: [FRIENDS.TONYA_FRANCE]
+};

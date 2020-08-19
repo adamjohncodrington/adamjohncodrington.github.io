@@ -30,7 +30,6 @@ export const VINYL = {
     hideGiftSymbol: true,
     hideSignedIcon: true
   }),
-  //TODO: add this to site, and LEON to wish list
   ORDERED: mapVinylsToCards(VINYL_ORDERED),
   SIGNED: mapVinylsToCards(SIGNED, { hideSignedIcon: true }),
   WISH_LIST: mapAlbumsToCards(VINYL_WISH_LIST),

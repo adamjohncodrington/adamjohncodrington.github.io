@@ -25,7 +25,7 @@ export const TAYLOR_SWIFT_FOLKLORE: IVinyl = {
   title: "folklore",
   costExcDelivery: 26.99,
   retailer: MUSICIAN_WEB_STORE,
-  appleMusicId: "folklore/1524801260",
+  appleMusicId: "folklore-deluxe-version/1528112358",
   year: 2020,
   arrived: false,
   colors: [COLORS.VINYL.TAYLOR_SWIFT_FOLKLORE],

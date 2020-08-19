@@ -6,7 +6,7 @@ import {
   TICKET_TYPES
 } from "@constants";
 
-export const DECAYDANCE: IFestival = {
+export const DECAYDANCE: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.DECAYDANCE,
   lineup: [
     [
@@ -22,7 +22,7 @@ export const DECAYDANCE: IFestival = {
   company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON, FRIENDS.MEGAN_BLACKBURN]
 };
 
-export const WHP_2014_10: IFestival = {
+export const WHP_2014_10: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.WAREHOUSE_PROJECT,
   lineup: [
     [
@@ -37,7 +37,7 @@ export const WHP_2014_10: IFestival = {
   dates: [new Date("2014-10-04")]
 };
 
-export const WHP_2014_11_07: IFestival = {
+export const WHP_2014_11_07: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.WAREHOUSE_PROJECT,
   lineup: [
     [
@@ -52,7 +52,7 @@ export const WHP_2014_11_07: IFestival = {
   dates: [new Date("2014-11-07")]
 };
 
-export const WHP_2014_11_15: IFestival = {
+export const WHP_2014_11_15: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.WAREHOUSE_PROJECT,
   lineup: [
     [
@@ -67,7 +67,7 @@ export const WHP_2014_11_15: IFestival = {
   dates: [new Date("2014-11-15")]
 };
 
-export const WHP_2014_12: IFestival = {
+export const WHP_2014_12: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.WAREHOUSE_PROJECT,
   lineup: [[MUSICIANS.MIDLAND, MUSICIANS.JOY_ORBISON, MUSICIANS.DUSKY]],
   venue: MUSIC_VENUES.STORE_STREET,
@@ -79,7 +79,7 @@ export const WHP_2014_12: IFestival = {
   dates: [new Date("2014-12-06")]
 };
 
-export const PARKLIFE_2014: IFestival = {
+export const PARKLIFE_2014: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.PARKLIFE,
   lineup: [
     [
@@ -103,7 +103,7 @@ export const PARKLIFE_2014: IFestival = {
   dates: [new Date("2014-06-07"), new Date("2014-06-08")]
 };
 
-export const TRANSMISSION_2015_02_07: IFestival = {
+export const TRANSMISSION_2015_02_07: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.TRANSMISSION,
   lineup: [[MUSICIANS.TEN_WALLS, MUSICIANS.DUSKY, MUSICIANS.YOUSEF]],
   venue: MUSIC_VENUES.ALBERT_HALL_MANCHESTER,
@@ -111,7 +111,15 @@ export const TRANSMISSION_2015_02_07: IFestival = {
   dates: [new Date("2015-02-07")]
 };
 
-export const TRIBAL_SESSIONS: IFestival = {
+export const DEFECTED_BRISTOL: IFestivalWithoutVideo = {
+  title: FESTIVAL_TITLES.DEFECTED_BRISTOL,
+  lineup: [[MUSICIANS.MK]],
+  venue: MUSIC_VENUES.MOTION,
+  dates: [new Date("2016-07-30")],
+  company: [FRIENDS.CHELSEA_CUNNINGHAM, FRIENDS.SARAH_WHITAKER]
+};
+
+export const TRIBAL_SESSIONS: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.TRIBAL_SESSIONS,
   lineup: [[MUSICIANS.JOSH_BUTLER, MUSICIANS.BONTAN, MUSICIANS.GREEN_VELVET]],
   venue: MUSIC_VENUES.SANKEYS,
@@ -119,7 +127,7 @@ export const TRIBAL_SESSIONS: IFestival = {
   dates: [new Date("2015-02-13")]
 };
 
-export const TRANSMISSION_2015_02_27: IFestival = {
+export const TRANSMISSION_2015_02_27: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.TRANSMISSION,
   lineup: [[MUSICIANS.JAX_JONES, MUSICIANS.DUKE_DUMONT, MUSICIANS.BLONDE]],
   venue: MUSIC_VENUES.ALBERT_HALL_MANCHESTER,
@@ -127,7 +135,7 @@ export const TRANSMISSION_2015_02_27: IFestival = {
   dates: [new Date("2015-02-27")]
 };
 
-export const TRANSMISSION_2015_04: IFestival = {
+export const TRANSMISSION_2015_04: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.TRANSMISSION,
   lineup: [[MUSICIANS.EATS_EVERYTHING, MUSICIANS.CARL_COX]],
   venue: MUSIC_VENUES.ALBERT_HALL_MANCHESTER,
@@ -135,7 +143,7 @@ export const TRANSMISSION_2015_04: IFestival = {
   dates: [new Date("2015-04-03")]
 };
 
-export const PARKLIFE_2015: IFestival = {
+export const PARKLIFE_2015: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.PARKLIFE,
   lineup: [
     [
@@ -167,7 +175,7 @@ export const PARKLIFE_2015: IFestival = {
   dates: [new Date("2015-06-06"), new Date("2015-06-07")]
 };
 
-export const GLASTONBURY_2015: IFestival = {
+export const GLASTONBURY_2015: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.GLASTONBURY,
   lineup: [
     [
@@ -216,7 +224,7 @@ export const GLASTONBURY_2015: IFestival = {
   ]
 };
 
-export const FABRIC_NYE: IFestival = {
+export const FABRIC_NYE: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.FABRIC_NYE,
   lineup: [[MUSICIANS.GEORGE_FITZGERALD, MUSICIANS.EATS_EVERYTHING]],
   venue: MUSIC_VENUES.FABRIC,
@@ -230,134 +238,7 @@ export const FABRIC_NYE: IFestival = {
   dates: [new Date("2015-12-31")]
 };
 
-export const GLASTONBURY_2016: IFestival = {
-  title: FESTIVAL_TITLES.GLASTONBURY,
-  //youtubeId: "CcjqpflHGwA",
-  lineup: [
-    [
-      MUSICIANS.NAO,
-      MUSICIANS.CHRISTINE_AND_THE_QUEENS,
-      MUSICIANS.AURORA,
-      MUSICIANS.DAUGHTER,
-      MUSICIANS.DISCLOSURE,
-      MUSICIANS.CARL_COX,
-      MUSICIANS.FOUR_TET,
-      MUSICIANS.MACEO_PLEX
-    ],
-    [
-      MUSICIANS.ALESSIA_CARA,
-      MUSICIANS.TOM_ODELL,
-      MUSICIANS._1975_THE,
-      MUSICIANS.WILL_YOUNG,
-      MUSICIANS.ADELE
-    ],
-    [
-      MUSICIANS.RALEIGH_RITCHIE,
-      MUSICIANS.YEARS_AND_YEARS,
-      MUSICIANS.ELLIE_GOULDING,
-      MUSICIANS.GRIMES
-    ]
-  ],
-  venue: MUSIC_VENUES.WORTHY_FARM,
-  company: [
-    FRIENDS.TONYA_FRANCE,
-    FRIENDS.ELLIE_GURKIN,
-    FRIENDS.GRACE_HULME,
-    FRIENDS.CAITLIN_MCCAIG,
-    FRIENDS.ELLIE_PEARCE,
-    FRIENDS.THOM_STEPHANAKIS
-  ],
-  dates: [
-    new Date("2016-06-24"),
-    new Date("2016-06-25"),
-    new Date("2016-06-26")
-  ]
-};
-
-export const LOVEBOX: IFestival = {
-  title: FESTIVAL_TITLES.LOVEBOX,
-  //youtubeId: "Udliwez_5BM",
-  lineup: [
-    [
-      MUSICIANS.MO,
-      MUSICIANS.RITON,
-      MUSICIANS.DIPLO,
-      MUSICIANS.PAUL_WOOLFORD,
-      MUSICIANS.HEIDI,
-      MUSICIANS.HANNAH_WANTS,
-      MUSICIANS.JORIS_VOORN,
-      MUSICIANS.MAJOR_LAZER
-    ]
-  ],
-  venue: MUSIC_VENUES.VICTORIA_PARK,
-  company: [
-    FRIENDS.TONYA_FRANCE,
-    FRIENDS.TOM_CHINDA_COUTTS,
-    FRIENDS.RYAN_MILLS,
-    FRIENDS.LAURA_CAPECE_GALEOTA,
-    FRIENDS.LUKE_JONES,
-    FRIENDS.ALICE_RODER
-  ],
-  dates: [new Date("2016-07-15")]
-};
-
-export const DEFECTED_BRISTOL: IFestival = {
-  title: FESTIVAL_TITLES.DEFECTED_BRISTOL,
-  lineup: [[MUSICIANS.MK]],
-  venue: MUSIC_VENUES.MOTION,
-  dates: [new Date("2016-07-30")],
-  //youtubeId: "bcST9diXdKA",
-  company: [FRIENDS.CHELSEA_CUNNINGHAM, FRIENDS.SARAH_WHITAKER]
-};
-
-export const BRIGHTON_PRIDE_2016: IFestival = {
-  title: FESTIVAL_TITLES.BRIGHTON_PRIDE,
-  lineup: [
-    [MUSICIANS.DUA_LIPA, MUSICIANS.CARLY_RAE_JEPSEN, MUSICIANS.SISTER_SLEDGE]
-  ],
-  //youtubeId: "9__FQwNSa44",
-  venue: MUSIC_VENUES.PRESTON_PARK,
-  company: [
-    FRIENDS.ELLIE_GURKIN,
-    FRIENDS.POOJA_DHIR,
-    FRIENDS.GRACE_HULME,
-    FRIENDS.SIAN_RODWAY_SMITH,
-    FRIENDS.TONYA_FRANCE,
-    FRIENDS.ALICE_RODER
-  ],
-  dates: [new Date("2016-08-06")]
-};
-
-export const V_FESTIVAL: IFestival = {
-  title: FESTIVAL_TITLES.V_FESTIVAL,
-  //youtubeId: "MYDY3lBavQ0",
-  lineup: [
-    [
-      MUSICIANS.MIKE_POSNER,
-      MUSICIANS.MNEK,
-      MUSICIANS.ZARA_LARSSON,
-      MUSICIANS.PHILIP_GEORGE,
-      MUSICIANS.JESS_GLYNNE,
-      MUSICIANS.FLIGHT_FACILITIES,
-      MUSICIANS.SIA,
-      MUSICIANS.JUSTIN_BIEBER
-    ]
-  ],
-  venue: MUSIC_VENUES.WESTON_PARK,
-  company: [FRIENDS.SARAH_WHITAKER, FRIENDS.CHELSEA_CUNNINGHAM],
-  dates: [new Date("2016-08-21")]
-};
-
-export const WHP_2016: IFestival = {
-  title: FESTIVAL_TITLES.WAREHOUSE_PROJECT,
-  lineup: [[MUSICIANS.DUSKY, MUSICIANS.DANIEL_AVERY]],
-  venue: MUSIC_VENUES.STORE_STREET,
-  //youtubeId: "4PbG79luzoM",
-  company: [FRIENDS.DAN_SPARROW],
-  dates: [new Date("2016-09-30")]
-};
-
-export const BRIGHTON_PRIDE_2017: IFestival = {
+export const BRIGHTON_PRIDE_2017: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.BRIGHTON_PRIDE,
   lineup: [[MUSICIANS.BECKY_MILLS_HILL, MUSICIANS.YEARS_AND_YEARS]],
   dates: [new Date("2017-08-05")],
@@ -372,45 +253,7 @@ export const BRIGHTON_PRIDE_2017: IFestival = {
   ]
 };
 
-export const BESTIVAL: IFestival = {
-  title: FESTIVAL_TITLES.BESTIVAL,
-  lineup: [
-    [
-      MUSICIANS.ALMA,
-      MUSICIANS.LITTLE_DRAGON,
-      MUSICIANS.KOLSCH,
-      MUSICIANS.XX_THE,
-      MUSICIANS.MACEO_PLEX,
-      MUSICIANS.JOE_GODDARD
-    ],
-    [
-      MUSICIANS.FOURS,
-      MUSICIANS.ANNA_OF_THE_NORTH,
-      MUSICIANS.LUCY_ROSE,
-      MUSICIANS.DIZZEE_RASCAL,
-      MUSICIANS.DUSKY,
-      MUSICIANS.CHARLOTTE_CHURCH
-    ],
-    [MUSICIANS.SOUL_WAX, MUSICIANS.PET_SHOP_BOYS]
-  ],
-  dates: [
-    new Date("2017-09-08"),
-    new Date("2017-09-09"),
-    new Date("2017-09-10")
-  ],
-  venue: MUSIC_VENUES.LULWORTH_ESTATE,
-  //youtubeId: "uFjIdpIjY8Y",
-  company: [
-    FRIENDS.TONYA_FRANCE,
-    FRIENDS.RYAN_MILLS,
-    FRIENDS.DAN_SPARROW,
-    FRIENDS.MARIA_TAYLOR,
-    FRIENDS.CAITLIN_MCCAIG,
-    FRIENDS.CAITY_DALBY
-  ]
-};
-
-export const LOVEBOX_2017: IFestival = {
+export const LOVEBOX_2017: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.LOVEBOX,
   lineup: [
     [
@@ -433,16 +276,7 @@ export const LOVEBOX_2017: IFestival = {
   ]
 };
 
-export const ON_THE_RUN_II: IFestival = {
-  title: FESTIVAL_TITLES.ON_THE_RUN_II,
-  lineup: [[MUSICIANS.JAY_Z, MUSICIANS.BEYONCE]],
-  venue: MUSIC_VENUES.LONDON_STADIUM,
-  dates: [new Date("2018-06-16")],
-  //youtubeId: "_Oj9VOXXu2o",
-  company: [FRIENDS.TONYA_FRANCE]
-};
-
-export const NOTION_SUMMER_PARTY: IFestival = {
+export const NOTION_SUMMER_PARTY: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.NOTION_SUMMER_PARTY,
   lineup: [
     [
@@ -459,7 +293,7 @@ export const NOTION_SUMMER_PARTY: IFestival = {
   company: [FRIENDS.LUKE_JONES]
 };
 
-export const BRIGHTON_PRIDE_2018: IFestival = {
+export const BRIGHTON_PRIDE_2018: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.BRIGHTON_PRIDE,
   lineup: [[MUSICIANS.BRITNEY_SPEARS]],
   venue: MUSIC_VENUES.PRESTON_PARK,
@@ -473,7 +307,7 @@ export const BRIGHTON_PRIDE_2018: IFestival = {
   ]
 };
 
-export const MANCHESTER_PRIDE_2019: IFestival = {
+export const MANCHESTER_PRIDE_2019: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.MANCHESTER_PRIDE,
   lineup: [
     [
@@ -495,7 +329,7 @@ export const MANCHESTER_PRIDE_2019: IFestival = {
   ]
 };
 
-export const CHINGFEST: IFestival = {
+export const CHINGFEST: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.CHINGFEST,
   lineup: [[MUSICIANS.INCOGNITO, MUSICIANS.NAO]],
   venue: MUSIC_VENUES.RIDGEWAY_PARK,
@@ -503,7 +337,7 @@ export const CHINGFEST: IFestival = {
   company: [FRIENDS.DARREN_TAYLOR]
 };
 
-export const HOMOBLOC: IFestival = {
+export const HOMOBLOC: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.HOMOBLOC,
   lineup: [[MUSICIANS.ROMY, MUSICIANS.ROBYN, MUSICIANS.HORSE_MEAT_DISCO]],
   venue: MUSIC_VENUES.MAYFIELD_DEPOT,
@@ -511,7 +345,7 @@ export const HOMOBLOC: IFestival = {
   company: [FRIENDS.DAN_SPARROW, FRIENDS.MARIA_TAYLOR]
 };
 
-export const AREA_10_NYE: IFestival = {
+export const AREA_10_NYE: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.AREA_10_NYE,
   lineup: [[MUSICIANS.MK]],
   venue: MUSIC_VENUES.BRIXTON_ACADEMY,
@@ -523,7 +357,7 @@ export const AREA_10_NYE: IFestival = {
   ]
 };
 
-export const MIGHTY_HOOPLA_2021: IFestival = {
+export const MIGHTY_HOOPLA_2021: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.MIGHTY_HOOPLA,
   venue: MUSIC_VENUES.BROCKWELL_PARK,
   dates: [new Date("2021-06-05")],

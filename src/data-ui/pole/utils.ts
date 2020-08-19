@@ -51,7 +51,7 @@ export const mapPoleTricksVideosToCards = (
       poleCategory: showCategorySymbol ? category : undefined
     }),
     title: getDatesText([start, end], { hideDay: true }),
-    body: studio.name
+    secondaryBody: studio.name
   });
   return poleTricksVideos.map(
     (poleTricksVideo: IPoleTricksVideo): ICard =>
