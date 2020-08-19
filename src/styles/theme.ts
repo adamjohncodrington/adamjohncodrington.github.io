@@ -16,14 +16,15 @@ const THEME_CARD: IThemeCard = {
 };
 
 const THEME_NAV_BAR: IThemeNavBar = {
-  background: { inactive: BLACK, active: GRAY_DARK },
+  background: BLACK,
+  navLink: { background: { inactive: BLACK, active: GRAY_DARK } },
   icon: {
     color: WHITE,
     size: "32px",
     defaultHoverColor: "#aaa",
     hoverShrinkSize: "0"
   },
-  padding: { vertical: "10px" }
+  padding: { vertical: "12.5px" }
 };
 
 const THEME_PAGE_HEADER: IThemePageHeader = {
@@ -33,7 +34,6 @@ const THEME_PAGE_HEADER: IThemePageHeader = {
 
 const THEME_PAGE_SECTION: IThemePageSection = {
   background: GRAY_LIGHT,
-  borderRadius: "0.25rem",
   headline: { fontSize: FONT_SIZES.ML },
   count: { margin: { left: "7px" } },
   header: { padding: { vertical: "12px" } },
@@ -59,7 +59,9 @@ const THEME_PAGE_SECTION: IThemePageSection = {
 const pageLayoutHorizontalSpacing: PxValue = "20px";
 const THEME_PAGE_LAYOUT: IThemePageLayout = {
   columnGap: pageLayoutHorizontalSpacing,
-  padding: { all: `15px ${pageLayoutHorizontalSpacing} 35px` }
+  padding: {
+    all: `${pageLayoutHorizontalSpacing} ${pageLayoutHorizontalSpacing} 35px`
+  }
 };
 
 const THEME_RECIPE_CARD: IThemeRecipe = {
@@ -84,6 +86,7 @@ const THEME_VINYL_CARD: IThemeAlbumCard = {
 };
 
 export const THEME: ITheme = {
+  borderRadius: "0.25rem",
   breakpoints: BREAKPOINTS,
   boxShadow: `0 1px 4px ${rgba(GRAY_MEDIUM, 0.6)}`,
   miniCard: THEME_MINI_CARD_ITEM,

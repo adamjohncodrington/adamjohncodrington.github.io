@@ -1,4 +1,4 @@
-export const XxL: RemValue = "4rem";
+export const XxL: RemValue = "3.75rem";
 export const XL: RemValue = "1.875rem";
 export const L: RemValue = "1.375rem";
 export const ML: RemValue = "1.125rem";

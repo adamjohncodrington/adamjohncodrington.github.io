@@ -18,27 +18,31 @@ const PageShell = styled.main(
   `
 );
 
-export const App: FC = () => {
-  const PAGES: IPage[] = pages.filter(({ hide }: IPage): boolean => !hide);
-  return (
-    <BrowserRouter>
-      <Switch>
-        {PAGES.filter(({ hide }: IPage): boolean => !hide).map(
-          ({ title, path, count, sections }: IPage, index: number) => (
+const PAGES: IPage[] = pages.filter(({ hide }: IPage): boolean => !hide);
+
+export const App: FC = () => (
+  <BrowserRouter>
+    <Switch>
+      {PAGES.filter(({ hide }: IPage): boolean => !hide).map(
+        (page: IPage, index: number) => {
+          const { title, path, sections } = page;
+          return (
             <Route key={index} path={path}>
-              <NavBar pages={PAGES} />
+              <header>
+                <NavBar pages={PAGES} {...page} />
+              </header>
 
-              <PageShell data-test="page-content">
-                <PageHeader titleText={title} count={count} />
-
-                <PageSections pageSections={sections} />
-              </PageShell>
+              <main>
+                <PageShell data-test="page-content">
+                  <PageSections pageSections={sections} />
+                </PageShell>
+              </main>
             </Route>
-          )
-        )}
+          );
+        }
+      )}
 
-        <Redirect from="/" to={PAGES[0].path} />
-      </Switch>
-    </BrowserRouter>
-  );
-};
+      <Redirect from="/" to={PAGES[0].path} />
+    </Switch>
+  </BrowserRouter>
+);

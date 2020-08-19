@@ -15,7 +15,8 @@ interface IThemeCard {
 }
 
 interface IThemeNavBar {
-  background: { inactive: ColorValue; active: ColorValue };
+  background: ColorValue;
+  navLink: { background: { inactive: ColorValue; active: ColorValue } };
   icon: {
     color: ColorValue;
     defaultHoverColor: ColorValue;
@@ -32,7 +33,6 @@ interface IThemePageHeader {
 
 interface IThemePageSection {
   background: ColorValue;
-  borderRadius: PxValue;
   headline: { fontSize: PxValue };
   count: { margin: { left: PxValue } };
   header: { padding: { vertical: PxValue } };
@@ -82,6 +82,7 @@ interface IThemeAlbumCard {
 }
 
 interface ITheme {
+  borderRadius: PxValue;
   breakpoints: IBreakpoints;
   boxShadow: BoxShadowValue;
   miniCard: IThemeMiniCard;
