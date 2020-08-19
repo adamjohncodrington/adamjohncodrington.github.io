@@ -1,4 +1,5 @@
 export const BLACK: string = "#000";
+export const GRAY_DARK: string = "#444";
 export const GRAY_MEDIUM: string = "#808080";
 export const GRAY_MEDIUM_LIGHT: string = "#AAAAAA";
 export const GRAY_LIGHT: string = "#DCDCDC";

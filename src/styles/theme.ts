@@ -5,7 +5,7 @@ import { COLORS } from "./colors";
 import * as FONT_SIZES from "./font-sizes";
 import { fontFamily, scrollbarSize } from "./GlobalStyle";
 
-const { BLACK, GRAY_MEDIUM, WHITE, GRAY_LIGHT } = COLORS;
+const { BLACK, GRAY_DARK, GRAY_MEDIUM, WHITE, GRAY_LIGHT } = COLORS;
 
 const THEME_MINI_CARD_ITEM: IThemeMiniCard = {
   count: { margin: { left: "5px" }, width: "20px" }
@@ -16,7 +16,7 @@ const THEME_CARD: IThemeCard = {
 };
 
 const THEME_NAV_BAR: IThemeNavBar = {
-  background: BLACK,
+  background: { inactive: BLACK, active: GRAY_DARK },
   icon: {
     color: WHITE,
     size: "32px",

@@ -31,7 +31,7 @@ export const MOTORHEAD_HELLRAISER: IPoleRoutine = {
 
 export const AMY_WINEHOUSE_LOVE_IS_A_LOSING_GAME: IPoleRoutine = {
   studio: DAN_LEA_STUDIO,
-  date: new Date("2020-07-20"),
+  date: new Date("2020-07-20T19:07:00Z"),
   category: "contemporary-improv",
   song: SONGS.AMY_WINEHOUSE_LOVE_IS_A_LOSING_GAME,
   choreographer: ME,
@@ -49,7 +49,7 @@ export const BILLIE_EILISH_MY_FUTURE: IPoleRoutine = {
 
 export const ELLIE_GOULDING_START: IPoleRoutine = {
   studio: DAN_LEA_STUDIO,
-  date: new Date("2020-07-20"),
+  date: new Date("2020-07-20T18:41:00Z"),
   category: "contemporary-improv",
   song: SONGS.ELLIE_GOULDING_START,
   choreographer: ME,

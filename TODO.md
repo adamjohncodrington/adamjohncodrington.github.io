@@ -1,7 +1,6 @@
 # TO DO LIST
 
 - add full release dates to vinyl
-- add timestamps to pole videos that share the same day
 
 ## Media to add
 

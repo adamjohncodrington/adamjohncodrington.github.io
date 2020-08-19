@@ -15,7 +15,7 @@ interface IThemeCard {
 }
 
 interface IThemeNavBar {
-  background: ColorValue;
+  background: { inactive: ColorValue; active: ColorValue };
   icon: {
     color: ColorValue;
     defaultHoverColor: ColorValue;
