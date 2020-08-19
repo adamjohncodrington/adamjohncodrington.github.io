@@ -1,8 +1,12 @@
 import { createGlobalStyle, css } from "styled-components";
 import { normalize } from "polished";
 
+import { COLORS } from "./colors";
+
 export const fontFamily: string = `"Freight Sans", -apple-system, "Helvetica Neue", Helvetica, sans-serif`;
 export const scrollbarSize: PxValue = "10px";
+
+const { BLACK } = COLORS;
 
 export const CSS_scrollbar = css`
   ::-webkit-scrollbar {
@@ -42,6 +46,8 @@ const CSS_GlobalStyle = css`
 
   body {
     font-family: ${fontFamily};
+
+    background: ${BLACK};
 
     margin: 0;
     -webkit-font-smoothing: antialiased;

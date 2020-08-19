@@ -5,7 +5,14 @@ import { COLORS } from "./colors";
 import * as FONT_SIZES from "./font-sizes";
 import { fontFamily, scrollbarSize } from "./GlobalStyle";
 
-const { BLACK, GRAY_DARK, GRAY_MEDIUM, WHITE, GRAY_LIGHT } = COLORS;
+const {
+  BLACK,
+  GRAY_DARKER,
+  GRAY_MEDIUM,
+  GRAY_MEDIUM_LIGHT,
+  WHITE,
+  GRAY_LIGHT
+} = COLORS;
 
 const THEME_MINI_CARD_ITEM: IThemeMiniCard = {
   count: { margin: { left: "5px" }, width: "20px" }
@@ -17,23 +24,21 @@ const THEME_CARD: IThemeCard = {
 
 const THEME_NAV_BAR: IThemeNavBar = {
   background: BLACK,
-  navLink: { background: { inactive: BLACK, active: GRAY_DARK } },
+  height: "4.375rem",
+  navLink: {
+    background: { inactive: BLACK, active: GRAY_DARKER },
+    margin: "0.625rem"
+  },
   icon: {
     color: WHITE,
     size: "32px",
     defaultHoverColor: "#aaa",
     hoverShrinkSize: "0"
-  },
-  padding: { vertical: "12.5px" }
-};
-
-const THEME_PAGE_HEADER: IThemePageHeader = {
-  count: { padding: { all: "12px 0 0 5px" } },
-  margin: { bottom: "25px" }
+  }
 };
 
 const THEME_PAGE_SECTION: IThemePageSection = {
-  background: GRAY_LIGHT,
+  background: "#ccc",
   headline: { fontSize: FONT_SIZES.ML },
   count: { margin: { left: "7px" } },
   header: { padding: { vertical: "12px" } },
@@ -60,7 +65,7 @@ const pageLayoutHorizontalSpacing: PxValue = "20px";
 const THEME_PAGE_LAYOUT: IThemePageLayout = {
   columnGap: pageLayoutHorizontalSpacing,
   padding: {
-    all: `${pageLayoutHorizontalSpacing} ${pageLayoutHorizontalSpacing} 35px`
+    all: `0 ${pageLayoutHorizontalSpacing} 35px`
   }
 };
 
@@ -92,7 +97,6 @@ export const THEME: ITheme = {
   miniCard: THEME_MINI_CARD_ITEM,
   card: THEME_CARD,
   navBar: THEME_NAV_BAR,
-  pageHeader: THEME_PAGE_HEADER,
   pageSection: THEME_PAGE_SECTION,
   pageLayout: THEME_PAGE_LAYOUT,
   recipe: THEME_RECIPE_CARD,

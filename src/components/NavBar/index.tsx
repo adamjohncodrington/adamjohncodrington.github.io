@@ -3,30 +3,37 @@ import styled, { css } from "styled-components";
 
 import { RouterNavLink } from "primitives";
 import { CSS } from "styles";
-import { PageHeader } from "components/PageHeader";
 
-const StyledNav = styled.nav`
-  background: black;
-  ${CSS.GRID_COLUMN_EQUAL_WIDTHS}
-`;
+const StyledNav = styled.nav(
+  ({
+    theme: {
+      navBar: { background, height }
+    }
+  }: I_Theme) => css`
+    height: ${height};
+    background: ${background};
+    ${CSS.GRID_COLUMN_EQUAL_WIDTHS}
+  `
+);
 
 const StyledRouterNavLink = styled(RouterNavLink)(
   ({
     theme: {
+      borderRadius,
       navBar: {
         navLink: {
-          background: { active, inactive }
+          background: { active, inactive },
+          margin
         },
         icon: { color, size }
       }
     }
   }: I_Theme) => css`
-    border-radius: 0.375rem;
-    margin: 0.5rem;
+    border-radius: ${borderRadius};
+    margin: ${margin};
     display: flex;
     justify-content: center;
-
-    padding: 0.5rem 0;
+    align-items: center;
 
     svg {
       fill: ${color};
@@ -43,33 +50,16 @@ const StyledRouterNavLink = styled(RouterNavLink)(
   `
 );
 
-const StyledHeader = styled.header(
-  ({
-    theme: {
-      navBar: { background }
-    }
-  }: I_Theme) => css`
-    background: ${background};
-    color: white;
-  `
-);
-
-interface INavBar extends IPage {
+interface INavBar {
   pages: IPage[];
 }
 
-export const NavBar: React.FC<INavBar> = ({ pages, title, count }) => {
-  return (
-    <>
-      <PageHeader titleText={title} />
-
-      <StyledNav>
-        {pages.map(({ path, SvgIcon }: IPage, i: number) => (
-          <StyledRouterNavLink key={i} to={path} activeClassName="ACTIVE">
-            <SvgIcon />
-          </StyledRouterNavLink>
-        ))}
-      </StyledNav>
-    </>
-  );
-};
+export const NavBar: React.FC<INavBar> = ({ pages }) => (
+  <StyledNav>
+    {pages.map(({ path, SvgIcon }: IPage, i: number) => (
+      <StyledRouterNavLink key={i} to={path} activeClassName="ACTIVE">
+        <SvgIcon />
+      </StyledRouterNavLink>
+    ))}
+  </StyledNav>
+);

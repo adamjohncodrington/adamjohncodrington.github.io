@@ -16,14 +16,17 @@ interface IThemeCard {
 
 interface IThemeNavBar {
   background: ColorValue;
-  navLink: { background: { inactive: ColorValue; active: ColorValue } };
+  height: RemValue;
+  navLink: {
+    background: { inactive: ColorValue; active: ColorValue };
+    margin: RemValue;
+  };
   icon: {
     color: ColorValue;
     defaultHoverColor: ColorValue;
     hoverShrinkSize: PxValue;
     size: PxValue;
   };
-  padding: { vertical: PxValue };
 }
 
 interface IThemePageHeader {
@@ -88,7 +91,6 @@ interface ITheme {
   miniCard: IThemeMiniCard;
   card: IThemeCard;
   navBar: IThemeNavBar;
-  pageHeader: IThemePageHeader;
   pageLayout: IThemePageLayout;
   pageSection: IThemePageSection;
   recipe: IThemeRecipe;

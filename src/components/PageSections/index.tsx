@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import styled from "styled-components";
 
 import { useThemeContext } from "context";
 import { Ul, Li, GridColumnDiv } from "primitives";
@@ -11,16 +12,20 @@ import {
 import { PageSection } from "../PageSection";
 
 interface IPageSections {
-  pageSections: IPageSection[];
+  sections: IPageSection[];
 }
 
-export const PageSections: FC<IPageSections> = ({ pageSections }) => {
+const StyledGridColumnDiv = styled(GridColumnDiv)`
+  padding: 20px 20px 35px;
+`;
+
+export const PageSections: FC<IPageSections> = ({ sections }) => {
   const {
     pageLayout: { columnGap }
   }: ITheme = useThemeContext();
   const { pageUses2Columns } = useMediaQueries();
 
-  const unhiddenPageSections: IPageSection[] = pageSections.filter(
+  const unhiddenPageSections: IPageSection[] = sections.filter(
     ({ hide }: IPageSection): boolean => !hide
   );
 
@@ -46,7 +51,7 @@ export const PageSections: FC<IPageSections> = ({ pageSections }) => {
     : [sortedValidPageSections];
 
   return (
-    <GridColumnDiv
+    <StyledGridColumnDiv
       columnGap={columnGap}
       data-test="page-sections"
       equalWidthColumns={true}
@@ -69,6 +74,6 @@ export const PageSections: FC<IPageSections> = ({ pageSections }) => {
           </Ul>
         )
       )}
-    </GridColumnDiv>
+    </StyledGridColumnDiv>
   );
 };
