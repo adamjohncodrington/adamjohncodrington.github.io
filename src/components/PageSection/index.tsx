@@ -1,20 +1,23 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
+import { COLORS } from "styles";
+
 import { Disclosure } from "../Disclosure";
 import { PageSectionHeader } from "./PageSectionHeader";
 import { PageSectionPanel } from "./PageSectionPanel";
+
+const { GRAY_LIGHT } = COLORS;
 
 const PageSectionContainer = styled.section(
   ({
     theme: {
       borderRadius,
-      boxShadow,
       pageSection: { background, padding, margin }
     }
   }) => css`
     background: ${background};
-    box-shadow: ${boxShadow};
+    box-shadow: ${`0 0 5px ${GRAY_LIGHT}`};
     border-radius: ${borderRadius};
     padding: 0 ${padding.horizontal};
     margin-bottom: ${margin.bottom};

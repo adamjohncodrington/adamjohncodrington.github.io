@@ -13,20 +13,18 @@ const StyledMain = styled.main(
   ({ theme: { navBar, pageLayout } }: I_Theme) => css`
     height: calc(100vh - ${navBar.height});
     overflow-y: auto;
-
-    background: ${GRAY_WHITE};
   `
 );
 
 const StyledHeader = styled.header``;
 
 const StyledH1 = styled(H1)`
+  margin-top: -5px;
   text-transform: lowercase;
-  text-align: middle;
-  padding: 5px 20px 15px;
+  text-align: center;
+  padding-bottom: 5px;
 
-  background: ${BLACK};
-  color: ${GRAY_LIGHT};
+  color: ${GRAY_WHITE};
 `;
 
 export const App: FC = () => (
@@ -35,15 +33,15 @@ export const App: FC = () => (
       {PAGES.filter(({ hide }: IPage): boolean => !hide).map(
         ({ title, path, sections }: IPage, index: number) => (
           <Route key={index} path={path}>
+            <NavBar pages={PAGES} />
+
             <StyledMain data-test="page-content">
-              <StyledHeader>
+              {/* <StyledHeader>
                 <StyledH1 bold={true}>{title}</StyledH1>
-              </StyledHeader>
+              </StyledHeader> */}
 
               <PageSections sections={sections} />
             </StyledMain>
-
-            <NavBar pages={PAGES} />
           </Route>
         )
       )}

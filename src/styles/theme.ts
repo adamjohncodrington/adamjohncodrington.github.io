@@ -38,7 +38,7 @@ const THEME_NAV_BAR: IThemeNavBar = {
 };
 
 const THEME_PAGE_SECTION: IThemePageSection = {
-  background: "#ccc",
+  background: "#ddd",
   headline: { fontSize: FONT_SIZES.ML },
   count: { margin: { left: "7px" } },
   header: { padding: { vertical: "12px" } },
@@ -91,7 +91,7 @@ const THEME_VINYL_CARD: IThemeAlbumCard = {
 };
 
 export const THEME: ITheme = {
-  borderRadius: "0.25rem",
+  borderRadius: "0.375rem",
   breakpoints: BREAKPOINTS,
   boxShadow: `0 1px 4px ${rgba(GRAY_MEDIUM, 0.6)}`,
   miniCard: THEME_MINI_CARD_ITEM,

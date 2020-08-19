@@ -2,7 +2,16 @@ import React from "react";
 import styled, { css } from "styled-components";
 
 import { RouterNavLink } from "primitives";
-import { CSS } from "styles";
+import { CSS, COLORS } from "styles";
+
+const {
+  GRAY_LIGHT,
+  GRAY_MEDIUM_LIGHT,
+  GRAY_MEDIUM,
+  GRAY_WHITE,
+  WHITE,
+  BLACK
+} = COLORS;
 
 const StyledNav = styled.nav(
   ({
@@ -45,7 +54,12 @@ const StyledRouterNavLink = styled(RouterNavLink)(
 
     :hover,
     &.ACTIVE {
-      background: ${active};
+      background: ${GRAY_MEDIUM_LIGHT};
+      box-shadow: 0 0 3px white;
+
+      svg {
+        fill: ${BLACK};
+      }
     }
   `
 );
