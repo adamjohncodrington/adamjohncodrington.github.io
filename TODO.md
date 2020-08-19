@@ -39,7 +39,6 @@
 - add more travel photos!!!
 - add alt text to all photos
 - add tooltips to `RoundedSymbol`s?
-- refine Nav Bar (colors persist for active page, mobile behaviour)
 - prevent `Router` from allowing you to go back between pages?
 
 ## Refactoring
