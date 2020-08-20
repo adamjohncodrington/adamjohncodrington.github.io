@@ -4,7 +4,7 @@ import { HIGHLIGHTS, THEME_PARKS } from "./attractions";
 import { BUCKET_LIST } from "./bucket-list";
 import { CITIES } from "./cities";
 import { COUNTRIES } from "./countries";
-import { FRIENDS } from "./friends";
+import { WITH } from "./with";
 import { ISLANDS } from "./islands";
 import { PHOTOS } from "./photos";
 import { UP_NEXT } from "./up-next";
@@ -16,7 +16,7 @@ export const TRAVEL = {
   BUCKET_LIST: filterMiniCards(BUCKET_LIST),
   CITIES: filterMiniCards(CITIES),
   COUNTRIES: filterMiniCards(COUNTRIES),
-  FRIENDS: filterMiniCards(FRIENDS),
+  WITH: filterMiniCards(WITH),
   HIGHLIGHTS: filterMiniCards(HIGHLIGHTS),
   ISLANDS: filterMiniCards(ISLANDS),
   PHOTOS,

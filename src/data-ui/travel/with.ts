@@ -26,7 +26,7 @@ const getFriendDetails = (friend: IFriend): IMiniCardPanelDetail[] => {
   );
 };
 
-export const FRIENDS: IMiniCard[] = Object.values(friends)
+export const WITH: IMiniCard[] = Object.values(friends)
   .filter(({ travel }: IFriend): boolean => !!travel)
   .map(
     (friend: IFriend): IMiniCard => {

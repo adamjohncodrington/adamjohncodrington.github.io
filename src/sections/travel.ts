@@ -23,10 +23,10 @@ const COUNTRIES: IPageSection = {
   count: DATA.COUNTRIES.length
 };
 
-const FRIENDS: IPageSection = {
+const WITH: IPageSection = {
   SvgIcon: SVG.PEOPLE,
-  title: PAGE_SECTION_TITLES.FRIENDS,
-  data: { miniCards: DATA.FRIENDS }
+  title: PAGE_SECTION_TITLES.WITH,
+  data: { miniCards: DATA.WITH }
 };
 
 const HIGHLIGHTS: IPageSection = {
@@ -81,12 +81,15 @@ export const TRAVEL: IPageSection[] = [
   BUCKET_LIST,
   CITIES,
   COUNTRIES,
-  FRIENDS,
+  WITH,
   HIGHLIGHTS,
   ISLANDS,
   THEME_PARKS,
   PHOTOS,
   UP_NEXT,
-  VIDEOS,
-  ...YEARS
-];
+  VIDEOS
+]
+  .sort((a: IPageSection, b: IPageSection): number =>
+    a.title.localeCompare(b.title)
+  )
+  .concat(YEARS);

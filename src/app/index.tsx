@@ -6,9 +6,19 @@ import { PageSections, NavBar } from "components";
 import { PAGES } from "pages";
 
 const StyledMain = styled.main(
-  ({ theme: { navBar } }: I_Theme) => css`
-    height: calc(100vh - ${navBar.height});
+  ({ theme: { pageMargin, navBar } }: I_Theme) => css`
+    height: calc(100vh - ${navBar.height} - 3 * (${pageMargin}));
     overflow-y: auto;
+  `
+);
+
+const PageShell = styled.div(
+  ({ theme: { pageMargin } }: I_Theme) => css`
+    margin: ${pageMargin} ${pageMargin} 35px;
+
+    > :not(:last-child) {
+      margin-bottom: ${pageMargin};
+    }
   `
 );
 
@@ -18,11 +28,13 @@ export const App: FC = () => (
       {PAGES.filter(({ hide }: IPage): boolean => !hide).map(
         ({ title, path, sections }: IPage, index: number) => (
           <Route key={index} path={path}>
-            <NavBar pages={PAGES} />
+            <PageShell>
+              <NavBar pages={PAGES} />
 
-            <StyledMain data-test="page-content">
-              <PageSections sections={sections} />
-            </StyledMain>
+              <StyledMain data-test="page-content">
+                <PageSections sections={sections} />
+              </StyledMain>
+            </PageShell>
           </Route>
         )
       )}

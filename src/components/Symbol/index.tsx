@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import styled, { css } from "styled-components";
-import { rgba } from "polished";
 
 import { SVG } from "resources";
 import { COLORS } from "styles";

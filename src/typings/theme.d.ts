@@ -85,6 +85,8 @@ interface IThemeAlbumCard {
 }
 
 interface ITheme {
+  pageMargin: RemValue;
+
   borderRadius: PxValue;
   breakpoints: IBreakpoints;
   boxShadow: { light: BoxShadowValue; dark: BoxShadowValue };

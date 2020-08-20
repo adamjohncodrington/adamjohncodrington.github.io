@@ -25,15 +25,13 @@ const StyledRouterNavLink = styled(RouterNavLink)(
       borderRadius,
       navBar: {
         navLink: {
-          background: { inactive },
-          margin
+          background: { inactive }
         },
         icon: { size }
       }
     }
   }: I_Theme) => css`
     border-radius: ${borderRadius};
-    margin: ${margin};
     display: flex;
     justify-content: center;
     align-items: center;

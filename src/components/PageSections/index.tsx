@@ -15,9 +15,7 @@ interface IPageSections {
   sections: IPageSection[];
 }
 
-const StyledGridColumnDiv = styled(GridColumnDiv)`
-  padding: 20px 20px 35px;
-`;
+const StyledGridColumnDiv = styled(GridColumnDiv)``;
 
 export const PageSections: FC<IPageSections> = ({ sections }) => {
   const {

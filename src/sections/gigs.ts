@@ -21,10 +21,10 @@ const MUSICIANS: IPageSection = {
   count: DATA.MUSICIANS.length
 };
 
-const FRIENDS: IPageSection = {
+const WITH: IPageSection = {
   SvgIcon: SVG.PEOPLE,
-  title: PAGE_SECTION_TITLES.FRIENDS,
-  data: { miniCards: DATA.FRIENDS }
+  title: PAGE_SECTION_TITLES.WITH,
+  data: { miniCards: DATA.WITH }
 };
 
 const SOLO: IPageSection = {
@@ -82,11 +82,14 @@ export const GIGS: IPageSection[] = [
   BUCKET_LIST,
   FAVOURITES,
   FESTIVALS,
-  FRIENDS,
+  WITH,
   PHOTOS,
   SOLO,
   UP_NEXT,
   VENUES,
-  VIDEOS,
-  ...YEARS
-];
+  VIDEOS
+]
+  .sort((a: IPageSection, b: IPageSection): number =>
+    a.title.localeCompare(b.title)
+  )
+  .concat(YEARS);

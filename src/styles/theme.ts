@@ -7,6 +7,8 @@ import { fontFamily, scrollbarSize } from "./GlobalStyle";
 
 const { BLACK, GRAY_LIGHT, GRAY_DARK, WHITE } = COLORS;
 
+const pageMargin: RemValue = "1rem";
+
 const THEME_MINI_CARD_ITEM: IThemeMiniCard = {
   count: { margin: { left: "5px" }, width: "20px" }
 };
@@ -17,7 +19,7 @@ const THEME_CARD: IThemeCard = {
 
 const THEME_NAV_BAR: IThemeNavBar = {
   background: BLACK,
-  height: "4.375rem",
+  height: "3.25rem",
   navLink: {
     background: { inactive: BLACK, active: "red" },
     margin: "0.625rem"
@@ -84,6 +86,7 @@ const THEME_VINYL_CARD: IThemeAlbumCard = {
 };
 
 export const THEME: ITheme = {
+  pageMargin,
   boxShadow: {
     dark: `0 0 3px ${GRAY_DARK}`,
     light: `0 0 3px ${GRAY_LIGHT}`

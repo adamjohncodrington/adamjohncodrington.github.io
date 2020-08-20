@@ -8,10 +8,10 @@ const ACTORS: IPageSection = {
   data: { miniCards: DATA.ACTORS }
 };
 
-const FRIENDS: IPageSection = {
-  title: PAGE_SECTION_TITLES.FRIENDS,
+const WITH: IPageSection = {
+  title: PAGE_SECTION_TITLES.WITH,
   SvgIcon: SVG.PEOPLE,
-  data: { miniCards: DATA.FRIENDS }
+  data: { miniCards: DATA.WITH }
 };
 
 const PLAYS: IPageSection = {
@@ -44,11 +44,8 @@ const YEARS: IPageSection[] = DATA.YEARS.map(
   })
 );
 
-export const THEATRE: IPageSection[] = [
-  ACTORS,
-  FRIENDS,
-  PLAYS,
-  THEATRES,
-  UP_NEXT,
-  ...YEARS
-];
+export const THEATRE: IPageSection[] = [ACTORS, WITH, PLAYS, THEATRES, UP_NEXT]
+  .sort((a: IPageSection, b: IPageSection): number =>
+    a.title.localeCompare(b.title)
+  )
+  .concat(YEARS);

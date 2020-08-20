@@ -4,7 +4,7 @@ import { filterMiniCards } from "utils";
 import { BUCKET_LIST } from "./bucket-list";
 import { FAVOURITES } from "./favourites";
 import { FESTIVALS } from "./festivals";
-import { FRIENDS } from "./friends";
+import { WITH } from "./with";
 import { MUSICIANS } from "./musicians";
 import { SOLO } from "./solo";
 import { pageCount } from "./page-count";
@@ -21,7 +21,7 @@ export const GIGS = {
   BUCKET_LIST,
   PHOTOS,
   FESTIVALS: filterMiniCards(FESTIVALS),
-  FRIENDS: filterMiniCards(FRIENDS),
+  WITH: filterMiniCards(WITH),
   MUSICIANS: filterMiniCards(MUSICIANS),
   UP_NEXT: mapMusicEventsToCards(UP_NEXT),
   VENUES: filterMiniCards(VENUES),
