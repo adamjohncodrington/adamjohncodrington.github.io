@@ -12,12 +12,13 @@ const { GRAY_LIGHT } = COLORS;
 const PageSectionContainer = styled.section(
   ({
     theme: {
+      boxShadow,
       borderRadius,
       pageSection: { background, padding, margin }
     }
-  }) => css`
+  }: I_Theme) => css`
     background: ${background};
-    box-shadow: ${`0 0 5px ${GRAY_LIGHT}`};
+    box-shadow: ${boxShadow.light};
     border-radius: ${borderRadius};
     padding: 0 ${padding.horizontal};
     margin-bottom: ${margin.bottom};

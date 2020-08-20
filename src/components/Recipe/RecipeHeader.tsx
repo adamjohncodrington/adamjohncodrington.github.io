@@ -7,7 +7,7 @@ import { Symbol } from "../Symbol";
 
 import { RecipeHeaderContainer, RecipeTitle } from "./styles";
 
-const { GREEN_LIGHT, GREEN_MEDIUM, GRAY_MEDIUM } = COLORS;
+const { GREEN_LIGHT, GREEN_MEDIUM, GRAY_DARK } = COLORS;
 const { VEGAN, VEGETARIAN } = DIETS;
 
 export const RecipeHeader: FC<IRecipeHeader> = ({
@@ -24,7 +24,7 @@ export const RecipeHeader: FC<IRecipeHeader> = ({
           ? GREEN_LIGHT
           : diet === VEGETARIAN
           ? GREEN_MEDIUM
-          : GRAY_MEDIUM
+          : GRAY_DARK
       }
       contents={{ text: diet.abbreviation }}
     />

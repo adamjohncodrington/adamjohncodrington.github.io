@@ -87,7 +87,7 @@ interface IThemeAlbumCard {
 interface ITheme {
   borderRadius: PxValue;
   breakpoints: IBreakpoints;
-  boxShadow: BoxShadowValue;
+  boxShadow: { light: BoxShadowValue; dark: BoxShadowValue };
   miniCard: IThemeMiniCard;
   card: IThemeCard;
   navBar: IThemeNavBar;

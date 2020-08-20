@@ -2,7 +2,7 @@ import { css } from "styled-components";
 
 import { COLORS } from "./colors";
 
-const { GRAY_MEDIUM_LIGHT } = COLORS;
+const { GRAY_MEDIUM } = COLORS;
 
 export const getPseudoElementAfter = (element: string) => css`
   ::after {
@@ -39,4 +39,4 @@ export const CSS = {
   `
 };
 
-export const BORDER_HALF_PX_SOLID_GREY: string = `0.5px solid ${GRAY_MEDIUM_LIGHT}`;
+export const BORDER_HALF_PX_SOLID_GREY: string = `0.5px solid ${GRAY_MEDIUM}`;

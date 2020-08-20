@@ -4,14 +4,7 @@ import styled, { css } from "styled-components";
 import { RouterNavLink } from "primitives";
 import { CSS, COLORS } from "styles";
 
-const {
-  GRAY_LIGHT,
-  GRAY_MEDIUM_LIGHT,
-  GRAY_MEDIUM,
-  GRAY_WHITE,
-  WHITE,
-  BLACK
-} = COLORS;
+const { GRAY_MEDIUM, GRAY_LIGHT, BLACK } = COLORS;
 
 const StyledNav = styled.nav(
   ({
@@ -28,6 +21,7 @@ const StyledNav = styled.nav(
 const StyledRouterNavLink = styled(RouterNavLink)(
   ({
     theme: {
+      boxShadow,
       borderRadius,
       navBar: {
         navLink: {
@@ -45,7 +39,7 @@ const StyledRouterNavLink = styled(RouterNavLink)(
     align-items: center;
 
     svg {
-      fill: ${color};
+      fill: ${GRAY_LIGHT};
       width: ${size};
       height: ${size};
     }
@@ -54,9 +48,8 @@ const StyledRouterNavLink = styled(RouterNavLink)(
 
     :hover,
     &.ACTIVE {
-      background: ${GRAY_MEDIUM_LIGHT};
-      box-shadow: 0 0 3px white;
-
+      background: ${GRAY_LIGHT};
+      box-shadow: ${boxShadow.light};
       svg {
         fill: ${BLACK};
       }

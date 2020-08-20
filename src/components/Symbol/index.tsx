@@ -26,7 +26,7 @@ const StyledSymbol = styled.div(
 
     border-radius: ${borderRadius};
     border: ${border};
-    box-shadow: ${boxShadow};
+    box-shadow: ${boxShadow.dark};
     color: ${textColor};
     font-size: ${fontSize};
     height: ${size};

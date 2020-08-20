@@ -10,7 +10,7 @@ import { isInFuture } from "./basic";
 import { daysToGo } from "./daysToGo";
 import { vinylColorIsSpecial } from "./vinyl";
 
-const { BLACK, GRAY_MEDIUM } = COLORS;
+const { BLACK, GRAY_DARK } = COLORS;
 
 const sortCompany = (company: IPerson[]): IFriend[] =>
   company.sort((a: IFriend, b: IFriend): number =>
@@ -20,7 +20,7 @@ const sortCompany = (company: IPerson[]): IFriend[] =>
 const getCompanySymbols = (company: IPerson[]): ISymbol[] =>
   sortCompany(company).map(
     ({ initials }: IFriend): ISymbol => ({
-      background: GRAY_MEDIUM,
+      background: GRAY_DARK,
       contents: { text: initials }
     })
   );

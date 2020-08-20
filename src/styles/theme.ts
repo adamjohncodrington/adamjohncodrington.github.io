@@ -5,14 +5,7 @@ import { COLORS } from "./colors";
 import * as FONT_SIZES from "./font-sizes";
 import { fontFamily, scrollbarSize } from "./GlobalStyle";
 
-const {
-  BLACK,
-  GRAY_DARKER,
-  GRAY_MEDIUM,
-  GRAY_MEDIUM_LIGHT,
-  WHITE,
-  GRAY_LIGHT
-} = COLORS;
+const { BLACK, GRAY_LIGHT, GRAY_DARK, WHITE } = COLORS;
 
 const THEME_MINI_CARD_ITEM: IThemeMiniCard = {
   count: { margin: { left: "5px" }, width: "20px" }
@@ -26,7 +19,7 @@ const THEME_NAV_BAR: IThemeNavBar = {
   background: BLACK,
   height: "4.375rem",
   navLink: {
-    background: { inactive: BLACK, active: GRAY_DARKER },
+    background: { inactive: BLACK, active: "red" },
     margin: "0.625rem"
   },
   icon: {
@@ -91,9 +84,12 @@ const THEME_VINYL_CARD: IThemeAlbumCard = {
 };
 
 export const THEME: ITheme = {
+  boxShadow: {
+    dark: `0 0 3px ${GRAY_DARK}`,
+    light: `0 0 3px ${GRAY_LIGHT}`
+  },
   borderRadius: "0.375rem",
   breakpoints: BREAKPOINTS,
-  boxShadow: `0 1px 4px ${rgba(GRAY_MEDIUM, 0.6)}`,
   miniCard: THEME_MINI_CARD_ITEM,
   card: THEME_CARD,
   navBar: THEME_NAV_BAR,

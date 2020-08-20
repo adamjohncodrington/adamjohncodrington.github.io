@@ -13,7 +13,7 @@ const StyledImage = styled.img(
     width: ${size};
     margin: 0;
     display: block;
-    box-shadow: ${boxShadow};
+    box-shadow: ${boxShadow.dark};
 
     ${circle &&
     css`
