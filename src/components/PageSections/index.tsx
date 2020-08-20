@@ -1,8 +1,8 @@
 import React, { FC } from "react";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
-import { useThemeContext } from "context";
-import { Ul, Li, GridColumnDiv } from "primitives";
+import { Ul, Li } from "primitives";
+import { CSS } from "styles";
 import {
   replaceSpacesWithDashes,
   useMediaQueries,
@@ -11,16 +11,23 @@ import {
 
 import { PageSection } from "../PageSection";
 
+const StyledMain = styled.main(
+  ({ theme: { navBar, pageMargin } }: I_Theme) => css`
+    ${CSS.GRID_COLUMN_EQUAL_WIDTHS};
+    column-gap: calc(2 * ${pageMargin});
+
+    height: calc(100vh - ${navBar.height});
+    overflow-y: auto;
+
+    padding: ${pageMargin} ${pageMargin};
+  `
+);
+
 interface IPageSections {
   sections: IPageSection[];
 }
 
-const StyledGridColumnDiv = styled(GridColumnDiv)``;
-
 export const PageSections: FC<IPageSections> = ({ sections }) => {
-  const {
-    pageLayout: { columnGap }
-  }: ITheme = useThemeContext();
   const { pageUses2Columns } = useMediaQueries();
 
   const unhiddenPageSections: IPageSection[] = sections.filter(
@@ -49,11 +56,7 @@ export const PageSections: FC<IPageSections> = ({ sections }) => {
     : [sortedValidPageSections];
 
   return (
-    <StyledGridColumnDiv
-      columnGap={columnGap}
-      data-test="page-sections"
-      equalWidthColumns={true}
-    >
+    <StyledMain data-test="page-sections">
       {pageSectionColumns.map(
         (pageSectionColumn: IPageSection[], index: number) => (
           <Ul key={index} data-test={"page-column-" + (index + 1)}>
@@ -72,6 +75,6 @@ export const PageSections: FC<IPageSections> = ({ sections }) => {
           </Ul>
         )
       )}
-    </StyledGridColumnDiv>
+    </StyledMain>
   );
 };

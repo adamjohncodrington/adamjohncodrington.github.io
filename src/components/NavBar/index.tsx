@@ -14,7 +14,7 @@ const StyledNav = styled.nav(
   }: I_Theme) => css`
     height: ${height};
     background: ${background};
-    ${CSS.GRID_COLUMN_EQUAL_WIDTHS}
+    ${CSS.GRID_COLUMN_EQUAL_WIDTHS};
   `
 );
 
@@ -23,6 +23,7 @@ const StyledRouterNavLink = styled(RouterNavLink)(
     theme: {
       boxShadow,
       borderRadius,
+      pageMargin,
       navBar: {
         navLink: {
           background: { inactive }
@@ -35,6 +36,8 @@ const StyledRouterNavLink = styled(RouterNavLink)(
     display: flex;
     justify-content: center;
     align-items: center;
+
+    margin: ${pageMargin};
 
     svg {
       fill: ${GRAY_LIGHT};
@@ -60,7 +63,7 @@ interface INavBar {
 }
 
 export const NavBar: React.FC<INavBar> = ({ pages }) => (
-  <StyledNav>
+  <StyledNav data-test="nav-bar">
     {pages.map(({ path, SvgIcon }: IPage, i: number) => (
       <StyledRouterNavLink key={i} to={path} activeClassName="ACTIVE">
         <SvgIcon />

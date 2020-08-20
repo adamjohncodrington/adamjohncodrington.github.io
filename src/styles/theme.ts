@@ -7,7 +7,7 @@ import { fontFamily, scrollbarSize } from "./GlobalStyle";
 
 const { BLACK, GRAY_LIGHT, GRAY_DARK, WHITE } = COLORS;
 
-const pageMargin: RemValue = "1rem";
+const pageMargin: RemValue = "0.5rem";
 
 const THEME_MINI_CARD_ITEM: IThemeMiniCard = {
   count: { margin: { left: "5px" }, width: "20px" }
@@ -19,7 +19,7 @@ const THEME_CARD: IThemeCard = {
 
 const THEME_NAV_BAR: IThemeNavBar = {
   background: BLACK,
-  height: "3.25rem",
+  height: "4rem",
   navLink: {
     background: { inactive: BLACK, active: "red" },
     margin: "0.625rem"
@@ -38,7 +38,7 @@ const THEME_PAGE_SECTION: IThemePageSection = {
   count: { margin: { left: "7px" } },
   header: { padding: { vertical: "12px" } },
   icon: { size: "32px" },
-  margin: { bottom: "20px" },
+  margin: { bottom: `calc(2* ${pageMargin})` },
   padding: { horizontal: "12px", bottom: "5px" },
   panelList: {
     border: { bottom: `1px solid ${rgba("black", 0.1)}` },

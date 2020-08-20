@@ -1,7 +1,7 @@
 export const BLACK: string = "#000";
 export const GRAY_DARK: string = "#888";
 export const GRAY_MEDIUM: string = "#BBB";
-export const GRAY_LIGHT: string = "#EEE";
+export const GRAY_LIGHT: string = "#fafafa";
 export const WHITE: string = "#FFF";
 
 export const GREEN_LIGHT: string = "#829e5d";
