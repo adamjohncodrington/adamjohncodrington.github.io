@@ -87,8 +87,6 @@ export const getSymbols = ({
     });
 
   if (signed) symbols.push(SYMBOLS.SIGNED);
-  if (photos) symbols.push(SYMBOLS.PHOTO);
-  if (video) symbols.push(SYMBOLS.VIDEO);
 
   if (poleCategory) {
     if (poleCategory === "quarantine") symbols.push(SYMBOLS.HOME);
@@ -103,6 +101,9 @@ export const getSymbols = ({
     if (poleCategory === "rock") symbols.push(SYMBOLS.GUITAR);
     if (poleCategory === "tricks") symbols.push(SYMBOLS.TRICKS);
   }
+
+  if (photos) symbols.push(SYMBOLS.PHOTO);
+  if (video) symbols.push(SYMBOLS.VIDEO);
 
   return symbols;
 };
