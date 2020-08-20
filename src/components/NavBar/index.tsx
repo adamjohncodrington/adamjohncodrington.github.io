@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 import { RouterNavLink } from "primitives";
 import { CSS, COLORS } from "styles";
 
-const { GRAY_MEDIUM, GRAY_LIGHT, BLACK } = COLORS;
+const { GRAY_LIGHT, BLACK } = COLORS;
 
 const StyledNav = styled.nav(
   ({
@@ -25,10 +25,10 @@ const StyledRouterNavLink = styled(RouterNavLink)(
       borderRadius,
       navBar: {
         navLink: {
-          background: { active, inactive },
+          background: { inactive },
           margin
         },
-        icon: { color, size }
+        icon: { size }
       }
     }
   }: I_Theme) => css`

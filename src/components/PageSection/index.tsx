@@ -1,13 +1,9 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { COLORS } from "styles";
-
 import { Disclosure } from "../Disclosure";
 import { PageSectionHeader } from "./PageSectionHeader";
 import { PageSectionPanel } from "./PageSectionPanel";
-
-const { GRAY_LIGHT } = COLORS;
 
 const PageSectionContainer = styled.section(
   ({

@@ -7,14 +7,14 @@ import { COLORS } from "styles";
 
 interface IStyledSymbol extends ISymbol, I_Theme {}
 
-const { WHITE } = COLORS;
+const { GRAY_LIGHT } = COLORS;
 
 const StyledSymbol = styled.div(
   ({
     background,
     border,
     borderRadius = "25%",
-    svgFill = rgba(WHITE, 0.85),
+    svgFill = GRAY_LIGHT,
     theme: {
       boxShadow,
       symbol: { fontSize, iconSize, size, textColor }

@@ -23,7 +23,7 @@ const THEME_NAV_BAR: IThemeNavBar = {
     margin: "0.625rem"
   },
   icon: {
-    color: WHITE,
+    color: GRAY_LIGHT,
     size: "32px",
     defaultHoverColor: "#aaa",
     hoverShrinkSize: "0"
@@ -31,7 +31,7 @@ const THEME_NAV_BAR: IThemeNavBar = {
 };
 
 const THEME_PAGE_SECTION: IThemePageSection = {
-  background: "#ddd",
+  background: GRAY_LIGHT,
   headline: { fontSize: FONT_SIZES.ML },
   count: { margin: { left: "7px" } },
   header: { padding: { vertical: "12px" } },
