@@ -88,8 +88,8 @@ const THEME_VINYL_CARD: IThemeAlbumCard = {
 export const THEME: ITheme = {
   pageMargin,
   boxShadow: {
-    dark: `0 0 2px ${GRAY_DARK}`,
-    light: `0 0 2px ${GRAY_LIGHT}`
+    dark: `0 0 1px ${GRAY_DARK}`,
+    light: `0 0 1px ${GRAY_LIGHT}`
   },
   borderRadius: "0.375rem",
   breakpoints: BREAKPOINTS,
