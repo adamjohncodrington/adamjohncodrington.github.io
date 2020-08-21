@@ -4,7 +4,6 @@ interface IMiniCard extends I__Favourite, I_Sort, I__Video, I__Star {
 
   secondaryText?: string;
 
-  anomaly?: boolean;
   details?: IMiniCardPanelDetail[];
   primaryCount?: number;
   secondaryCount?: number;

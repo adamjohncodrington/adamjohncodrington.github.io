@@ -20,7 +20,7 @@ export const StyledPrimaryAltText = styled.span(
   `
 );
 
-interface IStyledPrimaryText extends I_Theme, I__Video, I__Favourite, I__Star {
+interface IStyledPrimaryText extends I_Theme, I__Favourite, I__Star {
   faded: boolean;
 }
 
@@ -29,7 +29,6 @@ export const StyledPrimaryText = styled.span(
     favourite,
     star,
     faded,
-    video,
     theme: { fadedOpacity }
   }: IStyledPrimaryText) => css`
     ${
@@ -39,9 +38,8 @@ export const StyledPrimaryText = styled.span(
       `
     }
 
-    ${video && getPseudoElementBefore(TRIANGLE_PLAY)}
-    ${favourite && getPseudoElementBefore(HEART)}
-    ${star && getPseudoElementBefore(STAR)}
+    ${favourite && getPseudoElementAfter(HEART)}
+    ${star && getPseudoElementAfter(STAR)}
   `
 );
 

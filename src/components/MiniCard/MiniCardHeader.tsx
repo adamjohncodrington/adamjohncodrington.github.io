@@ -2,6 +2,8 @@ import React, { FC } from "react";
 
 import { DynamicFontWeightFlexRow } from "primitives";
 import { moveTheSuffixToPrefix } from "utils";
+
+import { Arrow } from "../Arrow";
 import {
   StyledPrimaryText,
   StyledPrimaryAltText,
@@ -16,7 +18,6 @@ export const MiniCardHeader: FC<IMiniCardHeader> = ({
   secondaryText,
   video,
   favourite,
-  anomaly,
   panelVisible,
   star,
   primaryCount,
@@ -40,14 +41,11 @@ export const MiniCardHeader: FC<IMiniCardHeader> = ({
   const bold: boolean = !isStatic && panelVisible;
 
   return (
-    <DynamicFontWeightFlexRow italic={!!anomaly} bold={bold}>
+    <DynamicFontWeightFlexRow italic={false} bold={bold}>
+      <Arrow panelVisible={panelVisible} />
+
       <StyledPrimaryTextContainer>
-        <StyledPrimaryText
-          faded={faded}
-          favourite={favourite}
-          star={star}
-          video={video}
-        >
+        <StyledPrimaryText faded={faded} favourite={favourite} star={star}>
           {moveTheSuffixToPrefix(primaryText)}
         </StyledPrimaryText>
 

@@ -33,6 +33,12 @@ interface IDynamicFlexRow extends I_Bold, I_Italic {}
 
 export const DynamicFontWeightFlexRow = styled(FlexRow)(
   ({ bold, italic }: IDynamicFlexRow) => css`
+    align-items: baseline;
+
+    > svg:first-child {
+      margin-right: 0.5rem;
+    }
+
     ${bold &&
     css`
       * {

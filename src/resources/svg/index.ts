@@ -1,5 +1,6 @@
 // A
 export { ReactComponent as ARTIST } from "./artist.svg";
+export { ReactComponent as ARROW_DOWN } from "./arrow-down.svg";
 // B
 export { ReactComponent as BOOK } from "./book.svg";
 export { ReactComponent as BOWL } from "./bowl-3.svg";

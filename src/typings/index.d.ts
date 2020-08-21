@@ -89,7 +89,6 @@ interface ISymbol extends I_Background, I__Border, I__BorderRadius {
 
 interface IRetailer extends I_Name {
   online: boolean;
-  umbrella?: boolean;
   branch?: string;
 }
 
