@@ -1,5 +1,7 @@
 # TO DO LIST
 
+- add arrow to cards
+- make `PrimaryText` component for bucket list and coming soon lists
 - add full release dates to vinyl
 
 ## Media to add
