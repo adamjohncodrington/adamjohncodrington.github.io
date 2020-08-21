@@ -31,7 +31,7 @@ export const MOTORHEAD_HELLRAISER: IPoleRoutine = {
 
 export const AMY_WINEHOUSE_LOVE_IS_A_LOSING_GAME: IPoleRoutine = {
   studio: DAN_LEA_STUDIO,
-  date: new Date("2020-07-20T19:07:00Z"),
+  date: new Date("2020-07-20T19:07Z"),
   category: "contemporary-improv",
   song: SONGS.AMY_WINEHOUSE_LOVE_IS_A_LOSING_GAME,
   choreographer: ME,
@@ -49,7 +49,7 @@ export const BILLIE_EILISH_MY_FUTURE: IPoleRoutine = {
 
 export const ELLIE_GOULDING_START: IPoleRoutine = {
   studio: DAN_LEA_STUDIO,
-  date: new Date("2020-07-20T18:41:00Z"),
+  date: new Date("2020-07-20T18:41Z"),
   category: "contemporary-improv",
   song: SONGS.ELLIE_GOULDING_START,
   choreographer: ME,
@@ -256,7 +256,7 @@ export const A_BOOGIE_WIT_DA_HOODIE_LOOK_BACK_AT_IT: IPoleRoutine = {
 
 export const ASAP_ROCKY_LSD: IPoleRoutine = {
   studio: HOME,
-  date: new Date("2020-03-25"),
+  date: new Date("2020-03-25T19:05Z"),
   category: "quarantine",
   song: SONGS.ASAP_ROCKY_LSD,
   choreographer: ME,
@@ -265,7 +265,7 @@ export const ASAP_ROCKY_LSD: IPoleRoutine = {
 
 export const ARIANA_GRANDE_7_RINGS: IPoleRoutine = {
   studio: HOME,
-  date: new Date("2020-03-25"),
+  date: new Date("2020-03-25T18:47Z"),
   category: "quarantine",
   song: SONGS.ARIANA_GRANDE_7_RINGS,
   choreographer: MARINE,

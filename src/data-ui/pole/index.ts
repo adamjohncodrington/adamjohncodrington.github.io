@@ -21,7 +21,7 @@ export const POLE = {
     showCategorySymbol: false
   }),
   QUARANTINE: mapPoleRoutinesToCards(QUARANTINE, {
-    sort: "asc",
+    sort: "desc",
     showCategorySymbol: false
   }),
   SHOWCASE: mapPoleRoutinesToCards(SHOWCASE, {

@@ -18,7 +18,7 @@ export const mapPoleRoutinesToCards = (
   }: IPoleRoutine): ICard => ({
     video,
     year: date.getFullYear(),
-    sort: [sort === "asc" ? date : -date],
+    sort: [sort === "asc" ? date.valueOf() : -date.valueOf()],
     symbols: getSymbols({
       company: [choreographer],
       video,
@@ -46,7 +46,7 @@ export const mapPoleTricksVideosToCards = (
   }: IPoleTricksVideo): ICard => ({
     video,
     year: start.getFullYear(),
-    sort: [sort === "asc" ? start : -start],
+    sort: [sort === "asc" ? start.valueOf() : -start.valueOf()],
     symbols: getSymbols({
       company: [instructor],
       video,
