@@ -42,7 +42,7 @@ export const MiniCardHeader: FC<IMiniCardHeader> = ({
 
   return (
     <DynamicFontWeightFlexRow italic={false} bold={bold}>
-      <Arrow panelVisible={panelVisible} />
+      <Arrow panelVisible={panelVisible} size={"0.75rem"} />
 
       <StyledPrimaryTextContainer>
         <StyledPrimaryText faded={faded} favourite={favourite} star={star}>

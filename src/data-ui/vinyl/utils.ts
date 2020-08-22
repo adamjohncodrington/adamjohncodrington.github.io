@@ -64,19 +64,27 @@ export const mapVinylsToCards = (
 interface IOptions2 {
   showMusicianName: boolean;
   showCost?: boolean;
+  artworkOnly: boolean;
 }
 
 export const mapVinylsToMiniCardPanelDetails = (
   vinyls: IVinyl[],
-  { showMusicianName, showCost = false }: IOptions2
+  { showMusicianName, showCost = false, artworkOnly = false }: IOptions2
 ): IMiniCardPanelDetail[] => {
   const mapVinylToMiniCardPanelDetail = ({
     year,
     musician,
     title,
+    photo,
     costExcDelivery,
     appleMusicId
   }: IVinyl): IMiniCardPanelDetail => {
+    if (artworkOnly)
+      return {
+        photo: { ...photo, href: APPLE_MUSIC_URL_PREFIX + appleMusicId },
+        sort: [year]
+      };
+
     const mainText: string = showMusicianName
       ? `${moveTheSuffixToPrefix(
           getMusicianStageNameAtTime({ musician, year })

@@ -29,7 +29,13 @@ export const RecipePortionCost = styled.span(
 );
 
 export const RecipeHeaderContainer = styled(FlexRow)`
-  > *:first-child {
+  align-items: baseline;
+
+  svg {
+    margin-right: 0.5rem;
+  }
+
+  .recipe-title {
     flex: 1;
   }
 `;

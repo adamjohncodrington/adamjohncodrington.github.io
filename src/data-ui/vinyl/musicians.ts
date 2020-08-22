@@ -16,7 +16,7 @@ export const MUSICIANS: IMiniCard[] = Object.values(musicians).map(
     const { name, previousStageName } = musician;
     const details: IMiniCardPanelDetail[] = mapVinylsToMiniCardPanelDetails(
       getMusicianMatches(musician),
-      { showMusicianName: false }
+      { artworkOnly: true, showMusicianName: false }
     );
     const {
       pastCount: primaryCount,

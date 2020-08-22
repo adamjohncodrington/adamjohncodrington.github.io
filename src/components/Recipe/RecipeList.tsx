@@ -13,7 +13,7 @@ const StyledRecipeListItem = styled(Li)(
     addPaddingTop,
     theme: { listItemGroupVerticalSpacing }
   }: IStyledLi) => css`
-    font-size: 85%;
+    font-size: 87.5%;
 
     ${addPaddingTop &&
     css`
