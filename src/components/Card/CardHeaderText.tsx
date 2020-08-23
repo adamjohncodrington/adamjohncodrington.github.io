@@ -1,6 +1,5 @@
 import React, { FC } from "react";
-
-import { Arrow } from "../Arrow";
+import { css } from "styled-components";
 
 import { CardTitle, CardSubtitle, FlexRowDynamic } from "primitives";
 import { moveTheSuffixToPrefix } from "utils";
@@ -18,8 +17,14 @@ export const CardHeaderText: FC<ICardHeader> = ({
   disclaimer
 }) => (
   <CardTextContainer data-test="card-container">
-    <FlexRowDynamic bold={false} italic={false}>
-      {false && <Arrow panelVisible={panelVisible} size="0.75rem" />}
+    <FlexRowDynamic
+      bold={false}
+      italic={false}
+      alignItems="center"
+      firstDirectChildCss={css`
+        margin-right: 0.375rem;
+      `}
+    >
       <CardTitle
         bold={panelExists && panelVisible}
         data-test="card-title"
