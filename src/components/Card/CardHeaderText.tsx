@@ -9,7 +9,7 @@ import { CardDisclaimer, CardTextContainer, CardSecondaryBody } from "./styles";
 
 export const CardHeaderText: FC<ICardHeader> = ({
   panelVisible,
-  isStatic,
+  panelExists,
   title,
   subtitle,
   favourite,
@@ -21,7 +21,7 @@ export const CardHeaderText: FC<ICardHeader> = ({
     <FlexRowDynamic bold={false} italic={false}>
       {false && <Arrow panelVisible={panelVisible} size="0.75rem" />}
       <CardTitle
-        bold={!isStatic && panelVisible}
+        bold={panelExists && panelVisible}
         data-test="card-title"
         favourite={favourite}
       >

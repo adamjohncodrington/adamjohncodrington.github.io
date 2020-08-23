@@ -13,19 +13,15 @@ export const MiniCardPanelDetail: FC<IMiniCardPanelDetail> = props => {
   const isInFuture: boolean = !!(dates && isInFutureUtil(dates[0]));
   const panelExists: boolean = !!video;
 
-  const isStaticProp: I__IsStatic = {
-    isStatic: !panelExists
-  };
-
   return (
     <StyledLi key={index} isInFuture={isInFuture}>
       <Disclosure
-        {...isStaticProp}
+        panelExists={panelExists}
         Header={headerProps => (
           <MiniCardPanelDetailHeader
             {...headerProps}
             {...props}
-            {...isStaticProp}
+            panelExists={panelExists}
           />
         )}
         Panel={() => <MiniCardPanelDetailPanel {...props} />}

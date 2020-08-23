@@ -15,7 +15,7 @@ import {
 
 export const MiniCardHeader: FC<IMiniCardHeader> = ({
   panelVisible,
-  isStatic,
+  panelExists,
   primaryText,
   primaryTextAlt,
   secondaryText,
@@ -38,18 +38,16 @@ export const MiniCardHeader: FC<IMiniCardHeader> = ({
     secondaryCount > 0 &&
     primaryCount > 0;
 
-  const bold: boolean = !isStatic && panelVisible;
-
   return (
     <FlexRowDynamic
       italic={false}
-      bold={bold}
+      bold={panelExists && panelVisible}
       alignItems="center"
       firstDirectChildCss={css`
         margin-right: 0.25rem;
       `}
     >
-      <Arrow panelVisible={panelVisible} size={"0.75rem"} />
+      {panelExists && <Arrow panelVisible={panelVisible} size={"0.75rem"} />}
 
       <StyledPrimaryTextContainer>
         <StyledPrimaryText faded={faded} favourite={favourite} star={star}>

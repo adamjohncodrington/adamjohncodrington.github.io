@@ -8,17 +8,12 @@ import { MiniCardHeader } from "./MiniCardHeader";
 export const MiniCard: FC<IMiniCard> = props => {
   const { details, video, photos, primaryText } = props;
   const panelExists: boolean = !!(video || photos || details);
-  const isStaticProp: I__IsStatic = {
-    isStatic: !panelExists
-  };
-
-  if (!panelExists) return <div>{primaryText}</div>;
 
   return (
     <Disclosure
-      {...isStaticProp}
+      panelExists={panelExists}
       Header={headerProps => (
-        <MiniCardHeader {...props} {...headerProps} {...isStaticProp} />
+        <MiniCardHeader {...props} {...headerProps} panelExists={panelExists} />
       )}
       Panel={() => <MiniCardPanel {...props} />}
     />

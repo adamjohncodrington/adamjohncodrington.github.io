@@ -26,6 +26,7 @@ export const PageSection: FC<IPageSection> = props => {
   return (
     <PageSectionContainer>
       <Disclosure
+        panelExists={true}
         autoExpand={autoExpand}
         Header={headerProps => (
           <PageSectionHeader {...headerProps} {...props} />

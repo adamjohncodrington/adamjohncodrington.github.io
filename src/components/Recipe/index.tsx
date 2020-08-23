@@ -11,6 +11,7 @@ export const Recipe: FC<IRecipe> = props => {
   return (
     <Disclosure
       autoExpand={newRecipe}
+      panelExists={true}
       Header={headerProps => <RecipeHeader {...headerProps} {...props} />}
       Panel={() => <RecipePanel {...props} />}
     />

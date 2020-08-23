@@ -11,7 +11,7 @@ import {
 
 export const MiniCardPanelDetailHeader: FC<IMiniCardPanelDetailHeader> = ({
   panelVisible,
-  isStatic,
+  panelExists,
   index,
   mainText,
   dates,
@@ -24,7 +24,7 @@ export const MiniCardPanelDetailHeader: FC<IMiniCardPanelDetailHeader> = ({
   const useTriangleAsBullet: boolean = !!headerLink;
 
   const HeaderContents: ReactElement = (
-    <FlexRowDynamic bold={!isStatic && panelVisible} italic={false}>
+    <FlexRowDynamic bold={panelExists && panelVisible} italic={false}>
       {index && !useTriangleAsBullet && <StyledIndex>{index}.</StyledIndex>}
 
       {mainText && (
