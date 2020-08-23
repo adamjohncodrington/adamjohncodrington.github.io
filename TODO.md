@@ -3,8 +3,6 @@
 - `mapVinylToPhoto` util
 - add chevrons to all suitable cards
 - pass down `panelExists` prop to entire disclosure components
-
-- make `PrimaryText` component for bucket list and coming soon lists
 - add full release dates to vinyl
 
 ## Media to add
@@ -16,8 +14,6 @@
 
 ## Necessary refactoring
 
-- add full year to vinyl release date
-- review photoGrid props
 - deprecate `getItemCounts`???????? in favour of `details.length`????
 - review all instances of `filterMiniCards`?
 - organise utils
