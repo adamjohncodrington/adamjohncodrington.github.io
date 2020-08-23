@@ -1,6 +1,6 @@
 import React from "react";
 
-import { isInFuture } from "utils";
+import { isInFuture as isInFutureUtil } from "utils";
 
 import { Disclosure } from "../Disclosure";
 
@@ -10,14 +10,14 @@ import { StyledLi } from "./styles";
 
 export const MiniCardPanelDetail: React.FC<IMiniCardPanelDetail> = props => {
   const { index, dates, video } = props;
-  const IS_IN_FUTURE: boolean = !!(dates && isInFuture(dates[0]));
+  const isInFuture: boolean = !!(dates && isInFutureUtil(dates[0]));
 
   const isStaticProp: I__IsStatic = {
     isStatic: !video
   };
 
   return (
-    <StyledLi key={index} isInFuture={IS_IN_FUTURE}>
+    <StyledLi key={index} isInFuture={isInFuture}>
       <Disclosure
         {...isStaticProp}
         Header={headerProps => (

@@ -1,6 +1,5 @@
 # TO DO LIST
 
-- `mapVinylToPhoto` util
 - add chevrons to all suitable cards
 - pass down `panelExists` prop to entire disclosure components
 - add full release dates to vinyl
