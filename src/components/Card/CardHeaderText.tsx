@@ -1,6 +1,8 @@
 import React from "react";
 
-import { CardTitle, CardSubtitle } from "primitives";
+import { Arrow } from "../Arrow";
+
+import { CardTitle, CardSubtitle, FlexRowDynamic } from "primitives";
 import { moveTheSuffixToPrefix } from "utils";
 
 import { CardDisclaimer, CardTextContainer, CardSecondaryBody } from "./styles";
@@ -16,13 +18,16 @@ export const CardHeaderText: React.FC<ICardHeader> = ({
   isStatic
 }) => (
   <CardTextContainer data-test="card-container">
-    <CardTitle
-      bold={!isStatic && panelVisible}
-      data-test="card-title"
-      favourite={favourite}
-    >
-      {moveTheSuffixToPrefix(title)}
-    </CardTitle>
+    <FlexRowDynamic bold={false} italic={false}>
+      {false && <Arrow panelVisible={panelVisible} size="0.75rem" />}
+      <CardTitle
+        bold={!isStatic && panelVisible}
+        data-test="card-title"
+        favourite={favourite}
+      >
+        {moveTheSuffixToPrefix(title)}
+      </CardTitle>
+    </FlexRowDynamic>
     {subtitle && (
       <CardSubtitle bold={false} data-test="card-subtitle">
         {moveTheSuffixToPrefix(subtitle)}

@@ -2,7 +2,7 @@ import { MUSICIANS as musicians } from "@constants";
 import { VINYL_PURCHASED as DATA } from "data-raw";
 import { getItemCounts } from "utils";
 
-import { mapVinylsToMiniCardPanelDetails } from "./utils";
+import { mapAlbumToPhoto } from "./utils";
 
 const getMusicianMatches = (musician: IMusician): IVinyl[] =>
   DATA.reduce(
@@ -14,9 +14,8 @@ const getMusicianMatches = (musician: IMusician): IVinyl[] =>
 export const MUSICIANS: IMiniCard[] = Object.values(musicians).map(
   (musician: IMusician): IMiniCard => {
     const { name, previousStageName } = musician;
-    const details: IMiniCardPanelDetail[] = mapVinylsToMiniCardPanelDetails(
-      getMusicianMatches(musician),
-      { artworkOnly: true, showMusicianName: false }
+    const photos: IPhoto[] = getMusicianMatches(musician).map(
+      (vinyl: IVinyl): IPhoto => mapAlbumToPhoto(vinyl)
     );
     const {
       pastCount: primaryCount,
@@ -28,7 +27,7 @@ export const MUSICIANS: IMiniCard[] = Object.values(musicians).map(
       sort: [name],
       primaryCount,
       secondaryCount,
-      details
+      photos
     };
   }
 );

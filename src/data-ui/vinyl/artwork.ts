@@ -1,9 +1,7 @@
 import { VINYL_PURCHASED as DATA } from "data-raw";
-import { APPLE_MUSIC_URL_PREFIX } from "config";
+
+import { mapAlbumToPhoto } from "./utils";
 
 export const ARTWORK: IPhoto[] = DATA.map(
-  ({ photo, appleMusicId }: IVinyl): IPhoto => ({
-    ...photo,
-    href: APPLE_MUSIC_URL_PREFIX + appleMusicId
-  })
+  (vinyl: IVinyl): IPhoto => mapAlbumToPhoto(vinyl)
 );

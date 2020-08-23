@@ -1,10 +1,14 @@
-import styled, { css } from "styled-components";
+import styled, { css, FlattenSimpleInterpolation } from "styled-components";
 
 import { Li } from "./Lists";
 
 export const FlexRow = styled.div`
   display: flex;
   flex-direction: row;
+`;
+
+export const FlexRowBaseline = styled(FlexRow)`
+  align-items: center;
 `;
 
 export const FlexColumn = styled.div`
@@ -29,28 +33,42 @@ export const FlexLiGrow = styled(Li)`
   flex: 1;
 `;
 
-interface IDynamicFlexRow extends I_Bold, I_Italic {}
+interface IFlexRowDynamic extends I_Bold, I_Italic {
+  alignItems?: "baseline" | "center";
+  firstDirectChildCss?: FlattenSimpleInterpolation;
+}
 
-export const DynamicFontWeightFlexRow = styled(FlexRow)(
-  ({ bold, italic }: IDynamicFlexRow) => css`
-    align-items: baseline;
-
-    > svg:first-child {
-      margin-right: 0.5rem;
+export const FlexRowDynamic = styled(FlexRow)(
+  ({ alignItems, bold, firstDirectChildCss, italic }: IFlexRowDynamic) => css`
+    ${
+      firstDirectChildCss &&
+      css`
+        > :first-child {
+          ${firstDirectChildCss};
+        }
+      `
     }
-
-    ${bold &&
-    css`
-      * {
-        font-weight: bold;
-      }
-    `}
-
-    ${italic &&
-    css`
-      * {
-        font-style: italic;
-      }
-    `}
+    ${
+      alignItems &&
+      css`
+        align-items: ${alignItems};
+      `
+    }
+    ${
+      bold &&
+      css`
+        * {
+          font-weight: bold;
+        }
+      `
+    }
+    ${
+      italic &&
+      css`
+        * {
+          font-style: italic;
+        }
+      `
+    }
   `
 );

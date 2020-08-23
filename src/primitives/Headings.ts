@@ -1,12 +1,7 @@
 import styled, { css } from "styled-components";
 
 import { UNICODE } from "@constants";
-import {
-  FONT_SIZES,
-  CSS,
-  getPseudoElementBefore,
-  getPseudoElementAfter
-} from "styles";
+import { FONT_SIZES, CSS, getPseudoElementAfter } from "styles";
 
 export const H1 = styled.h1(
   ({ bold }: I_Bold) => css`
@@ -37,7 +32,7 @@ interface ICardTitle extends I__Favourite, I__Star {}
 export const CardTitle = styled(H3)(
   ({ favourite, star }: ICardTitle) => css`
     text-transform: uppercase;
-    ${favourite && getPseudoElementBefore(UNICODE.HEART)}
+    ${favourite && getPseudoElementAfter(UNICODE.HEART)}
     ${star && getPseudoElementAfter(UNICODE.STAR)}
   `
 );

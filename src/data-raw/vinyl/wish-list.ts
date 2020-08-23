@@ -17,13 +17,13 @@ import { MUSICIANS } from "@constants";
 //   year: 2007
 // };
 
-export const LEON_APART: IAlbum = {
-  musician: MUSICIANS.LEON,
-  photo: PHOTOS.ALBUM_ARTWORK.LEON_APART,
-  appleMusicId: "apart/1525538383",
-  title: "Apart",
-  year: 2020
-};
+// export const LEON_APART: IAlbum = {
+//   musician: MUSICIANS.LEON,
+//   photo: PHOTOS.ALBUM_ARTWORK.LEON_APART,
+//   appleMusicId: "apart/1525538383",
+//   title: "Apart",
+//   year: 2020
+// };
 
 export const KATY_PERRY_ONE_OF_THE_BOYS: IAlbum = {
   musician: MUSICIANS.KATY_PERRY,
@@ -49,13 +49,13 @@ export const CHRISTINE_AND_THE_QUEENS_LA_VITA_NUOVA: IAlbum = {
   appleMusicId: "la-vita-nuova-ep/1497744921"
 };
 
-export const NATALIA_KILLS_PERFECTIONIST: IAlbum = {
-  musician: MUSICIANS.NATALIA_KILLS,
-  photo: PHOTOS.ALBUM_ARTWORK.NATALIA_KILLS_PERFECTIONIST,
-  title: "Perfectionist",
-  year: 2011,
-  appleMusicId: "perfectionist/1443164533"
-};
+// export const NATALIA_KILLS_PERFECTIONIST: IAlbum = {
+//   musician: MUSICIANS.NATALIA_KILLS,
+//   photo: PHOTOS.ALBUM_ARTWORK.NATALIA_KILLS_PERFECTIONIST,
+//   title: "Perfectionist",
+//   year: 2011,
+//   appleMusicId: "perfectionist/1443164533"
+// };
 
 export const ELLIE_GOULDING_HALCYON: IAlbum = {
   musician: MUSICIANS.ELLIE_GOULDING,

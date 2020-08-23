@@ -1,6 +1,6 @@
 import React, { ReactElement } from "react";
 
-import { DynamicFontWeightFlexRow, Link } from "primitives";
+import { FlexRowDynamic, Link } from "primitives";
 import { getDatesText, moveTheSuffixToPrefix } from "utils";
 
 import {
@@ -24,7 +24,7 @@ export const MiniCardPanelDetailHeader: React.FC<IMiniCardPanelDetailHeader> = (
   const useTriangleAsBullet: boolean = !!headerLink;
 
   const HeaderContents: ReactElement = (
-    <DynamicFontWeightFlexRow bold={!isStatic && panelVisible} italic={false}>
+    <FlexRowDynamic bold={!isStatic && panelVisible} italic={false}>
       {index && !useTriangleAsBullet && <StyledIndex>{index}.</StyledIndex>}
 
       {mainText && (
@@ -41,7 +41,7 @@ export const MiniCardPanelDetailHeader: React.FC<IMiniCardPanelDetailHeader> = (
           {secondaryText ? secondaryText : dates ? getDatesText(dates) : year}
         </StyledPanelSecondaryText>
       )}
-    </DynamicFontWeightFlexRow>
+    </FlexRowDynamic>
   );
 
   return headerLink ? (

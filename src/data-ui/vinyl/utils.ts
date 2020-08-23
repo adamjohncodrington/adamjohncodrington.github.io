@@ -14,10 +14,13 @@ interface IOptions {
   showGiftFrom?: boolean;
 }
 
-const mapAlbumToCard = (
-  { title, musician, year, photo, appleMusicId }: IAlbum,
-  options?: IOptions
-): ICard => {
+export const mapAlbumToPhoto = ({ photo, appleMusicId }: IAlbum): IPhoto => ({
+  ...photo,
+  href: APPLE_MUSIC_URL_PREFIX + appleMusicId
+});
+
+const mapAlbumToCard = (album: IAlbum, options?: IOptions): ICard => {
+  const { title, musician, year } = album;
   const hideYear: boolean = !!(options && options.hideYear);
   return {
     title,
@@ -25,10 +28,7 @@ const mapAlbumToCard = (
     sort: [year],
     subtitle: getMusicianStageNameAtTime({ musician, year }),
     body: hideYear ? undefined : year.toString(),
-    headerPhoto: {
-      ...photo,
-      href: APPLE_MUSIC_URL_PREFIX + appleMusicId
-    }
+    headerPhoto: mapAlbumToPhoto(album)
   };
 };
 
@@ -64,12 +64,11 @@ export const mapVinylsToCards = (
 interface IOptions2 {
   showMusicianName: boolean;
   showCost?: boolean;
-  artworkOnly: boolean;
 }
 
 export const mapVinylsToMiniCardPanelDetails = (
   vinyls: IVinyl[],
-  { showMusicianName, showCost = false, artworkOnly = false }: IOptions2
+  { showMusicianName, showCost = false }: IOptions2
 ): IMiniCardPanelDetail[] => {
   const mapVinylToMiniCardPanelDetail = ({
     year,
@@ -79,12 +78,6 @@ export const mapVinylsToMiniCardPanelDetails = (
     costExcDelivery,
     appleMusicId
   }: IVinyl): IMiniCardPanelDetail => {
-    if (artworkOnly)
-      return {
-        photo: { ...photo, href: APPLE_MUSIC_URL_PREFIX + appleMusicId },
-        sort: [year]
-      };
-
     const mainText: string = showMusicianName
       ? `${moveTheSuffixToPrefix(
           getMusicianStageNameAtTime({ musician, year })

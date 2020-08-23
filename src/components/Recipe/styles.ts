@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components";
 
-import { H3, FlexColumn, FlexRow } from "primitives";
+import { H3, FlexColumn, FlexRowDynamic } from "primitives";
 import { CSS } from "styles";
 
 export const RecipeTitle = styled(H3)`
@@ -28,13 +28,7 @@ export const RecipePortionCost = styled.span(
   `
 );
 
-export const RecipeHeaderContainer = styled(FlexRow)`
-  align-items: baseline;
-
-  svg {
-    margin-right: 0.5rem;
-  }
-
+export const RecipeHeaderContainer = styled(FlexRowDynamic)`
   .recipe-title {
     flex: 1;
   }

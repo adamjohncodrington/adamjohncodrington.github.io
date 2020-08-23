@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import { css } from "styled-components";
 
 import { DIETS } from "@constants";
 import { COLORS } from "styles";
@@ -17,7 +18,15 @@ export const RecipeHeader: FC<IRecipeHeader> = ({
   title,
   diet
 }) => (
-  <RecipeHeaderContainer className={className}>
+  <RecipeHeaderContainer
+    alignItems="center"
+    className={className}
+    firstDirectChildCss={css`
+      margin-right: 0.5rem;
+    `}
+    bold={false}
+    italic={false}
+  >
     <Arrow panelVisible={panelVisible} size="0.875rem" />
 
     <RecipeTitle bold={panelVisible} className="recipe-title">

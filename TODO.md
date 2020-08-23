@@ -1,6 +1,9 @@
 # TO DO LIST
 
-- add arrow to cards
+- `mapVinylToPhoto` util
+- add chevrons to all suitable cards
+- pass down `panelExists` prop to entire disclosure components
+
 - make `PrimaryText` component for bucket list and coming soon lists
 - add full release dates to vinyl
 

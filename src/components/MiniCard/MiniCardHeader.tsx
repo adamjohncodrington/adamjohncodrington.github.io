@@ -1,6 +1,7 @@
 import React, { FC } from "react";
+import { css } from "styled-components";
 
-import { DynamicFontWeightFlexRow } from "primitives";
+import { FlexRowDynamic } from "primitives";
 import { moveTheSuffixToPrefix } from "utils";
 
 import { Arrow } from "../Arrow";
@@ -41,7 +42,14 @@ export const MiniCardHeader: FC<IMiniCardHeader> = ({
   const bold: boolean = !isStatic && panelVisible;
 
   return (
-    <DynamicFontWeightFlexRow italic={false} bold={bold}>
+    <FlexRowDynamic
+      italic={false}
+      bold={bold}
+      alignItems="center"
+      firstDirectChildCss={css`
+        margin-right: 0.25rem;
+      `}
+    >
       <Arrow panelVisible={panelVisible} size={"0.75rem"} />
 
       <StyledPrimaryTextContainer>
@@ -67,6 +75,6 @@ export const MiniCardHeader: FC<IMiniCardHeader> = ({
       )}
 
       {secondaryText}
-    </DynamicFontWeightFlexRow>
+    </FlexRowDynamic>
   );
 };

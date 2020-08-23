@@ -1,4 +1,4 @@
-interface IMiniCard extends I__Favourite, I_Sort, I__Video, I__Star {
+interface IMiniCard extends I__Favourite, I_Sort, I__Photos, I__Video, I__Star {
   primaryText: string;
   primaryTextAlt?: string;
 
@@ -18,7 +18,6 @@ interface IMiniCardHeader extends IMiniCard, IDisclosureHeader {}
 interface IMiniCardPanelDetail extends I_Sort, I__Favourite, I__Video {
   mainText?: string[];
   secondaryText?: string;
-  photo?: IPhoto;
   dates?: Date[];
   index?: number;
   headerLink?: string;

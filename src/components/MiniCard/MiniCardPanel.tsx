@@ -8,20 +8,10 @@ import { YouTubeVideo } from "../YouTubeVideo";
 import { MiniCardPanelDetail } from "./MiniCardPanelDetail";
 import { StyledOl } from "./styles";
 
-export const MiniCardPanel: FC<IMiniCard> = ({ details, video }) => {
+export const MiniCardPanel: FC<IMiniCard> = ({ details, photos, video }) => {
   if (video) return <YouTubeVideo {...video} marginTop="5px" />;
-
+  if (photos) return <PhotoGrid photos={photos} />;
   if (details) {
-    if (details[0].photo)
-      return (
-        <PhotoGrid
-          photos={details.map(
-            ({ photo }: IMiniCardPanelDetail): IPhoto =>
-              photo || { freeimagehostId: "" }
-          )}
-        />
-      );
-
     return (
       <StyledOl>
         {sortMiniCardPanelDetails(details).map(

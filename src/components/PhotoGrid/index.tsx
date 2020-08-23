@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import styled from "styled-components";
 
 import { PhotoLink } from "../PhotoLink";
@@ -10,27 +10,32 @@ export const CardPhotosContainer = styled(GridWithColumns)`
   margin-top: 10px;
 `;
 
-export const PhotoGrid = ({ photos }: IPhotoGrid) => {
+const generateColumnCount = (photoCount: number): number => {
+  switch (photoCount) {
+    case 1:
+      return 1;
+    case 2:
+      return 2;
+    case 3:
+      return 3;
+    case 4:
+      return 2;
+    default:
+      if (photoCount > 32) return 4;
+      if (photoCount > 18) return 3;
+      return 2;
+  }
+};
+
+export const PhotoGrid: FC<IPhotoGrid> = props => {
+  const { photos } = props;
+
   const validPhotos: IPhoto[] = photos.filter(
     ({ hide }: IPhoto): boolean => !hide
   );
-
   const validPhotoCount: number = validPhotos.length;
 
-  const columnCount: number =
-    validPhotoCount === 1
-      ? 1
-      : validPhotoCount === 2
-      ? 2
-      : validPhotoCount === 3
-      ? 3
-      : validPhotoCount === 4
-      ? 2
-      : validPhotoCount > 32
-      ? 4
-      : validPhotoCount > 18
-      ? 3
-      : 2;
+  const { columnCount = generateColumnCount(validPhotoCount) } = props;
 
   const numberOfPhotosToRemove: number = validPhotoCount % columnCount;
 

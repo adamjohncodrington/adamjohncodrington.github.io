@@ -1,4 +1,6 @@
-interface IPhotoGrid extends I_Photos {}
+interface IPhotoGrid extends I_Photos {
+  columnCount?: number;
+}
 
 interface IPage extends I__Hide {
   title: string;
