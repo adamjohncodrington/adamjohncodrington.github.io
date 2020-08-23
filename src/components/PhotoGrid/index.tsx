@@ -7,7 +7,7 @@ import { GridWithColumns } from "primitives";
 import { shuffleArray } from "utils";
 
 export const CardPhotosContainer = styled(GridWithColumns)`
-  margin-top: 10px;
+  margin-top: 0.5rem;
 `;
 
 const generateColumnCount = (photoCount: number): number => {

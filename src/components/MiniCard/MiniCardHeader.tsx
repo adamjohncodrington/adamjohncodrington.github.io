@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import { css } from "styled-components";
+import styled from "styled-components";
 
 import { FlexRowDynamic } from "primitives";
 import { moveTheSuffixToPrefix } from "utils";
@@ -12,6 +12,12 @@ import {
   StyledPrimaryCount,
   StyledSecondaryCount
 } from "./styles";
+
+const StyledFlexRowDynamic = styled(FlexRowDynamic)`
+  svg {
+    margin-left: 0.5rem;
+  }
+`;
 
 export const MiniCardHeader: FC<IMiniCardHeader> = ({
   panelVisible,
@@ -39,16 +45,11 @@ export const MiniCardHeader: FC<IMiniCardHeader> = ({
     primaryCount > 0;
 
   return (
-    <FlexRowDynamic
+    <StyledFlexRowDynamic
       italic={false}
       bold={panelExists && panelVisible}
       alignItems="center"
-      firstDirectChildCss={css`
-        margin-right: 0.3125rem;
-      `}
     >
-      {panelExists && <Arrow panelVisible={panelVisible} size={"0.75rem"} />}
-
       <StyledPrimaryTextContainer>
         <StyledPrimaryText faded={faded} favourite={favourite} star={star}>
           {moveTheSuffixToPrefix(primaryText)}
@@ -72,6 +73,8 @@ export const MiniCardHeader: FC<IMiniCardHeader> = ({
       )}
 
       {secondaryText}
-    </FlexRowDynamic>
+
+      {panelExists && <Arrow panelVisible={panelVisible} size={"0.75rem"} />}
+    </StyledFlexRowDynamic>
   );
 };

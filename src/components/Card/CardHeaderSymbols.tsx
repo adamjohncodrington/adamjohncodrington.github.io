@@ -3,7 +3,7 @@ import React, { FC } from "react";
 import { Arrow } from "../Arrow";
 import { Symbol } from "../Symbol";
 
-import { CardSymbolsContainer } from "./styles";
+import { CardSymbolsContainer, StyledArrowContainer } from "./styles";
 
 export const CardHeaderSymbols: FC<ICardHeader> = ({
   symbols,
@@ -18,7 +18,11 @@ export const CardHeaderSymbols: FC<ICardHeader> = ({
         <Symbol key={index} {...symbol} />
       ))}
 
-      {panelExists && <Arrow panelVisible={panelVisible} size="0.75rem" />}
+      {panelExists && (
+        <StyledArrowContainer>
+          <Arrow panelVisible={panelVisible} size="0.75rem" />
+        </StyledArrowContainer>
+      )}
     </CardSymbolsContainer>
   );
 };

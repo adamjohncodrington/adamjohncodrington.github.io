@@ -25,8 +25,6 @@ export const CardSymbolsContainer = styled(FlexRow)(
       symbol: { spaceBetweenSymbols }
     }
   }: I_Theme) => css`
-    align-items: center;
-
     flex-wrap: wrap;
     align-content: flex-start;
     justify-content: flex-end;
@@ -35,6 +33,18 @@ export const CardSymbolsContainer = styled(FlexRow)(
       margin-left: ${spaceBetweenSymbols};
       margin-bottom: ${spaceBetweenSymbols};
     }
+  `
+);
+
+export const StyledArrowContainer = styled.div(
+  ({
+    theme: {
+      symbol: { size }
+    }
+  }: I_Theme) => css`
+    display: flex;
+    align-items: center;
+    height: ${size};
   `
 );
 

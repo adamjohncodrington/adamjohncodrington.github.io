@@ -18,7 +18,7 @@ const COLORS: IPageSection = {
 
 const ARTWORK: IPageSection = {
   title: PAGE_SECTION_TITLES.ARTWORK,
-  data: { photoGrid: { photos: DATA.ARTWORK } },
+  data: { photoGrid: { photos: DATA.ARTWORK, columnCount: 3 } },
   SvgIcon: SVG.CAMERA
 };
 
