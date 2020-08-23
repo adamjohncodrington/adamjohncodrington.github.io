@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import styled, { css } from "styled-components";
 
 interface I_MarginTop {
@@ -16,7 +16,7 @@ interface IYouTubeVideo extends IVideo {
   marginTop: string;
 }
 
-export const YouTubeVideo: React.FC<IYouTubeVideo> = ({
+export const YouTubeVideo: FC<IYouTubeVideo> = ({
   youtubeId,
   quality,
   marginTop

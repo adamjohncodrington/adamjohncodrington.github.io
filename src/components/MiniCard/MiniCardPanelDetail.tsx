@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 
 import { isInFuture as isInFutureUtil } from "utils";
 
@@ -8,7 +8,7 @@ import { MiniCardPanelDetailHeader } from "./MiniCardPanelDetailHeader";
 import { MiniCardPanelDetailPanel } from "./MiniCardPanelDetailPanel";
 import { StyledLi } from "./styles";
 
-export const MiniCardPanelDetail: React.FC<IMiniCardPanelDetail> = props => {
+export const MiniCardPanelDetail: FC<IMiniCardPanelDetail> = props => {
   const { index, dates, video } = props;
   const isInFuture: boolean = !!(dates && isInFutureUtil(dates[0]));
   const panelExists: boolean = !!video;

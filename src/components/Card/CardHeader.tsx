@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 
 import { PhotoLink } from "../PhotoLink";
 
@@ -9,7 +9,7 @@ import {
   StyledCardHeaderTextSymbolsContainer
 } from "./styles";
 
-export const CardHeader: React.FC<ICardHeader> = props => {
+export const CardHeader: FC<ICardHeader> = props => {
   const { headerPhoto } = props;
   return (
     <StyledCardHeaderContainer>

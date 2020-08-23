@@ -14,16 +14,15 @@ import {
 } from "./styles";
 
 export const MiniCardHeader: FC<IMiniCardHeader> = ({
+  panelVisible,
+  isStatic,
   primaryText,
   primaryTextAlt,
   secondaryText,
-  video,
   favourite,
-  panelVisible,
   star,
   primaryCount,
   secondaryCount,
-  isStatic,
   countInfoIrrelevant,
   greaterCountPadding
 }) => {

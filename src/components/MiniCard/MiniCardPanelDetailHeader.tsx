@@ -1,4 +1,4 @@
-import React, { ReactElement } from "react";
+import React, { FC, ReactElement } from "react";
 
 import { FlexRowDynamic, Link } from "primitives";
 import { getDatesText, moveTheSuffixToPrefix } from "utils";
@@ -9,7 +9,9 @@ import {
   StyledPanelSecondaryText
 } from "./styles";
 
-export const MiniCardPanelDetailHeader: React.FC<IMiniCardPanelDetailHeader> = ({
+export const MiniCardPanelDetailHeader: FC<IMiniCardPanelDetailHeader> = ({
+  panelVisible,
+  isStatic,
   index,
   mainText,
   dates,
@@ -17,9 +19,7 @@ export const MiniCardPanelDetailHeader: React.FC<IMiniCardPanelDetailHeader> = (
   headerLink,
   video,
   secondaryText,
-  panelVisible,
-  year,
-  isStatic
+  year
 }) => {
   const useTriangleAsBullet: boolean = !!headerLink;
 

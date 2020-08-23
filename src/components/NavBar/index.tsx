@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import styled, { css } from "styled-components";
 
 import { RouterNavLink } from "primitives";
@@ -62,7 +62,7 @@ interface INavBar {
   pages: IPage[];
 }
 
-export const NavBar: React.FC<INavBar> = ({ pages }) => (
+export const NavBar: FC<INavBar> = ({ pages }) => (
   <StyledNav data-test="nav-bar">
     {pages.map(({ path, SvgIcon }: IPage, i: number) => (
       <StyledRouterNavLink key={i} to={path} activeClassName="ACTIVE">

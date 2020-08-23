@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 
 import { FlexRowGrow } from "primitives";
 
@@ -17,7 +17,7 @@ interface IPageSectionHeader extends IDisclosureHeader {
   SvgIcon?: ISvgIcon;
 }
 
-export const PageSectionHeader: React.FC<IPageSectionHeader> = ({
+export const PageSectionHeader: FC<IPageSectionHeader> = ({
   title,
   panelVisible,
   SvgIcon,

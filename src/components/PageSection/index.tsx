@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 import styled, { css } from "styled-components";
 
 import { Disclosure } from "../Disclosure";
@@ -21,7 +21,7 @@ const PageSectionContainer = styled.section(
   `
 );
 
-export const PageSection: React.FC<IPageSection> = props => {
+export const PageSection: FC<IPageSection> = props => {
   const { autoExpand } = props;
   return (
     <PageSectionContainer>

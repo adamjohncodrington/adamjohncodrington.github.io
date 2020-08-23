@@ -1,4 +1,4 @@
-import React from "react";
+import React, { FC } from "react";
 
 import { Arrow } from "../Arrow";
 
@@ -7,15 +7,15 @@ import { moveTheSuffixToPrefix } from "utils";
 
 import { CardDisclaimer, CardTextContainer, CardSecondaryBody } from "./styles";
 
-export const CardHeaderText: React.FC<ICardHeader> = ({
+export const CardHeaderText: FC<ICardHeader> = ({
   panelVisible,
+  isStatic,
   title,
   subtitle,
   favourite,
   body,
   secondaryBody,
-  disclaimer,
-  isStatic
+  disclaimer
 }) => (
   <CardTextContainer data-test="card-container">
     <FlexRowDynamic bold={false} italic={false}>

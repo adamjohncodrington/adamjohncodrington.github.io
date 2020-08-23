@@ -1,11 +1,11 @@
-import React from "react";
+import React, { FC } from "react";
 
 import { Disclosure } from "../Disclosure";
 
 import { CardHeader } from "./CardHeader";
 import { CardPanel } from "./CardPanel";
 
-export const Card: React.FC<ICard> = props => {
+export const Card: FC<ICard> = props => {
   const { video, photos } = props;
   const panelExists: boolean = !!(video || (photos && photos.length > 0));
   const isStaticProp: I__IsStatic = {

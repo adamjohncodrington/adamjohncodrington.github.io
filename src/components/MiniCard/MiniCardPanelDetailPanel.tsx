@@ -1,8 +1,8 @@
-import React from "react";
+import React, { FC } from "react";
 
 import { YouTubeVideo } from "../YouTubeVideo";
 
-export const MiniCardPanelDetailPanel: React.FC<IMiniCardPanelDetail> = ({
+export const MiniCardPanelDetailPanel: FC<IMiniCardPanelDetail> = ({
   video
 }) => {
   if (!video) return null;

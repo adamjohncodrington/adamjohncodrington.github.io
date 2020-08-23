@@ -1,10 +1,10 @@
-import React from "react";
+import React, { FC } from "react";
 
 import { Symbol } from "../Symbol";
 
 import { CardSymbolsContainer } from "./styles";
 
-export const CardHeaderSymbols: React.FC<ICard> = ({ symbols }) => {
+export const CardHeaderSymbols: FC<ICard> = ({ symbols }) => {
   if (!(symbols && symbols.length)) return null;
 
   return (

@@ -7,8 +7,8 @@ import { PanelContainer, StyledDiv, DisclosureContainer } from "./styles";
 export const Disclosure: FC<IDisclosure> = ({
   Header,
   Panel,
-  autoExpand,
-  isStatic
+  isStatic,
+  autoExpand
 }) => {
   const [panelVisible, switchPanelVisibility] = useState<boolean>(!!autoExpand);
 
@@ -29,7 +29,7 @@ export const Disclosure: FC<IDisclosure> = ({
         </>
       ) : (
         <>
-          {ClickableHeader}
+          <ClickableHeader />
           <PanelContainer
             data-test="disclosure-panel"
             panelVisible={panelVisible}
