@@ -11,9 +11,10 @@ import { StyledLi } from "./styles";
 export const MiniCardPanelDetail: React.FC<IMiniCardPanelDetail> = props => {
   const { index, dates, video } = props;
   const isInFuture: boolean = !!(dates && isInFutureUtil(dates[0]));
+  const panelExists: boolean = !!video;
 
   const isStaticProp: I__IsStatic = {
-    isStatic: !video
+    isStatic: !panelExists
   };
 
   return (

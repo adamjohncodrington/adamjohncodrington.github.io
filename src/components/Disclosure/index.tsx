@@ -21,10 +21,7 @@ export const Disclosure: FC<IDisclosure> = ({
   return (
     <DisclosureContainer>
       {isStatic ? (
-        <>
-          <Header panelVisible={true} />
-          <Panel />
-        </>
+        <Header panelVisible={true} />
       ) : SPEED_UP_PAGE_LOAD ? (
         <>
           <ClickableHeader />

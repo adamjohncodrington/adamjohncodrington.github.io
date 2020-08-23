@@ -7,8 +7,9 @@ import { CardPanel } from "./CardPanel";
 
 export const Card: React.FC<ICard> = props => {
   const { video, photos } = props;
+  const panelExists: boolean = !!(video || (photos && photos.length > 0));
   const isStaticProp: I__IsStatic = {
-    isStatic: !(video || (photos && photos.length > 0))
+    isStatic: !panelExists
   };
 
   return (
