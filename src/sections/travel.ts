@@ -64,7 +64,7 @@ const VIDEOS: IPageSection = {
 const PHOTOS: IPageSection = {
   SvgIcon: SVG.CAMERA,
   title: PAGE_SECTION_TITLES.PHOTOS,
-  data: { photoGrid: { photos: DATA.PHOTOS } }
+  data: { photoGrid: { photos: DATA.PHOTOS, columnCount: 3 } }
 };
 
 const YEARS: IPageSection[] = DATA.YEARS.map(
