@@ -44,7 +44,7 @@ export const MiniCardHeader: FC<IMiniCardHeader> = ({
       bold={panelExists && panelVisible}
       alignItems="center"
       firstDirectChildCss={css`
-        margin-right: 0.25rem;
+        margin-right: 0.3125rem;
       `}
     >
       {panelExists && <Arrow panelVisible={panelVisible} size={"0.75rem"} />}
