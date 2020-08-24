@@ -15,7 +15,7 @@ const getTheatreVenueDetails = (play: ITheatre): IMiniCardPanelDetail[] =>
       const { date } = theatreVisit;
       return {
         mainText: [theatreVisit.play.name],
-        sort: [date],
+        sort: [date.valueOf()],
         dates: [date]
       };
     }

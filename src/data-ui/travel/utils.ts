@@ -17,7 +17,7 @@ export const mapTravelVideosToCards = (
   }: ITravelVideo): ICard => ({
     video,
     year: dates.start.getFullYear(),
-    sort: [dates.start],
+    sort: [dates.start.valueOf()],
     title: arrayToString(
       locations.map(
         ({ name, shortName }: ILocation): string => shortName || name
@@ -38,7 +38,7 @@ export const mapTripLegsToCards = (tripLegs: ITripLeg[]): ICard[] => {
     return {
       ...tripLeg,
       year: dates[0].getFullYear(),
-      sort: [dates[0]],
+      sort: [dates[0].valueOf()],
       symbols: getSymbols({ company, photos, video }),
       title: getTripTitle(tripLeg),
       subtitle: getTripSubtitle(tripLeg),

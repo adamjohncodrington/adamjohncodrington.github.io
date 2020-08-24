@@ -22,7 +22,7 @@ const getActorDetails = (actor: IActor): IMiniCardPanelDetail[] =>
       const { date } = theatreVisit;
       return {
         mainText: [getTheatreVisitTitle(theatreVisit)],
-        sort: [date],
+        sort: [date.valueOf()],
         dates: [date]
       };
     }

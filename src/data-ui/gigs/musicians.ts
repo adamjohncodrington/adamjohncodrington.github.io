@@ -31,6 +31,7 @@ const getMusicianDetails = (musician: IMusician): IMiniCardPanelDetail[] =>
       dates,
       festival,
       gig,
+      musicians,
       venue,
       favourite,
       video
@@ -38,7 +39,13 @@ const getMusicianDetails = (musician: IMusician): IMiniCardPanelDetail[] =>
       mainText: [festival ? festival.title.name : venue.name],
       sort: [dates[0]],
       dates: festival ? [getMusicianFestivalDate(musician, festival)] : dates,
-      video: gig ? (gig.headline === musician ? video : undefined) : undefined,
+      video: gig
+        ? gig.headline === musician
+          ? video
+          : undefined
+        : festival && musicians.includes(musician)
+        ? video
+        : undefined,
       favourite: favourite && gig && gig.headline === musician
     })
   );

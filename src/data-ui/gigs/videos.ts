@@ -12,7 +12,7 @@ const mapFestivalsWithVideosToMiniCards = (
   }: IFestivalWithVideo): IMiniCard => {
     return {
       primaryText: name,
-      sort: [name, dates[0]],
+      sort: [name, dates[0].valueOf()],
       video,
       secondaryText: getDateText(dates[0], { hideDay: true })
     };
@@ -35,7 +35,7 @@ const mapGigVideosToMiniCards = (gigVideos: IGigVideo[]): IMiniCard[] => {
     });
     return {
       primaryText: musicianName,
-      sort: [musicianName, date],
+      sort: [musicianName, date.valueOf()],
       video,
       secondaryText: getDateText(date, { hideDay: true })
     };

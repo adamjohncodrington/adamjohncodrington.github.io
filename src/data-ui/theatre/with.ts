@@ -17,7 +17,7 @@ const getFriendDetails = (friend: IFriend): IMiniCardPanelDetail[] =>
       const { date } = theatreVisit;
       return {
         mainText: [getTheatreVisitTitle(theatreVisit)],
-        sort: [date],
+        sort: [date.valueOf()],
         dates: [date]
       };
     }

@@ -30,7 +30,7 @@ const getPlayDetails = (play: IPlay): IMiniCardPanelDetail[] =>
       const { date } = theatreVisit;
       return {
         mainText: [theatreVisit.theatre.name],
-        sort: [date],
+        sort: [date.valueOf()],
         dates: [date]
       };
     }

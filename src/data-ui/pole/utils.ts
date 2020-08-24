@@ -69,7 +69,7 @@ export const mapPoleRoutineToMiniCardDetail = ({
 }: IPoleRoutine): IMiniCardPanelDetail => ({
   mainText: [`${name} - ${title}`],
   secondaryText: getDateText(date, { hideDay: true }),
-  sort: [date],
+  sort: [date.valueOf()],
   video
 });
 
@@ -79,6 +79,6 @@ export const mapPoleTricksVideoToMiniCardDetail = ({
 }: IPoleTricksVideo): IMiniCardPanelDetail => ({
   mainText: ["Tricks"],
   secondaryText: getDatesText([start, end], { hideDay: true }),
-  sort: [start],
+  sort: [start.valueOf()],
   video
 });

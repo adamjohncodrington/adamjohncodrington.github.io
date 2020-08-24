@@ -153,3 +153,13 @@ export const StyledHeadlineTextContainer = styled.div(
     `}
   `
 );
+
+export const StyledPhotoGridContainer = styled.div(
+  ({
+    theme: {
+      pageSection: { margin }
+    }
+  }: I_Theme) => css`
+    padding-bottom: ${margin.bottom};
+  `
+);

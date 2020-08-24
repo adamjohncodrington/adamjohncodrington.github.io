@@ -19,7 +19,7 @@ interface I__Gift {
 }
 
 interface I_Sort {
-  sort: (string | number | Date | boolean | undefined)[];
+  sort: (string | number | boolean | undefined)[];
 }
 
 interface I_Signed {

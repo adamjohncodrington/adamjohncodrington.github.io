@@ -13,7 +13,7 @@ export const mapTheatreVisitsToCards = (
     return {
       ...theatreVisit,
       year: date.getFullYear(),
-      sort: [date],
+      sort: [date.valueOf()],
       symbols: getSymbols({ company }),
       title: getTheatreVisitTitle(theatreVisit),
       secondaryBody: getTheatreVisitSubtitle(theatreVisit),
