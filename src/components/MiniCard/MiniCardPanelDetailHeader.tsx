@@ -27,14 +27,7 @@ export const MiniCardPanelDetailHeader: FC<IMiniCardPanelDetailHeader> = ({
   const useTriangleAsBullet: boolean = !!headerLink;
 
   const HeaderContents: ReactElement = (
-    <FlexRowDynamic
-      alignItems="center"
-      bold={panelExists && panelVisible}
-      italic={false}
-      svgCss={css`
-        margin-left: 0.25rem;
-      `}
-    >
+    <FlexRowDynamic bold={panelExists && panelVisible} italic={false}>
       {index && !useTriangleAsBullet && <StyledIndex>{index}.</StyledIndex>}
 
       {mainText && (
@@ -44,12 +37,29 @@ export const MiniCardPanelDetailHeader: FC<IMiniCardPanelDetailHeader> = ({
       )}
 
       {(dates || year || secondaryText) && (
-        <StyledPanelSecondaryText favourite={favourite}>
-          {secondaryText ? secondaryText : dates ? getDatesText(dates) : year}
-        </StyledPanelSecondaryText>
-      )}
+        <>
+          <FlexRowDynamic
+            italic={false}
+            bold={false}
+            alignItems="center"
+            svgCss={css`
+              margin-left: 0.25rem;
+            `}
+          >
+            <StyledPanelSecondaryText favourite={favourite}>
+              {secondaryText
+                ? secondaryText
+                : dates
+                ? getDatesText(dates)
+                : year}
+            </StyledPanelSecondaryText>
 
-      {panelExists && <Arrow panelVisible={panelVisible} size="0.625rem" />}
+            {panelExists && (
+              <Arrow panelVisible={panelVisible} size="0.625rem" />
+            )}
+          </FlexRowDynamic>
+        </>
+      )}
     </FlexRowDynamic>
   );
 
