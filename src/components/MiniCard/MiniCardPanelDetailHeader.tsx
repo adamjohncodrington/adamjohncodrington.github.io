@@ -20,14 +20,17 @@ export const MiniCardPanelDetailHeader: FC<IMiniCardPanelDetailHeader> = ({
   dates,
   favourite,
   headerLink,
-  video,
   secondaryText,
   year
 }) => {
   const useTriangleAsBullet: boolean = !!headerLink;
 
   const HeaderContents: ReactElement = (
-    <FlexRowDynamic bold={panelExists && panelVisible} italic={false}>
+    <FlexRowDynamic
+      bold={panelExists && panelVisible}
+      italic={false}
+      alignItems="top"
+    >
       {index && !useTriangleAsBullet && <StyledIndex>{index}.</StyledIndex>}
 
       {mainText && (
@@ -41,7 +44,7 @@ export const MiniCardPanelDetailHeader: FC<IMiniCardPanelDetailHeader> = ({
           <FlexRowDynamic
             italic={false}
             bold={false}
-            alignItems="center"
+            alignItems="baseline"
             svgCss={css`
               margin-left: 0.25rem;
             `}

@@ -34,7 +34,7 @@ export const FlexLiGrow = styled(Li)`
 `;
 
 interface IFlexRowDynamic extends I_Bold, I__Faded, I_Italic, I_Theme {
-  alignItems?: "baseline" | "center";
+  alignItems?: "top" | "baseline" | "center";
   svgCss?: FlattenSimpleInterpolation;
 }
 
