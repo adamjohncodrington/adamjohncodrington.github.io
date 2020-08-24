@@ -21,7 +21,6 @@ export const mapPoleRoutinesToCards = (
     sort: [sort === "asc" ? date.valueOf() : -date.valueOf()],
     symbols: getSymbols({
       company: [choreographer],
-      video,
       poleCategory: showCategorySymbol ? category : undefined
     }),
     subtitle: musician.name,
@@ -49,7 +48,6 @@ export const mapPoleTricksVideosToCards = (
     sort: [sort === "asc" ? start.valueOf() : -start.valueOf()],
     symbols: getSymbols({
       company: [instructor],
-      video,
       poleCategory: showCategorySymbol ? category : undefined
     }),
     title: getDatesText([start, end], { hideDay: true }),

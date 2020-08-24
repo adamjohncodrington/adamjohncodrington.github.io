@@ -14,42 +14,36 @@ export const StyledPrimaryTextContainer = styled(FlexRow)`
 export const StyledPrimaryAltText = styled.span(
   ({ theme: { fadedOpacity } }: I_Theme) => css`
     opacity: ${fadedOpacity};
-    margin-left: 5px;
+    margin-left: 0.3125rem;
     font-size: 75%;
-    font-weight: normal;
   `
 );
 
-interface IStyledPrimaryText extends I_Theme, I__Favourite, I__Star {
-  faded: boolean;
-}
+interface IStyledPrimaryText extends I_Theme, I__Favourite, I_Bold, I__Star {}
 
 export const StyledPrimaryText = styled.span(
   ({
+    bold,
     favourite,
     star,
-    faded,
     theme: { fadedOpacity }
   }: IStyledPrimaryText) => css`
-    ${
-      faded &&
-      css`
-        opacity: ${fadedOpacity};
-      `
-    }
+    font-weight: ${bold ? "bold" : "normal"};
 
     ${favourite && getPseudoElementAfter(HEART)}
     ${star && getPseudoElementAfter(STAR)}
   `
 );
 
-interface IMiniCardPastCount extends I_Theme {
+interface IMiniCardCount extends I_Theme, I_Bold {
   greaterCountPadding?: boolean;
 }
 
 export const StyledPrimaryCount = styled.span(
-  ({ greaterCountPadding, theme: { miniCard } }: IMiniCardPastCount) => css`
+  ({ bold, greaterCountPadding, theme: { miniCard } }: IMiniCardCount) => css`
     text-align: right;
+    font-weight: ${bold ? "bold" : "normal"};
+
     width: ${miniCard.count.width};
     margin-left: ${!!greaterCountPadding
       ? css`
@@ -105,14 +99,16 @@ export const StyledIndex = styled.div`
   min-width: 25px;
 `;
 
-interface IStyledDateText extends I__Favourite, I_ShowVideoSymbol {}
+interface IStyledDateText extends I__Favourite {}
 
 export const StyledPanelSecondaryText = styled.div(
-  ({ favourite, showVideoSymbol: video }: IStyledDateText) => css`
-    ${favourite && !video && getPseudoElementAfter(HEART)};
-    ${video && !favourite && getPseudoElementAfter(TRIANGLE_PLAY)};
-    ${favourite && video && getPseudoElementAfter(HEART + " " + TRIANGLE_PLAY)};
+  ({ favourite }: IStyledDateText) => css`
+    ${favourite && getPseudoElementAfter(HEART)};
   `
 );
 
 export const StyledPanelContainer = styled.div``;
+
+export const StyledSecondaryText = styled.div`
+  font-size: 87.5%;
+`;

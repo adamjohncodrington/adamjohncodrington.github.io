@@ -124,6 +124,10 @@ interface I_Italic {
   italic: boolean;
 }
 
+interface I_Margin {
+  margin: string;
+}
+
 interface I__ExcludeFromBucketList {
   excludeFromBucketList?: boolean;
 }

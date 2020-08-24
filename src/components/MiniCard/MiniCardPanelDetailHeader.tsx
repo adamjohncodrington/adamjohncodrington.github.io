@@ -1,7 +1,10 @@
 import React, { FC, ReactElement } from "react";
+import { css } from "styled-components";
 
 import { FlexRowDynamic, Link } from "primitives";
 import { getDatesText, moveTheSuffixToPrefix } from "utils";
+
+import { Arrow } from "../Arrow";
 
 import {
   StyledLevel1MainText,
@@ -24,7 +27,14 @@ export const MiniCardPanelDetailHeader: FC<IMiniCardPanelDetailHeader> = ({
   const useTriangleAsBullet: boolean = !!headerLink;
 
   const HeaderContents: ReactElement = (
-    <FlexRowDynamic bold={panelExists && panelVisible} italic={false}>
+    <FlexRowDynamic
+      alignItems="center"
+      bold={panelExists && panelVisible}
+      italic={false}
+      svgCss={css`
+        margin-left: 0.25rem;
+      `}
+    >
       {index && !useTriangleAsBullet && <StyledIndex>{index}.</StyledIndex>}
 
       {mainText && (
@@ -34,13 +44,12 @@ export const MiniCardPanelDetailHeader: FC<IMiniCardPanelDetailHeader> = ({
       )}
 
       {(dates || year || secondaryText) && (
-        <StyledPanelSecondaryText
-          favourite={favourite}
-          showVideoSymbol={!!video}
-        >
+        <StyledPanelSecondaryText favourite={favourite}>
           {secondaryText ? secondaryText : dates ? getDatesText(dates) : year}
         </StyledPanelSecondaryText>
       )}
+
+      {panelExists && <Arrow panelVisible={panelVisible} size="0.625rem" />}
     </FlexRowDynamic>
   );
 

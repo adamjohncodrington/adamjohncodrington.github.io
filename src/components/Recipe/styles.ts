@@ -32,4 +32,8 @@ export const RecipeHeaderContainer = styled(FlexRowDynamic)`
   .recipe-title {
     flex: 1;
   }
+
+  svg {
+    margin-left: 0.375rem;
+  }
 `;

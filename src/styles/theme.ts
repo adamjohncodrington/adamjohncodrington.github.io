@@ -37,7 +37,7 @@ const THEME_PAGE_SECTION: IThemePageSection = {
   headline: { fontSize: FONT_SIZES.ML },
   count: { margin: { left: "7px" } },
   header: { padding: { vertical: "12px" } },
-  icon: { size: "32px" },
+  icon: { size: "1.875rem" },
   margin: { bottom: `calc(2* ${pageMargin})` },
   padding: { horizontal: "12px", bottom: "5px" },
   panelList: {
@@ -102,7 +102,7 @@ export const THEME: ITheme = {
   symbol: THEME_SYMBOL,
   vinyl: THEME_VINYL_CARD,
 
-  fadedOpacity: 0.6,
+  fadedOpacity: 0.5,
   fontFamily,
   listItemGroupVerticalSpacing: "10px",
   scrollbarSize

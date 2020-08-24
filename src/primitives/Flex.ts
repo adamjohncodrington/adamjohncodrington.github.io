@@ -33,19 +33,32 @@ export const FlexLiGrow = styled(Li)`
   flex: 1;
 `;
 
-interface IFlexRowDynamic extends I_Bold, I_Italic {
+interface IFlexRowDynamic extends I_Bold, I__Faded, I_Italic, I_Theme {
   alignItems?: "baseline" | "center";
-  firstDirectChildCss?: FlattenSimpleInterpolation;
+  svgCss?: FlattenSimpleInterpolation;
 }
 
 export const FlexRowDynamic = styled(FlexRow)(
-  ({ alignItems, bold, firstDirectChildCss, italic }: IFlexRowDynamic) => css`
+  ({
+    alignItems,
+    bold,
+    faded,
+    svgCss,
+    italic,
+    theme: { fadedOpacity }
+  }: IFlexRowDynamic) => css`
     ${
-      firstDirectChildCss &&
+      svgCss &&
       css`
-        > :first-child {
-          ${firstDirectChildCss};
+        svg {
+          ${svgCss};
         }
+      `
+    }
+    ${
+      faded &&
+      css`
+        opacity: ${fadedOpacity};
       `
     }
     ${

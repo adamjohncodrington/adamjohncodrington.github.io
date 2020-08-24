@@ -31,3 +31,19 @@ export const EXOTICA_2: IPoleTricksVideo = {
   instructor: INSTRUCTORS.VERONICA,
   video: { youtubeId: "F6jSO01xU5I", ...PORTRAIT_1080P }
 };
+
+export const EXOTICA_3: IPoleTricksVideo = {
+  studio: STUDIOS.EXOTICA_BERMONDSEY,
+  dates: { start: new Date("2019-05-02"), end: new Date("2019-06-24") },
+  category: "tricks",
+  instructor: INSTRUCTORS.VERONICA,
+  video: { youtubeId: "XwDJU_U3Ljg", ...PORTRAIT_1080P }
+};
+
+export const EXOTICA_4: IPoleTricksVideo = {
+  studio: STUDIOS.EXOTICA_BERMONDSEY,
+  dates: { start: new Date("2019-07-15"), end: new Date("2019-08-31") },
+  category: "tricks",
+  instructor: INSTRUCTORS.VERONICA,
+  video: { youtubeId: "9EjQ9Umai6g", ...PORTRAIT_1080P }
+};

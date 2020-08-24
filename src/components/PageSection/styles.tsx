@@ -9,6 +9,12 @@ export const PageSectionTitle = styled(H2)`
 export const PageSectionHeaderContainer = styled(FlexRow)(
   ({ theme: { pageSection } }: I_Theme) => css`
     padding: ${pageSection.header.padding.vertical} 0;
+
+    align-items: center;
+
+    > :last-child {
+      margin-left: 0.625rem;
+    }
   `
 );
 

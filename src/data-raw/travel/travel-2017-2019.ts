@@ -135,7 +135,7 @@ export const LISBON: ITrip = [
 export const BRUGES: ITrip = [
   {
     primaryLocations: [COUNTRIES.BELGIUM.cities.BRUGES],
-    photos: PHOTOS.TRAVEL.LISBON,
+    photos: PHOTOS.TRAVEL.BRUGES,
     country: COUNTRIES.BELGIUM,
     secondaryLocations: [COUNTRIES.BELGIUM.attractions.BELFRY_OF_BRUGES],
     dates: [new Date("2019-05-17"), new Date("2019-05-19")],

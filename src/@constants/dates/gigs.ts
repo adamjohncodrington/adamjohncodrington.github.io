@@ -44,6 +44,7 @@ export const SOFI_TUKKER: Date = new Date("2018-09-17");
 export const SOPHIE_2019: Date = new Date("2019-08-10");
 export const KIM_PETRAS_2019: Date = new Date("2019-08-27");
 export const MUNA_2019_09: Date = new Date("2019-09-10");
+export const MUNA_2019_12: Date = new Date("2019-12-03");
 export const JULIA_MICHAELS: Date = new Date("2019-09-17");
 export const CHARLI_XCX_2019: Date = new Date("2019-10-31");
 export const BANKS_2019: Date = new Date("2019-11-04");

@@ -154,6 +154,13 @@ export const MUNA_2019_09: IGigVideo = {
   musician: MUSICIANS.MUNA
 };
 
+export const MUNA_2019_12: IGigVideo = {
+  ...PORTRAIT_1080P,
+  date: DATES.GIGS.MUNA_2019_12,
+  youtubeId: "RdUSbkRwGjw",
+  musician: MUSICIANS.MUNA
+};
+
 export const JULIA_MICHAELS: IGigVideo = {
   ...PORTRAIT_1080P,
   date: DATES.GIGS.JULIA_MICHAELS,

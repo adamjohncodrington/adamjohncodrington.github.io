@@ -529,7 +529,7 @@ export const MUNA_2019_12: IGig = {
   headline: MUSICIANS.MUNA,
   support: [MUSICIANS.L_DEVINE],
   venue: MUSIC_VENUES.SHEPHERDS_BUSH_EMPIRE,
-  date: new Date("2019-12-03"),
+  date: DATES.GIGS.MUNA_2019_12,
   company: [FRIENDS.LEWIS_STEADMAN, FRIENDS.DARREN_TAYLOR]
 };
 

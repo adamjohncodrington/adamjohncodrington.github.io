@@ -1,7 +1,6 @@
 import React, { FC } from "react";
-import { css } from "styled-components";
 
-import { CardTitle, CardSubtitle, FlexRowDynamic } from "primitives";
+import { CardTitle, CardSubtitle } from "primitives";
 import { moveTheSuffixToPrefix } from "utils";
 
 import { CardDisclaimer, CardTextContainer, CardSecondaryBody } from "./styles";
@@ -17,22 +16,13 @@ export const CardHeaderText: FC<ICardHeader> = ({
   disclaimer
 }) => (
   <CardTextContainer data-test="card-container">
-    <FlexRowDynamic
-      bold={false}
-      italic={false}
-      alignItems="center"
-      firstDirectChildCss={css`
-        margin-right: 0.375rem;
-      `}
+    <CardTitle
+      bold={panelExists && panelVisible}
+      data-test="card-title"
+      favourite={favourite}
     >
-      <CardTitle
-        bold={panelExists && panelVisible}
-        data-test="card-title"
-        favourite={favourite}
-      >
-        {moveTheSuffixToPrefix(title)}
-      </CardTitle>
-    </FlexRowDynamic>
+      {moveTheSuffixToPrefix(title)}
+    </CardTitle>
     {subtitle && (
       <CardSubtitle bold={false} data-test="card-subtitle">
         {moveTheSuffixToPrefix(subtitle)}

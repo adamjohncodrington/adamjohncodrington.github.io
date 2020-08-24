@@ -1,4 +1,5 @@
 import * as ACTORS from "./actors";
+import * as CLASSNAMES from "./class-names";
 import * as DATES from "./dates";
 import * as FESTIVAL_TITLES from "./festival-titles";
 import * as MEASUREMENTS from "./measurements";
@@ -15,6 +16,7 @@ import * as RETAILERS from "./retailers";
 
 export {
   ACTORS,
+  CLASSNAMES,
   DATES,
   FESTIVAL_TITLES,
   MEASUREMENTS,

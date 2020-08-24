@@ -1,5 +1,7 @@
 # TO DO LIST
 
+- Glastonbury festival videos not drilling down
+
 - make mini card panel detail header date not go bold, just primary text, replace play icon with arrow
 
 - add chevrons to all suitable cards

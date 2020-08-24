@@ -1,5 +1,5 @@
 import React, { FC } from "react";
-import styled from "styled-components";
+import { css } from "styled-components";
 
 import { FlexRowDynamic } from "primitives";
 import { moveTheSuffixToPrefix } from "utils";
@@ -10,14 +10,9 @@ import {
   StyledPrimaryAltText,
   StyledPrimaryTextContainer,
   StyledPrimaryCount,
-  StyledSecondaryCount
+  StyledSecondaryCount,
+  StyledSecondaryText
 } from "./styles";
-
-const StyledFlexRowDynamic = styled(FlexRowDynamic)`
-  svg {
-    margin-left: 0.5rem;
-  }
-`;
 
 export const MiniCardHeader: FC<IMiniCardHeader> = ({
   panelVisible,
@@ -44,14 +39,20 @@ export const MiniCardHeader: FC<IMiniCardHeader> = ({
     secondaryCount > 0 &&
     primaryCount > 0;
 
+  const bold: boolean = panelExists && panelVisible;
+
   return (
-    <StyledFlexRowDynamic
+    <FlexRowDynamic
+      faded={faded}
       italic={false}
-      bold={panelExists && panelVisible}
+      bold={false}
       alignItems="center"
+      svgCss={css`
+        margin-left: ${showPrimaryCount ? "0.75rem" : "0.25rem"};
+      `}
     >
       <StyledPrimaryTextContainer>
-        <StyledPrimaryText faded={faded} favourite={favourite} star={star}>
+        <StyledPrimaryText bold={bold} favourite={favourite} star={star}>
           {moveTheSuffixToPrefix(primaryText)}
         </StyledPrimaryText>
 
@@ -63,18 +64,25 @@ export const MiniCardHeader: FC<IMiniCardHeader> = ({
       </StyledPrimaryTextContainer>
 
       {showSecondaryCount && (
-        <StyledSecondaryCount>{secondaryCount}</StyledSecondaryCount>
+        <StyledSecondaryCount bold={bold}>
+          {secondaryCount}
+        </StyledSecondaryCount>
       )}
 
       {showPrimaryCount && (
-        <StyledPrimaryCount greaterCountPadding={greaterCountPadding}>
+        <StyledPrimaryCount
+          bold={bold}
+          greaterCountPadding={greaterCountPadding}
+        >
           {primaryCount}
         </StyledPrimaryCount>
       )}
 
-      {secondaryText}
+      {secondaryText && (
+        <StyledSecondaryText>{secondaryText}</StyledSecondaryText>
+      )}
 
-      {panelExists && <Arrow panelVisible={panelVisible} size={"0.75rem"} />}
-    </StyledFlexRowDynamic>
+      {panelExists && <Arrow panelVisible={panelVisible} size="0.75rem" />}
+    </FlexRowDynamic>
   );
 };

@@ -2,6 +2,8 @@ import React, { FC } from "react";
 
 import { FlexRowGrow } from "primitives";
 
+import { Arrow } from "../Arrow";
+
 import {
   PageSectionHeaderContainer,
   PageSectionTitle,
@@ -30,13 +32,13 @@ export const PageSectionHeader: FC<IPageSectionHeader> = ({
         {title}
       </PageSectionTitle>
 
-      {count && count > 1 && (
+      {!!count && (
         <PageSectionCount data-test="section-header-count">
           {count}
         </PageSectionCount>
       )}
 
-      {starCount && starCount > 0 && (
+      {!!starCount && (
         <PageSectionStarredCount data-test="section-header-starred-count">
           {starCount}
         </PageSectionStarredCount>
@@ -48,5 +50,7 @@ export const PageSectionHeader: FC<IPageSectionHeader> = ({
         <SvgIcon data-test="section-header-icon" />
       </PageSectionSvgContainer>
     )}
+
+    <Arrow panelVisible={panelVisible} size="1rem" />
   </PageSectionHeaderContainer>
 );

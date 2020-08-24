@@ -1,14 +1,10 @@
 import React, { FC } from "react";
-import styled from "styled-components";
 
 import { PhotoLink } from "../PhotoLink";
 
+import { CLASSNAMES } from "@constants";
 import { GridWithColumns } from "primitives";
 import { shuffleArray } from "utils";
-
-export const CardPhotosContainer = styled(GridWithColumns)`
-  margin-top: 0.5rem;
-`;
 
 const generateColumnCount = (photoCount: number): number => {
   switch (photoCount) {
@@ -46,12 +42,15 @@ export const PhotoGrid: FC<IPhotoGrid> = props => {
   );
 
   return (
-    <CardPhotosContainer columnCount={columnCount}>
+    <GridWithColumns
+      className={CLASSNAMES.PHOTO_GRID}
+      columnCount={columnCount}
+    >
       {filtered.map((photo: IPhoto, index: number) => (
         <div key={index} data-test="image-container">
           <PhotoLink photo={photo} />
         </div>
       ))}
-    </CardPhotosContainer>
+    </GridWithColumns>
   );
 };
