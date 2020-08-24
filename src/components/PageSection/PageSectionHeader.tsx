@@ -32,13 +32,13 @@ export const PageSectionHeader: FC<IPageSectionHeader> = ({
         {title}
       </PageSectionTitle>
 
-      {!!count && (
+      {count && count > 1 && (
         <PageSectionCount data-test="section-header-count">
           {count}
         </PageSectionCount>
       )}
 
-      {!!starCount && (
+      {starCount && starCount > 1 && (
         <PageSectionStarredCount data-test="section-header-starred-count">
           {starCount}
         </PageSectionStarredCount>

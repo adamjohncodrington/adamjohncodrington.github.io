@@ -153,7 +153,3 @@ export const StyledHeadlineTextContainer = styled.div(
     `}
   `
 );
-
-export const PanelPhotoGridContainer = styled.div`
-  padding-bottom: 12.5px;
-`;

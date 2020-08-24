@@ -1,22 +1,24 @@
 import React, { FC } from "react";
 import styled, { css } from "styled-components";
 
-interface I_MarginTop {
-  marginTop: string;
+interface I__MarginTop {
+  marginTop?: string;
 }
 
 export const StyledVideoContainer = styled.div(
-  ({ marginTop }: I_MarginTop) =>
+  ({ marginTop }: I__MarginTop) =>
+    marginTop &&
     css`
       margin-top: ${marginTop};
     `
 );
 
-interface IYouTubeVideo extends IVideo {
-  marginTop: string;
+interface IYouTubeVideo extends IVideo, I__MarginTop {
+  className?: string;
 }
 
 export const YouTubeVideo: FC<IYouTubeVideo> = ({
+  className,
   youtubeId,
   quality,
   marginTop
@@ -31,7 +33,7 @@ export const YouTubeVideo: FC<IYouTubeVideo> = ({
   const src: string = "https://www.youtube.com/embed/" + youtubeId + urlSuffix;
 
   return (
-    <StyledVideoContainer marginTop={marginTop}>
+    <StyledVideoContainer marginTop={marginTop} className={className}>
       <iframe
         title={youtubeId}
         width="100%"

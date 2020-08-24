@@ -1,4 +1,5 @@
 import React, { FC } from "react";
+import styled from "styled-components";
 
 import { sortMiniCardPanelDetails } from "utils";
 
@@ -8,9 +9,28 @@ import { YouTubeVideo } from "../YouTubeVideo";
 import { MiniCardPanelDetail } from "./MiniCardPanelDetail";
 import { StyledOl } from "./styles";
 
+const StyledPanelContainer = styled.div`
+  > * {
+    margin-top: 0.375rem;
+    margin-bottom: 0.25rem;
+  }
+`;
+
 export const MiniCardPanel: FC<IMiniCard> = ({ details, photos, video }) => {
-  if (video) return <YouTubeVideo {...video} marginTop="5px" />;
-  if (photos) return <PhotoGrid photos={photos} />;
+  if (video)
+    return (
+      <StyledPanelContainer>
+        <YouTubeVideo {...video} />
+      </StyledPanelContainer>
+    );
+
+  if (photos)
+    return (
+      <StyledPanelContainer>
+        <PhotoGrid photos={photos} />
+      </StyledPanelContainer>
+    );
+
   if (details) {
     return (
       <StyledOl>
