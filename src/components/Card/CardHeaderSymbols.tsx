@@ -10,13 +10,12 @@ export const CardHeaderSymbols: FC<ICardHeader> = ({
   panelExists,
   panelVisible
 }) => {
-  if (!(symbols && symbols.length)) return null;
-
   return (
     <CardSymbolsContainer>
-      {symbols.map((symbol: ISymbol, index: number) => (
-        <Symbol key={index} {...symbol} />
-      ))}
+      {symbols &&
+        symbols.map((symbol: ISymbol, index: number) => (
+          <Symbol key={index} {...symbol} />
+        ))}
 
       {panelExists && (
         <StyledArrowContainer>
