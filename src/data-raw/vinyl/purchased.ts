@@ -21,7 +21,7 @@ const {
 export const LISSIE_CATCHING_A_TIGER: IVinyl = {
   musician: MUSICIANS.LISSIE,
   photo: PHOTOS.ALBUM_ARTWORK.LISSIE_CATCHING_A_TIGER,
-  appleMusicId: "catching-a-tiger/372594767",
+  appleMusicId: "catching-a-tiger/1517705755",
   title: "Catching a Tiger",
   year: 2010,
   sides: 2,
