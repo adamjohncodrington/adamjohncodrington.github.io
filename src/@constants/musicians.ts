@@ -10,6 +10,10 @@ export const GALLANT: IMusician = {
   name: "Gallant",
   excludeFromBucketList: true
 };
+export const MOSIMANN: IMusician = {
+  name: "Mosimann",
+  excludeFromBucketList: true
+};
 export const ASAP_ROCKY: IMusician = {
   name: "A$AP Rocky",
   excludeFromBucketList: true

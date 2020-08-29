@@ -11,6 +11,15 @@ import { EXOTICA_HACKNEY } from "@constants/pole-studios";
 const { LAETITIA, VERONICA, SARAH_ELLIOTT, MEL, MARINE } = INSTRUCTORS;
 const { EXOTICA_BERMONDSEY, DAN_LEA_STUDIO, TIGRA_GST } = STUDIOS;
 
+export const MOSIMANN_2_YOUNG: IPoleRoutine = {
+  studio: EXOTICA_HACKNEY,
+  date: new Date("2020-08-29"),
+  category: "exotic-class",
+  song: SONGS.MOSIMANN_2_YOUNG,
+  choreographer: VERONICA,
+  video: { youtubeId: "Mb76odkQa_o", ...PORTRAIT_1080P }
+};
+
 export const JAMES_BLAKE_ARE_YOU_EVEN_REAL: IPoleRoutine = {
   studio: DAN_LEA_STUDIO,
   date: new Date("2020-07-27"),

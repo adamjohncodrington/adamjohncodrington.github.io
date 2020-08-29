@@ -12,6 +12,12 @@ export const MOTORHEAD_HELLRAISER: ISong = {
   year: 1992
 };
 
+export const MOSIMANN_2_YOUNG: ISong = {
+  musician: MUSICIANS.MOSIMANN,
+  title: "2 Young",
+  year: 2020
+};
+
 export const ELLIE_GOULDING_START: ISong = {
   musician: MUSICIANS.ELLIE_GOULDING,
   title: "Start",
