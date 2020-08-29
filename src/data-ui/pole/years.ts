@@ -5,6 +5,7 @@ import { mapPoleRoutinesToCards, mapPoleTricksVideosToCards } from "./utils";
 
 const all: ICard[] = sortCards([
   ...mapPoleTricksVideosToCards(POLE_TRICKS_VIDEOS, {
+    addIndex: false,
     sort: "asc",
     showCategorySymbol: true
   }),

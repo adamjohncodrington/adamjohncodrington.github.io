@@ -32,31 +32,46 @@ export const mapPoleRoutinesToCards = (
   );
 };
 
+interface IOptionsExtended extends IOptions {
+  addIndex: boolean;
+}
+
 export const mapPoleTricksVideosToCards = (
   poleTricksVideos: IPoleTricksVideo[],
-  { sort, showCategorySymbol }: IOptions
+  { sort, showCategorySymbol, addIndex }: IOptionsExtended
 ): ICard[] => {
-  const mapPoleTricksVideoToCard = ({
-    dates: { start, end },
-    instructor,
-    category,
-    studio,
-    video
-  }: IPoleTricksVideo): ICard => ({
-    video,
-    year: start.getFullYear(),
-    sort: [sort === "asc" ? start.valueOf() : -start.valueOf()],
-    symbols: getSymbols({
-      company: [instructor],
-      poleCategory: showCategorySymbol ? category : undefined
-    }),
-    title: getDatesText([start, end], { hideDay: true }),
-    secondaryBody: studio.name
-  });
-  return poleTricksVideos.map(
-    (poleTricksVideo: IPoleTricksVideo): ICard =>
-      mapPoleTricksVideoToCard(poleTricksVideo)
-  );
+  const mapPoleTricksVideoToCard = (
+    {
+      dates: { start, end },
+      instructor,
+      category,
+      studio,
+      video
+    }: IPoleTricksVideo,
+    index: number
+  ): ICard => {
+    const standardTitle: string = getDatesText([start, end], { hideDay: true });
+
+    return {
+      video,
+      year: start.getFullYear(),
+      sort: [sort === "asc" ? start.valueOf() : -start.valueOf()],
+      symbols: getSymbols({
+        company: [instructor],
+        poleCategory: showCategorySymbol ? category : undefined
+      }),
+      title: addIndex ? `${index}. ${standardTitle}` : standardTitle,
+      secondaryBody: studio.name
+    };
+  };
+  return poleTricksVideos
+    .sort((a: IPoleTricksVideo, b: IPoleTricksVideo): number =>
+      a.dates.start > b.dates.start ? 1 : -1
+    )
+    .map(
+      (poleTricksVideo: IPoleTricksVideo, index: number): ICard =>
+        mapPoleTricksVideoToCard(poleTricksVideo, index + 1)
+    );
 };
 
 export const mapPoleRoutineToMiniCardDetail = ({

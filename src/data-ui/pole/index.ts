@@ -41,7 +41,8 @@ export const POLE = {
   SONGS: filterMiniCards(SONGS),
   STUDIOS: filterMiniCards(STUDIOS),
   TRICKS: mapPoleTricksVideosToCards(POLE_TRICKS_VIDEOS, {
-    sort: "desc",
+    addIndex: true,
+    sort: "asc",
     showCategorySymbol: false
   }),
   YEARS
