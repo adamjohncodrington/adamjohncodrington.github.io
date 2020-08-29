@@ -2,7 +2,7 @@ import { MUSICIANS, RETAILERS, FRIENDS } from "@constants";
 import { PHOTOS } from "resources";
 import { COLORS } from "styles";
 
-const { BLACK, PINK, CLEAR } = COLORS;
+const { BLACK, CLEAR } = COLORS;
 const {
   NORMAN_ONLINE,
   JUNO_ONLINE,
@@ -17,6 +17,21 @@ const {
   ROUGH_TRADE_NOTTINGHAM,
   FAT_POSSUM
 } = RETAILERS;
+
+export const CARLY_RAE_JEPSEN_EMOTION: IVinyl = {
+  musician: MUSICIANS.CARLY_RAE_JEPSEN,
+  photo: PHOTOS.ALBUM_ARTWORK.CARLY_RAE_JEPSEN_EMOTION,
+  appleMusicId: "e-mo-tion/1442688656",
+  title: "E•MO•TION",
+  year: 2015,
+  sides: 2,
+  inches: 12,
+  signed: true,
+  colors: [COLORS.VINYL.CARLY_RAE_JEPSEN_EMOTION_PINK],
+  arrived: false,
+  costExcDelivery: 19.99,
+  retailer: MUSICIAN_WEB_STORE
+};
 
 export const LISSIE_CATCHING_A_TIGER: IVinyl = {
   musician: MUSICIANS.LISSIE,
@@ -41,7 +56,7 @@ export const TAYLOR_SWIFT_FOLKLORE: IVinyl = {
   appleMusicId: "folklore-deluxe-version/1528112358",
   year: 2020,
   arrived: false,
-  colors: [COLORS.VINYL.TAYLOR_SWIFT_FOLKLORE],
+  colors: [COLORS.VINYL.TAYLOR_SWIFT_FOLKLORE_TEAL],
   inches: 12,
   sides: 4,
   photo: PHOTOS.ALBUM_ARTWORK.TAYLOR_SWIFT_FOLKLORE,
@@ -57,7 +72,7 @@ export const TROYE_SIVAN_IN_A_DREAM: IVinyl = {
   costExcDelivery: 21.99,
   retailer: MUSICIAN_WEB_STORE,
   arrived: false,
-  colors: COLORS.VINYL.TROYE_SIVAN_IN_A_DREAM,
+  colors: COLORS.VINYL.TROYE_SIVAN_IN_A_DREAM_BLUE_MIST,
   sides: 2,
   signed: true,
   //TODO: verify that it is 10" not 12"
@@ -74,7 +89,7 @@ export const CHARLI_XCX_HOW_IM_FEELING_NOW: IVinyl = {
   inches: 12,
   sides: 2,
   arrived: false,
-  colors: [COLORS.VINYL.CHARLI_XCX_HOW_IM_FEELING_NOW],
+  colors: [COLORS.VINYL.CHARLI_XCX_HOW_IM_FEELING_NOW_ORANGE],
   photo: PHOTOS.ALBUM_ARTWORK.CHARLI_XCX_HOW_IM_FEELING_NOW,
   appleMusicId: "how-im-feeling-now/1513162098"
 };
@@ -206,7 +221,6 @@ export const LANA_BORN_TO_DIE: IVinyl = {
   arrived: true,
   colors: [BLACK],
   sides: 4,
-  //TODO: verify this cost
   costExcDelivery: 25.99,
   retailer: ROUGH_TRADE_EAST,
   inches: 12,
@@ -318,7 +332,7 @@ export const MUNA_ABOUT_U: IVinyl = {
   inches: 12,
   signed: false,
   arrived: true,
-  colors: [PINK],
+  colors: [COLORS.VINYL.MUNA_ABOUT_U_PINK],
   photo: PHOTOS.ALBUM_ARTWORK.MUNA_ABOUT_U,
   appleMusicId: "about-u/1171832662",
   year: 2017
@@ -352,21 +366,6 @@ export const _1975_BRIEF_INQUIRY: IVinyl = {
   signed: false,
   arrived: true,
   colors: [COLORS.CLEAR]
-};
-
-export const ALLIE_X_SUPER_SUNSET: IVinyl = {
-  musician: MUSICIANS.ALLIE_X,
-  retailer: MUSICIAN_WEB_STORE,
-  costExcDelivery: 20,
-  title: "Super Sunset",
-  arrived: true,
-  colors: [COLORS.VINYL.ALLIE_X_SUPER_SUNSET],
-  photo: PHOTOS.ALBUM_ARTWORK.ALLIE_X_SUPER_SUNSET,
-  appleMusicId: "super-sunset/1421851140",
-  year: 2018,
-  inches: 10,
-  sides: 2,
-  signed: true
 };
 
 export const BANKS_III: IVinyl = {
@@ -456,7 +455,7 @@ export const KIM_PETRAS_CLARITY: IVinyl = {
   signed: false,
   inches: 12,
   sides: 2,
-  arrived: false,
+  arrived: true,
   colors: [COLORS.VINYL.PHOTO],
   appleMusicId: "clarity/1469298192"
 };
@@ -484,7 +483,7 @@ export const HAIM_WIMPIII: IVinyl = {
   appleMusicId: "women-in-music-pt-iii/1500020581",
   year: 2020,
   arrived: true,
-  colors: [COLORS.VINYL.HAIM_WIMPIII],
+  colors: [COLORS.VINYL.HAIM_WIMPIII_RED],
   inches: 12,
   sides: 4,
   photo: PHOTOS.ALBUM_ARTWORK.HAIM_WIMPIII,
@@ -519,4 +518,19 @@ export const BANKS_ALTAR: IVinyl = {
   sides: 2,
   inches: 12,
   year: 2016
+};
+
+export const ALLIE_X_SUPER_SUNSET: IVinyl = {
+  musician: MUSICIANS.ALLIE_X,
+  retailer: MUSICIAN_WEB_STORE,
+  costExcDelivery: 20,
+  title: "Super Sunset",
+  arrived: true,
+  colors: [COLORS.VINYL.ALLIE_X_SUPER_SUNSET_YELLOW],
+  photo: PHOTOS.ALBUM_ARTWORK.ALLIE_X_SUPER_SUNSET,
+  appleMusicId: "super-sunset/1421851140",
+  year: 2018,
+  inches: 10,
+  sides: 2,
+  signed: true
 };

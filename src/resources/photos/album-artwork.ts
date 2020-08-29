@@ -14,6 +14,9 @@ export const ARCTIC_MONKEYS_FAVOURITE_WORST_NIGHTMARE: IAlbumPhoto = {
 export const LYKKE_LI_SO_SAD_SO_SEXY: IAlbumPhoto = {
   freeimagehostId: "dIuyCb.jpg"
 };
+export const CARLY_RAE_JEPSEN_EMOTION: IAlbumPhoto = {
+  freeimagehostId: "dPvgP2.jpg"
+};
 export const LEON_APART: IAlbumPhoto = {
   freeimagehostId: "d1sJQ2.jpg"
 };
