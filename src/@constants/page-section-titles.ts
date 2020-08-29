@@ -23,10 +23,10 @@ export const VENUES: string = "Venues";
 export const CONTEMPORARY: string = "Contemporary";
 export const EXOTIC: string = "Exotic";
 export const INSTRUCTORS: string = "Instructors";
-export const IMPROVISATION: string = "Improvisation";
+export const IMPROVISATION: string = "Freestyle";
 export const SHOWCASE: string = "Showcase";
-export const TRICKS: string = "Tricks & Combos";
-export const QUARANTINE: string = "Non-Pole";
+export const TRICKS: string = "Tricks";
+export const QUARANTINE: string = "Quarantine";
 export const STUDIOS: string = "Studios";
 
 // Recipes

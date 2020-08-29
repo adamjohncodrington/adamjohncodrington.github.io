@@ -36,10 +36,10 @@ const getStudioDetails = (studio: IPoleStudio): IMiniCardPanelDetail[] => [
 
 export const STUDIOS: IMiniCard[] = Object.values(studios).map(
   (studio: IPoleStudio): IMiniCard => {
-    const { name, branch } = studio;
+    const { name, shortName, branch } = studio;
     const details: IMiniCardPanelDetail[] = getStudioDetails(studio);
     return {
-      primaryText: name,
+      primaryText: shortName || name,
       primaryTextAlt: branch,
       sort: [name, branch],
       primaryCount: details.length,

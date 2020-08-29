@@ -1,12 +1,15 @@
-const exotica: string = "Exotica Pole & Dance School";
+const EXOTICA = {
+  name: "Exotica Pole & Dance School",
+  shortName: "Exotica"
+};
 
 export const EXOTICA_BERMONDSEY: IPoleStudio = {
-  name: exotica,
+  ...EXOTICA,
   branch: "Bermondsey"
 };
 
 export const EXOTICA_HACKNEY: IPoleStudio = {
-  name: exotica,
+  ...EXOTICA,
   branch: "Hackney Wick"
 };
 
@@ -22,6 +25,7 @@ export const DAN_LEA_STUDIO: IPoleStudio = {
 
 export const MY_GRAVITY: IPoleStudio = {
   name: "My Gravity Fitness & Dance",
+  shortName: "My Gravity",
   branch: "Hendon"
 };
 

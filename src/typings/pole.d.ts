@@ -10,6 +10,7 @@ type IPoleCategory =
   | "tricks";
 
 interface IPoleStudio extends ILocation {
+  shortName?: string;
   branch?: string;
 }
 
