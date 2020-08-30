@@ -58,6 +58,7 @@ export const THAILAND_LAOS: ITrip = [
 export const PARIS_2015: ITrip = [
   {
     primaryLocations: [COUNTRIES.FRANCE.cities.PARIS],
+    photos: PHOTOS.TRAVEL.PARIS_2015,
     country: COUNTRIES.FRANCE,
     secondaryLocations: [
       COUNTRIES.FRANCE.attractions.SACRE_COEUR,
@@ -83,6 +84,7 @@ export const UGANDA: ITrip = [
   {
     primaryLocations: [COUNTRIES.UGANDA.cities.JINJA],
     country: COUNTRIES.UGANDA,
+    photos: PHOTOS.TRAVEL.UGANDA,
     video: VIDEOS.TRAVEL.UGANDA,
     showCountryAsTitle: true,
     secondaryLocations: [
@@ -111,6 +113,7 @@ export const INTERRAILING: ITrip = [
   {
     primaryLocations: [COUNTRIES.GERMANY.cities.BERLIN],
     favourite: true,
+    photos: PHOTOS.TRAVEL.BERLIN,
     country: COUNTRIES.GERMANY,
     secondaryLocations: [
       COUNTRIES.GERMANY.attractions.BERLIN_WALL,
@@ -125,6 +128,7 @@ export const INTERRAILING: ITrip = [
   {
     primaryLocations: [COUNTRIES.CZECH_REPUBLIC.cities.PRAGUE],
     country: COUNTRIES.CZECH_REPUBLIC,
+    photos: PHOTOS.TRAVEL.PRAGUE,
     secondaryLocations: [
       COUNTRIES.CZECH_REPUBLIC.attractions.JOHN_LENNON_WALL,
       COUNTRIES.CZECH_REPUBLIC.attractions.VYSEHRAD
@@ -135,6 +139,7 @@ export const INTERRAILING: ITrip = [
   {
     primaryLocations: [COUNTRIES.POLAND.cities.KRAKOW],
     country: COUNTRIES.POLAND,
+    photos: PHOTOS.TRAVEL.KRAKOW,
     secondaryLocations: [
       COUNTRIES.POLAND.towns.WIELICZKA,
       COUNTRIES.POLAND.attractions.WIELICZKA_SALT_MINE,

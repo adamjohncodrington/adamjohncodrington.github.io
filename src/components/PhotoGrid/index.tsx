@@ -27,7 +27,8 @@ export const PhotoGrid: FC<IPhotoGrid> = props => {
   const { photos } = props;
 
   const validPhotos: IPhoto[] = photos.filter(
-    ({ hide }: IPhoto): boolean => !hide
+    ({ freeimagehostId, hide }: IPhoto): boolean =>
+      !hide && freeimagehostId !== ""
   );
   const validPhotoCount: number = validPhotos.length;
 

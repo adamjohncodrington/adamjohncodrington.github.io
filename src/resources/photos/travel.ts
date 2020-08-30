@@ -79,3 +79,50 @@ export const COPENHAGEN: IPhoto[] = [
   { freeimagehostId: "d1sDMB.jpg" },
   { freeimagehostId: "d1spF1.jpg" }
 ];
+
+export const BERLIN: IPhoto[] = [
+  { freeimagehostId: "diR8a1", title: "East Side Gallery with Sian" },
+  { freeimagehostId: "diRS8F", title: "East Side Gallery solo", hide: true },
+  { freeimagehostId: "diROGV", title: "Holocaust Memorial" },
+  { freeimagehostId: "diRe6B", title: "Prenzlauer Berg flower shop" },
+  { freeimagehostId: "diRv3P", title: "Fat Tire bike tour" }
+];
+
+export const KRAKOW: IPhoto[] = [
+  { freeimagehostId: "diRUyg", title: "town square" },
+  { freeimagehostId: "diRrua", title: "Wieliczka salt mine" },
+  { freeimagehostId: "diR4wJ", title: "market paintings" },
+  { freeimagehostId: "diR6Zv", title: "Auschwitz-Birkenau museum" }
+];
+
+export const PARIS_2015: IPhoto[] = [
+  { freeimagehostId: "diRinR", title: "Sacré-Cœur" },
+  { freeimagehostId: "diRsGp", title: "skyline" },
+  { freeimagehostId: "diRZFI", title: "Notre-Dame" },
+  { freeimagehostId: "diRL6N", title: "Eiffel Tower" },
+  { freeimagehostId: "diRtat", title: "Louvre" }
+];
+
+export const PRAGUE: IPhoto[] = [
+  { freeimagehostId: "diRD8X", title: "Dancing House" },
+  { freeimagehostId: "diRm9n", title: "Vyšehrad building" },
+  { freeimagehostId: "diRpus", title: "Vyšehrad viewpoint with Sian" },
+  { freeimagehostId: "diRywG", title: "John Lennon Wall with Sian" },
+  { freeimagehostId: "di59tf", title: "Széchenyi Thermal Bath" }
+];
+
+export const UGANDA: IPhoto[] = [
+  { freeimagehostId: "di5dMl", title: "Nile River rafting" },
+  { freeimagehostId: "di5Jn4", title: "island viewpoint" },
+  { freeimagehostId: "di52P2", title: "boat tour" },
+  { freeimagehostId: "di5FFS", title: "mini-bus" },
+  { freeimagehostId: "di5Kc7", title: "guesthouse" },
+  { freeimagehostId: "di5fS9", title: "with students" }
+];
+
+// const TEMPLATE: IPhoto[] = [
+//   { freeimagehostId: "", title: "A" },
+//   { freeimagehostId: "", title: "B" },
+//   { freeimagehostId: "", title: "C" },
+//   { freeimagehostId: "", title: "D" }
+// ];
