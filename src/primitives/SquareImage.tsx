@@ -36,20 +36,13 @@ export const SquareImage = ({
   dataTest,
   photo: { freeimagehostId, title },
   size
-}: ISquareImage) => {
-  const FREE_IMAGE_HOST_URL_SUFFIX: string =
-    freeimagehostId.slice(-4) !== ".jpg"
-      ? freeimagehostId + ".jpg"
-      : freeimagehostId;
-
-  return (
-    <StyledImage
-      className={className}
-      circle={circle}
-      title={title}
-      data-test={dataTest}
-      src={FREE_IMAGE_HOST_URL_PREFIX + FREE_IMAGE_HOST_URL_SUFFIX}
-      size={size}
-    />
-  );
-};
+}: ISquareImage) => (
+  <StyledImage
+    className={className}
+    circle={circle}
+    title={title}
+    data-test={dataTest}
+    src={FREE_IMAGE_HOST_URL_PREFIX + freeimagehostId + ".jpg"}
+    size={size}
+  />
+);

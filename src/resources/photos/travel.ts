@@ -1,83 +1,83 @@
 export const OSLO: IPhoto[] = [
-  { freeimagehostId: "dfVcib.jpg" },
-  { freeimagehostId: "dfVEUQ.jpg" },
-  { freeimagehostId: "dfV10x.jpg" },
-  { freeimagehostId: "dfV0fj.jpg" }
+  { freeimagehostId: "dfVcib" },
+  { freeimagehostId: "dfVEUQ" },
+  { freeimagehostId: "dfV10x" },
+  { freeimagehostId: "dfV0fj" }
 ];
 
 export const LISBON: IPhoto[] = [
-  { freeimagehostId: "dfMaFR.jpg" },
-  { freeimagehostId: "dfM19I.jpg" },
-  { freeimagehostId: "dfMcap.jpg" },
-  { freeimagehostId: "dfMl8N.jpg" }
+  { freeimagehostId: "dfMaFR" },
+  { freeimagehostId: "dfM19I" },
+  { freeimagehostId: "dfMcap" },
+  { freeimagehostId: "dfMl8N" }
 ];
 
 export const AMSTERDAM: IPhoto[] = [
-  { freeimagehostId: "dfMWns.jpg" },
-  { freeimagehostId: "dfMMtn.jpg" },
-  { freeimagehostId: "dfMGwX.jpg" },
-  { freeimagehostId: "dfMXMG.jpg" }
+  { freeimagehostId: "dfMWns" },
+  { freeimagehostId: "dfMMtn" },
+  { freeimagehostId: "dfMGwX" },
+  { freeimagehostId: "dfMXMG" }
 ];
 
 export const NICE: IPhoto[] = [
-  { freeimagehostId: "dfVfDX.jpg" },
-  { freeimagehostId: "dfVBxn.jpg" },
-  { freeimagehostId: "dfVKNt.jpg" },
-  { freeimagehostId: "dfVFRI.jpg" }
+  { freeimagehostId: "dfVfDX" },
+  { freeimagehostId: "dfVBxn" },
+  { freeimagehostId: "dfVKNt" },
+  { freeimagehostId: "dfVFRI" }
 ];
 
 export const BRUGES: IPhoto[] = [
-  { freeimagehostId: "dfM4Pj.jpg" },
-  { freeimagehostId: "dfMrMb.jpg" },
-  { freeimagehostId: "dfMPKx.jpg" },
-  { freeimagehostId: "dfMicQ.jpg" }
+  { freeimagehostId: "dfM4Pj" },
+  { freeimagehostId: "dfMrMb" },
+  { freeimagehostId: "dfMPKx" },
+  { freeimagehostId: "dfMicQ" }
 ];
 
 export const CATANIA: IPhoto[] = [
-  { freeimagehostId: "dfjzQ9.jpg" },
-  { freeimagehostId: "dfjuEu.jpg" },
-  { freeimagehostId: "dfjxh7.jpg" },
-  { freeimagehostId: "dfjTBe.jpg" }
+  { freeimagehostId: "dfjzQ9" },
+  { freeimagehostId: "dfjuEu" },
+  { freeimagehostId: "dfjxh7" },
+  { freeimagehostId: "dfjTBe" }
 ];
 
 export const PERU: IPhoto[] = [
-  { freeimagehostId: "dC3yCJ.jpg" },
-  { freeimagehostId: "dCF9Ev.jpg" },
-  { freeimagehostId: "dC3mQa.jpg" },
-  { freeimagehostId: "dCFH4R.jpg" }
+  { freeimagehostId: "dC3yCJ" },
+  { freeimagehostId: "dCF9Ev" },
+  { freeimagehostId: "dC3mQa" },
+  { freeimagehostId: "dCFH4R" }
 ];
 
 export const ECUADOR: IPhoto[] = [
-  { freeimagehostId: "d7wmhB.jpg" },
-  { freeimagehostId: "d7wpLP.jpg" },
-  { freeimagehostId: "d7N9B1.jpg" },
-  { freeimagehostId: "d7wbIV.jpg" }
+  { freeimagehostId: "d7wmhB" },
+  { freeimagehostId: "d7wpLP" },
+  { freeimagehostId: "d7N9B1" },
+  { freeimagehostId: "d7wbIV" }
 ];
 
 export const GRONINGEN: IPhoto[] = [
-  { freeimagehostId: "d1L2wv.jpg" },
-  { freeimagehostId: "d1L3tR.jpg" }
+  { freeimagehostId: "d1L2wv" },
+  { freeimagehostId: "d1L3tR" }
 ];
 
 export const DUBROVNIK: IPhoto[] = [
-  { freeimagehostId: "d1L98g.jpg" },
-  { freeimagehostId: "d1LJ9a.jpg" },
-  { freeimagehostId: "d1LdAJ.jpg" },
-  { freeimagehostId: "d1LKnp.jpg" }
+  { freeimagehostId: "d1L98g" },
+  { freeimagehostId: "d1LJ9a" },
+  { freeimagehostId: "d1LdAJ" },
+  { freeimagehostId: "d1LKnp" }
 ];
 
 export const PAPHOS: IPhoto[] = [
-  { freeimagehostId: "d1LfMN.jpg" },
-  { freeimagehostId: "d1LqPI.jpg" },
-  { freeimagehostId: "d1LncX.jpg" },
-  { freeimagehostId: "d1LCFt.jpg" }
+  { freeimagehostId: "d1LfMN" },
+  { freeimagehostId: "d1LqPI" },
+  { freeimagehostId: "d1LncX" },
+  { freeimagehostId: "d1LCFt" }
 ];
 
 export const COPENHAGEN: IPhoto[] = [
-  { freeimagehostId: "d1sycF.jpg" },
-  { freeimagehostId: "d1sb6P.jpg" },
-  { freeimagehostId: "d1sDMB.jpg" },
-  { freeimagehostId: "d1spF1.jpg" }
+  { freeimagehostId: "d1sycF" },
+  { freeimagehostId: "d1sb6P" },
+  { freeimagehostId: "d1sDMB" },
+  { freeimagehostId: "d1spF1" }
 ];
 
 export const BERLIN: IPhoto[] = [

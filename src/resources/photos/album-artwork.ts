@@ -1,129 +1,129 @@
 export const _1975_BRIEF_INQUIRY: IAlbumPhoto = {
-  freeimagehostId: "dfNYzB.jpg"
+  freeimagehostId: "dfNYzB"
 };
-export const ADELE_19: IAlbumPhoto = { freeimagehostId: "dfNcs1.jpg" };
+export const ADELE_19: IAlbumPhoto = { freeimagehostId: "dfNcs1" };
 export const ALLIE_X_SUPER_SUNSET: IAlbumPhoto = {
-  freeimagehostId: "dfN0qF.jpg"
+  freeimagehostId: "dfN0qF"
 };
 export const AMY_WINEHOUSE_BACK_TO_BLACK: IAlbumPhoto = {
-  freeimagehostId: "dfNaWP.jpg"
+  freeimagehostId: "dfNaWP"
 };
 export const ARCTIC_MONKEYS_FAVOURITE_WORST_NIGHTMARE: IAlbumPhoto = {
-  freeimagehostId: "dfN10g.jpg"
+  freeimagehostId: "dfN10g"
 };
 export const LYKKE_LI_SO_SAD_SO_SEXY: IAlbumPhoto = {
-  freeimagehostId: "dIuyCb.jpg"
+  freeimagehostId: "dIuyCb"
 };
 export const CARLY_RAE_JEPSEN_EMOTION: IAlbumPhoto = {
-  freeimagehostId: "dPvgP2.jpg"
+  freeimagehostId: "dPvgP2"
 };
 export const LEON_APART: IAlbumPhoto = {
-  freeimagehostId: "d1sJQ2.jpg"
+  freeimagehostId: "d1sJQ2"
 };
 export const TAYLOR_SWIFT_FOLKLORE: IAlbumPhoto = {
-  freeimagehostId: "dIumZu.jpg"
+  freeimagehostId: "dIumZu"
 };
 export const ArianaGrande_TUN: IAlbumPhoto = {
-  freeimagehostId: "dfNEga.jpg"
+  freeimagehostId: "dfNEga"
 };
-export const BANKS_III: IAlbumPhoto = { freeimagehostId: "dfNMdJ.jpg" };
+export const BANKS_III: IAlbumPhoto = { freeimagehostId: "dfNMdJ" };
 export const BEN_HOWARD_EVERY_KINGDOM: IAlbumPhoto = {
-  freeimagehostId: "dfNV5v.jpg"
+  freeimagehostId: "dfNV5v"
 };
 export const BEYONCE_LEMONADE: IAlbumPhoto = {
-  freeimagehostId: "dfNWeR.jpg"
+  freeimagehostId: "dfNWeR"
 };
 export const CARIBOU_OUR_LOVE: IAlbumPhoto = {
-  freeimagehostId: "dfNXbp.jpg"
+  freeimagehostId: "dfNXbp"
 };
 export const CAROLINE_POLACHEK_PANG: IAlbumPhoto = {
-  freeimagehostId: "dfNjzN.jpg"
+  freeimagehostId: "dfNjzN"
 };
 export const CHARLI_XCX_HOW_IM_FEELING_NOW: IAlbumPhoto = {
-  freeimagehostId: "dfNwXI.jpg"
+  freeimagehostId: "dfNwXI"
 };
 export const DUA_LIPA_FUTURE_NOSTALGIA: IAlbumPhoto = {
-  freeimagehostId: "dfNNst.jpg"
+  freeimagehostId: "dfNNst"
 };
 export const ELLIE_GOULDING_HALCYON: IAlbumPhoto = {
-  freeimagehostId: "dfNeqX.jpg"
+  freeimagehostId: "dfNeqX"
 };
 export const FKA_TWIGS_MAGDALENE: IAlbumPhoto = {
-  freeimagehostId: "dfNk1n.jpg"
+  freeimagehostId: "dfNk1n"
 };
-export const FLORENCE_LUNGS: IAlbumPhoto = { freeimagehostId: "dfNvgs.jpg" };
+export const FLORENCE_LUNGS: IAlbumPhoto = { freeimagehostId: "dfNvgs" };
 export const GEORGE_FITZGERALD_ALL_THAT_MUST_BE: IAlbumPhoto = {
-  freeimagehostId: "dfNSdG.jpg"
+  freeimagehostId: "dfNSdG"
 };
 export const GRIMES_ART_ANGELS: IAlbumPhoto = {
-  freeimagehostId: "dfNU7f.jpg"
+  freeimagehostId: "dfNU7f"
 };
-export const HAIM_WIMPIII: IAlbumPhoto = { freeimagehostId: "dfNge4.jpg" };
+export const HAIM_WIMPIII: IAlbumPhoto = { freeimagehostId: "dfNge4" };
 export const JON_HOPKINS_SINGULARITY: IAlbumPhoto = {
-  freeimagehostId: "dfNrml.jpg"
+  freeimagehostId: "dfNrml"
 };
 export const KATE_NASH_MADE_OF_BRICKS: IAlbumPhoto = {
-  freeimagehostId: "dfN6I2.jpg"
+  freeimagehostId: "dfN6I2"
 };
 export const KATY_PERRY_ONE_OF_THE_BOYS: IAlbumPhoto = {
-  freeimagehostId: "dfNPXS.jpg"
+  freeimagehostId: "dfNPXS"
 };
 
 export const LADY_GAGA_BORN_THIS_WAY: IAlbumPhoto = {
-  freeimagehostId: "dfNLB9.jpg"
+  freeimagehostId: "dfNLB9"
 };
-export const LANA_BORN_TO_DIE: IAlbumPhoto = { freeimagehostId: "dfNQ1e.jpg" };
-export const LANE_8_RISE: IAlbumPhoto = { freeimagehostId: "dfNDdb.jpg" };
+export const LANA_BORN_TO_DIE: IAlbumPhoto = { freeimagehostId: "dfNQ1e" };
+export const LANE_8_RISE: IAlbumPhoto = { freeimagehostId: "dfNDdb" };
 export const LANY_MALIBU_NIGHTS: IAlbumPhoto = {
-  freeimagehostId: "dfNZru.jpg"
+  freeimagehostId: "dfNZru"
 };
 export const LENNON_STELLA_THREE_TWO_ONE: IAlbumPhoto = {
-  freeimagehostId: "dfNb7j.jpg"
+  freeimagehostId: "dfNb7j"
 };
-export const LEON_LEON: IAlbumPhoto = { freeimagehostId: "dfNmkx.jpg" };
+export const LEON_LEON: IAlbumPhoto = { freeimagehostId: "dfNmkx" };
 export const LISSIE_CATCHING_A_TIGER: IAlbumPhoto = {
-  freeimagehostId: "dfNpmQ.jpg"
+  freeimagehostId: "dfNpmQ"
 };
 export const LORDE_PURE_HEROINE: IAlbumPhoto = {
-  freeimagehostId: "dfO9IV.jpg"
+  freeimagehostId: "dfO9IV"
 };
 export const MARINA_ELECTRA_HEART: IAlbumPhoto = {
-  freeimagehostId: "dfOJLP.jpg"
+  freeimagehostId: "dfOJLP"
 };
-export const MUNA_ABOUT_U: IAlbumPhoto = { freeimagehostId: "dfOHhB.jpg" };
+export const MUNA_ABOUT_U: IAlbumPhoto = { freeimagehostId: "dfOHhB" };
 export const NATALIA_KILLS_PERFECTIONIST: IAlbumPhoto = {
-  freeimagehostId: "dfO2B1.jpg"
+  freeimagehostId: "dfO2B1"
 };
 export const PANIC_AT_THE_DISCO_AFYCSO: IAlbumPhoto = {
-  freeimagehostId: "dfO3EF.jpg"
+  freeimagehostId: "dfO3EF"
 };
-export const PARAMORE_RIOT: IAlbumPhoto = { freeimagehostId: "dfOFrg.jpg" };
+export const PARAMORE_RIOT: IAlbumPhoto = { freeimagehostId: "dfOFrg" };
 export const PVRIS_AWKOHAWNOH: IAlbumPhoto = {
-  freeimagehostId: "dfOf2a.jpg"
+  freeimagehostId: "dfOf2a"
 };
-export const RIHANNA_RATED_R: IAlbumPhoto = { freeimagehostId: "dfOqYJ.jpg" };
-export const RYN_WEAVER_FOOL: IAlbumPhoto = { freeimagehostId: "dfOBkv.jpg" };
-export const SOPHIE_OOEPUI: IAlbumPhoto = { freeimagehostId: "dfOCpR.jpg" };
+export const RIHANNA_RATED_R: IAlbumPhoto = { freeimagehostId: "dfOqYJ" };
+export const RYN_WEAVER_FOOL: IAlbumPhoto = { freeimagehostId: "dfOBkv" };
+export const SOPHIE_OOEPUI: IAlbumPhoto = { freeimagehostId: "dfOCpR" };
 export const SUFJAN_STEVENS_CARRIE_LOWELL: IAlbumPhoto = {
-  freeimagehostId: "dfOoIp.jpg"
+  freeimagehostId: "dfOoIp"
 };
 export const TAYLOR_SWIFT_1989: IAlbumPhoto = {
-  freeimagehostId: "dfOxhN.jpg"
+  freeimagehostId: "dfOxhN"
 };
-export const TOURIST_U: IAlbumPhoto = { freeimagehostId: "dfOzQI.jpg" };
+export const TOURIST_U: IAlbumPhoto = { freeimagehostId: "dfOzQI" };
 export const TROYE_SIVAN_IN_A_DREAM: IAlbumPhoto = {
-  freeimagehostId: "dfOTBt.jpg"
+  freeimagehostId: "dfOTBt"
 };
 
-export const BANKS_ALTAR: IAlbumPhoto = { freeimagehostId: "dA3xBS.jpg" };
+export const BANKS_ALTAR: IAlbumPhoto = { freeimagehostId: "dA3xBS" };
 export const LADY_GAGA_FAME_MONSTER: IAlbumPhoto = {
-  freeimagehostId: "dA3zE7.jpg",
-  discPhoto: { freeimagehostId: "d5qzoG.jpg" }
+  freeimagehostId: "dA3zE7",
+  discPhoto: { freeimagehostId: "d5qzoG" }
 };
 export const KIM_PETRAS_CLARITY: IAlbumPhoto = {
-  freeimagehostId: "dfNiL7.jpg",
-  discPhoto: { freeimagehostId: "d5qnNn.jpg" }
+  freeimagehostId: "dfNiL7",
+  discPhoto: { freeimagehostId: "d5qnNn" }
 };
 export const CHRISTINE_AND_THE_QUEENS_LA_VITA_NUOVA: IAlbumPhoto = {
-  freeimagehostId: "d7Ezrl.jpg"
+  freeimagehostId: "d7Ezrl"
 };
