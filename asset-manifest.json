@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.js": "/static/js/main.5515c53c.chunk.js",
-    "main.js.map": "/static/js/main.5515c53c.chunk.js.map",
+    "main.js": "/static/js/main.f51dc592.chunk.js",
+    "main.js.map": "/static/js/main.f51dc592.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.27f1f56c.js",
     "runtime-main.js.map": "/static/js/runtime-main.27f1f56c.js.map",
     "static/js/2.a17b8b95.chunk.js": "/static/js/2.a17b8b95.chunk.js",
     "static/js/2.a17b8b95.chunk.js.map": "/static/js/2.a17b8b95.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.73131cc892276d81471da3f7d9cb3f7f.js": "/precache-manifest.73131cc892276d81471da3f7d9cb3f7f.js",
+    "precache-manifest.523f304d5efcb330c333c5f82c38c9b3.js": "/precache-manifest.523f304d5efcb330c333c5f82c38c9b3.js",
     "service-worker.js": "/service-worker.js",
     "static/js/2.a17b8b95.chunk.js.LICENSE.txt": "/static/js/2.a17b8b95.chunk.js.LICENSE.txt",
     "static/media/arrow-down.7da2026c.svg": "/static/media/arrow-down.7da2026c.svg",
@@ -65,6 +65,6 @@
   "entrypoints": [
     "static/js/runtime-main.27f1f56c.js",
     "static/js/2.a17b8b95.chunk.js",
-    "static/js/main.5515c53c.chunk.js"
+    "static/js/main.f51dc592.chunk.js"
   ]
 }
