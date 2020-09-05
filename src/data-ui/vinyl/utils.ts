@@ -14,10 +14,20 @@ interface IOptions {
   showGiftFrom?: boolean;
 }
 
-export const mapAlbumToPhoto = ({ photo, appleMusicId }: IAlbum): IPhoto => ({
-  ...photo,
-  href: APPLE_MUSIC_URL_PREFIX + appleMusicId
-});
+const getAlbumPhotoTitle = ({ musician, year, title }: IAlbum): string => {
+  return `${moveTheSuffixToPrefix(
+    getMusicianStageNameAtTime({ musician, year })
+  )} • ${title}`;
+};
+
+export const mapAlbumToPhoto = (album: IAlbum): IPhoto => {
+  const { photo, appleMusicId } = album;
+  return {
+    ...photo,
+    href: APPLE_MUSIC_URL_PREFIX + appleMusicId,
+    title: getAlbumPhotoTitle(album)
+  };
+};
 
 const mapAlbumToCard = (album: IAlbum, options?: IOptions): ICard => {
   const { title, musician, year } = album;
@@ -74,7 +84,6 @@ export const mapVinylsToMiniCardPanelDetails = (
     year,
     musician,
     title,
-    photo,
     costExcDelivery,
     appleMusicId
   }: IVinyl): IMiniCardPanelDetail => {

@@ -5,6 +5,7 @@ import {
   MUSIC_VENUES,
   TICKET_TYPES
 } from "@constants";
+import { PHOTOS } from "resources";
 
 export const DECAYDANCE: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.DECAYDANCE,
@@ -348,6 +349,7 @@ export const HOMOBLOC: IFestivalWithoutVideo = {
 export const AREA_10_NYE: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.AREA_10_NYE,
   lineup: [[MUSICIANS.MK]],
+  photos: PHOTOS.GIGS.MK_AREA_10_NYE,
   venue: MUSIC_VENUES.BRIXTON_ACADEMY,
   dates: [new Date("2019-12-31")],
   company: [

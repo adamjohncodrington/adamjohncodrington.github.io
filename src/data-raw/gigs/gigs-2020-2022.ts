@@ -5,7 +5,7 @@ import {
   TICKET_TYPES,
   MUSIC_VENUES
 } from "@constants";
-import { VIDEOS } from "resources";
+import { VIDEOS, PHOTOS } from "resources";
 
 const {
   JERRY_EDWARDS,
@@ -46,6 +46,7 @@ export const GRACEY: IGig = {
 export const CHRISTINE_AND_THE_QUEENS_2020: IGig = {
   headline: MUSICIANS.CHRISTINE_AND_THE_QUEENS,
   venue: MUSIC_VENUES.MOTH_CLUB,
+  photos: PHOTOS.GIGS.CHRISTINE_AND_THE_QUEENS_2020,
   video: VIDEOS.GIGS.CHRISTINE_AND_THE_QUEENS_2020,
   date: DATES.GIGS.CHRISTINE_AND_THE_QUEENS_2020,
   favourite: true,
@@ -55,6 +56,7 @@ export const CHRISTINE_AND_THE_QUEENS_2020: IGig = {
 
 export const JOSEF_SALVAT_2020: IGig = {
   headline: MUSICIANS.JOSEF_SALVAT,
+  photos: PHOTOS.GIGS.JOSEF_SALVAT_2020,
   venue: MUSIC_VENUES.MOTH_CLUB,
   video: VIDEOS.GIGS.JOSEF_SALVAT_2020,
   date: DATES.GIGS.JOSEF_SALVAT_2020,
@@ -73,6 +75,7 @@ export const KIM_PETRAS_2020: IGig = {
 export const NASTY_CHERRY: IGig = {
   headline: MUSICIANS.NASTY_CHERRY,
   venue: MUSIC_VENUES.GARAGE_THE,
+  photos: PHOTOS.GIGS.NASTY_CHERRY_2020,
   date: new Date("2020-03-03"),
   company: [DARREN_TAYLOR, MEGAN_BLACKBURN],
   ticketType: TICKET_TYPES.SEE_TICKETS_PRINT_AT_HOME
@@ -82,6 +85,7 @@ export const CAROLINE_POLACHEK_2020: IGig = {
   headline: MUSICIANS.CAROLINE_POLACHEK,
   video: VIDEOS.GIGS.CAROLINE_POLACHEK_2020,
   support: [MUSICIANS.SEGA_BODEGA],
+  photos: PHOTOS.GIGS.CAROLINE_POLACHEK_2020,
   venue: MUSIC_VENUES.HEAVEN,
   date: DATES.GIGS.CAROLINE_POLACHEK_2020,
   company: [DARREN_TAYLOR],
@@ -91,6 +95,7 @@ export const CAROLINE_POLACHEK_2020: IGig = {
 export const GEORGIA: IGig = {
   headline: MUSICIANS.GEORGIA,
   video: VIDEOS.GIGS.GEORGIA,
+  photos: PHOTOS.GIGS.GEORGIA_2020,
   venue: MUSIC_VENUES.HEAVEN,
   date: DATES.GIGS.GEORGIA,
   company: [DARREN_TAYLOR],
