@@ -43,7 +43,7 @@ export const LISSIE_CATCHING_A_TIGER: IVinyl = {
   inches: 12,
   signed: false,
   colors: [BLACK],
-  arrived: false,
+  arrived: true,
   costExcDelivery: 12.99,
   retailer: FAT_POSSUM
 };
