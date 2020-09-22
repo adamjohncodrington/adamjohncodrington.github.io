@@ -116,8 +116,6 @@ const CSS_REGULAR_CARDS = ({
   > *:last-child {
     padding-bottom: ${cards.lastRegularCard.padding.bottom};
   }
-
-  ${CSS_COMMON}
 `;
 
 export const PageSectionPanelList = styled(

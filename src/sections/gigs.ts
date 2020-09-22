@@ -55,6 +55,18 @@ const UP_NEXT: IPageSection = {
   count: DATA.UP_NEXT.length
 };
 
+const MAYBE: IPageSection = {
+  title: PAGE_SECTION_TITLES.MAYBE,
+  data: { cards: DATA.MAYBE },
+  count: DATA.MAYBE.length
+};
+
+const POSTPONED: IPageSection = {
+  title: PAGE_SECTION_TITLES.POSTPONED,
+  data: { cards: DATA.POSTPONED },
+  count: DATA.POSTPONED.length
+};
+
 const VENUES: IPageSection = {
   SvgIcon: SVG.STADIUM,
   title: PAGE_SECTION_TITLES.VENUES,
@@ -84,6 +96,8 @@ export const GIGS: IPageSection[] = [
   FESTIVALS,
   WITH,
   PHOTOS,
+  MAYBE,
+  POSTPONED,
   SOLO,
   UP_NEXT,
   VENUES,

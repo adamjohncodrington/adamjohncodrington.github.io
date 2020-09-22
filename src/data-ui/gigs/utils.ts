@@ -13,7 +13,12 @@ export const mapMusicEventsToCards = (musicEvents: IMusicEvent[]): ICard[] => {
       ...musicEvent,
       year: dates[0].getFullYear(),
       sort: [dates[0].valueOf()],
-      symbols: getSymbols({ company, photos, video, date: dates[0] }),
+      symbols: getSymbols({
+        company,
+        photos,
+        video,
+        date: dates[0]
+      }),
       body: venue.name,
       secondaryBody: getDatesText(dates),
       disclaimer: isInFuture(dates[0]) ? ticketType : undefined

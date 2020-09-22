@@ -1,6 +1,46 @@
 import { PHOTOS } from "resources";
 import { MUSICIANS } from "@constants";
 
+export const KATY_PERRY_ONE_OF_THE_BOYS: IAlbum = {
+  musician: MUSICIANS.KATY_PERRY,
+  photo: PHOTOS.ALBUM_ARTWORK.KATY_PERRY_ONE_OF_THE_BOYS,
+  title: "One of the Boys",
+  appleMusicId: "one-of-the-boys/715853053",
+  year: 2008
+};
+
+export const SOPHIE_OOEPUI: IAlbum = {
+  musician: MUSICIANS.SOPHIE,
+  title: "Oil of Every Pearl's Un-Insides",
+  photo: PHOTOS.ALBUM_ARTWORK.SOPHIE_OOEPUI,
+  appleMusicId: "oil-of-every-pearls-un-insides/1395045797",
+  year: 2018
+};
+
+export const DUA_LIPA_FUTURE_NOSTALGIA: IAlbum = {
+  musician: MUSICIANS.DUA_LIPA,
+  title: "Future Nostalgia",
+  photo: PHOTOS.ALBUM_ARTWORK.DUA_LIPA_FUTURE_NOSTALGIA,
+  appleMusicId: "future-nostalgia/1495799403",
+  year: 2020
+};
+
+export const CHRISTINE_AND_THE_QUEENS_LA_VITA_NUOVA: IAlbum = {
+  musician: MUSICIANS.CHRISTINE_AND_THE_QUEENS,
+  photo: PHOTOS.ALBUM_ARTWORK.CHRISTINE_AND_THE_QUEENS_LA_VITA_NUOVA,
+  title: "La vita nuova",
+  year: 2020,
+  appleMusicId: "la-vita-nuova-ep/1497744921"
+};
+
+export const TOURIST_U: IAlbum = {
+  musician: MUSICIANS.TOURIST,
+  appleMusicId: "u/1086160489",
+  title: "U",
+  photo: PHOTOS.ALBUM_ARTWORK.TOURIST_U,
+  year: 2016
+};
+
 export const PANIC_AT_THE_DISCO_AFYCSO: IAlbum = {
   musician: MUSICIANS.PANIC_AT_THE_DISCO,
   photo: PHOTOS.ALBUM_ARTWORK.PANIC_AT_THE_DISCO_AFYCSO,

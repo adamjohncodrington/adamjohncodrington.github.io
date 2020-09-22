@@ -1,6 +1,6 @@
 import { MUSIC_EVENTS as DATA } from "data-raw";
 
-import { UP_NEXT } from "./up-next";
+import { UP_NEXT } from "./upcoming";
 
 const totalGigsPastAndPresent: number = DATA.length;
 const totalFutureGigs: number = UP_NEXT.length;

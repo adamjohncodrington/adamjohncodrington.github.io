@@ -1,6 +1,7 @@
 interface IFestivalTitle extends I_Name, I__Insignificant {}
 
 interface IGigOrFestival extends I__Favourite, I_Company {
+  maybe?: boolean;
   photos?: IPhoto[];
   venue: IMusicVenue;
   ticketType?: ITicketType;
@@ -13,11 +14,13 @@ interface IFestivalWithoutVideo extends IGigOrFestival, I_Dates {
 interface IFestivalWithVideo extends IFestivalWithoutVideo, I_Video {}
 interface IFestival extends IFestivalWithoutVideo, I__Video {}
 
-interface IGig extends IGigOrFestival, I_Date {
+interface IGigWithoutDate extends IGigOrFestival {
   headline: IMusician;
   video?: IGigVideo;
   support?: IMusician[];
 }
+
+interface IGig extends IGigWithoutDate, I_Date {}
 
 interface IMusicEvent extends IGigOrFestival, I__Video {
   title: string;
@@ -27,6 +30,10 @@ interface IMusicEvent extends IGigOrFestival, I__Video {
 
   gig?: IGig;
   festival?: IFestival;
+}
+
+interface IMusicEventPostponed extends IMusicEvent {
+  dates: undefined;
 }
 
 interface IMusicVenue extends I_Name, I__Favourite, I__Insignificant {}

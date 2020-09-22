@@ -51,7 +51,7 @@ const THEME_PAGE_SECTION: IThemePageSection = {
     },
     cards: {
       lastRegularCard: { padding: { bottom: "5px" } },
-      padding: { vertical: "10px" }
+      padding: { vertical: "0.5rem" }
     }
   }
 };

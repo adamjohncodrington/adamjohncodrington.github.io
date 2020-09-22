@@ -14,6 +14,8 @@ export const RETAILERS: string = "Retailers";
 export const COST: string = "Cost";
 export const ORDERED: string = "Ordered";
 export const GIFTS: string = "Gifts";
+export const POSTPONED: string = "Postponed";
+export const MAYBE: string = "Maybe";
 
 // Gigs
 export const FESTIVALS: string = "Festivals";
