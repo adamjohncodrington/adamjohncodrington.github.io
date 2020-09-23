@@ -56,9 +56,9 @@ const UP_NEXT: IPageSection = {
 };
 
 const MAYBE: IPageSection = {
+  SvgIcon: SVG.QUESTION_MARK,
   title: PAGE_SECTION_TITLES.MAYBE,
-  data: { cards: DATA.MAYBE },
-  count: DATA.MAYBE.length
+  data: { cards: DATA.MAYBE }
 };
 
 const POSTPONED: IPageSection = {

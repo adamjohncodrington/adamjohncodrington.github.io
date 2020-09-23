@@ -45,6 +45,8 @@ export { ReactComponent as PEN } from "./pen-2.svg";
 export { ReactComponent as PEN_WRITING } from "./pen-writing-1.svg";
 export { ReactComponent as PEOPLE } from "./people.svg";
 export { ReactComponent as POLE_VAULT } from "./pole-vault.svg";
+// Q
+export { ReactComponent as QUESTION_MARK } from "./question-1.svg";
 // R
 export { ReactComponent as ROLLER_COASTER } from "./roller-coaster.svg";
 // S
