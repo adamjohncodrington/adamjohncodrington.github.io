@@ -6,6 +6,10 @@ export const LAETITIA: IPoleInstructor = {
   name: "Laetitia Tigra",
   initials: "LT"
 };
+export const CAROLINA: IPoleInstructor = {
+  name: "Carolina Bateman",
+  initials: "CB"
+};
 export const MARINE: IPoleInstructor = {
   name: "Marine Canaguier",
   initials: "NJ",

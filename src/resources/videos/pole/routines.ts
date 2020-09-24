@@ -8,8 +8,42 @@ import {
 } from "@constants";
 import { EXOTICA_HACKNEY } from "@constants/pole-studios";
 
-const { LAETITIA, VERONICA, SARAH_ELLIOTT, MEL, MARINE } = INSTRUCTORS;
+const {
+  LAETITIA,
+  VERONICA,
+  SARAH_ELLIOTT,
+  MEL,
+  MARINE,
+  CAROLINA
+} = INSTRUCTORS;
 const { EXOTICA_BERMONDSEY, DAN_LEA_STUDIO, TIGRA_GST } = STUDIOS;
+
+export const BANKS_GIMME: IPoleRoutine = {
+  studio: EXOTICA_HACKNEY,
+  date: new Date("2020-09-12"),
+  category: "exotic-class",
+  song: SONGS.BANKS_GIMME,
+  choreographer: MARINE,
+  video: { youtubeId: "NCej4NYDRCY", ...PORTRAIT_1080P }
+};
+
+export const AYANNA_PARTY_TRICKS: IPoleRoutine = {
+  studio: EXOTICA_HACKNEY,
+  date: new Date("2020-09-07"),
+  category: "contemporary-improv",
+  song: SONGS.AYANNA_PARTY_TRICKS,
+  choreographer: ME,
+  video: { youtubeId: "WMtvNWShPsY", ...PORTRAIT_1080P }
+};
+
+export const CARDI_B_WAP: IPoleRoutine = {
+  studio: EXOTICA_HACKNEY,
+  date: new Date("2020-09-13"),
+  category: "exotic-class",
+  song: SONGS.CARDI_B_WAP,
+  choreographer: CAROLINA,
+  video: { youtubeId: "qw2VhJKF2Is", ...PORTRAIT_1080P }
+};
 
 export const MOSIMANN_2_YOUNG: IPoleRoutine = {
   studio: EXOTICA_HACKNEY,

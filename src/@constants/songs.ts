@@ -6,6 +6,24 @@ export const AMY_WINEHOUSE_LOVE_IS_A_LOSING_GAME: ISong = {
   year: 2006
 };
 
+export const AYANNA_PARTY_TRICKS: ISong = {
+  musician: MUSICIANS.AYANNA,
+  title: "Party Tricks",
+  year: 2019
+};
+
+export const CARDI_B_WAP: ISong = {
+  musician: MUSICIANS.CARDI_B,
+  title: "WAP",
+  year: 2020
+};
+
+export const BANKS_GIMME: ISong = {
+  musician: MUSICIANS.BANKS,
+  title: "Gimme",
+  year: 2019
+};
+
 export const MOTORHEAD_HELLRAISER: ISong = {
   musician: MUSICIANS.MOTORHEAD,
   title: "Hellraiser",

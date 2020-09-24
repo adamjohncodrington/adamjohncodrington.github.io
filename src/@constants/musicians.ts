@@ -8,6 +8,14 @@ export const ALEX_CHAPMAN: IMusician = { name: "Alex Chapman" };
 export const ALL_AMERICAN_REJECTS_THE: IMusician = {
   name: "All-American Rejects, The"
 };
+export const AYANNA: IMusician = {
+  name: "Äyanna",
+  excludeFromBucketList: true
+};
+export const CARDI_B: IMusician = {
+  name: "Cardi B",
+  excludeFromBucketList: true
+};
 export const GALLANT: IMusician = {
   name: "Gallant",
   excludeFromBucketList: true
