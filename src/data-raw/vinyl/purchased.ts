@@ -88,8 +88,13 @@ export const CHARLI_XCX_HOW_IM_FEELING_NOW: IVinyl = {
   signed: false,
   inches: 12,
   sides: 2,
-  arrived: false,
+  arrived: true,
   colors: [COLORS.VINYL.CHARLI_XCX_HOW_IM_FEELING_NOW_ORANGE],
+  extraCopy: {
+    colors: [COLORS.VINYL.CHARLI_XCX_HOW_IM_FEELING_NOW_YELLOW],
+    costExcDelivery: 18.99,
+    photo: PHOTOS.ALBUM_ARTWORK.CHARLI_XCX_HOW_IM_FEELING_NOW
+  },
   photo: PHOTOS.ALBUM_ARTWORK.CHARLI_XCX_HOW_IM_FEELING_NOW,
   appleMusicId: "how-im-feeling-now/1513162098"
 };

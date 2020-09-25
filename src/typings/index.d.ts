@@ -55,11 +55,14 @@ interface ITheatreVisit extends I_Date, I__Favourite, I_Company {
   cast?: IActor[];
 }
 
-interface IAlbum {
+interface I_AlbumPhoto {
+  photo: IAlbumPhoto;
+}
+
+interface IAlbum extends I_AlbumPhoto {
   musician: IMusician;
   title: string;
   year: number;
-  photo: IAlbumPhoto;
   appleMusicId: string;
 }
 
@@ -92,13 +95,19 @@ interface IRetailer extends I_Name {
   branch?: string;
 }
 
-interface IVinyl extends I_Colors, IAlbum, I_Signed {
+interface I_CostExcDelivery {
   costExcDelivery: number;
+}
+
+interface IVinylExtraCopy extends I_AlbumPhoto, I_Colors, I_CostExcDelivery {}
+
+interface IVinyl extends IAlbum, I_Colors, I_CostExcDelivery, I_Signed {
   retailer: IRetailer;
   gift?: IGift;
   sides: 2 | 4;
-  inches: 10 | 12;
+  inches: 7 | 10 | 12;
   arrived: boolean;
+  extraCopy?: IVinylExtraCopy;
 }
 
 interface ILocation

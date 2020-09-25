@@ -28,7 +28,7 @@ const getCompanySymbols = (company: IPerson[]): ISymbol[] =>
 const getVinylSymbolBackground = ({
   colors,
   photo: { discPhoto }
-}: IVinyl): string => {
+}: IVinylExtraCopy): string => {
   const photoBackground: string | undefined = !!discPhoto
     ? getBackgoundImageUrl(discPhoto)
     : undefined;
@@ -51,6 +51,23 @@ interface IGetSymbols
   vinyl?: IVinyl;
 }
 
+// const generateVinylColorSymbol = ()
+
+const addVinylColorSymbol = (
+  colors: string[],
+  vinyl: IVinylExtraCopy,
+  symbols: ISymbol[]
+): void => {
+  if (vinylColorIsSpecial(colors))
+    symbols.push({
+      background: getVinylSymbolBackground(vinyl),
+      border: colors[0] === COLORS.CLEAR ? BORDER_HALF_PX_SOLID_GREY : "none",
+      borderRadius: "50%",
+      svgFill: BLACK,
+      contents: {}
+    });
+};
+
 export const getSymbols = ({
   vinyl,
   company,
@@ -64,16 +81,10 @@ export const getSymbols = ({
   let symbols: ISymbol[] = [];
 
   if (vinyl) {
-    const { colors } = vinyl;
+    const { colors, extraCopy } = vinyl;
 
-    if (vinylColorIsSpecial(colors))
-      symbols.push({
-        background: getVinylSymbolBackground(vinyl),
-        border: colors[0] === COLORS.CLEAR ? BORDER_HALF_PX_SOLID_GREY : "none",
-        borderRadius: "50%",
-        svgFill: BLACK,
-        contents: {}
-      });
+    addVinylColorSymbol(colors, vinyl, symbols);
+    if (extraCopy) addVinylColorSymbol(extraCopy.colors, extraCopy, symbols);
   }
 
   if (company) symbols.push(...getCompanySymbols(company));
