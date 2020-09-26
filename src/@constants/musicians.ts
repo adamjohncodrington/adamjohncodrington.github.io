@@ -4,6 +4,7 @@ export const ACADEMY_IS_THE: IMusician = { name: "Academy Is..., The" };
 export const ALESSIA_CARA: IMusician = { name: "Alessia Cara" };
 export const TYCHO: IMusician = { name: "Tycho" };
 export const FLETCHER: IMusician = { name: "FLETCHER" };
+export const JOJI: IMusician = { name: "Joji" };
 export const ALEX_CHAPMAN: IMusician = { name: "Alex Chapman" };
 export const ALL_AMERICAN_REJECTS_THE: IMusician = {
   name: "All-American Rejects, The"
