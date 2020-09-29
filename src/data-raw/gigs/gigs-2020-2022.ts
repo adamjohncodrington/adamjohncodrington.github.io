@@ -5,6 +5,7 @@ import {
   TICKET_TYPES,
   MUSIC_VENUES
 } from "@constants";
+import { LAFAYETTE } from "@constants/music-venues/london";
 import { VIDEOS, PHOTOS } from "resources";
 
 const {
@@ -49,6 +50,14 @@ export const RINA_SAWAYAMA: IGig = {
   headline: MUSICIANS.RINA_SAWAYAMA,
   venue: ELECTRIC_BRIXTON,
   date: new Date("2021-03-18"),
+  company: [DARREN_TAYLOR],
+  maybe: true
+};
+
+export const DAGNY: IGig = {
+  headline: MUSICIANS.DAGNY,
+  venue: LAFAYETTE,
+  date: new Date("2021-04-12"),
   company: [DARREN_TAYLOR],
   maybe: true
 };
