@@ -5,6 +5,7 @@ export const ALESSIA_CARA: IMusician = { name: "Alessia Cara" };
 export const TYCHO: IMusician = { name: "Tycho" };
 export const FLETCHER: IMusician = { name: "FLETCHER" };
 export const JOJI: IMusician = { name: "Joji" };
+export const WINONA_OAK: IMusician = { name: "Winona Oak" };
 export const DAGNY: IMusician = { name: "Dagny" };
 export const ALEX_CHAPMAN: IMusician = { name: "Alex Chapman" };
 export const ALL_AMERICAN_REJECTS_THE: IMusician = {
