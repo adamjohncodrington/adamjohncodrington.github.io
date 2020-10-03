@@ -1,6 +1,6 @@
 # TO DO LIST
 
-- add full release dates to vinyl
+- fix photo vinyl bug
 
 ## Media to add
 
