@@ -23,6 +23,10 @@ export const ROUGH_TRADE_EAST: IRetailer = {
   name: "Rough Trade East",
   online: false
 };
+export const FOPP_LONDON: IRetailer = {
+  name: "FOPP",
+  online: false
+};
 export const ROUGH_TRADE_WEST: IRetailer = {
   name: "Rough Trade West",
   online: false

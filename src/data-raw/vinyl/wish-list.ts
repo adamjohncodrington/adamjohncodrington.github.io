@@ -1,14 +1,6 @@
 import { PHOTOS } from "resources";
 import { MUSICIANS } from "@constants";
 
-export const ELLIE_GOULDING_HALCYON: IAlbum = {
-  musician: MUSICIANS.ELLIE_GOULDING,
-  photo: PHOTOS.ALBUM_ARTWORK.ELLIE_GOULDING_HALCYON,
-  title: "Halcyon",
-  appleMusicId: "halcyon/1442722757",
-  year: 2012
-};
-
 export const RYN_WEAVER_FOOL: IAlbum = {
   musician: MUSICIANS.RYN_WEAVER,
   title: "The Fool",

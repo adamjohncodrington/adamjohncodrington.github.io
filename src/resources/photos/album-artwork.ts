@@ -127,3 +127,12 @@ export const KIM_PETRAS_CLARITY: IAlbumPhoto = {
 export const CHRISTINE_AND_THE_QUEENS_LA_VITA_NUOVA: IAlbumPhoto = {
   freeimagehostId: "d7Ezrl"
 };
+export const SMITHS_HATFUL_OF_HOLLOW: IAlbumPhoto = {
+  freeimagehostId: "2V5tna"
+};
+export const FLEETWOOD_MAC_TANGO_IN_THE_NIGHT: IAlbumPhoto = {
+  freeimagehostId: "2V5b6v"
+};
+export const JESSIE_WARE_WHATS_YOUR_PLEASURE: IAlbumPhoto = {
+  freeimagehostId: "2V5DMJ"
+};

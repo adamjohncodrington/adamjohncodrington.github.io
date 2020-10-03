@@ -15,8 +15,69 @@ const {
   ROUGH_TRADE_EAST,
   ROUGH_TRADE_WEST,
   ROUGH_TRADE_NOTTINGHAM,
-  FAT_POSSUM
+  FAT_POSSUM,
+  FOPP_LONDON
 } = RETAILERS;
+
+export const FLEETWOOD_MAC_TANGO_IN_THE_NIGHT: IVinyl = {
+  musician: MUSICIANS.FLEETWOOD_MAC,
+  photo: PHOTOS.ALBUM_ARTWORK.FLEETWOOD_MAC_TANGO_IN_THE_NIGHT,
+  title: "Tango in the Night",
+  appleMusicId: "tango-in-the-night-remastered/1217901688",
+  year: 1987,
+  signed: false,
+  sides: 2,
+  colors: [COLORS.VINYL.FLEETWOOD_MAC_TANGO_IN_THE_NIGHT],
+  costExcDelivery: 13,
+  retailer: FOPP_LONDON,
+  inches: 12,
+  arrived: true
+};
+
+export const JESSIE_WARE_WHATS_YOUR_PLEASURE: IVinyl = {
+  musician: MUSICIANS.JESSIE_WARE,
+  photo: PHOTOS.ALBUM_ARTWORK.JESSIE_WARE_WHATS_YOUR_PLEASURE,
+  title: "What's Your Pleasure?",
+  appleMusicId: "whats-your-pleasure/1498945382",
+  year: 2020,
+  signed: false,
+  sides: 2,
+  colors: [COLORS.BLACK],
+  costExcDelivery: 20,
+  retailer: FOPP_LONDON,
+  inches: 12,
+  arrived: true
+};
+
+export const SMITHS_HATFUL_OF_HOLLOW: IVinyl = {
+  musician: MUSICIANS.SMITHS_THE,
+  photo: PHOTOS.ALBUM_ARTWORK.SMITHS_HATFUL_OF_HOLLOW,
+  title: "Hatful of Hollow",
+  appleMusicId: "hatful-of-hollow/799969670",
+  year: 1984,
+  signed: false,
+  sides: 2,
+  colors: [COLORS.BLACK],
+  costExcDelivery: 15,
+  retailer: FOPP_LONDON,
+  inches: 12,
+  arrived: true
+};
+
+export const ELLIE_GOULDING_HALCYON: IVinyl = {
+  musician: MUSICIANS.ELLIE_GOULDING,
+  photo: PHOTOS.ALBUM_ARTWORK.ELLIE_GOULDING_HALCYON,
+  title: "Halcyon",
+  appleMusicId: "halcyon/1442722757",
+  year: 2012,
+  signed: false,
+  sides: 2,
+  colors: [COLORS.BLACK],
+  costExcDelivery: 15,
+  retailer: FOPP_LONDON,
+  inches: 12,
+  arrived: true
+};
 
 export const CARLY_RAE_JEPSEN_EMOTION: IVinyl = {
   musician: MUSICIANS.CARLY_RAE_JEPSEN,

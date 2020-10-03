@@ -13,6 +13,10 @@ export const ALEX_CHAPMAN: IMusician = { name: "Alex Chapman" };
 export const ALL_AMERICAN_REJECTS_THE: IMusician = {
   name: "All-American Rejects, The"
 };
+export const SMITHS_THE: IMusician = {
+  name: "Smiths, The",
+  noLongerExists: true
+};
 export const AYANNA: IMusician = {
   name: "Äyanna",
   excludeFromBucketList: true
