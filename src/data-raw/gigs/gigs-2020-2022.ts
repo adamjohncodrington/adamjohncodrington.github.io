@@ -148,7 +148,7 @@ export const LANE_8: IGig = {
 export const JON_HOPKINS: IGig = {
   headline: MUSICIANS.JON_HOPKINS,
   venue: ROYAL_ALBERT_HALL,
-  date: new Date("2020-12-04"),
+  date: new Date("2021-11-13"),
   company: [TONYA_FRANCE]
 };
 
