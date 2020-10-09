@@ -36,6 +36,7 @@ export const LAYLOW: IMusicVenue = { name: "Laylow" };
 export const LONDON_PALLADIUM: IMusicVenue = { name: "London Palladium" };
 export const LONDON_STADIUM: IMusicVenue = { name: "London Stadium" };
 export const MINISTRY_OF_SOUND: IMusicVenue = { name: "Ministry of Sound" };
+export const NIGHT_TALES: IMusicVenue = { name: "Night Tales" };
 export const OLD_BLUE_LAST: IMusicVenue = {
   name: "Old Blue Last",
   favourite: true

@@ -6,6 +6,7 @@ import {
   MUSIC_VENUES
 } from "@constants";
 import { LAFAYETTE } from "@constants/music-venues/london";
+import { DICE_APP } from "@constants/ticket-types";
 import { VIDEOS, PHOTOS } from "resources";
 
 const {
@@ -23,6 +24,7 @@ const {
 } = FRIENDS;
 const {
   O2_THE,
+  NIGHT_TALES,
   TOTTENHAM_HOTSPUR_STADIUM,
   HEAVEN,
   SHEPHERDS_BUSH_EMPIRE,
@@ -150,6 +152,14 @@ export const JON_HOPKINS: IGig = {
   venue: ROYAL_ALBERT_HALL,
   date: new Date("2021-11-13"),
   company: [TONYA_FRANCE]
+};
+
+export const DUSKY_2020: IGig = {
+  headline: MUSICIANS.DUSKY,
+  venue: NIGHT_TALES,
+  date: new Date("2020-10-18"),
+  company: [TONYA_FRANCE],
+  ticketType: DICE_APP
 };
 
 export const RATIONALE: IGig = {
