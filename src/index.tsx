@@ -7,6 +7,8 @@ import { THEME, GlobalStyle } from "styles";
 
 import * as serviceWorker from "./serviceWorker";
 
+import "./index.css";
+
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={THEME}>
