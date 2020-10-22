@@ -16,3 +16,19 @@ export const JON_HOPKINS_SINGULARITY: IAlbum = {
   appleMusicId: "singularity/1349736537",
   year: 2018
 };
+
+export const SASHA_SLOAN_ONLY_CHILD: IAlbum = {
+  musician: MUSICIANS.SASHA_SLOAN,
+  title: "Only Child",
+  year: 2020,
+  photo: PHOTOS.ALBUM_ARTWORK.SASHA_SLOAN_ONLY_CHILD,
+  appleMusicId: ""
+};
+
+export const DUA_LIPA_FUTURE_NOSTALGIA: IAlbum = {
+  musician: MUSICIANS.DUA_LIPA,
+  title: "Future Nostalgia",
+  photo: PHOTOS.ALBUM_ARTWORK.DUA_LIPA_FUTURE_NOSTALGIA,
+  appleMusicId: "future-nostalgia/1495799403",
+  year: 2020
+};

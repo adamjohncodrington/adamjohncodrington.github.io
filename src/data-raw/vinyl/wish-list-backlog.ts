@@ -17,14 +17,6 @@ export const SOPHIE_OOEPUI: IAlbum = {
   year: 2018
 };
 
-export const DUA_LIPA_FUTURE_NOSTALGIA: IAlbum = {
-  musician: MUSICIANS.DUA_LIPA,
-  title: "Future Nostalgia",
-  photo: PHOTOS.ALBUM_ARTWORK.DUA_LIPA_FUTURE_NOSTALGIA,
-  appleMusicId: "future-nostalgia/1495799403",
-  year: 2020
-};
-
 export const CHRISTINE_AND_THE_QUEENS_LA_VITA_NUOVA: IAlbum = {
   musician: MUSICIANS.CHRISTINE_AND_THE_QUEENS,
   photo: PHOTOS.ALBUM_ARTWORK.CHRISTINE_AND_THE_QUEENS_LA_VITA_NUOVA,

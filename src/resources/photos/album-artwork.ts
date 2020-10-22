@@ -136,3 +136,6 @@ export const FLEETWOOD_MAC_TANGO_IN_THE_NIGHT: IAlbumPhoto = {
 export const JESSIE_WARE_WHATS_YOUR_PLEASURE: IAlbumPhoto = {
   freeimagehostId: "2V5DMJ"
 };
+export const SASHA_SLOAN_ONLY_CHILD: IAlbumPhoto = {
+  freeimagehostId: "3MTzdJ"
+};
