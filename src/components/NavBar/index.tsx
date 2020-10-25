@@ -58,11 +58,11 @@ const StyledRouterNavLink = styled(RouterNavLink)(
   `
 );
 
-interface INavBar {
+interface Props {
   pages: IPage[];
 }
 
-export const NavBar: FC<INavBar> = ({ pages }) => (
+export const NavBar: FC<Props> = ({ pages }) => (
   <StyledNav data-test="nav-bar">
     {pages.map(({ path, SvgIcon }: IPage, i: number) => (
       <StyledRouterNavLink key={i} to={path} activeClassName="ACTIVE">

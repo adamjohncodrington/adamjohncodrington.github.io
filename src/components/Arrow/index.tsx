@@ -2,13 +2,13 @@ import styled, { css } from "styled-components";
 
 import { SVG } from "resources";
 
-interface IArrow {
+interface Props {
   panelVisible: boolean;
   size: string;
 }
 
 export const Arrow = styled(SVG.ARROW_DOWN)(
-  ({ panelVisible, size }: IArrow) => css`
+  ({ panelVisible, size }: Props) => css`
     height: ${size};
     width: ${size};
 
