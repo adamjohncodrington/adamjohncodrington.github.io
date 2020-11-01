@@ -128,16 +128,15 @@ export const TROYE_SIVAN_IN_A_DREAM: IVinyl = {
   musician: MUSICIANS.TROYE_SIVAN,
   title: "In a Dream",
   photo: PHOTOS.ALBUM_ARTWORK.TROYE_SIVAN_IN_A_DREAM,
-  appleMusicId: "in-a-dream-ep/1523003841",
+  appleMusicId: "in-a-dream-2020-ep/1536713511",
   year: 2020,
   costExcDelivery: 21.99,
   retailer: MUSICIAN_WEB_STORE,
-  arrived: false,
+  arrived: true,
   colors: COLORS.VINYL.TROYE_SIVAN_IN_A_DREAM_BLUE_MIST,
   sides: 2,
   signed: true,
-  //TODO: verify that it is 10" not 12"
-  inches: 10
+  inches: 12
 };
 
 export const CHARLI_XCX_HOW_IM_FEELING_NOW: IVinyl = {
