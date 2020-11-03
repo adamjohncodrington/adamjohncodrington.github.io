@@ -23,8 +23,11 @@ export const LEON_APART: IAlbumPhoto = {
 export const TAYLOR_SWIFT_FOLKLORE: IAlbumPhoto = {
   freeimagehostId: "dIumZu"
 };
-export const ArianaGrande_TUN: IAlbumPhoto = {
+export const ARIANA_GRANDE_TUN: IAlbumPhoto = {
   freeimagehostId: "dfNEga"
+};
+export const ARIANA_GRANDE_POSITIONS: IAlbumPhoto = {
+  freeimagehostId: "3rckjn"
 };
 export const BANKS_III: IAlbumPhoto = { freeimagehostId: "dfNMdJ" };
 export const BEN_HOWARD_EVERY_KINGDOM: IAlbumPhoto = {

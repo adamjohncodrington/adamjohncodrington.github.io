@@ -530,7 +530,7 @@ export const ARIANA_GRANDE_TUN: IVinyl = {
   costExcDelivery: 18.75,
   musician: MUSICIANS.ARIANA_GRANDE,
   title: "thank u, next",
-  photo: PHOTOS.ALBUM_ARTWORK.ArianaGrande_TUN,
+  photo: PHOTOS.ALBUM_ARTWORK.ARIANA_GRANDE_TUN,
   appleMusicId: "thank-u-next/1450330588",
   year: 2019,
   sides: 4,

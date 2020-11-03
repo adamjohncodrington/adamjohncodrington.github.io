@@ -17,6 +17,14 @@ export const JON_HOPKINS_SINGULARITY: IAlbum = {
   year: 2018
 };
 
+export const ARIANA_GRANDE_POSITIONS: IAlbum = {
+  musician: MUSICIANS.ARIANA_GRANDE,
+  title: "Positions",
+  photo: PHOTOS.ALBUM_ARTWORK.ARIANA_GRANDE_POSITIONS,
+  appleMusicId: "positions/1537476578",
+  year: 2020
+};
+
 export const SASHA_SLOAN_ONLY_CHILD: IAlbum = {
   musician: MUSICIANS.SASHA_SLOAN,
   title: "Only Child",
