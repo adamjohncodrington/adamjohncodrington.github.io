@@ -317,6 +317,7 @@ export const PAUL_WOOLFORD: IMusician = { name: "Paul Woolford" };
 export const PET_SHOP_BOYS: IMusician = { name: "Pet Shop Boys" };
 export const PHILIP_GEORGE: IMusician = { name: "Philip George" };
 export const PRETENDERS: IMusician = { name: "Pretenders" };
+export const PROSPA: IMusician = { name: "Prospa" };
 export const RAINBOW_KITTEN_SURPRISE: IMusician = {
   name: "Rainbow Kitten Surprise"
 };

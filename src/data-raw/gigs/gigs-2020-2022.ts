@@ -131,6 +131,7 @@ export const CAROLINE_POLACHEK_2020: IGig = {
 
 export const GEORGIA: IGig = {
   headline: MUSICIANS.GEORGIA,
+  support: [MUSICIANS.PROSPA],
   video: VIDEOS.GIGS.GEORGIA,
   photos: PHOTOS.GIGS.GEORGIA_2020,
   venue: HEAVEN,
