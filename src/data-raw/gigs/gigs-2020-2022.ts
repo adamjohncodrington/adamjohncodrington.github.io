@@ -5,8 +5,6 @@ import {
   TICKET_TYPES,
   MUSIC_VENUES
 } from "@constants";
-import { LAFAYETTE } from "@constants/music-venues/london";
-import { DICE_APP } from "@constants/ticket-types";
 import { VIDEOS, PHOTOS } from "resources";
 
 const {
@@ -25,20 +23,34 @@ const {
 const {
   O2_THE,
   NIGHT_TALES,
+  LAFAYETTE,
   TOTTENHAM_HOTSPUR_STADIUM,
   HEAVEN,
   SHEPHERDS_BUSH_EMPIRE,
   LAYLOW,
   LONDON_PALLADIUM,
+  OMEARA,
   MOTH_CLUB,
   ELECTRIC_BRIXTON,
   GARAGE_THE,
+  ROUNDHOUSE,
   PRINTWORKS,
   ROYAL_ALBERT_HALL,
   HAMMERSMITH_APOLLO,
   FINSBURY_PARK,
   BRIXTON_ACADEMY
 } = MUSIC_VENUES;
+const {
+  DICE_APP,
+  TICKETWEB,
+  AXS_MOBILE_APP,
+  GIGS_AND_TOURS_POSTAL,
+  SEE_TICKETS_POSTAL,
+  TICKETMASTER_ETICKET,
+  TICKETMASTER_POSTAL,
+  SEE_TICKETS_PRINT_AT_HOME,
+  DICE_POSTAL
+} = TICKET_TYPES;
 
 export const SEVDALIZA: IGig = {
   headline: MUSICIANS.SEVDALIZA,
@@ -50,10 +62,17 @@ export const SEVDALIZA: IGig = {
 
 export const RINA_SAWAYAMA: IGig = {
   headline: MUSICIANS.RINA_SAWAYAMA,
-  venue: ELECTRIC_BRIXTON,
-  date: new Date("2021-03-18"),
+  venue: ROUNDHOUSE,
+  date: new Date("2021-11-17"),
+  company: [DARREN_TAYLOR]
+};
+
+export const HOLLY_HUMBERSTONE: IGig = {
+  headline: MUSICIANS.HOLLY_HUMBERSTONE,
+  venue: OMEARA,
+  date: new Date("2021-06-10"),
   company: [DARREN_TAYLOR],
-  maybe: true
+  ticketType: TICKETWEB
 };
 
 export const DAGNY: IGig = {
@@ -69,7 +88,7 @@ export const CELESTE: IGig = {
   venue: SHEPHERDS_BUSH_EMPIRE,
   date: new Date("2021-04-21"),
   company: [DARREN_TAYLOR],
-  ticketType: TICKET_TYPES.DICE_POSTAL
+  ticketType: DICE_POSTAL
 };
 
 export const GRACEY: IGig = {
@@ -88,7 +107,7 @@ export const CHRISTINE_AND_THE_QUEENS_2020: IGig = {
   date: DATES.GIGS.CHRISTINE_AND_THE_QUEENS_2020,
   favourite: true,
   company: [DARREN_TAYLOR],
-  ticketType: TICKET_TYPES.GIGS_AND_TOURS_POSTAL
+  ticketType: GIGS_AND_TOURS_POSTAL
 };
 
 export const JOSEF_SALVAT_2020: IGig = {
@@ -115,7 +134,7 @@ export const NASTY_CHERRY: IGig = {
   photos: PHOTOS.GIGS.NASTY_CHERRY_2020,
   date: new Date("2020-03-03"),
   company: [DARREN_TAYLOR, MEGAN_BLACKBURN],
-  ticketType: TICKET_TYPES.SEE_TICKETS_PRINT_AT_HOME
+  ticketType: SEE_TICKETS_PRINT_AT_HOME
 };
 
 export const CAROLINE_POLACHEK_2020: IGig = {
@@ -126,7 +145,7 @@ export const CAROLINE_POLACHEK_2020: IGig = {
   venue: HEAVEN,
   date: DATES.GIGS.CAROLINE_POLACHEK_2020,
   company: [DARREN_TAYLOR],
-  ticketType: TICKET_TYPES.DICE_APP
+  ticketType: DICE_APP
 };
 
 export const GEORGIA: IGig = {
@@ -137,7 +156,7 @@ export const GEORGIA: IGig = {
   venue: HEAVEN,
   date: DATES.GIGS.GEORGIA,
   company: [DARREN_TAYLOR],
-  ticketType: TICKET_TYPES.DICE_APP
+  ticketType: DICE_APP
 };
 
 export const LANE_8: IGig = {
@@ -145,7 +164,7 @@ export const LANE_8: IGig = {
   venue: PRINTWORKS,
   date: new Date("2021-12-09"),
   company: [TONYA_FRANCE],
-  ticketType: TICKET_TYPES.DICE_APP
+  ticketType: DICE_APP
 };
 
 export const JON_HOPKINS: IGig = {
@@ -168,7 +187,7 @@ export const RATIONALE: IGig = {
   venue: SHEPHERDS_BUSH_EMPIRE,
   date: new Date("2021-04-28"),
   company: [DARREN_TAYLOR],
-  ticketType: TICKET_TYPES.SEE_TICKETS_POSTAL
+  ticketType: SEE_TICKETS_POSTAL
 };
 
 export const HAIM: IGig = {
@@ -177,7 +196,7 @@ export const HAIM: IGig = {
   venue: O2_THE,
   date: new Date("2021-06-18"),
   company: [DARREN_TAYLOR, LEWIS_STEADMAN, JERRY_EDWARDS],
-  ticketType: TICKET_TYPES.AXS_MOBILE_APP
+  ticketType: AXS_MOBILE_APP
 };
 
 export const JESSIE_WARE: IGig = {
@@ -185,7 +204,7 @@ export const JESSIE_WARE: IGig = {
   venue: BRIXTON_ACADEMY,
   date: new Date("2021-04-25"),
   company: [DARREN_TAYLOR, LUCY_TWAITE],
-  ticketType: TICKET_TYPES.TICKETWEB
+  ticketType: TICKETWEB
 };
 
 export const ELLIE_GOULDING_2021: IGig = {
@@ -193,7 +212,7 @@ export const ELLIE_GOULDING_2021: IGig = {
   venue: HAMMERSMITH_APOLLO,
   date: new Date("2021-05-06"),
   company: [DAN_SPARROW],
-  ticketType: TICKET_TYPES.TICKETMASTER_POSTAL
+  ticketType: TICKETMASTER_POSTAL
 };
 
 export const THE_1975_2021: IGig = {
@@ -207,7 +226,7 @@ export const THE_1975_2021: IGig = {
     CAITLIN_MCCAIG,
     COBY_BLACKBURN
   ],
-  ticketType: TICKET_TYPES.TICKETMASTER_ETICKET
+  ticketType: TICKETMASTER_ETICKET
 };
 
 export const LADY_GAGA_2021: IGig = {
@@ -222,7 +241,7 @@ export const SOPHIE_ELLIS_BEXTOR: IGig = {
   venue: LONDON_PALLADIUM,
   date: new Date("2021-05-13"),
   company: [DARREN_TAYLOR],
-  ticketType: TICKET_TYPES.TICKETMASTER_POSTAL
+  ticketType: TICKETMASTER_POSTAL
 };
 
 export const CARIBOU: IGig = {
@@ -230,5 +249,5 @@ export const CARIBOU: IGig = {
   venue: BRIXTON_ACADEMY,
   date: new Date("2021-05-10"),
   company: [DARREN_TAYLOR],
-  ticketType: TICKET_TYPES.TICKETMASTER_ETICKET
+  ticketType: TICKETMASTER_ETICKET
 };
