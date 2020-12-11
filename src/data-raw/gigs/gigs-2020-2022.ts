@@ -83,14 +83,6 @@ export const DAGNY: IGig = {
   maybe: true
 };
 
-export const CELESTE: IGig = {
-  headline: MUSICIANS.CELESTE,
-  venue: SHEPHERDS_BUSH_EMPIRE,
-  date: new Date("2021-04-21"),
-  company: [DARREN_TAYLOR],
-  ticketType: DICE_POSTAL
-};
-
 export const GRACEY: IGig = {
   headline: MUSICIANS.GRACEY,
   venue: LAYLOW,
