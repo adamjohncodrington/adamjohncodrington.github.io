@@ -116,7 +116,7 @@ export const TAYLOR_SWIFT_FOLKLORE: IVinyl = {
   retailer: MUSICIAN_WEB_STORE,
   appleMusicId: "folklore-deluxe-version/1528112358",
   year: 2020,
-  arrived: false,
+  arrived: true,
   colors: [COLORS.VINYL.TAYLOR_SWIFT_FOLKLORE_TEAL],
   inches: 12,
   sides: 4,

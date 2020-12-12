@@ -188,7 +188,10 @@ export const DRUMS_THE: IMusician = { name: "Drums, The" };
 export const DUKE_DUMONT: IMusician = { name: "Duke Dumont" };
 export const DUSKY: IMusician = { name: "Dusky" };
 export const DYLAN: IMusician = { name: "Dylan" };
-export const EARTHEATER: IMusician = { name: "Eartheater" };
+export const EARTHEATER: IMusician = {
+  name: "Eartheater",
+  excludeFromBucketList: true
+};
 export const EATS_EVERYTHING: IMusician = { name: "Eats Everything" };
 export const ELDERBROOK: IMusician = { name: "Elderbrook" };
 export const ELIZA_DOOLITTLE: IMusician = { name: "Eliza Doolittle" };
@@ -369,7 +372,10 @@ export const TOM_ODELL: IMusician = { name: "Tom Odell" };
 export const TORI_KELLY: IMusician = { name: "Tori Kelly" };
 export const TOVE_LO: IMusician = { name: "Tove Lo" };
 export const TULISA: IMusician = { name: "Tulisa" };
-export const TWENTY_ONE_PILOTS: IMusician = { name: "Twenty One Pilots" };
+export const TWENTY_ONE_PILOTS: IMusician = {
+  name: "Twenty One Pilots",
+  excludeFromBucketList: true
+};
 export const TWO_FEET: IMusician = { name: "Two Feet" };
 export const TYGA: IMusician = { name: "Tyga" };
 export const VERITE: IMusician = { name: "VÉRITÉ" };
