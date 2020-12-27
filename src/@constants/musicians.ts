@@ -363,6 +363,7 @@ export const SOPHIE_ELLIS_BEXTOR: IMusician = { name: "Sophie Ellis-Bextor" };
 export const SOUL_WAX: IMusician = { name: "Soul Wax" };
 export const SMYTHS_THE: IMusician = { name: "Smyths, The" };
 export const SPILL_CANVAS_THE: IMusician = { name: "Spill Canvas, The" };
+export const SZA: IMusician = { name: "SZA" };
 export const SKREAM: IMusician = { name: "Skream" };
 export const SUNDAY_GIRL: IMusician = { name: "Sunday Girl" };
 export const TENSNAKE: IMusician = { name: "Tensnake" };
