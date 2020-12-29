@@ -25,6 +25,14 @@ export const ARIANA_GRANDE_POSITIONS: IAlbum = {
   year: 2020
 };
 
+export const BEYONCE_LEMONADE: IAlbum = {
+  musician: MUSICIANS.BEYONCE,
+  title: "Lemonade",
+  photo: PHOTOS.ALBUM_ARTWORK.BEYONCE_LEMONADE,
+  appleMusicId: "lemonade/1460430561",
+  year: 2016
+};
+
 export const SASHA_SLOAN_ONLY_CHILD: IAlbum = {
   musician: MUSICIANS.SASHA_SLOAN,
   title: "Only Child",

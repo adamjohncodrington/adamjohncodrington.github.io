@@ -81,14 +81,6 @@ export const LANE_8: IAlbum = {
   year: 2015
 };
 
-export const BEYONCE_LEMONADE: IAlbum = {
-  musician: MUSICIANS.BEYONCE,
-  title: "Lemonade",
-  photo: PHOTOS.ALBUM_ARTWORK.BEYONCE_LEMONADE,
-  appleMusicId: "lemonade/1460430561",
-  year: 2016
-};
-
 export const GEORGE_FITZGERALD_ALL_THAT_MUST_BE: IAlbum = {
   musician: MUSICIANS.GEORGE_FITZGERALD,
   title: "All That Must Be",
