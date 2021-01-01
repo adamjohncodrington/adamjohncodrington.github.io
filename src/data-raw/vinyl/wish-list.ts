@@ -33,6 +33,14 @@ export const BEYONCE_LEMONADE: IAlbum = {
   year: 2016
 };
 
+export const SAINT_JHN_WHILE_THE_WORLD_WAS_BURNING: IAlbum = {
+  musician: MUSICIANS.SAINT_JHN,
+  title: "While the World Was Burning",
+  photo: PHOTOS.ALBUM_ARTWORK.SAINT_JHN_WHILE_THE_WORLD_WAS_BURNING,
+  appleMusicId: "while-the-world-was-burning/1541676001",
+  year: 2020
+};
+
 export const SASHA_SLOAN_ONLY_CHILD: IAlbum = {
   musician: MUSICIANS.SASHA_SLOAN,
   title: "Only Child",

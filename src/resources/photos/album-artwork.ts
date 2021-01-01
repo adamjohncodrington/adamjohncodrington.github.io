@@ -142,3 +142,6 @@ export const JESSIE_WARE_WHATS_YOUR_PLEASURE: IAlbumPhoto = {
 export const SASHA_SLOAN_ONLY_CHILD: IAlbumPhoto = {
   freeimagehostId: "3MTzdJ"
 };
+export const SAINT_JHN_WHILE_THE_WORLD_WAS_BURNING: IAlbumPhoto = {
+  freeimagehostId: "KvFzYB"
+};
