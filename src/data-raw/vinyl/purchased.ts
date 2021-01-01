@@ -89,7 +89,7 @@ export const CARLY_RAE_JEPSEN_EMOTION: IVinyl = {
   inches: 12,
   signed: true,
   colors: [COLORS.VINYL.CARLY_RAE_JEPSEN_EMOTION_PINK],
-  arrived: false,
+  arrived: true,
   costExcDelivery: 19.99,
   retailer: MUSICIAN_WEB_STORE
 };
