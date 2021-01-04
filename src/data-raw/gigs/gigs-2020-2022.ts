@@ -24,6 +24,7 @@ const {
   O2_THE,
   NIGHT_TALES,
   LAFAYETTE,
+  OVAL_SPACE,
   TOTTENHAM_HOTSPUR_STADIUM,
   HEAVEN,
   SHEPHERDS_BUSH_EMPIRE,
@@ -57,6 +58,15 @@ export const SEVDALIZA: IGig = {
   date: new Date("2021-04-15"),
   company: [DARREN_TAYLOR],
   maybe: true
+};
+
+export const SOPHIE_2020: IGig = {
+  headline: MUSICIANS.SOPHIE,
+  support: [MUSICIANS.EARTHEATER],
+  venue: OVAL_SPACE,
+  company: [LEWIS_STEADMAN, JERRY_EDWARDS],
+  ticketType: TICKET_TYPES.DICE_APP,
+  date: new Date("2021-10-01")
 };
 
 export const RINA_SAWAYAMA: IGig = {
