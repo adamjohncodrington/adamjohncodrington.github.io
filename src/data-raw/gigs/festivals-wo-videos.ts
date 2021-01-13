@@ -362,7 +362,7 @@ export const AREA_10_NYE: IFestivalWithoutVideo = {
 export const MIGHTY_HOOPLA_2021: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.MIGHTY_HOOPLA,
   venue: MUSIC_VENUES.BROCKWELL_PARK,
-  dates: [new Date("2021-06-05")],
+  dates: [new Date("2021-09-04")],
   lineup: [[]],
   company: [
     FRIENDS.TONYA_FRANCE,

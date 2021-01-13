@@ -14,8 +14,6 @@ const {
   LUCY_TWAITE,
   DAN_SPARROW,
   MEGAN_BLACKBURN,
-  CAITLIN_MCCAIG,
-  COBY_BLACKBURN,
   RYAN_MILLS,
   TOM_CHINDA_COUTTS,
   TONYA_FRANCE
@@ -38,7 +36,6 @@ const {
   PRINTWORKS,
   ROYAL_ALBERT_HALL,
   HAMMERSMITH_APOLLO,
-  FINSBURY_PARK,
   BRIXTON_ACADEMY
 } = MUSIC_VENUES;
 const {
@@ -214,20 +211,6 @@ export const ELLIE_GOULDING_2021: IGig = {
   date: new Date("2021-05-06"),
   company: [DAN_SPARROW],
   ticketType: TICKETMASTER_POSTAL
-};
-
-export const THE_1975_2021: IGig = {
-  headline: MUSICIANS._1975_THE,
-  venue: FINSBURY_PARK,
-  date: new Date("2021-07-10"),
-  company: [
-    DAN_SPARROW,
-    LEWIS_STEADMAN,
-    JERRY_EDWARDS,
-    CAITLIN_MCCAIG,
-    COBY_BLACKBURN
-  ],
-  ticketType: TICKETMASTER_ETICKET
 };
 
 export const LADY_GAGA_2021: IGig = {
