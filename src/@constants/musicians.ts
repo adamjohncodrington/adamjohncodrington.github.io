@@ -355,6 +355,7 @@ export const SKY_FERREIRA: IMusician = {
   name: "Sky Ferreira",
   favourite: true
 };
+export const SODY: IMusician = { name: "Sody" };
 export const SLIIMY: IMusician = { name: "Sliimy" };
 export const SOFI_TUKKER: IMusician = { name: "Sofi Tukker" };
 export const SOAK: IMusician = { name: "SOAK" };
