@@ -350,6 +350,7 @@ export const SEINABO_SEY: IMusician = { name: "Seinabo Sey" };
 export const SEVDALIZA: IMusician = { name: "Sevdaliza" };
 export const SIA: IMusician = { name: "Sia" };
 export const SIGRID: IMusician = { name: "Sigrid" };
+export const BLOOD_ORANGE: IMusician = { name: "Blood Orange" };
 export const SISTER_SLEDGE: IMusician = { name: "Sister Sledge" };
 export const SKY_FERREIRA: IMusician = {
   name: "Sky Ferreira",
