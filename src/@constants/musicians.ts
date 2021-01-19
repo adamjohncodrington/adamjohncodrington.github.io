@@ -351,6 +351,8 @@ export const SEVDALIZA: IMusician = { name: "Sevdaliza" };
 export const SIA: IMusician = { name: "Sia" };
 export const SIGRID: IMusician = { name: "Sigrid" };
 export const BLOOD_ORANGE: IMusician = { name: "Blood Orange" };
+export const SKAAR: IMusician = { name: "SKAAR" };
+export const SAMIA: IMusician = { name: "Samia" };
 export const SISTER_SLEDGE: IMusician = { name: "Sister Sledge" };
 export const SKY_FERREIRA: IMusician = {
   name: "Sky Ferreira",
