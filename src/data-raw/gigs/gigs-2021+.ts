@@ -1,11 +1,4 @@
-import {
-  DATES,
-  FRIENDS,
-  MUSICIANS,
-  TICKET_TYPES,
-  MUSIC_VENUES
-} from "@constants";
-import { VIDEOS, PHOTOS } from "resources";
+import { FRIENDS, MUSICIANS, TICKET_TYPES, MUSIC_VENUES } from "@constants";
 
 const {
   JERRY_EDWARDS,
@@ -13,25 +6,19 @@ const {
   LEWIS_STEADMAN,
   LUCY_TWAITE,
   DAN_SPARROW,
-  MEGAN_BLACKBURN,
   RYAN_MILLS,
   TOM_CHINDA_COUTTS,
   TONYA_FRANCE
 } = FRIENDS;
 const {
   O2_THE,
-  NIGHT_TALES,
   LAFAYETTE,
   OVAL_SPACE,
   TOTTENHAM_HOTSPUR_STADIUM,
-  HEAVEN,
   SHEPHERDS_BUSH_EMPIRE,
-  LAYLOW,
   LONDON_PALLADIUM,
   OMEARA,
-  MOTH_CLUB,
   ELECTRIC_BRIXTON,
-  GARAGE_THE,
   ROUNDHOUSE,
   PRINTWORKS,
   ROYAL_ALBERT_HALL,
@@ -42,11 +29,9 @@ const {
   DICE_APP,
   TICKETWEB,
   AXS_MOBILE_APP,
-  GIGS_AND_TOURS_POSTAL,
   SEE_TICKETS_POSTAL,
   TICKETMASTER_ETICKET,
-  TICKETMASTER_POSTAL,
-  SEE_TICKETS_PRINT_AT_HOME
+  TICKETMASTER_POSTAL
 } = TICKET_TYPES;
 
 export const SEVDALIZA: IGig = {
@@ -89,74 +74,6 @@ export const DAGNY: IGig = {
   maybe: true
 };
 
-export const GRACEY: IGig = {
-  headline: MUSICIANS.GRACEY,
-  venue: LAYLOW,
-  video: VIDEOS.GIGS.GRACEY,
-  date: DATES.GIGS.GRACEY,
-  company: [DARREN_TAYLOR]
-};
-
-export const CHRISTINE_AND_THE_QUEENS_2020: IGig = {
-  headline: MUSICIANS.CHRISTINE_AND_THE_QUEENS,
-  venue: MOTH_CLUB,
-  photos: PHOTOS.GIGS.CHRISTINE_AND_THE_QUEENS_2020,
-  video: VIDEOS.GIGS.CHRISTINE_AND_THE_QUEENS_2020,
-  date: DATES.GIGS.CHRISTINE_AND_THE_QUEENS_2020,
-  favourite: true,
-  company: [DARREN_TAYLOR],
-  ticketType: GIGS_AND_TOURS_POSTAL
-};
-
-export const JOSEF_SALVAT_2020: IGig = {
-  headline: MUSICIANS.JOSEF_SALVAT,
-  photos: PHOTOS.GIGS.JOSEF_SALVAT_2020,
-  venue: MOTH_CLUB,
-  video: VIDEOS.GIGS.JOSEF_SALVAT_2020,
-  date: DATES.GIGS.JOSEF_SALVAT_2020,
-  company: [DARREN_TAYLOR]
-};
-
-export const KIM_PETRAS_2020: IGig = {
-  headline: MUSICIANS.KIM_PETRAS,
-  video: VIDEOS.GIGS.KIM_PETRAS_2020,
-  support: [MUSICIANS.ALEX_CHAPMAN],
-  venue: SHEPHERDS_BUSH_EMPIRE,
-  date: DATES.GIGS.KIM_PETRAS_2020,
-  company: [DARREN_TAYLOR]
-};
-
-export const NASTY_CHERRY: IGig = {
-  headline: MUSICIANS.NASTY_CHERRY,
-  venue: GARAGE_THE,
-  photos: PHOTOS.GIGS.NASTY_CHERRY_2020,
-  date: new Date("2020-03-03"),
-  company: [DARREN_TAYLOR, MEGAN_BLACKBURN],
-  ticketType: SEE_TICKETS_PRINT_AT_HOME
-};
-
-export const CAROLINE_POLACHEK_2020: IGig = {
-  headline: MUSICIANS.CAROLINE_POLACHEK,
-  video: VIDEOS.GIGS.CAROLINE_POLACHEK_2020,
-  support: [MUSICIANS.SEGA_BODEGA],
-  photos: PHOTOS.GIGS.CAROLINE_POLACHEK_2020,
-  venue: HEAVEN,
-  date: DATES.GIGS.CAROLINE_POLACHEK_2020,
-  company: [DARREN_TAYLOR],
-  ticketType: DICE_APP
-};
-
-export const GEORGIA: IGig = {
-  headline: MUSICIANS.GEORGIA,
-  support: [MUSICIANS.PROSPA],
-  video: VIDEOS.GIGS.GEORGIA,
-  photos: PHOTOS.GIGS.GEORGIA_2020,
-  venue: HEAVEN,
-  date: DATES.GIGS.GEORGIA,
-  company: [DARREN_TAYLOR],
-  ticketType: DICE_APP
-};
-
 export const LANE_8: IGig = {
   headline: MUSICIANS.LANE_8,
   venue: PRINTWORKS,
@@ -170,22 +87,6 @@ export const JON_HOPKINS: IGig = {
   venue: ROYAL_ALBERT_HALL,
   date: new Date("2021-11-13"),
   company: [TONYA_FRANCE]
-};
-
-export const DUSKY_2020: IGig = {
-  headline: MUSICIANS.DUSKY,
-  venue: NIGHT_TALES,
-  date: new Date("2020-10-18"),
-  company: [TONYA_FRANCE],
-  ticketType: DICE_APP
-};
-
-export const RATIONALE: IGig = {
-  headline: MUSICIANS.RATIONALE,
-  venue: SHEPHERDS_BUSH_EMPIRE,
-  date: new Date("2021-04-28"),
-  company: [DARREN_TAYLOR],
-  ticketType: SEE_TICKETS_POSTAL
 };
 
 export const HAIM: IGig = {
@@ -234,4 +135,12 @@ export const CARIBOU: IGig = {
   date: new Date("2021-05-10"),
   company: [DARREN_TAYLOR],
   ticketType: TICKETMASTER_ETICKET
+};
+
+export const RATIONALE: IGig = {
+  headline: MUSICIANS.RATIONALE,
+  venue: SHEPHERDS_BUSH_EMPIRE,
+  date: new Date("2022-03-31"),
+  company: [DARREN_TAYLOR],
+  ticketType: SEE_TICKETS_POSTAL
 };
