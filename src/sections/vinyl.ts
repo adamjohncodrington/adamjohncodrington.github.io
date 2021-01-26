@@ -2,34 +2,34 @@ import { PAGE_SECTION_TITLES } from "@constants";
 import { VINYL as DATA } from "data-ui";
 import { SVG } from "resources";
 
-const MUSICIANS: IPageSection = {
+const MUSICIANS: PageSectionProps = {
   title: PAGE_SECTION_TITLES.MUSICIANS,
   data: { miniCards: DATA.MUSICIANS },
   count: DATA.MUSICIANS.length,
   SvgIcon: SVG.ARTIST
 };
 
-const COLORS: IPageSection = {
+const COLORS: PageSectionProps = {
   title: PAGE_SECTION_TITLES.COLORED,
   data: { cards: DATA.COLORED },
   SvgIcon: SVG.PALETTE,
   shuffle: true
 };
 
-const ARTWORK: IPageSection = {
+const ARTWORK: PageSectionProps = {
   title: PAGE_SECTION_TITLES.ARTWORK,
   data: { photoGrid: { photos: DATA.ARTWORK, columnCount: 3 } },
   SvgIcon: SVG.CAMERA
 };
 
-const GIFTS: IPageSection = {
+const GIFTS: PageSectionProps = {
   title: PAGE_SECTION_TITLES.GIFTS,
   SvgIcon: SVG.GIFT,
   shuffle: true,
   data: { cards: DATA.GIFTS }
 };
 
-const COLLECTION: IPageSection = {
+const COLLECTION: PageSectionProps = {
   title: PAGE_SECTION_TITLES.COLLECTION,
   data: { cards: DATA.COLLECTION },
   count: DATA.COLLECTION.length,
@@ -37,7 +37,7 @@ const COLLECTION: IPageSection = {
   shuffle: true
 };
 
-const ORDERED: IPageSection = {
+const ORDERED: PageSectionProps = {
   title: PAGE_SECTION_TITLES.ORDERED,
   data: { cards: DATA.ORDERED },
   count: DATA.ORDERED.length,
@@ -45,19 +45,19 @@ const ORDERED: IPageSection = {
   shuffle: true
 };
 
-const COST: IPageSection = {
+const COST: PageSectionProps = {
   title: PAGE_SECTION_TITLES.COST,
   SvgIcon: SVG.MONEY,
   data: { costs: DATA.COSTS }
 };
 
-const RETAILERS: IPageSection = {
+const RETAILERS: PageSectionProps = {
   title: PAGE_SECTION_TITLES.RETAILERS,
   SvgIcon: SVG.SHOPPING_BAG,
   data: { miniCards: DATA.RETAILERS }
 };
 
-const SIGNED: IPageSection = {
+const SIGNED: PageSectionProps = {
   title: PAGE_SECTION_TITLES.SIGNED,
   data: { cards: DATA.SIGNED },
   count: DATA.SIGNED.length,
@@ -65,7 +65,7 @@ const SIGNED: IPageSection = {
   SvgIcon: SVG.PEN_WRITING
 };
 
-const WISH_LIST: IPageSection = {
+const WISH_LIST: PageSectionProps = {
   title: PAGE_SECTION_TITLES.WISH_LIST,
   SvgIcon: SVG.STARS,
   data: { cards: DATA.WISH_LIST },
@@ -73,15 +73,15 @@ const WISH_LIST: IPageSection = {
   count: DATA.WISH_LIST.length
 };
 
-const YEARS: IPageSection[] = DATA.YEARS.map(
-  (year: ICard[]): IPageSection => ({
+const YEARS: PageSectionProps[] = DATA.YEARS.map(
+  (year: ICard[]): PageSectionProps => ({
     title: year[0].year.toString(),
     data: { cards: year },
     count: year.length
   })
 );
 
-export const VINYL: IPageSection[] = [
+export const VINYL: PageSectionProps[] = [
   MUSICIANS,
   ARTWORK,
   COLORS,

@@ -2,7 +2,7 @@ import { FRIENDS as friends } from "@constants";
 import { TRIP_LEGS as DATA } from "data-raw";
 import { getItemCounts, getTripTitle } from "utils";
 
-const getTripsMatchingFriend = (friend: IFriend): ITripLeg[] => {
+const getTripsMatchingFriend = (friend: Friend): ITripLeg[] => {
   const tripsMatchingFriend: ITripLeg[] = [];
   const tripLegs: ITripLeg[] = DATA;
   tripLegs.forEach((trip: ITripLeg): void => {
@@ -11,7 +11,7 @@ const getTripsMatchingFriend = (friend: IFriend): ITripLeg[] => {
   return tripsMatchingFriend;
 };
 
-const getFriendDetails = (friend: IFriend): IMiniCardPanelDetail[] => {
+const getFriendDetails = (friend: Friend): IMiniCardPanelDetail[] => {
   const tripsMatchingFriend: ITripLeg[] = getTripsMatchingFriend(friend);
   return tripsMatchingFriend.map(
     (trip: ITripLeg): IMiniCardPanelDetail => {
@@ -26,10 +26,10 @@ const getFriendDetails = (friend: IFriend): IMiniCardPanelDetail[] => {
   );
 };
 
-export const WITH: IMiniCard[] = Object.values(friends)
-  .filter(({ travel }: IFriend): boolean => !!travel)
+export const WITH: MiniCardProps[] = Object.values(friends)
+  .filter(({ travel }: Friend): boolean => !!travel)
   .map(
-    (friend: IFriend): IMiniCard => {
+    (friend: Friend): MiniCardProps => {
       const { name } = friend;
       const {
         pastCount: primaryCount,

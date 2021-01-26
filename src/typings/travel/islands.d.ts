@@ -1,4 +1,4 @@
-type IIsland = ILocation;
+type IIsland = LocationProps;
 
 interface IIslandsUSA {
   KEY_WEST: IIsland;

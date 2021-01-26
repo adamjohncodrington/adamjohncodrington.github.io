@@ -58,7 +58,7 @@ const method: string[] = [
 
 const title: string = "Piri Piri";
 const makes: IRecipeMakes = { quantity: 475, measurement: MEASUREMENTS.GRAM };
-const diet: IRecipeDiet = DIETS.VEGAN;
+const diet: RecipeDiet = DIETS.VEGAN;
 const photo: IPhoto = PHOTOS.RECIPES.PIRI_PIRI;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);

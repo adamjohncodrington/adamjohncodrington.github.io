@@ -2,16 +2,16 @@ import { FESTIVAL_TITLES as festivals } from "@constants";
 import { FESTIVALS as DATA } from "data-raw";
 import { getItemCounts, getFestivalSubtitle } from "utils";
 
-const getFestivalMatches = (festivalTitle: IFestivalTitle): IFestival[] =>
+const getFestivalMatches = (festivalTitle: FestivalTitle): Festival[] =>
   DATA.reduce(
-    (matches: IFestival[], festival: IFestival): IFestival[] =>
+    (matches: Festival[], festival: Festival): Festival[] =>
       festival.title === festivalTitle ? [...matches, festival] : matches,
     []
   );
 
-const getFestivalDetails = (musician: IMusician): IMiniCardPanelDetail[] =>
+const getFestivalDetails = (musician: Musician): IMiniCardPanelDetail[] =>
   getFestivalMatches(musician).map(
-    (festival: IFestival): IMiniCardPanelDetail => {
+    (festival: Festival): IMiniCardPanelDetail => {
       const { dates, video } = festival;
       return {
         sort: [dates[0].valueOf()],
@@ -22,10 +22,10 @@ const getFestivalDetails = (musician: IMusician): IMiniCardPanelDetail[] =>
     }
   );
 
-export const FESTIVALS: IMiniCard[] = Object.values(festivals)
-  .filter(({ insignificant }: IFestivalTitle): boolean => !insignificant)
+export const FESTIVALS: MiniCardProps[] = Object.values(festivals)
+  .filter(({ insignificant }: FestivalTitle): boolean => !insignificant)
   .map(
-    (festival: IFestivalTitle): IMiniCard => {
+    (festival: FestivalTitle): MiniCardProps => {
       const { name } = festival;
       const {
         pastCount: primaryCount,

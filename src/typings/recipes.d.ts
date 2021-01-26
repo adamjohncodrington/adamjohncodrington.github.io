@@ -1,4 +1,4 @@
-interface IIngredientCost {
+interface IngredientCost {
   price: number;
   quantity?: number;
   measurement?: string;
@@ -7,7 +7,7 @@ interface IIngredientCost {
 
 interface IInventoryIngredient {
   displayText: string;
-  knownCost?: IIngredientCost;
+  knownCost?: IngredientCost;
 }
 
 interface IRecipeListItem {
@@ -28,7 +28,7 @@ interface IServeWithItem {
   notes?: string;
 }
 
-interface IRecipeDiet {
+interface RecipeDiet {
   abbreviation: string;
 }
 
@@ -43,7 +43,7 @@ interface IRecipe extends I__Favourite, I__Hide {
   photo?: IPhoto;
   ingredients: IRecipeIngredient[][];
   serveWith?: IServeWithItem[][];
-  diet: IRecipeDiet;
+  diet: RecipeDiet;
   method: string[];
   newRecipe?: boolean;
   totalCost?: number;

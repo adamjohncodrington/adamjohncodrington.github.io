@@ -1,4 +1,4 @@
-interface IRegion extends ILocation {}
+interface IRegion extends LocationProps {}
 
 interface IRegionsUSA {
   CAPE_COD: IRegion;

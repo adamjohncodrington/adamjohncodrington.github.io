@@ -1,22 +1,22 @@
-export const ADELPHI: ITheatre = { name: "Adelphi Theatre" };
-export const APOLLO: ITheatre = { name: "Apollo Theatre" };
-export const APOLLO_VICTORIA: ITheatre = {
+export const ADELPHI: Theatre = { name: "Adelphi Theatre" };
+export const APOLLO: Theatre = { name: "Apollo Theatre" };
+export const APOLLO_VICTORIA: Theatre = {
   name: "Apollo Victoria Theatre"
 };
-export const BRIDGE: ITheatre = { name: "Bridge Theatre" };
-export const CAMBRIDGE: ITheatre = { name: "Cambridge Theatre" };
-export const DUKE_OF_YORKS: ITheatre = { name: "Duke of York's Theatre" };
-export const GIELGUD: ITheatre = { name: "Gielgud Theatre" };
-export const HAROLD_PINTER: ITheatre = { name: "Harold Pinter Theatre" };
-export const LYRIC: ITheatre = { name: "Lyric Hammersmith" };
-export const NATIONAL: ITheatre = { name: "National Theatre" };
-export const NOEL_COWARD: ITheatre = { name: "Noël Coward Theatre" };
-export const OLD_RED_LION: ITheatre = { name: "Old Red Lion Theatre" };
-export const OLD_VIC: ITheatre = { name: "Old Vic, The" };
-export const PLAYHOUSE: ITheatre = { name: "Playhouse Theatre" };
-export const ROYAL_HAYMARKET: ITheatre = {
+export const BRIDGE: Theatre = { name: "Bridge Theatre" };
+export const CAMBRIDGE: Theatre = { name: "Cambridge Theatre" };
+export const DUKE_OF_YORKS: Theatre = { name: "Duke of York's Theatre" };
+export const GIELGUD: Theatre = { name: "Gielgud Theatre" };
+export const HAROLD_PINTER: Theatre = { name: "Harold Pinter Theatre" };
+export const LYRIC: Theatre = { name: "Lyric Hammersmith" };
+export const NATIONAL: Theatre = { name: "National Theatre" };
+export const NOEL_COWARD: Theatre = { name: "Noël Coward Theatre" };
+export const OLD_RED_LION: Theatre = { name: "Old Red Lion Theatre" };
+export const OLD_VIC: Theatre = { name: "Old Vic, The" };
+export const PLAYHOUSE: Theatre = { name: "Playhouse Theatre" };
+export const ROYAL_HAYMARKET: Theatre = {
   name: "Theatre Royal Haymarket"
 };
-export const TRAFALGAR_STUDIOS: ITheatre = { name: "Trafalgar Studios" };
-export const WATERLOO_EAST: ITheatre = { name: "Waterloo East Theatre" };
-export const WHITE_BEAR: ITheatre = { name: "White Bear Theatre" };
+export const TRAFALGAR_STUDIOS: Theatre = { name: "Trafalgar Studios" };
+export const WATERLOO_EAST: Theatre = { name: "Waterloo East Theatre" };
+export const WHITE_BEAR: Theatre = { name: "White Bear Theatre" };

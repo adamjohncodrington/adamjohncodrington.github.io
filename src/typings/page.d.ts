@@ -6,19 +6,19 @@ interface IPage extends I__Hide {
   title: string;
   path: string;
   SvgIcon: ISvgIcon;
-  sections: IPageSection[];
+  sections: PageSectionProps[];
   count?: number;
   color?: ColorValue;
 }
 
 interface IPageSectionItemDataTypes {
   musicEvents?: IMusicEvent[];
-  theatreVisits?: ITheatreVisit[];
+  theatreVisits?: TheatreVisit[];
   tripLegs?: ITripLeg[];
   travelVideos?: ITravelVideo[];
   vinyls?: IAlbum[];
-  festivals?: IFestival[];
-  gigs?: IGig[];
+  festivals?: Festival[];
+  gigs?: Gig[];
 }
 
 interface ICosts {
@@ -31,12 +31,12 @@ interface IPageSectionPanelDataTypes {
   comingSoon?: boolean;
   costs?: ICosts;
   cards?: ICard[];
-  miniCards?: IMiniCard[];
+  miniCards?: MiniCardProps[];
   recipes?: IRecipe[];
   photoGrid?: IPhotoGrid;
 }
 
-interface IPageSection extends I__AutoExpand, I__Hide {
+interface PageSectionProps extends I__AutoExpand, I__Hide {
   title: string;
   shuffle?: boolean;
   SvgIcon?: ISvgIcon;

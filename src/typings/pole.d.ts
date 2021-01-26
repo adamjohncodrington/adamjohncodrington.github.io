@@ -9,13 +9,13 @@ type IPoleCategory =
   | "quarantine"
   | "tricks";
 
-interface IPoleStudio extends ILocation {
+interface PoleStudio extends LocationProps {
   shortName?: string;
   branch?: string;
 }
 
 interface IPoleVideo extends I_Video {
-  studio: IPoleStudio;
+  studio: PoleStudio;
   category: IPoleCategory;
 }
 
@@ -25,7 +25,7 @@ interface IPoleTricksVideo extends IPoleVideo, I_StartEndDates {
 
 interface IPoleRoutine extends IPoleVideo {
   date: Date;
-  song: ISong;
+  song: Song;
   choreographer: IPoleInstructor;
 }
 

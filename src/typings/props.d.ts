@@ -11,7 +11,7 @@ interface I__Insignificant {
 }
 
 interface IGift {
-  from: IFriend;
+  from: Friend;
 }
 
 interface I__Gift {
@@ -49,7 +49,7 @@ interface I_Company {
 }
 
 interface I__Company {
-  company?: IFriend[];
+  company?: Friend[];
 }
 
 interface I__Date {

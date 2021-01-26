@@ -12,14 +12,14 @@ import { vinylColorIsSpecial } from "./vinyl";
 
 const { BLACK, GRAY_DARK } = COLORS;
 
-const sortCompany = (company: IPerson[]): IFriend[] =>
-  company.sort((a: IFriend, b: IFriend): number =>
+const sortCompany = (company: IPerson[]): Friend[] =>
+  company.sort((a: Friend, b: Friend): number =>
     a.initials.localeCompare(b.initials)
   );
 
-const getCompanySymbols = (company: IPerson[]): ISymbol[] =>
+const getCompanySymbols = (company: IPerson[]): SymbolProps[] =>
   sortCompany(company).map(
-    ({ initials }: IFriend): ISymbol => ({
+    ({ initials }: Friend): SymbolProps => ({
       background: GRAY_DARK,
       contents: { text: initials }
     })
@@ -56,7 +56,7 @@ interface IGetSymbols
 const addVinylColorSymbol = (
   colors: string[],
   vinyl: IVinylExtraCopy,
-  symbols: ISymbol[]
+  symbols: SymbolProps[]
 ): void => {
   if (vinylColorIsSpecial(colors))
     symbols.push({
@@ -77,8 +77,8 @@ export const getSymbols = ({
   gift,
   poleCategory,
   video
-}: IGetSymbols): ISymbol[] => {
-  let symbols: ISymbol[] = [];
+}: IGetSymbols): SymbolProps[] => {
+  let symbols: SymbolProps[] = [];
 
   if (vinyl) {
     const { colors, extraCopy } = vinyl;

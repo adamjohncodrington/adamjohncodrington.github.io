@@ -4,15 +4,15 @@ import { getItemCounts } from "utils";
 
 import { mapAlbumToPhoto } from "./utils";
 
-const getMusicianMatches = (musician: IMusician): IVinyl[] =>
+const getMusicianMatches = (musician: Musician): IVinyl[] =>
   DATA.reduce(
     (matches: IVinyl[], vinyl: IVinyl): IVinyl[] =>
       vinyl.musician === musician ? [...matches, vinyl] : matches,
     []
   );
 
-export const MUSICIANS: IMiniCard[] = Object.values(musicians).map(
-  (musician: IMusician): IMiniCard => {
+export const MUSICIANS: MiniCardProps[] = Object.values(musicians).map(
+  (musician: Musician): MiniCardProps => {
     const { name, previousStageName } = musician;
     const photos: IPhoto[] = getMusicianMatches(musician).map(
       (vinyl: IVinyl): IPhoto => mapAlbumToPhoto(vinyl)

@@ -1,4 +1,4 @@
-interface IVillage extends ILocation {}
+interface IVillage extends LocationProps {}
 
 interface IVillagesPeru {
   HUACACHINA: IVillage;

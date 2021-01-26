@@ -11,12 +11,12 @@ export const FESTIVALS_W_VIDEOS: IFestivalWithVideo[] = Object.values(
   festivals_w_videos
 );
 
-export const FESTIVALS: IFestival[] = Object.values({
+export const FESTIVALS: Festival[] = Object.values({
   ...festivals_w_videos,
   ...festivals_wo_videos
 });
 
-export const GIGS: IGig[] = Object.values({
+export const GIGS: Gig[] = Object.values({
   ...GIGS_2006_2010,
   ...GIGS_2011_2013,
   ...GIGS_2014_2016,

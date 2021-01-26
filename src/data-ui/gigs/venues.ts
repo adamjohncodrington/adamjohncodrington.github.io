@@ -2,16 +2,14 @@ import { MUSIC_VENUES as venues } from "@constants";
 import { MUSIC_EVENTS as DATA } from "data-raw";
 import { getItemCounts } from "utils";
 
-const getMusicVenueMatches = (musicVenue: IMusicVenue): IMusicEvent[] =>
+const getMusicVenueMatches = (musicVenue: MusicVenue): IMusicEvent[] =>
   DATA.reduce(
     (matches: IMusicEvent[], musicEvent: IMusicEvent): IMusicEvent[] =>
       musicEvent.venue === musicVenue ? [...matches, musicEvent] : matches,
     []
   );
 
-const getMusicVenueDetails = (
-  musicVenue: IMusicVenue
-): IMiniCardPanelDetail[] =>
+const getMusicVenueDetails = (musicVenue: MusicVenue): IMiniCardPanelDetail[] =>
   getMusicVenueMatches(musicVenue).map(
     ({ title, dates, video }: IMusicEvent): IMiniCardPanelDetail => ({
       mainText: [title],
@@ -21,8 +19,8 @@ const getMusicVenueDetails = (
     })
   );
 
-export const VENUES: IMiniCard[] = Object.values(venues).map(
-  (musicVenue: IMusicVenue): IMiniCard => {
+export const VENUES: MiniCardProps[] = Object.values(venues).map(
+  (musicVenue: MusicVenue): MiniCardProps => {
     const { name, favourite } = musicVenue;
     const {
       pastCount: primaryCount,

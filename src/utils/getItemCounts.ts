@@ -3,17 +3,17 @@ import { isInFuture } from "./basic";
 interface IGetItemCounts {
   data: IPageSectionItemDataTypes;
   item: {
-    actor?: IActor;
+    actor?: Actor;
     attraction?: IAttraction;
     city?: ICity;
     country?: ICountryTemplate;
-    festival?: IFestivalTitle;
-    friend?: IFriend;
+    festival?: FestivalTitle;
+    friend?: Friend;
     island?: IIsland;
-    musician?: IMusician;
-    musicVenue?: IMusicVenue;
-    play?: IPlay;
-    theatre?: ITheatre;
+    musician?: Musician;
+    musicVenue?: MusicVenue;
+    play?: Play;
+    theatre?: Theatre;
   };
 }
 
@@ -106,7 +106,7 @@ export const getItemCounts = ({
 
   festivals &&
     festivalToMatch &&
-    festivals.forEach(({ title, dates }: IFestival): void => {
+    festivals.forEach(({ title, dates }: Festival): void => {
       if (festivalToMatch === title) {
         incremementPastOrFutureCount(dates[0]);
       }
@@ -145,7 +145,7 @@ export const getItemCounts = ({
 
   theatreVisits &&
     (actorToMatch || friendToMatch || playToMatch || theatreToMatch) &&
-    theatreVisits.forEach((theatreVisit: ITheatreVisit): void => {
+    theatreVisits.forEach((theatreVisit: TheatreVisit): void => {
       const { cast, company, date, play, theatre } = theatreVisit;
       if (
         (actorToMatch && cast && cast.includes(actorToMatch)) ||

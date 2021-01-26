@@ -73,7 +73,7 @@ const method: string[] = [
 
 const title: string = "Baked Beans";
 const makes: IRecipeMakes = { quantity: 4, measurement: MEASUREMENTS.PORTION };
-const diet: IRecipeDiet = DIETS.VEGAN;
+const diet: RecipeDiet = DIETS.VEGAN;
 const photo: IPhoto = PHOTOS.RECIPES.BAKED_BEANS;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);

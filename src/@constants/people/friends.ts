@@ -1,23 +1,23 @@
 // Organisations
-export const CFS: IFriend = { name: "Colonel Frank Seely", initials: "CFS" };
-export const JHC: IFriend = { name: "JHC", initials: "JHC" };
+export const CFS: Friend = { name: "Colonel Frank Seely", initials: "CFS" };
+export const JHC: Friend = { name: "JHC", initials: "JHC" };
 
 // Family
-export const DAD: IFriend = {
+export const DAD: Friend = {
   name: "Dad",
   initials: "D",
   gigs: true,
   theatre: true,
   travel: true
 };
-export const MUM: IFriend = {
+export const MUM: Friend = {
   name: "Mum",
   initials: "M",
   gigs: true,
   theatre: true,
   travel: true
 };
-export const EMMA_CODRINGTON: IFriend = {
+export const EMMA_CODRINGTON: Friend = {
   name: "Emma Codrington",
   initials: "EC",
   gigs: true,
@@ -26,224 +26,224 @@ export const EMMA_CODRINGTON: IFriend = {
 };
 
 // Friends
-export const AISHA_SAEED: IFriend = { name: "Aisha Saeed", initials: "AS" };
-export const ALEX_FAYE: IFriend = { name: "Alex-Faye Grundy", initials: "AG" };
-export const ALICE_RODER: IFriend = { name: "Alice Roder", initials: "AR" };
-export const AMY_BAGNI: IFriend = { name: "Amy Bagni", initials: "AB" };
-export const AMY_CALCUTT: IFriend = { name: "Amy Calcutt", initials: "AC" };
-export const ANNIE_BUTCHER: IFriend = { name: "Annie Butcher", initials: "AB" };
-export const ASH_MORETON: IFriend = { name: "Ash Moreton", initials: "AM" };
-export const BECKY_MILLS: IFriend = { name: "Becky Mills", initials: "BM" };
-export const BETH_OAKES: IFriend = { name: "Beth Oakes", initials: "BO" };
-export const BETH_SHEARS: IFriend = { name: "Beth Shears", initials: "BS" };
-export const BETH_SPELLER: IFriend = { name: "Beth Speller", initials: "BS" };
-export const BLAINE_PEARSON: IFriend = {
+export const AISHA_SAEED: Friend = { name: "Aisha Saeed", initials: "AS" };
+export const ALEX_FAYE: Friend = { name: "Alex-Faye Grundy", initials: "AG" };
+export const ALICE_RODER: Friend = { name: "Alice Roder", initials: "AR" };
+export const AMY_BAGNI: Friend = { name: "Amy Bagni", initials: "AB" };
+export const AMY_CALCUTT: Friend = { name: "Amy Calcutt", initials: "AC" };
+export const ANNIE_BUTCHER: Friend = { name: "Annie Butcher", initials: "AB" };
+export const ASH_MORETON: Friend = { name: "Ash Moreton", initials: "AM" };
+export const BECKY_MILLS: Friend = { name: "Becky Mills", initials: "BM" };
+export const BETH_OAKES: Friend = { name: "Beth Oakes", initials: "BO" };
+export const BETH_SHEARS: Friend = { name: "Beth Shears", initials: "BS" };
+export const BETH_SPELLER: Friend = { name: "Beth Speller", initials: "BS" };
+export const BLAINE_PEARSON: Friend = {
   name: "Blaine Pearson",
   initials: "BP"
 };
-export const CAITY_DALBY: IFriend = { name: "Caity Dalby", initials: "CD" };
-export const CAITLIN_MCCAIG: IFriend = {
+export const CAITY_DALBY: Friend = { name: "Caity Dalby", initials: "CD" };
+export const CAITLIN_MCCAIG: Friend = {
   name: "Caitlin McCaig",
   initials: "CM",
   gigs: true
 };
-export const CARMEN_DALGLISH: IFriend = {
+export const CARMEN_DALGLISH: Friend = {
   name: "Carmen Dalglish",
   initials: "CD"
 };
-export const CAMERON_BLACKBURN: IFriend = {
+export const CAMERON_BLACKBURN: Friend = {
   name: "Cameron Blackburn",
   initials: "CB"
 };
-export const CHELSEA_CUNNINGHAM: IFriend = {
+export const CHELSEA_CUNNINGHAM: Friend = {
   name: "Chelsea Cunningham",
   initials: "CC"
 };
-export const CHLOE_WHITE: IFriend = { name: "Chloé White", initials: "CW" };
-export const CHRISTELLE_MUTUNDA: IFriend = {
+export const CHLOE_WHITE: Friend = { name: "Chloé White", initials: "CW" };
+export const CHRISTELLE_MUTUNDA: Friend = {
   name: "Christelle Mutunda",
   initials: "CM"
 };
-export const COBY_BLACKBURN: IFriend = {
+export const COBY_BLACKBURN: Friend = {
   name: "Coby Blackburn",
   initials: "CB"
 };
-export const COURTNEY_LAWSON: IFriend = {
+export const COURTNEY_LAWSON: Friend = {
   name: "Courtney Lawson",
   initials: "CL"
 };
-export const DARREN_TAYLOR: IFriend = {
+export const DARREN_TAYLOR: Friend = {
   name: "Darren Taylor",
   initials: "DT",
   gigs: true,
   theatre: true
 };
-export const LUCY_TWAITE: IFriend = { name: "Lucy Twaite", initials: "LT" };
-export const DAN_SPARROW: IFriend = {
+export const LUCY_TWAITE: Friend = { name: "Lucy Twaite", initials: "LT" };
+export const DAN_SPARROW: Friend = {
   name: "Dan Sparrow",
   initials: "DS",
   gigs: true,
   theatre: true,
   travel: true
 };
-export const DOM_COYNE: IFriend = {
+export const DOM_COYNE: Friend = {
   name: "Dominic Coyne",
   initials: "DC",
   theatre: true
 };
-export const ELLE_OLDROYD: IFriend = { name: "Elle Oldroyd", initials: "EO" };
-export const ELINORE_GILLESPIE: IFriend = {
+export const ELLE_OLDROYD: Friend = { name: "Elle Oldroyd", initials: "EO" };
+export const ELINORE_GILLESPIE: Friend = {
   name: "Elinore Gillespie",
   initials: "EG"
 };
-export const ELISE_MORLEY: IFriend = { name: "Elise Morley", initials: "EM" };
-export const ELLIE_FORMAN: IFriend = { name: "Ellie Forman", initials: "EF" };
-export const ELLIE_GURKIN: IFriend = { name: "Ellie Gurkin", initials: "EG" };
-export const ELLIE_PEARCE: IFriend = { name: "Ellie Pearce", initials: "EP" };
-export const ELLIE_SPANOVIC: IFriend = {
+export const ELISE_MORLEY: Friend = { name: "Elise Morley", initials: "EM" };
+export const ELLIE_FORMAN: Friend = { name: "Ellie Forman", initials: "EF" };
+export const ELLIE_GURKIN: Friend = { name: "Ellie Gurkin", initials: "EG" };
+export const ELLIE_PEARCE: Friend = { name: "Ellie Pearce", initials: "EP" };
+export const ELLIE_SPANOVIC: Friend = {
   name: "Ellie Spanovic",
   initials: "ES"
 };
-export const FANNY_LINDQVIST: IFriend = {
+export const FANNY_LINDQVIST: Friend = {
   name: "Fanny Lindqvist",
   initials: "FL"
 };
-export const GEMMA_GILDERTHORP: IFriend = {
+export const GEMMA_GILDERTHORP: Friend = {
   name: "Gemma Gilderthorp",
   initials: "GG"
 };
-export const GEORGE_LITTLEHALES: IFriend = {
+export const GEORGE_LITTLEHALES: Friend = {
   name: "George Littlehales",
   initials: "GL"
 };
-export const GRACE_HULME: IFriend = { name: "Grace Hulme", initials: "GH" };
-export const HANNA_FROGNER: IFriend = { name: "Hanna Frogner", initials: "HF" };
-export const HARRIET_BOYLE: IFriend = { name: "Harriet Boyle", initials: "HB" };
-export const HARRIET_KESTERTON: IFriend = {
+export const GRACE_HULME: Friend = { name: "Grace Hulme", initials: "GH" };
+export const HANNA_FROGNER: Friend = { name: "Hanna Frogner", initials: "HF" };
+export const HARRIET_BOYLE: Friend = { name: "Harriet Boyle", initials: "HB" };
+export const HARRIET_KESTERTON: Friend = {
   name: "Harriet Kesterton",
   initials: "HK"
 };
-export const HEATHER_CHILES: IFriend = {
+export const HEATHER_CHILES: Friend = {
   name: "Heather Chiles",
   initials: "HC"
 };
-export const JAIMINI_POPAT: IFriend = { name: "Jaimini Popat", initials: "JP" };
-export const JAMIE_HALKET: IFriend = {
+export const JAIMINI_POPAT: Friend = { name: "Jaimini Popat", initials: "JP" };
+export const JAMIE_HALKET: Friend = {
   name: "Jamie Halket",
   initials: "JH",
   gigs: true,
   theatre: true
 };
-export const JAZZ_THIND: IFriend = { name: "Jasminder Thind", initials: "JT" };
-export const JERRY_EDWARDS: IFriend = {
+export const JAZZ_THIND: Friend = { name: "Jasminder Thind", initials: "JT" };
+export const JERRY_EDWARDS: Friend = {
   name: "Jerry Edwards",
   initials: "JE",
   gigs: true,
   theatre: true
 };
-export const JOE_EDWARDS: IFriend = { name: "Joe Edwards", initials: "JE" };
-export const JESS_SMITH: IFriend = { name: "Jess Smith", initials: "JS" };
-export const JUNAID_KHAN: IFriend = { name: "Junaid Khan", initials: "JK" };
-export const KATE_BOWMAR: IFriend = { name: "Kate Bowmar", initials: "KB" };
-export const KIERAN_SAWFORD: IFriend = {
+export const JOE_EDWARDS: Friend = { name: "Joe Edwards", initials: "JE" };
+export const JESS_SMITH: Friend = { name: "Jess Smith", initials: "JS" };
+export const JUNAID_KHAN: Friend = { name: "Junaid Khan", initials: "JK" };
+export const KATE_BOWMAR: Friend = { name: "Kate Bowmar", initials: "KB" };
+export const KIERAN_SAWFORD: Friend = {
   name: "Kieran Sawford",
   initials: "KS"
 };
-export const KIRSTEN_JACKSON: IFriend = {
+export const KIRSTEN_JACKSON: Friend = {
   name: "Kirsten Jackson",
   initials: "KJ"
 };
-export const KYLE_HOUGH: IFriend = { name: "Kyle Hough", initials: "KH" };
-export const LAURA_CAPECE_GALEOTA: IFriend = {
+export const KYLE_HOUGH: Friend = { name: "Kyle Hough", initials: "KH" };
+export const LAURA_CAPECE_GALEOTA: Friend = {
   name: "Laura Capece-Galeota",
   initials: "LC"
 };
-export const LEAH_SLATER_RADWAY: IFriend = {
+export const LEAH_SLATER_RADWAY: Friend = {
   name: "Leah Slater-Radway",
   initials: "LS"
 };
-export const LEWIS_STEADMAN: IFriend = {
+export const LEWIS_STEADMAN: Friend = {
   name: "Lewis Steadman",
   initials: "LS",
   gigs: true,
   theatre: true
 };
-export const LINDSAY_ASPINALL: IFriend = {
+export const LINDSAY_ASPINALL: Friend = {
   name: "Lindsay Aspinall",
   initials: "LA"
 };
-export const LINDSEY_SKELTON: IFriend = {
+export const LINDSEY_SKELTON: Friend = {
   name: "Lindsey Skelton",
   initials: "LS"
 };
-export const LOUISE_BLACKBURN: IFriend = {
+export const LOUISE_BLACKBURN: Friend = {
   name: "Louise Blackburn",
   initials: "LB"
 };
-export const LUKE_JONES: IFriend = { name: "Luke Jones", initials: "LJ" };
-export const LUKE_STERN: IFriend = { name: "Luke Stern", initials: "LS" };
-export const MARIA_TAYLOR: IFriend = {
+export const LUKE_JONES: Friend = { name: "Luke Jones", initials: "LJ" };
+export const LUKE_STERN: Friend = { name: "Luke Stern", initials: "LS" };
+export const MARIA_TAYLOR: Friend = {
   name: "Maria Taylor",
   initials: "MT",
   theatre: true
 };
-export const MEGAN_BLACKBURN: IFriend = {
+export const MEGAN_BLACKBURN: Friend = {
   name: "Megan Blackburn",
   initials: "MB",
   gigs: true
 };
 
-export const NATALIE_LAMBERT: IFriend = {
+export const NATALIE_LAMBERT: Friend = {
   name: "Natalie Lambert",
   initials: "NL"
 };
-export const NAV_BHOGAL: IFriend = { name: "Navneet Bhogal", initials: "NB" };
-export const OSCAR_MURRAY: IFriend = { name: "Oscar Murray", initials: "OM" };
-export const PATRICIA_DIACONESCU: IFriend = {
+export const NAV_BHOGAL: Friend = { name: "Navneet Bhogal", initials: "NB" };
+export const OSCAR_MURRAY: Friend = { name: "Oscar Murray", initials: "OM" };
+export const PATRICIA_DIACONESCU: Friend = {
   name: "Patricia Diaconescu",
   initials: "PD"
 };
-export const POOJA_DHIR: IFriend = { name: "Pooja Dhir", initials: "PD" };
-export const POPPY_SMITH: IFriend = { name: "Poppy Smith", initials: "PS" };
-export const ROB_GALL: IFriend = { name: "Robert Gall", initials: "RG" };
-export const RYAN_MILLS: IFriend = {
+export const POOJA_DHIR: Friend = { name: "Pooja Dhir", initials: "PD" };
+export const POPPY_SMITH: Friend = { name: "Poppy Smith", initials: "PS" };
+export const ROB_GALL: Friend = { name: "Robert Gall", initials: "RG" };
+export const RYAN_MILLS: Friend = {
   name: "Ryan Mills",
   initials: "RM",
   gigs: true
 };
-export const SAM_BERRIE: IFriend = { name: "Sam Berrie", initials: "SB" };
-export const SARAH_WALKER: IFriend = { name: "Sarah Walker", initials: "SW" };
-export const SARAH_WHITAKER: IFriend = {
+export const SAM_BERRIE: Friend = { name: "Sam Berrie", initials: "SB" };
+export const SARAH_WALKER: Friend = { name: "Sarah Walker", initials: "SW" };
+export const SARAH_WHITAKER: Friend = {
   name: "Sarah Whitaker",
   initials: "SW"
 };
-export const SIAN_RODWAY_SMITH: IFriend = {
+export const SIAN_RODWAY_SMITH: Friend = {
   name: "Sian Rodway-Smith",
   initials: "SR",
   gigs: true,
   theatre: true,
   travel: true
 };
-export const SIMAN_PONE: IFriend = { name: "Siman Pone", initials: "SP" };
-export const SONYA_PARDI: IFriend = {
+export const SIMAN_PONE: Friend = { name: "Siman Pone", initials: "SP" };
+export const SONYA_PARDI: Friend = {
   name: "Sonya Pardi",
   initials: "SP",
   gigs: true
 };
-export const STEVE_RICHARDS: IFriend = {
+export const STEVE_RICHARDS: Friend = {
   name: "Steve Richards",
   initials: "SR"
 };
-export const THOM_STEPHANAKIS: IFriend = {
+export const THOM_STEPHANAKIS: Friend = {
   name: "Thom Stephanakis",
   initials: "TS"
 };
-export const TOM_CHINDA_COUTTS: IFriend = {
+export const TOM_CHINDA_COUTTS: Friend = {
   name: "Tom Chinda-Coutts",
   initials: "TC",
   gigs: true
 };
-export const TONYA_FRANCE: IFriend = {
+export const TONYA_FRANCE: Friend = {
   name: "Tonya France",
   initials: "TF",
   gigs: true,

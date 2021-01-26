@@ -1,4 +1,4 @@
-const KEY_WEST: ILocation = { name: "Key West" };
+const KEY_WEST: LocationProps = { name: "Key West" };
 
 const attractions: IAttractionsUSA = {
   ALCATRAZ_PRISON: { name: "Alcatraz Federal Penitentiary", highlight: true },

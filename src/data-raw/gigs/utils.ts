@@ -7,8 +7,8 @@ import {
   getFestivalSubtitle
 } from "utils";
 
-export const mapGigsToMusicEvents = (gigs: IGig[]): IMusicEvent[] => {
-  const mapGigToMusicEvent = (gig: IGig): IMusicEvent => ({
+export const mapGigsToMusicEvents = (gigs: Gig[]): IMusicEvent[] => {
+  const mapGigToMusicEvent = (gig: Gig): IMusicEvent => ({
     ...gig,
     gig,
     dates: [gig.date],
@@ -16,13 +16,13 @@ export const mapGigsToMusicEvents = (gigs: IGig[]): IMusicEvent[] => {
     subtitle: getGigSubtitle(gig),
     musicians: getGigMusicians(gig)
   });
-  return gigs.map((gig: IGig): IMusicEvent => mapGigToMusicEvent(gig));
+  return gigs.map((gig: Gig): IMusicEvent => mapGigToMusicEvent(gig));
 };
 
 export const mapFestivalsToMusicEvents = (
-  festivals: IFestival[]
+  festivals: Festival[]
 ): IMusicEvent[] => {
-  const mapFestivalToMusicEvent = (festival: IFestival): IMusicEvent => ({
+  const mapFestivalToMusicEvent = (festival: Festival): IMusicEvent => ({
     ...festival,
     festival,
     title: getFestivalTitle(festival),
@@ -30,6 +30,6 @@ export const mapFestivalsToMusicEvents = (
     musicians: getFestivalMusicians(festival)
   });
   return festivals.map(
-    (festival: IFestival): IMusicEvent => mapFestivalToMusicEvent(festival)
+    (festival: Festival): IMusicEvent => mapFestivalToMusicEvent(festival)
   );
 };

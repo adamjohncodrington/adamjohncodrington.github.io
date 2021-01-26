@@ -63,7 +63,7 @@ const method: string[] = [
 ];
 
 const title: string = "Pesto";
-const diet: IRecipeDiet = DIETS.VEGAN;
+const diet: RecipeDiet = DIETS.VEGAN;
 const makes: IRecipeMakes = { quantity: 100, measurement: MEASUREMENTS.GRAM };
 
 const totalCost: number = calculateRecipeCost(ingredients, title);

@@ -5,7 +5,7 @@ import * as travel_2014_2016 from "./travel-2014-2016";
 import * as travel_2017_2019 from "./travel-2017-2019";
 import * as travel_2020_2022 from "./travel-2020-2022";
 
-export const TRIPS: ITrip[] = Object.values({
+export const TRIPS: Trip[] = Object.values({
   ...travel_1997_2004,
   ...travel_2005_2009,
   ...travel_2010_2013,

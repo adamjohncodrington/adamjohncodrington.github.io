@@ -1,7 +1,7 @@
 import { arrayToString, moveTheSuffixToPrefix } from "./basic";
 
 interface IGetMusicianStageNameAtTime {
-  musician: IMusician;
+  musician: Musician;
   year: number;
 }
 export const getMusicianStageNameAtTime = ({
@@ -15,37 +15,37 @@ export const getMusicianStageNameAtTime = ({
   return name;
 };
 
-export const getGigTitle = ({ headline, date }: IGig): string =>
+export const getGigTitle = ({ headline, date }: Gig): string =>
   getMusicianStageNameAtTime({
     musician: headline,
     year: date.getFullYear()
   });
 
-export const getFestivalTitle = ({ title }: IFestival): string => title.name;
+export const getFestivalTitle = ({ title }: Festival): string => title.name;
 
-export const getGigSubtitle = ({ support }: IGig): string | undefined =>
+export const getGigSubtitle = ({ support }: Gig): string | undefined =>
   support &&
   arrayToString(
-    support.map(({ name }: IMusician): string => moveTheSuffixToPrefix(name))
+    support.map(({ name }: Musician): string => moveTheSuffixToPrefix(name))
   );
 
-export const getFestivalSubtitle = ({ lineup }: IFestival): string =>
+export const getFestivalSubtitle = ({ lineup }: Festival): string =>
   lineup[0].length > 0
     ? arrayToString(
         lineup
           .flat()
-          .map(({ name }: IMusician): string => moveTheSuffixToPrefix(name))
+          .map(({ name }: Musician): string => moveTheSuffixToPrefix(name))
       )
     : "TBC";
 
 export const getTheatreVisitTitle = ({
   play: { name }
-}: ITheatreVisit): string => name;
+}: TheatreVisit): string => name;
 
 export const getTheatreVisitSubtitle = ({
   cast
-}: ITheatreVisit): string | undefined =>
-  cast && arrayToString(cast.map(({ name }: IActor): string => name));
+}: TheatreVisit): string | undefined =>
+  cast && arrayToString(cast.map(({ name }: Actor): string => name));
 
 export const getTripTitle = ({
   country,
@@ -57,7 +57,7 @@ export const getTripTitle = ({
     : primaryLocations
     ? arrayToString(
         primaryLocations.map(
-          ({ shortName, name }: ILocation) => shortName || name
+          ({ shortName, name }: LocationProps) => shortName || name
         ),
         { useAmpersandsForPair: true }
       )
@@ -72,7 +72,7 @@ export const getTripSubtitle = ({
     ? primaryLocations &&
       arrayToString(
         primaryLocations.map(
-          ({ shortName, name }: ILocation) => shortName || name
+          ({ shortName, name }: LocationProps) => shortName || name
         ),
         { useAmpersandsForPair: true }
       )
@@ -82,15 +82,15 @@ export const getTripBody = ({
   secondaryLocations
 }: ITripLeg): string | undefined =>
   secondaryLocations &&
-  arrayToString(secondaryLocations.map(({ name }: ILocation) => name));
+  arrayToString(secondaryLocations.map(({ name }: LocationProps) => name));
 
-export const getGigMusicians = ({ headline, support }: IGig): IMusician[] => {
-  const musicians: IMusician[] = [];
+export const getGigMusicians = ({ headline, support }: Gig): Musician[] => {
+  const musicians: Musician[] = [];
 
   musicians.push(headline);
 
   if (support && support.length > 0) {
-    support.forEach((supportAct: IMusician): void => {
+    support.forEach((supportAct: Musician): void => {
       musicians.push(supportAct);
     });
   }
@@ -98,11 +98,11 @@ export const getGigMusicians = ({ headline, support }: IGig): IMusician[] => {
   return musicians;
 };
 
-export const getFestivalMusicians = ({ lineup }: IFestival): IMusician[] => {
-  const musicians: IMusician[] = [];
+export const getFestivalMusicians = ({ lineup }: Festival): Musician[] => {
+  const musicians: Musician[] = [];
 
-  lineup.forEach((day: IMusician[]): void => {
-    day.forEach((musician: IMusician): void => {
+  lineup.forEach((day: Musician[]): void => {
+    day.forEach((musician: Musician): void => {
       musicians.push(musician);
     });
   });

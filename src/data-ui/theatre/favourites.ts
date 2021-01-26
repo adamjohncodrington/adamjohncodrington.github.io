@@ -1,5 +1,5 @@
 import { THEATRE as DATA } from "data-raw";
 
-export const FAVOURITES: ITheatreVisit[] = DATA.filter(
-  ({ favourite }: ITheatreVisit): boolean => !!favourite
+export const FAVOURITES: TheatreVisit[] = DATA.filter(
+  ({ favourite }: TheatreVisit): boolean => !!favourite
 );

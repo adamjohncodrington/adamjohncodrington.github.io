@@ -42,8 +42,8 @@ const getInstructorDetails = (
   )
 ];
 
-export const INSTRUCTORS: IMiniCard[] = Object.values(instructors).map(
-  (instructor: IPoleInstructor): IMiniCard => {
+export const INSTRUCTORS: MiniCardProps[] = Object.values(instructors).map(
+  (instructor: IPoleInstructor): MiniCardProps => {
     const { name, stageName } = instructor;
     const details: IMiniCardPanelDetail[] = getInstructorDetails(instructor);
     const instructorName: string = stageName || name;

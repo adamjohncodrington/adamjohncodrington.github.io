@@ -90,7 +90,7 @@ const method: string[] = [
 
 const title: string = "Lemon Drizzle";
 const makes: IRecipeMakes = { quantity: 10, measurement: MEASUREMENTS.SLICE };
-const diet: IRecipeDiet = DIETS.VEGAN;
+const diet: RecipeDiet = DIETS.VEGAN;
 
 export const LEMON_DRIZZLE: IRecipe = {
   title,

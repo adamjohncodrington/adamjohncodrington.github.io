@@ -12,8 +12,8 @@ const generateCities = (): { [city: string]: ICity } => {
 
 export const cities = generateCities();
 
-export const CITIES: IMiniCard[] = Object.values(cities).map(
-  (city: ICity): IMiniCard => {
+export const CITIES: MiniCardProps[] = Object.values(cities).map(
+  (city: ICity): MiniCardProps => {
     const { name, capital, insignificant } = city;
     const {
       pastCount: primaryCount,

@@ -2,11 +2,11 @@ import { MUSICIANS } from "@constants";
 import { MUSIC_EVENTS as DATA } from "data-raw";
 import { getItemCounts } from "utils";
 
-interface IMusicianCounted extends IMusician, I_PastFutureCounts {}
+interface IMusicianCounted extends Musician, I_PastFutureCounts {}
 
 const musiciansForBucketList = Object.values(MUSICIANS)
   .map(
-    (musician: IMusician): IMusicianCounted => ({
+    (musician: Musician): IMusicianCounted => ({
       ...musician,
       ...getItemCounts({ item: { musician }, data: { musicEvents: DATA } })
     })
@@ -24,8 +24,8 @@ const musiciansForBucketList = Object.values(MUSICIANS)
       !excludeFromBucketList
   );
 
-export const BUCKET_LIST: IMiniCard[] = musiciansForBucketList.map(
-  ({ name, favourite }: IMusicianCounted): IMiniCard => ({
+export const BUCKET_LIST: MiniCardProps[] = musiciansForBucketList.map(
+  ({ name, favourite }: IMusicianCounted): MiniCardProps => ({
     sort: [name],
     primaryText: name,
     favourite

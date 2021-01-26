@@ -112,7 +112,7 @@ const method: string[] = [
 const title: string = "Bolognese";
 const makes: IRecipeMakes = { quantity: 5, measurement: MEASUREMENTS.PORTION };
 const photo: IPhoto = PHOTOS.RECIPES.BOLOGNESE;
-const diet: IRecipeDiet = DIETS.VEGAN;
+const diet: RecipeDiet = DIETS.VEGAN;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;

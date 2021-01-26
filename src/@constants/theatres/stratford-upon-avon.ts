@@ -1,3 +1,3 @@
-export const ROYAL_SHAKESPEARE: ITheatre = {
+export const ROYAL_SHAKESPEARE: Theatre = {
   name: "Royal Shakespeare Theatre"
 };

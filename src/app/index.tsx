@@ -10,8 +10,8 @@ export const App: FC = () => (
 
     <Switch>
       {PAGES.filter(({ hide }: IPage): boolean => !hide).map(
-        ({ path, sections }: IPage, index: number) => (
-          <Route key={index} path={path}>
+        ({ path, sections }: IPage, i: number) => (
+          <Route key={i} path={path}>
             <PageSections sections={sections} />
           </Route>
         )

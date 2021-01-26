@@ -6,8 +6,8 @@ interface ICard extends I__Photos, I_Sort, I__Favourite, I__Video {
   disclaimer?: string;
 
   headerPhoto?: IPhoto;
-  symbols?: ISymbol[];
+  symbols?: SymbolProps[];
   year: number;
 }
 
-interface ICardHeader extends ICard, IDisclosureHeader {}
+interface CardHeaderProps extends ICard, IDisclosureHeader {}

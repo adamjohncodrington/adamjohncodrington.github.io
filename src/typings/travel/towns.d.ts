@@ -1,4 +1,4 @@
-interface ITown extends ILocation {}
+interface ITown extends LocationProps {}
 
 interface ITownsUK {
   DONCASTER: ITown;

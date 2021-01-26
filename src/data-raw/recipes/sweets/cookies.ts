@@ -66,7 +66,7 @@ const ingredients: IRecipeIngredient[][] = [
 
 const title: string = "Cookies";
 const makes: IRecipeMakes = { quantity: 20 };
-const diet: IRecipeDiet = DIETS.VEGETARIAN;
+const diet: RecipeDiet = DIETS.VEGETARIAN;
 const method: string[] = [
   "in a small mixing bowl, combine flour with cinnamon, baking soda and salt",
   "in a large mixing bowl, cream butter with both types of sugar for 1-2 minutes",

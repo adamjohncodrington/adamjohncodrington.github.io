@@ -2,16 +2,16 @@ import { THEATRE_VENUES as venues } from "@constants";
 import { THEATRE as DATA } from "data-raw";
 import { getItemCounts } from "utils";
 
-const getTheatreMatches = (theatre: ITheatre): ITheatreVisit[] =>
+const getTheatreMatches = (theatre: Theatre): TheatreVisit[] =>
   DATA.reduce(
-    (matches: ITheatreVisit[], theatreVisit: ITheatreVisit): ITheatreVisit[] =>
+    (matches: TheatreVisit[], theatreVisit: TheatreVisit): TheatreVisit[] =>
       theatreVisit.theatre === theatre ? [...matches, theatreVisit] : matches,
     []
   );
 
-const getTheatreVenueDetails = (play: ITheatre): IMiniCardPanelDetail[] =>
+const getTheatreVenueDetails = (play: Theatre): IMiniCardPanelDetail[] =>
   getTheatreMatches(play).map(
-    (theatreVisit: ITheatreVisit): IMiniCardPanelDetail => {
+    (theatreVisit: TheatreVisit): IMiniCardPanelDetail => {
       const { date } = theatreVisit;
       return {
         mainText: [theatreVisit.play.name],
@@ -21,8 +21,8 @@ const getTheatreVenueDetails = (play: ITheatre): IMiniCardPanelDetail[] =>
     }
   );
 
-export const VENUES: IMiniCard[] = Object.values(venues).map(
-  (theatre: ITheatre): IMiniCard => {
+export const VENUES: MiniCardProps[] = Object.values(venues).map(
+  (theatre: Theatre): MiniCardProps => {
     const { name } = theatre;
     const {
       pastCount: primaryCount,

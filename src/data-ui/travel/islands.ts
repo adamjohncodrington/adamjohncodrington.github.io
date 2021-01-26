@@ -23,8 +23,8 @@ const islandsAll: IIsland[] = [
   ...islandsThatAreNotCountries
 ];
 
-export const ISLANDS: IMiniCard[] = islandsAll.map(
-  (island: IIsland): IMiniCard => {
+export const ISLANDS: MiniCardProps[] = islandsAll.map(
+  (island: IIsland): MiniCardProps => {
     const { name, insignificant } = island;
     const {
       pastCount: primaryCount,

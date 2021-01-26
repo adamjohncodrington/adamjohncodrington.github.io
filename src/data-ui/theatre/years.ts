@@ -3,12 +3,12 @@ import { isInFuture, splitCardsIntoYears } from "utils";
 
 import { mapTheatreVisitsToCards } from "./utils";
 
-const past: ITheatreVisit[] = DATA.filter(
-  ({ date }: ITheatreVisit): boolean => !isInFuture(date)
+const past: TheatreVisit[] = DATA.filter(
+  ({ date }: TheatreVisit): boolean => !isInFuture(date)
 );
 
-const sorted: ITheatreVisit[] = past.sort(
-  (a: ITheatreVisit, b: ITheatreVisit): number => (a.date > b.date ? 1 : -1)
+const sorted: TheatreVisit[] = past.sort(
+  (a: TheatreVisit, b: TheatreVisit): number => (a.date > b.date ? 1 : -1)
 );
 
 const cards: ICard[] = mapTheatreVisitsToCards(sorted);

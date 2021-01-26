@@ -5,7 +5,7 @@ import { Disclosure } from "../Disclosure";
 import { MiniCardPanel } from "./MiniCardPanel";
 import { MiniCardHeader } from "./MiniCardHeader";
 
-export const MiniCard: FC<IMiniCard> = props => {
+export const MiniCard: FC<MiniCardProps> = props => {
   const { details, video, photos } = props;
   const panelExists: boolean = !!(video || photos || details);
 

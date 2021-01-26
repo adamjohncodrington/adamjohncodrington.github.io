@@ -1,6 +1,6 @@
 import { PLAYS, THEATRE_VENUES, FRIENDS, ACTORS } from "@constants";
 
-export const EVERYBODYS_TALKING_ABOUT_JAMIE: ITheatreVisit = {
+export const EVERYBODYS_TALKING_ABOUT_JAMIE: TheatreVisit = {
   play: PLAYS.EVERYBODYS_TALKING_ABOUT_JAMIE,
   cast: [ACTORS.JOHN_MCCREA],
   theatre: THEATRE_VENUES.APOLLO,
@@ -8,7 +8,7 @@ export const EVERYBODYS_TALKING_ABOUT_JAMIE: ITheatreVisit = {
   company: [FRIENDS.SIAN_RODWAY_SMITH]
 };
 
-export const CONSENT: ITheatreVisit = {
+export const CONSENT: TheatreVisit = {
   play: PLAYS.CONSENT,
   cast: [ACTORS.SIAN_CLIFFORD, ACTORS.ADAM_JAMES, ACTORS.LEE_INGLEBY],
   theatre: THEATRE_VENUES.HAROLD_PINTER,
@@ -16,7 +16,7 @@ export const CONSENT: ITheatreVisit = {
   company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON]
 };
 
-export const THAT_GIRL: ITheatreVisit = {
+export const THAT_GIRL: TheatreVisit = {
   play: PLAYS.THAT_GIRL,
   cast: [ACTORS.HATTY_JONES],
   theatre: THEATRE_VENUES.OLD_RED_LION,
@@ -30,7 +30,7 @@ export const THAT_GIRL: ITheatreVisit = {
   ]
 };
 
-export const DUST: ITheatreVisit = {
+export const DUST: TheatreVisit = {
   play: PLAYS.DUST,
   theatre: THEATRE_VENUES.TRAFALGAR_STUDIOS,
   cast: [ACTORS.MILLY_THOMAS],
@@ -39,7 +39,7 @@ export const DUST: ITheatreVisit = {
   favourite: true
 };
 
-export const INHERITANCE: ITheatreVisit = {
+export const INHERITANCE: TheatreVisit = {
   play: PLAYS.INHERITANCE_THE,
   theatre: THEATRE_VENUES.NOEL_COWARD,
   date: new Date("2018-10-27"),
@@ -47,7 +47,7 @@ export const INHERITANCE: ITheatreVisit = {
   favourite: true
 };
 
-export const FROZEN: ITheatreVisit = {
+export const FROZEN: TheatreVisit = {
   play: PLAYS.FROZEN,
   theatre: THEATRE_VENUES.ROYAL_HAYMARKET,
   date: new Date("2018-04-14"),

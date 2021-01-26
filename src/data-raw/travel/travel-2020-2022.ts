@@ -1,7 +1,7 @@
 import { FRIENDS, COUNTRIES } from "@constants";
 import { PHOTOS } from "resources";
 
-export const OSLO: ITrip = [
+export const OSLO: Trip = [
   {
     primaryLocations: [COUNTRIES.NORWAY.cities.OSLO],
     country: COUNTRIES.NORWAY,

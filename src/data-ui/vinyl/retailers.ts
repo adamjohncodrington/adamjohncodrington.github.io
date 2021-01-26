@@ -3,15 +3,15 @@ import { VINYL_PURCHASED as DATA } from "data-raw";
 
 import { mapVinylsToMiniCardPanelDetails } from "./utils";
 
-const getRetailerMatches = (retailer: IRetailer): IVinyl[] =>
+const getRetailerMatches = (retailer: Retailer): IVinyl[] =>
   DATA.reduce(
     (matches: IVinyl[], vinyl: IVinyl): IVinyl[] =>
       vinyl.retailer === retailer ? [...matches, vinyl] : matches,
     []
   );
 
-export const RETAILERS: IMiniCard[] = Object.values(retailers).map(
-  (retailer: IRetailer): IMiniCard => {
+export const RETAILERS: MiniCardProps[] = Object.values(retailers).map(
+  (retailer: Retailer): MiniCardProps => {
     const { name } = retailer;
     const retailerMatches: IVinyl[] = getRetailerMatches(retailer);
     const details: IMiniCardPanelDetail[] = mapVinylsToMiniCardPanelDetails(

@@ -116,7 +116,7 @@ const method: string[] = [
 
 const title: string = "Carbonara";
 const makes: IRecipeMakes = { quantity: 5, measurement: MEASUREMENTS.PORTION };
-const diet: IRecipeDiet = DIETS.VEGAN;
+const diet: RecipeDiet = DIETS.VEGAN;
 
 export const CARBONARA: IRecipe = {
   title,

@@ -41,4 +41,4 @@ export * from "./video";
 export * from "./diets";
 export * from "./locations";
 
-export const HOME: ILocation = { name: "Home" };
+export const HOME: LocationProps = { name: "Home" };

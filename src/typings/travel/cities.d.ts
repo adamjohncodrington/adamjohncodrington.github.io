@@ -1,4 +1,4 @@
-interface ICity extends ILocation {
+interface ICity extends LocationProps {
   capital?: boolean;
 }
 

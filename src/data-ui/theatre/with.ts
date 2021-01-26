@@ -2,18 +2,18 @@ import { FRIENDS as friends } from "@constants";
 import { THEATRE as DATA } from "data-raw";
 import { getItemCounts, getTheatreVisitTitle } from "utils";
 
-const getFriendMatches = (friend: IFriend): ITheatreVisit[] =>
+const getFriendMatches = (friend: Friend): TheatreVisit[] =>
   DATA.reduce(
-    (matches: ITheatreVisit[], theatreVisit: ITheatreVisit): ITheatreVisit[] =>
+    (matches: TheatreVisit[], theatreVisit: TheatreVisit): TheatreVisit[] =>
       theatreVisit.company.includes(friend)
         ? [...matches, theatreVisit]
         : matches,
     []
   );
 
-const getFriendDetails = (friend: IFriend): IMiniCardPanelDetail[] =>
+const getFriendDetails = (friend: Friend): IMiniCardPanelDetail[] =>
   getFriendMatches(friend).map(
-    (theatreVisit: ITheatreVisit): IMiniCardPanelDetail => {
+    (theatreVisit: TheatreVisit): IMiniCardPanelDetail => {
       const { date } = theatreVisit;
       return {
         mainText: [getTheatreVisitTitle(theatreVisit)],
@@ -23,10 +23,10 @@ const getFriendDetails = (friend: IFriend): IMiniCardPanelDetail[] =>
     }
   );
 
-export const WITH: IMiniCard[] = Object.values(friends)
-  .filter(({ theatre }: IFriend): boolean => !!theatre)
+export const WITH: MiniCardProps[] = Object.values(friends)
+  .filter(({ theatre }: Friend): boolean => !!theatre)
   .map(
-    (friend: IFriend): IMiniCard => {
+    (friend: Friend): MiniCardProps => {
       const {
         pastCount: primaryCount,
         futureCount: secondaryCount

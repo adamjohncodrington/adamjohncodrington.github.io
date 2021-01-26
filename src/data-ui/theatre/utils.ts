@@ -6,9 +6,9 @@ import {
 } from "utils";
 
 export const mapTheatreVisitsToCards = (
-  theatreVisits: ITheatreVisit[]
+  theatreVisits: TheatreVisit[]
 ): ICard[] => {
-  const mapTheatreVisitToCard = (theatreVisit: ITheatreVisit): ICard => {
+  const mapTheatreVisitToCard = (theatreVisit: TheatreVisit): ICard => {
     const { theatre, company, date } = theatreVisit;
     return {
       ...theatreVisit,
@@ -22,6 +22,6 @@ export const mapTheatreVisitsToCards = (
     };
   };
   return theatreVisits.map(
-    (theatreVisit: ITheatreVisit): ICard => mapTheatreVisitToCard(theatreVisit)
+    (theatreVisit: TheatreVisit): ICard => mapTheatreVisitToCard(theatreVisit)
   );
 };

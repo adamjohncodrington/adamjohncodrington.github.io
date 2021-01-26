@@ -1,4 +1,4 @@
-interface ICountryTemplate extends ILocation {
+interface ICountryTemplate extends LocationProps {
   attractions?: any;
   cities?: any;
   islands?: any;
@@ -10,18 +10,18 @@ interface ICountryTemplate extends ILocation {
 
 interface ICountryCounted extends ICountryTemplate, I_PastFutureCounts {}
 
-interface IIndonesia extends ILocation {}
+interface IIndonesia extends LocationProps {}
 
-interface IIreland extends ILocation {
+interface IIreland extends LocationProps {
   attractions: IAttractionsIreland;
   cities: ICitiesIreland;
 }
 
-interface IZimbabwe extends ILocation {
+interface IZimbabwe extends LocationProps {
   attractions: IAttractionsZimbabwe;
 }
 
-interface IUSA extends ILocation {
+interface IUSA extends LocationProps {
   attractions: IAttractionsUSA;
   cities: ICitiesUSA;
   islands: IIslandsUSA;
@@ -29,17 +29,17 @@ interface IUSA extends ILocation {
   states: IStatesUSA;
 }
 
-interface IUAE extends ILocation {
+interface IUAE extends LocationProps {
   cities: ICitiesUAE;
   attractions: IAttractionsUAE;
 }
 
-interface IUganda extends ILocation {
+interface IUganda extends LocationProps {
   cities: ICitiesUganda;
   attractions: IAttractionsUganda;
 }
 
-interface IUK extends ILocation {
+interface IUK extends LocationProps {
   attractions: IAttractionsUK;
   islands: IIslandsUK;
   cities: ICitiesUK;
@@ -47,171 +47,171 @@ interface IUK extends ILocation {
   regions: IRegionsUK;
 }
 
-interface IThailand extends ILocation {
+interface IThailand extends LocationProps {
   cities: ICitiesThailand;
   attractions: IAttractionsThailand;
   towns: ITownsThailand;
   islands: IIslandsThailand;
 }
 
-interface IPhillipines extends ILocation {}
+interface IPhillipines extends LocationProps {}
 
-interface ISweden extends ILocation {
+interface ISweden extends LocationProps {
   cities: ICitiesSweden;
 }
 
-interface ISpain extends ILocation {
+interface ISpain extends LocationProps {
   cities: ICitiesSpain;
   attractions: IAttractionsSpain;
   islands: IIslandsSpain;
 }
 
-interface IPoland extends ILocation {
+interface IPoland extends LocationProps {
   cities: ICitiesPoland;
   attractions: IAttractionsPoland;
   towns: ITownsPoland;
 }
 
-interface ICzechRepublic extends ILocation {
+interface ICzechRepublic extends LocationProps {
   cities: ICitiesCzechRepublic;
   attractions: IAttractionsCzechRepublic;
 }
 
-interface IArgentina extends ILocation {
+interface IArgentina extends LocationProps {
   cities: ICitiesArgentina;
 }
 
-interface IAustralia extends ILocation {}
+interface IAustralia extends LocationProps {}
 
-interface INewZealand extends ILocation {}
+interface INewZealand extends LocationProps {}
 
-interface ITanzania extends ILocation {}
+interface ITanzania extends LocationProps {}
 
-interface IDenmark extends ILocation {
+interface IDenmark extends LocationProps {
   cities: ICitiesDenmark;
   attractions: IAttractionsDenmark;
 }
 
-interface IHungary extends ILocation {
+interface IHungary extends LocationProps {
   cities: ICitiesHungary;
   attractions: IAttractionsHungary;
 }
 
-interface IFrance extends ILocation {
+interface IFrance extends LocationProps {
   cities: ICitiesFrance;
   attractions: IAttractionsFrance;
 }
 
-interface IEcuador extends ILocation {
+interface IEcuador extends LocationProps {
   cities: ICitiesEcuador;
   attractions: IAttractionsEcuador;
   islands: IIslandsEcuador;
 }
 
-interface IAustria extends ILocation {
+interface IAustria extends LocationProps {
   cities: ICitiesAustria;
 }
 
-interface IColombia extends ILocation {}
+interface IColombia extends LocationProps {}
 
-interface ICanada extends ILocation {
+interface ICanada extends LocationProps {
   cities: ICitiesCanada;
   attractions: IAttractionsCanada;
 }
 
-interface IBarbados extends ILocation {
+interface IBarbados extends LocationProps {
   attractions: IAttractionsBarbados;
 }
 
-interface IEgypt extends ILocation {
+interface IEgypt extends LocationProps {
   cities: ICitiesEgypt;
   attractions: IAttractionsEgypt;
 }
 
-interface IBolivia extends ILocation {}
+interface IBolivia extends LocationProps {}
 
-interface IBelize extends ILocation {
+interface IBelize extends LocationProps {
   attractions: IAttractionsBelize;
   cities: ICitiesBelize;
   islands: IIslandsBelize;
 }
 
-interface ICuba extends ILocation {
+interface ICuba extends LocationProps {
   cities: ICitiesCuba;
   towns: ITownsCuba;
 }
 
-interface IBrazil extends ILocation {
+interface IBrazil extends LocationProps {
   cities: ICitiesBrazil;
   attractions: IAttractionsBrazil;
   islands: IIslandsBrazil;
 }
 
-interface ICroatia extends ILocation {
+interface ICroatia extends LocationProps {
   cities: ICitiesCroatia;
   attractions: IAttractionsCroatia;
 }
 
-interface ICostaRica extends ILocation {
+interface ICostaRica extends LocationProps {
   attractions: IAttractionsCostaRica;
   cities: ICitiesCostaRica;
   towns: ITownsCostaRica;
 }
 
-interface ICyprus extends ILocation {
+interface ICyprus extends LocationProps {
   cities: ICitiesCyprus;
   attractions: IAttractionsCyprus;
 }
 
-interface IBelgium extends ILocation {
+interface IBelgium extends LocationProps {
   cities: ICitiesBeligum;
   attractions: IAttractionsBelgium;
 }
 
-interface IGermany extends ILocation {
+interface IGermany extends LocationProps {
   cities: ICitiesGermany;
   attractions: IAttractionsGermany;
 }
 
-interface IPortugal extends ILocation {
+interface IPortugal extends LocationProps {
   cities: ICitiesPortugal;
   attractions: IAttractionsPortugal;
   towns: ITownsPortugal;
 }
 
-interface IMexico extends ILocation {}
+interface IMexico extends LocationProps {}
 
-interface IGreece extends ILocation {
+interface IGreece extends LocationProps {
   islands: IIslandsGreece;
   regions: IRegionsGreece;
 }
 
-interface INorway extends ILocation {
+interface INorway extends LocationProps {
   attractions: IAttractionsNorway;
   cities: ICitiesNorway;
   islands: IIslandsNorway;
 }
 
-interface IItaly extends ILocation {
+interface IItaly extends LocationProps {
   regions: IRegionsItaly;
   cities: ICitiesItaly;
   towns: ITownsItaly;
   attractions: IAttractionsItaly;
 }
 
-interface ILaos extends ILocation {
+interface ILaos extends LocationProps {
   cities: ICitiesLaos;
   attractions: IAttractionsLaos;
 }
 
-interface INetherlands extends ILocation {
+interface INetherlands extends LocationProps {
   cities: ICitiesNetherlands;
   attractions: IAttractionsNetherlands;
 }
 
-interface IJapan extends ILocation {}
+interface IJapan extends LocationProps {}
 
-interface IPeru extends ILocation {
+interface IPeru extends LocationProps {
   cities: ICitiesPeru;
   attractions: IAttractionsPeru;
   towns: ITownsPeru;

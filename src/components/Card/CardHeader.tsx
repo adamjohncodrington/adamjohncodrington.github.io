@@ -9,7 +9,7 @@ import {
   StyledCardHeaderTextSymbolsContainer
 } from "./styles";
 
-export const CardHeader: FC<ICardHeader> = props => {
+export const CardHeader: FC<CardHeaderProps> = props => {
   const { headerPhoto } = props;
   return (
     <StyledCardHeaderContainer>

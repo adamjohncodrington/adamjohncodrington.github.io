@@ -5,7 +5,7 @@ interface IPerson extends I_Name {
   initials: string;
 }
 
-interface IFriend extends IPerson {
+interface Friend extends IPerson {
   gigs?: boolean;
   travel?: boolean;
   theatre?: boolean;
@@ -32,27 +32,27 @@ interface IVideo extends I_OrientationQuality {
 }
 
 interface ITravelVideo extends IVideo, I_StartEndDates {
-  locations: ILocation[];
+  locations: LocationProps[];
 }
 
 interface IRecipeHeader extends IRecipe, IDisclosureHeader {}
 
-interface ISong {
-  musician: IMusician;
+interface Song {
+  musician: Musician;
   title: string;
   year: number;
 }
 
-interface IActor extends I_Name, I__Favourite {}
+interface Actor extends I_Name, I__Favourite {}
 
-interface IPlay extends I_Name, I__Favourite {}
+interface Play extends I_Name, I__Favourite {}
 
-interface ITheatre extends I_Name, I__Favourite {}
+interface Theatre extends I_Name, I__Favourite {}
 
-interface ITheatreVisit extends I_Date, I__Favourite, I_Company {
-  play: IPlay;
-  theatre: ITheatre;
-  cast?: IActor[];
+interface TheatreVisit extends I_Date, I__Favourite, I_Company {
+  play: Play;
+  theatre: Theatre;
+  cast?: Actor[];
 }
 
 interface I_AlbumPhoto {
@@ -60,7 +60,7 @@ interface I_AlbumPhoto {
 }
 
 interface IAlbum extends I_AlbumPhoto {
-  musician: IMusician;
+  musician: Musician;
   title: string;
   year: number;
   appleMusicId: string;
@@ -71,7 +71,7 @@ interface IHeadline extends I__Faded {
   subText?: string;
 }
 
-interface ISymbol extends I_Background, I__Border, I__BorderRadius {
+interface SymbolProps extends I_Background, I__Border, I__BorderRadius {
   svgFill?: string;
   contents: {
     text?: string;
@@ -90,7 +90,7 @@ interface ISymbol extends I_Background, I__Border, I__BorderRadius {
   };
 }
 
-interface IRetailer extends I_Name {
+interface Retailer extends I_Name {
   online: boolean;
   branch?: string;
 }
@@ -102,7 +102,7 @@ interface I_CostExcDelivery {
 interface IVinylExtraCopy extends I_AlbumPhoto, I_Colors, I_CostExcDelivery {}
 
 interface IVinyl extends IAlbum, I_Colors, I_CostExcDelivery, I_Signed {
-  retailer: IRetailer;
+  retailer: Retailer;
   gift?: IGift;
   sides: 2 | 4;
   inches: 7 | 10 | 12;
@@ -110,7 +110,7 @@ interface IVinyl extends IAlbum, I_Colors, I_CostExcDelivery, I_Signed {
   extraCopy?: IVinylExtraCopy;
 }
 
-interface ILocation
+interface LocationProps
   extends I_Name,
     I__Favourite,
     I__Insignificant,

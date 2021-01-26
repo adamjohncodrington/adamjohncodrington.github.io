@@ -24,8 +24,8 @@ const compare = (a: any, b: any): number => {
 export const sortCards = (cards: ICard[]): ICard[] =>
   cards.sort((a: ICard, b: ICard): number => compare(a, b));
 
-export const sortMiniCards = (miniCards: IMiniCard[]): IMiniCard[] =>
-  miniCards.sort((a: IMiniCard, b: IMiniCard): number => compare(a, b));
+export const sortMiniCards = (miniCards: MiniCardProps[]): MiniCardProps[] =>
+  miniCards.sort((a: MiniCardProps, b: MiniCardProps): number => compare(a, b));
 
 export const sortMiniCardPanelDetails = (
   miniCardPanelDetails: IMiniCardPanelDetail[]

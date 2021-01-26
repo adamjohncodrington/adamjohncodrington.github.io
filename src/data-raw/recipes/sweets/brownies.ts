@@ -74,7 +74,7 @@ const method: string[] = [
 ];
 
 const title: string = "Brownies";
-const diet: IRecipeDiet = DIETS.VEGAN;
+const diet: RecipeDiet = DIETS.VEGAN;
 
 export const BROWNIES: IRecipe = {
   ingredients,

@@ -23,45 +23,45 @@ const StyledMain = styled.main(
   `
 );
 
-interface IPageSections {
-  sections: IPageSection[];
+interface Props {
+  sections: PageSectionProps[];
 }
 
-export const PageSections: FC<IPageSections> = ({ sections }) => {
+export const PageSections: FC<Props> = ({ sections }) => {
   const { pageUses2Columns } = useMediaQueries();
 
-  const unhiddenPageSections: IPageSection[] = sections.filter(
-    ({ hide }: IPageSection): boolean => !hide
+  const unhiddenPageSections: PageSectionProps[] = sections.filter(
+    ({ hide }: PageSectionProps): boolean => !hide
   );
 
-  const datafulPageSections: IPageSection[] = unhiddenPageSections.filter(
-    ({ data }: IPageSection): boolean => validPageSectionData(data)
+  const datafulPageSections: PageSectionProps[] = unhiddenPageSections.filter(
+    ({ data }: PageSectionProps): boolean => validPageSectionData(data)
   );
 
   const validPageSectionCount: number = datafulPageSections.length;
 
-  const sortedValidPageSections: IPageSection[] = datafulPageSections;
+  const sortedValidPageSections: PageSectionProps[] = datafulPageSections;
 
-  const pageSectionsCol1: IPageSection[] = sortedValidPageSections.filter(
-    (pageSection: IPageSection, index: number): boolean =>
+  const pageSectionsCol1: PageSectionProps[] = sortedValidPageSections.filter(
+    (pageSection: PageSectionProps, index: number): boolean =>
       index < validPageSectionCount / 2
   );
-  const pageSectionsCol2: IPageSection[] = sortedValidPageSections.filter(
-    (pageSection: IPageSection): boolean =>
+  const pageSectionsCol2: PageSectionProps[] = sortedValidPageSections.filter(
+    (pageSection: PageSectionProps): boolean =>
       !pageSectionsCol1.includes(pageSection)
   );
 
-  const pageSectionColumns: IPageSection[][] = pageUses2Columns
+  const pageSectionColumns: PageSectionProps[][] = pageUses2Columns
     ? [pageSectionsCol1, pageSectionsCol2]
     : [sortedValidPageSections];
 
   return (
     <StyledMain data-test="page-sections">
       {pageSectionColumns.map(
-        (pageSectionColumn: IPageSection[], index: number) => (
+        (pageSectionColumn: PageSectionProps[], index: number) => (
           <Ul key={index} data-test={"page-column-" + (index + 1)}>
             {pageSectionColumn.map(
-              (pageSection: IPageSection, index: number) => (
+              (pageSection: PageSectionProps, index: number) => (
                 <Li
                   key={index}
                   data-test={

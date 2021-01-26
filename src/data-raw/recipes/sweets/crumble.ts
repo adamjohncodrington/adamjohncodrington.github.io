@@ -81,7 +81,7 @@ const method: string[] = [
 
 const makes: IRecipeMakes = { quantity: 8, measurement: MEASUREMENTS.PORTION };
 const title: string = "Crumble";
-const diet: IRecipeDiet = DIETS.VEGAN;
+const diet: RecipeDiet = DIETS.VEGAN;
 const photo: IPhoto = PHOTOS.RECIPES.CRUMBLE;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);

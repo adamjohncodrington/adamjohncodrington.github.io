@@ -5,23 +5,21 @@ import { Symbol } from "../Symbol";
 
 import { CardSymbolsContainer, StyledArrowContainer } from "./styles";
 
-export const CardHeaderSymbols: FC<ICardHeader> = ({
-  symbols,
+export const CardHeaderSymbols: FC<CardHeaderProps> = ({
   panelExists,
-  panelVisible
-}) => {
-  return (
-    <CardSymbolsContainer>
-      {symbols &&
-        symbols.map((symbol: ISymbol, index: number) => (
-          <Symbol key={index} {...symbol} />
-        ))}
+  panelVisible,
+  symbols
+}) => (
+  <CardSymbolsContainer>
+    {symbols &&
+      symbols.map((symbol: SymbolProps, i: number) => (
+        <Symbol key={i} {...symbol} />
+      ))}
 
-      {panelExists && (
-        <StyledArrowContainer>
-          <Arrow panelVisible={panelVisible} size="0.75rem" />
-        </StyledArrowContainer>
-      )}
-    </CardSymbolsContainer>
-  );
-};
+    {panelExists && (
+      <StyledArrowContainer>
+        <Arrow panelVisible={panelVisible} size="0.75rem" />
+      </StyledArrowContainer>
+    )}
+  </CardSymbolsContainer>
+);

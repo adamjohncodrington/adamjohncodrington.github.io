@@ -131,7 +131,7 @@ const method: string[] = [
 ];
 const title: string = "Lasagne";
 const makes: IRecipeMakes = { quantity: 6, measurement: MEASUREMENTS.PORTION };
-const diet: IRecipeDiet = DIETS.VEGAN;
+const diet: RecipeDiet = DIETS.VEGAN;
 const photo: IPhoto = PHOTOS.RECIPES.LASAGNE;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);

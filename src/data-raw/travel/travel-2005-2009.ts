@@ -1,6 +1,6 @@
 import { FRIENDS, COUNTRIES } from "@constants";
 
-export const PORTAVENTURA: ITrip = [
+export const PORTAVENTURA: Trip = [
   {
     primaryLocations: [COUNTRIES.SPAIN.attractions.PORTAVENTURA],
     country: COUNTRIES.SPAIN,
@@ -9,7 +9,7 @@ export const PORTAVENTURA: ITrip = [
   }
 ];
 
-export const HALKIDIKI: ITrip = [
+export const HALKIDIKI: Trip = [
   {
     primaryLocations: [COUNTRIES.GREECE.regions.HALKIDIKI],
     country: COUNTRIES.GREECE,
@@ -24,7 +24,7 @@ export const HALKIDIKI: ITrip = [
   }
 ];
 
-export const LAKE_DISTRICT_2005: ITrip = [
+export const LAKE_DISTRICT_2005: Trip = [
   {
     primaryLocations: [COUNTRIES.UK.attractions.LAKE_DISTRICT],
     notAbroad: true,
@@ -34,7 +34,7 @@ export const LAKE_DISTRICT_2005: ITrip = [
   }
 ];
 
-export const FLORIDA_2006: ITrip = [
+export const FLORIDA_2006: Trip = [
   {
     primaryLocations: [COUNTRIES.USA.states.FLORIDA],
     country: COUNTRIES.USA,
@@ -51,7 +51,7 @@ export const FLORIDA_2006: ITrip = [
   }
 ];
 
-export const SORRENTO: ITrip = [
+export const SORRENTO: Trip = [
   {
     primaryLocations: [
       COUNTRIES.ITALY.towns.SORRENTO,
@@ -74,7 +74,7 @@ export const SORRENTO: ITrip = [
 ];
 
 //TODO: break this down into legs????
-export const SAN_FRANCISCO_LA: ITrip = [
+export const SAN_FRANCISCO_LA: Trip = [
   {
     primaryLocations: [
       COUNTRIES.USA.cities.SAN_FRANCISCO,
@@ -96,7 +96,7 @@ export const SAN_FRANCISCO_LA: ITrip = [
   }
 ];
 
-export const CORNWALL_2007: ITrip = [
+export const CORNWALL_2007: Trip = [
   {
     primaryLocations: [COUNTRIES.UK.regions.CORNWALL],
     notAbroad: true,
@@ -106,7 +106,7 @@ export const CORNWALL_2007: ITrip = [
   }
 ];
 
-export const ROME: ITrip = [
+export const ROME: Trip = [
   {
     primaryLocations: [COUNTRIES.ITALY.cities.ROME],
     country: COUNTRIES.ITALY,
@@ -120,7 +120,7 @@ export const ROME: ITrip = [
   }
 ];
 
-export const PARIS_2008: ITrip = [
+export const PARIS_2008: Trip = [
   {
     primaryLocations: [COUNTRIES.FRANCE.cities.PARIS],
     country: COUNTRIES.FRANCE,
@@ -149,7 +149,7 @@ export const PARIS_2008: ITrip = [
 ];
 
 //TODO: this could be split into 2 legs
-export const WASHINGTON_VIRGINIA: ITrip = [
+export const WASHINGTON_VIRGINIA: Trip = [
   {
     primaryLocations: [
       COUNTRIES.USA.cities.WASHINGTON_DC,
@@ -170,7 +170,7 @@ export const WASHINGTON_VIRGINIA: ITrip = [
   }
 ];
 
-export const VILAMOURA: ITrip = [
+export const VILAMOURA: Trip = [
   {
     primaryLocations: [COUNTRIES.PORTUGAL.towns.VILAMOURA],
     country: COUNTRIES.PORTUGAL,
@@ -179,7 +179,7 @@ export const VILAMOURA: ITrip = [
   }
 ];
 
-export const BATTLEFIELDS: ITrip = [
+export const BATTLEFIELDS: Trip = [
   {
     primaryLocations: [COUNTRIES.BELGIUM.attractions.BATTLEFIELDS],
     country: COUNTRIES.BELGIUM,
@@ -198,7 +198,7 @@ export const BATTLEFIELDS: ITrip = [
   }
 ];
 
-export const VEGAS_LA: ITrip = [
+export const VEGAS_LA: Trip = [
   {
     primaryLocations: [
       COUNTRIES.USA.cities.LAS_VEGAS,
@@ -216,7 +216,7 @@ export const VEGAS_LA: ITrip = [
   }
 ];
 
-export const KOS: ITrip = [
+export const KOS: Trip = [
   {
     primaryLocations: [COUNTRIES.GREECE.islands.KOS],
     country: COUNTRIES.GREECE,

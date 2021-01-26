@@ -16,7 +16,11 @@ const StyledPanelContainer = styled.div`
   }
 `;
 
-export const MiniCardPanel: FC<IMiniCard> = ({ details, photos, video }) => {
+export const MiniCardPanel: FC<MiniCardProps> = ({
+  details,
+  photos,
+  video
+}) => {
   if (video)
     return (
       <StyledPanelContainer>

@@ -6,14 +6,14 @@ import {
   mapPoleTricksVideoToMiniCardDetail
 } from "./utils";
 
-const getStudioRoutineMatches = (studio: IPoleStudio): IPoleRoutine[] =>
+const getStudioRoutineMatches = (studio: PoleStudio): IPoleRoutine[] =>
   POLE_ROUTINES.reduce(
     (matches: IPoleRoutine[], routine: IPoleRoutine): IPoleRoutine[] =>
       routine.studio === studio ? [...matches, routine] : matches,
     []
   );
 
-const getStudioTricksMatches = (studio: IPoleStudio): IPoleTricksVideo[] =>
+const getStudioTricksMatches = (studio: PoleStudio): IPoleTricksVideo[] =>
   POLE_TRICKS_VIDEOS.reduce(
     (
       matches: IPoleTricksVideo[],
@@ -23,7 +23,7 @@ const getStudioTricksMatches = (studio: IPoleStudio): IPoleTricksVideo[] =>
     []
   );
 
-const getStudioDetails = (studio: IPoleStudio): IMiniCardPanelDetail[] => [
+const getStudioDetails = (studio: PoleStudio): IMiniCardPanelDetail[] => [
   ...getStudioRoutineMatches(studio).map(
     (poleRoutine: IPoleRoutine): IMiniCardPanelDetail =>
       mapPoleRoutineToMiniCardDetail(poleRoutine)
@@ -34,8 +34,8 @@ const getStudioDetails = (studio: IPoleStudio): IMiniCardPanelDetail[] => [
   )
 ];
 
-export const STUDIOS: IMiniCard[] = Object.values(studios).map(
-  (studio: IPoleStudio): IMiniCard => {
+export const STUDIOS: MiniCardProps[] = Object.values(studios).map(
+  (studio: PoleStudio): MiniCardProps => {
     const { name, shortName, branch } = studio;
     const details: IMiniCardPanelDetail[] = getStudioDetails(studio);
     return {

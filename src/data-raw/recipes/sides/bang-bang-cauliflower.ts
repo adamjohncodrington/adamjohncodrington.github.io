@@ -86,7 +86,7 @@ const serveWith: IServeWithItem[][] = [
 
 const title: string = "Bang Bang Cauliflower";
 const makes: IRecipeMakes = { quantity: 2, measurement: MEASUREMENTS.PORTION };
-const diet: IRecipeDiet = DIETS.VEGAN;
+const diet: RecipeDiet = DIETS.VEGAN;
 const photo: IPhoto = PHOTOS.RECIPES.BANG_BANG_CAULI;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);

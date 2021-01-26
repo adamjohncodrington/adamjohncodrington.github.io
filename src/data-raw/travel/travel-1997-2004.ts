@@ -1,6 +1,6 @@
 import { FRIENDS, COUNTRIES } from "@constants";
 
-export const TENERIFE_1997: ITrip = [
+export const TENERIFE_1997: Trip = [
   {
     primaryLocations: [COUNTRIES.SPAIN.islands.TENERIFE],
     country: COUNTRIES.SPAIN,
@@ -9,7 +9,7 @@ export const TENERIFE_1997: ITrip = [
   }
 ];
 
-export const LANZAROTE_1998: ITrip = [
+export const LANZAROTE_1998: Trip = [
   {
     primaryLocations: [COUNTRIES.SPAIN.islands.LANZAROTE],
     country: COUNTRIES.SPAIN,
@@ -18,7 +18,7 @@ export const LANZAROTE_1998: ITrip = [
   }
 ];
 
-export const DISNEYLAND_PARIS: ITrip = [
+export const DISNEYLAND_PARIS: Trip = [
   {
     primaryLocations: [COUNTRIES.FRANCE.attractions.DISNEYLAND_PARIS],
     country: COUNTRIES.FRANCE,
@@ -27,7 +27,7 @@ export const DISNEYLAND_PARIS: ITrip = [
   }
 ];
 
-export const MINORCA_1999: ITrip = [
+export const MINORCA_1999: Trip = [
   {
     primaryLocations: [COUNTRIES.SPAIN.islands.MINORCA],
     country: COUNTRIES.SPAIN,
@@ -36,7 +36,7 @@ export const MINORCA_1999: ITrip = [
   }
 ];
 
-export const MINORCA_2000: ITrip = [
+export const MINORCA_2000: Trip = [
   {
     primaryLocations: [COUNTRIES.SPAIN.islands.MINORCA],
     country: COUNTRIES.SPAIN,
@@ -45,7 +45,7 @@ export const MINORCA_2000: ITrip = [
   }
 ];
 
-export const IBIZA: ITrip = [
+export const IBIZA: Trip = [
   {
     primaryLocations: [COUNTRIES.SPAIN.islands.IBIZA],
     country: COUNTRIES.SPAIN,
@@ -54,7 +54,7 @@ export const IBIZA: ITrip = [
   }
 ];
 
-export const FLORIDA_2002: ITrip = [
+export const FLORIDA_2002: Trip = [
   {
     primaryLocations: [COUNTRIES.USA.states.FLORIDA],
     country: COUNTRIES.USA,
@@ -74,7 +74,7 @@ export const FLORIDA_2002: ITrip = [
   }
 ];
 
-export const LAGOS: ITrip = [
+export const LAGOS: Trip = [
   {
     primaryLocations: [COUNTRIES.PORTUGAL.towns.LAGOS],
     country: COUNTRIES.PORTUGAL,
@@ -87,7 +87,7 @@ export const LAGOS: ITrip = [
   }
 ];
 
-export const USA_2004: ITrip = [
+export const USA_2004: Trip = [
   {
     primaryLocations: [COUNTRIES.USA.cities.NEW_YORK_CITY],
     country: COUNTRIES.USA,

@@ -4,12 +4,12 @@ import { getMusicianStageNameAtTime, getDateText } from "utils";
 
 const mapFestivalsWithVideosToMiniCards = (
   festivalsWithVideos: IFestivalWithVideo[]
-): IMiniCard[] => {
+): MiniCardProps[] => {
   const mapFestivalWithVideoToMiniCard = ({
     title: { name },
     dates,
     video
-  }: IFestivalWithVideo): IMiniCard => {
+  }: IFestivalWithVideo): MiniCardProps => {
     return {
       primaryText: name,
       sort: [name, dates[0].valueOf()],
@@ -23,12 +23,12 @@ const mapFestivalsWithVideosToMiniCards = (
   );
 };
 
-const mapGigVideosToMiniCards = (gigVideos: IGigVideo[]): IMiniCard[] => {
+const mapGigVideosToMiniCards = (gigVideos: IGigVideo[]): MiniCardProps[] => {
   const mapGigVideoToMiniCard = ({
     date,
     musician,
     ...video
-  }: IGigVideo): IMiniCard => {
+  }: IGigVideo): MiniCardProps => {
     const musicianName: string = getMusicianStageNameAtTime({
       musician,
       year: date.getFullYear()
@@ -41,13 +41,13 @@ const mapGigVideosToMiniCards = (gigVideos: IGigVideo[]): IMiniCard[] => {
     };
   };
   return gigVideos.map(
-    (gigVideo: IGigVideo): IMiniCard => mapGigVideoToMiniCard(gigVideo)
+    (gigVideo: IGigVideo): MiniCardProps => mapGigVideoToMiniCard(gigVideo)
   );
 };
 
 const gigVideos: IGigVideo[] = Object.values(videosObject.GIGS);
 
-export const VIDEOS: IMiniCard[] = [
+export const VIDEOS: MiniCardProps[] = [
   ...mapGigVideosToMiniCards(gigVideos),
   ...mapFestivalsWithVideosToMiniCards(FESTIVALS_W_VIDEOS)
 ];

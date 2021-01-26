@@ -20,8 +20,8 @@ const bucketListCountries: ICountryCounted[] = Object.values(countries)
       pastCount === 0 && futureCount === 0 && !excludeFromBucketList
   );
 
-const BUCKET_LIST_COUNTRIES: IMiniCard[] = bucketListCountries.map(
-  ({ name, pastCount, futureCount }: ICountryCounted): IMiniCard => ({
+const BUCKET_LIST_COUNTRIES: MiniCardProps[] = bucketListCountries.map(
+  ({ name, pastCount, futureCount }: ICountryCounted): MiniCardProps => ({
     primaryText: name,
     sort: [name],
     primaryCount: pastCount,
@@ -50,8 +50,8 @@ const bucketListCities: ICityCounted[] = Object.values(cities)
       !insignificant
   );
 
-const BUCKET_LIST_CITIES: IMiniCard[] = bucketListCities.map(
-  ({ name, capital, pastCount, futureCount }: ICityCounted): IMiniCard => ({
+const BUCKET_LIST_CITIES: MiniCardProps[] = bucketListCities.map(
+  ({ name, capital, pastCount, futureCount }: ICityCounted): MiniCardProps => ({
     primaryText: name,
     sort: [name],
     star: capital,
@@ -61,7 +61,7 @@ const BUCKET_LIST_CITIES: IMiniCard[] = bucketListCities.map(
   })
 );
 
-export const BUCKET_LIST: IMiniCard[] = [
+export const BUCKET_LIST: MiniCardProps[] = [
   ...BUCKET_LIST_COUNTRIES,
   ...BUCKET_LIST_CITIES
 ];

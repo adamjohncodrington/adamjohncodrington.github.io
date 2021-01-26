@@ -40,7 +40,7 @@ const method: string[] = [
 
 const title: string = "Potato Salad";
 const makes: IRecipeMakes = { quantity: 4, measurement: MEASUREMENTS.PORTION };
-const diet: IRecipeDiet = DIETS.VEGETARIAN;
+const diet: RecipeDiet = DIETS.VEGETARIAN;
 const photo: IPhoto = PHOTOS.RECIPES.POTATO_SALAD;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);

@@ -61,7 +61,7 @@ const method: string[] = [
 ];
 
 const title: string = "Scones";
-const diet: IRecipeDiet = DIETS.VEGAN;
+const diet: RecipeDiet = DIETS.VEGAN;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
 

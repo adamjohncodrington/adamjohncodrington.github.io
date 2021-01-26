@@ -54,7 +54,7 @@ const method: string[] = [
 ];
 
 const title: string = "Blueberry Pancakes";
-const diet: IRecipeDiet = DIETS.VEGETARIAN;
+const diet: RecipeDiet = DIETS.VEGETARIAN;
 const makes: IRecipeMakes = { quantity: 13 };
 const photo: IPhoto = PHOTOS.RECIPES.BLUEBERRY_PANCAKES;
 

@@ -40,8 +40,8 @@ const getCountryDetails = (
   );
 };
 
-export const COUNTRIES: IMiniCard[] = Object.values(countries).map(
-  (country: ICountryTemplate): IMiniCard => {
+export const COUNTRIES: MiniCardProps[] = Object.values(countries).map(
+  (country: ICountryTemplate): MiniCardProps => {
     const details: IMiniCardPanelDetail[] = getCountryDetails(country);
     const { name } = country;
     const {

@@ -66,7 +66,7 @@ const method: string[] = [
 
 const title: string = "Flapjacks";
 const makes: IRecipeMakes = { quantity: 12, measurement: MEASUREMENTS.CHUNK };
-const diet: IRecipeDiet = DIETS.VEGAN;
+const diet: RecipeDiet = DIETS.VEGAN;
 const photo: IPhoto = PHOTOS.RECIPES.FLAPJACKS;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);

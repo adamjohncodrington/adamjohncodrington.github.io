@@ -7,7 +7,7 @@ import {
 } from "@constants";
 import { VIDEOS, PHOTOS } from "resources";
 
-export const JONAS_BLUE: IGig = {
+export const JONAS_BLUE: Gig = {
   headline: MUSICIANS.JONAS_BLUE,
   venue: MUSIC_VENUES.MINISTRY_OF_SOUND,
   date: new Date("2017-01-28"),
@@ -19,7 +19,7 @@ export const JONAS_BLUE: IGig = {
   ]
 };
 
-export const LYVES: IGig = {
+export const LYVES: Gig = {
   headline: MUSICIANS.LYVES,
   venue: MUSIC_VENUES.SERVANT_JAZZ_QUARTERS,
   date: DATES.GIGS.LYVES,
@@ -27,7 +27,7 @@ export const LYVES: IGig = {
   company: []
 };
 
-export const DUSKY: IGig = {
+export const DUSKY: Gig = {
   headline: MUSICIANS.DUSKY,
   venue: MUSIC_VENUES.ELECTRIC_BRIXTON,
   date: new Date("2017-02-24"),
@@ -40,7 +40,7 @@ export const DUSKY: IGig = {
   ]
 };
 
-export const MARTIN_SOLVEIG: IGig = {
+export const MARTIN_SOLVEIG: Gig = {
   headline: MUSICIANS.MARTIN_SOLVEIG,
   support: [MUSICIANS.JAX_JONES],
   date: new Date("2017-03-10"),
@@ -48,7 +48,7 @@ export const MARTIN_SOLVEIG: IGig = {
   company: [FRIENDS.TONYA_FRANCE]
 };
 
-export const BANKS_2017: IGig = {
+export const BANKS_2017: Gig = {
   headline: MUSICIANS.BANKS,
   date: DATES.GIGS.BANKS_2017,
   venue: MUSIC_VENUES.ROUNDHOUSE,
@@ -60,7 +60,7 @@ export const BANKS_2017: IGig = {
   ]
 };
 
-export const TOVE_LO: IGig = {
+export const TOVE_LO: Gig = {
   headline: MUSICIANS.TOVE_LO,
   support: [MUSICIANS.BROODS],
   date: DATES.GIGS.TOVE_LO,
@@ -69,7 +69,7 @@ export const TOVE_LO: IGig = {
   video: VIDEOS.GIGS.TOVE_LO
 };
 
-export const MUNA_2017: IGig = {
+export const MUNA_2017: Gig = {
   headline: MUSICIANS.MUNA,
   date: DATES.GIGS.MUNA_2017,
   video: VIDEOS.GIGS.MUNA_2017,
@@ -78,7 +78,7 @@ export const MUNA_2017: IGig = {
   favourite: true
 };
 
-export const JORJA_SMITH: IGig = {
+export const JORJA_SMITH: Gig = {
   headline: MUSICIANS.JORJA_SMITH,
   video: VIDEOS.GIGS.JORJA_SMITH,
   date: DATES.GIGS.JORJA_SMITH,
@@ -86,7 +86,7 @@ export const JORJA_SMITH: IGig = {
   company: [FRIENDS.LUKE_STERN]
 };
 
-export const VERITE: IGig = {
+export const VERITE: Gig = {
   headline: MUSICIANS.VERITE,
   video: VIDEOS.GIGS.VERITE,
   date: DATES.GIGS.VERITE,
@@ -94,7 +94,7 @@ export const VERITE: IGig = {
   company: [FRIENDS.TONYA_FRANCE]
 };
 
-export const FRANCES: IGig = {
+export const FRANCES: Gig = {
   headline: MUSICIANS.FRANCES,
   video: VIDEOS.GIGS.FRANCES,
   date: DATES.GIGS.FRANCES,
@@ -102,7 +102,7 @@ export const FRANCES: IGig = {
   company: [FRIENDS.EMMA_CODRINGTON, FRIENDS.MUM]
 };
 
-export const JONES: IGig = {
+export const JONES: Gig = {
   headline: MUSICIANS.JONES,
   date: DATES.GIGS.JONES,
   video: VIDEOS.GIGS.JONES,
@@ -110,7 +110,7 @@ export const JONES: IGig = {
   company: [FRIENDS.LUKE_STERN]
 };
 
-export const BETSY: IGig = {
+export const BETSY: Gig = {
   headline: MUSICIANS.BETSY,
   video: VIDEOS.GIGS.BETSY,
   date: DATES.GIGS.BETSY,
@@ -118,7 +118,7 @@ export const BETSY: IGig = {
   company: [FRIENDS.LUKE_STERN]
 };
 
-export const ALMA: IGig = {
+export const ALMA: Gig = {
   headline: MUSICIANS.ALMA,
   video: VIDEOS.GIGS.ALMA,
   date: DATES.GIGS.ALMA,
@@ -126,7 +126,7 @@ export const ALMA: IGig = {
   company: [FRIENDS.LUKE_STERN]
 };
 
-export const BETTY_WHO: IGig = {
+export const BETTY_WHO: Gig = {
   headline: MUSICIANS.BETTY_WHO,
   video: VIDEOS.GIGS.BETTY_WHO,
   date: DATES.GIGS.BETTY_WHO,
@@ -134,7 +134,7 @@ export const BETTY_WHO: IGig = {
   company: [FRIENDS.SIAN_RODWAY_SMITH]
 };
 
-export const PARAMORE_2017: IGig = {
+export const PARAMORE_2017: Gig = {
   headline: MUSICIANS.PARAMORE,
   video: VIDEOS.GIGS.PARAMORE_2017,
   date: DATES.GIGS.PARAMORE_2017,
@@ -143,7 +143,7 @@ export const PARAMORE_2017: IGig = {
   favourite: true
 };
 
-export const SIGRID: IGig = {
+export const SIGRID: Gig = {
   headline: MUSICIANS.SIGRID,
   date: DATES.GIGS.SIGRID,
   video: VIDEOS.GIGS.SIGRID,
@@ -151,7 +151,7 @@ export const SIGRID: IGig = {
   company: [FRIENDS.SIAN_RODWAY_SMITH]
 };
 
-export const ALLIE_X_2018: IGig = {
+export const ALLIE_X_2018: Gig = {
   headline: MUSICIANS.ALLIE_X,
   date: DATES.GIGS.ALLIE_X_2018,
   venue: MUSIC_VENUES.OMEARA,
@@ -160,7 +160,7 @@ export const ALLIE_X_2018: IGig = {
   favourite: true
 };
 
-export const LORDE_2017: IGig = {
+export const LORDE_2017: Gig = {
   headline: MUSICIANS.LORDE,
   date: DATES.GIGS.LORDE_2017,
   video: VIDEOS.GIGS.LORDE_2017,
@@ -169,7 +169,7 @@ export const LORDE_2017: IGig = {
   company: [FRIENDS.LUKE_STERN, FRIENDS.CAITLIN_MCCAIG, FRIENDS.CAITY_DALBY]
 };
 
-export const MURA_MASA: IGig = {
+export const MURA_MASA: Gig = {
   headline: MUSICIANS.MURA_MASA,
   video: VIDEOS.GIGS.MURA_MASA,
   date: DATES.GIGS.MURA_MASA,
@@ -177,7 +177,7 @@ export const MURA_MASA: IGig = {
   company: [FRIENDS.LUKE_STERN]
 };
 
-export const FREYA_RIDINGS: IGig = {
+export const FREYA_RIDINGS: Gig = {
   headline: MUSICIANS.FREYA_RIDINGS,
   video: VIDEOS.GIGS.FREYA_RIDINGS,
   date: DATES.GIGS.FREYA_RIDINGS,
@@ -185,7 +185,7 @@ export const FREYA_RIDINGS: IGig = {
   company: [FRIENDS.TONYA_FRANCE]
 };
 
-export const PVRIS: IGig = {
+export const PVRIS: Gig = {
   headline: MUSICIANS.PVRIS,
   video: VIDEOS.GIGS.PVRIS,
   date: DATES.GIGS.PVRIS,
@@ -193,7 +193,7 @@ export const PVRIS: IGig = {
   company: [FRIENDS.LUKE_STERN]
 };
 
-export const KYGO: IGig = {
+export const KYGO: Gig = {
   headline: MUSICIANS.KYGO,
   support: [MUSICIANS.GRYFFIN, MUSICIANS.SEEB],
   venue: MUSIC_VENUES.O2_THE,
@@ -202,7 +202,7 @@ export const KYGO: IGig = {
   company: [FRIENDS.TONYA_FRANCE]
 };
 
-export const CODE_THE: IGig = {
+export const CODE_THE: Gig = {
   headline: MUSICIANS.CODE_THE,
   venue: MUSIC_VENUES.CORSICA_STUDIOS,
   video: VIDEOS.GIGS.CODE_THE,
@@ -210,7 +210,7 @@ export const CODE_THE: IGig = {
   company: [FRIENDS.JERRY_EDWARDS, FRIENDS.JAMIE_HALKET, FRIENDS.DOM_COYNE]
 };
 
-export const GEORGE_FITZGERALD: IGig = {
+export const GEORGE_FITZGERALD: Gig = {
   headline: MUSICIANS.GEORGE_FITZGERALD,
   video: VIDEOS.GIGS.GEORGE_FITZGERALD,
   venue: MUSIC_VENUES.ISLINGTON_ASSEMBLY_HALL,
@@ -218,7 +218,7 @@ export const GEORGE_FITZGERALD: IGig = {
   company: [FRIENDS.TONYA_FRANCE]
 };
 
-export const AQUILO: IGig = {
+export const AQUILO: Gig = {
   headline: MUSICIANS.AQUILO,
   venue: MUSIC_VENUES.OVAL_SPACE,
   video: VIDEOS.GIGS.AQUILO,
@@ -226,7 +226,7 @@ export const AQUILO: IGig = {
   company: [FRIENDS.JAMIE_HALKET]
 };
 
-export const TWO_FEET: IGig = {
+export const TWO_FEET: Gig = {
   headline: MUSICIANS.TWO_FEET,
   video: VIDEOS.GIGS.TWO_FEET,
   venue: MUSIC_VENUES.ELECTROWERKZ,
@@ -234,7 +234,7 @@ export const TWO_FEET: IGig = {
   company: [FRIENDS.JERRY_EDWARDS]
 };
 
-export const KIM_PETRAS_2018: IGig = {
+export const KIM_PETRAS_2018: Gig = {
   headline: MUSICIANS.KIM_PETRAS,
   video: VIDEOS.GIGS.KIM_PETRAS_2018,
   venue: MUSIC_VENUES.COURTYARD_THEATRE,
@@ -243,14 +243,14 @@ export const KIM_PETRAS_2018: IGig = {
   favourite: true
 };
 
-export const SOFI_TUKKER: IGig = {
+export const SOFI_TUKKER: Gig = {
   headline: MUSICIANS.SOFI_TUKKER,
   venue: MUSIC_VENUES.KOKO,
   date: DATES.GIGS.SOFI_TUKKER,
   company: [FRIENDS.TONYA_FRANCE]
 };
 
-export const HAIM_2018: IGig = {
+export const HAIM_2018: Gig = {
   headline: MUSICIANS.HAIM,
   support: [MUSICIANS.MAGGIE_ROGERS],
   venue: MUSIC_VENUES.ALEXANDRA_PALACE,
@@ -262,7 +262,7 @@ export const HAIM_2018: IGig = {
   ]
 };
 
-export const TAYLOR_SWIFT_2018: IGig = {
+export const TAYLOR_SWIFT_2018: Gig = {
   headline: MUSICIANS.TAYLOR_SWIFT,
   support: [MUSICIANS.CHARLI_XCX, MUSICIANS.CAMILA_CABELLO],
   venue: MUSIC_VENUES.WEMBLEY_STADIUM,
@@ -271,14 +271,14 @@ export const TAYLOR_SWIFT_2018: IGig = {
   favourite: true
 };
 
-export const LAUV_2018: IGig = {
+export const LAUV_2018: Gig = {
   headline: MUSICIANS.LAUV,
   venue: MUSIC_VENUES.KOKO,
   date: new Date("2018-09-18"),
   company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON]
 };
 
-export const RALPH_2018: IGig = {
+export const RALPH_2018: Gig = {
   headline: MUSICIANS.RALPH,
   venue: MUSIC_VENUES.OLD_BLUE_LAST,
   date: new Date("2018-10-15"),
@@ -286,14 +286,14 @@ export const RALPH_2018: IGig = {
   favourite: true
 };
 
-export const RAINBOW_KITTEN_SURPRISE: IGig = {
+export const RAINBOW_KITTEN_SURPRISE: Gig = {
   headline: MUSICIANS.RAINBOW_KITTEN_SURPRISE,
   venue: MUSIC_VENUES.HEAVEN,
   date: new Date("2018-10-31"),
   company: [FRIENDS.JAMIE_HALKET]
 };
 
-export const LYKKE_LI_2018: IGig = {
+export const LYKKE_LI_2018: Gig = {
   headline: MUSICIANS.LYKKE_LI,
   venue: MUSIC_VENUES.BRIXTON_ACADEMY,
   date: new Date("2018-11-04"),
@@ -301,21 +301,21 @@ export const LYKKE_LI_2018: IGig = {
   favourite: true
 };
 
-export const FLORENCE_2018: IGig = {
+export const FLORENCE_2018: Gig = {
   headline: MUSICIANS.FLORENCE_AND_THE_MACHINE,
   venue: MUSIC_VENUES.O2_THE,
   date: new Date("2018-11-21"),
   company: [FRIENDS.EMMA_CODRINGTON, FRIENDS.MEGAN_BLACKBURN]
 };
 
-export const YOU_ME_AT_SIX_2018: IGig = {
+export const YOU_ME_AT_SIX_2018: Gig = {
   headline: MUSICIANS.YOU_ME_AT_SIX,
   venue: MUSIC_VENUES.BRIXTON_ACADEMY,
   date: new Date("2018-12-03"),
   company: [FRIENDS.EMMA_CODRINGTON]
 };
 
-export const MAGGIE_ROGERS_2019: IGig = {
+export const MAGGIE_ROGERS_2019: Gig = {
   headline: MUSICIANS.MAGGIE_ROGERS,
   video: VIDEOS.GIGS.MAGGIE_ROGERS_2019,
   support: [MUSICIANS.MALLRAT],
@@ -325,7 +325,7 @@ export const MAGGIE_ROGERS_2019: IGig = {
   favourite: true
 };
 
-export const TROYE_SIVAN: IGig = {
+export const TROYE_SIVAN: Gig = {
   headline: MUSICIANS.TROYE_SIVAN,
   support: [MUSICIANS.LELAND],
   venue: MUSIC_VENUES.HAMMERSMITH_APOLLO,
@@ -333,7 +333,7 @@ export const TROYE_SIVAN: IGig = {
   company: [FRIENDS.JERRY_EDWARDS]
 };
 
-export const THE_1975_2019: IGig = {
+export const THE_1975_2019: Gig = {
   headline: MUSICIANS._1975_THE,
   venue: MUSIC_VENUES.O2_THE,
   photos: PHOTOS.GIGS.THE_1975_2019,
@@ -341,14 +341,14 @@ export const THE_1975_2019: IGig = {
   company: [FRIENDS.JERRY_EDWARDS]
 };
 
-export const LANY: IGig = {
+export const LANY: Gig = {
   headline: MUSICIANS.LANY,
   venue: MUSIC_VENUES.BRIXTON_ACADEMY,
   date: new Date("2019-03-12"),
   company: [FRIENDS.JERRY_EDWARDS]
 };
 
-export const LEON_2019: IGig = {
+export const LEON_2019: Gig = {
   headline: MUSICIANS.LEON,
   video: VIDEOS.GIGS.LEON_2019,
   venue: MUSIC_VENUES.ISLINGTON_ASSEMBLY_HALL,
@@ -357,14 +357,14 @@ export const LEON_2019: IGig = {
   favourite: true
 };
 
-export const BULOW: IGig = {
+export const BULOW: Gig = {
   headline: MUSICIANS.BULOW,
   venue: MUSIC_VENUES.COURTYARD_THEATRE,
   date: new Date("2019-04-11"),
   company: [FRIENDS.DARREN_TAYLOR]
 };
 
-export const ROBYN_2019: IGig = {
+export const ROBYN_2019: Gig = {
   headline: MUSICIANS.ROBYN,
   video: VIDEOS.GIGS.ROBYN_2019,
   venue: MUSIC_VENUES.ALEXANDRA_PALACE,
@@ -373,14 +373,14 @@ export const ROBYN_2019: IGig = {
   favourite: true
 };
 
-export const BEARS_DEN: IGig = {
+export const BEARS_DEN: Gig = {
   headline: MUSICIANS.BEARS_DEN,
   venue: MUSIC_VENUES.SHEPHERDS_BUSH_EMPIRE,
   date: new Date("2019-04-23"),
   company: [FRIENDS.JAMIE_HALKET]
 };
 
-export const MARINA_2019: IGig = {
+export const MARINA_2019: Gig = {
   headline: MUSICIANS.MARINA,
   venue: MUSIC_VENUES.ROYAL_ALBERT_HALL,
   video: VIDEOS.GIGS.MARINA_2019,
@@ -388,21 +388,21 @@ export const MARINA_2019: IGig = {
   company: [FRIENDS.DARREN_TAYLOR]
 };
 
-export const SASHA_SLOAN: IGig = {
+export const SASHA_SLOAN: Gig = {
   headline: MUSICIANS.SASHA_SLOAN,
   venue: MUSIC_VENUES.DINGWALLS,
   date: new Date("2019-05-07"),
   company: [FRIENDS.DARREN_TAYLOR]
 };
 
-export const G_FLIP: IGig = {
+export const G_FLIP: Gig = {
   headline: MUSICIANS.G_FLIP,
   venue: MUSIC_VENUES.GARAGE_THE,
   date: new Date("2019-05-15"),
   company: [FRIENDS.JERRY_EDWARDS]
 };
 
-export const FKA_TWIGS_2019_05: IGig = {
+export const FKA_TWIGS_2019_05: Gig = {
   headline: MUSICIANS.FKA_TWIGS,
   video: VIDEOS.GIGS.FKA_TWIGS_2019_05,
   venue: MUSIC_VENUES.ALEXANDRA_PALACE_THEATRE,
@@ -411,7 +411,7 @@ export const FKA_TWIGS_2019_05: IGig = {
   favourite: true
 };
 
-export const FLEETWOOD_MAC: IGig = {
+export const FLEETWOOD_MAC: Gig = {
   headline: MUSICIANS.FLEETWOOD_MAC,
   support: [MUSICIANS.PRETENDERS],
   venue: MUSIC_VENUES.WEMBLEY_STADIUM,
@@ -419,7 +419,7 @@ export const FLEETWOOD_MAC: IGig = {
   company: [FRIENDS.DAD, FRIENDS.EMMA_CODRINGTON]
 };
 
-export const SOPHIE_2019: IGig = {
+export const SOPHIE_2019: Gig = {
   headline: MUSICIANS.SOPHIE,
   video: VIDEOS.GIGS.SOPHIE_2019,
   favourite: true,
@@ -428,7 +428,7 @@ export const SOPHIE_2019: IGig = {
   company: [FRIENDS.JERRY_EDWARDS]
 };
 
-export const KIM_PETRAS_2019: IGig = {
+export const KIM_PETRAS_2019: Gig = {
   headline: MUSICIANS.KIM_PETRAS,
   video: VIDEOS.GIGS.KIM_PETRAS_2019,
   venue: MUSIC_VENUES.HEAVEN,
@@ -436,7 +436,7 @@ export const KIM_PETRAS_2019: IGig = {
   company: [FRIENDS.DARREN_TAYLOR, FRIENDS.JERRY_EDWARDS]
 };
 
-export const MUNA_2019_09: IGig = {
+export const MUNA_2019_09: Gig = {
   headline: MUSICIANS.MUNA,
   venue: MUSIC_VENUES.VILLAGE_UNDERGROUND,
   video: VIDEOS.GIGS.MUNA_2019_09,
@@ -444,7 +444,7 @@ export const MUNA_2019_09: IGig = {
   company: [FRIENDS.EMMA_CODRINGTON]
 };
 
-export const JULIA_MICHAELS: IGig = {
+export const JULIA_MICHAELS: Gig = {
   headline: MUSICIANS.JULIA_MICHAELS,
   video: VIDEOS.GIGS.JULIA_MICHAELS,
   venue: MUSIC_VENUES.SHEPHERDS_BUSH_EMPIRE,
@@ -452,7 +452,7 @@ export const JULIA_MICHAELS: IGig = {
   company: [FRIENDS.DARREN_TAYLOR]
 };
 
-export const ELDERBROOK: IGig = {
+export const ELDERBROOK: Gig = {
   headline: MUSICIANS.ELDERBROOK,
   venue: MUSIC_VENUES.EARTH,
   date: new Date("2019-10-12"),
@@ -463,7 +463,7 @@ export const ELDERBROOK: IGig = {
   ]
 };
 
-export const CHARLI_XCX_2019: IGig = {
+export const CHARLI_XCX_2019: Gig = {
   headline: MUSICIANS.CHARLI_XCX,
   video: VIDEOS.GIGS.CHARLI_XCX_2019,
   support: [MUSICIANS.RINA_SAWAYAMA],
@@ -474,7 +474,7 @@ export const CHARLI_XCX_2019: IGig = {
   favourite: true
 };
 
-export const BANKS_2019: IGig = {
+export const BANKS_2019: Gig = {
   headline: MUSICIANS.BANKS,
   video: VIDEOS.GIGS.BANKS_2019,
   photos: PHOTOS.GIGS.BANKS_2019,
@@ -485,7 +485,7 @@ export const BANKS_2019: IGig = {
   favourite: true
 };
 
-export const LAUV_2019: IGig = {
+export const LAUV_2019: Gig = {
   headline: MUSICIANS.LAUV,
   video: VIDEOS.GIGS.LAUV_2019,
   support: [MUSICIANS.CHELSEA_CUTLER],
@@ -495,7 +495,7 @@ export const LAUV_2019: IGig = {
   company: [FRIENDS.JERRY_EDWARDS, FRIENDS.POPPY_SMITH]
 };
 
-export const SABRINA_CLAUDIO_2019: IGig = {
+export const SABRINA_CLAUDIO_2019: Gig = {
   headline: MUSICIANS.SABRINA_CLAUDIO,
   support: [MUSICIANS.OH_ANNIE_OH],
   venue: MUSIC_VENUES.ELECTRIC_BRIXTON,
@@ -503,7 +503,7 @@ export const SABRINA_CLAUDIO_2019: IGig = {
   company: [FRIENDS.DARREN_TAYLOR]
 };
 
-export const ROBINSON: IGig = {
+export const ROBINSON: Gig = {
   headline: MUSICIANS.ROBINSON,
   video: VIDEOS.GIGS.ROBINSON,
   support: [MUSICIANS.NAVVY],
@@ -512,7 +512,7 @@ export const ROBINSON: IGig = {
   company: [FRIENDS.DARREN_TAYLOR]
 };
 
-export const FKA_TWIGS_2019_11: IGig = {
+export const FKA_TWIGS_2019_11: Gig = {
   headline: MUSICIANS.FKA_TWIGS,
   video: VIDEOS.GIGS.FKA_TWIGS_2019_11,
   venue: MUSIC_VENUES.BRIXTON_ACADEMY,
@@ -526,7 +526,7 @@ export const FKA_TWIGS_2019_11: IGig = {
   ]
 };
 
-export const NAAZ: IGig = {
+export const NAAZ: Gig = {
   headline: MUSICIANS.NAAZ,
   video: VIDEOS.GIGS.NAAZ,
   support: [MUSICIANS.DYLAN],
@@ -535,7 +535,7 @@ export const NAAZ: IGig = {
   company: [FRIENDS.DARREN_TAYLOR]
 };
 
-export const MUNA_2019_12: IGig = {
+export const MUNA_2019_12: Gig = {
   headline: MUSICIANS.MUNA,
   support: [MUSICIANS.L_DEVINE],
   venue: MUSIC_VENUES.SHEPHERDS_BUSH_EMPIRE,
@@ -544,7 +544,7 @@ export const MUNA_2019_12: IGig = {
   company: [FRIENDS.LEWIS_STEADMAN, FRIENDS.DARREN_TAYLOR]
 };
 
-export const MELANIE_MARTINEZ: IGig = {
+export const MELANIE_MARTINEZ: Gig = {
   headline: MUSICIANS.MELANIE_MARTINEZ,
   support: [MUSICIANS.NAAZ],
   photos: PHOTOS.GIGS.MELANIE_MARTINEZ_2019,
@@ -553,7 +553,7 @@ export const MELANIE_MARTINEZ: IGig = {
   company: [FRIENDS.DARREN_TAYLOR]
 };
 
-export const KIM_PETRAS_2020: IGig = {
+export const KIM_PETRAS_2020: Gig = {
   headline: MUSICIANS.KIM_PETRAS,
   video: VIDEOS.GIGS.KIM_PETRAS_2020,
   support: [MUSICIANS.ALEX_CHAPMAN],
@@ -562,7 +562,7 @@ export const KIM_PETRAS_2020: IGig = {
   company: [FRIENDS.DARREN_TAYLOR]
 };
 
-export const NASTY_CHERRY: IGig = {
+export const NASTY_CHERRY: Gig = {
   headline: MUSICIANS.NASTY_CHERRY,
   venue: MUSIC_VENUES.GARAGE_THE,
   photos: PHOTOS.GIGS.NASTY_CHERRY_2020,
@@ -571,7 +571,7 @@ export const NASTY_CHERRY: IGig = {
   ticketType: TICKET_TYPES.SEE_TICKETS_PRINT_AT_HOME
 };
 
-export const CAROLINE_POLACHEK_2020: IGig = {
+export const CAROLINE_POLACHEK_2020: Gig = {
   headline: MUSICIANS.CAROLINE_POLACHEK,
   video: VIDEOS.GIGS.CAROLINE_POLACHEK_2020,
   support: [MUSICIANS.SEGA_BODEGA],
@@ -582,7 +582,7 @@ export const CAROLINE_POLACHEK_2020: IGig = {
   ticketType: TICKET_TYPES.DICE_APP
 };
 
-export const GRACEY: IGig = {
+export const GRACEY: Gig = {
   headline: MUSICIANS.GRACEY,
   venue: MUSIC_VENUES.LAYLOW,
   video: VIDEOS.GIGS.GRACEY,
@@ -590,7 +590,7 @@ export const GRACEY: IGig = {
   company: [FRIENDS.DARREN_TAYLOR]
 };
 
-export const CHRISTINE_AND_THE_QUEENS_2020: IGig = {
+export const CHRISTINE_AND_THE_QUEENS_2020: Gig = {
   headline: MUSICIANS.CHRISTINE_AND_THE_QUEENS,
   venue: MUSIC_VENUES.MOTH_CLUB,
   photos: PHOTOS.GIGS.CHRISTINE_AND_THE_QUEENS_2020,
@@ -601,7 +601,7 @@ export const CHRISTINE_AND_THE_QUEENS_2020: IGig = {
   ticketType: TICKET_TYPES.GIGS_AND_TOURS_POSTAL
 };
 
-export const JOSEF_SALVAT_2020: IGig = {
+export const JOSEF_SALVAT_2020: Gig = {
   headline: MUSICIANS.JOSEF_SALVAT,
   photos: PHOTOS.GIGS.JOSEF_SALVAT_2020,
   venue: MUSIC_VENUES.MOTH_CLUB,
@@ -610,7 +610,7 @@ export const JOSEF_SALVAT_2020: IGig = {
   company: [FRIENDS.DARREN_TAYLOR]
 };
 
-export const GEORGIA: IGig = {
+export const GEORGIA: Gig = {
   headline: MUSICIANS.GEORGIA,
   support: [MUSICIANS.PROSPA],
   video: VIDEOS.GIGS.GEORGIA,
@@ -621,7 +621,7 @@ export const GEORGIA: IGig = {
   ticketType: TICKET_TYPES.DICE_APP
 };
 
-export const DUSKY_2020: IGig = {
+export const DUSKY_2020: Gig = {
   headline: MUSICIANS.DUSKY,
   venue: MUSIC_VENUES.NIGHT_TALES,
   date: new Date("2020-10-18"),

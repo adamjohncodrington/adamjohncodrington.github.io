@@ -105,7 +105,7 @@ const method: string[] = [
 
 const title: string = "Banana Cake";
 const makes: IRecipeMakes = { quantity: 10, measurement: MEASUREMENTS.SLICE };
-const diet: IRecipeDiet = DIETS.VEGAN;
+const diet: RecipeDiet = DIETS.VEGAN;
 const photo: IPhoto = PHOTOS.RECIPES.BANANA_CAKE;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);

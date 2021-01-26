@@ -1,4 +1,4 @@
-interface IState extends ILocation {}
+interface IState extends LocationProps {}
 
 interface IStatesUSA {
   FLORIDA: IState;

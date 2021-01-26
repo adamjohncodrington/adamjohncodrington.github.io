@@ -5,7 +5,7 @@ import { moveTheSuffixToPrefix } from "utils";
 
 import { CardDisclaimer, CardTextContainer, CardSecondaryBody } from "./styles";
 
-export const CardHeaderText: FC<ICardHeader> = ({
+export const CardHeaderText: FC<CardHeaderProps> = ({
   panelVisible,
   panelExists,
   title,

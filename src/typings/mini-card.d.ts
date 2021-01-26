@@ -1,4 +1,9 @@
-interface IMiniCard extends I__Favourite, I_Sort, I__Photos, I__Video, I__Star {
+interface MiniCardProps
+  extends I__Favourite,
+    I_Sort,
+    I__Photos,
+    I__Video,
+    I__Star {
   primaryText: string;
   primaryTextAlt?: string;
 
@@ -13,7 +18,7 @@ interface IMiniCard extends I__Favourite, I_Sort, I__Photos, I__Video, I__Star {
   greaterCountPadding?: boolean;
 }
 
-interface IMiniCardHeader extends IMiniCard, IDisclosureHeader {}
+interface IMiniCardHeader extends MiniCardProps, IDisclosureHeader {}
 
 interface IMiniCardPanelDetail extends I_Sort, I__Favourite, I__Video {
   mainText: string[];

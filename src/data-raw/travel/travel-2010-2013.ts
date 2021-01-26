@@ -1,6 +1,6 @@
 import { FRIENDS, COUNTRIES } from "@constants";
 
-export const DUBAI: ITrip = [
+export const DUBAI: Trip = [
   {
     primaryLocations: [COUNTRIES.UAE.cities.DUBAI],
     country: COUNTRIES.UAE,
@@ -13,7 +13,7 @@ export const DUBAI: ITrip = [
   }
 ];
 
-export const FERRAGUDO: ITrip = [
+export const FERRAGUDO: Trip = [
   {
     primaryLocations: [COUNTRIES.PORTUGAL.towns.FERRAGUDO],
     country: COUNTRIES.PORTUGAL,
@@ -23,7 +23,7 @@ export const FERRAGUDO: ITrip = [
   }
 ];
 
-export const CORNWALL_2011: ITrip = [
+export const CORNWALL_2011: Trip = [
   {
     primaryLocations: [COUNTRIES.UK.regions.CORNWALL],
     notAbroad: true,
@@ -41,7 +41,7 @@ export const CORNWALL_2011: ITrip = [
   }
 ];
 
-export const FLORIDA_KEYS: ITrip = [
+export const FLORIDA_KEYS: Trip = [
   {
     primaryLocations: [COUNTRIES.USA.regions.FLORIDA_KEYS],
     secondaryLocations: [
@@ -54,7 +54,7 @@ export const FLORIDA_KEYS: ITrip = [
   }
 ];
 
-export const EGYPT: ITrip = [
+export const EGYPT: Trip = [
   {
     country: COUNTRIES.EGYPT,
     primaryLocations: [COUNTRIES.EGYPT.cities.SHARM_EL_SHEIKH],
@@ -68,7 +68,7 @@ export const EGYPT: ITrip = [
   }
 ];
 
-export const VENICE: ITrip = [
+export const VENICE: Trip = [
   {
     primaryLocations: [
       COUNTRIES.ITALY.towns.JESOLO,
@@ -80,7 +80,7 @@ export const VENICE: ITrip = [
   }
 ];
 
-export const CUBA: ITrip = [
+export const CUBA: Trip = [
   {
     country: COUNTRIES.CUBA,
     primaryLocations: [

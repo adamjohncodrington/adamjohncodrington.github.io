@@ -21,7 +21,7 @@ const PageSectionContainer = styled.section(
   `
 );
 
-export const PageSection: FC<IPageSection> = props => {
+export const PageSection: FC<PageSectionProps> = props => {
   const { autoExpand } = props;
   return (
     <PageSectionContainer>

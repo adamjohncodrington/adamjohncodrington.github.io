@@ -1,7 +1,7 @@
 import { FRIENDS, DATES, COUNTRIES } from "@constants";
 import { PHOTOS, VIDEOS } from "resources";
 
-export const BARBADOS: ITrip = [
+export const BARBADOS: Trip = [
   {
     country: COUNTRIES.BARBADOS,
     showCountryAsTitle: true,
@@ -11,7 +11,7 @@ export const BARBADOS: ITrip = [
   }
 ];
 
-export const THAILAND_LAOS: ITrip = [
+export const THAILAND_LAOS: Trip = [
   {
     country: COUNTRIES.THAILAND,
     primaryLocations: [
@@ -55,7 +55,7 @@ export const THAILAND_LAOS: ITrip = [
   }
 ];
 
-export const PARIS_2015: ITrip = [
+export const PARIS_2015: Trip = [
   {
     primaryLocations: [COUNTRIES.FRANCE.cities.PARIS],
     photos: PHOTOS.TRAVEL.PARIS_2015,
@@ -80,7 +80,7 @@ export const PARIS_2015: ITrip = [
   }
 ];
 
-export const UGANDA: ITrip = [
+export const UGANDA: Trip = [
   {
     primaryLocations: [COUNTRIES.UGANDA.cities.JINJA],
     country: COUNTRIES.UGANDA,
@@ -109,7 +109,7 @@ export const UGANDA: ITrip = [
   }
 ];
 
-export const INTERRAILING: ITrip = [
+export const INTERRAILING: Trip = [
   {
     primaryLocations: [COUNTRIES.GERMANY.cities.BERLIN],
     favourite: true,
@@ -161,7 +161,7 @@ export const INTERRAILING: ITrip = [
   }
 ];
 
-export const DUBLIN: ITrip = [
+export const DUBLIN: Trip = [
   {
     primaryLocations: [COUNTRIES.IRELAND.cities.DUBLIN],
     country: COUNTRIES.IRELAND,
@@ -175,7 +175,7 @@ export const DUBLIN: ITrip = [
   }
 ];
 
-export const TAVIRA: ITrip = [
+export const TAVIRA: Trip = [
   {
     primaryLocations: [COUNTRIES.PORTUGAL.towns.TAVIRA],
     favourite: true,
@@ -185,7 +185,7 @@ export const TAVIRA: ITrip = [
   }
 ];
 
-export const ECUADOR_PERU: ITrip = [
+export const ECUADOR_PERU: Trip = [
   {
     country: COUNTRIES.ECUADOR,
     primaryLocations: [
@@ -238,7 +238,7 @@ export const ECUADOR_PERU: ITrip = [
   }
 ];
 
-export const BRAZIL: ITrip = [
+export const BRAZIL: Trip = [
   {
     country: COUNTRIES.BRAZIL,
     favourite: true,

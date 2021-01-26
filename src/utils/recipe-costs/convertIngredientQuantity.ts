@@ -3,7 +3,7 @@ import { MEASUREMENTS } from "@constants";
 interface IGetKnownCostQuantity {
   quantity: number;
   measurement: string;
-  knownCost: IIngredientCost;
+  knownCost: IngredientCost;
 }
 
 export const convertIngredientQuantity = ({

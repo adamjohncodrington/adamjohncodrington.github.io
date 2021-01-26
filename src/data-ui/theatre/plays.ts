@@ -5,8 +5,8 @@ import { getItemCounts } from "utils";
 import { FAVOURITES } from "./favourites";
 
 interface IPlayIsFavourited {
-  play: IPlay;
-  favouriteTheatreVisits: ITheatreVisit[];
+  play: Play;
+  favouriteTheatreVisits: TheatreVisit[];
 }
 
 const playIsFavourited = ({
@@ -14,19 +14,19 @@ const playIsFavourited = ({
   favouriteTheatreVisits
 }: IPlayIsFavourited): boolean =>
   favouriteTheatreVisits.some(
-    (theatreVisit: ITheatreVisit): boolean => theatreVisit.play === play
+    (theatreVisit: TheatreVisit): boolean => theatreVisit.play === play
   );
 
-const getPlayMatches = (play: IPlay): ITheatreVisit[] =>
+const getPlayMatches = (play: Play): TheatreVisit[] =>
   DATA.reduce(
-    (matches: ITheatreVisit[], theatreVisit: ITheatreVisit): ITheatreVisit[] =>
+    (matches: TheatreVisit[], theatreVisit: TheatreVisit): TheatreVisit[] =>
       theatreVisit.play === play ? [...matches, theatreVisit] : matches,
     []
   );
 
-const getPlayDetails = (play: IPlay): IMiniCardPanelDetail[] =>
+const getPlayDetails = (play: Play): IMiniCardPanelDetail[] =>
   getPlayMatches(play).map(
-    (theatreVisit: ITheatreVisit): IMiniCardPanelDetail => {
+    (theatreVisit: TheatreVisit): IMiniCardPanelDetail => {
       const { date } = theatreVisit;
       return {
         mainText: [theatreVisit.theatre.name],
@@ -36,8 +36,8 @@ const getPlayDetails = (play: IPlay): IMiniCardPanelDetail[] =>
     }
   );
 
-export const PLAYS: IMiniCard[] = Object.values(plays).map(
-  (play: IPlay): IMiniCard => {
+export const PLAYS: MiniCardProps[] = Object.values(plays).map(
+  (play: Play): MiniCardProps => {
     const { name } = play;
     const {
       pastCount: primaryCount,

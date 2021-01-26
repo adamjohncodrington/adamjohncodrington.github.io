@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 import { SVG } from "resources";
 import { COLORS } from "styles";
 
-interface IStyledSymbol extends ISymbol, I_Theme {}
+interface IStyledSymbol extends SymbolProps, I_Theme {}
 
 const { GRAY_LIGHT } = COLORS;
 
@@ -43,7 +43,7 @@ const StyledSymbol = styled.div(
   `
 );
 
-export const Symbol: FC<ISymbol> = props => {
+export const Symbol: FC<SymbolProps> = props => {
   const {
     contents: { text, icon }
   } = props;

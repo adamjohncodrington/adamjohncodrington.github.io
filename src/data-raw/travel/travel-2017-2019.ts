@@ -1,7 +1,7 @@
 import { FRIENDS, COUNTRIES, DATES } from "@constants";
 import { PHOTOS, VIDEOS } from "resources";
 
-export const MILAN: ITrip = [
+export const MILAN: Trip = [
   {
     primaryLocations: [COUNTRIES.ITALY.cities.MILAN],
     country: COUNTRIES.ITALY,
@@ -23,7 +23,7 @@ export const MILAN: ITrip = [
   }
 ];
 
-export const BARCELONA: ITrip = [
+export const BARCELONA: Trip = [
   {
     primaryLocations: [COUNTRIES.SPAIN.cities.BARCELONA],
     country: COUNTRIES.SPAIN,
@@ -42,7 +42,7 @@ export const BARCELONA: ITrip = [
   }
 ];
 
-export const TENERIFE_2017: ITrip = [
+export const TENERIFE_2017: Trip = [
   {
     primaryLocations: [COUNTRIES.SPAIN.islands.TENERIFE],
     country: COUNTRIES.SPAIN,
@@ -52,7 +52,7 @@ export const TENERIFE_2017: ITrip = [
   }
 ];
 
-export const COPENHAGEN: ITrip = [
+export const COPENHAGEN: Trip = [
   {
     primaryLocations: [COUNTRIES.DENMARK.cities.COPENHAGEN],
     photos: PHOTOS.TRAVEL.COPENHAGEN,
@@ -63,7 +63,7 @@ export const COPENHAGEN: ITrip = [
   }
 ];
 
-export const PAPHOS: ITrip = [
+export const PAPHOS: Trip = [
   {
     primaryLocations: [COUNTRIES.CYPRUS.cities.PAPHOS],
     country: COUNTRIES.CYPRUS,
@@ -76,7 +76,7 @@ export const PAPHOS: ITrip = [
   }
 ];
 
-export const DUBROVNIK: ITrip = [
+export const DUBROVNIK: Trip = [
   {
     primaryLocations: [COUNTRIES.CROATIA.cities.DUBROVNIK],
     favourite: true,
@@ -91,7 +91,7 @@ export const DUBROVNIK: ITrip = [
   }
 ];
 
-export const GRONINGEN: ITrip = [
+export const GRONINGEN: Trip = [
   {
     primaryLocations: [COUNTRIES.NETHERLANDS.cities.GRONINGEN],
     country: COUNTRIES.NETHERLANDS,
@@ -102,7 +102,7 @@ export const GRONINGEN: ITrip = [
   }
 ];
 
-export const AMSTERDAM: ITrip = [
+export const AMSTERDAM: Trip = [
   {
     primaryLocations: [COUNTRIES.NETHERLANDS.cities.AMSTERDAM],
     country: COUNTRIES.NETHERLANDS,
@@ -121,7 +121,7 @@ export const AMSTERDAM: ITrip = [
   }
 ];
 
-export const LISBON: ITrip = [
+export const LISBON: Trip = [
   {
     primaryLocations: [COUNTRIES.PORTUGAL.cities.LISBON],
     country: COUNTRIES.PORTUGAL,
@@ -132,7 +132,7 @@ export const LISBON: ITrip = [
   }
 ];
 
-export const BRUGES: ITrip = [
+export const BRUGES: Trip = [
   {
     primaryLocations: [COUNTRIES.BELGIUM.cities.BRUGES],
     photos: PHOTOS.TRAVEL.BRUGES,
@@ -143,7 +143,7 @@ export const BRUGES: ITrip = [
   }
 ];
 
-export const CATANIA: ITrip = [
+export const CATANIA: Trip = [
   {
     primaryLocations: [COUNTRIES.ITALY.cities.CATANIA],
     country: COUNTRIES.ITALY,
@@ -155,7 +155,7 @@ export const CATANIA: ITrip = [
   }
 ];
 
-export const NICE: ITrip = [
+export const NICE: Trip = [
   {
     primaryLocations: [COUNTRIES.FRANCE.cities.NICE],
     photos: PHOTOS.TRAVEL.NICE,

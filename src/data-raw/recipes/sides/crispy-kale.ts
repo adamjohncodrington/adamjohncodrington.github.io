@@ -63,7 +63,7 @@ const method: string[] = [
 ];
 
 const title: string = "Crispy Kale";
-const diet: IRecipeDiet = DIETS.VEGAN;
+const diet: RecipeDiet = DIETS.VEGAN;
 const photo: IPhoto = PHOTOS.RECIPES.KALE_CRISPY;
 const makes: IRecipeMakes = { quantity: 2, measurement: MEASUREMENTS.SERVING };
 

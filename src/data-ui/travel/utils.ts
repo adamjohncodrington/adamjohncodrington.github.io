@@ -20,7 +20,7 @@ export const mapTravelVideosToCards = (
     sort: [dates.start.valueOf()],
     title: arrayToString(
       locations.map(
-        ({ name, shortName }: ILocation): string => shortName || name
+        ({ name, shortName }: LocationProps): string => shortName || name
       ),
       { useAmpersandsForPair: true }
     ),

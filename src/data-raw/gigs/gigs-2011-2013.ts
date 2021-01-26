@@ -1,6 +1,6 @@
 import { FRIENDS, MUSICIANS, MUSIC_VENUES } from "@constants";
 
-export const KATE_NASH_2011: IGig = {
+export const KATE_NASH_2011: Gig = {
   headline: MUSICIANS.KATE_NASH,
   support: [MUSICIANS.BRIGITTE_APHRODITE],
   venue: MUSIC_VENUES.ROCK_CITY,
@@ -9,7 +9,7 @@ export const KATE_NASH_2011: IGig = {
   favourite: true
 };
 
-export const KATY_PERRY_2011: IGig = {
+export const KATY_PERRY_2011: Gig = {
   headline: MUSICIANS.KATY_PERRY,
   venue: MUSIC_VENUES.ARENA_NOTTINGHAM,
   company: [
@@ -21,7 +21,7 @@ export const KATY_PERRY_2011: IGig = {
   date: new Date("2011-03-30")
 };
 
-export const ADELE_2011_04: IGig = {
+export const ADELE_2011_04: Gig = {
   headline: MUSICIANS.ADELE,
   support: [MUSICIANS.MICHAEL_KIWANUKA],
   venue: MUSIC_VENUES.INSTITUTE_BIRMINGHAM,
@@ -29,7 +29,7 @@ export const ADELE_2011_04: IGig = {
   date: new Date("2011-04-18")
 };
 
-export const ADELE_2011_09: IGig = {
+export const ADELE_2011_09: Gig = {
   headline: MUSICIANS.ADELE,
   support: [MUSICIANS.AMOS_LEE],
   venue: MUSIC_VENUES.DE_MONTFORT_HALL,
@@ -37,7 +37,7 @@ export const ADELE_2011_09: IGig = {
   date: new Date("2011-09-13")
 };
 
-export const SBTRKT_2012: IGig = {
+export const SBTRKT_2012: Gig = {
   headline: MUSICIANS.SBTRKT,
   support: [MUSICIANS.DISCLOSURE],
   venue: MUSIC_VENUES.ROCK_CITY,
@@ -45,28 +45,28 @@ export const SBTRKT_2012: IGig = {
   date: new Date("2012-02-28")
 };
 
-export const FLORENCE_2012: IGig = {
+export const FLORENCE_2012: Gig = {
   headline: MUSICIANS.FLORENCE_AND_THE_MACHINE,
   venue: MUSIC_VENUES.NEC_ARENA_BIRMINGHAM,
   company: [FRIENDS.DAD],
   date: new Date("2012-03-13")
 };
 
-export const LITTLE_COMETS_2012_04: IGig = {
+export const LITTLE_COMETS_2012_04: Gig = {
   headline: MUSICIANS.LITTLE_COMETS,
   venue: MUSIC_VENUES.COCKPIT_LEEDS,
   company: [FRIENDS.EMMA_CODRINGTON],
   date: new Date("2012-04-23")
 };
 
-export const KATE_NASH_2012: IGig = {
+export const KATE_NASH_2012: Gig = {
   headline: MUSICIANS.KATE_NASH,
   venue: MUSIC_VENUES.BODEGA,
   company: [FRIENDS.TONYA_FRANCE, FRIENDS.SONYA_PARDI, FRIENDS.KIRSTEN_JACKSON],
   date: new Date("2012-06-22")
 };
 
-export const MARINA_2012: IGig = {
+export const MARINA_2012: Gig = {
   headline: MUSICIANS.MARINA,
   venue: MUSIC_VENUES.INSTITUTE_BIRMINGHAM,
   company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON],
@@ -74,7 +74,7 @@ export const MARINA_2012: IGig = {
   favourite: true
 };
 
-export const LADY_GAGA_2012: IGig = {
+export const LADY_GAGA_2012: Gig = {
   headline: MUSICIANS.LADY_GAGA,
   venue: MUSIC_VENUES.TWICKENHAM_STADIUM,
   company: [FRIENDS.EMMA_CODRINGTON],
@@ -82,7 +82,7 @@ export const LADY_GAGA_2012: IGig = {
   favourite: true
 };
 
-export const NICKI_MINAJ: IGig = {
+export const NICKI_MINAJ: Gig = {
   headline: MUSICIANS.NICKI_MINAJ,
   support: [MUSICIANS.MISHA_B, MUSICIANS.TYGA],
   venue: MUSIC_VENUES.ARENA_NOTTINGHAM,
@@ -90,28 +90,28 @@ export const NICKI_MINAJ: IGig = {
   date: new Date("2012-10-21")
 };
 
-export const LITTLE_COMETS_2012_10: IGig = {
+export const LITTLE_COMETS_2012_10: Gig = {
   headline: MUSICIANS.LITTLE_COMETS,
   venue: MUSIC_VENUES.RESCUE_ROOMS,
   company: [FRIENDS.SARAH_WHITAKER, FRIENDS.BETH_SHEARS],
   date: new Date("2012-10-31")
 };
 
-export const KILLERS: IGig = {
+export const KILLERS: Gig = {
   headline: MUSICIANS.KILLERS_THE,
   venue: MUSIC_VENUES.SHEFFIELD_ARENA,
   company: [FRIENDS.DAD],
   date: new Date("2012-11-08")
 };
 
-export const BEN_HOWARD: IGig = {
+export const BEN_HOWARD: Gig = {
   headline: MUSICIANS.BEN_HOWARD,
   venue: MUSIC_VENUES.ROCK_CITY,
   company: [FRIENDS.STEVE_RICHARDS],
   date: new Date("2012-11-22")
 };
 
-export const ELLIE_GOULDING_2012: IGig = {
+export const ELLIE_GOULDING_2012: Gig = {
   headline: MUSICIANS.ELLIE_GOULDING,
   venue: MUSIC_VENUES.ROCK_CITY,
   favourite: true,
@@ -119,14 +119,14 @@ export const ELLIE_GOULDING_2012: IGig = {
   date: new Date("2012-12-11")
 };
 
-export const BASTILLE: IGig = {
+export const BASTILLE: Gig = {
   headline: MUSICIANS.BASTILLE,
   venue: MUSIC_VENUES.ROCK_CITY,
   company: [FRIENDS.TONYA_FRANCE],
   date: new Date("2013-03-21")
 };
 
-export const RIHANNA: IGig = {
+export const RIHANNA: Gig = {
   headline: MUSICIANS.RIHANNA,
   venue: MUSIC_VENUES.NEC_ARENA_BIRMINGHAM,
   company: [FRIENDS.JESS_SMITH],
@@ -134,7 +134,7 @@ export const RIHANNA: IGig = {
   favourite: true
 };
 
-export const CHVRCHES_2013: IGig = {
+export const CHVRCHES_2013: Gig = {
   headline: MUSICIANS.CHVRCHES,
   venue: MUSIC_VENUES.RITZ_MANCHESTER,
   company: [FRIENDS.SIMAN_PONE],

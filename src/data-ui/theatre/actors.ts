@@ -2,12 +2,9 @@ import { ACTORS as actors } from "@constants";
 import { THEATRE as DATA } from "data-raw";
 import { getItemCounts, getTheatreVisitTitle } from "utils";
 
-const getActorMatches = (actor: IActor): ITheatreVisit[] =>
+const getActorMatches = (actor: Actor): TheatreVisit[] =>
   DATA.reduce(
-    (
-      matches: ITheatreVisit[],
-      theatreVisit: ITheatreVisit
-    ): ITheatreVisit[] => {
+    (matches: TheatreVisit[], theatreVisit: TheatreVisit): TheatreVisit[] => {
       const { cast } = theatreVisit;
       return cast && cast.includes(actor)
         ? [...matches, theatreVisit]
@@ -16,9 +13,9 @@ const getActorMatches = (actor: IActor): ITheatreVisit[] =>
     []
   );
 
-const getActorDetails = (actor: IActor): IMiniCardPanelDetail[] =>
+const getActorDetails = (actor: Actor): IMiniCardPanelDetail[] =>
   getActorMatches(actor).map(
-    (theatreVisit: ITheatreVisit): IMiniCardPanelDetail => {
+    (theatreVisit: TheatreVisit): IMiniCardPanelDetail => {
       const { date } = theatreVisit;
       return {
         mainText: [getTheatreVisitTitle(theatreVisit)],
@@ -28,8 +25,8 @@ const getActorDetails = (actor: IActor): IMiniCardPanelDetail[] =>
     }
   );
 
-export const ACTORS: IMiniCard[] = Object.values(actors).map(
-  (actor: IActor): IMiniCard => {
+export const ACTORS: MiniCardProps[] = Object.values(actors).map(
+  (actor: Actor): MiniCardProps => {
     const { name, favourite } = actor;
     const {
       pastCount: primaryCount,

@@ -1,11 +1,11 @@
 interface ITripLeg extends I__Favourite, I__Photos, I_Dates, I_Company {
   video?: ITravelVideo;
   country: ICountryTemplate;
-  primaryLocations?: ILocation[];
-  secondaryLocations?: ILocation[];
-  hiddenLocations?: ILocation[];
+  primaryLocations?: LocationProps[];
+  secondaryLocations?: LocationProps[];
+  hiddenLocations?: LocationProps[];
   notAbroad?: boolean;
   showCountryAsTitle?: boolean;
 }
 
-type ITrip = ITripLeg[];
+type Trip = ITripLeg[];

@@ -99,7 +99,7 @@ const method: string[] = [
 ];
 const title: string = "Sweet and Sour";
 const makes: IRecipeMakes = { quantity: 4, measurement: MEASUREMENTS.PORTION };
-const diet: IRecipeDiet = DIETS.VEGAN;
+const diet: RecipeDiet = DIETS.VEGAN;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;

@@ -1,10 +1,12 @@
-export const filterMiniCards = (miniCards: IMiniCard[]): IMiniCard[] => {
-  const filtered: IMiniCard[] = miniCards.filter(
+export const filterMiniCards = (
+  miniCards: MiniCardProps[]
+): MiniCardProps[] => {
+  const filtered: MiniCardProps[] = miniCards.filter(
     ({
       primaryCount,
       secondaryCount,
       countInfoIrrelevant
-    }: IMiniCard): boolean =>
+    }: MiniCardProps): boolean =>
       countInfoIrrelevant ||
       (!!primaryCount && primaryCount !== 0) ||
       (!!secondaryCount && secondaryCount !== 0)

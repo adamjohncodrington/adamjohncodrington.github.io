@@ -1,4 +1,4 @@
-interface IAttraction extends ILocation {
+interface IAttraction extends LocationProps {
   themePark?: boolean;
   highlight?: boolean;
 }

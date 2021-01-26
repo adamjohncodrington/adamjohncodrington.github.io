@@ -1,6 +1,6 @@
 import { PLAYS, THEATRE_VENUES, FRIENDS, ACTORS } from "@constants";
 
-export const WAITRESS: ITheatreVisit = {
+export const WAITRESS: TheatreVisit = {
   play: PLAYS.WAITRESS,
   theatre: THEATRE_VENUES.ADELPHI,
   date: new Date("2020-02-18"),
@@ -8,7 +8,7 @@ export const WAITRESS: ITheatreVisit = {
   cast: [ACTORS.SARA_BAREILLES]
 };
 
-export const UNCLE_VANYA: ITheatreVisit = {
+export const UNCLE_VANYA: TheatreVisit = {
   play: PLAYS.UNCLE_VANYA,
   theatre: THEATRE_VENUES.HAROLD_PINTER,
   date: new Date("2020-02-19"),
