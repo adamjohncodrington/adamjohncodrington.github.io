@@ -5,7 +5,7 @@ import { Disclosure } from "../Disclosure";
 import { CardHeader } from "./CardHeader";
 import { CardPanel } from "./CardPanel";
 
-export const Card: FC<ICard> = props => {
+export const Card: FC<CardProps> = props => {
   const { video, photos } = props;
   const panelExists: boolean = !!(video || (photos && photos.length > 0));
 

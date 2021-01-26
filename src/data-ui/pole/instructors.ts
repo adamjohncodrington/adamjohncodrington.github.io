@@ -6,23 +6,21 @@ import {
   mapPoleTricksVideoToMiniCardDetail
 } from "./utils";
 
-const getInstructorRoutineMatches = (
-  instructor: IPoleInstructor
-): IPoleRoutine[] =>
+const getRoutinesForInstructor = (instructor: PoleInstructor): PoleRoutine[] =>
   POLE_ROUTINES.reduce(
-    (matches: IPoleRoutine[], routine: IPoleRoutine): IPoleRoutine[] =>
+    (matches: PoleRoutine[], routine: PoleRoutine): PoleRoutine[] =>
       routine.choreographer === instructor ? [...matches, routine] : matches,
     []
   );
 
-const getInstructorTricksMatches = (
-  instructor: IPoleInstructor
-): IPoleTricksVideo[] =>
+const getTricksVideosForInstructor = (
+  instructor: PoleInstructor
+): PoleTricksVideo[] =>
   POLE_TRICKS_VIDEOS.reduce(
     (
-      matches: IPoleTricksVideo[],
-      tricksVideo: IPoleTricksVideo
-    ): IPoleTricksVideo[] =>
+      matches: PoleTricksVideo[],
+      tricksVideo: PoleTricksVideo
+    ): PoleTricksVideo[] =>
       tricksVideo.instructor === instructor
         ? [...matches, tricksVideo]
         : matches,
@@ -30,22 +28,24 @@ const getInstructorTricksMatches = (
   );
 
 const getInstructorDetails = (
-  instructor: IPoleInstructor
-): IMiniCardPanelDetail[] => [
-  ...getInstructorRoutineMatches(instructor).map(
-    (poleRoutine: IPoleRoutine): IMiniCardPanelDetail =>
+  instructor: PoleInstructor
+): MiniCardPanelDetailProps[] => [
+  ...getRoutinesForInstructor(instructor).map(
+    (poleRoutine: PoleRoutine): MiniCardPanelDetailProps =>
       mapPoleRoutineToMiniCardDetail(poleRoutine)
   ),
-  ...getInstructorTricksMatches(instructor).map(
-    (poleTricksVideo: IPoleTricksVideo): IMiniCardPanelDetail =>
+  ...getTricksVideosForInstructor(instructor).map(
+    (poleTricksVideo: PoleTricksVideo): MiniCardPanelDetailProps =>
       mapPoleTricksVideoToMiniCardDetail(poleTricksVideo)
   )
 ];
 
 export const INSTRUCTORS: MiniCardProps[] = Object.values(instructors).map(
-  (instructor: IPoleInstructor): MiniCardProps => {
+  (instructor: PoleInstructor): MiniCardProps => {
     const { name, stageName } = instructor;
-    const details: IMiniCardPanelDetail[] = getInstructorDetails(instructor);
+    const details: MiniCardPanelDetailProps[] = getInstructorDetails(
+      instructor
+    );
     const instructorName: string = stageName || name;
     return {
       primaryText: instructorName,

@@ -2,19 +2,19 @@ import { FRIENDS as friends } from "@constants";
 import { TRIP_LEGS as DATA } from "data-raw";
 import { getItemCounts, getTripTitle } from "utils";
 
-const getTripsMatchingFriend = (friend: Friend): ITripLeg[] => {
-  const tripsMatchingFriend: ITripLeg[] = [];
-  const tripLegs: ITripLeg[] = DATA;
-  tripLegs.forEach((trip: ITripLeg): void => {
+const getTripsMatchingFriend = (friend: Friend): TripLeg[] => {
+  const tripsMatchingFriend: TripLeg[] = [];
+  const tripLegs: TripLeg[] = DATA;
+  tripLegs.forEach((trip: TripLeg): void => {
     if (trip.company.includes(friend)) tripsMatchingFriend.push(trip);
   });
   return tripsMatchingFriend;
 };
 
-const getFriendDetails = (friend: Friend): IMiniCardPanelDetail[] => {
-  const tripsMatchingFriend: ITripLeg[] = getTripsMatchingFriend(friend);
+const getFriendDetails = (friend: Friend): MiniCardPanelDetailProps[] => {
+  const tripsMatchingFriend: TripLeg[] = getTripsMatchingFriend(friend);
   return tripsMatchingFriend.map(
-    (trip: ITripLeg): IMiniCardPanelDetail => {
+    (trip: TripLeg): MiniCardPanelDetailProps => {
       const { dates, video } = trip;
       return {
         sort: [dates[0].valueOf()],

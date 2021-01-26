@@ -29,7 +29,7 @@ export const mapAlbumToPhoto = (album: IAlbum): IPhoto => {
   };
 };
 
-const mapAlbumToCard = (album: IAlbum, options?: IOptions): ICard => {
+const mapAlbumToCard = (album: IAlbum, options?: IOptions): CardProps => {
   const { title, musician, year } = album;
   const hideYear: boolean = !!(options && options.hideYear);
   return {
@@ -42,7 +42,7 @@ const mapAlbumToCard = (album: IAlbum, options?: IOptions): ICard => {
   };
 };
 
-const mapVinylToCard = (vinyl: IVinyl, options?: IOptions): ICard => {
+const mapVinylToCard = (vinyl: IVinyl, options?: IOptions): CardProps => {
   const { signed, gift } = vinyl;
   const hideSignedIcon: boolean = !!(options && options.hideSignedIcon);
   const hideColorSymbol: boolean = !!(options && options.hideColorSymbol);
@@ -62,14 +62,14 @@ const mapVinylToCard = (vinyl: IVinyl, options?: IOptions): ICard => {
 export const mapAlbumsToCards = (
   albums: IAlbum[],
   options?: IOptions
-): ICard[] =>
-  albums.map((album: IAlbum): ICard => mapAlbumToCard(album, options));
+): CardProps[] =>
+  albums.map((album: IAlbum): CardProps => mapAlbumToCard(album, options));
 
 export const mapVinylsToCards = (
   vinyls: IVinyl[],
   options?: IOptions
-): ICard[] =>
-  vinyls.map((vinyl: IVinyl): ICard => mapVinylToCard(vinyl, options));
+): CardProps[] =>
+  vinyls.map((vinyl: IVinyl): CardProps => mapVinylToCard(vinyl, options));
 
 interface IOptions2 {
   showMusicianName: boolean;
@@ -79,14 +79,14 @@ interface IOptions2 {
 export const mapVinylsToMiniCardPanelDetails = (
   vinyls: IVinyl[],
   { showMusicianName, showCost = false }: IOptions2
-): IMiniCardPanelDetail[] => {
+): MiniCardPanelDetailProps[] => {
   const mapVinylToMiniCardPanelDetail = ({
     year,
     musician,
     title,
     costExcDelivery,
     appleMusicId
-  }: IVinyl): IMiniCardPanelDetail => {
+  }: IVinyl): MiniCardPanelDetailProps => {
     const mainText: string = showMusicianName
       ? `${moveTheSuffixToPrefix(
           getMusicianStageNameAtTime({ musician, year })
@@ -103,7 +103,7 @@ export const mapVinylsToMiniCardPanelDetails = (
     };
   };
   return vinyls.map(
-    (vinyl: IVinyl): IMiniCardPanelDetail =>
+    (vinyl: IVinyl): MiniCardPanelDetailProps =>
       mapVinylToMiniCardPanelDetail(vinyl)
   );
 };

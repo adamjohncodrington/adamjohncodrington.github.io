@@ -7,6 +7,6 @@ const sorted: IVinyl[] = DATA.sort((a: IVinyl, b: IVinyl): number =>
   a.year > b.year ? 1 : -1
 );
 
-const cards: ICard[] = mapVinylsToCards(sorted, { hideYear: true });
+const cards: CardProps[] = mapVinylsToCards(sorted, { hideYear: true });
 
-export const YEARS: ICard[][] = splitCardsIntoYears(cards);
+export const YEARS: CardProps[][] = splitCardsIntoYears(cards);

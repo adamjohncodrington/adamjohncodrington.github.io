@@ -2,21 +2,21 @@ import { FRIENDS as friends } from "@constants";
 import { MUSIC_EVENTS as DATA } from "data-raw";
 import { getItemCounts } from "utils";
 
-const getFriendMatches = (friend: Friend): IMusicEvent[] =>
+const getFriendMatches = (friend: Friend): MusicEvent[] =>
   DATA.reduce(
-    (matches: IMusicEvent[], musicEvent: IMusicEvent): IMusicEvent[] =>
+    (matches: MusicEvent[], musicEvent: MusicEvent): MusicEvent[] =>
       musicEvent.company.includes(friend) ? [...matches, musicEvent] : matches,
     []
   );
 
-const getFriendDetails = (friend: Friend): IMiniCardPanelDetail[] =>
+const getFriendDetails = (friend: Friend): MiniCardPanelDetailProps[] =>
   getFriendMatches(friend).map(
     ({
       title,
       dates,
       video,
       favourite
-    }: IMusicEvent): IMiniCardPanelDetail => ({
+    }: MusicEvent): MiniCardPanelDetailProps => ({
       mainText: [title],
       sort: [dates[0]],
       dates,

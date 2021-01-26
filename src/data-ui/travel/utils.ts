@@ -9,12 +9,12 @@ import {
 
 export const mapTravelVideosToCards = (
   travelVideos: ITravelVideo[]
-): ICard[] => {
+): CardProps[] => {
   const mapTravelVideoToCard = ({
     dates,
     locations,
     ...video
-  }: ITravelVideo): ICard => ({
+  }: ITravelVideo): CardProps => ({
     video,
     year: dates.start.getFullYear(),
     sort: [dates.start.valueOf()],
@@ -28,12 +28,12 @@ export const mapTravelVideosToCards = (
   });
 
   return travelVideos.map(
-    (travelVideo: ITravelVideo): ICard => mapTravelVideoToCard(travelVideo)
+    (travelVideo: ITravelVideo): CardProps => mapTravelVideoToCard(travelVideo)
   );
 };
 
-export const mapTripLegsToCards = (tripLegs: ITripLeg[]): ICard[] => {
-  const mapTripLegToCard = (tripLeg: ITripLeg): ICard => {
+export const mapTripLegsToCards = (tripLegs: TripLeg[]): CardProps[] => {
+  const mapTripLegToCard = (tripLeg: TripLeg): CardProps => {
     const { dates, company, photos, video } = tripLeg;
     return {
       ...tripLeg,
@@ -46,5 +46,7 @@ export const mapTripLegsToCards = (tripLegs: ITripLeg[]): ICard[] => {
       body: getDatesText(dates)
     };
   };
-  return tripLegs.map((tripLeg: ITripLeg): ICard => mapTripLegToCard(tripLeg));
+  return tripLegs.map(
+    (tripLeg: TripLeg): CardProps => mapTripLegToCard(tripLeg)
+  );
 };

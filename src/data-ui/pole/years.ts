@@ -3,7 +3,7 @@ import { sortCards, splitCardsIntoYears } from "utils";
 
 import { mapPoleRoutinesToCards, mapPoleTricksVideosToCards } from "./utils";
 
-const all: ICard[] = sortCards([
+const all: CardProps[] = sortCards([
   ...mapPoleTricksVideosToCards(POLE_TRICKS_VIDEOS, {
     addIndex: false,
     sort: "asc",
@@ -15,4 +15,4 @@ const all: ICard[] = sortCards([
   })
 ]);
 
-export const YEARS: ICard[][] = splitCardsIntoYears(all);
+export const YEARS: CardProps[][] = splitCardsIntoYears(all);

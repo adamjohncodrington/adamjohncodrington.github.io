@@ -1,4 +1,4 @@
-interface ICard extends I__Photos, I_Sort, I__Favourite, I__Video {
+interface CardProps extends I__Photos, I_Sort, I__Favourite, I__Video {
   title: string;
   subtitle?: string;
   body?: string;
@@ -10,4 +10,4 @@ interface ICard extends I__Photos, I_Sort, I__Favourite, I__Video {
   year: number;
 }
 
-interface CardHeaderProps extends ICard, IDisclosureHeader {}
+interface CardHeaderProps extends CardProps, IDisclosureHeader {}

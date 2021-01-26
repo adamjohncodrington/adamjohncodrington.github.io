@@ -1,9 +1,9 @@
 import { SONGS as songs } from "@constants";
 import { POLE_ROUTINES as DATA } from "data-raw";
 
-const getSongMatches = (song: Song): IPoleRoutine[] =>
+const getSongMatches = (song: Song): PoleRoutine[] =>
   DATA.reduce(
-    (matches: IPoleRoutine[], routine: IPoleRoutine): IPoleRoutine[] =>
+    (matches: PoleRoutine[], routine: PoleRoutine): PoleRoutine[] =>
       routine.song === song ? [...matches, routine] : matches,
     []
   );
@@ -11,7 +11,7 @@ const getSongMatches = (song: Song): IPoleRoutine[] =>
 export const SONGS: MiniCardProps[] = Object.values(songs).map(
   (song: Song): MiniCardProps => {
     const { musician, title } = song;
-    const songMatches: IPoleRoutine[] = getSongMatches(song);
+    const songMatches: PoleRoutine[] = getSongMatches(song);
     const video: IVideo = songMatches[0] && songMatches[0].video;
     return {
       secondaryText: title,

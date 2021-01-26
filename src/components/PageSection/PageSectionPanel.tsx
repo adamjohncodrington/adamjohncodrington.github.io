@@ -49,7 +49,7 @@ export const PageSectionPanel: FC<PageSectionProps> = ({ data, shuffle }) => {
     <PageSectionPanelList {...data}>
       {cards &&
         (shuffle ? shuffleArray(cards) : sortCards(cards)).map(
-          (card: ICard, i: number) => (
+          (card: CardProps, i: number) => (
             <Li key={i}>
               <Card {...card} />
             </Li>

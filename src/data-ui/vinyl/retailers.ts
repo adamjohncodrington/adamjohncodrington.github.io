@@ -14,7 +14,7 @@ export const RETAILERS: MiniCardProps[] = Object.values(retailers).map(
   (retailer: Retailer): MiniCardProps => {
     const { name } = retailer;
     const retailerMatches: IVinyl[] = getRetailerMatches(retailer);
-    const details: IMiniCardPanelDetail[] = mapVinylsToMiniCardPanelDetails(
+    const details: MiniCardPanelDetailProps[] = mapVinylsToMiniCardPanelDetails(
       retailerMatches,
       { showMusicianName: true, showCost: true }
     );

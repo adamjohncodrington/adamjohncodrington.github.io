@@ -2,9 +2,9 @@ import { MUSICIANS as musicians } from "@constants";
 import { MUSIC_EVENTS as DATA } from "data-raw";
 import { getItemCounts, detailsContainsFavourite } from "utils";
 
-const getMusicianMatches = (musician: Musician): IMusicEvent[] =>
+const getMusicianMatches = (musician: Musician): MusicEvent[] =>
   DATA.reduce(
-    (matches: IMusicEvent[], musicEvent: IMusicEvent): IMusicEvent[] =>
+    (matches: MusicEvent[], musicEvent: MusicEvent): MusicEvent[] =>
       musicEvent.musicians.includes(musician)
         ? [...matches, musicEvent]
         : matches,
@@ -25,7 +25,7 @@ const getMusicianFestivalDate = (
   return new Date();
 };
 
-const getMusicianDetails = (musician: Musician): IMiniCardPanelDetail[] =>
+const getMusicianDetails = (musician: Musician): MiniCardPanelDetailProps[] =>
   getMusicianMatches(musician).map(
     ({
       dates,
@@ -35,7 +35,7 @@ const getMusicianDetails = (musician: Musician): IMiniCardPanelDetail[] =>
       venue,
       favourite,
       video
-    }: IMusicEvent): IMiniCardPanelDetail => ({
+    }: MusicEvent): MiniCardPanelDetailProps => ({
       mainText: [festival ? festival.title.name : venue.name],
       sort: [dates[0]],
       dates: festival ? [getMusicianFestivalDate(musician, festival)] : dates,
@@ -53,7 +53,7 @@ const getMusicianDetails = (musician: Musician): IMiniCardPanelDetail[] =>
 export const MUSICIANS: MiniCardProps[] = Object.values(musicians).map(
   (musician: Musician): MiniCardProps => {
     const { name, previousStageName, noLongerExists } = musician;
-    const details: IMiniCardPanelDetail[] = getMusicianDetails(musician);
+    const details: MiniCardPanelDetailProps[] = getMusicianDetails(musician);
     const {
       pastCount: primaryCount,
       futureCount: secondaryCount

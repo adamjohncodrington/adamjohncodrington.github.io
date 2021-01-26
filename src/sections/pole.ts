@@ -63,7 +63,7 @@ const SHOWCASE: PageSectionProps = {
 };
 
 const YEARS: PageSectionProps[] = DATA.YEARS.map(
-  (year: ICard[]): PageSectionProps => ({
+  (year: CardProps[]): PageSectionProps => ({
     title: year[0].year.toString(),
     data: { cards: year }
   })

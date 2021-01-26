@@ -16,13 +16,13 @@ interface Festival extends IFestivalWithoutVideo, I__Video {}
 
 interface IGigWithoutDate extends IGigOrFestival {
   headline: Musician;
-  video?: IGigVideo;
+  video?: GigVideo;
   support?: Musician[];
 }
 
 interface Gig extends IGigWithoutDate, I_Date {}
 
-interface IMusicEvent extends IGigOrFestival, I__Video {
+interface MusicEvent extends IGigOrFestival, I__Video {
   title: string;
   subtitle?: string;
   dates: IDate[];
@@ -32,7 +32,7 @@ interface IMusicEvent extends IGigOrFestival, I__Video {
   festival?: Festival;
 }
 
-interface IMusicEventPostponed extends IMusicEvent {
+interface IMusicEventPostponed extends MusicEvent {
   dates: undefined;
 }
 
@@ -43,7 +43,7 @@ interface Musician extends I_Name, I__Favourite, I__ExcludeFromBucketList {
   noLongerExists?: boolean;
 }
 
-interface IGigVideo extends IVideo {
+interface GigVideo extends IVideo {
   date: Date;
   musician: Musician;
 }

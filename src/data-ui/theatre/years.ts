@@ -11,6 +11,6 @@ const sorted: TheatreVisit[] = past.sort(
   (a: TheatreVisit, b: TheatreVisit): number => (a.date > b.date ? 1 : -1)
 );
 
-const cards: ICard[] = mapTheatreVisitsToCards(sorted);
+const cards: CardProps[] = mapTheatreVisitsToCards(sorted);
 
-export const YEARS: ICard[][] = splitCardsIntoYears(cards);
+export const YEARS: CardProps[][] = splitCardsIntoYears(cards);

@@ -1,21 +1,21 @@
 import { getDateText, getSymbols, getDatesText } from "utils";
 
-interface IOptions {
+interface Options {
   sort: "asc" | "desc";
   showCategorySymbol: boolean;
 }
 
 export const mapPoleRoutinesToCards = (
-  poleVideos: IPoleRoutine[],
-  { sort, showCategorySymbol }: IOptions
-): ICard[] => {
+  poleVideos: PoleRoutine[],
+  { sort, showCategorySymbol }: Options
+): CardProps[] => {
   const mapPoleRoutineToCard = ({
     date,
     choreographer,
     category,
     song: { musician, title },
     video
-  }: IPoleRoutine): ICard => ({
+  }: PoleRoutine): CardProps => ({
     video,
     year: date.getFullYear(),
     sort: [sort === "asc" ? date.valueOf() : -date.valueOf()],
@@ -27,19 +27,18 @@ export const mapPoleRoutinesToCards = (
     title,
     secondaryBody: getDateText(date)
   });
-  return poleVideos.map(
-    (poleVideo: IPoleRoutine): ICard => mapPoleRoutineToCard(poleVideo)
-  );
+
+  return poleVideos.map(mapPoleRoutineToCard);
 };
 
-interface IOptionsExtended extends IOptions {
+interface ExtendedOptions extends Options {
   addIndex: boolean;
 }
 
 export const mapPoleTricksVideosToCards = (
-  poleTricksVideos: IPoleTricksVideo[],
-  { sort, showCategorySymbol, addIndex }: IOptionsExtended
-): ICard[] => {
+  poleTricksVideos: PoleTricksVideo[],
+  { sort, showCategorySymbol, addIndex }: ExtendedOptions
+): CardProps[] => {
   const mapPoleTricksVideoToCard = (
     {
       dates: { start, end },
@@ -47,9 +46,9 @@ export const mapPoleTricksVideosToCards = (
       category,
       studio,
       video
-    }: IPoleTricksVideo,
+    }: PoleTricksVideo,
     index: number
-  ): ICard => {
+  ): CardProps => {
     const standardTitle: string = getDatesText([start, end], { hideDay: true });
 
     return {
@@ -65,11 +64,11 @@ export const mapPoleTricksVideosToCards = (
     };
   };
   return poleTricksVideos
-    .sort((a: IPoleTricksVideo, b: IPoleTricksVideo): number =>
+    .sort((a: PoleTricksVideo, b: PoleTricksVideo): number =>
       a.dates.start > b.dates.start ? 1 : -1
     )
     .map(
-      (poleTricksVideo: IPoleTricksVideo, index: number): ICard =>
+      (poleTricksVideo: PoleTricksVideo, index: number): CardProps =>
         mapPoleTricksVideoToCard(poleTricksVideo, index + 1)
     );
 };
@@ -81,7 +80,7 @@ export const mapPoleRoutineToMiniCardDetail = ({
   },
   date,
   video
-}: IPoleRoutine): IMiniCardPanelDetail => ({
+}: PoleRoutine): MiniCardPanelDetailProps => ({
   mainText: [`${name} - ${title}`],
   secondaryText: getDateText(date, { hideDay: true }),
   sort: [date.valueOf()],
@@ -91,7 +90,7 @@ export const mapPoleRoutineToMiniCardDetail = ({
 export const mapPoleTricksVideoToMiniCardDetail = ({
   dates: { start, end },
   video
-}: IPoleTricksVideo): IMiniCardPanelDetail => ({
+}: PoleTricksVideo): MiniCardPanelDetailProps => ({
   mainText: ["Tricks"],
   secondaryText: getDatesText([start, end], { hideDay: true }),
   sort: [start.valueOf()],

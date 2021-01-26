@@ -9,7 +9,7 @@ interface MiniCardProps
 
   secondaryText?: string;
 
-  details?: IMiniCardPanelDetail[];
+  details?: MiniCardPanelDetailProps[];
   primaryCount?: number;
   secondaryCount?: number;
 
@@ -20,7 +20,7 @@ interface MiniCardProps
 
 interface IMiniCardHeader extends MiniCardProps, IDisclosureHeader {}
 
-interface IMiniCardPanelDetail extends I_Sort, I__Favourite, I__Video {
+interface MiniCardPanelDetailProps extends I_Sort, I__Favourite, I__Video {
   mainText: string[];
   secondaryText?: string;
   dates?: Date[];
@@ -30,5 +30,5 @@ interface IMiniCardPanelDetail extends I_Sort, I__Favourite, I__Video {
 }
 
 interface IMiniCardPanelDetailHeader
-  extends IMiniCardPanelDetail,
+  extends MiniCardPanelDetailProps,
     IDisclosureHeader {}

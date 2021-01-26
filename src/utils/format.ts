@@ -14,13 +14,13 @@ export const filterMiniCards = (
   return filtered;
 };
 
-export const splitCardsIntoYears = (cards: ICard[]): ICard[][] => {
+export const splitCardsIntoYears = (cards: CardProps[]): CardProps[][] => {
   let arrayIndex: number = 0;
   let arrayYear: number = cards[0].year;
 
-  const years: ICard[][] = [];
+  const years: CardProps[][] = [];
 
-  cards.forEach((card: ICard): void => {
+  cards.forEach((card: CardProps): void => {
     const { year } = card;
     if (year !== arrayYear) {
       arrayIndex += 1;

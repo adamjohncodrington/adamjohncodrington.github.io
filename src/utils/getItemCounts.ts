@@ -20,7 +20,7 @@ interface IGetItemCounts {
 //TODO: merge these 3 functions
 export const countryMatchExists = (
   countryToMatch: ICountryTemplate,
-  trip: ITripLeg
+  trip: TripLeg
 ): boolean => {
   const { primaryLocations, secondaryLocations, hiddenLocations } = trip;
 
@@ -33,10 +33,7 @@ export const countryMatchExists = (
   return false;
 };
 
-export const cityMatchExists = (
-  cityToMatch: ICity,
-  trip: ITripLeg
-): boolean => {
+export const cityMatchExists = (cityToMatch: ICity, trip: TripLeg): boolean => {
   const { primaryLocations, secondaryLocations, hiddenLocations } = trip;
 
   if (primaryLocations && primaryLocations.includes(cityToMatch)) return true;
@@ -48,7 +45,7 @@ export const cityMatchExists = (
 
 export const attractionMatchExists = (
   attractionToMatch: IAttraction,
-  trip: ITripLeg
+  trip: TripLeg
 ): boolean => {
   const { primaryLocations, secondaryLocations, hiddenLocations } = trip;
 
@@ -61,7 +58,7 @@ export const attractionMatchExists = (
   return false;
 };
 
-const islandMatchExists = (islandToMatch: IIsland, trip: ITripLeg): boolean => {
+const islandMatchExists = (islandToMatch: IIsland, trip: TripLeg): boolean => {
   const { primaryLocations, secondaryLocations, hiddenLocations } = trip;
 
   if (primaryLocations && primaryLocations.includes(islandToMatch)) return true;
@@ -115,7 +112,7 @@ export const getItemCounts = ({
   musicEvents &&
     (musicianToMatch || friendToMatch || musicVenueToMatch) &&
     musicEvents.forEach(
-      ({ dates, musicians, venue, company }: IMusicEvent): void => {
+      ({ dates, musicians, venue, company }: MusicEvent): void => {
         if (
           (musicianToMatch && musicians.includes(musicianToMatch)) ||
           (friendToMatch && company.includes(friendToMatch)) ||
@@ -131,7 +128,7 @@ export const getItemCounts = ({
       countryToMatch ||
       friendToMatch ||
       islandToMatch) &&
-    tripLegs.forEach((trip: ITripLeg): void => {
+    tripLegs.forEach((trip: TripLeg): void => {
       const { company, dates } = trip;
       if (
         (attractionToMatch && attractionMatchExists(attractionToMatch, trip)) ||

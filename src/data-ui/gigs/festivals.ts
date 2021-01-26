@@ -9,9 +9,9 @@ const getFestivalMatches = (festivalTitle: FestivalTitle): Festival[] =>
     []
   );
 
-const getFestivalDetails = (musician: Musician): IMiniCardPanelDetail[] =>
+const getFestivalDetails = (musician: Musician): MiniCardPanelDetailProps[] =>
   getFestivalMatches(musician).map(
-    (festival: Festival): IMiniCardPanelDetail => {
+    (festival: Festival): MiniCardPanelDetailProps => {
       const { dates, video } = festival;
       return {
         sort: [dates[0].valueOf()],

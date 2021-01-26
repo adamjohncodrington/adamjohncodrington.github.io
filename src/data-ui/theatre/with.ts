@@ -11,9 +11,9 @@ const getFriendMatches = (friend: Friend): TheatreVisit[] =>
     []
   );
 
-const getFriendDetails = (friend: Friend): IMiniCardPanelDetail[] =>
+const getFriendDetails = (friend: Friend): MiniCardPanelDetailProps[] =>
   getFriendMatches(friend).map(
-    (theatreVisit: TheatreVisit): IMiniCardPanelDetail => {
+    (theatreVisit: TheatreVisit): MiniCardPanelDetailProps => {
       const { date } = theatreVisit;
       return {
         mainText: [getTheatreVisitTitle(theatreVisit)],

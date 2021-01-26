@@ -8,9 +8,9 @@ import {
   detailsContainsFavourite
 } from "utils";
 
-const getCountryMatches = (country: ICountryTemplate): ITripLeg[] => {
-  const countryMatches: ITripLeg[] = [];
-  DATA.forEach((trip: ITripLeg): void => {
+const getCountryMatches = (country: ICountryTemplate): TripLeg[] => {
+  const countryMatches: TripLeg[] = [];
+  DATA.forEach((trip: TripLeg): void => {
     if (countryMatchExists(country, trip)) countryMatches.push(trip);
   });
   return countryMatches;
@@ -18,10 +18,10 @@ const getCountryMatches = (country: ICountryTemplate): ITripLeg[] => {
 
 const getCountryDetails = (
   country: ICountryTemplate
-): IMiniCardPanelDetail[] => {
-  const countryMatches: ITripLeg[] = getCountryMatches(country);
+): MiniCardPanelDetailProps[] => {
+  const countryMatches: TripLeg[] = getCountryMatches(country);
   return countryMatches.map(
-    (trip: ITripLeg): IMiniCardPanelDetail => {
+    (trip: TripLeg): MiniCardPanelDetailProps => {
       const { dates, favourite, video } = trip;
       const tripTitle: string = getTripTitle(trip);
       const tripSubtitle: string | undefined = getTripSubtitle(trip);
@@ -42,7 +42,7 @@ const getCountryDetails = (
 
 export const COUNTRIES: MiniCardProps[] = Object.values(countries).map(
   (country: ICountryTemplate): MiniCardProps => {
-    const details: IMiniCardPanelDetail[] = getCountryDetails(country);
+    const details: MiniCardPanelDetailProps[] = getCountryDetails(country);
     const { name } = country;
     const {
       pastCount: primaryCount,

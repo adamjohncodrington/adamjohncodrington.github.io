@@ -39,7 +39,7 @@ export const MiniCardPanel: FC<MiniCardProps> = ({
     return (
       <StyledOl>
         {sortMiniCardPanelDetails(details).map(
-          (detail: IMiniCardPanelDetail, i: number) => (
+          (detail: MiniCardPanelDetailProps, i: number) => (
             <MiniCardPanelDetail
               key={i}
               index={details.length > 1 ? i + 1 : undefined}

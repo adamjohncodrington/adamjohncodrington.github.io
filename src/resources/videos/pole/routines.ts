@@ -18,7 +18,7 @@ const {
 } = INSTRUCTORS;
 const { EXOTICA_BERMONDSEY, DAN_LEA_STUDIO, TIGRA_GST } = STUDIOS;
 
-export const BANKS_GIMME: IPoleRoutine = {
+export const BANKS_GIMME: PoleRoutine = {
   studio: EXOTICA_HACKNEY,
   date: new Date("2020-09-12"),
   category: "exotic-class",
@@ -27,7 +27,7 @@ export const BANKS_GIMME: IPoleRoutine = {
   video: { youtubeId: "NCej4NYDRCY", ...PORTRAIT_1080P }
 };
 
-export const AYANNA_PARTY_TRICKS: IPoleRoutine = {
+export const AYANNA_PARTY_TRICKS: PoleRoutine = {
   studio: EXOTICA_HACKNEY,
   date: new Date("2020-09-07"),
   category: "contemporary-improv",
@@ -36,7 +36,7 @@ export const AYANNA_PARTY_TRICKS: IPoleRoutine = {
   video: { youtubeId: "WMtvNWShPsY", ...PORTRAIT_1080P }
 };
 
-export const CARDI_B_WAP: IPoleRoutine = {
+export const CARDI_B_WAP: PoleRoutine = {
   studio: EXOTICA_HACKNEY,
   date: new Date("2020-09-13"),
   category: "exotic-class",
@@ -45,7 +45,7 @@ export const CARDI_B_WAP: IPoleRoutine = {
   video: { youtubeId: "qw2VhJKF2Is", ...PORTRAIT_1080P }
 };
 
-export const MOSIMANN_2_YOUNG: IPoleRoutine = {
+export const MOSIMANN_2_YOUNG: PoleRoutine = {
   studio: EXOTICA_HACKNEY,
   date: new Date("2020-08-29"),
   category: "exotic-class",
@@ -54,7 +54,7 @@ export const MOSIMANN_2_YOUNG: IPoleRoutine = {
   video: { youtubeId: "Mb76odkQa_o", ...PORTRAIT_1080P }
 };
 
-export const JAMES_BLAKE_ARE_YOU_EVEN_REAL: IPoleRoutine = {
+export const JAMES_BLAKE_ARE_YOU_EVEN_REAL: PoleRoutine = {
   studio: DAN_LEA_STUDIO,
   date: new Date("2020-07-27"),
   category: "exotic-improv",
@@ -63,7 +63,7 @@ export const JAMES_BLAKE_ARE_YOU_EVEN_REAL: IPoleRoutine = {
   video: { youtubeId: "LeomyYPrc3M", ...PORTRAIT_1080P }
 };
 
-export const MOTORHEAD_HELLRAISER: IPoleRoutine = {
+export const MOTORHEAD_HELLRAISER: PoleRoutine = {
   studio: TIGRA_GST,
   date: new Date("2018-06-21"),
   category: "rock",
@@ -72,7 +72,7 @@ export const MOTORHEAD_HELLRAISER: IPoleRoutine = {
   video: { youtubeId: "5B-QCrrKYNE", ...PORTRAIT_1080P }
 };
 
-export const AMY_WINEHOUSE_LOVE_IS_A_LOSING_GAME: IPoleRoutine = {
+export const AMY_WINEHOUSE_LOVE_IS_A_LOSING_GAME: PoleRoutine = {
   studio: DAN_LEA_STUDIO,
   date: new Date("2020-07-20T19:07Z"),
   category: "contemporary-improv",
@@ -81,7 +81,7 @@ export const AMY_WINEHOUSE_LOVE_IS_A_LOSING_GAME: IPoleRoutine = {
   video: { youtubeId: "ju-1nlmZfW8", ...PORTRAIT_1080P }
 };
 
-export const BILLIE_EILISH_MY_FUTURE: IPoleRoutine = {
+export const BILLIE_EILISH_MY_FUTURE: PoleRoutine = {
   studio: DAN_LEA_STUDIO,
   date: new Date("2020-08-03"),
   category: "contemporary-improv",
@@ -90,7 +90,7 @@ export const BILLIE_EILISH_MY_FUTURE: IPoleRoutine = {
   video: { youtubeId: "XeGzy7-ACPQ", ...PORTRAIT_1080P }
 };
 
-export const ELLIE_GOULDING_START: IPoleRoutine = {
+export const ELLIE_GOULDING_START: PoleRoutine = {
   studio: DAN_LEA_STUDIO,
   date: new Date("2020-07-20T18:41Z"),
   category: "contemporary-improv",
@@ -99,7 +99,7 @@ export const ELLIE_GOULDING_START: IPoleRoutine = {
   video: { youtubeId: "zMrrMXu4oLA", ...PORTRAIT_1080P }
 };
 
-export const TAIKO_NO_MORE: IPoleRoutine = {
+export const TAIKO_NO_MORE: PoleRoutine = {
   studio: EXOTICA_BERMONDSEY,
   date: new Date("2020-01-11"),
   category: "exotic-class",
@@ -108,7 +108,7 @@ export const TAIKO_NO_MORE: IPoleRoutine = {
   video: { youtubeId: "MhkVVvWvYro", ...PORTRAIT_1080P }
 };
 
-export const JORJA_SMITH_TOMORROW: IPoleRoutine = {
+export const JORJA_SMITH_TOMORROW: PoleRoutine = {
   studio: EXOTICA_BERMONDSEY,
   date: new Date("2020-02-20"),
   category: "contemporary-class",
@@ -117,7 +117,7 @@ export const JORJA_SMITH_TOMORROW: IPoleRoutine = {
   video: { youtubeId: "BR1YB5hJlmc", ...PORTRAIT_1080P }
 };
 
-export const SOAP_AND_SKIN_ME_AND_THE_DEVIL: IPoleRoutine = {
+export const SOAP_AND_SKIN_ME_AND_THE_DEVIL: PoleRoutine = {
   studio: EXOTICA_BERMONDSEY,
   date: new Date("2019-11-14"),
   category: "contemporary-class",
@@ -126,7 +126,7 @@ export const SOAP_AND_SKIN_ME_AND_THE_DEVIL: IPoleRoutine = {
   video: { youtubeId: "G9SgOhE1_aM", ...PORTRAIT_1080P }
 };
 
-export const BILLIE_EILISH_WISH_YOU_WERE_GAY: IPoleRoutine = {
+export const BILLIE_EILISH_WISH_YOU_WERE_GAY: PoleRoutine = {
   studio: EXOTICA_BERMONDSEY,
   date: new Date("2020-01-05"),
   category: "exotic-class",
@@ -135,7 +135,7 @@ export const BILLIE_EILISH_WISH_YOU_WERE_GAY: IPoleRoutine = {
   video: { youtubeId: "JBT8tNVkzFE", ...PORTRAIT_1080P }
 };
 
-export const GALLANT_WEIGHT_IN_GOLD: IPoleRoutine = {
+export const GALLANT_WEIGHT_IN_GOLD: PoleRoutine = {
   studio: EXOTICA_BERMONDSEY,
   date: new Date("2020-01-16"),
   category: "contemporary-class",
@@ -144,7 +144,7 @@ export const GALLANT_WEIGHT_IN_GOLD: IPoleRoutine = {
   video: { youtubeId: "8uRd2M1aDEI", ...PORTRAIT_1080P }
 };
 
-export const CHARLI_XCX_5_IN_THE_MORNING: IPoleRoutine = {
+export const CHARLI_XCX_5_IN_THE_MORNING: PoleRoutine = {
   studio: HOME,
   date: new Date("2020-04-22"),
   category: "quarantine",
@@ -153,7 +153,7 @@ export const CHARLI_XCX_5_IN_THE_MORNING: IPoleRoutine = {
   video: { youtubeId: "lD-Yt9-34f4", ...PORTRAIT_1080P }
 };
 
-export const HER_FOCUS: IPoleRoutine = {
+export const HER_FOCUS: PoleRoutine = {
   studio: EXOTICA_BERMONDSEY,
   date: new Date("2019-07-17"),
   category: "exotic-class",
@@ -162,7 +162,7 @@ export const HER_FOCUS: IPoleRoutine = {
   video: { youtubeId: "AjejWFfydx4", ...PORTRAIT_1080P }
 };
 
-export const JESSIE_REYEZ_FIGURES: IPoleRoutine = {
+export const JESSIE_REYEZ_FIGURES: PoleRoutine = {
   studio: EXOTICA_BERMONDSEY,
   date: new Date("2019-08-15"),
   category: "contemporary-class",
@@ -171,7 +171,7 @@ export const JESSIE_REYEZ_FIGURES: IPoleRoutine = {
   video: { youtubeId: "yEFoPX94UH8", ...PORTRAIT_1080P }
 };
 
-export const JP_COOPER_BIRTHDAY: IPoleRoutine = {
+export const JP_COOPER_BIRTHDAY: PoleRoutine = {
   studio: EXOTICA_BERMONDSEY,
   date: new Date("2019-08-07"),
   category: "exotic-class",
@@ -180,7 +180,7 @@ export const JP_COOPER_BIRTHDAY: IPoleRoutine = {
   video: { youtubeId: "38h8BKTRz2g", ...PORTRAIT_1080P }
 };
 
-export const JUSTIN_BIEBER_YUMMY: IPoleRoutine = {
+export const JUSTIN_BIEBER_YUMMY: PoleRoutine = {
   studio: EXOTICA_BERMONDSEY,
   date: new Date("2020-02-09"),
   category: "exotic-class",
@@ -189,7 +189,7 @@ export const JUSTIN_BIEBER_YUMMY: IPoleRoutine = {
   video: { youtubeId: "ZSxW7_k2d5k", ...PORTRAIT_1080P }
 };
 
-export const NICKI_MINAJ_CHUN_LI: IPoleRoutine = {
+export const NICKI_MINAJ_CHUN_LI: PoleRoutine = {
   studio: EXOTICA_BERMONDSEY,
   date: new Date("2020-03-08"),
   category: "exotic-class",
@@ -198,7 +198,7 @@ export const NICKI_MINAJ_CHUN_LI: IPoleRoutine = {
   video: { youtubeId: "VJ8P46ZtEh0", ...PORTRAIT_1080P }
 };
 
-export const SEREDA_I_GOT_YOU: IPoleRoutine = {
+export const SEREDA_I_GOT_YOU: PoleRoutine = {
   studio: EXOTICA_BERMONDSEY,
   date: new Date("2019-07-24"),
   category: "exotic-class",
@@ -207,7 +207,7 @@ export const SEREDA_I_GOT_YOU: IPoleRoutine = {
   video: { youtubeId: "H5bIR9s4d2I", ...PORTRAIT_1080P }
 };
 
-export const TOMMEE_PROFITT_PULL_THAT_TRIGGER: IPoleRoutine = {
+export const TOMMEE_PROFITT_PULL_THAT_TRIGGER: PoleRoutine = {
   studio: EXOTICA_BERMONDSEY,
   date: new Date("2019-12-15"),
   category: "exotic-class",
@@ -216,7 +216,7 @@ export const TOMMEE_PROFITT_PULL_THAT_TRIGGER: IPoleRoutine = {
   video: { youtubeId: "b5H4RcDTH14", ...PORTRAIT_1080P }
 };
 
-export const TRUTH_LOOK_AROUND: IPoleRoutine = {
+export const TRUTH_LOOK_AROUND: PoleRoutine = {
   studio: EXOTICA_BERMONDSEY,
   date: new Date("2020-03-14"),
   category: "exotic-class",
@@ -225,7 +225,7 @@ export const TRUTH_LOOK_AROUND: IPoleRoutine = {
   video: { youtubeId: "19a_Yl99zaY", ...PORTRAIT_1080P }
 };
 
-export const ANNIE_LENNOX_I_PUT_A_SPELL_ON_YOU: IPoleRoutine = {
+export const ANNIE_LENNOX_I_PUT_A_SPELL_ON_YOU: PoleRoutine = {
   studio: EXOTICA_BERMONDSEY,
   date: new Date("2019-07-03"),
   category: "exotic-class",
@@ -234,7 +234,7 @@ export const ANNIE_LENNOX_I_PUT_A_SPELL_ON_YOU: IPoleRoutine = {
   video: { youtubeId: "U6Dgqhrkxys", ...PORTRAIT_1080P }
 };
 
-export const CRUEL_YOUTH_DEVIL_IN_PARADISE: IPoleRoutine = {
+export const CRUEL_YOUTH_DEVIL_IN_PARADISE: PoleRoutine = {
   studio: EXOTICA_BERMONDSEY,
   date: new Date("2019-04-13"),
   category: "showcase",
@@ -243,7 +243,7 @@ export const CRUEL_YOUTH_DEVIL_IN_PARADISE: IPoleRoutine = {
   video: { youtubeId: "hAQlxstDUpA", ...PORTRAIT_1080P }
 };
 
-export const JANIS_JOPLIN_GET_IT_WHILE_YOU_CAN: IPoleRoutine = {
+export const JANIS_JOPLIN_GET_IT_WHILE_YOU_CAN: PoleRoutine = {
   studio: EXOTICA_BERMONDSEY,
   date: new Date("2019-09-12"),
   category: "contemporary-class",
@@ -252,7 +252,7 @@ export const JANIS_JOPLIN_GET_IT_WHILE_YOU_CAN: IPoleRoutine = {
   video: { youtubeId: "J9rSCQ31ZNo", ...PORTRAIT_1080P }
 };
 
-export const LUDOVICO_EINAUDI_I_GIORNI: IPoleRoutine = {
+export const LUDOVICO_EINAUDI_I_GIORNI: PoleRoutine = {
   studio: EXOTICA_BERMONDSEY,
   date: new Date("2019-06-27"),
   category: "contemporary-class",
@@ -261,7 +261,7 @@ export const LUDOVICO_EINAUDI_I_GIORNI: IPoleRoutine = {
   video: { youtubeId: "JdMtmrBOMSw", ...PORTRAIT_1080P }
 };
 
-export const JUDY_GARLAND_HAVE_YOURSELF_A_MERRY_LITTLE_CHRISTMAS: IPoleRoutine = {
+export const JUDY_GARLAND_HAVE_YOURSELF_A_MERRY_LITTLE_CHRISTMAS: PoleRoutine = {
   studio: EXOTICA_BERMONDSEY,
   date: new Date("2019-12-19"),
   category: "contemporary-class",
@@ -270,7 +270,7 @@ export const JUDY_GARLAND_HAVE_YOURSELF_A_MERRY_LITTLE_CHRISTMAS: IPoleRoutine =
   video: { youtubeId: "E8Pu7j4WDlk", ...PORTRAIT_1080P }
 };
 
-export const VANESSA_WAGNER_ELF_DANCE_SHOWCASE: IPoleRoutine = {
+export const VANESSA_WAGNER_ELF_DANCE_SHOWCASE: PoleRoutine = {
   studio: EXOTICA_BERMONDSEY,
   date: new Date("2019-12-07"),
   category: "showcase",
@@ -279,7 +279,7 @@ export const VANESSA_WAGNER_ELF_DANCE_SHOWCASE: IPoleRoutine = {
   video: { youtubeId: "heRUwlr2wiU", ...PORTRAIT_1080P }
 };
 
-// export const VANESSA_WAGNER_ELF_DANCE_CLASS: IPoleRoutine = {
+// export const VANESSA_WAGNER_ELF_DANCE_CLASS: PoleRoutine = {
 //   studio: EXOTICA_BERMONDSEY,
 //   date: new Date("2019-11-21"),
 //   category: "contemporary-class",
@@ -288,7 +288,7 @@ export const VANESSA_WAGNER_ELF_DANCE_SHOWCASE: IPoleRoutine = {
 //   video: { youtubeId: "gTub-KawW78", ...PORTRAIT_1080P }
 // };
 
-export const A_BOOGIE_WIT_DA_HOODIE_LOOK_BACK_AT_IT: IPoleRoutine = {
+export const A_BOOGIE_WIT_DA_HOODIE_LOOK_BACK_AT_IT: PoleRoutine = {
   studio: EXOTICA_BERMONDSEY,
   date: new Date("2019-06-05"),
   category: "exotic-class",
@@ -297,7 +297,7 @@ export const A_BOOGIE_WIT_DA_HOODIE_LOOK_BACK_AT_IT: IPoleRoutine = {
   video: { youtubeId: "9HtbfKEBSLI", ...PORTRAIT_1080P }
 };
 
-export const ASAP_ROCKY_LSD: IPoleRoutine = {
+export const ASAP_ROCKY_LSD: PoleRoutine = {
   studio: HOME,
   date: new Date("2020-03-25T19:05Z"),
   category: "quarantine",
@@ -306,7 +306,7 @@ export const ASAP_ROCKY_LSD: IPoleRoutine = {
   video: { youtubeId: "yer6sW5WAM8", ...PORTRAIT_1080P }
 };
 
-export const ARIANA_GRANDE_7_RINGS: IPoleRoutine = {
+export const ARIANA_GRANDE_7_RINGS: PoleRoutine = {
   studio: HOME,
   date: new Date("2020-03-25T18:47Z"),
   category: "quarantine",
@@ -315,7 +315,7 @@ export const ARIANA_GRANDE_7_RINGS: IPoleRoutine = {
   video: { youtubeId: "qiVyMn6av_k", ...PORTRAIT_1080P }
 };
 
-export const BANKS_DROWNING: IPoleRoutine = {
+export const BANKS_DROWNING: PoleRoutine = {
   studio: HOME,
   date: new Date("2020-04-01"),
   category: "quarantine",
@@ -324,7 +324,7 @@ export const BANKS_DROWNING: IPoleRoutine = {
   video: { youtubeId: "D8q3xS3bNHQ", ...PORTRAIT_1080P }
 };
 
-export const FERAL_FAUNA_TINCTURE: IPoleRoutine = {
+export const FERAL_FAUNA_TINCTURE: PoleRoutine = {
   studio: HOME,
   date: new Date("2020-04-08"),
   category: "quarantine",
@@ -333,7 +333,7 @@ export const FERAL_FAUNA_TINCTURE: IPoleRoutine = {
   video: { youtubeId: "6zqQl1T8OeU", ...PORTRAIT_1080P }
 };
 
-export const SLEEPING_AT_LAST_ALREADY_GONE: IPoleRoutine = {
+export const SLEEPING_AT_LAST_ALREADY_GONE: PoleRoutine = {
   studio: HOME,
   date: new Date("2020-04-15"),
   category: "quarantine",
@@ -342,7 +342,7 @@ export const SLEEPING_AT_LAST_ALREADY_GONE: IPoleRoutine = {
   video: { youtubeId: "NRzyrSDwhB0", ...PORTRAIT_1080P }
 };
 
-export const LAUV_MISS_ME: IPoleRoutine = {
+export const LAUV_MISS_ME: PoleRoutine = {
   studio: HOME,
   date: new Date("2020-04-15"),
   category: "quarantine",
@@ -351,7 +351,7 @@ export const LAUV_MISS_ME: IPoleRoutine = {
   video: { youtubeId: "qSsM6ogPt-s", ...PORTRAIT_1080P }
 };
 
-export const CHRISTINA_AGUILERA_DIRTY: IPoleRoutine = {
+export const CHRISTINA_AGUILERA_DIRTY: PoleRoutine = {
   studio: EXOTICA_BERMONDSEY,
   date: new Date("2019-09-04"),
   category: "exotic-class",
@@ -360,7 +360,7 @@ export const CHRISTINA_AGUILERA_DIRTY: IPoleRoutine = {
   video: { youtubeId: "pue4_Nzg4qs", ...PORTRAIT_1080P }
 };
 
-export const RIHANNA_RUDE_BOY: IPoleRoutine = {
+export const RIHANNA_RUDE_BOY: PoleRoutine = {
   studio: EXOTICA_BERMONDSEY,
   date: new Date("2019-05-22"),
   category: "exotic-class",
@@ -369,7 +369,7 @@ export const RIHANNA_RUDE_BOY: IPoleRoutine = {
   video: { youtubeId: "AtdiGPfDm7s", ...PORTRAIT_1080P }
 };
 
-export const USHER_BAD_GIRL: IPoleRoutine = {
+export const USHER_BAD_GIRL: PoleRoutine = {
   studio: EXOTICA_BERMONDSEY,
   date: new Date("2019-04-24"),
   category: "exotic-class",
@@ -378,7 +378,7 @@ export const USHER_BAD_GIRL: IPoleRoutine = {
   video: { youtubeId: "5sFil9iYlzk", ...PORTRAIT_1080P }
 };
 
-export const THE_WEEKND_I_FEEL_IT_COMING: IPoleRoutine = {
+export const THE_WEEKND_I_FEEL_IT_COMING: PoleRoutine = {
   studio: EXOTICA_BERMONDSEY,
   date: new Date("2019-05-08"),
   category: "exotic-class",
@@ -387,7 +387,7 @@ export const THE_WEEKND_I_FEEL_IT_COMING: IPoleRoutine = {
   video: { youtubeId: "281EClS-0wo", ...PORTRAIT_1080P }
 };
 
-export const JOHNNY_BALIK_HONEY: IPoleRoutine = {
+export const JOHNNY_BALIK_HONEY: PoleRoutine = {
   studio: EXOTICA_HACKNEY,
   date: new Date("2020-08-15"),
   category: "exotic-class",
@@ -396,7 +396,7 @@ export const JOHNNY_BALIK_HONEY: IPoleRoutine = {
   video: { youtubeId: "e9CLQVXUSUM", ...PORTRAIT_1080P }
 };
 
-export const SKOTT_AMELIA: IPoleRoutine = {
+export const SKOTT_AMELIA: PoleRoutine = {
   studio: EXOTICA_BERMONDSEY,
   date: new Date("2019-10-06"),
   category: "exotic-class",
@@ -405,7 +405,7 @@ export const SKOTT_AMELIA: IPoleRoutine = {
   video: { youtubeId: "v23f_9U_6CY", ...PORTRAIT_1080P }
 };
 
-export const SUB_URBAN_ISOLATE: IPoleRoutine = {
+export const SUB_URBAN_ISOLATE: PoleRoutine = {
   studio: EXOTICA_BERMONDSEY,
   date: new Date("2019-10-12"),
   category: "exotic-class",

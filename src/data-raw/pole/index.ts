@@ -1,9 +1,7 @@
 import { VIDEOS } from "resources";
 
-export const POLE_ROUTINES: IPoleRoutine[] = Object.values(
-  VIDEOS.POLE.ROUTINES
-);
+export const POLE_ROUTINES: PoleRoutine[] = Object.values(VIDEOS.POLE.ROUTINES);
 
-export const POLE_TRICKS_VIDEOS: IPoleTricksVideo[] = Object.values(
+export const POLE_TRICKS_VIDEOS: PoleTricksVideo[] = Object.values(
   VIDEOS.POLE.TRICKS
 );

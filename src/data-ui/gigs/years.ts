@@ -3,14 +3,14 @@ import { isInFuture, splitCardsIntoYears } from "utils";
 
 import { mapMusicEventsToCards } from "./utils";
 
-const past: IMusicEvent[] = DATA.filter(
-  ({ dates }: IMusicEvent): boolean => !isInFuture(dates[0])
+const past: MusicEvent[] = DATA.filter(
+  ({ dates }: MusicEvent): boolean => !isInFuture(dates[0])
 );
 
-const sorted: IMusicEvent[] = past.sort(
-  (a: IMusicEvent, b: IMusicEvent): number => (a.dates[0] > b.dates[0] ? 1 : -1)
+const sorted: MusicEvent[] = past.sort((a: MusicEvent, b: MusicEvent): number =>
+  a.dates[0] > b.dates[0] ? 1 : -1
 );
 
-const cards: ICard[] = mapMusicEventsToCards(sorted);
+const cards: CardProps[] = mapMusicEventsToCards(sorted);
 
-export const YEARS: ICard[][] = splitCardsIntoYears(cards);
+export const YEARS: CardProps[][] = splitCardsIntoYears(cards);

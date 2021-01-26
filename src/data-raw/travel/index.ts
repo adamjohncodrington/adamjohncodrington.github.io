@@ -14,4 +14,4 @@ export const TRIPS: Trip[] = Object.values({
   ...travel_2020_2022
 });
 
-export const TRIP_LEGS: ITripLeg[] = TRIPS.flat();
+export const TRIP_LEGS: TripLeg[] = TRIPS.flat();

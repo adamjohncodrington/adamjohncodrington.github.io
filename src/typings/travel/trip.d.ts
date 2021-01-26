@@ -1,4 +1,4 @@
-interface ITripLeg extends I__Favourite, I__Photos, I_Dates, I_Company {
+interface TripLeg extends I__Favourite, I__Photos, I_Dates, I_Company {
   video?: ITravelVideo;
   country: ICountryTemplate;
   primaryLocations?: LocationProps[];
@@ -8,4 +8,4 @@ interface ITripLeg extends I__Favourite, I__Photos, I_Dates, I_Company {
   showCountryAsTitle?: boolean;
 }
 
-type Trip = ITripLeg[];
+type Trip = TripLeg[];

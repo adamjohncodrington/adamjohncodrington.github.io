@@ -13,9 +13,9 @@ const getActorMatches = (actor: Actor): TheatreVisit[] =>
     []
   );
 
-const getActorDetails = (actor: Actor): IMiniCardPanelDetail[] =>
+const getActorDetails = (actor: Actor): MiniCardPanelDetailProps[] =>
   getActorMatches(actor).map(
-    (theatreVisit: TheatreVisit): IMiniCardPanelDetail => {
+    (theatreVisit: TheatreVisit): MiniCardPanelDetailProps => {
       const { date } = theatreVisit;
       return {
         mainText: [getTheatreVisitTitle(theatreVisit)],

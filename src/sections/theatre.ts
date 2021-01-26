@@ -35,7 +35,7 @@ const UP_NEXT: PageSectionProps = {
 };
 
 const YEARS: PageSectionProps[] = DATA.YEARS.map(
-  (year: ICard[]): PageSectionProps => ({
+  (year: CardProps[]): PageSectionProps => ({
     title: year[0].year.toString(),
     count: year.length,
     data: {

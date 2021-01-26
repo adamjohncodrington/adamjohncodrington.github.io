@@ -10,7 +10,7 @@ const StyledPanelContainer = styled.div`
   }
 `;
 
-export const CardPanel: FC<ICard> = ({ video, photos }) => (
+export const CardPanel: FC<CardProps> = ({ video, photos }) => (
   <StyledPanelContainer>
     {photos && <PhotoGrid photos={photos} />}
     {video && <YouTubeVideo {...video} />}

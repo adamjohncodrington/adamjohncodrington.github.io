@@ -2,16 +2,18 @@ import { MUSIC_VENUES as venues } from "@constants";
 import { MUSIC_EVENTS as DATA } from "data-raw";
 import { getItemCounts } from "utils";
 
-const getMusicVenueMatches = (musicVenue: MusicVenue): IMusicEvent[] =>
+const getMusicVenueMatches = (musicVenue: MusicVenue): MusicEvent[] =>
   DATA.reduce(
-    (matches: IMusicEvent[], musicEvent: IMusicEvent): IMusicEvent[] =>
+    (matches: MusicEvent[], musicEvent: MusicEvent): MusicEvent[] =>
       musicEvent.venue === musicVenue ? [...matches, musicEvent] : matches,
     []
   );
 
-const getMusicVenueDetails = (musicVenue: MusicVenue): IMiniCardPanelDetail[] =>
+const getMusicVenueDetails = (
+  musicVenue: MusicVenue
+): MiniCardPanelDetailProps[] =>
   getMusicVenueMatches(musicVenue).map(
-    ({ title, dates, video }: IMusicEvent): IMiniCardPanelDetail => ({
+    ({ title, dates, video }: MusicEvent): MiniCardPanelDetailProps => ({
       mainText: [title],
       dates,
       sort: [dates[0]],

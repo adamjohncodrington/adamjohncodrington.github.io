@@ -2,7 +2,7 @@ import React, { FC } from "react";
 
 import { YouTubeVideo } from "../YouTubeVideo";
 
-export const MiniCardPanelDetailPanel: FC<IMiniCardPanelDetail> = ({
+export const MiniCardPanelDetailPanel: FC<MiniCardPanelDetailProps> = ({
   video
 }) => {
   if (!video) return null;

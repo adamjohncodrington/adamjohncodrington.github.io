@@ -24,7 +24,7 @@ export const GIGS: Gig[] = Object.values({
   ...GIGS_2021_PLUS
 });
 
-export const MUSIC_EVENTS: IMusicEvent[] = [
+export const MUSIC_EVENTS: MusicEvent[] = [
   ...mapGigsToMusicEvents(GIGS),
   ...mapFestivalsToMusicEvents(FESTIVALS)
 ];

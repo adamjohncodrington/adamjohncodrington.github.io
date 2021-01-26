@@ -6,30 +6,30 @@ import {
   mapPoleTricksVideoToMiniCardDetail
 } from "./utils";
 
-const getStudioRoutineMatches = (studio: PoleStudio): IPoleRoutine[] =>
+const getStudioRoutineMatches = (studio: PoleStudio): PoleRoutine[] =>
   POLE_ROUTINES.reduce(
-    (matches: IPoleRoutine[], routine: IPoleRoutine): IPoleRoutine[] =>
+    (matches: PoleRoutine[], routine: PoleRoutine): PoleRoutine[] =>
       routine.studio === studio ? [...matches, routine] : matches,
     []
   );
 
-const getStudioTricksMatches = (studio: PoleStudio): IPoleTricksVideo[] =>
+const getStudioTricksMatches = (studio: PoleStudio): PoleTricksVideo[] =>
   POLE_TRICKS_VIDEOS.reduce(
     (
-      matches: IPoleTricksVideo[],
-      tricksVideo: IPoleTricksVideo
-    ): IPoleTricksVideo[] =>
+      matches: PoleTricksVideo[],
+      tricksVideo: PoleTricksVideo
+    ): PoleTricksVideo[] =>
       tricksVideo.studio === studio ? [...matches, tricksVideo] : matches,
     []
   );
 
-const getStudioDetails = (studio: PoleStudio): IMiniCardPanelDetail[] => [
+const getStudioDetails = (studio: PoleStudio): MiniCardPanelDetailProps[] => [
   ...getStudioRoutineMatches(studio).map(
-    (poleRoutine: IPoleRoutine): IMiniCardPanelDetail =>
+    (poleRoutine: PoleRoutine): MiniCardPanelDetailProps =>
       mapPoleRoutineToMiniCardDetail(poleRoutine)
   ),
   ...getStudioTricksMatches(studio).map(
-    (poleTricksVideo: IPoleTricksVideo): IMiniCardPanelDetail =>
+    (poleTricksVideo: PoleTricksVideo): MiniCardPanelDetailProps =>
       mapPoleTricksVideoToMiniCardDetail(poleTricksVideo)
   )
 ];
@@ -37,7 +37,7 @@ const getStudioDetails = (studio: PoleStudio): IMiniCardPanelDetail[] => [
 export const STUDIOS: MiniCardProps[] = Object.values(studios).map(
   (studio: PoleStudio): MiniCardProps => {
     const { name, shortName, branch } = studio;
-    const details: IMiniCardPanelDetail[] = getStudioDetails(studio);
+    const details: MiniCardPanelDetailProps[] = getStudioDetails(studio);
     return {
       primaryText: shortName || name,
       primaryTextAlt: branch,

@@ -24,9 +24,9 @@ const getPlayMatches = (play: Play): TheatreVisit[] =>
     []
   );
 
-const getPlayDetails = (play: Play): IMiniCardPanelDetail[] =>
+const getPlayDetails = (play: Play): MiniCardPanelDetailProps[] =>
   getPlayMatches(play).map(
-    (theatreVisit: TheatreVisit): IMiniCardPanelDetail => {
+    (theatreVisit: TheatreVisit): MiniCardPanelDetailProps => {
       const { date } = theatreVisit;
       return {
         mainText: [theatreVisit.theatre.name],

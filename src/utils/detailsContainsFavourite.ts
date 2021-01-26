@@ -1,8 +1,8 @@
 export const detailsContainsFavourite = (
-  details: IMiniCardPanelDetail[]
+  details: MiniCardPanelDetailProps[]
 ): boolean => {
   const favouritedDetails = details.filter(
-    ({ favourite }: IMiniCardPanelDetail): boolean => !!favourite
+    ({ favourite }: MiniCardPanelDetailProps): boolean => !!favourite
   );
   return favouritedDetails.length > 0;
 };
