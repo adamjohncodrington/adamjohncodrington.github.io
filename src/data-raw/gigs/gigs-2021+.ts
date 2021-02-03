@@ -13,7 +13,6 @@ const {
 const {
   O2_THE,
   LAFAYETTE,
-  OVAL_SPACE,
   TOTTENHAM_HOTSPUR_STADIUM,
   SHEPHERDS_BUSH_EMPIRE,
   LONDON_PALLADIUM,
@@ -34,21 +33,18 @@ const {
   TICKETMASTER_POSTAL
 } = TICKET_TYPES;
 
+export const CELESTE: Gig = {
+  headline: MUSICIANS.CELESTE,
+  venue: ROUNDHOUSE,
+  date: new Date("2022-04-21"),
+  company: [DARREN_TAYLOR]
+};
+
 export const SEVDALIZA: Gig = {
   headline: MUSICIANS.SEVDALIZA,
   venue: ELECTRIC_BRIXTON,
   date: new Date("2021-04-15"),
-  company: [DARREN_TAYLOR],
-  maybe: true
-};
-
-export const SOPHIE_2020: Gig = {
-  headline: MUSICIANS.SOPHIE,
-  support: [MUSICIANS.EARTHEATER],
-  venue: OVAL_SPACE,
-  company: [LEWIS_STEADMAN, JERRY_EDWARDS],
-  ticketType: TICKET_TYPES.DICE_APP,
-  date: new Date("2021-10-01")
+  company: [DARREN_TAYLOR]
 };
 
 export const RINA_SAWAYAMA: Gig = {
@@ -70,8 +66,7 @@ export const DAGNY: Gig = {
   headline: MUSICIANS.DAGNY,
   venue: LAFAYETTE,
   date: new Date("2021-04-12"),
-  company: [DARREN_TAYLOR],
-  maybe: true
+  company: [DARREN_TAYLOR]
 };
 
 export const LANE_8: Gig = {

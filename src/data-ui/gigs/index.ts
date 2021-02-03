@@ -8,7 +8,7 @@ import { MUSICIANS } from "./musicians";
 import { SOLO } from "./solo";
 import { pageCount } from "./page-count";
 import { PHOTOS } from "./photos";
-import { UP_NEXT, MAYBE } from "./upcoming";
+import { UP_NEXT } from "./upcoming";
 import { VENUES } from "./venues";
 import { VIDEOS } from "./videos";
 import { YEARS } from "./years";
@@ -23,7 +23,6 @@ export const GIGS = {
   WITH: filterMiniCards(WITH),
   MUSICIANS: filterMiniCards(MUSICIANS),
   UP_NEXT,
-  MAYBE,
   POSTPONED: [],
   VENUES: filterMiniCards(VENUES),
   YEARS,

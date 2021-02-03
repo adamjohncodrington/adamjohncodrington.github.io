@@ -55,12 +55,6 @@ const UP_NEXT: PageSectionProps = {
   count: DATA.UP_NEXT.length
 };
 
-const MAYBE: PageSectionProps = {
-  SvgIcon: SVG.QUESTION_MARK,
-  title: PAGE_SECTION_TITLES.MAYBE,
-  data: { cards: DATA.MAYBE }
-};
-
 const POSTPONED: PageSectionProps = {
   title: PAGE_SECTION_TITLES.POSTPONED,
   data: { cards: DATA.POSTPONED },
@@ -96,7 +90,6 @@ export const GIGS: PageSectionProps[] = [
   FESTIVALS,
   WITH,
   PHOTOS,
-  MAYBE,
   POSTPONED,
   SOLO,
   UP_NEXT,

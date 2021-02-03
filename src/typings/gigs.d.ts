@@ -1,7 +1,6 @@
 interface FestivalTitle extends I_Name, I__Insignificant {}
 
 interface IGigOrFestival extends I__Favourite, I_Company {
-  maybe?: boolean;
   photos?: IPhoto[];
   venue: MusicVenue;
   ticketType?: ITicketType;
