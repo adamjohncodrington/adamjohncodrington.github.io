@@ -1,5 +1,5 @@
-import { VINYL_PURCHASED as DATA } from "data-raw";
+import { VINYL_COLLECTION as DATA } from "data-raw";
 
-export const SIGNED: IVinyl[] = DATA.filter(
-  ({ signed }: IVinyl): boolean => signed
+export const SIGNED: Vinyl[] = DATA.filter(
+  ({ signed }: Vinyl): boolean => signed
 );

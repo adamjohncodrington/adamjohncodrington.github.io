@@ -101,12 +101,11 @@ interface I_CostExcDelivery {
 
 interface IVinylExtraCopy extends I_AlbumPhoto, I_Colors, I_CostExcDelivery {}
 
-interface IVinyl extends IAlbum, I_Colors, I_CostExcDelivery, I_Signed {
+interface Vinyl extends IAlbum, I_Colors, I_CostExcDelivery, I_Signed {
   retailer: Retailer;
   gift?: IGift;
   sides: 2 | 4;
   inches: 7 | 10 | 12;
-  arrived: boolean;
   extraCopy?: IVinylExtraCopy;
 }
 

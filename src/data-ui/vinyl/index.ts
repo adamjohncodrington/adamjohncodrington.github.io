@@ -1,4 +1,4 @@
-import { VINYL_COLLECTION, VINYL_WISH_LIST, VINYL_ORDERED } from "data-raw";
+import { VINYL_COLLECTION } from "data-raw";
 import { filterMiniCards } from "utils";
 
 import { ARTWORK } from "./artwork";
@@ -8,7 +8,7 @@ import { GIFTS } from "./gifts";
 import { MUSICIANS } from "./musicians";
 import { RETAILERS } from "./retailers";
 import { SIGNED } from "./signed";
-import { mapAlbumsToCards, mapVinylsToCards } from "./utils";
+import { mapVinylsToCards } from "./utils";
 import { YEARS } from "./years";
 
 export const VINYL = {
@@ -30,8 +30,6 @@ export const VINYL = {
     hideGiftSymbol: true,
     hideSignedIcon: true
   }),
-  ORDERED: mapVinylsToCards(VINYL_ORDERED),
   SIGNED: mapVinylsToCards(SIGNED, { hideSignedIcon: true }),
-  WISH_LIST: mapAlbumsToCards(VINYL_WISH_LIST),
   YEARS
 };

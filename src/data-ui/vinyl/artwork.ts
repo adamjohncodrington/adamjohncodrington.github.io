@@ -1,7 +1,7 @@
-import { VINYL_PURCHASED as DATA } from "data-raw";
+import { VINYL_COLLECTION as DATA } from "data-raw";
 
 import { mapAlbumToPhoto } from "./utils";
 
 export const ARTWORK: IPhoto[] = DATA.map(
-  (vinyl: IVinyl): IPhoto => mapAlbumToPhoto(vinyl)
+  (vinyl: Vinyl): IPhoto => mapAlbumToPhoto(vinyl)
 );

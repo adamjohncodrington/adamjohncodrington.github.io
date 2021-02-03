@@ -42,7 +42,7 @@ const mapAlbumToCard = (album: IAlbum, options?: IOptions): CardProps => {
   };
 };
 
-const mapVinylToCard = (vinyl: IVinyl, options?: IOptions): CardProps => {
+const mapVinylToCard = (vinyl: Vinyl, options?: IOptions): CardProps => {
   const { signed, gift } = vinyl;
   const hideSignedIcon: boolean = !!(options && options.hideSignedIcon);
   const hideColorSymbol: boolean = !!(options && options.hideColorSymbol);
@@ -66,10 +66,10 @@ export const mapAlbumsToCards = (
   albums.map((album: IAlbum): CardProps => mapAlbumToCard(album, options));
 
 export const mapVinylsToCards = (
-  vinyls: IVinyl[],
+  vinyls: Vinyl[],
   options?: IOptions
 ): CardProps[] =>
-  vinyls.map((vinyl: IVinyl): CardProps => mapVinylToCard(vinyl, options));
+  vinyls.map((vinyl: Vinyl): CardProps => mapVinylToCard(vinyl, options));
 
 interface IOptions2 {
   showMusicianName: boolean;
@@ -77,7 +77,7 @@ interface IOptions2 {
 }
 
 export const mapVinylsToMiniCardPanelDetails = (
-  vinyls: IVinyl[],
+  vinyls: Vinyl[],
   { showMusicianName, showCost = false }: IOptions2
 ): MiniCardPanelDetailProps[] => {
   const mapVinylToMiniCardPanelDetail = ({
@@ -86,7 +86,7 @@ export const mapVinylsToMiniCardPanelDetails = (
     title,
     costExcDelivery,
     appleMusicId
-  }: IVinyl): MiniCardPanelDetailProps => {
+  }: Vinyl): MiniCardPanelDetailProps => {
     const mainText: string = showMusicianName
       ? `${moveTheSuffixToPrefix(
           getMusicianStageNameAtTime({ musician, year })
@@ -103,7 +103,7 @@ export const mapVinylsToMiniCardPanelDetails = (
     };
   };
   return vinyls.map(
-    (vinyl: IVinyl): MiniCardPanelDetailProps =>
+    (vinyl: Vinyl): MiniCardPanelDetailProps =>
       mapVinylToMiniCardPanelDetail(vinyl)
   );
 };

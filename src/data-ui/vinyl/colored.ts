@@ -1,6 +1,6 @@
-import { VINYL_PURCHASED as DATA } from "data-raw";
+import { VINYL_COLLECTION as DATA } from "data-raw";
 import { vinylColorIsSpecial } from "utils";
 
-export const COLORED: IVinyl[] = DATA.filter(({ colors }: IVinyl): boolean =>
+export const COLORED: Vinyl[] = DATA.filter(({ colors }: Vinyl): boolean =>
   vinylColorIsSpecial(colors)
 );

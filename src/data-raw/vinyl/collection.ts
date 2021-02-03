@@ -19,7 +19,7 @@ const {
   FOPP_LONDON
 } = RETAILERS;
 
-export const FLEETWOOD_MAC_TANGO_IN_THE_NIGHT: IVinyl = {
+export const FLEETWOOD_MAC_TANGO_IN_THE_NIGHT: Vinyl = {
   musician: MUSICIANS.FLEETWOOD_MAC,
   photo: PHOTOS.ALBUM_ARTWORK.FLEETWOOD_MAC_TANGO_IN_THE_NIGHT,
   title: "Tango in the Night",
@@ -30,11 +30,10 @@ export const FLEETWOOD_MAC_TANGO_IN_THE_NIGHT: IVinyl = {
   colors: [COLORS.VINYL.FLEETWOOD_MAC_TANGO_IN_THE_NIGHT],
   costExcDelivery: 13,
   retailer: FOPP_LONDON,
-  inches: 12,
-  arrived: true
+  inches: 12
 };
 
-export const JESSIE_WARE_WHATS_YOUR_PLEASURE: IVinyl = {
+export const JESSIE_WARE_WHATS_YOUR_PLEASURE: Vinyl = {
   musician: MUSICIANS.JESSIE_WARE,
   photo: PHOTOS.ALBUM_ARTWORK.JESSIE_WARE_WHATS_YOUR_PLEASURE,
   title: "What's Your Pleasure?",
@@ -45,11 +44,10 @@ export const JESSIE_WARE_WHATS_YOUR_PLEASURE: IVinyl = {
   colors: [COLORS.BLACK],
   costExcDelivery: 20,
   retailer: FOPP_LONDON,
-  inches: 12,
-  arrived: true
+  inches: 12
 };
 
-export const SMITHS_HATFUL_OF_HOLLOW: IVinyl = {
+export const SMITHS_HATFUL_OF_HOLLOW: Vinyl = {
   musician: MUSICIANS.SMITHS_THE,
   photo: PHOTOS.ALBUM_ARTWORK.SMITHS_HATFUL_OF_HOLLOW,
   title: "Hatful of Hollow",
@@ -60,11 +58,10 @@ export const SMITHS_HATFUL_OF_HOLLOW: IVinyl = {
   colors: [COLORS.BLACK],
   costExcDelivery: 15,
   retailer: FOPP_LONDON,
-  inches: 12,
-  arrived: true
+  inches: 12
 };
 
-export const ELLIE_GOULDING_HALCYON: IVinyl = {
+export const ELLIE_GOULDING_HALCYON: Vinyl = {
   musician: MUSICIANS.ELLIE_GOULDING,
   photo: PHOTOS.ALBUM_ARTWORK.ELLIE_GOULDING_HALCYON,
   title: "Halcyon",
@@ -75,11 +72,10 @@ export const ELLIE_GOULDING_HALCYON: IVinyl = {
   colors: [COLORS.BLACK],
   costExcDelivery: 15,
   retailer: FOPP_LONDON,
-  inches: 12,
-  arrived: true
+  inches: 12
 };
 
-export const CARLY_RAE_JEPSEN_EMOTION: IVinyl = {
+export const CARLY_RAE_JEPSEN_EMOTION: Vinyl = {
   musician: MUSICIANS.CARLY_RAE_JEPSEN,
   photo: PHOTOS.ALBUM_ARTWORK.CARLY_RAE_JEPSEN_EMOTION,
   appleMusicId: "e-mo-tion/1442688656",
@@ -89,12 +85,11 @@ export const CARLY_RAE_JEPSEN_EMOTION: IVinyl = {
   inches: 12,
   signed: true,
   colors: [COLORS.VINYL.CARLY_RAE_JEPSEN_EMOTION_PINK],
-  arrived: true,
   costExcDelivery: 19.99,
   retailer: MUSICIAN_WEB_STORE
 };
 
-export const LISSIE_CATCHING_A_TIGER: IVinyl = {
+export const LISSIE_CATCHING_A_TIGER: Vinyl = {
   musician: MUSICIANS.LISSIE,
   photo: PHOTOS.ALBUM_ARTWORK.LISSIE_CATCHING_A_TIGER,
   appleMusicId: "catching-a-tiger/1517705755",
@@ -104,19 +99,17 @@ export const LISSIE_CATCHING_A_TIGER: IVinyl = {
   inches: 12,
   signed: false,
   colors: [BLACK],
-  arrived: true,
   costExcDelivery: 12.99,
   retailer: FAT_POSSUM
 };
 
-export const TAYLOR_SWIFT_FOLKLORE: IVinyl = {
+export const TAYLOR_SWIFT_FOLKLORE: Vinyl = {
   musician: MUSICIANS.TAYLOR_SWIFT,
   title: "folklore",
   costExcDelivery: 26.99,
   retailer: MUSICIAN_WEB_STORE,
   appleMusicId: "folklore-deluxe-version/1528112358",
   year: 2020,
-  arrived: true,
   colors: [COLORS.VINYL.TAYLOR_SWIFT_FOLKLORE_TEAL],
   inches: 12,
   sides: 4,
@@ -124,7 +117,7 @@ export const TAYLOR_SWIFT_FOLKLORE: IVinyl = {
   signed: false
 };
 
-export const TROYE_SIVAN_IN_A_DREAM: IVinyl = {
+export const TROYE_SIVAN_IN_A_DREAM: Vinyl = {
   musician: MUSICIANS.TROYE_SIVAN,
   title: "In a Dream",
   photo: PHOTOS.ALBUM_ARTWORK.TROYE_SIVAN_IN_A_DREAM,
@@ -132,14 +125,13 @@ export const TROYE_SIVAN_IN_A_DREAM: IVinyl = {
   year: 2020,
   costExcDelivery: 21.99,
   retailer: MUSICIAN_WEB_STORE,
-  arrived: true,
   colors: COLORS.VINYL.TROYE_SIVAN_IN_A_DREAM_BLUE_MIST,
   sides: 2,
   signed: true,
   inches: 12
 };
 
-export const CHARLI_XCX_HOW_IM_FEELING_NOW: IVinyl = {
+export const CHARLI_XCX_HOW_IM_FEELING_NOW: Vinyl = {
   musician: MUSICIANS.CHARLI_XCX,
   title: "how i'm feeling now",
   retailer: MUSICIAN_WEB_STORE,
@@ -148,7 +140,6 @@ export const CHARLI_XCX_HOW_IM_FEELING_NOW: IVinyl = {
   signed: false,
   inches: 12,
   sides: 2,
-  arrived: true,
   colors: [COLORS.VINYL.CHARLI_XCX_HOW_IM_FEELING_NOW_ORANGE],
   extraCopy: {
     colors: [COLORS.VINYL.CHARLI_XCX_HOW_IM_FEELING_NOW_YELLOW],
@@ -159,13 +150,12 @@ export const CHARLI_XCX_HOW_IM_FEELING_NOW: IVinyl = {
   appleMusicId: "how-im-feeling-now/1513162098"
 };
 
-export const CARIBOU_OUR_LOVE: IVinyl = {
+export const CARIBOU_OUR_LOVE: Vinyl = {
   musician: MUSICIANS.CARIBOU,
   photo: PHOTOS.ALBUM_ARTWORK.CARIBOU_OUR_LOVE,
   appleMusicId: "our-love/1276611236",
   title: "Our Love",
   sides: 2,
-  arrived: true,
   colors: [BLACK],
   signed: false,
   costExcDelivery: 12.99,
@@ -174,12 +164,11 @@ export const CARIBOU_OUR_LOVE: IVinyl = {
   year: 2014
 };
 
-export const BEN_HOWARD_EVERY_KINGDOM: IVinyl = {
+export const BEN_HOWARD_EVERY_KINGDOM: Vinyl = {
   musician: MUSICIANS.BEN_HOWARD,
   photo: PHOTOS.ALBUM_ARTWORK.BEN_HOWARD_EVERY_KINGDOM,
   appleMusicId: "every-kingdom/1440804636",
   title: "Every Kingdom",
-  arrived: true,
   colors: [BLACK],
   retailer: MUSICIAN_WEB_STORE,
   signed: false,
@@ -189,7 +178,7 @@ export const BEN_HOWARD_EVERY_KINGDOM: IVinyl = {
   year: 2011
 };
 
-export const AMY_WINEHOUSE_BACK_TO_BLACK: IVinyl = {
+export const AMY_WINEHOUSE_BACK_TO_BLACK: Vinyl = {
   musician: MUSICIANS.AMY_WINEHOUSE,
   retailer: AMAZON,
   costExcDelivery: 12.99,
@@ -198,13 +187,12 @@ export const AMY_WINEHOUSE_BACK_TO_BLACK: IVinyl = {
   appleMusicId: "back-to-black/1006515289",
   year: 2006,
   signed: false,
-  arrived: true,
   colors: [BLACK],
   inches: 12,
   sides: 2
 };
 
-export const ARCTIC_MONKEYS_FAVOURITE_WORST_NIGHTMARE: IVinyl = {
+export const ARCTIC_MONKEYS_FAVOURITE_WORST_NIGHTMARE: Vinyl = {
   musician: MUSICIANS.ARCTIC_MONKEYS,
   //TOOD: verify this cost
   costExcDelivery: 21.99,
@@ -213,14 +201,13 @@ export const ARCTIC_MONKEYS_FAVOURITE_WORST_NIGHTMARE: IVinyl = {
   appleMusicId: "favourite-worst-nightmare/251126923",
   year: 2007,
   sides: 2,
-  arrived: true,
   colors: [BLACK],
   inches: 12,
   signed: false,
   photo: PHOTOS.ALBUM_ARTWORK.ARCTIC_MONKEYS_FAVOURITE_WORST_NIGHTMARE
 };
 
-export const KATE_NASH_MADE_OF_BRICKS: IVinyl = {
+export const KATE_NASH_MADE_OF_BRICKS: Vinyl = {
   musician: MUSICIANS.KATE_NASH,
   title: "Made of Bricks",
   photo: PHOTOS.ALBUM_ARTWORK.KATE_NASH_MADE_OF_BRICKS,
@@ -231,11 +218,10 @@ export const KATE_NASH_MADE_OF_BRICKS: IVinyl = {
   retailer: NORMAN_ONLINE,
   costExcDelivery: 17.99,
   signed: false,
-  arrived: true,
   colors: [BLACK]
 };
 
-export const ADELE_19: IVinyl = {
+export const ADELE_19: Vinyl = {
   musician: MUSICIANS.ADELE,
   title: "19",
   retailer: NORMAN_ONLINE,
@@ -246,17 +232,15 @@ export const ADELE_19: IVinyl = {
   inches: 12,
   sides: 2,
   signed: false,
-  arrived: true,
   colors: [BLACK]
 };
 
-export const FLORENCE_LUNGS: IVinyl = {
+export const FLORENCE_LUNGS: Vinyl = {
   musician: MUSICIANS.FLORENCE_AND_THE_MACHINE,
   title: "Lungs",
   costExcDelivery: 12.99,
   retailer: AMAZON,
   sides: 2,
-  arrived: true,
   colors: [BLACK],
   signed: false,
   inches: 12,
@@ -265,7 +249,7 @@ export const FLORENCE_LUNGS: IVinyl = {
   year: 2009
 };
 
-export const MARINA_ELECTRA_HEART: IVinyl = {
+export const MARINA_ELECTRA_HEART: Vinyl = {
   musician: MUSICIANS.MARINA,
   retailer: MUSICIAN_WEB_STORE,
   costExcDelivery: 18.99,
@@ -276,14 +260,12 @@ export const MARINA_ELECTRA_HEART: IVinyl = {
   inches: 12,
   sides: 4,
   signed: false,
-  arrived: true,
   colors: [BLACK]
 };
 
-export const LANA_BORN_TO_DIE: IVinyl = {
+export const LANA_BORN_TO_DIE: Vinyl = {
   musician: MUSICIANS.LANA_DEL_REY,
   signed: false,
-  arrived: true,
   colors: [BLACK],
   sides: 4,
   costExcDelivery: 25.99,
@@ -295,7 +277,7 @@ export const LANA_BORN_TO_DIE: IVinyl = {
   photo: PHOTOS.ALBUM_ARTWORK.LANA_BORN_TO_DIE
 };
 
-export const LADY_GAGA_BORN_THIS_WAY: IVinyl = {
+export const LADY_GAGA_BORN_THIS_WAY: Vinyl = {
   musician: MUSICIANS.LADY_GAGA,
   retailer: JUNO_ONLINE,
   photo: PHOTOS.ALBUM_ARTWORK.LADY_GAGA_BORN_THIS_WAY,
@@ -304,13 +286,12 @@ export const LADY_GAGA_BORN_THIS_WAY: IVinyl = {
   year: 2011,
   sides: 4,
   costExcDelivery: 18.75,
-  arrived: true,
   colors: [BLACK],
   inches: 12,
   signed: false
 };
 
-export const LADY_GAGA_FAME_MONSTER: IVinyl = {
+export const LADY_GAGA_FAME_MONSTER: Vinyl = {
   musician: MUSICIANS.LADY_GAGA,
   photo: PHOTOS.ALBUM_ARTWORK.LADY_GAGA_FAME_MONSTER,
   retailer: JUNO_ONLINE,
@@ -319,13 +300,12 @@ export const LADY_GAGA_FAME_MONSTER: IVinyl = {
   appleMusicId: "the-fame-monster/1440860294",
   year: 2009,
   sides: 2,
-  arrived: true,
   colors: [COLORS.VINYL.PHOTO],
   inches: 12,
   signed: false
 };
 
-export const LORDE_PURE_HEROINE: IVinyl = {
+export const LORDE_PURE_HEROINE: Vinyl = {
   musician: MUSICIANS.LORDE,
   gift: { from: FRIENDS.MUM },
   costExcDelivery: 8,
@@ -336,18 +316,16 @@ export const LORDE_PURE_HEROINE: IVinyl = {
   signed: false,
   sides: 2,
   inches: 12,
-  arrived: true,
   colors: [BLACK],
   photo: PHOTOS.ALBUM_ARTWORK.LORDE_PURE_HEROINE
 };
 
-export const LANY_MALIBU_NIGHTS: IVinyl = {
+export const LANY_MALIBU_NIGHTS: Vinyl = {
   musician: MUSICIANS.LANY,
   title: "Malibu Nights",
   photo: PHOTOS.ALBUM_ARTWORK.LANY_MALIBU_NIGHTS,
   appleMusicId: "malibu-nights/1435482172",
   year: 2018,
-  arrived: true,
   sides: 2,
   retailer: MUSIC_MAGPIE,
   costExcDelivery: 21.39,
@@ -356,7 +334,7 @@ export const LANY_MALIBU_NIGHTS: IVinyl = {
   signed: false
 };
 
-export const TAYLOR_SWIFT_1989: IVinyl = {
+export const TAYLOR_SWIFT_1989: Vinyl = {
   musician: MUSICIANS.TAYLOR_SWIFT,
   gift: { from: FRIENDS.MUM },
   title: "1989",
@@ -365,14 +343,13 @@ export const TAYLOR_SWIFT_1989: IVinyl = {
   photo: PHOTOS.ALBUM_ARTWORK.TAYLOR_SWIFT_1989,
   year: 2014,
   sides: 4,
-  arrived: true,
   colors: [BLACK],
   inches: 12,
   signed: false,
   appleMusicId: "1989/1445888258"
 };
 
-export const GRIMES_ART_ANGELS: IVinyl = {
+export const GRIMES_ART_ANGELS: Vinyl = {
   musician: MUSICIANS.GRIMES,
   title: "Art Angels",
   retailer: NORMAN_ONLINE,
@@ -382,12 +359,11 @@ export const GRIMES_ART_ANGELS: IVinyl = {
   year: 2015,
   inches: 12,
   sides: 2,
-  arrived: true,
   colors: [BLACK],
   signed: false
 };
 
-export const MUNA_ABOUT_U: IVinyl = {
+export const MUNA_ABOUT_U: Vinyl = {
   musician: MUSICIANS.MUNA,
   title: "About U",
   gift: { from: FRIENDS.MUM },
@@ -396,14 +372,13 @@ export const MUNA_ABOUT_U: IVinyl = {
   costExcDelivery: 22.89,
   inches: 12,
   signed: false,
-  arrived: true,
   colors: [COLORS.VINYL.MUNA_ABOUT_U_PINK],
   photo: PHOTOS.ALBUM_ARTWORK.MUNA_ABOUT_U,
   appleMusicId: "about-u/1171832662",
   year: 2017
 };
 
-export const PVRIS_AWKOHAWNOH: IVinyl = {
+export const PVRIS_AWKOHAWNOH: Vinyl = {
   musician: MUSICIANS.PVRIS,
   retailer: MUSICIAN_WEB_STORE,
   costExcDelivery: 21.99,
@@ -411,14 +386,13 @@ export const PVRIS_AWKOHAWNOH: IVinyl = {
   photo: PHOTOS.ALBUM_ARTWORK.PVRIS_AWKOHAWNOH,
   appleMusicId: "all-we-know-of-heaven-all-we-need-of-hell/1227528237",
   year: 2017,
-  arrived: true,
   colors: COLORS.VINYL.PVRIS_AWKOHAWNOH,
   inches: 12,
   sides: 2,
   signed: true
 };
 
-export const _1975_BRIEF_INQUIRY: IVinyl = {
+export const _1975_BRIEF_INQUIRY: Vinyl = {
   musician: MUSICIANS._1975_THE,
   title: "A Brief Inquiry Into Online Relationships",
   photo: PHOTOS.ALBUM_ARTWORK._1975_BRIEF_INQUIRY,
@@ -429,11 +403,10 @@ export const _1975_BRIEF_INQUIRY: IVinyl = {
   sides: 4,
   inches: 12,
   signed: false,
-  arrived: true,
   colors: [COLORS.CLEAR]
 };
 
-export const BANKS_III: IVinyl = {
+export const BANKS_III: Vinyl = {
   musician: MUSICIANS.BANKS,
   appleMusicId: "iii/1467547466",
   title: "III",
@@ -444,11 +417,10 @@ export const BANKS_III: IVinyl = {
   costExcDelivery: 20.99,
   sides: 2,
   inches: 12,
-  arrived: true,
   colors: [COLORS.CLEAR]
 };
 
-export const LEON_LEON: IVinyl = {
+export const LEON_LEON: Vinyl = {
   gift: { from: FRIENDS.MUM },
   musician: MUSICIANS.LEON,
   retailer: HIVE,
@@ -459,12 +431,11 @@ export const LEON_LEON: IVinyl = {
   signed: false,
   sides: 2,
   inches: 12,
-  arrived: true,
   colors: [BLACK],
   photo: PHOTOS.ALBUM_ARTWORK.LEON_LEON
 };
 
-export const LYKKE_LI_SO_SAD_SO_SEXY: IVinyl = {
+export const LYKKE_LI_SO_SAD_SO_SEXY: Vinyl = {
   musician: MUSICIANS.LYKKE_LI,
   retailer: NORMAN_ONLINE,
   costExcDelivery: 17.99,
@@ -474,12 +445,11 @@ export const LYKKE_LI_SO_SAD_SO_SEXY: IVinyl = {
   signed: false,
   sides: 2,
   inches: 12,
-  arrived: true,
   colors: [BLACK],
   photo: PHOTOS.ALBUM_ARTWORK.LYKKE_LI_SO_SAD_SO_SEXY
 };
 
-export const FKA_TWIGS_MAGDALENE: IVinyl = {
+export const FKA_TWIGS_MAGDALENE: Vinyl = {
   musician: MUSICIANS.FKA_TWIGS,
   title: "Magdalene",
   gift: { from: FRIENDS.MUM },
@@ -489,13 +459,12 @@ export const FKA_TWIGS_MAGDALENE: IVinyl = {
   year: 2019,
   signed: false,
   sides: 2,
-  arrived: true,
   colors: [BLACK],
   inches: 12,
   photo: PHOTOS.ALBUM_ARTWORK.FKA_TWIGS_MAGDALENE
 };
 
-export const CAROLINE_POLACHEK_PANG: IVinyl = {
+export const CAROLINE_POLACHEK_PANG: Vinyl = {
   musician: MUSICIANS.CAROLINE_POLACHEK,
   retailer: NORMAN_ONLINE,
   title: "Pang",
@@ -505,12 +474,11 @@ export const CAROLINE_POLACHEK_PANG: IVinyl = {
   costExcDelivery: 17.49,
   sides: 2,
   signed: false,
-  arrived: true,
   colors: [BLACK],
   inches: 12
 };
 
-export const KIM_PETRAS_CLARITY: IVinyl = {
+export const KIM_PETRAS_CLARITY: Vinyl = {
   musician: MUSICIANS.KIM_PETRAS,
   retailer: NORMAN_ONLINE,
   title: "Clarity",
@@ -520,12 +488,11 @@ export const KIM_PETRAS_CLARITY: IVinyl = {
   signed: false,
   inches: 12,
   sides: 2,
-  arrived: true,
   colors: [COLORS.VINYL.PHOTO],
   appleMusicId: "clarity/1469298192"
 };
 
-export const ARIANA_GRANDE_TUN: IVinyl = {
+export const ARIANA_GRANDE_TUN: Vinyl = {
   retailer: JUNO_ONLINE,
   costExcDelivery: 18.75,
   musician: MUSICIANS.ARIANA_GRANDE,
@@ -534,20 +501,18 @@ export const ARIANA_GRANDE_TUN: IVinyl = {
   appleMusicId: "thank-u-next/1450330588",
   year: 2019,
   sides: 4,
-  arrived: true,
   colors: [BLACK],
   inches: 12,
   signed: false
 };
 
-export const HAIM_WIMPIII: IVinyl = {
+export const HAIM_WIMPIII: Vinyl = {
   musician: MUSICIANS.HAIM,
   retailer: MUSICIAN_WEB_STORE,
   costExcDelivery: 25,
   title: "Women In Music Pt. III",
   appleMusicId: "women-in-music-pt-iii/1500020581",
   year: 2020,
-  arrived: true,
   colors: [COLORS.VINYL.HAIM_WIMPIII_RED],
   inches: 12,
   sides: 4,
@@ -555,7 +520,7 @@ export const HAIM_WIMPIII: IVinyl = {
   signed: true
 };
 
-export const SUFJAN_STEVENS_CARRIE_LOWELL: IVinyl = {
+export const SUFJAN_STEVENS_CARRIE_LOWELL: Vinyl = {
   musician: MUSICIANS.SUFJAN_STEVENS,
   photo: PHOTOS.ALBUM_ARTWORK.SUFJAN_STEVENS_CARRIE_LOWELL,
   appleMusicId: "carrie-lowell/955572616",
@@ -563,14 +528,13 @@ export const SUFJAN_STEVENS_CARRIE_LOWELL: IVinyl = {
   costExcDelivery: 15.73,
   title: "Carrie & Lowell",
   signed: false,
-  arrived: true,
   colors: [BLACK],
   sides: 2,
   inches: 12,
   year: 2015
 };
 
-export const BANKS_ALTAR: IVinyl = {
+export const BANKS_ALTAR: Vinyl = {
   musician: MUSICIANS.BANKS,
   photo: PHOTOS.ALBUM_ARTWORK.BANKS_ALTAR,
   appleMusicId: "the-altar/1440836872",
@@ -578,19 +542,17 @@ export const BANKS_ALTAR: IVinyl = {
   signed: false,
   retailer: JUNO_ONLINE,
   costExcDelivery: 13.25,
-  arrived: true,
   colors: [BLACK],
   sides: 2,
   inches: 12,
   year: 2016
 };
 
-export const ALLIE_X_SUPER_SUNSET: IVinyl = {
+export const ALLIE_X_SUPER_SUNSET: Vinyl = {
   musician: MUSICIANS.ALLIE_X,
   retailer: MUSICIAN_WEB_STORE,
   costExcDelivery: 20,
   title: "Super Sunset",
-  arrived: true,
   colors: [COLORS.VINYL.ALLIE_X_SUPER_SUNSET_YELLOW],
   photo: PHOTOS.ALBUM_ARTWORK.ALLIE_X_SUPER_SUNSET,
   appleMusicId: "super-sunset/1421851140",

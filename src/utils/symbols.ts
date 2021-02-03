@@ -48,7 +48,7 @@ interface IGetSymbols
     I__Gift,
     I__Video {
   poleCategory?: IPoleCategory;
-  vinyl?: IVinyl;
+  vinyl?: Vinyl;
 }
 
 // const generateVinylColorSymbol = ()

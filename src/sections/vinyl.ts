@@ -37,14 +37,6 @@ const COLLECTION: PageSectionProps = {
   shuffle: true
 };
 
-const ORDERED: PageSectionProps = {
-  title: PAGE_SECTION_TITLES.ORDERED,
-  data: { cards: DATA.ORDERED },
-  count: DATA.ORDERED.length,
-  SvgIcon: SVG.DELIVERY_VAN,
-  shuffle: true
-};
-
 const COST: PageSectionProps = {
   title: PAGE_SECTION_TITLES.COST,
   SvgIcon: SVG.MONEY,
@@ -65,14 +57,6 @@ const SIGNED: PageSectionProps = {
   SvgIcon: SVG.PEN_WRITING
 };
 
-const WISH_LIST: PageSectionProps = {
-  title: PAGE_SECTION_TITLES.WISH_LIST,
-  SvgIcon: SVG.STARS,
-  data: { cards: DATA.WISH_LIST },
-  shuffle: true,
-  count: DATA.WISH_LIST.length
-};
-
 const YEARS: PageSectionProps[] = DATA.YEARS.map(
   (year: CardProps[]): PageSectionProps => ({
     title: year[0].year.toString(),
@@ -88,9 +72,7 @@ export const VINYL: PageSectionProps[] = [
   COLLECTION,
   COST,
   GIFTS,
-  ORDERED,
   RETAILERS,
   SIGNED,
-  WISH_LIST,
   ...YEARS
 ];
