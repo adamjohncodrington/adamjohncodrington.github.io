@@ -40,6 +40,13 @@ export const CELESTE: Gig = {
   company: [DARREN_TAYLOR]
 };
 
+export const ARLO_PARKS: Gig = {
+  headline: MUSICIANS.ARLO_PARKS,
+  venue: SHEPHERDS_BUSH_EMPIRE,
+  date: new Date("2021-11-04"),
+  company: [LEWIS_STEADMAN, JERRY_EDWARDS]
+};
+
 export const SEVDALIZA: Gig = {
   headline: MUSICIANS.SEVDALIZA,
   venue: ELECTRIC_BRIXTON,
@@ -49,8 +56,8 @@ export const SEVDALIZA: Gig = {
 
 export const RINA_SAWAYAMA: Gig = {
   headline: MUSICIANS.RINA_SAWAYAMA,
-  venue: ROUNDHOUSE,
-  date: new Date("2021-11-17"),
+  venue: ELECTRIC_BRIXTON,
+  date: new Date("2021-11-16"),
   company: [DARREN_TAYLOR]
 };
 
