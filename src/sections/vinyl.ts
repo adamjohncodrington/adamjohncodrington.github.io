@@ -26,6 +26,7 @@ const GIFTS: PageSectionProps = {
   title: PAGE_SECTION_TITLES.GIFTS,
   SvgIcon: SVG.GIFT,
   shuffle: true,
+  hide: true,
   data: { cards: DATA.GIFTS }
 };
 
