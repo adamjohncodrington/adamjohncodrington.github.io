@@ -28,7 +28,7 @@ export const INSTRUCTORS: string = "Instructors";
 export const IMPROVISATION: string = "Freestyle";
 export const SHOWCASE: string = "Showcase";
 export const TRICKS: string = "Tricks";
-export const QUARANTINE: string = "Quarantine";
+export const QUARANTINE: string = "Lockdown";
 export const STUDIOS: string = "Studios";
 
 // Recipes

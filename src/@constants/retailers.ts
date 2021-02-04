@@ -1,9 +1,7 @@
-export const NORMAN_ONLINE: Retailer = {
-  name: "Norman Records",
-  online: true
-};
+export const NORMAN_ONLINE: Retailer = { name: "Norman Records", online: true };
 export const AMAZON: Retailer = { name: "Amazon", online: true };
 export const HIVE: Retailer = { name: "Hive", online: true };
+export const CHALKYS: Retailer = { name: "Chalkys", online: true };
 export const RECORDSTORE_ONLINE: Retailer = {
   name: "Recordstore.co.uk",
   online: true

@@ -8,6 +8,7 @@ const {
   JUNO_ONLINE,
   HIVE,
   MUSIC_MAGPIE,
+  CHALKYS,
   AMAZON,
   EBAY,
   RECORDSTORE_ONLINE,
@@ -217,6 +218,34 @@ export const KATE_NASH_MADE_OF_BRICKS: Vinyl = {
   sides: 2,
   retailer: NORMAN_ONLINE,
   costExcDelivery: 17.99,
+  signed: false,
+  colors: [BLACK]
+};
+
+export const JON_HOPKINS_SINGULARITY: Vinyl = {
+  musician: MUSICIANS.JON_HOPKINS,
+  title: "Singularity",
+  photo: PHOTOS.ALBUM_ARTWORK.JON_HOPKINS_SINGULARITY,
+  appleMusicId: "singularity/1349736537",
+  year: 2018,
+  inches: 12,
+  sides: 2,
+  retailer: CHALKYS,
+  costExcDelivery: 21.48,
+  signed: false,
+  colors: [BLACK]
+};
+
+export const DUA_LIPA_FUTURE_NOSTALGIA: Vinyl = {
+  musician: MUSICIANS.DUA_LIPA,
+  title: "Future Nostalgia",
+  photo: PHOTOS.ALBUM_ARTWORK.DUA_LIPA_FUTURE_NOSTALGIA,
+  appleMusicId: "future-nostalgia/1538003494",
+  year: 2020,
+  inches: 12,
+  sides: 2,
+  retailer: HIVE,
+  costExcDelivery: 18.32,
   signed: false,
   colors: [BLACK]
 };
