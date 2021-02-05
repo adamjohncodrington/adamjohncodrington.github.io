@@ -103,7 +103,7 @@ export const HAIM: Gig = {
 export const JESSIE_WARE: Gig = {
   headline: MUSICIANS.JESSIE_WARE,
   venue: BRIXTON_ACADEMY,
-  date: new Date("2021-04-25"),
+  date: new Date("2021-12-13"),
   company: [DARREN_TAYLOR, LUCY_TWAITE],
   ticketType: TICKETWEB
 };
