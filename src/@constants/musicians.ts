@@ -359,6 +359,7 @@ export const SKY_FERREIRA: Musician = {
   name: "Sky Ferreira",
   favourite: true
 };
+export const KING_PRINCESS: Musician = { name: "King Princess" };
 export const SODY: Musician = { name: "Sody" };
 export const SLIIMY: Musician = { name: "Sliimy" };
 export const SOFI_TUKKER: Musician = { name: "Sofi Tukker" };
