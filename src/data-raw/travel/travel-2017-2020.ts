@@ -165,3 +165,22 @@ export const NICE: Trip = [
     company: [FRIENDS.SIAN_RODWAY_SMITH]
   }
 ];
+
+export const OSLO: Trip = [
+  {
+    primaryLocations: [COUNTRIES.NORWAY.cities.OSLO],
+    country: COUNTRIES.NORWAY,
+    secondaryLocations: [
+      COUNTRIES.NORWAY.islands.HOVEDOYA,
+      COUNTRIES.NORWAY.attractions.OSLO_FJORD_SAUNA
+    ],
+    dates: [new Date("2020-02-27"), new Date("2020-03-01")],
+    company: [
+      FRIENDS.RYAN_MILLS,
+      FRIENDS.CAITLIN_MCCAIG,
+      FRIENDS.TOM_CHINDA_COUTTS,
+      FRIENDS.TONYA_FRANCE
+    ],
+    photos: PHOTOS.TRAVEL.OSLO
+  }
+];
