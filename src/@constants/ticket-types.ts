@@ -4,6 +4,8 @@ export const DICE_POSTAL: ITicketType = "Dice postal ticket";
 export const GIGS_AND_TOURS_POSTAL: ITicketType =
   "Gigs and Tours postal ticket";
 export const KABOODLE_ETICKET: ITicketType = "Kaboodle eTicket";
+export const ROUNDHOUSE_COLLECT_AT_VENUE: ITicketType =
+  "Roundhouse collect at venue";
 export const SEE_TICKETS_POSTAL: ITicketType = "SeeTickets postal";
 export const SEE_TICKETS_PRINT_AT_HOME: ITicketType =
   "SeeTickets print-at-home";

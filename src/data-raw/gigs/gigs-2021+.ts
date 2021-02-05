@@ -37,7 +37,16 @@ export const CELESTE: Gig = {
   headline: MUSICIANS.CELESTE,
   venue: ROUNDHOUSE,
   date: new Date("2022-04-21"),
-  company: [DARREN_TAYLOR]
+  company: [DARREN_TAYLOR],
+  ticketType: TICKET_TYPES.ROUNDHOUSE_COLLECT_AT_VENUE
+};
+
+export const ARLO_PARKS: Gig = {
+  headline: MUSICIANS.ARLO_PARKS,
+  venue: SHEPHERDS_BUSH_EMPIRE,
+  date: new Date("2021-11-03"),
+  company: [JERRY_EDWARDS, LEWIS_STEADMAN],
+  ticketType: TICKET_TYPES.TICKETMASTER_ETICKET
 };
 
 export const SEVDALIZA: Gig = {
