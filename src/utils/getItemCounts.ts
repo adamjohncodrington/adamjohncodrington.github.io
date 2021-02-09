@@ -1,3 +1,5 @@
+import { Musician, Person, Vinyl } from "types";
+
 import { isInFuture } from "./basic";
 
 interface IGetItemCounts {
@@ -5,10 +7,10 @@ interface IGetItemCounts {
   item: {
     actor?: Actor;
     attraction?: IAttraction;
-    city?: ICity;
+    city?: City;
     country?: ICountryTemplate;
     festival?: FestivalTitle;
-    friend?: Friend;
+    friend?: Person;
     island?: IIsland;
     musician?: Musician;
     musicVenue?: MusicVenue;
@@ -33,7 +35,7 @@ export const countryMatchExists = (
   return false;
 };
 
-export const cityMatchExists = (cityToMatch: ICity, trip: TripLeg): boolean => {
+export const cityMatchExists = (cityToMatch: City, trip: TripLeg): boolean => {
   const { primaryLocations, secondaryLocations, hiddenLocations } = trip;
 
   if (primaryLocations && primaryLocations.includes(cityToMatch)) return true;
@@ -97,7 +99,7 @@ export const getItemCounts = ({
 
   vinyls &&
     musicianToMatch &&
-    vinyls.forEach(({ musician }: IAlbum): void => {
+    vinyls.forEach(({ musician }: Vinyl): void => {
       if (musicianToMatch === musician) pastCount += 1;
     });
 

@@ -10,20 +10,8 @@ interface I__Insignificant {
   insignificant?: boolean;
 }
 
-interface IGift {
-  from: Friend;
-}
-
-interface I__Gift {
-  gift?: IGift;
-}
-
 interface I_Sort {
   sort: (string | number | boolean | undefined)[];
-}
-
-interface I_Signed {
-  signed: boolean;
 }
 
 interface IStartEndDate {
@@ -45,11 +33,11 @@ interface I_PastFutureCounts {
 }
 
 interface I_Company {
-  company: IPerson[];
+  company: Person[];
 }
 
 interface I__Company {
-  company?: Friend[];
+  company?: Person[];
 }
 
 interface I__Date {
@@ -57,11 +45,11 @@ interface I__Date {
 }
 
 interface I_Photos {
-  photos: IPhoto[];
+  photos: Photo[];
 }
 
 interface I__Photos {
-  photos?: IPhoto[];
+  photos?: Photo[];
 }
 
 interface I_Date {
@@ -94,10 +82,6 @@ interface I__Border {
 
 interface I__BorderRadius {
   borderRadius?: string;
-}
-
-interface I_Colors {
-  colors: string[];
 }
 
 interface I_Dates {
@@ -149,5 +133,5 @@ interface I__Video {
 }
 
 interface I_Photo {
-  photo: IPhoto;
+  photo: Photo;
 }

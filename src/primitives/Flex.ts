@@ -33,7 +33,7 @@ export const FlexLiGrow = styled(Li)`
   flex: 1;
 `;
 
-interface IFlexRowDynamic extends I_Bold, I__Faded, I_Italic, I_Theme {
+interface IFlexRowDynamic extends I_Bold, I__Faded, I_Italic, ThemeProp {
   alignItems?: "top" | "baseline" | "center";
   svgCss?: FlattenSimpleInterpolation;
 }
@@ -47,41 +47,31 @@ export const FlexRowDynamic = styled(FlexRow)(
     italic,
     theme: { fadedOpacity }
   }: IFlexRowDynamic) => css`
-    ${
-      svgCss &&
-      css`
-        svg {
-          ${svgCss};
-        }
-      `
-    }
-    ${
-      faded &&
-      css`
-        opacity: ${fadedOpacity};
-      `
-    }
-    ${
-      alignItems &&
-      css`
-        align-items: ${alignItems};
-      `
-    }
-    ${
-      bold &&
-      css`
-        * {
-          font-weight: bold;
-        }
-      `
-    }
-    ${
-      italic &&
-      css`
-        * {
-          font-style: italic;
-        }
-      `
-    }
+    ${svgCss &&
+    css`
+      svg {
+        ${svgCss};
+      }
+    `}
+    ${faded &&
+    css`
+      opacity: ${fadedOpacity};
+    `}
+    ${alignItems &&
+    css`
+      align-items: ${alignItems};
+    `}
+    ${bold &&
+    css`
+      * {
+        font-weight: bold;
+      }
+    `}
+    ${italic &&
+    css`
+      * {
+        font-style: italic;
+      }
+    `}
   `
 );

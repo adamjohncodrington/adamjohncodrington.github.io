@@ -5,6 +5,7 @@ import {
   RECIPE_METHOD_ENTRIES
 } from "@constants";
 import { PHOTOS } from "resources";
+import { Photo } from "types";
 import { calculateRecipeCost } from "utils";
 
 const { preheatOven } = RECIPE_METHOD_ENTRIES;
@@ -64,7 +65,7 @@ const method: string[] = [
 
 const title: string = "Crispy Kale";
 const diet: RecipeDiet = DIETS.VEGAN;
-const photo: IPhoto = PHOTOS.RECIPES.KALE_CRISPY;
+const photo: Photo = PHOTOS.RECIPES.KALE_CRISPY;
 const makes: IRecipeMakes = { quantity: 2, measurement: MEASUREMENTS.SERVING };
 
 const totalCost: number = calculateRecipeCost(ingredients, title);

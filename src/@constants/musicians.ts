@@ -1,3 +1,5 @@
+import { Musician } from "types";
+
 export const _100_GECS: Musician = { name: "100 gecs" };
 export const AURORA: Musician = { name: "Aurora" };
 export const ACADEMY_IS_THE: Musician = { name: "Academy Is..., The" };

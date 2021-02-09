@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 import { SVG } from "resources";
 import { COLORS } from "styles";
 
-interface IStyledSymbol extends SymbolProps, I_Theme {}
+type StyledSymbolProps = SymbolProps & ThemeProp;
 
 const { GRAY_LIGHT } = COLORS;
 
@@ -18,7 +18,7 @@ const StyledSymbol = styled.div(
       boxShadow,
       symbol: { fontSize, iconSize, size, textColor }
     }
-  }: IStyledSymbol) => css`
+  }: StyledSymbolProps) => css`
     background: ${background} center;
 
     background-size: ${size} ${size};
@@ -47,6 +47,7 @@ export const Symbol: FC<SymbolProps> = props => {
   const {
     contents: { text, icon }
   } = props;
+
   return (
     <StyledSymbol {...props}>
       {icon === "photo" ? (

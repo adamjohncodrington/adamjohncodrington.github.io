@@ -10,3 +10,5 @@ export const APPLE_MUSIC_URL_PREFIX: string =
 export const FREE_IMAGE_HOST_URL_PREFIX: string = "https://iili.io/";
 
 export const INCLUDE_VINYL_WISH_LIST_BACKLOG: boolean = false;
+
+export const SFW_MODE: boolean = true;

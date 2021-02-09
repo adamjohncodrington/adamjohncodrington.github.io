@@ -32,7 +32,7 @@ const BUCKET_LIST_COUNTRIES: MiniCardProps[] = bucketListCountries.map(
 
 const bucketListCities: ICityCounted[] = Object.values(cities)
   .map(
-    (city: ICity): ICityCounted => ({
+    (city: City): ICityCounted => ({
       ...city,
       ...getItemCounts({ item: { city }, data: { tripLegs: DATA } })
     })

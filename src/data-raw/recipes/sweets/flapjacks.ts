@@ -5,6 +5,7 @@ import {
   RECIPE_METHOD_ENTRIES
 } from "@constants";
 import { PHOTOS } from "resources";
+import { Photo } from "types";
 import { calculateRecipeCost } from "utils";
 
 const { preheatOven } = RECIPE_METHOD_ENTRIES;
@@ -67,7 +68,7 @@ const method: string[] = [
 const title: string = "Flapjacks";
 const makes: IRecipeMakes = { quantity: 12, measurement: MEASUREMENTS.CHUNK };
 const diet: RecipeDiet = DIETS.VEGAN;
-const photo: IPhoto = PHOTOS.RECIPES.FLAPJACKS;
+const photo: Photo = PHOTOS.RECIPES.FLAPJACKS;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;

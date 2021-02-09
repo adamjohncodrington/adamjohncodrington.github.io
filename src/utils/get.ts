@@ -1,3 +1,5 @@
+import { Musician } from "types";
+
 import { arrayToString, moveTheSuffixToPrefix } from "./basic";
 
 interface IGetMusicianStageNameAtTime {

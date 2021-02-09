@@ -1,27 +1,6 @@
 type ITicketType = string;
 type ISvgIcon = React.FC<React.SVGProps<SVGSVGElement>>;
 
-interface IPerson extends I_Name {
-  initials: string;
-}
-
-interface Friend extends IPerson {
-  gigs?: boolean;
-  travel?: boolean;
-  theatre?: boolean;
-}
-
-//TODO: make date prop and title for alt purposes
-interface IPhoto extends I__Hide, I__Date {
-  href?: string;
-  title?: string;
-  freeimagehostId: string;
-}
-
-interface IAlbumPhoto extends IPhoto {
-  discPhoto?: IPhoto;
-}
-
 interface I_OrientationQuality {
   orientation: "portrait" | "landscape";
   quality: "720p" | "1080p";
@@ -55,17 +34,6 @@ interface TheatreVisit extends I_Date, I__Favourite, I_Company {
   cast?: Actor[];
 }
 
-interface I_AlbumPhoto {
-  photo: IAlbumPhoto;
-}
-
-interface IAlbum extends I_AlbumPhoto {
-  musician: Musician;
-  title: string;
-  year: number;
-  appleMusicId: string;
-}
-
 interface IHeadline extends I__Faded {
   text: string;
   subText?: string;
@@ -90,24 +58,7 @@ interface SymbolProps extends I_Background, I__Border, I__BorderRadius {
   };
 }
 
-interface Retailer extends I_Name {
-  online: boolean;
-  branch?: string;
-}
-
-interface I_CostExcDelivery {
-  costExcDelivery: number;
-}
-
-interface IVinylExtraCopy extends I_AlbumPhoto, I_Colors, I_CostExcDelivery {}
-
-interface Vinyl extends IAlbum, I_Colors, I_CostExcDelivery, I_Signed {
-  retailer: Retailer;
-  gift?: IGift;
-  sides: 2 | 4;
-  inches: 7 | 10 | 12;
-  extraCopy?: IVinylExtraCopy;
-}
+interface I_CostExcDelivery {}
 
 interface LocationProps
   extends I_Name,

@@ -1,189 +1,189 @@
-interface ICity extends LocationProps {
+interface City extends LocationProps {
   capital?: boolean;
 }
 
-interface ICityCounted extends ICity, I_PastFutureCounts {}
+interface ICityCounted extends City, I_PastFutureCounts {}
 
 interface ICitiesArgentina {
-  BUENOS_AIRES: ICity;
+  BUENOS_AIRES: City;
 }
 
 interface ICitiesAustria {
-  VIENNA: ICity;
+  VIENNA: City;
 }
 
 interface ICitiesBeligum {
-  BRUGES: ICity;
-  YPRES: ICity;
+  BRUGES: City;
+  YPRES: City;
 }
 
 interface ICitiesBelize {
-  BELIZE_CITY: ICity;
+  BELIZE_CITY: City;
 }
 
 interface ICitiesBrazil {
-  RIO_DE_JANEIRO: ICity;
+  RIO_DE_JANEIRO: City;
 }
 
 interface ICitiesCanada {
-  NIAGARA_FALLS: ICity;
-  TORONTO: ICity;
+  NIAGARA_FALLS: City;
+  TORONTO: City;
 }
 
 interface ICitiesCostaRica {
-  SAN_JOSE: ICity;
+  SAN_JOSE: City;
 }
 
 interface ICitiesCroatia {
-  DUBROVNIK: ICity;
+  DUBROVNIK: City;
 }
 
 interface ICitiesCuba {
-  HAVANA: ICity;
+  HAVANA: City;
 }
 
 interface ICitiesCyprus {
-  PAPHOS: ICity;
+  PAPHOS: City;
 }
 
 interface ICitiesCzechRepublic {
-  PRAGUE: ICity;
+  PRAGUE: City;
 }
 
 interface ICitiesDenmark {
-  COPENHAGEN: ICity;
+  COPENHAGEN: City;
 }
 
 interface ICitiesEcuador {
-  BANOS: ICity;
-  GUAYAQUIL: ICity;
-  OTAVALO: ICity;
-  QUITO: ICity;
+  BANOS: City;
+  GUAYAQUIL: City;
+  OTAVALO: City;
+  QUITO: City;
 }
 
 interface ICitiesEgypt {
-  CAIRO: ICity;
-  SHARM_EL_SHEIKH: ICity;
+  CAIRO: City;
+  SHARM_EL_SHEIKH: City;
 }
 
 interface ICitiesFrance {
-  MONACO: ICity;
-  NICE: ICity;
-  PARIS: ICity;
+  MONACO: City;
+  NICE: City;
+  PARIS: City;
 }
 
 interface ICitiesGermany {
-  BERLIN: ICity;
+  BERLIN: City;
 }
 
 interface ICitiesHungary {
-  BUDAPEST: ICity;
+  BUDAPEST: City;
 }
 
 interface ICitiesIreland {
-  DUBLIN: ICity;
+  DUBLIN: City;
 }
 
 interface ICitiesItaly {
-  FLORENCE: ICity;
-  NAPLES: ICity;
-  MILAN: ICity;
-  ROME: ICity;
-  VATICAN: ICity;
-  CATANIA: ICity;
-  VENICE: ICity;
-  POMPEII: ICity;
+  FLORENCE: City;
+  NAPLES: City;
+  MILAN: City;
+  ROME: City;
+  VATICAN: City;
+  CATANIA: City;
+  VENICE: City;
+  POMPEII: City;
 }
 
 interface ICitiesLaos {
-  LUANG_PRABANG: ICity;
-  VIENTIANE: ICity;
+  LUANG_PRABANG: City;
+  VIENTIANE: City;
 }
 
 interface ICitiesNetherlands {
-  AMSTERDAM: ICity;
-  GRONINGEN: ICity;
+  AMSTERDAM: City;
+  GRONINGEN: City;
 }
 
 interface ICitiesNorway {
-  OSLO: ICity;
+  OSLO: City;
 }
 
 interface ICitiesPeru {
-  AREQUIPA: ICity;
-  CUSCO: ICity;
-  LIMA: ICity;
-  HUARAZ: ICity;
+  AREQUIPA: City;
+  CUSCO: City;
+  LIMA: City;
+  HUARAZ: City;
 }
 
 interface ICitiesPoland {
-  KRAKOW: ICity;
+  KRAKOW: City;
 }
 
 interface ICitiesPortugal {
-  LISBON: ICity;
-  PORTIMAO: ICity;
-  PORTO: ICity;
+  LISBON: City;
+  PORTIMAO: City;
+  PORTO: City;
 }
 
 interface ICitiesSpain {
-  BARCELONA: ICity;
-  MADRID: ICity;
-  VALENCIA: ICity;
+  BARCELONA: City;
+  MADRID: City;
+  VALENCIA: City;
 }
 
 interface ICitiesSweden {
-  STOCKHOLM: ICity;
+  STOCKHOLM: City;
 }
 
 interface ICitiesThailand {
-  BANGKOK: ICity;
-  CHIANG_MAI: ICity;
-  CHIANG_RAI: ICity;
+  BANGKOK: City;
+  CHIANG_MAI: City;
+  CHIANG_RAI: City;
 }
 
 interface ICitiesUganda {
-  JINJA: ICity;
+  JINJA: City;
 }
 
 interface ICitiesUAE {
-  DUBAI: ICity;
+  DUBAI: City;
 }
 
 interface ICitiesUK {
-  BATH: ICity;
-  BLACKPOOL: ICity;
-  BRIGHTON: ICity;
-  BRISTOL: ICity;
-  BIRMINGHAM: ICity;
-  CAMBRIDGE: ICity;
-  COVENTRY: ICity;
-  DERBY: ICity;
-  EDINBURGH: ICity;
-  HULL: ICity;
-  LEEDS: ICity;
-  LEICESTER: ICity;
-  LINCOLN: ICity;
-  LONDON: ICity;
-  LIVERPOOL: ICity;
-  MANCHESTER: ICity;
-  NEWCASTLE: ICity;
-  NORWICH: ICity;
-  NOTTINGHAM: ICity;
-  OXFORD: ICity;
-  SHEFFIELD: ICity;
-  WOLVERHAMPTON: ICity;
-  YORK: ICity;
+  BATH: City;
+  BLACKPOOL: City;
+  BRIGHTON: City;
+  BRISTOL: City;
+  BIRMINGHAM: City;
+  CAMBRIDGE: City;
+  COVENTRY: City;
+  DERBY: City;
+  EDINBURGH: City;
+  HULL: City;
+  LEEDS: City;
+  LEICESTER: City;
+  LINCOLN: City;
+  LONDON: City;
+  LIVERPOOL: City;
+  MANCHESTER: City;
+  NEWCASTLE: City;
+  NORWICH: City;
+  NOTTINGHAM: City;
+  OXFORD: City;
+  SHEFFIELD: City;
+  WOLVERHAMPTON: City;
+  YORK: City;
 }
 
 interface ICitiesUSA {
-  BOSTON_MASSACHUSETTS: ICity;
-  KEY_WEST: ICity;
-  LAS_VEGAS: ICity;
-  VIRGINIA_BEACH: ICity;
-  LOS_ANGELES: ICity;
-  NEW_YORK_CITY: ICity;
-  SAN_FRANCISCO: ICity;
-  SPRINGFIELD_MASSACHUSETTS: ICity;
-  WASHINGTON_DC: ICity;
+  BOSTON_MASSACHUSETTS: City;
+  KEY_WEST: City;
+  LAS_VEGAS: City;
+  VIRGINIA_BEACH: City;
+  LOS_ANGELES: City;
+  NEW_YORK_CITY: City;
+  SAN_FRANCISCO: City;
+  SPRINGFIELD_MASSACHUSETTS: City;
+  WASHINGTON_DC: City;
 }

@@ -1,5 +1,6 @@
 import { FRIENDS as friends } from "@constants";
 import { MUSIC_EVENTS as DATA } from "data-raw";
+import { Friend } from "types";
 import { getItemCounts } from "utils";
 
 const getFriendMatches = (friend: Friend): MusicEvent[] =>

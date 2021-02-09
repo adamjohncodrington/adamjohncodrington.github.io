@@ -5,6 +5,7 @@ import {
   RECIPE_METHOD_ENTRIES
 } from "@constants";
 import { PHOTOS } from "resources";
+import { Photo } from "types";
 import { calculateRecipeCost } from "utils";
 
 const {
@@ -106,7 +107,7 @@ const method: string[] = [
 const title: string = "Banana Cake";
 const makes: IRecipeMakes = { quantity: 10, measurement: MEASUREMENTS.SLICE };
 const diet: RecipeDiet = DIETS.VEGAN;
-const photo: IPhoto = PHOTOS.RECIPES.BANANA_CAKE;
+const photo: Photo = PHOTOS.RECIPES.BANANA_CAKE;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;

@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 import { Ul, Li, FlexRow } from "primitives";
 import { UNICODE } from "@constants";
 
-interface IStyledLi extends I_Theme {
+interface IStyledLi extends ThemeProp {
   addPaddingTop?: boolean;
 }
 

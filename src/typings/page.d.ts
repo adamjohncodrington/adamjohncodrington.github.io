@@ -16,7 +16,7 @@ interface IPageSectionItemDataTypes {
   theatreVisits?: TheatreVisit[];
   tripLegs?: TripLeg[];
   travelVideos?: ITravelVideo[];
-  vinyls?: IAlbum[];
+  vinyls?: Album[];
   festivals?: Festival[];
   gigs?: Gig[];
 }

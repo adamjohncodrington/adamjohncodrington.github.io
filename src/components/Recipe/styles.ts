@@ -8,7 +8,7 @@ export const RecipeTitle = styled(H3)`
 `;
 
 export const RecipePanelContainer = styled.div(
-  ({ theme: { recipe } }: I_Theme) => css`
+  ({ theme: { recipe } }: ThemeProp) => css`
     margin-top: ${recipe.panel.padding.top};
 
     > * {
@@ -22,7 +22,7 @@ export const RecipeCostsContainer = styled(FlexColumn)`
 `;
 
 export const RecipePortionCost = styled.span(
-  ({ theme: { recipe } }: I_Theme) => css`
+  ({ theme: { recipe } }: ThemeProp) => css`
     margin-top: ${recipe.portionCost.margin.top};
     ${CSS.FONT_SIZE_75_PERCENT}
   `

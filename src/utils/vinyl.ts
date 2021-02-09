@@ -1,4 +1,5 @@
 import { COLORS } from "styles";
+import { VinylColor } from "types";
 
-export const vinylColorIsSpecial = (colors: string[]): boolean =>
-  colors[0] !== COLORS.BLACK || colors.length > 1;
+export const vinylColorIsSpecial = (color: VinylColor): boolean =>
+  color !== COLORS.BLACK;

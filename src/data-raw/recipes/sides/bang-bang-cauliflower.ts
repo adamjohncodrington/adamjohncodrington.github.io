@@ -5,6 +5,7 @@ import {
   RECIPE_METHOD_ENTRIES
 } from "@constants";
 import { PHOTOS } from "resources";
+import { Photo } from "types";
 import { calculateRecipeCost } from "utils";
 
 const { preheatOven } = RECIPE_METHOD_ENTRIES;
@@ -87,7 +88,7 @@ const serveWith: IServeWithItem[][] = [
 const title: string = "Bang Bang Cauliflower";
 const makes: IRecipeMakes = { quantity: 2, measurement: MEASUREMENTS.PORTION };
 const diet: RecipeDiet = DIETS.VEGAN;
-const photo: IPhoto = PHOTOS.RECIPES.BANG_BANG_CAULI;
+const photo: Photo = PHOTOS.RECIPES.BANG_BANG_CAULI;
 
 const totalCost: number = calculateRecipeCost(ingredients, title);
 const portionCost: number = totalCost / makes.quantity;

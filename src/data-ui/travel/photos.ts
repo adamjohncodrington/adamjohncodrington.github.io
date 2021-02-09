@@ -1,3 +1,4 @@
 import { PHOTOS as photos } from "resources";
+import { Photo } from "types";
 
-export const PHOTOS: IPhoto[] = Object.values(photos.TRAVEL).flat();
+export const PHOTOS: Photo[] = Object.values(photos.TRAVEL).flat();

@@ -105,6 +105,6 @@ interface ITheme {
   scrollbarSize: IScrollbarSize;
 }
 
-interface I_Theme {
+interface ThemeProp {
   theme: ITheme;
 }

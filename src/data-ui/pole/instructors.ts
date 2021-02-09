@@ -1,12 +1,15 @@
 import { INSTRUCTORS as instructors } from "@constants";
 import { POLE_ROUTINES, POLE_TRICKS_VIDEOS } from "data-raw";
+import { FitnessInstructor } from "types";
 
 import {
   mapPoleRoutineToMiniCardDetail,
   mapPoleTricksVideoToMiniCardDetail
 } from "./utils";
 
-const getRoutinesForInstructor = (instructor: PoleInstructor): PoleRoutine[] =>
+const getRoutinesForInstructor = (
+  instructor: FitnessInstructor
+): PoleRoutine[] =>
   POLE_ROUTINES.reduce(
     (matches: PoleRoutine[], routine: PoleRoutine): PoleRoutine[] =>
       routine.choreographer === instructor ? [...matches, routine] : matches,
@@ -14,7 +17,7 @@ const getRoutinesForInstructor = (instructor: PoleInstructor): PoleRoutine[] =>
   );
 
 const getTricksVideosForInstructor = (
-  instructor: PoleInstructor
+  instructor: FitnessInstructor
 ): PoleTricksVideo[] =>
   POLE_TRICKS_VIDEOS.reduce(
     (
@@ -28,7 +31,7 @@ const getTricksVideosForInstructor = (
   );
 
 const getInstructorDetails = (
-  instructor: PoleInstructor
+  instructor: FitnessInstructor
 ): MiniCardPanelDetailProps[] => [
   ...getRoutinesForInstructor(instructor).map(
     (poleRoutine: PoleRoutine): MiniCardPanelDetailProps =>
@@ -41,7 +44,7 @@ const getInstructorDetails = (
 ];
 
 export const INSTRUCTORS: MiniCardProps[] = Object.values(instructors).map(
-  (instructor: PoleInstructor): MiniCardProps => {
+  (instructor: FitnessInstructor): MiniCardProps => {
     const { name, stageName } = instructor;
     const details: MiniCardPanelDetailProps[] = getInstructorDetails(
       instructor

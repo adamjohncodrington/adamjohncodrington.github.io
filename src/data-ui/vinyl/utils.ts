@@ -1,4 +1,5 @@
 import { APPLE_MUSIC_URL_PREFIX } from "config";
+import { Photo, Vinyl } from "types";
 import {
   getMusicianStageNameAtTime,
   moveTheSuffixToPrefix,
@@ -6,7 +7,7 @@ import {
   getSymbols
 } from "utils";
 
-interface IOptions {
+interface Options1 {
   hideYear?: boolean;
   hideSignedIcon?: boolean;
   hideColorSymbol?: boolean;
@@ -14,23 +15,27 @@ interface IOptions {
   showGiftFrom?: boolean;
 }
 
-const getAlbumPhotoTitle = ({ musician, year, title }: IAlbum): string => {
+const getVinylPhotoTitle = ({ musician, year, title }: Vinyl): string => {
   return `${moveTheSuffixToPrefix(
     getMusicianStageNameAtTime({ musician, year })
   )} • ${title}`;
 };
 
-export const mapAlbumToPhoto = (album: IAlbum): IPhoto => {
-  const { photo, appleMusicId } = album;
+export const mapVinylToPhoto = (vinyl: Vinyl): Photo => {
+  const { artwork, appleMusicId } = vinyl;
   return {
-    ...photo,
+    ...artwork,
     href: APPLE_MUSIC_URL_PREFIX + appleMusicId,
-    title: getAlbumPhotoTitle(album)
+    title: getVinylPhotoTitle(vinyl)
   };
 };
 
-const mapAlbumToCard = (album: IAlbum, options?: IOptions): CardProps => {
-  const { title, musician, year } = album;
+const mapVinylToCard = (vinyl: Vinyl, options?: Options1): CardProps => {
+  const { signed, gift, title, musician, year } = vinyl;
+  const hideSignedIcon: boolean = !!(options && options.hideSignedIcon);
+  const hideColorSymbol: boolean = !!(options && options.hideColorSymbol);
+  const hideGiftSymbol: boolean = !!(options && options.hideGiftSymbol);
+  const showGiftFrom: boolean = !!(options && options.showGiftFrom);
   const hideYear: boolean = !!(options && options.hideYear);
   return {
     title,
@@ -38,18 +43,7 @@ const mapAlbumToCard = (album: IAlbum, options?: IOptions): CardProps => {
     sort: [year],
     subtitle: getMusicianStageNameAtTime({ musician, year }),
     body: hideYear ? undefined : year.toString(),
-    headerPhoto: mapAlbumToPhoto(album)
-  };
-};
-
-const mapVinylToCard = (vinyl: Vinyl, options?: IOptions): CardProps => {
-  const { signed, gift } = vinyl;
-  const hideSignedIcon: boolean = !!(options && options.hideSignedIcon);
-  const hideColorSymbol: boolean = !!(options && options.hideColorSymbol);
-  const hideGiftSymbol: boolean = !!(options && options.hideGiftSymbol);
-  const showGiftFrom: boolean = !!(options && options.showGiftFrom);
-  return {
-    ...mapAlbumToCard(vinyl, options),
+    headerPhoto: mapVinylToPhoto(vinyl),
     symbols: getSymbols({
       company: !!gift && showGiftFrom ? [gift.from] : undefined,
       gift: hideGiftSymbol ? undefined : gift,
@@ -59,26 +53,20 @@ const mapVinylToCard = (vinyl: Vinyl, options?: IOptions): CardProps => {
   };
 };
 
-export const mapAlbumsToCards = (
-  albums: IAlbum[],
-  options?: IOptions
-): CardProps[] =>
-  albums.map((album: IAlbum): CardProps => mapAlbumToCard(album, options));
-
 export const mapVinylsToCards = (
   vinyls: Vinyl[],
-  options?: IOptions
+  options?: Options1
 ): CardProps[] =>
   vinyls.map((vinyl: Vinyl): CardProps => mapVinylToCard(vinyl, options));
 
-interface IOptions2 {
+interface Options2 {
   showMusicianName: boolean;
   showCost?: boolean;
 }
 
 export const mapVinylsToMiniCardPanelDetails = (
   vinyls: Vinyl[],
-  { showMusicianName, showCost = false }: IOptions2
+  { showMusicianName, showCost = false }: Options2
 ): MiniCardPanelDetailProps[] => {
   const mapVinylToMiniCardPanelDetail = ({
     year,

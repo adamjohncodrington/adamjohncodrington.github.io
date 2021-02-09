@@ -1,5 +1,6 @@
 import { FESTIVAL_TITLES as festivals } from "@constants";
 import { FESTIVALS as DATA } from "data-raw";
+import { Musician } from "types";
 import { getItemCounts, getFestivalSubtitle } from "utils";
 
 const getFestivalMatches = (festivalTitle: FestivalTitle): Festival[] =>

@@ -1,5 +1,6 @@
 import { MUSICIANS as musicians } from "@constants";
 import { MUSIC_EVENTS as DATA } from "data-raw";
+import { Musician } from "types";
 import { getItemCounts, detailsContainsFavourite } from "utils";
 
 const getMusicianMatches = (musician: Musician): MusicEvent[] =>

@@ -11,7 +11,7 @@ const StyledNav = styled.nav(
     theme: {
       navBar: { background, height }
     }
-  }: I_Theme) => css`
+  }: ThemeProp) => css`
     height: ${height};
     background: ${background};
     ${CSS.GRID_COLUMN_EQUAL_WIDTHS};
@@ -31,7 +31,7 @@ const StyledRouterNavLink = styled(RouterNavLink)(
         icon: { size }
       }
     }
-  }: I_Theme) => css`
+  }: ThemeProp) => css`
     border-radius: ${borderRadius};
     display: flex;
     justify-content: center;

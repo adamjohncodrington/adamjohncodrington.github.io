@@ -8,7 +8,7 @@ export const CardDisclaimer = styled.div`
 `;
 
 export const CardTextContainer = styled(FlexColumn)(
-  ({ theme: { card } }: I_Theme) => css`
+  ({ theme: { card } }: ThemeProp) => css`
     > *:not(:first-child) {
       margin-top: ${card.notFirstChild.margin.top};
     }
@@ -24,7 +24,7 @@ export const CardSymbolsContainer = styled(FlexRow)(
     theme: {
       symbol: { spaceBetweenSymbols }
     }
-  }: I_Theme) => css`
+  }: ThemeProp) => css`
     margin-top: 0.125rem;
 
     flex-wrap: wrap;
@@ -43,7 +43,7 @@ export const StyledArrowContainer = styled.div(
     theme: {
       symbol: { size }
     }
-  }: I_Theme) => css`
+  }: ThemeProp) => css`
     display: flex;
     align-items: center;
     height: ${size};

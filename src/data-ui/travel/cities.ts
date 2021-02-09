@@ -2,7 +2,7 @@ import { COUNTRIES } from "@constants";
 import { TRIP_LEGS as DATA } from "data-raw";
 import { getItemCounts } from "utils";
 
-const generateCities = (): { [city: string]: ICity } => {
+const generateCities = (): { [city: string]: City } => {
   let cities = {};
   Object.values(COUNTRIES).forEach((country: ICountryTemplate): void => {
     if (country.cities) cities = { ...cities, ...country.cities };
@@ -13,7 +13,7 @@ const generateCities = (): { [city: string]: ICity } => {
 export const cities = generateCities();
 
 export const CITIES: MiniCardProps[] = Object.values(cities).map(
-  (city: ICity): MiniCardProps => {
+  (city: City): MiniCardProps => {
     const { name, capital, insignificant } = city;
     const {
       pastCount: primaryCount,

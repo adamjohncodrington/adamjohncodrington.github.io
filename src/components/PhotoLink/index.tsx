@@ -8,6 +8,6 @@ interface IPhotoLink extends I_Photo {
 
 export const PhotoLink: FC<IPhotoLink> = ({ photo, size = "100%" }) => {
   const { href } = photo;
-  const Photo: ReactElement = <SquareImage size={size} photo={photo} />;
-  return href ? <Link href={href}>{Photo}</Link> : Photo;
+  const Image: ReactElement = <SquareImage size={size} photo={photo} />;
+  return href ? <Link href={href}>{Image}</Link> : Image;
 };

@@ -1,8 +1,10 @@
 import React from "react";
 import styled, { css } from "styled-components";
-import { FREE_IMAGE_HOST_URL_PREFIX } from "config";
 
-interface IStyledImage extends I_Theme {
+import { FREE_IMAGE_HOST_URL_PREFIX } from "config";
+import { Photo } from "types";
+
+interface IStyledImage extends ThemeProp {
   size: string;
   circle: boolean;
 }
@@ -25,7 +27,7 @@ const StyledImage = styled.img(
 interface ISquareImage {
   className?: string;
   dataTest?: string;
-  photo: IPhoto;
+  photo: Photo;
   circle?: boolean;
   size: string;
 }

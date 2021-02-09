@@ -5,7 +5,7 @@ interface CardProps extends I__Photos, I_Sort, I__Favourite, I__Video {
   secondaryBody?: string;
   disclaimer?: string;
 
-  headerPhoto?: IPhoto;
+  headerPhoto?: Photo;
   symbols?: SymbolProps[];
   year: number;
 }

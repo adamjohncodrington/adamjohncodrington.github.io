@@ -12,14 +12,14 @@ export const StyledPrimaryTextContainer = styled(FlexRow)`
 `;
 
 export const StyledPrimaryAltText = styled.span(
-  ({ theme: { fadedOpacity } }: I_Theme) => css`
+  ({ theme: { fadedOpacity } }: ThemeProp) => css`
     opacity: ${fadedOpacity};
     margin-left: 0.3125rem;
     font-size: 75%;
   `
 );
 
-interface IStyledPrimaryText extends I_Theme, I__Favourite, I_Bold, I__Star {}
+interface IStyledPrimaryText extends ThemeProp, I__Favourite, I_Bold, I__Star {}
 
 export const StyledPrimaryText = styled.span(
   ({
@@ -35,7 +35,7 @@ export const StyledPrimaryText = styled.span(
   `
 );
 
-interface IMiniCardCount extends I_Theme, I_Bold {
+interface IMiniCardCount extends ThemeProp, I_Bold {
   greaterCountPadding?: boolean;
 }
 
@@ -54,7 +54,7 @@ export const StyledPrimaryCount = styled.span(
 );
 
 export const StyledSecondaryCount = styled(StyledPrimaryCount)(
-  ({ theme: { fadedOpacity } }: I_Theme) => css`
+  ({ theme: { fadedOpacity } }: ThemeProp) => css`
     opacity: ${fadedOpacity};
   `
 );
@@ -71,7 +71,7 @@ export const StyledOl = styled.ol`
   }
 `;
 
-interface IStyledLi extends I_Theme {
+interface IStyledLi extends ThemeProp {
   isInFuture: boolean;
 }
 

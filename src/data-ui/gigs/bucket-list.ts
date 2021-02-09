@@ -1,12 +1,13 @@
 import { MUSICIANS } from "@constants";
 import { MUSIC_EVENTS as DATA } from "data-raw";
+import { Musician } from "types";
 import { getItemCounts } from "utils";
 
-interface IMusicianCounted extends Musician, I_PastFutureCounts {}
+type MusicianCounted = Musician & I_PastFutureCounts;
 
 const musiciansForBucketList = Object.values(MUSICIANS)
   .map(
-    (musician: Musician): IMusicianCounted => ({
+    (musician: Musician): MusicianCounted => ({
       ...musician,
       ...getItemCounts({ item: { musician }, data: { musicEvents: DATA } })
     })
@@ -17,7 +18,7 @@ const musiciansForBucketList = Object.values(MUSICIANS)
       futureCount,
       noLongerExists,
       excludeFromBucketList
-    }: IMusicianCounted): boolean =>
+    }: MusicianCounted): boolean =>
       pastCount === 0 &&
       futureCount === 0 &&
       !noLongerExists &&
@@ -25,7 +26,7 @@ const musiciansForBucketList = Object.values(MUSICIANS)
   );
 
 export const BUCKET_LIST: MiniCardProps[] = musiciansForBucketList.map(
-  ({ name, favourite }: IMusicianCounted): MiniCardProps => ({
+  ({ name, favourite }: MusicianCounted): MiniCardProps => ({
     sort: [name],
     primaryText: name,
     favourite

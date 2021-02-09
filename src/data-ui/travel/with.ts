@@ -1,8 +1,9 @@
 import { FRIENDS as friends } from "@constants";
 import { TRIP_LEGS as DATA } from "data-raw";
+import { Friend, Person } from "types";
 import { getItemCounts, getTripTitle } from "utils";
 
-const getTripsMatchingFriend = (friend: Friend): TripLeg[] => {
+const getTripsMatchingFriend = (friend: Person): TripLeg[] => {
   const tripsMatchingFriend: TripLeg[] = [];
   const tripLegs: TripLeg[] = DATA;
   tripLegs.forEach((trip: TripLeg): void => {
@@ -11,7 +12,7 @@ const getTripsMatchingFriend = (friend: Friend): TripLeg[] => {
   return tripsMatchingFriend;
 };
 
-const getFriendDetails = (friend: Friend): MiniCardPanelDetailProps[] => {
+const getFriendDetails = (friend: Person): MiniCardPanelDetailProps[] => {
   const tripsMatchingFriend: TripLeg[] = getTripsMatchingFriend(friend);
   return tripsMatchingFriend.map(
     (trip: TripLeg): MiniCardPanelDetailProps => {

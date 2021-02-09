@@ -40,7 +40,7 @@ interface IRecipeMakes {
 interface IRecipe extends I__Favourite, I__Hide {
   title: string;
   makes?: IRecipeMakes;
-  photo?: IPhoto;
+  photo?: Photo;
   ingredients: IRecipeIngredient[][];
   serveWith?: IServeWithItem[][];
   diet: RecipeDiet;

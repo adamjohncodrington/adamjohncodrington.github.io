@@ -1,3 +1,5 @@
+import { Friend } from "types";
+
 // Organisations
 export const CFS: Friend = { name: "Colonel Frank Seely", initials: "CFS" };
 export const JHC: Friend = { name: "JHC", initials: "JHC" };

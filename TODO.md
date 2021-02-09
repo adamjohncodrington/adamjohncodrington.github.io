@@ -18,7 +18,7 @@
 ## Priorities
 
 - make festival dates prop `start/end`???
-- add compulsory `date` prop to `IPhoto`
+- add compulsory `date` prop to `Photo`
 - remove hidden recipes from group higher up in the app
 - add symbols to vinyl cards to indicate color and side count
 - convert all `travel` data to use `IStartEndDate`???????

@@ -12,7 +12,7 @@ const PageSectionContainer = styled.section(
       borderRadius,
       pageSection: { background, padding, margin }
     }
-  }: I_Theme) => css`
+  }: ThemeProp) => css`
     background: ${background};
     box-shadow: ${boxShadow.light};
     border-radius: ${borderRadius};

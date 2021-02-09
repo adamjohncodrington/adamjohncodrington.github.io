@@ -1,10 +1,6 @@
-import {
-  COLORS,
-  getTwoColorDiagonal,
-  BORDER_HALF_PX_SOLID_GREY,
-  getBackgoundImageUrl
-} from "styles";
 import { SYMBOLS } from "@constants";
+import { COLORS, BORDER_HALF_PX_SOLID_GREY } from "styles";
+import { Person, Gift, Vinyl, VinylColor } from "types";
 
 import { isInFuture } from "./basic";
 import { daysToGo } from "./daysToGo";
@@ -12,61 +8,49 @@ import { vinylColorIsSpecial } from "./vinyl";
 
 const { BLACK, GRAY_DARK } = COLORS;
 
-const sortCompany = (company: IPerson[]): Friend[] =>
-  company.sort((a: Friend, b: Friend): number =>
+const sortCompany = (company: Person[]): Person[] =>
+  company.sort((a: Person, b: Person): number =>
     a.initials.localeCompare(b.initials)
   );
 
-const getCompanySymbols = (company: IPerson[]): SymbolProps[] =>
+const getCompanySymbols = (company: Person[]): SymbolProps[] =>
   sortCompany(company).map(
-    ({ initials }: Friend): SymbolProps => ({
+    ({ initials }: Person): SymbolProps => ({
       background: GRAY_DARK,
       contents: { text: initials }
     })
   );
 
-const getVinylSymbolBackground = ({
-  colors,
-  photo: { discPhoto }
-}: IVinylExtraCopy): string => {
-  const photoBackground: string | undefined = !!discPhoto
-    ? getBackgoundImageUrl(discPhoto)
-    : undefined;
-
-  return !!photoBackground
-    ? photoBackground
-    : colors.length > 1
-    ? getTwoColorDiagonal(colors[0], colors[1])
-    : colors[0];
+const getVinylSymbolBackground = (color: VinylColor): string => {
+  return "";
+  // color.photo ?
+  // const photoBackground: string | undefined = color.photo ?
+  //   ? getBackgoundImageUrl(discPhoto)
+  //   : undefined;
+  // return !!photoBackground
+  //   ? photoBackground
+  //   : color.length > 1
+  //   ? getTwoColorDiagonal(color[0], color[1])
+  //   : color;
 };
 
-interface IGetSymbols
-  extends I__Company,
-    I__Date,
-    I__Signed,
-    I__Photos,
-    I__Gift,
-    I__Video {
-  poleCategory?: IPoleCategory;
-  vinyl?: Vinyl;
-}
+type GetSymbols = I__Date &
+  I__Signed &
+  I__Photos &
+  I__Video & {
+    company?: Person[];
+    gift?: Gift;
+    poleCategory?: IPoleCategory;
+    vinyl?: Vinyl;
+  };
 
-// const generateVinylColorSymbol = ()
-
-const addVinylColorSymbol = (
-  colors: string[],
-  vinyl: IVinylExtraCopy,
-  symbols: SymbolProps[]
-): void => {
-  if (vinylColorIsSpecial(colors))
-    symbols.push({
-      background: getVinylSymbolBackground(vinyl),
-      border: colors[0] === COLORS.CLEAR ? BORDER_HALF_PX_SOLID_GREY : "none",
-      borderRadius: "50%",
-      svgFill: BLACK,
-      contents: {}
-    });
-};
+const getVinylColorSymbol = (color: VinylColor): SymbolProps => ({
+  background: getVinylSymbolBackground(color),
+  border: color === COLORS.CLEAR ? BORDER_HALF_PX_SOLID_GREY : "none",
+  borderRadius: "50%",
+  svgFill: BLACK,
+  contents: {}
+});
 
 export const getSymbols = ({
   vinyl,
@@ -77,14 +61,12 @@ export const getSymbols = ({
   gift,
   poleCategory,
   video
-}: IGetSymbols): SymbolProps[] => {
+}: GetSymbols): SymbolProps[] => {
   let symbols: SymbolProps[] = [];
 
   if (vinyl) {
-    const { colors, extraCopy } = vinyl;
-
-    addVinylColorSymbol(colors, vinyl, symbols);
-    if (extraCopy) addVinylColorSymbol(extraCopy.colors, extraCopy, symbols);
+    const { color } = vinyl;
+    if (vinylColorIsSpecial(color)) symbols.push(getVinylColorSymbol(color));
   }
 
   if (company) symbols.push(...getCompanySymbols(company));

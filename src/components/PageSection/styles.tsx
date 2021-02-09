@@ -7,7 +7,7 @@ export const PageSectionTitle = styled(H2)`
 `;
 
 export const PageSectionHeaderContainer = styled(FlexRow)(
-  ({ theme: { pageSection } }: I_Theme) => css`
+  ({ theme: { pageSection } }: ThemeProp) => css`
     padding: ${pageSection.header.padding.vertical} 0;
 
     align-items: center;
@@ -19,13 +19,13 @@ export const PageSectionHeaderContainer = styled(FlexRow)(
 );
 
 export const PageSectionCount = styled.span(
-  ({ theme: { pageSection } }: I_Theme) => css`
+  ({ theme: { pageSection } }: ThemeProp) => css`
     margin-left: ${pageSection.count.margin.left};
   `
 );
 
 export const PageSectionStarredCount = styled(PageSectionCount)(
-  ({ theme: { fadedOpacity } }: I_Theme) => css`
+  ({ theme: { fadedOpacity } }: ThemeProp) => css`
     opacity: ${fadedOpacity};
   `
 );
@@ -37,7 +37,7 @@ export const PageSectionSvgContainer = styled.div(
         icon: { size }
       }
     }
-  }: I_Theme) => css`
+  }: ThemeProp) => css`
     display: flex;
     align-items: center;
 
@@ -48,7 +48,7 @@ export const PageSectionSvgContainer = styled.div(
   `
 );
 
-const CSS_COMMON = ({ theme: { pageSection } }: I_Theme) => css`
+const CSS_COMMON = ({ theme: { pageSection } }: ThemeProp) => css`
   > * {
     border-bottom: ${pageSection.panelList.border.bottom};
   }
@@ -64,7 +64,7 @@ const CSS_RECIPE_CARDS = ({
       panelList: { recipes }
     }
   }
-}: I_Theme) => css`
+}: ThemeProp) => css`
   > * {
     padding: ${recipes.padding.vertical} 0;
   }
@@ -86,7 +86,7 @@ const CSS_MINI_CARDS = ({
       panelList: { padding, miniCards }
     }
   }
-}: I_Theme) => css`
+}: ThemeProp) => css`
   padding-bottom: ${padding.bottom};
 
   > * {
@@ -102,7 +102,7 @@ const CSS_REGULAR_CARDS = ({
       panelList: { padding, cards }
     }
   }
-}: I_Theme) => css`
+}: ThemeProp) => css`
   padding-bottom: ${padding.bottom};
 
   > * {
@@ -126,7 +126,7 @@ export const PageSectionPanelList = styled(
   recipes ? CSS_RECIPE_CARDS : miniCards ? CSS_MINI_CARDS : CSS_REGULAR_CARDS
 );
 
-interface IStyledHeadline extends I_Theme, I_Faded {}
+interface IStyledHeadline extends ThemeProp, I_Faded {}
 
 export const StyledHeadlineTextContainer = styled.div(
   ({
@@ -159,7 +159,7 @@ export const StyledPhotoGridContainer = styled.div(
     theme: {
       pageSection: { margin }
     }
-  }: I_Theme) => css`
+  }: ThemeProp) => css`
     padding-bottom: ${margin.bottom};
   `
 );

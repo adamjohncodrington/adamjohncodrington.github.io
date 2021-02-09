@@ -1,3 +1,5 @@
+import { Retailer } from "types";
+
 export const NORMAN_ONLINE: Retailer = { name: "Norman Records", online: true };
 export const AMAZON: Retailer = { name: "Amazon", online: true };
 export const HIVE: Retailer = { name: "Hive", online: true };

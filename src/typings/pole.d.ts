@@ -20,19 +20,15 @@ interface IPoleVideo extends I_Video {
 }
 
 interface PoleTricksVideo extends IPoleVideo, I_StartEndDates {
-  instructor: PoleInstructor;
+  instructor: FitnessInstructor;
 }
 
 interface PoleRoutine extends IPoleVideo {
   date: Date;
   song: Song;
-  choreographer: PoleInstructor;
+  choreographer: FitnessInstructor;
 }
 
 interface IPoleRoutineOrTricksVideo extends IPoleVideo {
   date: Date;
-}
-
-interface PoleInstructor extends IPerson {
-  stageName?: string;
 }

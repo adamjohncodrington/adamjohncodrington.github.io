@@ -12,7 +12,7 @@ import {
 import { PageSection } from "../PageSection";
 
 const StyledMain = styled.main(
-  ({ theme: { navBar, pageMargin } }: I_Theme) => css`
+  ({ theme: { navBar, pageMargin } }: ThemeProp) => css`
     ${CSS.GRID_COLUMN_EQUAL_WIDTHS};
     column-gap: calc(2 * ${pageMargin});
 

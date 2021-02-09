@@ -1,7 +1,7 @@
 interface FestivalTitle extends I_Name, I__Insignificant {}
 
 interface IGigOrFestival extends I__Favourite, I_Company {
-  photos?: IPhoto[];
+  photos?: Photo[];
   venue: MusicVenue;
   ticketType?: ITicketType;
 }
@@ -36,11 +36,6 @@ interface IMusicEventPostponed extends MusicEvent {
 }
 
 interface MusicVenue extends I_Name, I__Favourite, I__Insignificant {}
-
-interface Musician extends I_Name, I__Favourite, I__ExcludeFromBucketList {
-  previousStageName?: { name: string; yearDeprecated: number };
-  noLongerExists?: boolean;
-}
 
 interface GigVideo extends IVideo {
   date: Date;
