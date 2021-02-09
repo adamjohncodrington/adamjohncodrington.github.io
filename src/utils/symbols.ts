@@ -1,12 +1,12 @@
 import { SYMBOLS } from "@constants";
-import { COLORS, BORDER_HALF_PX_SOLID_GREY } from "styles";
-import { Person, Gift, Vinyl, VinylColor } from "types";
+import { COLORS } from "styles";
+import { Person, Gift, Vinyl } from "types";
 
 import { isInFuture } from "./basic";
 import { daysToGo } from "./daysToGo";
-import { vinylColorIsSpecial } from "./vinyl";
+// import { vinylColorIsSpecial } from "./vinyl";
 
-const { BLACK, GRAY_DARK } = COLORS;
+const { GRAY_DARK } = COLORS;
 
 const sortCompany = (company: Person[]): Person[] =>
   company.sort((a: Person, b: Person): number =>
@@ -21,18 +21,18 @@ const getCompanySymbols = (company: Person[]): SymbolProps[] =>
     })
   );
 
-const getVinylSymbolBackground = (color: VinylColor): string => {
-  return "";
-  // color.photo ?
-  // const photoBackground: string | undefined = color.photo ?
-  //   ? getBackgoundImageUrl(discPhoto)
-  //   : undefined;
-  // return !!photoBackground
-  //   ? photoBackground
-  //   : color.length > 1
-  //   ? getTwoColorDiagonal(color[0], color[1])
-  //   : color;
-};
+// const getVinylSymbolBackground = (color: VinylColor): string => {
+// return "";
+// color.photo ?
+// const photoBackground: string | undefined = color.photo ?
+//   ? getBackgoundImageUrl(discPhoto)
+//   : undefined;
+// return !!photoBackground
+//   ? photoBackground
+//   : color.length > 1
+//   ? getTwoColorDiagonal(color[0], color[1])
+//   : color;
+// };
 
 type GetSymbols = I__Date &
   I__Signed &
@@ -44,16 +44,16 @@ type GetSymbols = I__Date &
     vinyl?: Vinyl;
   };
 
-const getVinylColorSymbol = (color: VinylColor): SymbolProps => ({
-  background: getVinylSymbolBackground(color),
-  border: color === COLORS.CLEAR ? BORDER_HALF_PX_SOLID_GREY : "none",
-  borderRadius: "50%",
-  svgFill: BLACK,
-  contents: {}
-});
+// const getVinylColorSymbol = (color: VinylColor): SymbolProps => ({
+//   background: getVinylSymbolBackground(color),
+//   border: color === COLORS.CLEAR ? BORDER_HALF_PX_SOLID_GREY : "none",
+//   borderRadius: "50%",
+//   svgFill: BLACK,
+//   contents: {}
+// });
 
 export const getSymbols = ({
-  vinyl,
+  // vinyl,
   company,
   date,
   photos,
@@ -64,10 +64,10 @@ export const getSymbols = ({
 }: GetSymbols): SymbolProps[] => {
   let symbols: SymbolProps[] = [];
 
-  if (vinyl) {
-    const { color } = vinyl;
-    if (vinylColorIsSpecial(color)) symbols.push(getVinylColorSymbol(color));
-  }
+  // if (vinyl) {
+  //   const { color } = vinyl;
+  //   if (vinylColorIsSpecial(color)) symbols.push(getVinylColorSymbol(color));
+  // }
 
   if (company) symbols.push(...getCompanySymbols(company));
 
