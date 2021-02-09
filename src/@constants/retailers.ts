@@ -7,11 +7,13 @@ export const RECORDSTORE_ONLINE: Retailer = {
   online: true
 };
 export const MUSIC_MAGPIE: Retailer = { name: "Music Magpie", online: true };
+export const HMV_ONLINE: Retailer = { name: "hmv.com", online: true };
 export const EBAY: Retailer = { name: "eBay", online: true };
 export const MUSICIAN_WEB_STORE: Retailer = {
   name: "Web Store for Artist",
   online: true
 };
+
 export const JUNO_ONLINE: Retailer = { name: "Juno Records", online: true };
 export const FAT_POSSUM: Retailer = {
   name: "Fat Possum Records",

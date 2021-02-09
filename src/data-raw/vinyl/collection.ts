@@ -14,6 +14,7 @@ const {
   RECORDSTORE_ONLINE,
   MUSICIAN_WEB_STORE,
   ROUGH_TRADE_EAST,
+  HMV_ONLINE,
   ROUGH_TRADE_WEST,
   ROUGH_TRADE_NOTTINGHAM,
   FAT_POSSUM,
@@ -234,6 +235,20 @@ export const JON_HOPKINS_SINGULARITY: Vinyl = {
   costExcDelivery: 21.48,
   signed: false,
   colors: [BLACK]
+};
+
+export const ARIANA_GRANDE_POSITIONS: Vinyl = {
+  musician: MUSICIANS.ARIANA_GRANDE,
+  title: "Positions",
+  photo: PHOTOS.ALBUM_ARTWORK.ARIANA_GRANDE_POSITIONS,
+  appleMusicId: "positions/1537486662",
+  year: 2020,
+  inches: 12,
+  sides: 4,
+  retailer: HMV_ONLINE,
+  costExcDelivery: 27.99,
+  signed: false,
+  colors: COLORS.VINYL.ARIANA_GRANDE_POSITIONS
 };
 
 export const DUA_LIPA_FUTURE_NOSTALGIA: Vinyl = {

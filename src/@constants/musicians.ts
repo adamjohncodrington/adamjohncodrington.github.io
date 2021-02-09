@@ -354,6 +354,7 @@ export const BLOOD_ORANGE: Musician = { name: "Blood Orange" };
 export const SKAAR: Musician = { name: "SKAAR" };
 export const ARLO_PARKS: Musician = { name: "Arlo Parks" };
 export const SAMIA: Musician = { name: "Samia" };
+export const LASTLINGS: Musician = { name: "Lastlings" };
 export const SISTER_SLEDGE: Musician = { name: "Sister Sledge" };
 export const SKY_FERREIRA: Musician = {
   name: "Sky Ferreira",
