@@ -237,7 +237,7 @@ export const ARIANA_GRANDE_POSITIONS: Vinyl = {
   musician: MUSICIANS.ARIANA_GRANDE,
   title: "Positions",
   artwork: PHOTOS.ALBUM_ARTWORK.ARIANA_GRANDE_POSITIONS,
-  appleMusicId: "positions/1537486662",
+  appleMusicId: "positions/1537476578",
   year: 2020,
   inches: 12,
   sides: 4,
