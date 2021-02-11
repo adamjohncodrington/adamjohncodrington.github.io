@@ -58,9 +58,9 @@ const StyledRouterNavLink = styled(RouterNavLink)(
   `
 );
 
-interface Props {
+type Props = {
   pages: IPage[];
-}
+};
 
 export const NavBar: FC<Props> = ({ pages }) => (
   <StyledNav data-test="nav-bar">

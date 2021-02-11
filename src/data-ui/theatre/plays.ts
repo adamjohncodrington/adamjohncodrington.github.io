@@ -4,15 +4,13 @@ import { getItemCounts } from "utils";
 
 import { FAVOURITES } from "./favourites";
 
-interface IPlayIsFavourited {
-  play: Play;
-  favouriteTheatreVisits: TheatreVisit[];
-}
-
 const playIsFavourited = ({
   play,
   favouriteTheatreVisits
-}: IPlayIsFavourited): boolean =>
+}: {
+  play: Play;
+  favouriteTheatreVisits: TheatreVisit[];
+}): boolean =>
   favouriteTheatreVisits.some(
     (theatreVisit: TheatreVisit): boolean => theatreVisit.play === play
   );
@@ -26,14 +24,11 @@ const getPlayMatches = (play: Play): TheatreVisit[] =>
 
 const getPlayDetails = (play: Play): MiniCardPanelDetailProps[] =>
   getPlayMatches(play).map(
-    (theatreVisit: TheatreVisit): MiniCardPanelDetailProps => {
-      const { date } = theatreVisit;
-      return {
-        mainText: [theatreVisit.theatre.name],
-        sort: [date.valueOf()],
-        dates: [date]
-      };
-    }
+    ({ theatre: { name }, date }: TheatreVisit): MiniCardPanelDetailProps => ({
+      mainText: [name],
+      sort: [date.valueOf()],
+      dates: [date]
+    })
   );
 
 export const PLAYS: MiniCardProps[] = Object.values(plays).map(

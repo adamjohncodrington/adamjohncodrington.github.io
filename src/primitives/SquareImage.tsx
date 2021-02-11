@@ -1,8 +1,8 @@
 import React from "react";
 import styled, { css } from "styled-components";
 
-import { FREE_IMAGE_HOST_URL_PREFIX } from "config";
 import { Photo } from "types";
+import { constructFreeImageHostUrl } from "styles";
 
 interface IStyledImage extends ThemeProp {
   size: string;
@@ -44,7 +44,7 @@ export const SquareImage = ({
     circle={circle}
     title={title}
     data-test={dataTest}
-    src={FREE_IMAGE_HOST_URL_PREFIX + freeimagehostId + ".jpg"}
+    src={constructFreeImageHostUrl(freeimagehostId)}
     size={size}
   />
 );

@@ -23,9 +23,9 @@ const StyledMain = styled.main(
   `
 );
 
-interface Props {
+type Props = {
   sections: PageSectionProps[];
-}
+};
 
 export const PageSections: FC<Props> = ({ sections }) => {
   const { pageUses2Columns } = useMediaQueries();

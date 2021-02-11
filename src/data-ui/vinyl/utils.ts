@@ -31,7 +31,7 @@ export const mapVinylToPhoto = (vinyl: Vinyl): Photo => {
 };
 
 const mapVinylToCard = (vinyl: Vinyl, options?: Options1): CardProps => {
-  const { signed, gift, title, musician, year } = vinyl;
+  const { signed, gift, title, color, musician, year } = vinyl;
   const hideSignedIcon: boolean = !!(options && options.hideSignedIcon);
   const hideColorSymbol: boolean = !!(options && options.hideColorSymbol);
   const hideGiftSymbol: boolean = !!(options && options.hideGiftSymbol);
@@ -48,7 +48,7 @@ const mapVinylToCard = (vinyl: Vinyl, options?: Options1): CardProps => {
       company: !!gift && showGiftFrom ? [gift.from] : undefined,
       gift: hideGiftSymbol ? undefined : gift,
       signed: hideSignedIcon ? undefined : signed,
-      vinyl: hideColorSymbol ? undefined : vinyl
+      vinylColor: hideColorSymbol ? undefined : color
     })
   };
 };

@@ -39,8 +39,10 @@ interface IHeadline extends I__Faded {
   subText?: string;
 }
 
-interface SymbolProps extends I_Background, I__Border, I__BorderRadius {
-  svgFill?: string;
+type SymbolProps = {
+  background: string;
+  border?: string;
+  borderRadius?: string;
   contents: {
     text?: string;
     icon?:
@@ -56,7 +58,8 @@ interface SymbolProps extends I_Background, I__Border, I__BorderRadius {
       | "guitar"
       | "tricks";
   };
-}
+  svgFill?: string;
+};
 
 interface I_CostExcDelivery {}
 
