@@ -17,6 +17,7 @@ const {
   ROUGH_TRADE_EAST,
   HMV_ONLINE,
   ROUGH_TRADE_WEST,
+  MUSICROOM_ONLINE,
   ROUGH_TRADE_NOTTINGHAM,
   FAT_POSSUM,
   FOPP_LONDON
@@ -231,6 +232,59 @@ export const SASHA_SLOAN_ONLY_CHILD: Vinyl = {
   retailer: AMAZON,
   appleMusicId: "only-child/1529018233",
   artwork: PHOTOS.ALBUM_ARTWORK.SASHA_SLOAN_ONLY_CHILD
+};
+
+export const LEON_APART: Vinyl = {
+  musician: MUSICIANS.LEON,
+  title: "Apart",
+  appleMusicId: "apart/1525538383",
+  year: 2020,
+  color: BLACK,
+  inches: 12,
+  signed: false,
+  costExcDelivery: 17.78,
+  sides: 2,
+  retailer: HIVE,
+  artwork: PHOTOS.ALBUM_ARTWORK.LEON_APART
+};
+export const GEORGE_FITZGERALD_ALL_THAT_MUST_BE: Vinyl = {
+  musician: MUSICIANS.GEORGE_FITZGERALD,
+  title: "All That Must Be",
+  year: 2018,
+  color: COLORS.VINYL.GEORGE_FITZGERALD_ALL_THAT_MUST_BE,
+  retailer: HIVE,
+  signed: false,
+  costExcDelivery: 20.39,
+  appleMusicId: "all-that-must-be/1322664114",
+  sides: 4,
+  inches: 12,
+  artwork: PHOTOS.ALBUM_ARTWORK.GEORGE_FITZGERALD_ALL_THAT_MUST_BE
+};
+export const MAGGIE_ROGERS_HEARD_IT_IN_A_PAST_LIFE: Vinyl = {
+  musician: MUSICIANS.MAGGIE_ROGERS,
+  year: 2019,
+  title: "Head It in a Past Life",
+  signed: false,
+  retailer: HIVE,
+  appleMusicId: "heard-it-in-a-past-life/1437448293",
+  color: BLACK,
+  artwork: PHOTOS.ALBUM_ARTWORK.MAGGIE_ROGERS_HEARD_IT_IN_A_PAST_LIFE,
+  costExcDelivery: 17.87,
+  sides: 2,
+  inches: 12
+};
+export const BEYONCE_LEMONADE: Vinyl = {
+  musician: MUSICIANS.BEYONCE,
+  year: 2016,
+  color: COLORS.VINYL.BEYONCE_LEMONADE,
+  retailer: MUSICROOM_ONLINE,
+  sides: 4,
+  signed: false,
+  inches: 12,
+  appleMusicId: "lemonade/1460430561",
+  artwork: PHOTOS.ALBUM_ARTWORK.BEYONCE_LEMONADE,
+  costExcDelivery: 30,
+  title: "Lemonade"
 };
 
 export const JON_HOPKINS_SINGULARITY: Vinyl = {

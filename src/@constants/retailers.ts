@@ -15,6 +15,7 @@ export const MUSICIAN_WEB_STORE: Retailer = {
   name: "Web Store for Artist",
   online: true
 };
+export const MUSICROOM_ONLINE: Retailer = { name: "Musicroom", online: true };
 
 export const JUNO_ONLINE: Retailer = { name: "Juno Records", online: true };
 export const FAT_POSSUM: Retailer = {
