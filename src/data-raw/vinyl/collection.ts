@@ -308,7 +308,7 @@ export const ARIANA_GRANDE_POSITIONS: Vinyl = {
   appleMusicId: "positions/1537476578",
   year: 2020,
   inches: 12,
-  sides: 4,
+  sides: 2,
   retailer: HMV_ONLINE,
   costExcDelivery: 27.99,
   signed: false,

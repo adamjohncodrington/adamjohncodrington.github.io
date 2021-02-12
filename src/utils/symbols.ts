@@ -4,7 +4,6 @@ import { Person, Gift, VinylAppearance } from "types";
 
 import { isInFuture } from "./basic";
 import { daysToGo } from "./daysToGo";
-import { vinylColorIsSpecial } from "./vinyl";
 
 const { GRAY_DARK } = COLORS;
 
@@ -43,23 +42,6 @@ export const getSymbols = ({
 }: GetSymbols): SymbolProps[] => {
   let symbols: SymbolProps[] = [];
 
-  if (vinylAppearance) {
-    const { color, inches, sides } = vinylAppearance;
-    if (vinylColorIsSpecial(color)) {
-      symbols.push({
-        background:
-          typeof color === "string"
-            ? color
-            : Array.isArray(color)
-            ? getTwoColorDiagonal(color)
-            : getBackgoundImageUrl(color.photo),
-        contents: {},
-        borderRadius: "50%",
-        sizeProportion: inches / 12
-      });
-    }
-  }
-
   if (company) symbols.push(...getCompanySymbols(company));
 
   if (gift) symbols.push(SYMBOLS.GIFT);
@@ -88,6 +70,26 @@ export const getSymbols = ({
 
   if (photos) symbols.push(SYMBOLS.PHOTO);
   if (video) symbols.push(SYMBOLS.VIDEO);
+
+  if (vinylAppearance) {
+    const { color, inches, sides } = vinylAppearance;
+    const symbolProps = {
+      background:
+        typeof color === "string"
+          ? color
+          : Array.isArray(color)
+          ? getTwoColorDiagonal(color)
+          : getBackgoundImageUrl(color.photo),
+      contents: {},
+      borderRadius: "50%",
+      sizeProportion: inches / 12
+    };
+
+    symbols.push({
+      ...symbolProps,
+      subSymbol: sides > 2 ? symbolProps : undefined
+    });
+  }
 
   return symbols;
 };

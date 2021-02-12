@@ -50,7 +50,33 @@ const StyledSymbol = styled.div(
   }
 );
 
-export const Symbol: FC<SymbolProps> = props => {
+const DoubleSymbolContainer = styled.div(
+  ({
+    sizeProportion = 1,
+    theme: {
+      symbol: { size }
+    }
+  }: StyledSymbolProps) => {
+    const SIZE = `calc(${size} * ${sizeProportion})`;
+
+    return css`
+      position: relative;
+
+      width: calc(26px * ${sizeProportion} * 4 / 3);
+      height: ${SIZE};
+
+      > * {
+        position: absolute;
+
+        &:first-child {
+          right: 0;
+        }
+      }
+    `;
+  }
+);
+
+const SingleSymbol: FC<SymbolProps> = props => {
   const {
     contents: { text, icon }
   } = props;
@@ -84,4 +110,18 @@ export const Symbol: FC<SymbolProps> = props => {
       )}
     </StyledSymbol>
   );
+};
+
+export const Symbol: FC<SymbolProps> = props => {
+  const { subSymbol } = props;
+
+  if (subSymbol)
+    return (
+      <DoubleSymbolContainer {...props}>
+        <SingleSymbol {...props} />
+        <SingleSymbol {...subSymbol} />
+      </DoubleSymbolContainer>
+    );
+
+  return <SingleSymbol {...props} />;
 };

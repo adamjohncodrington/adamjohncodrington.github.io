@@ -60,6 +60,8 @@ type SingleSymbolProps = {
   };
   svgFill?: string;
   sizeProportion?: number;
+
+  subSymbol?: SingleSymbolProps;
 };
 
 type SymbolProps = SingleSymbolProps;
