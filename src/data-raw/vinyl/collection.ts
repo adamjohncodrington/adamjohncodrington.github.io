@@ -219,6 +219,20 @@ export const KATE_NASH_MADE_OF_BRICKS: Vinyl = {
   color: BLACK
 };
 
+export const SASHA_SLOAN_ONLY_CHILD: Vinyl = {
+  musician: MUSICIANS.SASHA_SLOAN,
+  title: "Only Child",
+  year: 2020,
+  inches: 12,
+  signed: false,
+  sides: 2,
+  costExcDelivery: 27.79,
+  color: BLACK,
+  retailer: AMAZON,
+  appleMusicId: "only-child/1529018233",
+  artwork: PHOTOS.ALBUM_ARTWORK.SASHA_SLOAN_ONLY_CHILD
+};
+
 export const JON_HOPKINS_SINGULARITY: Vinyl = {
   musician: MUSICIANS.JON_HOPKINS,
   title: "Singularity",
