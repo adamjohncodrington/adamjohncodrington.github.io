@@ -1,6 +1,6 @@
 import { SYMBOLS } from "@constants";
 import { COLORS, getBackgoundImageUrl, getTwoColorDiagonal } from "styles";
-import { Person, Gift, VinylColor } from "types";
+import { Person, Gift, VinylAppearance } from "types";
 
 import { isInFuture } from "./basic";
 import { daysToGo } from "./daysToGo";
@@ -28,11 +28,11 @@ type GetSymbols = I__Date &
     company?: Person[];
     gift?: Gift;
     poleCategory?: IPoleCategory;
-    vinylColor?: VinylColor;
+    vinylAppearance?: VinylAppearance;
   };
 
 export const getSymbols = ({
-  vinylColor,
+  vinylAppearance,
   company,
   date,
   photos,
@@ -43,17 +43,19 @@ export const getSymbols = ({
 }: GetSymbols): SymbolProps[] => {
   let symbols: SymbolProps[] = [];
 
-  if (vinylColor) {
-    if (vinylColorIsSpecial(vinylColor)) {
+  if (vinylAppearance) {
+    const { color, inches, sides } = vinylAppearance;
+    if (vinylColorIsSpecial(color)) {
       symbols.push({
         background:
-          typeof vinylColor === "string"
-            ? vinylColor
-            : Array.isArray(vinylColor)
-            ? getTwoColorDiagonal(vinylColor)
-            : getBackgoundImageUrl(vinylColor.photo),
+          typeof color === "string"
+            ? color
+            : Array.isArray(color)
+            ? getTwoColorDiagonal(color)
+            : getBackgoundImageUrl(color.photo),
         contents: {},
-        borderRadius: "50%"
+        borderRadius: "50%",
+        sizeProportion: inches / 12
       });
     }
   }

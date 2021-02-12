@@ -39,7 +39,7 @@ interface IHeadline extends I__Faded {
   subText?: string;
 }
 
-type SymbolProps = {
+type SingleSymbolProps = {
   background: string;
   border?: string;
   borderRadius?: string;
@@ -59,7 +59,10 @@ type SymbolProps = {
       | "tricks";
   };
   svgFill?: string;
+  sizeProportion?: number;
 };
+
+type SymbolProps = SingleSymbolProps;
 
 interface I_CostExcDelivery {}
 

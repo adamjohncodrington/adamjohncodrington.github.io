@@ -21,12 +21,12 @@ export const VINYL = {
   GIFTS: mapVinylsToCards(GIFTS, {
     hideGiftSymbol: true,
     showGiftFrom: true,
-    hideColorSymbol: true
+    hideAppearanceSymbol: true
   }),
   MUSICIANS: filterMiniCards(MUSICIANS),
   RETAILERS: filterMiniCards(RETAILERS),
   COLLECTION: mapVinylsToCards(VINYL_COLLECTION, {
-    hideColorSymbol: true,
+    hideAppearanceSymbol: true,
     hideGiftSymbol: true,
     hideSignedIcon: true
   }),

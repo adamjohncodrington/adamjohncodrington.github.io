@@ -4,7 +4,7 @@ import styled, { css } from "styled-components";
 import { SVG } from "resources";
 import { COLORS } from "styles";
 
-type StyledSymbolProps = SymbolProps & ThemeProp;
+type StyledSymbolProps = SingleSymbolProps & ThemeProp;
 
 const { GRAY_LIGHT } = COLORS;
 
@@ -13,34 +13,41 @@ const StyledSymbol = styled.div(
     background,
     border,
     borderRadius = "25%",
+    sizeProportion = 1,
     svgFill = GRAY_LIGHT,
     theme: {
       boxShadow,
       symbol: { fontSize, iconSize, size, textColor }
     }
-  }: StyledSymbolProps) => css`
-    background: ${background} center;
+  }: StyledSymbolProps) => {
+    const SIZE = `calc(${size} * ${sizeProportion})`;
 
-    background-size: ${size} ${size};
+    return css`
+      background: ${background} center;
 
-    border-radius: ${borderRadius};
-    border: ${border};
-    box-shadow: ${boxShadow.dark};
-    color: ${textColor};
-    font-size: ${fontSize};
-    height: ${size};
-    line-height: ${size};
-    text-align: center;
-    width: ${size};
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    svg {
-      height: ${iconSize};
-      width: ${iconSize};
-      fill: ${svgFill};
-    }
-  `
+      background-size: ${SIZE} ${SIZE};
+
+      border-radius: ${borderRadius};
+      border: ${border};
+      box-shadow: ${boxShadow.dark};
+      color: ${textColor};
+      font-size: ${fontSize};
+      line-height: ${SIZE};
+      text-align: center;
+
+      height: ${SIZE};
+      width: ${SIZE};
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        height: ${iconSize};
+        width: ${iconSize};
+        fill: ${svgFill};
+      }
+    `;
+  }
 );
 
 export const Symbol: FC<SymbolProps> = props => {

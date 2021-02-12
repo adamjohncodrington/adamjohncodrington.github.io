@@ -10,7 +10,7 @@ import {
 interface Options1 {
   hideYear?: boolean;
   hideSignedIcon?: boolean;
-  hideColorSymbol?: boolean;
+  hideAppearanceSymbol?: boolean;
   hideGiftSymbol?: boolean;
   showGiftFrom?: boolean;
 }
@@ -31,9 +31,11 @@ export const mapVinylToPhoto = (vinyl: Vinyl): Photo => {
 };
 
 const mapVinylToCard = (vinyl: Vinyl, options?: Options1): CardProps => {
-  const { signed, gift, title, color, musician, year } = vinyl;
+  const { signed, gift, title, color, inches, sides, musician, year } = vinyl;
   const hideSignedIcon: boolean = !!(options && options.hideSignedIcon);
-  const hideColorSymbol: boolean = !!(options && options.hideColorSymbol);
+  const hideAppearanceSymbol: boolean = !!(
+    options && options.hideAppearanceSymbol
+  );
   const hideGiftSymbol: boolean = !!(options && options.hideGiftSymbol);
   const showGiftFrom: boolean = !!(options && options.showGiftFrom);
   const hideYear: boolean = !!(options && options.hideYear);
@@ -48,7 +50,9 @@ const mapVinylToCard = (vinyl: Vinyl, options?: Options1): CardProps => {
       company: !!gift && showGiftFrom ? [gift.from] : undefined,
       gift: hideGiftSymbol ? undefined : gift,
       signed: hideSignedIcon ? undefined : signed,
-      vinylColor: hideColorSymbol ? undefined : color
+      vinylAppearance: hideAppearanceSymbol
+        ? undefined
+        : { color, inches, sides }
     })
   };
 };

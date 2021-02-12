@@ -28,24 +28,23 @@ export type Musician = {
   previousStageName?: { name: string; yearDeprecated: number };
 };
 
-export type Retailer = {
-  name: string;
-  online: boolean;
-  branch?: string;
-};
+export type Retailer = { name: string; online: boolean; branch?: string };
 
 export type VinylColor = string | [string, string] | { photo: Photo };
 
-export type Vinyl = {
+export type VinylAppearance = {
+  color: VinylColor;
+  inches: 7 | 10 | 12;
+  sides: 2 | 4;
+};
+
+export type Vinyl = VinylAppearance & {
   appleMusicId: string;
   artwork: Photo;
-  color: VinylColor;
   costExcDelivery: number;
   gift?: Gift;
-  inches: 7 | 10 | 12;
   musician: Musician;
   retailer: Retailer;
-  sides: 2 | 4;
   signed: boolean;
   title: string;
   year: number;
