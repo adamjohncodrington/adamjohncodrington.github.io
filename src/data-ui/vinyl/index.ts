@@ -26,9 +26,9 @@ export const VINYL = {
   MUSICIANS: filterMiniCards(MUSICIANS),
   RETAILERS: filterMiniCards(RETAILERS),
   COLLECTION: mapVinylsToCards(VINYL_COLLECTION, {
-    hideAppearanceSymbol: true,
-    hideGiftSymbol: true,
-    hideSignedIcon: true
+    // hideAppearanceSymbol: true,
+    // hideGiftSymbol: true,
+    // hideSignedIcon: true
   }),
   SIGNED: mapVinylsToCards(SIGNED, { hideSignedIcon: true }),
   YEARS
