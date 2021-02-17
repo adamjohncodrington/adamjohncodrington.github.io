@@ -294,7 +294,7 @@ export const JON_HOPKINS_SINGULARITY: Vinyl = {
   appleMusicId: "singularity/1349736537",
   year: 2018,
   inches: 12,
-  sides: 2,
+  sides: 4,
   retailer: CHALKYS,
   costExcDelivery: 21.48,
   signed: false,
