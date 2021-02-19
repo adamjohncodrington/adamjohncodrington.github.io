@@ -205,6 +205,7 @@ export const FLIGHT_FACILITIES: Musician = { name: "Flight Facilities" };
 export const FOREVER_THE_SICKEST_KIDS: Musician = {
   name: "Forever the Sickest Kids"
 };
+export const SG_LEWIS: Musician = { name: "SG Lewis" };
 export const FOURS: Musician = { name: "Fours" };
 export const FOUR_TET: Musician = { name: "Four Tet" };
 export const FOXES: Musician = { name: "Foxes" };
