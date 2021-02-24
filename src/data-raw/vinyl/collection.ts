@@ -11,6 +11,7 @@ const {
   MUSIC_MAGPIE,
   CHALKYS,
   AMAZON,
+  GLOBAL_GROOVE_ONLINE,
   EBAY,
   RECORDSTORE_ONLINE,
   MUSICIAN_WEB_STORE,
@@ -484,6 +485,20 @@ export const MUNA_ABOUT_U: Vinyl = {
   artwork: PHOTOS.ALBUM_ARTWORK.MUNA_ABOUT_U,
   appleMusicId: "about-u/1171832662",
   year: 2017
+};
+
+export const RIHANNA_RATED_R: Vinyl = {
+  year: 2009,
+  musician: MUSICIANS.RIHANNA,
+  title: "Rated R",
+  inches: 12,
+  sides: 4,
+  costExcDelivery: 18.49,
+  retailer: GLOBAL_GROOVE_ONLINE,
+  signed: false,
+  appleMusicId: "rated-r/1440885156",
+  artwork: PHOTOS.ALBUM_ARTWORK.RIHANNA_RATED_R,
+  color: BLACK
 };
 
 export const PVRIS_AWKOHAWNOH: Vinyl = {
