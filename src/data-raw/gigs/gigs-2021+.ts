@@ -114,7 +114,7 @@ export const JESSIE_WARE: Gig = {
 export const ELLIE_GOULDING_2021: Gig = {
   headline: MUSICIANS.ELLIE_GOULDING,
   venue: HAMMERSMITH_APOLLO,
-  date: new Date("2021-05-06"),
+  date: new Date("2021-10-17"),
   company: [DAN_SPARROW],
   ticketType: TICKETMASTER_POSTAL
 };
