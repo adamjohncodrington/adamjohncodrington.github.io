@@ -52,5 +52,6 @@ export const THEME_PARKS: string = "Theme Parks";
 // Vinyl
 export const ARTWORK: string = "Artwork";
 export const COLLECTION: string = "Collection";
+export const SECOND_HAND: string = "Second Hand";
 export const SIGNED: string = "Signed";
 export const WISH_LIST: string = "Wish List";

@@ -7,6 +7,7 @@ import { COLORED } from "./colored";
 import { GIFTS } from "./gifts";
 import { MUSICIANS } from "./musicians";
 import { RETAILERS } from "./retailers";
+import { SECOND_HAND } from "./second-hand";
 import { SIGNED } from "./signed";
 import { mapVinylsToCards } from "./utils";
 import { YEARS } from "./years";
@@ -18,18 +19,11 @@ export const VINYL = {
     hideGiftSymbol: true
   }),
   COSTS,
-  GIFTS: mapVinylsToCards(GIFTS, {
-    hideGiftSymbol: true,
-    showGiftFrom: true,
-    hideAppearanceSymbol: true
-  }),
+  GIFTS: mapVinylsToCards(GIFTS, { hideGiftSymbol: true, showGiftFrom: true }),
+  SECOND_HAND: mapVinylsToCards(SECOND_HAND),
   MUSICIANS: filterMiniCards(MUSICIANS),
   RETAILERS: filterMiniCards(RETAILERS),
-  COLLECTION: mapVinylsToCards(VINYL_COLLECTION, {
-    // hideAppearanceSymbol: true,
-    // hideGiftSymbol: true,
-    // hideSignedIcon: true
-  }),
+  COLLECTION: mapVinylsToCards(VINYL_COLLECTION),
   SIGNED: mapVinylsToCards(SIGNED, { hideSignedIcon: true }),
   YEARS
 };

@@ -30,6 +30,13 @@ const GIFTS: PageSectionProps = {
   data: { cards: DATA.GIFTS }
 };
 
+const SECOND_HAND: PageSectionProps = {
+  title: PAGE_SECTION_TITLES.SECOND_HAND,
+  shuffle: true,
+  hide: true,
+  data: { cards: DATA.SECOND_HAND }
+};
+
 const COLLECTION: PageSectionProps = {
   title: PAGE_SECTION_TITLES.COLLECTION,
   data: { cards: DATA.COLLECTION },
@@ -75,5 +82,6 @@ export const VINYL: PageSectionProps[] = [
   GIFTS,
   RETAILERS,
   SIGNED,
+  SECOND_HAND,
   ...YEARS
 ];

@@ -44,6 +44,7 @@ export type Vinyl = VinylAppearance & {
   costExcDelivery: number;
   gift?: Gift;
   musician: Musician;
+  purchaseCondition: "new" | "used";
   retailer: Retailer;
   signed: boolean;
   title: string;
