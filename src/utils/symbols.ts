@@ -73,22 +73,25 @@ export const getSymbols = ({
 
   if (vinylAppearance) {
     const { color, inches, sides } = vinylAppearance;
-    const symbolProps = {
-      background:
-        typeof color === "string"
-          ? color
-          : Array.isArray(color)
-          ? getTwoColorDiagonal(color)
-          : getBackgoundImageUrl(color.photo),
-      contents: {},
-      borderRadius: "50%",
-      sizeProportion: inches / 12
-    };
 
-    symbols.push({
-      ...symbolProps,
-      subSymbol: sides > 2 ? symbolProps : undefined
-    });
+    if (color !== COLORS.BLACK || sides > 2) {
+      const symbolProps = {
+        background:
+          typeof color === "string"
+            ? color
+            : Array.isArray(color)
+            ? getTwoColorDiagonal(color)
+            : getBackgoundImageUrl(color.photo),
+        contents: {},
+        borderRadius: "50%",
+        sizeProportion: inches / 12
+      };
+
+      symbols.push({
+        ...symbolProps,
+        subSymbol: sides > 2 ? symbolProps : undefined
+      });
+    }
   }
 
   return symbols;
