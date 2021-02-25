@@ -15,6 +15,7 @@ const {
   EBAY,
   RECORDSTORE_ONLINE,
   MUSICIAN_WEB_STORE,
+  ROUGH_TRADE_ONLINE,
   ROUGH_TRADE_EAST,
   HMV_ONLINE,
   ROUGH_TRADE_WEST,
@@ -683,4 +684,32 @@ export const ALLIE_X_SUPER_SUNSET: Vinyl = {
   inches: 10,
   sides: 2,
   signed: true
+};
+
+export const LORDE_MELODRAMA: Vinyl = {
+  year: 2017,
+  musician: MUSICIANS.LORDE,
+  title: "Melodrama",
+  sides: 2,
+  artwork: PHOTOS.ALBUM_ARTWORK.LORDE_MELODRAMA,
+  color: BLACK,
+  signed: false,
+  inches: 12,
+  costExcDelivery: 12.99,
+  appleMusicId: "melodrama/1429662346",
+  retailer: ROUGH_TRADE_ONLINE
+};
+
+export const YEARS_AND_YEARS_PALO_SANTO: Vinyl = {
+  year: 2018,
+  musician: MUSICIANS.YEARS_AND_YEARS,
+  title: "Palo Santo",
+  sides: 4,
+  artwork: PHOTOS.ALBUM_ARTWORK.YEARS_AND_YEARS_PALO_SANTO,
+  color: COLORS.VINYL.YEARS_AND_YEARS_PALO_SANTO,
+  signed: false,
+  inches: 12,
+  appleMusicId: "palo-santo/1451136724",
+  costExcDelivery: 22.99,
+  retailer: ROUGH_TRADE_ONLINE
 };

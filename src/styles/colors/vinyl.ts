@@ -15,3 +15,4 @@ export const PVRIS_AWKOHAWNOH: [string, string] = [BLACK, CLEAR];
 export const ARIANA_GRANDE_POSITIONS: string = "#93D799";
 export const GEORGE_FITZGERALD_ALL_THAT_MUST_BE = "#E5C220";
 export const BEYONCE_LEMONADE = "#FAF566";
+export const YEARS_AND_YEARS_PALO_SANTO = "#CE2F22";

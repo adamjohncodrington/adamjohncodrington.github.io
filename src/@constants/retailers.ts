@@ -30,6 +30,10 @@ export const ROUGH_TRADE_EAST: Retailer = {
   name: "Rough Trade East",
   online: false
 };
+export const ROUGH_TRADE_ONLINE: Retailer = {
+  name: "Rough Trade (online)",
+  online: true
+};
 export const FOPP_LONDON: Retailer = {
   name: "FOPP",
   online: false

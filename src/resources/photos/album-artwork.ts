@@ -76,3 +76,5 @@ export const SASHA_SLOAN_ONLY_CHILD: Photo = { freeimagehostId: "3MTzdJ" };
 export const SAINT_JHN_WHILE_THE_WORLD_WAS_BURNING: Photo = {
   freeimagehostId: "KvFzYB"
 };
+export const LORDE_MELODRAMA: Photo = { freeimagehostId: "fviSNn" };
+export const YEARS_AND_YEARS_PALO_SANTO: Photo = { freeimagehostId: "fvi8AX" };
