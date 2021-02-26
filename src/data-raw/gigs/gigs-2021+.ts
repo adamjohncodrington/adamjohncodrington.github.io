@@ -75,7 +75,7 @@ export const HOLLY_HUMBERSTONE: Gig = {
 export const DAGNY: Gig = {
   headline: MUSICIANS.DAGNY,
   venue: LAFAYETTE,
-  date: new Date("2021-04-12"),
+  date: new Date("2022-01-17"),
   company: [DARREN_TAYLOR]
 };
 
