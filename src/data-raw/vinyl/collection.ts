@@ -527,12 +527,29 @@ export const RIHANNA_RATED_R: Vinyl = {
   inches: 12,
   sides: 4,
   costExcDelivery: 18.49,
-  purchaseCondition: "used",
+  purchaseCondition: "mint",
   retailer: GLOBAL_GROOVE_ONLINE,
   signed: false,
   appleMusicId: "rated-r/1440885156",
   artwork: PHOTOS.ALBUM_ARTWORK.RIHANNA_RATED_R,
   color: BLACK
+};
+
+export const _1975_I_LIKE_IT_WHEN_YOU_SLEEP: Vinyl = {
+  musician: MUSICIANS._1975_THE,
+  color: CLEAR,
+  signed: false,
+  purchaseCondition: "new",
+  costExcDelivery: 24.99,
+  inches: 12,
+  year: 2016,
+  title:
+    "I like it when you sleep, for you are so beautiful yet so unaware of it",
+  sides: 4,
+  artwork: PHOTOS.ALBUM_ARTWORK._1975_I_LIKE_IT_WHEN_YOU_SLEEP,
+  appleMusicId:
+    "i-like-it-when-you-sleep-for-you-are-so-beautiful-yet/1440840422",
+  retailer: MUSICIAN_WEB_STORE
 };
 
 export const PVRIS_AWKOHAWNOH: Vinyl = {

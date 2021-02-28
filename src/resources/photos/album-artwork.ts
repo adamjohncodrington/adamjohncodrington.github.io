@@ -1,6 +1,9 @@
 import { Photo } from "types";
 
 export const _1975_BRIEF_INQUIRY: Photo = { freeimagehostId: "dfNYzB" };
+export const _1975_I_LIKE_IT_WHEN_YOU_SLEEP: Photo = {
+  freeimagehostId: "ftQSm7"
+};
 export const ADELE_19: Photo = { freeimagehostId: "dfNcs1" };
 export const ALLIE_X_SUPER_SUNSET: Photo = { freeimagehostId: "dfN0qF" };
 export const AMY_WINEHOUSE_BACK_TO_BLACK: Photo = { freeimagehostId: "dfNaWP" };
