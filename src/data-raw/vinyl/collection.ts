@@ -4,26 +4,6 @@ import { COLORS } from "styles";
 import { Vinyl } from "types";
 
 const { BLACK, CLEAR } = COLORS;
-const {
-  NORMAN_ONLINE,
-  JUNO_ONLINE,
-  HIVE,
-  MUSIC_MAGPIE,
-  CHALKYS,
-  AMAZON,
-  GLOBAL_GROOVE_ONLINE,
-  EBAY,
-  RECORDSTORE_ONLINE,
-  MUSICIAN_WEB_STORE,
-  ROUGH_TRADE_ONLINE,
-  ROUGH_TRADE_EAST,
-  HMV_ONLINE,
-  ROUGH_TRADE_WEST,
-  MUSICROOM_ONLINE,
-  ROUGH_TRADE_NOTTINGHAM,
-  FAT_POSSUM,
-  FOPP_LONDON
-} = RETAILERS;
 
 export const FLEETWOOD_MAC_TANGO_IN_THE_NIGHT: Vinyl = {
   musician: MUSICIANS.FLEETWOOD_MAC,
@@ -36,7 +16,7 @@ export const FLEETWOOD_MAC_TANGO_IN_THE_NIGHT: Vinyl = {
   sides: 2,
   color: COLORS.VINYL.FLEETWOOD_MAC_TANGO_IN_THE_NIGHT,
   costExcDelivery: 13,
-  retailer: FOPP_LONDON,
+  retailer: RETAILERS.FOPP_LONDON,
   inches: 12
 };
 
@@ -51,7 +31,7 @@ export const JESSIE_WARE_WHATS_YOUR_PLEASURE: Vinyl = {
   sides: 2,
   color: BLACK,
   costExcDelivery: 20,
-  retailer: FOPP_LONDON,
+  retailer: RETAILERS.FOPP_LONDON,
   inches: 12
 };
 
@@ -66,7 +46,7 @@ export const SMITHS_HATFUL_OF_HOLLOW: Vinyl = {
   sides: 2,
   color: BLACK,
   costExcDelivery: 15,
-  retailer: FOPP_LONDON,
+  retailer: RETAILERS.FOPP_LONDON,
   inches: 12
 };
 
@@ -81,7 +61,7 @@ export const ELLIE_GOULDING_HALCYON: Vinyl = {
   sides: 2,
   color: BLACK,
   costExcDelivery: 15,
-  retailer: FOPP_LONDON,
+  retailer: RETAILERS.FOPP_LONDON,
   inches: 12
 };
 
@@ -97,7 +77,7 @@ export const CARLY_RAE_JEPSEN_EMOTION: Vinyl = {
   signed: true,
   color: COLORS.VINYL.CARLY_RAE_JEPSEN_EMOTION_PINK,
   costExcDelivery: 19.99,
-  retailer: MUSICIAN_WEB_STORE
+  retailer: RETAILERS.MUSICIAN_WEB_STORE
 };
 
 export const LISSIE_CATCHING_A_TIGER: Vinyl = {
@@ -112,14 +92,14 @@ export const LISSIE_CATCHING_A_TIGER: Vinyl = {
   signed: false,
   color: BLACK,
   costExcDelivery: 12.99,
-  retailer: FAT_POSSUM
+  retailer: RETAILERS.FAT_POSSUM
 };
 
 export const TAYLOR_SWIFT_FOLKLORE: Vinyl = {
   musician: MUSICIANS.TAYLOR_SWIFT,
   title: "folklore",
   costExcDelivery: 26.99,
-  retailer: MUSICIAN_WEB_STORE,
+  retailer: RETAILERS.MUSICIAN_WEB_STORE,
   appleMusicId: "folklore-deluxe-version/1528112358",
   year: 2020,
   color: COLORS.VINYL.TAYLOR_SWIFT_FOLKLORE_TEAL,
@@ -138,7 +118,7 @@ export const TROYE_SIVAN_IN_A_DREAM: Vinyl = {
   year: 2020,
   purchaseCondition: "new",
   costExcDelivery: 21.99,
-  retailer: MUSICIAN_WEB_STORE,
+  retailer: RETAILERS.MUSICIAN_WEB_STORE,
   color: COLORS.VINYL.TROYE_SIVAN_IN_A_DREAM_BLUE_MIST,
   sides: 2,
   signed: true,
@@ -156,7 +136,7 @@ export const CHARLI_XCX_HOW_IM_FEELING_NOW: Vinyl = {
   appleMusicId: "how-im-feeling-now/1513162098",
   color: COLORS.VINYL.CHARLI_XCX_HOW_IM_FEELING_NOW_ORANGE,
   costExcDelivery: 18.99,
-  retailer: MUSICIAN_WEB_STORE,
+  retailer: RETAILERS.MUSICIAN_WEB_STORE,
   signed: false
 };
 
@@ -170,7 +150,7 @@ export const CARIBOU_OUR_LOVE: Vinyl = {
   color: BLACK,
   signed: false,
   costExcDelivery: 12.99,
-  retailer: ROUGH_TRADE_WEST,
+  retailer: RETAILERS.ROUGH_TRADE_WEST,
   inches: 12,
   year: 2014
 };
@@ -182,7 +162,7 @@ export const BEN_HOWARD_EVERY_KINGDOM: Vinyl = {
   purchaseCondition: "new",
   title: "Every Kingdom",
   color: BLACK,
-  retailer: MUSICIAN_WEB_STORE,
+  retailer: RETAILERS.MUSICIAN_WEB_STORE,
   signed: false,
   inches: 12,
   costExcDelivery: 9.99,
@@ -192,7 +172,7 @@ export const BEN_HOWARD_EVERY_KINGDOM: Vinyl = {
 
 export const AMY_WINEHOUSE_BACK_TO_BLACK: Vinyl = {
   musician: MUSICIANS.AMY_WINEHOUSE,
-  retailer: AMAZON,
+  retailer: RETAILERS.AMAZON,
   costExcDelivery: 12.99,
   title: "Back to Black",
   artwork: PHOTOS.ALBUM_ARTWORK.AMY_WINEHOUSE_BACK_TO_BLACK,
@@ -208,7 +188,7 @@ export const AMY_WINEHOUSE_BACK_TO_BLACK: Vinyl = {
 export const ARCTIC_MONKEYS_FAVOURITE_WORST_NIGHTMARE: Vinyl = {
   musician: MUSICIANS.ARCTIC_MONKEYS,
   costExcDelivery: 21.99,
-  retailer: ROUGH_TRADE_NOTTINGHAM,
+  retailer: RETAILERS.ROUGH_TRADE_NOTTINGHAM,
   title: "Favourite Worst Nightmare",
   appleMusicId: "favourite-worst-nightmare/251126923",
   year: 2007,
@@ -229,7 +209,7 @@ export const KATE_NASH_MADE_OF_BRICKS: Vinyl = {
   year: 2007,
   inches: 12,
   sides: 2,
-  retailer: NORMAN_ONLINE,
+  retailer: RETAILERS.NORMAN_ONLINE,
   costExcDelivery: 17.99,
   signed: false,
   color: BLACK
@@ -245,7 +225,7 @@ export const SASHA_SLOAN_ONLY_CHILD: Vinyl = {
   sides: 2,
   costExcDelivery: 27.79,
   color: BLACK,
-  retailer: AMAZON,
+  retailer: RETAILERS.AMAZON,
   appleMusicId: "only-child/1529018233",
   artwork: PHOTOS.ALBUM_ARTWORK.SASHA_SLOAN_ONLY_CHILD
 };
@@ -261,7 +241,7 @@ export const LEON_APART: Vinyl = {
   purchaseCondition: "new",
   costExcDelivery: 17.78,
   sides: 2,
-  retailer: HIVE,
+  retailer: RETAILERS.HIVE,
   artwork: PHOTOS.ALBUM_ARTWORK.LEON_APART
 };
 export const GEORGE_FITZGERALD_ALL_THAT_MUST_BE: Vinyl = {
@@ -270,7 +250,7 @@ export const GEORGE_FITZGERALD_ALL_THAT_MUST_BE: Vinyl = {
   year: 2018,
   color: COLORS.VINYL.GEORGE_FITZGERALD_ALL_THAT_MUST_BE,
   purchaseCondition: "new",
-  retailer: HIVE,
+  retailer: RETAILERS.HIVE,
   signed: false,
   costExcDelivery: 20.39,
   appleMusicId: "all-that-must-be/1322664114",
@@ -283,7 +263,7 @@ export const MAGGIE_ROGERS_HEARD_IT_IN_A_PAST_LIFE: Vinyl = {
   year: 2019,
   title: "Head It in a Past Life",
   signed: false,
-  retailer: HIVE,
+  retailer: RETAILERS.HIVE,
   purchaseCondition: "new",
   appleMusicId: "heard-it-in-a-past-life/1437448293",
   color: BLACK,
@@ -296,7 +276,7 @@ export const BEYONCE_LEMONADE: Vinyl = {
   musician: MUSICIANS.BEYONCE,
   year: 2016,
   color: COLORS.VINYL.BEYONCE_LEMONADE,
-  retailer: MUSICROOM_ONLINE,
+  retailer: RETAILERS.MUSICROOM_ONLINE,
   sides: 4,
   signed: false,
   purchaseCondition: "new",
@@ -315,7 +295,7 @@ export const JON_HOPKINS_SINGULARITY: Vinyl = {
   year: 2018,
   inches: 12,
   sides: 4,
-  retailer: CHALKYS,
+  retailer: RETAILERS.CHALKYS,
   costExcDelivery: 21.48,
   purchaseCondition: "new",
   signed: false,
@@ -330,7 +310,7 @@ export const ARIANA_GRANDE_POSITIONS: Vinyl = {
   year: 2020,
   inches: 12,
   sides: 2,
-  retailer: HMV_ONLINE,
+  retailer: RETAILERS.HMV_ONLINE,
   purchaseCondition: "new",
   costExcDelivery: 27.99,
   signed: false,
@@ -346,7 +326,7 @@ export const DUA_LIPA_FUTURE_NOSTALGIA: Vinyl = {
   inches: 12,
   purchaseCondition: "new",
   sides: 2,
-  retailer: HIVE,
+  retailer: RETAILERS.HIVE,
   costExcDelivery: 18.32,
   signed: false,
   color: BLACK
@@ -355,7 +335,7 @@ export const DUA_LIPA_FUTURE_NOSTALGIA: Vinyl = {
 export const ADELE_19: Vinyl = {
   musician: MUSICIANS.ADELE,
   title: "19",
-  retailer: NORMAN_ONLINE,
+  retailer: RETAILERS.NORMAN_ONLINE,
   costExcDelivery: 15.49,
   artwork: PHOTOS.ALBUM_ARTWORK.ADELE_19,
   appleMusicId: "19/269864356",
@@ -372,7 +352,7 @@ export const FLORENCE_LUNGS: Vinyl = {
   purchaseCondition: "new",
   title: "Lungs",
   costExcDelivery: 12.99,
-  retailer: AMAZON,
+  retailer: RETAILERS.AMAZON,
   sides: 2,
   color: BLACK,
   signed: false,
@@ -384,7 +364,7 @@ export const FLORENCE_LUNGS: Vinyl = {
 
 export const MARINA_ELECTRA_HEART: Vinyl = {
   musician: MUSICIANS.MARINA,
-  retailer: MUSICIAN_WEB_STORE,
+  retailer: RETAILERS.MUSICIAN_WEB_STORE,
   purchaseCondition: "new",
   costExcDelivery: 18.99,
   title: "Electra Heart",
@@ -403,7 +383,7 @@ export const LANA_BORN_TO_DIE: Vinyl = {
   color: BLACK,
   sides: 4,
   costExcDelivery: 25.99,
-  retailer: ROUGH_TRADE_EAST,
+  retailer: RETAILERS.ROUGH_TRADE_EAST,
   purchaseCondition: "new",
   inches: 12,
   title: "Born to Die",
@@ -414,7 +394,7 @@ export const LANA_BORN_TO_DIE: Vinyl = {
 
 export const LADY_GAGA_BORN_THIS_WAY: Vinyl = {
   musician: MUSICIANS.LADY_GAGA,
-  retailer: JUNO_ONLINE,
+  retailer: RETAILERS.JUNO_ONLINE,
   artwork: PHOTOS.ALBUM_ARTWORK.LADY_GAGA_BORN_THIS_WAY,
   title: "Born This Way",
   appleMusicId: "born-this-way-special-edition/1440857161",
@@ -430,7 +410,7 @@ export const LADY_GAGA_BORN_THIS_WAY: Vinyl = {
 export const LADY_GAGA_FAME_MONSTER: Vinyl = {
   musician: MUSICIANS.LADY_GAGA,
   artwork: PHOTOS.ALBUM_ARTWORK.LADY_GAGA_FAME_MONSTER,
-  retailer: JUNO_ONLINE,
+  retailer: RETAILERS.JUNO_ONLINE,
   costExcDelivery: 29.25,
   title: "The Fame Monster",
   appleMusicId: "the-fame-monster/1440860294",
@@ -446,7 +426,7 @@ export const LORDE_PURE_HEROINE: Vinyl = {
   musician: MUSICIANS.LORDE,
   gift: { from: FRIENDS.MUM },
   costExcDelivery: 8,
-  retailer: RECORDSTORE_ONLINE,
+  retailer: RETAILERS.RECORDSTORE_ONLINE,
   title: "Pure Heroine",
   purchaseCondition: "new",
   appleMusicId: "pure-heroine/1440818584",
@@ -466,7 +446,7 @@ export const LANY_MALIBU_NIGHTS: Vinyl = {
   appleMusicId: "malibu-nights/1435482172",
   year: 2018,
   sides: 2,
-  retailer: MUSIC_MAGPIE,
+  retailer: RETAILERS.MUSIC_MAGPIE,
   costExcDelivery: 21.39,
   inches: 12,
   color: CLEAR,
@@ -479,7 +459,7 @@ export const TAYLOR_SWIFT_1989: Vinyl = {
   title: "1989",
   costExcDelivery: 14.99,
   purchaseCondition: "new",
-  retailer: RECORDSTORE_ONLINE,
+  retailer: RETAILERS.RECORDSTORE_ONLINE,
   artwork: PHOTOS.ALBUM_ARTWORK.TAYLOR_SWIFT_1989,
   year: 2014,
   sides: 4,
@@ -492,7 +472,7 @@ export const TAYLOR_SWIFT_1989: Vinyl = {
 export const GRIMES_ART_ANGELS: Vinyl = {
   musician: MUSICIANS.GRIMES,
   title: "Art Angels",
-  retailer: NORMAN_ONLINE,
+  retailer: RETAILERS.NORMAN_ONLINE,
   costExcDelivery: 19.89,
   artwork: PHOTOS.ALBUM_ARTWORK.GRIMES_ART_ANGELS,
   appleMusicId: "art-angels/1051022913",
@@ -509,7 +489,7 @@ export const MUNA_ABOUT_U: Vinyl = {
   title: "About U",
   gift: { from: FRIENDS.MUM },
   sides: 4,
-  retailer: EBAY,
+  retailer: RETAILERS.EBAY,
   costExcDelivery: 22.89,
   inches: 12,
   signed: false,
@@ -528,7 +508,7 @@ export const RIHANNA_RATED_R: Vinyl = {
   sides: 4,
   costExcDelivery: 18.49,
   purchaseCondition: "mint",
-  retailer: GLOBAL_GROOVE_ONLINE,
+  retailer: RETAILERS.GLOBAL_GROOVE_ONLINE,
   signed: false,
   appleMusicId: "rated-r/1440885156",
   artwork: PHOTOS.ALBUM_ARTWORK.RIHANNA_RATED_R,
@@ -549,12 +529,12 @@ export const _1975_I_LIKE_IT_WHEN_YOU_SLEEP: Vinyl = {
   artwork: PHOTOS.ALBUM_ARTWORK._1975_I_LIKE_IT_WHEN_YOU_SLEEP,
   appleMusicId:
     "i-like-it-when-you-sleep-for-you-are-so-beautiful-yet/1440840422",
-  retailer: MUSICIAN_WEB_STORE
+  retailer: RETAILERS.MUSICIAN_WEB_STORE
 };
 
 export const PVRIS_AWKOHAWNOH: Vinyl = {
   musician: MUSICIANS.PVRIS,
-  retailer: MUSICIAN_WEB_STORE,
+  retailer: RETAILERS.MUSICIAN_WEB_STORE,
   costExcDelivery: 21.99,
   title: "All We Know of Heaven, All We Need of Hell",
   artwork: PHOTOS.ALBUM_ARTWORK.PVRIS_AWKOHAWNOH,
@@ -575,7 +555,7 @@ export const _1975_BRIEF_INQUIRY: Vinyl = {
   year: 2018,
   costExcDelivery: 25.99,
   purchaseCondition: "new",
-  retailer: MUSICIAN_WEB_STORE,
+  retailer: RETAILERS.MUSICIAN_WEB_STORE,
   sides: 4,
   inches: 12,
   signed: false,
@@ -587,7 +567,7 @@ export const BANKS_III: Vinyl = {
   purchaseCondition: "new",
   appleMusicId: "iii/1467547466",
   title: "III",
-  retailer: ROUGH_TRADE_EAST,
+  retailer: RETAILERS.ROUGH_TRADE_EAST,
   artwork: PHOTOS.ALBUM_ARTWORK.BANKS_III,
   year: 2019,
   signed: true,
@@ -600,7 +580,7 @@ export const BANKS_III: Vinyl = {
 export const LEON_LEON: Vinyl = {
   gift: { from: FRIENDS.MUM },
   musician: MUSICIANS.LEON,
-  retailer: HIVE,
+  retailer: RETAILERS.HIVE,
   purchaseCondition: "new",
   costExcDelivery: 15.75,
   title: MUSICIANS.LEON.name,
@@ -615,7 +595,7 @@ export const LEON_LEON: Vinyl = {
 
 export const LYKKE_LI_SO_SAD_SO_SEXY: Vinyl = {
   musician: MUSICIANS.LYKKE_LI,
-  retailer: NORMAN_ONLINE,
+  retailer: RETAILERS.NORMAN_ONLINE,
   costExcDelivery: 17.99,
   title: "so sad so sexy",
   purchaseCondition: "new",
@@ -633,7 +613,7 @@ export const FKA_TWIGS_MAGDALENE: Vinyl = {
   title: "Magdalene",
   gift: { from: FRIENDS.MUM },
   costExcDelivery: 16,
-  retailer: MUSICIAN_WEB_STORE,
+  retailer: RETAILERS.MUSICIAN_WEB_STORE,
   purchaseCondition: "new",
   appleMusicId: "magdalene/1477652618",
   year: 2019,
@@ -646,7 +626,7 @@ export const FKA_TWIGS_MAGDALENE: Vinyl = {
 
 export const CAROLINE_POLACHEK_PANG: Vinyl = {
   musician: MUSICIANS.CAROLINE_POLACHEK,
-  retailer: NORMAN_ONLINE,
+  retailer: RETAILERS.NORMAN_ONLINE,
   title: "Pang",
   purchaseCondition: "new",
   artwork: PHOTOS.ALBUM_ARTWORK.CAROLINE_POLACHEK_PANG,
@@ -661,7 +641,7 @@ export const CAROLINE_POLACHEK_PANG: Vinyl = {
 
 export const KIM_PETRAS_CLARITY: Vinyl = {
   musician: MUSICIANS.KIM_PETRAS,
-  retailer: NORMAN_ONLINE,
+  retailer: RETAILERS.NORMAN_ONLINE,
   title: "Clarity",
   purchaseCondition: "new",
   artwork: PHOTOS.ALBUM_ARTWORK.KIM_PETRAS_CLARITY,
@@ -675,7 +655,7 @@ export const KIM_PETRAS_CLARITY: Vinyl = {
 };
 
 export const ARIANA_GRANDE_TUN: Vinyl = {
-  retailer: JUNO_ONLINE,
+  retailer: RETAILERS.JUNO_ONLINE,
   costExcDelivery: 18.75,
   purchaseCondition: "new",
   musician: MUSICIANS.ARIANA_GRANDE,
@@ -692,7 +672,7 @@ export const ARIANA_GRANDE_TUN: Vinyl = {
 export const HAIM_WIMPIII: Vinyl = {
   purchaseCondition: "new",
   musician: MUSICIANS.HAIM,
-  retailer: MUSICIAN_WEB_STORE,
+  retailer: RETAILERS.MUSICIAN_WEB_STORE,
   costExcDelivery: 25,
   title: "Women In Music Pt. III",
   appleMusicId: "women-in-music-pt-iii/1500020581",
@@ -708,7 +688,7 @@ export const SUFJAN_STEVENS_CARRIE_LOWELL: Vinyl = {
   musician: MUSICIANS.SUFJAN_STEVENS,
   artwork: PHOTOS.ALBUM_ARTWORK.SUFJAN_STEVENS_CARRIE_LOWELL,
   appleMusicId: "carrie-lowell/955572616",
-  retailer: NORMAN_ONLINE,
+  retailer: RETAILERS.NORMAN_ONLINE,
   purchaseCondition: "new",
   costExcDelivery: 15.73,
   title: "Carrie & Lowell",
@@ -726,7 +706,7 @@ export const BANKS_ALTAR: Vinyl = {
   title: "The Altar",
   signed: false,
   purchaseCondition: "new",
-  retailer: JUNO_ONLINE,
+  retailer: RETAILERS.JUNO_ONLINE,
   costExcDelivery: 13.25,
   color: BLACK,
   sides: 2,
@@ -736,7 +716,7 @@ export const BANKS_ALTAR: Vinyl = {
 
 export const ALLIE_X_SUPER_SUNSET: Vinyl = {
   musician: MUSICIANS.ALLIE_X,
-  retailer: MUSICIAN_WEB_STORE,
+  retailer: RETAILERS.MUSICIAN_WEB_STORE,
   costExcDelivery: 20,
   title: "Super Sunset",
   color: COLORS.VINYL.ALLIE_X_SUPER_SUNSET_YELLOW,
@@ -761,7 +741,7 @@ export const LORDE_MELODRAMA: Vinyl = {
   inches: 12,
   costExcDelivery: 12.99,
   appleMusicId: "melodrama/1429662346",
-  retailer: ROUGH_TRADE_ONLINE
+  retailer: RETAILERS.ROUGH_TRADE_ONLINE
 };
 
 export const YEARS_AND_YEARS_PALO_SANTO: Vinyl = {
@@ -776,5 +756,20 @@ export const YEARS_AND_YEARS_PALO_SANTO: Vinyl = {
   inches: 12,
   appleMusicId: "palo-santo/1451136724",
   costExcDelivery: 22.99,
-  retailer: ROUGH_TRADE_ONLINE
+  retailer: RETAILERS.ROUGH_TRADE_ONLINE
+};
+
+export const PARAMORE_AFTER_LAUGHTER: Vinyl = {
+  year: 2017,
+  musician: MUSICIANS.PARAMORE,
+  retailer: RETAILERS.BANQUET_RECORDS,
+  inches: 12,
+  sides: 2,
+  signed: false,
+  color: COLORS.VINYL.PARAMORE_AFTER_LAUGHTER,
+  title: "After Laughter",
+  costExcDelivery: 15.99,
+  purchaseCondition: "new",
+  appleMusicId: "after-laughter/1227049864",
+  artwork: PHOTOS.ALBUM_ARTWORK.PARAMORE_AFTER_LAUGHTER
 };

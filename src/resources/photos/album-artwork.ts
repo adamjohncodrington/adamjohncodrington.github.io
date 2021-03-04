@@ -10,6 +10,7 @@ export const AMY_WINEHOUSE_BACK_TO_BLACK: Photo = { freeimagehostId: "dfNaWP" };
 export const ARCTIC_MONKEYS_FAVOURITE_WORST_NIGHTMARE: Photo = {
   freeimagehostId: "dfN10g"
 };
+export const PARAMORE_AFTER_LAUGHTER: Photo = { freeimagehostId: "q9R4ZG" };
 export const LYKKE_LI_SO_SAD_SO_SEXY: Photo = { freeimagehostId: "dIuyCb" };
 export const CARLY_RAE_JEPSEN_EMOTION: Photo = { freeimagehostId: "dPvgP2" };
 export const LEON_APART: Photo = { freeimagehostId: "d1sJQ2" };

@@ -8,6 +8,10 @@ export const RECORDSTORE_ONLINE: Retailer = {
   name: "Recordstore.co.uk",
   online: true
 };
+export const BANQUET_RECORDS: Retailer = {
+  name: "Banquet Records",
+  online: true
+};
 export const MUSIC_MAGPIE: Retailer = { name: "Music Magpie", online: true };
 export const HMV_ONLINE: Retailer = { name: "hmv.com", online: true };
 export const EBAY: Retailer = { name: "eBay", online: true };
