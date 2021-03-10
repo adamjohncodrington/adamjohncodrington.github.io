@@ -82,3 +82,7 @@ export const SAINT_JHN_WHILE_THE_WORLD_WAS_BURNING: Photo = {
 };
 export const LORDE_MELODRAMA: Photo = { freeimagehostId: "fviSNn" };
 export const YEARS_AND_YEARS_PALO_SANTO: Photo = { freeimagehostId: "fvi8AX" };
+export const BON_IVER_FOR_EMMA_FOREVER_AGO: Photo = {
+  freeimagehostId: "qBEviG"
+};
+export const ROBYN_HONEY: Photo = { freeimagehostId: "qBEkVs" };
