@@ -2,3 +2,10 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
+#root header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}
+/*# sourceMappingURL=index.css.map */

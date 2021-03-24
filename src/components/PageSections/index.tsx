@@ -12,20 +12,15 @@ import {
 import { PageSection } from "../PageSection";
 
 const StyledMain = styled.main(
-  ({ theme: { navBar, pageMargin } }: ThemeProp) => css`
+  ({ theme: { pageMargin } }: ThemeProp) => css`
     ${CSS.GRID_COLUMN_EQUAL_WIDTHS};
     column-gap: calc(2 * ${pageMargin});
-
-    height: calc(100vh - ${navBar.height});
-    overflow-y: auto;
 
     padding: ${pageMargin} ${pageMargin};
   `
 );
 
-type Props = {
-  sections: PageSectionProps[];
-};
+type Props = { sections: PageSectionProps[] };
 
 export const PageSections: FC<Props> = ({ sections }) => {
   const { pageUses2Columns } = useMediaQueries();

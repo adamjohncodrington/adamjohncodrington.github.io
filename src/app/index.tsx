@@ -6,13 +6,16 @@ import { PAGES } from "pages";
 
 export const App: FC = () => (
   <BrowserRouter>
-    <NavBar pages={PAGES} />
-
     <Switch>
       {PAGES.filter(({ hide }: IPage): boolean => !hide).map(
         ({ path, sections }: IPage, i: number) => (
           <Route key={i} path={path}>
-            <PageSections sections={sections} />
+            <header>
+              <NavBar pages={PAGES} />
+            </header>
+            <main>
+              <PageSections sections={sections} />
+            </main>
           </Route>
         )
       )}
