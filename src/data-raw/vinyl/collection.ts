@@ -804,3 +804,18 @@ export const ROBYN_HONEY: Vinyl = {
   signed: false,
   artwork: ALBUM_ARTWORK.ROBYN_HONEY
 };
+
+export const SOPHIE_OOEPUI: Vinyl = {
+  musician: MUSICIANS.SOPHIE,
+  title: "Oil of Every Pearl's Un-Insides",
+  year: 2018,
+  purchaseCondition: "new",
+  costExcDelivery: 24.99,
+  color: COLORS.VINYL.SOPHIE_OOEPUI,
+  sides: 2,
+  inches: 12,
+  appleMusicId: "oil-of-every-pearls-un-insides/1395045797",
+  retailer: RETAILERS.ROUGH_TRADE_ONLINE,
+  signed: false,
+  artwork: ALBUM_ARTWORK.SOPHIE_OOEPUI
+};
