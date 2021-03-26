@@ -19,10 +19,7 @@ export const SMITHS_THE: Musician = {
   name: "Smiths, The",
   noLongerExists: true
 };
-export const AYANNA: Musician = {
-  name: "Äyanna",
-  excludeFromBucketList: true
-};
+export const AYANNA: Musician = { name: "Äyanna" };
 export const CARDI_B: Musician = {
   name: "Cardi B",
   excludeFromBucketList: true
