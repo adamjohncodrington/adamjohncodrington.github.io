@@ -129,7 +129,7 @@ export const LADY_GAGA_2021: Gig = {
 export const SOPHIE_ELLIS_BEXTOR: Gig = {
   headline: MUSICIANS.SOPHIE_ELLIS_BEXTOR,
   venue: LONDON_PALLADIUM,
-  date: new Date("2021-05-13"),
+  date: new Date("2022-03-30"),
   company: [DARREN_TAYLOR],
   ticketType: TICKETMASTER_POSTAL
 };
