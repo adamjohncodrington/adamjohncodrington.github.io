@@ -1,4 +1,4 @@
-type ITicketType = string;
+type TicketType = string;
 type ISvgIcon = React.FC<React.SVGProps<SVGSVGElement>>;
 
 interface I_OrientationQuality {

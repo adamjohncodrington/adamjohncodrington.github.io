@@ -3,7 +3,7 @@ interface FestivalTitle extends I_Name, I__Insignificant {}
 interface IGigOrFestival extends I__Favourite, I_Company {
   photos?: Photo[];
   venue: MusicVenue;
-  ticketType?: ITicketType;
+  ticketType?: TicketType;
 }
 
 interface IFestivalWithoutVideo extends IGigOrFestival, I_Dates {
