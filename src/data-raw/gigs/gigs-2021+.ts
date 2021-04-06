@@ -1,4 +1,9 @@
-import { FRIENDS, MUSICIANS, TICKET_TYPES, MUSIC_VENUES } from "@constants";
+import {
+  FRIENDS,
+  MUSICIANS,
+  TICKET_TYPES,
+  MUSIC_VENUES as VENUES
+} from "@constants";
 
 const {
   JERRY_EDWARDS,
@@ -14,7 +19,7 @@ const {
 
 export const CELESTE: Gig = {
   headline: MUSICIANS.CELESTE,
-  venue: MUSIC_VENUES.ROUNDHOUSE,
+  venue: VENUES.ROUNDHOUSE,
   date: new Date("2022-04-21"),
   company: [DARREN_TAYLOR],
   ticketType: TICKET_TYPES.ROUNDHOUSE_COLLECT_AT_VENUE
@@ -22,7 +27,7 @@ export const CELESTE: Gig = {
 
 export const ARLO_PARKS: Gig = {
   headline: MUSICIANS.ARLO_PARKS,
-  venue: MUSIC_VENUES.SHEPHERDS_BUSH_EMPIRE,
+  venue: VENUES.SHEPHERDS_BUSH_EMPIRE,
   date: new Date("2021-11-03"),
   company: [JERRY_EDWARDS, LEWIS_STEADMAN, HARRIET_BOYLE],
   ticketType: TICKET_TYPES.TICKETMASTER_ETICKET
@@ -30,21 +35,21 @@ export const ARLO_PARKS: Gig = {
 
 export const SEVDALIZA: Gig = {
   headline: MUSICIANS.SEVDALIZA,
-  venue: MUSIC_VENUES.ELECTRIC_BRIXTON,
+  venue: VENUES.ELECTRIC_BRIXTON,
   date: new Date("2021-04-15"),
   company: [DARREN_TAYLOR]
 };
 
 export const RINA_SAWAYAMA: Gig = {
   headline: MUSICIANS.RINA_SAWAYAMA,
-  venue: MUSIC_VENUES.ELECTRIC_BRIXTON,
+  venue: VENUES.ELECTRIC_BRIXTON,
   date: new Date("2021-11-16"),
   company: [DARREN_TAYLOR]
 };
 
 export const HOLLY_HUMBERSTONE: Gig = {
   headline: MUSICIANS.HOLLY_HUMBERSTONE,
-  venue: MUSIC_VENUES.OMEARA,
+  venue: VENUES.OMEARA,
   date: new Date("2021-06-10"),
   company: [DARREN_TAYLOR],
   ticketType: TICKET_TYPES.TICKETWEB
@@ -52,7 +57,7 @@ export const HOLLY_HUMBERSTONE: Gig = {
 
 export const DAGNY: Gig = {
   headline: MUSICIANS.DAGNY,
-  venue: MUSIC_VENUES.LAFAYETTE,
+  venue: VENUES.LAFAYETTE,
   date: new Date("2022-01-17"),
   company: [DARREN_TAYLOR],
   ticketType: TICKET_TYPES.SEE_TICKETS_PRINT_AT_HOME
@@ -60,7 +65,7 @@ export const DAGNY: Gig = {
 
 export const LANE_8: Gig = {
   headline: MUSICIANS.LANE_8,
-  venue: MUSIC_VENUES.PRINTWORKS,
+  venue: VENUES.PRINTWORKS,
   date: new Date("2021-12-09"),
   company: [TONYA_FRANCE],
   ticketType: TICKET_TYPES.DICE_APP
@@ -68,7 +73,7 @@ export const LANE_8: Gig = {
 
 export const JON_HOPKINS: Gig = {
   headline: MUSICIANS.JON_HOPKINS,
-  venue: MUSIC_VENUES.ROYAL_ALBERT_HALL,
+  venue: VENUES.ROYAL_ALBERT_HALL,
   date: new Date("2021-11-13"),
   company: [TONYA_FRANCE],
   ticketType: TICKET_TYPES.ROYAL_ALBERT_HALL_PDF
@@ -77,7 +82,7 @@ export const JON_HOPKINS: Gig = {
 export const HAIM: Gig = {
   headline: MUSICIANS.HAIM,
   support: [MUSICIANS.GEORGIA],
-  venue: MUSIC_VENUES.O2_THE,
+  venue: VENUES.O2_THE,
   date: new Date("2021-06-18"),
   company: [DARREN_TAYLOR, LEWIS_STEADMAN, JERRY_EDWARDS],
   ticketType: TICKET_TYPES.AXS_MOBILE_APP
@@ -85,7 +90,7 @@ export const HAIM: Gig = {
 
 export const JESSIE_WARE: Gig = {
   headline: MUSICIANS.JESSIE_WARE,
-  venue: MUSIC_VENUES.BRIXTON_ACADEMY,
+  venue: VENUES.BRIXTON_ACADEMY,
   date: new Date("2021-12-13"),
   company: [DARREN_TAYLOR, LUCY_TWAITE],
   ticketType: TICKET_TYPES.TICKETWEB
@@ -93,7 +98,7 @@ export const JESSIE_WARE: Gig = {
 
 export const ELLIE_GOULDING_2021: Gig = {
   headline: MUSICIANS.ELLIE_GOULDING,
-  venue: MUSIC_VENUES.HAMMERSMITH_APOLLO,
+  venue: VENUES.HAMMERSMITH_APOLLO,
   date: new Date("2021-10-17"),
   company: [DAN_SPARROW],
   ticketType: TICKET_TYPES.TICKETMASTER_POSTAL
@@ -101,7 +106,7 @@ export const ELLIE_GOULDING_2021: Gig = {
 
 export const LADY_GAGA_2021: Gig = {
   headline: MUSICIANS.LADY_GAGA,
-  venue: MUSIC_VENUES.TOTTENHAM_HOTSPUR_STADIUM,
+  venue: VENUES.TOTTENHAM_HOTSPUR_STADIUM,
   date: new Date("2021-07-30"),
   company: [RYAN_MILLS, DAN_SPARROW, TOM_CHINDA_COUTTS],
   ticketType: TICKET_TYPES.TICKETMASTER_POSTAL
@@ -109,7 +114,7 @@ export const LADY_GAGA_2021: Gig = {
 
 export const SOPHIE_ELLIS_BEXTOR: Gig = {
   headline: MUSICIANS.SOPHIE_ELLIS_BEXTOR,
-  venue: MUSIC_VENUES.LONDON_PALLADIUM,
+  venue: VENUES.LONDON_PALLADIUM,
   date: new Date("2022-03-30"),
   company: [DARREN_TAYLOR],
   ticketType: TICKET_TYPES.TICKETMASTER_POSTAL
@@ -117,7 +122,7 @@ export const SOPHIE_ELLIS_BEXTOR: Gig = {
 
 export const CARIBOU: Gig = {
   headline: MUSICIANS.CARIBOU,
-  venue: MUSIC_VENUES.BRIXTON_ACADEMY,
+  venue: VENUES.BRIXTON_ACADEMY,
   date: new Date("2021-05-10"),
   company: [DARREN_TAYLOR],
   ticketType: TICKET_TYPES.TICKETMASTER_ETICKET
@@ -125,7 +130,7 @@ export const CARIBOU: Gig = {
 
 export const RATIONALE: Gig = {
   headline: MUSICIANS.RATIONALE,
-  venue: MUSIC_VENUES.SHEPHERDS_BUSH_EMPIRE,
+  venue: VENUES.SHEPHERDS_BUSH_EMPIRE,
   date: new Date("2022-03-31"),
   company: [DARREN_TAYLOR],
   ticketType: TICKET_TYPES.SEE_TICKETS_POSTAL
@@ -133,8 +138,24 @@ export const RATIONALE: Gig = {
 
 export const GRIFF: Gig = {
   headline: MUSICIANS.GRIFF,
-  venue: MUSIC_VENUES.HEAVEN,
+  venue: VENUES.HEAVEN,
   date: new Date("2021-10-27"),
-  company: [DARREN_TAYLOR],
+  company: [DARREN_TAYLOR, JERRY_EDWARDS],
   ticketType: TICKET_TYPES.SEE_TICKETS_POSTAL
+};
+
+export const JUNGLE: Gig = {
+  headline: MUSICIANS.JUNGLE,
+  venue: VENUES.BRIXTON_ACADEMY,
+  date: new Date("2021-09-01"),
+  company: [DARREN_TAYLOR, JERRY_EDWARDS, LEWIS_STEADMAN],
+  ticketType: TICKET_TYPES.DICE_APP
+};
+
+export const BAYNK: Gig = {
+  headline: MUSICIANS.BAYNK,
+  venue: VENUES.XOYO,
+  date: new Date("2021-11-19"),
+  company: [DARREN_TAYLOR, JERRY_EDWARDS, LEWIS_STEADMAN],
+  ticketType: TICKET_TYPES.GIGS_AND_TOURS_POSTAL
 };
