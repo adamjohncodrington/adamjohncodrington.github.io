@@ -97,6 +97,7 @@ export const ANNIE_LENNOX: Musician = {
   excludeFromBucketList: true
 };
 export const GRIFF: Musician = { name: "Griff" };
+export const RIMON: Musician = { name: "RIMON" };
 export const MOTORHEAD: Musician = {
   name: "Motörhead",
   excludeFromBucketList: true
