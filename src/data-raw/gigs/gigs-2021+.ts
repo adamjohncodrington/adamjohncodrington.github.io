@@ -36,7 +36,7 @@ export const ARLO_PARKS: Gig = {
 export const SEVDALIZA: Gig = {
   headline: MUSICIANS.SEVDALIZA,
   venue: VENUES.ELECTRIC_BRIXTON,
-  date: new Date("2021-04-15"),
+  date: new Date("2022-05-06"),
   company: [DARREN_TAYLOR]
 };
 
