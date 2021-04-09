@@ -8,11 +8,10 @@ interface IOptions {
   hideYear?: boolean;
 }
 
-export const getDateText = (date: Date, options?: IOptions): string => {
-  const hideDay: boolean = !!(options && options.hideDay);
-  const hideMonth: boolean = !!(options && options.hideMonth);
-  const hideYear: boolean = !!(options && options.hideYear);
-
+export const getDateText = (
+  date: Date,
+  { hideDay, hideMonth, hideYear }: IOptions = {}
+): string => {
   const weekday: number = date.getDay();
   const weekdayString: string = DAYS_OF_THE_WEEK[weekday];
   const day: number = date.getDate();
