@@ -1,5 +1,5 @@
 import { APPLE_MUSIC_URL_PREFIX } from "config";
-import { Photo, Vinyl } from "types";
+import { Photo, Vinyl, VinylColor } from "types";
 import {
   getMusicianStageNameAtTime,
   moveTheSuffixToPrefix,
@@ -13,13 +13,13 @@ interface Options1 {
   hideAppearanceSymbol?: boolean;
   hideGiftSymbol?: boolean;
   showGiftFrom?: boolean;
+  sortByColor?: boolean;
 }
 
-const getVinylPhotoTitle = ({ musician, year, title }: Vinyl): string => {
-  return `${moveTheSuffixToPrefix(
+const getVinylPhotoTitle = ({ musician, year, title }: Vinyl): string =>
+  `${moveTheSuffixToPrefix(
     getMusicianStageNameAtTime({ musician, year })
   )} • ${title}`;
-};
 
 export const mapVinylToPhoto = (vinyl: Vinyl): Photo => {
   const { artwork, appleMusicId } = vinyl;
@@ -30,19 +30,22 @@ export const mapVinylToPhoto = (vinyl: Vinyl): Photo => {
   };
 };
 
-const mapVinylToCard = (vinyl: Vinyl, options?: Options1): CardProps => {
+const mapVinylToCard = (
+  vinyl: Vinyl,
+  {
+    hideAppearanceSymbol,
+    hideGiftSymbol,
+    hideSignedIcon,
+    hideYear,
+    showGiftFrom,
+    sortByColor
+  }: Options1 = {}
+): CardProps => {
   const { signed, gift, title, color, inches, sides, musician, year } = vinyl;
-  const hideSignedIcon: boolean = !!(options && options.hideSignedIcon);
-  const hideAppearanceSymbol: boolean = !!(
-    options && options.hideAppearanceSymbol
-  );
-  const hideGiftSymbol: boolean = !!(options && options.hideGiftSymbol);
-  const showGiftFrom: boolean = !!(options && options.showGiftFrom);
-  const hideYear: boolean = !!(options && options.hideYear);
   return {
     title,
     year,
-    sort: [year],
+    sort: [sortByColor ? getMainVinylColor(color) : year],
     subtitle: getMusicianStageNameAtTime({ musician, year }),
     body: hideYear ? undefined : year.toString(),
     headerPhoto: mapVinylToPhoto(vinyl),
@@ -94,8 +97,12 @@ export const mapVinylsToMiniCardPanelDetails = (
       headerLink: APPLE_MUSIC_URL_PREFIX + appleMusicId
     };
   };
-  return vinyls.map(
-    (vinyl: Vinyl): MiniCardPanelDetailProps =>
-      mapVinylToMiniCardPanelDetail(vinyl)
-  );
+  return vinyls.map(mapVinylToMiniCardPanelDetail);
 };
+
+export const getMainVinylColor = (vinylColor: VinylColor): string =>
+  typeof vinylColor === "string"
+    ? vinylColor
+    : Array.isArray(vinylColor)
+    ? vinylColor[0]
+    : "photo";

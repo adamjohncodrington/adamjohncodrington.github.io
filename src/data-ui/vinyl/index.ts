@@ -16,7 +16,8 @@ export const VINYL = {
   ARTWORK,
   COLORED: mapVinylsToCards(COLORED, {
     hideSignedIcon: true,
-    hideGiftSymbol: true
+    hideGiftSymbol: true,
+    sortByColor: true
   }),
   COSTS,
   GIFTS: mapVinylsToCards(GIFTS, { hideGiftSymbol: true, showGiftFrom: true }),

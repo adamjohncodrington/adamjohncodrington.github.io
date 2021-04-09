@@ -12,8 +12,7 @@ const MUSICIANS: PageSectionProps = {
 const COLORS: PageSectionProps = {
   title: PAGE_SECTION_TITLES.COLORED,
   data: { cards: DATA.COLORED },
-  SvgIcon: SVG.PALETTE,
-  shuffle: true
+  SvgIcon: SVG.PALETTE
 };
 
 const ARTWORK: PageSectionProps = {
