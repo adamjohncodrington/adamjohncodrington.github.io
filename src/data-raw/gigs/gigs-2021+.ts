@@ -74,7 +74,7 @@ export const LANE_8: Gig = {
 export const JON_HOPKINS: Gig = {
   headline: MUSICIANS.JON_HOPKINS,
   venue: VENUES.ROYAL_ALBERT_HALL,
-  date: new Date("2021-11-13"),
+  date: new Date("2021-11-23"),
   company: [TONYA_FRANCE],
   ticketType: TICKET_TYPES.ROYAL_ALBERT_HALL_PDF
 };
