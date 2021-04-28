@@ -74,7 +74,7 @@ export const getSymbols = ({
   if (vinylAppearance) {
     const { color, inches, sides } = vinylAppearance;
 
-    if (color !== COLORS.BLACK || sides > 2) {
+    if (color !== COLORS.BLACK || sides > 2 || inches === 7) {
       const symbolProps = {
         background:
           typeof color === "string"
