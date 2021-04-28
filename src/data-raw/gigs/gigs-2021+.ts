@@ -120,13 +120,12 @@ export const SOPHIE_ELLIS_BEXTOR: Gig = {
   ticketType: TICKET_TYPES.TICKETMASTER_POSTAL
 };
 
-export const CARIBOU: Gig = {
-  headline: MUSICIANS.CARIBOU,
-  venue: VENUES.BRIXTON_ACADEMY,
-  date: new Date("2021-05-10"),
-  company: [DARREN_TAYLOR],
-  ticketType: TICKET_TYPES.TICKETMASTER_ETICKET
-};
+// export const CARIBOU: Gig = {
+//   headline: MUSICIANS.CARIBOU,
+//   venue: VENUES.BRIXTON_ACADEMY,
+//   company: [DARREN_TAYLOR],
+//   ticketType: TICKET_TYPES.TICKETMASTER_ETICKET
+// };
 
 export const RATIONALE: Gig = {
   headline: MUSICIANS.RATIONALE,
