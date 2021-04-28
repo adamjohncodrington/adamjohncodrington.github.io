@@ -158,3 +158,11 @@ export const BAYNK: Gig = {
   company: [DARREN_TAYLOR, JERRY_EDWARDS, LEWIS_STEADMAN],
   ticketType: TICKET_TYPES.GIGS_AND_TOURS_POSTAL
 };
+
+export const LITANY: Gig = {
+  headline: MUSICIANS.LITANY,
+  venue: VENUES.SCALA,
+  date: new Date("2021-09-30"),
+  company: [DARREN_TAYLOR, JERRY_EDWARDS, LEWIS_STEADMAN]
+  // ticketType: TICKET_TYPES.GIGS_AND_TOURS_POSTAL
+};
