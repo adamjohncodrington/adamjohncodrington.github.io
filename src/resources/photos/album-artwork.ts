@@ -86,3 +86,9 @@ export const BON_IVER_FOR_EMMA_FOREVER_AGO: Photo = {
   freeimagehostId: "qBEviG"
 };
 export const ROBYN_HONEY: Photo = { freeimagehostId: "qBEkVs" };
+export const BILLIE_EILISH_HAPPIER_THAN_EVER: Photo = {
+  freeimagehostId: "Bf0LN4"
+};
+export const HOLLY_HUMBERSTONE_HAUNTED_HOUSE: Photo = {
+  freeimagehostId: "Bf0QDl"
+};

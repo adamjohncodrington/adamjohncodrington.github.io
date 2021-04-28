@@ -35,7 +35,7 @@ export type VinylColor = string | [string, string] | { photo: Photo };
 export type VinylAppearance = {
   color: VinylColor;
   inches: 7 | 10 | 12;
-  sides: 2 | 4;
+  sides: 1 | 2 | 4;
 };
 
 export type Vinyl = VinylAppearance & {

@@ -18,3 +18,4 @@ export const BEYONCE_LEMONADE = "#FAF566";
 export const YEARS_AND_YEARS_PALO_SANTO = "#CE2F22";
 export const PARAMORE_AFTER_LAUGHTER = "#DAD5D2";
 export const SOPHIE_OOEPUI = "#B12F1E";
+export const BILLIE_EILISH_HAPPIER_THAN_EVER = "#7F926F";
