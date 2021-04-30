@@ -17,7 +17,6 @@ const PageSectionContainer = styled.section(
     box-shadow: ${boxShadow.light};
     border-radius: ${borderRadius};
     padding: 0 ${padding.horizontal};
-    margin-bottom: ${margin.bottom};
   `
 );
 

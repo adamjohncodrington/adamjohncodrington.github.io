@@ -5,9 +5,13 @@
   > header {
     position: sticky;
     top: 0;
+
+    box-shadow: 0 5px 5px black;
   }
 
   > footer {
+    box-shadow: 0 -5px 5px black;
+
     color: white;
     font-size: 250%;
     font-weight: bold;

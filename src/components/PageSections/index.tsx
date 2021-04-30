@@ -17,6 +17,12 @@ const StyledMain = styled.main(
     column-gap: calc(2 * ${pageMargin});
 
     padding: ${pageMargin} ${pageMargin};
+
+    > * {
+      > *:not(:first-child) {
+        margin-top: calc(2 * ${pageMargin});
+      }
+    }
   `
 );
 

@@ -7,9 +7,13 @@
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  -webkit-box-shadow: 0 5px 5px black;
+          box-shadow: 0 5px 5px black;
 }
 
 #root > footer {
+  -webkit-box-shadow: 0 -5px 5px black;
+          box-shadow: 0 -5px 5px black;
   color: white;
   font-size: 250%;
   font-weight: bold;
