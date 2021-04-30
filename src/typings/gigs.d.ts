@@ -4,6 +4,7 @@ interface IGigOrFestival extends I__Favourite, I_Company {
   photos?: Photo[];
   venue: MusicVenue;
   ticketType?: TicketType;
+  postponedWithNoNewDate?: boolean;
 }
 
 interface IFestivalWithoutVideo extends IGigOrFestival, I_Dates {

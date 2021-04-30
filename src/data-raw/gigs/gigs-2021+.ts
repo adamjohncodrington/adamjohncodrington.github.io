@@ -4,6 +4,7 @@ import {
   TICKET_TYPES,
   MUSIC_VENUES as VENUES
 } from "@constants";
+import { POSTPONED_GIG_DATE } from "config";
 
 const {
   JERRY_EDWARDS,
@@ -14,7 +15,8 @@ const {
   RYAN_MILLS,
   TOM_CHINDA_COUTTS,
   TONYA_FRANCE,
-  HARRIET_BOYLE
+  HARRIET_BOYLE,
+  POPPY_SMITH
 } = FRIENDS;
 
 export const CELESTE: Gig = {
@@ -152,25 +154,38 @@ export const LITANY: Gig = {
   ticketType: TICKET_TYPES.DICE_APP
 };
 
-// export const HOLLY_HUMBERSTONE: Gig = {
-//   headline: MUSICIANS.HOLLY_HUMBERSTONE,
-//   venue: VENUES.OMEARA,
-//   date: new Date("2021-06-10"),
-//   company: [DARREN_TAYLOR],
-//   ticketType: TICKET_TYPES.TICKETWEB
-// };
+export const HOLLY_HUMBERSTONE: Gig = {
+  headline: MUSICIANS.HOLLY_HUMBERSTONE,
+  venue: VENUES.OMEARA,
+  date: POSTPONED_GIG_DATE,
+  company: [DARREN_TAYLOR],
+  ticketType: TICKET_TYPES.TICKETWEB,
+  postponedWithNoNewDate: true
+};
 
-// export const CARIBOU: Gig = {
-//   headline: MUSICIANS.CARIBOU,
-//   venue: VENUES.BRIXTON_ACADEMY,
-//   company: [DARREN_TAYLOR],
-//   ticketType: TICKET_TYPES.TICKETMASTER_ETICKET
-// };
+export const CARIBOU: Gig = {
+  headline: MUSICIANS.CARIBOU,
+  venue: VENUES.BRIXTON_ACADEMY,
+  date: POSTPONED_GIG_DATE,
+  company: [DARREN_TAYLOR],
+  ticketType: TICKET_TYPES.TICKETMASTER_ETICKET,
+  postponedWithNoNewDate: true
+};
 
-// export const SAINT_JHN: Gig = {
-//   headline: MUSICIANS.SAINT_JHN,
-//   venue: VENUES.KENTISH_TOWN_FORUM,
-//   date: new Date("2020-02-24"),
-//   company: [POPPY_SMITH,JERRY_EDWARDS,DARREN_TAYLOR],
-//   ticketType: TICKET_TYPES.SEE_TICKETS_PRINT_AT_HOME
-// };
+export const SAINT_JHN: Gig = {
+  headline: MUSICIANS.SAINT_JHN,
+  venue: VENUES.KENTISH_TOWN_FORUM,
+  date: POSTPONED_GIG_DATE,
+  company: [POPPY_SMITH, JERRY_EDWARDS, DARREN_TAYLOR],
+  ticketType: TICKET_TYPES.SEE_TICKETS_PRINT_AT_HOME,
+  postponedWithNoNewDate: true
+};
+
+export const ALLIE_X_2020: Gig = {
+  headline: MUSICIANS.ALLIE_X,
+  venue: VENUES.HEAVEN,
+  date: POSTPONED_GIG_DATE,
+  company: [FRIENDS.DARREN_TAYLOR],
+  ticketType: TICKET_TYPES.DICE_APP,
+  postponedWithNoNewDate: true
+};

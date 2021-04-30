@@ -7,7 +7,15 @@ import {
 } from "utils";
 
 const mapMusicEventToCard = (musicEvent: MusicEvent): CardProps => {
-  const { venue, dates, ticketType, company, video, photos } = musicEvent;
+  const {
+    venue,
+    dates,
+    ticketType,
+    company,
+    video,
+    photos,
+    postponedWithNoNewDate
+  } = musicEvent;
   return {
     ...musicEvent,
     year: dates[0].getFullYear(),
@@ -16,10 +24,10 @@ const mapMusicEventToCard = (musicEvent: MusicEvent): CardProps => {
       company,
       photos,
       video,
-      date: dates[0]
+      date: postponedWithNoNewDate ? undefined : dates[0]
     }),
     body: venue.name,
-    secondaryBody: getDatesText(dates),
+    secondaryBody: postponedWithNoNewDate ? undefined : getDatesText(dates),
     disclaimer: isInFuture(dates[0]) ? ticketType : undefined
   };
 };

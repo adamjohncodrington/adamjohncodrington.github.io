@@ -10,40 +10,40 @@ const getFriendMatches = (friend: Friend): MusicEvent[] =>
     []
   );
 
+const mapMusicEventToMiniCardPanelDetail = ({
+  title,
+  dates,
+  video,
+  favourite
+}: MusicEvent): MiniCardPanelDetailProps => ({
+  mainText: [title],
+  sort: [dates[0]],
+  dates,
+  favourite,
+  video
+});
+
 const getFriendDetails = (friend: Friend): MiniCardPanelDetailProps[] =>
-  getFriendMatches(friend).map(
-    ({
-      title,
-      dates,
-      video,
-      favourite
-    }: MusicEvent): MiniCardPanelDetailProps => ({
-      mainText: [title],
-      sort: [dates[0]],
-      dates,
-      favourite,
-      video
-    })
-  );
+  getFriendMatches(friend).map(mapMusicEventToMiniCardPanelDetail);
+
+const mapFriendToMiniCard = (friend: Friend): MiniCardProps => {
+  const {
+    pastCount: primaryCount,
+    futureCount: secondaryCount
+  } = getItemCounts({
+    item: { friend },
+    data: { musicEvents: DATA }
+  });
+  return {
+    primaryText: friend.name,
+    primaryCount,
+    secondaryCount,
+    sort: [-primaryCount, -secondaryCount],
+    greaterCountPadding: true,
+    details: getFriendDetails(friend)
+  };
+};
 
 export const WITH: MiniCardProps[] = Object.values(friends)
   .filter(({ gigs }: Friend): boolean => !!gigs)
-  .map(
-    (friend: Friend): MiniCardProps => {
-      const {
-        pastCount: primaryCount,
-        futureCount: secondaryCount
-      } = getItemCounts({
-        item: { friend },
-        data: { musicEvents: DATA }
-      });
-      return {
-        primaryText: friend.name,
-        primaryCount,
-        secondaryCount,
-        sort: [-primaryCount, -secondaryCount],
-        greaterCountPadding: true,
-        details: getFriendDetails(friend)
-      };
-    }
-  );
+  .map(mapFriendToMiniCard);

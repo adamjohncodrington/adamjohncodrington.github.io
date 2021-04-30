@@ -10,37 +10,39 @@ const getFestivalMatches = (festivalTitle: FestivalTitle): Festival[] =>
     []
   );
 
+const mapFestivalToMiniCardPanelDetail = (
+  festival: Festival
+): MiniCardPanelDetailProps => {
+  const { dates, video } = festival;
+  return {
+    sort: [dates[0].valueOf()],
+    mainText: [getFestivalSubtitle(festival) || "TBC"],
+    dates,
+    video
+  };
+};
+
 const getFestivalDetails = (musician: Musician): MiniCardPanelDetailProps[] =>
-  getFestivalMatches(musician).map(
-    (festival: Festival): MiniCardPanelDetailProps => {
-      const { dates, video } = festival;
-      return {
-        sort: [dates[0].valueOf()],
-        mainText: [getFestivalSubtitle(festival) || "TBC"],
-        dates,
-        video
-      };
-    }
-  );
+  getFestivalMatches(musician).map(mapFestivalToMiniCardPanelDetail);
+
+const mapFestivalToMiniCard = (festival: FestivalTitle): MiniCardProps => {
+  const { name } = festival;
+  const {
+    pastCount: primaryCount,
+    futureCount: secondaryCount
+  } = getItemCounts({
+    item: { festival },
+    data: { festivals: DATA }
+  });
+  return {
+    primaryText: name,
+    sort: [name],
+    primaryCount,
+    secondaryCount,
+    details: getFestivalDetails(festival)
+  };
+};
 
 export const FESTIVALS: MiniCardProps[] = Object.values(festivals)
   .filter(({ insignificant }: FestivalTitle): boolean => !insignificant)
-  .map(
-    (festival: FestivalTitle): MiniCardProps => {
-      const { name } = festival;
-      const {
-        pastCount: primaryCount,
-        futureCount: secondaryCount
-      } = getItemCounts({
-        item: { festival },
-        data: { festivals: DATA }
-      });
-      return {
-        primaryText: name,
-        sort: [name],
-        primaryCount,
-        secondaryCount,
-        details: getFestivalDetails(festival)
-      };
-    }
-  );
+  .map(mapFestivalToMiniCard);

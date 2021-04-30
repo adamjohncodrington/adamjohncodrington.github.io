@@ -12,3 +12,5 @@ export const FREE_IMAGE_HOST_URL_PREFIX: string = "https://iili.io/";
 export const INCLUDE_VINYL_WISH_LIST_BACKLOG: boolean = false;
 
 export const SFW_MODE: boolean = true;
+
+export const POSTPONED_GIG_DATE = new Date("2095-01-01");

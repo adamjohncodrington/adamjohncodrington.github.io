@@ -51,26 +51,28 @@ const getMusicianDetails = (musician: Musician): MiniCardPanelDetailProps[] =>
     })
   );
 
+const mapMusicianToMiniCard = (musician: Musician): MiniCardProps => {
+  const { name, previousStageName, noLongerExists } = musician;
+  const details: MiniCardPanelDetailProps[] = getMusicianDetails(musician);
+  const {
+    pastCount: primaryCount,
+    futureCount: secondaryCount
+  } = getItemCounts({
+    item: { musician },
+    data: { musicEvents: DATA }
+  });
+  return {
+    primaryText: name,
+    primaryTextAlt: previousStageName && previousStageName.name,
+    sort: [name],
+    favourite: detailsContainsFavourite(details),
+    primaryCount,
+    secondaryCount,
+    noLongerExists,
+    details
+  };
+};
+
 export const MUSICIANS: MiniCardProps[] = Object.values(musicians).map(
-  (musician: Musician): MiniCardProps => {
-    const { name, previousStageName, noLongerExists } = musician;
-    const details: MiniCardPanelDetailProps[] = getMusicianDetails(musician);
-    const {
-      pastCount: primaryCount,
-      futureCount: secondaryCount
-    } = getItemCounts({
-      item: { musician },
-      data: { musicEvents: DATA }
-    });
-    return {
-      primaryText: name,
-      primaryTextAlt: previousStageName && previousStageName.name,
-      sort: [name],
-      favourite: detailsContainsFavourite(details),
-      primaryCount,
-      secondaryCount,
-      noLongerExists,
-      details
-    };
-  }
+  mapMusicianToMiniCard
 );

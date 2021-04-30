@@ -9,35 +9,41 @@ const getMusicVenueMatches = (musicVenue: MusicVenue): MusicEvent[] =>
     []
   );
 
+const mapMusicEventToMiniCardPanelDetail = ({
+  title,
+  dates,
+  video
+}: MusicEvent): MiniCardPanelDetailProps => ({
+  mainText: [title],
+  dates,
+  sort: [dates[0]],
+  video
+});
+
 const getMusicVenueDetails = (
   musicVenue: MusicVenue
 ): MiniCardPanelDetailProps[] =>
-  getMusicVenueMatches(musicVenue).map(
-    ({ title, dates, video }: MusicEvent): MiniCardPanelDetailProps => ({
-      mainText: [title],
-      dates,
-      sort: [dates[0]],
-      video
-    })
-  );
+  getMusicVenueMatches(musicVenue).map(mapMusicEventToMiniCardPanelDetail);
+
+const mapMusicVenueToMiniCard = (musicVenue: MusicVenue): MiniCardProps => {
+  const { name, favourite } = musicVenue;
+  const {
+    pastCount: primaryCount,
+    futureCount: secondaryCount
+  } = getItemCounts({
+    item: { musicVenue },
+    data: { musicEvents: DATA }
+  });
+  return {
+    primaryText: name,
+    sort: [name],
+    favourite,
+    primaryCount,
+    secondaryCount,
+    details: getMusicVenueDetails(musicVenue)
+  };
+};
 
 export const VENUES: MiniCardProps[] = Object.values(venues).map(
-  (musicVenue: MusicVenue): MiniCardProps => {
-    const { name, favourite } = musicVenue;
-    const {
-      pastCount: primaryCount,
-      futureCount: secondaryCount
-    } = getItemCounts({
-      item: { musicVenue },
-      data: { musicEvents: DATA }
-    });
-    return {
-      primaryText: name,
-      sort: [name],
-      favourite,
-      primaryCount,
-      secondaryCount,
-      details: getMusicVenueDetails(musicVenue)
-    };
-  }
+  mapMusicVenueToMiniCard
 );
