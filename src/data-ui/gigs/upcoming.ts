@@ -8,9 +8,9 @@ const futureGigs: MusicEvent[] = DATA.filter(({ dates }: MusicEvent): boolean =>
 );
 
 export const UP_NEXT: CardProps[] = mapMusicEventsToCards(
-  futureGigs.filter(gig => !gig.postponedWithNoNewDate)
+  futureGigs.filter(({ postponedWithNoNewDate }) => !postponedWithNoNewDate)
 );
 
 export const POSTPONED: CardProps[] = mapMusicEventsToCards(
-  DATA.filter(gig => gig.postponedWithNoNewDate)
+  DATA.filter(({ postponedWithNoNewDate }) => !!postponedWithNoNewDate)
 );

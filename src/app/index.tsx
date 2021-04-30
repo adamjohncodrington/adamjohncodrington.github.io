@@ -16,6 +16,7 @@ export const App: FC = () => (
             <main>
               <PageSections sections={sections} />
             </main>
+            <footer>ajc</footer>
           </Route>
         )
       )}

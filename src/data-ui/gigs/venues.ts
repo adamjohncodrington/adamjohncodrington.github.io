@@ -12,10 +12,12 @@ const getMusicVenueMatches = (musicVenue: MusicVenue): MusicEvent[] =>
 const mapMusicEventToMiniCardPanelDetail = ({
   title,
   dates,
-  video
+  video,
+  postponedWithNoNewDate
 }: MusicEvent): MiniCardPanelDetailProps => ({
   mainText: [title],
   dates,
+  dateTBA: postponedWithNoNewDate,
   sort: [dates[0]],
   video
 });

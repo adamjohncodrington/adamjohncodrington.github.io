@@ -38,8 +38,7 @@ const FAVOURITES: PageSectionProps = {
   SvgIcon: SVG.HEART,
   shuffle: true,
   title: PAGE_SECTION_TITLES.FAVOURITES,
-  data: { cards: DATA.FAVOURITES },
-  hide: true
+  data: { cards: DATA.FAVOURITES }
 };
 
 const PHOTOS: PageSectionProps = {
@@ -58,7 +57,8 @@ const UP_NEXT: PageSectionProps = {
 const POSTPONED: PageSectionProps = {
   title: PAGE_SECTION_TITLES.POSTPONED,
   data: { cards: DATA.POSTPONED },
-  count: DATA.POSTPONED.length
+  count: DATA.POSTPONED.length,
+  SvgIcon: SVG.CLOCK
 };
 
 const VENUES: PageSectionProps = {

@@ -18,6 +18,7 @@ export const MiniCardPanelDetailHeader: FC<IMiniCardPanelDetailHeader> = ({
   index,
   mainText,
   dates,
+  dateTBA,
   favourite,
   headerLink,
   secondaryText,
@@ -50,11 +51,8 @@ export const MiniCardPanelDetailHeader: FC<IMiniCardPanelDetailHeader> = ({
             `}
           >
             <StyledPanelSecondaryText favourite={favourite}>
-              {secondaryText
-                ? secondaryText
-                : dates
-                ? getDatesText(dates)
-                : year}
+              {secondaryText ||
+                (dateTBA ? "" : dates ? getDatesText(dates) : year)}
             </StyledPanelSecondaryText>
 
             {panelExists && (

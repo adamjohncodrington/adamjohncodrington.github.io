@@ -13,6 +13,7 @@ export { ReactComponent as CAMERA } from "./camera.svg";
 export { ReactComponent as CHEF_HAT } from "./chef-hat.svg";
 export { ReactComponent as CITY } from "./city.svg";
 export { ReactComponent as CLOCHE } from "./cloche.svg";
+export { ReactComponent as CLOCK } from "./clock.svg";
 export { ReactComponent as CUTLERY } from "./cutlery-2.svg";
 // D
 export { ReactComponent as DANCER_BALLET } from "./dancer-ballet.svg";

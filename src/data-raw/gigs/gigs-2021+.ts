@@ -176,7 +176,7 @@ export const SAINT_JHN: Gig = {
   headline: MUSICIANS.SAINT_JHN,
   venue: VENUES.KENTISH_TOWN_FORUM,
   date: POSTPONED_GIG_DATE,
-  company: [POPPY_SMITH, JERRY_EDWARDS, DARREN_TAYLOR],
+  company: [POPPY_SMITH, JERRY_EDWARDS, LEWIS_STEADMAN],
   ticketType: TICKET_TYPES.SEE_TICKETS_PRINT_AT_HOME,
   postponedWithNoNewDate: true
 };

@@ -14,10 +14,12 @@ const mapMusicEventToMiniCardPanelDetail = ({
   title,
   dates,
   video,
-  favourite
+  favourite,
+  postponedWithNoNewDate
 }: MusicEvent): MiniCardPanelDetailProps => ({
   mainText: [title],
   sort: [dates[0]],
+  dateTBA: postponedWithNoNewDate,
   dates,
   favourite,
   video

@@ -24,6 +24,7 @@ interface MiniCardPanelDetailProps extends I_Sort, I__Favourite, I__Video {
   mainText: string[];
   secondaryText?: string;
   dates?: Date[];
+  dateTBA?: boolean;
   index?: number;
   headerLink?: string;
   year?: number;

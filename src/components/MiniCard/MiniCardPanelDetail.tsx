@@ -9,8 +9,9 @@ import { MiniCardPanelDetailPanel } from "./MiniCardPanelDetailPanel";
 import { StyledLi } from "./styles";
 
 export const MiniCardPanelDetail: FC<MiniCardPanelDetailProps> = props => {
-  const { index, dates, video } = props;
-  const isInFuture: boolean = !!(dates && isInFutureUtil(dates[0]));
+  const { index, dates, video, dateTBA } = props;
+  const isInFuture: boolean =
+    !!(dates && isInFutureUtil(dates[0])) || !!dateTBA;
   const panelExists: boolean = !!video;
 
   return (
