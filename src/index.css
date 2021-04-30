@@ -3,9 +3,21 @@
   margin: 0 auto;
 }
 
-#root header {
+#root > header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+}
+
+#root > footer {
+  color: white;
+  font-size: 250%;
+  font-weight: bold;
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  background-color: black;
+  text-align: center;
+  padding: 0.5rem;
 }
 /*# sourceMappingURL=index.css.map */
