@@ -92,3 +92,4 @@ export const BILLIE_EILISH_HAPPIER_THAN_EVER: Photo = {
 export const HOLLY_HUMBERSTONE_HAUNTED_HOUSE: Photo = {
   freeimagehostId: "Bf0QDl"
 };
+export const GIRL_IN_RED_IICMIGQ: Photo = { freeimagehostId: "BBtK9S" };

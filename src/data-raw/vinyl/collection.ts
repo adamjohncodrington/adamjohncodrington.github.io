@@ -849,3 +849,18 @@ export const HOLLY_HUMBERSTONE_HAUNTED_HOUSE: Vinyl = {
   year: 2021,
   title: "Haunted House"
 };
+
+export const GIRL_IN_RED_IICMIGQ: Vinyl = {
+  musician: MUSICIANS.GIRL_IN_RED,
+  sides: 2,
+  inches: 12,
+  retailer: RETAILERS.ROUGH_TRADE_EAST,
+  signed: false,
+  color: COLORS.VINYL.GIRL_IN_RED_IICMIGQ,
+  costExcDelivery: 19.99,
+  year: 2021,
+  title: "if i could make it go quiet",
+  appleMusicId: "if-i-could-make-it-go-quiet/1547248211",
+  artwork: ARTWORK.GIRL_IN_RED_IICMIGQ,
+  purchaseCondition: "new"
+};

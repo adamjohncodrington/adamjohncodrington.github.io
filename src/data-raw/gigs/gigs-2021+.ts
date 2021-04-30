@@ -47,14 +47,6 @@ export const RINA_SAWAYAMA: Gig = {
   company: [DARREN_TAYLOR]
 };
 
-export const HOLLY_HUMBERSTONE: Gig = {
-  headline: MUSICIANS.HOLLY_HUMBERSTONE,
-  venue: VENUES.OMEARA,
-  date: new Date("2021-06-10"),
-  company: [DARREN_TAYLOR],
-  ticketType: TICKET_TYPES.TICKETWEB
-};
-
 export const DAGNY: Gig = {
   headline: MUSICIANS.DAGNY,
   venue: VENUES.LAFAYETTE,
@@ -120,13 +112,6 @@ export const SOPHIE_ELLIS_BEXTOR: Gig = {
   ticketType: TICKET_TYPES.TICKETMASTER_POSTAL
 };
 
-// export const CARIBOU: Gig = {
-//   headline: MUSICIANS.CARIBOU,
-//   venue: VENUES.BRIXTON_ACADEMY,
-//   company: [DARREN_TAYLOR],
-//   ticketType: TICKET_TYPES.TICKETMASTER_ETICKET
-// };
-
 export const RATIONALE: Gig = {
   headline: MUSICIANS.RATIONALE,
   venue: VENUES.SHEPHERDS_BUSH_EMPIRE,
@@ -163,6 +148,29 @@ export const LITANY: Gig = {
   headline: MUSICIANS.LITANY,
   venue: VENUES.SCALA,
   date: new Date("2021-09-30"),
-  company: [DARREN_TAYLOR, JERRY_EDWARDS, LEWIS_STEADMAN]
-  // ticketType: TICKET_TYPES.GIGS_AND_TOURS_POSTAL
+  company: [DARREN_TAYLOR, JERRY_EDWARDS, LEWIS_STEADMAN],
+  ticketType: TICKET_TYPES.DICE_APP
 };
+
+// export const HOLLY_HUMBERSTONE: Gig = {
+//   headline: MUSICIANS.HOLLY_HUMBERSTONE,
+//   venue: VENUES.OMEARA,
+//   date: new Date("2021-06-10"),
+//   company: [DARREN_TAYLOR],
+//   ticketType: TICKET_TYPES.TICKETWEB
+// };
+
+// export const CARIBOU: Gig = {
+//   headline: MUSICIANS.CARIBOU,
+//   venue: VENUES.BRIXTON_ACADEMY,
+//   company: [DARREN_TAYLOR],
+//   ticketType: TICKET_TYPES.TICKETMASTER_ETICKET
+// };
+
+// export const SAINT_JHN: Gig = {
+//   headline: MUSICIANS.SAINT_JHN,
+//   venue: VENUES.KENTISH_TOWN_FORUM,
+//   date: new Date("2020-02-24"),
+//   company: [POPPY_SMITH,JERRY_EDWARDS,DARREN_TAYLOR],
+//   ticketType: TICKET_TYPES.SEE_TICKETS_PRINT_AT_HOME
+// };

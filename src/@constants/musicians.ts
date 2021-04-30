@@ -11,6 +11,7 @@ export const WINONA_OAK: Musician = { name: "Winona Oak" };
 export const HONNE: Musician = { name: "HONNE" };
 export const BEKA: Musician = { name: "BEKA" };
 export const DAGNY: Musician = { name: "Dagny" };
+export const GIRL_IN_RED: Musician = { name: "girl in red" };
 export const ALEX_CHAPMAN: Musician = { name: "Alex Chapman" };
 export const ALL_AMERICAN_REJECTS_THE: Musician = {
   name: "All-American Rejects, The"
