@@ -864,3 +864,18 @@ export const GIRL_IN_RED_IICMIGQ: Vinyl = {
   artwork: ARTWORK.GIRL_IN_RED_IICMIGQ,
   purchaseCondition: "new"
 };
+
+export const FOUR_TET_NEW_ENERGY: Vinyl = {
+  musician: MUSICIANS.FOUR_TET,
+  sides: 4,
+  inches: 12,
+  signed: false,
+  retailer: RETAILERS.AUDIO_GOLD,
+  color: BLACK,
+  costExcDelivery: 22,
+  year: 2017,
+  title: "New Energy",
+  purchaseCondition: "mint",
+  appleMusicId: "new-energy/1288517633",
+  artwork: ARTWORK.FOUR_TET_NEW_ENERGY
+};

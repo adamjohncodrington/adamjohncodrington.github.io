@@ -8,6 +8,7 @@ export const RECORDSTORE_ONLINE: Retailer = {
   name: "Recordstore.co.uk",
   online: true
 };
+export const AUDIO_GOLD: Retailer = { name: "Audio Gold", online: false };
 export const BANQUET_RECORDS: Retailer = {
   name: "Banquet Records",
   online: true
