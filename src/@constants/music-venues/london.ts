@@ -29,6 +29,7 @@ export const ISLINGTON_ASSEMBLY_HALL: MusicVenue = {
   name: "Islington Assembly Hall",
   favourite: true
 };
+export const ISLINGTON_ACADEMY: MusicVenue = { name: "Islington Academy" };
 export const KENTISH_TOWN_FORUM: MusicVenue = { name: "Kentish Town Forum" };
 export const KOKO: MusicVenue = { name: "Koko", favourite: true };
 export const LAFAYETTE: MusicVenue = { name: "Lafayette" };

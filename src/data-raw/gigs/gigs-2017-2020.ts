@@ -582,7 +582,7 @@ export const CAROLINE_POLACHEK_2020: Gig = {
   ticketType: TICKET_TYPES.DICE_APP
 };
 
-export const GRACEY: Gig = {
+export const GRACEY_2020: Gig = {
   headline: MUSICIANS.GRACEY,
   venue: MUSIC_VENUES.LAYLOW,
   video: VIDEOS.GIGS.GRACEY,

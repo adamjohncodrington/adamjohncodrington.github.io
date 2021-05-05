@@ -1,4 +1,5 @@
 export const AXS_MOBILE_APP: TicketType = "AXS app ticket";
+export const AXS_POSTAL: TicketType = "AXS postal ticket";
 export const DICE_APP: TicketType = "Dice app ticket";
 export const DICE_POSTAL: TicketType = "Dice postal ticket";
 export const GIGS_AND_TOURS_POSTAL: TicketType = "Gigs and Tours postal ticket";
