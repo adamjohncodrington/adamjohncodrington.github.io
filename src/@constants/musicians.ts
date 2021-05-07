@@ -360,10 +360,7 @@ export const ARLO_PARKS: Musician = { name: "Arlo Parks" };
 export const SAMIA: Musician = { name: "Samia" };
 export const LASTLINGS: Musician = { name: "Lastlings" };
 export const SISTER_SLEDGE: Musician = { name: "Sister Sledge" };
-export const SKY_FERREIRA: Musician = {
-  name: "Sky Ferreira",
-  favourite: true
-};
+export const SKY_FERREIRA: Musician = { name: "Sky Ferreira", favourite: true };
 export const KING_PRINCESS: Musician = { name: "King Princess" };
 export const SODY: Musician = { name: "Sody" };
 export const SLIIMY: Musician = { name: "Sliimy" };
