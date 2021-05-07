@@ -73,15 +73,6 @@ export const JON_HOPKINS: Gig = {
   ticketType: TICKET_TYPES.ROYAL_ALBERT_HALL_PDF
 };
 
-export const HAIM: Gig = {
-  headline: MUSICIANS.HAIM,
-  support: [MUSICIANS.GEORGIA],
-  venue: VENUES.O2_THE,
-  date: new Date("2021-06-18"),
-  company: [DARREN_TAYLOR, LEWIS_STEADMAN, JERRY_EDWARDS],
-  ticketType: TICKET_TYPES.AXS_MOBILE_APP
-};
-
 export const JESSIE_WARE: Gig = {
   headline: MUSICIANS.JESSIE_WARE,
   venue: VENUES.BRIXTON_ACADEMY,
@@ -122,14 +113,6 @@ export const RATIONALE: Gig = {
   ticketType: TICKET_TYPES.SEE_TICKETS_POSTAL
 };
 
-export const GRIFF: Gig = {
-  headline: MUSICIANS.GRIFF,
-  venue: VENUES.HEAVEN,
-  date: new Date("2021-10-27"),
-  company: [DARREN_TAYLOR, JERRY_EDWARDS],
-  ticketType: TICKET_TYPES.SEE_TICKETS_POSTAL
-};
-
 export const JUNGLE: Gig = {
   headline: MUSICIANS.JUNGLE,
   venue: VENUES.BRIXTON_ACADEMY,
@@ -144,14 +127,6 @@ export const BAYNK: Gig = {
   date: new Date("2021-11-19"),
   company: [DARREN_TAYLOR, JERRY_EDWARDS, LEWIS_STEADMAN],
   ticketType: TICKET_TYPES.GIGS_AND_TOURS_POSTAL
-};
-
-export const LITANY: Gig = {
-  headline: MUSICIANS.LITANY,
-  venue: VENUES.SCALA,
-  date: new Date("2021-09-30"),
-  company: [DARREN_TAYLOR, JERRY_EDWARDS, LEWIS_STEADMAN],
-  ticketType: TICKET_TYPES.DICE_APP
 };
 
 export const HOLLY_HUMBERSTONE: Gig = {
@@ -185,7 +160,49 @@ export const ALLIE_X_2020: Gig = {
   headline: MUSICIANS.ALLIE_X,
   venue: VENUES.HEAVEN,
   date: POSTPONED_GIG_DATE,
-  company: [FRIENDS.DARREN_TAYLOR],
+  company: [DARREN_TAYLOR],
   ticketType: TICKET_TYPES.DICE_APP,
   postponedWithNoNewDate: true
+};
+
+export const GRACEY_2021: Gig = {
+  headline: MUSICIANS.GRACEY,
+  venue: VENUES.ISLINGTON_ACADEMY,
+  date: new Date("2021-09-28"),
+  company: [DARREN_TAYLOR, LEWIS_STEADMAN, JERRY_EDWARDS],
+  ticketType: TICKET_TYPES.AXS_POSTAL
+};
+
+export const HAIM: Gig = {
+  headline: MUSICIANS.HAIM,
+  support: [MUSICIANS.GEORGIA],
+  venue: VENUES.O2_THE,
+  date: new Date("2021-09-30"),
+  company: [DARREN_TAYLOR, LEWIS_STEADMAN, JERRY_EDWARDS],
+  ticketType: TICKET_TYPES.AXS_MOBILE_APP
+};
+
+export const LITANY: Gig = {
+  headline: MUSICIANS.LITANY,
+  venue: VENUES.SCALA,
+  date: new Date("2021-09-30"),
+  company: [DARREN_TAYLOR, JERRY_EDWARDS, LEWIS_STEADMAN],
+  ticketType: TICKET_TYPES.DICE_APP
+};
+
+export const GRIFF: Gig = {
+  headline: MUSICIANS.GRIFF,
+  venue: VENUES.HEAVEN,
+  date: new Date("2021-10-27"),
+  company: [DARREN_TAYLOR, JERRY_EDWARDS],
+  ticketType: TICKET_TYPES.SEE_TICKETS_POSTAL
+};
+
+export const CAROLINE_POLACHEK_2021: Gig = {
+  headline: MUSICIANS.CAROLINE_POLACHEK,
+  support: [MUSICIANS.OKLOU],
+  venue: VENUES.ROUNDHOUSE,
+  date: new Date("2021-10-28"),
+  company: [LEWIS_STEADMAN, JERRY_EDWARDS],
+  ticketType: TICKET_TYPES.DICE_APP
 };

@@ -208,6 +208,7 @@ export const FOREVER_THE_SICKEST_KIDS: Musician = {
 export const SG_LEWIS: Musician = { name: "SG Lewis" };
 export const FOURS: Musician = { name: "Fours" };
 export const FOUR_TET: Musician = { name: "Four Tet" };
+export const OKLOU: Musician = { name: "Oklou" };
 export const FOXES: Musician = { name: "Foxes" };
 export const FRANCES: Musician = { name: "Frances" };
 export const FRANCIS_AND_THE_LIGHTS: Musician = {
