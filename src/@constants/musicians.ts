@@ -368,6 +368,7 @@ export const SODY: Musician = { name: "Sody" };
 export const SLIIMY: Musician = { name: "Sliimy" };
 export const SOFI_TUKKER: Musician = { name: "Sofi Tukker" };
 export const SOAK: Musician = { name: "SOAK" };
+export const KUCKA: Musician = { name: "Kučka" };
 export const LOVA: Musician = { name: "LOVA" };
 export const ELIO: Musician = { name: "ELIO" };
 export const BIRDY: Musician = { name: "Birdy" };
