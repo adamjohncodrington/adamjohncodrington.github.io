@@ -9,6 +9,7 @@ export const BRIXTON_ACADEMY: MusicVenue = {
 };
 export const BROCKWELL_PARK: MusicVenue = { name: "Brockwell Park" };
 export const CAMDEN_ASSEMBLY: MusicVenue = { name: "Camden Assembly" };
+export const COLOURS_HOXTON: MusicVenue = { name: "Colours Hoxton" };
 export const CORSICA_STUDIOS: MusicVenue = { name: "Corsica Studios" };
 export const COURTYARD_THEATRE: MusicVenue = { name: "Courtyard Theatre" };
 export const DINGWALLS: MusicVenue = { name: "Dingwalls" };

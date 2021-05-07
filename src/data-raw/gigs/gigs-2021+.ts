@@ -206,3 +206,11 @@ export const CAROLINE_POLACHEK_2021: Gig = {
   company: [LEWIS_STEADMAN, JERRY_EDWARDS],
   ticketType: TICKET_TYPES.DICE_APP
 };
+
+export const BEKA_2021: Gig = {
+  headline: MUSICIANS.BEKA,
+  venue: VENUES.COLOURS_HOXTON,
+  date: new Date("2021-10-29"),
+  company: [DARREN_TAYLOR],
+  ticketType: TICKET_TYPES.TICKETWEB
+};
