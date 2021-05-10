@@ -5,4 +5,6 @@ const favourites: MusicEvent[] = DATA.filter(
   ({ favourite }: MusicEvent): boolean => !!favourite
 );
 
-export const FAVOURITES: CardProps[] = mapMusicEventsToCards(favourites);
+export const FAVOURITES: CardProps[] = mapMusicEventsToCards(favourites, {
+  hideFavouriteHeart: true
+});

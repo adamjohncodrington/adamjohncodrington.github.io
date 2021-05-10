@@ -6,34 +6,39 @@ import {
   isInFuture
 } from "utils";
 
-const mapMusicEventToCard = (musicEvent: MusicEvent): CardProps => {
-  const {
-    venue,
-    dates,
-    ticketType,
-    company,
-    video,
-    photos,
-    postponedWithNoNewDate
-  } = musicEvent;
-  return {
-    ...musicEvent,
-    year: dates[0].getFullYear(),
-    sort: [dates[0].valueOf()],
-    symbols: getSymbols({
-      company,
-      photos,
-      video,
-      date: postponedWithNoNewDate ? undefined : dates[0]
-    }),
-    body: venue.name,
-    secondaryBody: postponedWithNoNewDate ? undefined : getDatesText(dates),
-    disclaimer: isInFuture(dates[0]) ? ticketType : undefined
-  };
-};
-
-export const mapMusicEventsToCards = (musicEvents: MusicEvent[]): CardProps[] =>
-  musicEvents.map(mapMusicEventToCard);
+export const mapMusicEventsToCards = (
+  musicEvents: MusicEvent[],
+  { hideFavouriteHeart }: { hideFavouriteHeart?: boolean } = {}
+): CardProps[] =>
+  musicEvents.map(
+    (musicEvent: MusicEvent): CardProps => {
+      const {
+        venue,
+        dates,
+        ticketType,
+        company,
+        favourite,
+        video,
+        photos,
+        postponedWithNoNewDate
+      } = musicEvent;
+      return {
+        ...musicEvent,
+        favourite: hideFavouriteHeart ? undefined : favourite,
+        year: dates[0].getFullYear(),
+        sort: [dates[0].valueOf()],
+        symbols: getSymbols({
+          company,
+          photos,
+          video,
+          date: postponedWithNoNewDate ? undefined : dates[0]
+        }),
+        body: venue.name,
+        secondaryBody: postponedWithNoNewDate ? undefined : getDatesText(dates),
+        disclaimer: isInFuture(dates[0]) ? ticketType : undefined
+      };
+    }
+  );
 
 const mapGigVideoToCard = ({
   date,
