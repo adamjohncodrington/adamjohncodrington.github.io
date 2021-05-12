@@ -44,6 +44,7 @@ export const SEVDALIZA: Gig = {
 
 export const RINA_SAWAYAMA: Gig = {
   headline: MUSICIANS.RINA_SAWAYAMA,
+  support: [MUSICIANS.HANA],
   venue: VENUES.ELECTRIC_BRIXTON,
   date: new Date("2021-11-16"),
   company: [DARREN_TAYLOR]
@@ -180,14 +181,6 @@ export const HAIM: Gig = {
   date: new Date("2021-09-30"),
   company: [DARREN_TAYLOR, LEWIS_STEADMAN, JERRY_EDWARDS],
   ticketType: TICKET_TYPES.AXS_MOBILE_APP
-};
-
-export const LITANY: Gig = {
-  headline: MUSICIANS.LITANY,
-  venue: VENUES.SCALA,
-  date: new Date("2021-09-30"),
-  company: [DARREN_TAYLOR, JERRY_EDWARDS, LEWIS_STEADMAN],
-  ticketType: TICKET_TYPES.DICE_APP
 };
 
 export const GRIFF: Gig = {

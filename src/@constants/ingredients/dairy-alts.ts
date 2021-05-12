@@ -1,7 +1,7 @@
 import * as MEASUREMENTS from "../measurements";
 
 export const BUTTER_VEGAN: IInventoryIngredient = {
-  displayText: "Flora Buttery",
+  displayText: "vegan butter",
   knownCost: { quantity: 500, measurement: MEASUREMENTS.GRAM, price: 2 }
 };
 
