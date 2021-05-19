@@ -44,7 +44,3 @@
 - review whether parents or children should be styling the children across whole site
 - move `BasicListItemPanel` style values to theme??
 - review semantics of page structure, landmarks, accessibility, etc.
-
-## Testing
-
-- add tests for more utils
