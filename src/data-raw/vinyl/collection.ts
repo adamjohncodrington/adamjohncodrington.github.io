@@ -865,6 +865,22 @@ export const GIRL_IN_RED_IICMIGQ: Vinyl = {
   purchaseCondition: "new"
 };
 
+export const GRIFF_OFIFOTO: Vinyl = {
+  musician: MUSICIANS.GRIFF,
+  title: "One Foot in Front of the Other",
+  purchaseCondition: "new",
+  //TODO: confirm inches
+  inches: 12,
+  sides: 2,
+  color: CLEAR,
+  year: 2021,
+  costExcDelivery: 16.99,
+  retailer: RETAILERS.ROUGH_TRADE_EAST,
+  signed: false,
+  appleMusicId: "one-foot-in-front-of-the-other/1558154782",
+  artwork: ARTWORK.GRIFF_OFIFOTO
+};
+
 export const FOUR_TET_NEW_ENERGY: Vinyl = {
   musician: MUSICIANS.FOUR_TET,
   sides: 4,

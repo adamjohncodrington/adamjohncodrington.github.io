@@ -74,6 +74,9 @@ export const SMITHS_HATFUL_OF_HOLLOW: Photo = { freeimagehostId: "2V5tna" };
 export const FLEETWOOD_MAC_TANGO_IN_THE_NIGHT: Photo = {
   freeimagehostId: "2V5b6v"
 };
+
+export const GRIFF_OFIFOTO: Photo = { freeimagehostId: "BwJSYG" };
+
 export const JESSIE_WARE_WHATS_YOUR_PLEASURE: Photo = {
   freeimagehostId: "2V5DMJ"
 };
