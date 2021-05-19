@@ -874,9 +874,9 @@ export const GRIFF_OFIFOTO: Vinyl = {
   sides: 2,
   color: CLEAR,
   year: 2021,
-  costExcDelivery: 16.99,
-  retailer: RETAILERS.ROUGH_TRADE_EAST,
-  signed: false,
+  costExcDelivery: 14.99,
+  retailer: RETAILERS.MUSICIAN_WEB_STORE,
+  signed: true,
   appleMusicId: "one-foot-in-front-of-the-other/1558154782",
   artwork: ARTWORK.GRIFF_OFIFOTO
 };
