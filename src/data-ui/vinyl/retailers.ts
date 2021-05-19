@@ -13,7 +13,7 @@ const getRetailerMatches = (retailer: Retailer): Vinyl[] =>
 
 export const RETAILERS: MiniCardProps[] = Object.values(retailers).map(
   (retailer: Retailer): MiniCardProps => {
-    const { name } = retailer;
+    const { name, online } = retailer;
     const retailerMatches: Vinyl[] = getRetailerMatches(retailer);
     const details: MiniCardPanelDetailProps[] = mapVinylsToMiniCardPanelDetails(
       retailerMatches,
@@ -21,6 +21,7 @@ export const RETAILERS: MiniCardProps[] = Object.values(retailers).map(
     );
     return {
       primaryText: name,
+      primaryTextAlt: online ? "online" : "in-store",
       primaryCount: retailerMatches.length,
       sort: [name],
       details

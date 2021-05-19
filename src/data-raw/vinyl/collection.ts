@@ -93,7 +93,7 @@ export const LISSIE_CATCHING_A_TIGER: Vinyl = {
   signed: false,
   color: BLACK,
   costExcDelivery: 12.99,
-  retailer: RETAILERS.FAT_POSSUM
+  retailer: RETAILERS.FAT_POSSUM_ONLINE
 };
 
 export const TAYLOR_SWIFT_FOLKLORE: Vinyl = {
@@ -242,7 +242,7 @@ export const LEON_APART: Vinyl = {
   purchaseCondition: "new",
   costExcDelivery: 17.78,
   sides: 2,
-  retailer: RETAILERS.HIVE,
+  retailer: RETAILERS.HIVE_ONLINE,
   artwork: ARTWORK.LEON_APART
 };
 export const GEORGE_FITZGERALD_ALL_THAT_MUST_BE: Vinyl = {
@@ -251,7 +251,7 @@ export const GEORGE_FITZGERALD_ALL_THAT_MUST_BE: Vinyl = {
   year: 2018,
   color: COLORS.VINYL.GEORGE_FITZGERALD_ALL_THAT_MUST_BE,
   purchaseCondition: "new",
-  retailer: RETAILERS.HIVE,
+  retailer: RETAILERS.HIVE_ONLINE,
   signed: false,
   costExcDelivery: 20.39,
   appleMusicId: "all-that-must-be/1322664114",
@@ -264,7 +264,7 @@ export const MAGGIE_ROGERS_HEARD_IT_IN_A_PAST_LIFE: Vinyl = {
   year: 2019,
   title: "Head It in a Past Life",
   signed: false,
-  retailer: RETAILERS.HIVE,
+  retailer: RETAILERS.HIVE_ONLINE,
   purchaseCondition: "new",
   appleMusicId: "heard-it-in-a-past-life/1437448293",
   color: BLACK,
@@ -296,7 +296,7 @@ export const JON_HOPKINS_SINGULARITY: Vinyl = {
   year: 2018,
   inches: 12,
   sides: 4,
-  retailer: RETAILERS.CHALKYS,
+  retailer: RETAILERS.CHALKYS_ONLINE,
   costExcDelivery: 21.48,
   purchaseCondition: "new",
   signed: false,
@@ -327,7 +327,7 @@ export const DUA_LIPA_FUTURE_NOSTALGIA: Vinyl = {
   inches: 12,
   purchaseCondition: "new",
   sides: 2,
-  retailer: RETAILERS.HIVE,
+  retailer: RETAILERS.HIVE_ONLINE,
   costExcDelivery: 18.32,
   signed: false,
   color: BLACK
@@ -581,7 +581,7 @@ export const BANKS_III: Vinyl = {
 export const LEON_LEON: Vinyl = {
   gift: { from: FRIENDS.MUM },
   musician: MUSICIANS.LEON,
-  retailer: RETAILERS.HIVE,
+  retailer: RETAILERS.HIVE_ONLINE,
   purchaseCondition: "new",
   costExcDelivery: 15.75,
   title: MUSICIANS.LEON.name,
@@ -763,7 +763,7 @@ export const YEARS_AND_YEARS_PALO_SANTO: Vinyl = {
 export const PARAMORE_AFTER_LAUGHTER: Vinyl = {
   year: 2017,
   musician: MUSICIANS.PARAMORE,
-  retailer: RETAILERS.BANQUET_RECORDS,
+  retailer: RETAILERS.BANQUET_RECORDS_ONLINE,
   inches: 12,
   sides: 2,
   signed: false,
