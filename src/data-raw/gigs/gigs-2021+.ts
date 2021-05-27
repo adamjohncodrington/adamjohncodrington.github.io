@@ -202,16 +202,18 @@ export const CELESTE: Gig = {
   ticketType: TICKET_TYPES.ROUNDHOUSE_COLLECT_AT_VENUE
 };
 
-export const SEVDALIZA: Gig = {
-  headline: MUSICIANS.SEVDALIZA,
-  venue: VENUES.ELECTRIC_BRIXTON,
+export const LITTLE_MIX_2021: Gig = {
+  headline: MUSICIANS.LITTLE_MIX,
+  venue: VENUES.ARENA_MANCHESTER,
   date: new Date("2022-05-06"),
-  company: [DARREN_TAYLOR]
+  company: [DAN_SPARROW],
+  ticketType: TICKET_TYPES.TICKETMASTER_ETICKET
 };
 
 export const BILLIE_EILISH_2021: Gig = {
   headline: MUSICIANS.BILLIE_EILISH,
   venue: VENUES.ARENA_MANCHESTER,
   date: new Date("2022-06-08"),
-  company: [DAN_SPARROW, LINDSAY_ASPINALL, ASH_MORETON]
+  company: [DAN_SPARROW, LINDSAY_ASPINALL, ASH_MORETON],
+  ticketType: TICKET_TYPES.TICKETMASTER_POSTAL
 };
