@@ -16,6 +16,8 @@ const {
   TOM_CHINDA_COUTTS,
   TONYA_FRANCE,
   HARRIET_BOYLE,
+  LINDSAY_ASPINALL,
+  ASH_MORETON,
   POPPY_SMITH
 } = FRIENDS;
 
@@ -205,4 +207,11 @@ export const SEVDALIZA: Gig = {
   venue: VENUES.ELECTRIC_BRIXTON,
   date: new Date("2022-05-06"),
   company: [DARREN_TAYLOR]
+};
+
+export const BILLIE_EILISH_2021: Gig = {
+  headline: MUSICIANS.BILLIE_EILISH,
+  venue: VENUES.ARENA_MANCHESTER,
+  date: new Date("2022-06-08"),
+  company: [DAN_SPARROW, LINDSAY_ASPINALL, ASH_MORETON]
 };
