@@ -21,15 +21,6 @@ const {
   POPPY_SMITH
 } = FRIENDS;
 
-export const HOLLY_HUMBERSTONE: Gig = {
-  headline: MUSICIANS.HOLLY_HUMBERSTONE,
-  venue: VENUES.OMEARA,
-  date: POSTPONED_GIG_DATE,
-  company: [DARREN_TAYLOR],
-  ticketType: TICKET_TYPES.TICKETWEB,
-  postponedWithNoNewDate: true
-};
-
 export const SAINT_JHN: Gig = {
   headline: MUSICIANS.SAINT_JHN,
   venue: VENUES.KENTISH_TOWN_FORUM,
@@ -54,6 +45,14 @@ export const LADY_GAGA_2021: Gig = {
   date: new Date("2021-07-30"),
   company: [RYAN_MILLS, DAN_SPARROW, TOM_CHINDA_COUTTS],
   ticketType: TICKET_TYPES.TICKETMASTER_POSTAL
+};
+
+export const HOLLY_HUMBERSTONE: Gig = {
+  headline: MUSICIANS.HOLLY_HUMBERSTONE,
+  venue: VENUES.OMEARA,
+  date: new Date("2021-08-18"),
+  company: [DARREN_TAYLOR],
+  ticketType: TICKET_TYPES.TICKETWEB
 };
 
 export const JUNGLE: Gig = {
