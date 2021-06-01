@@ -895,3 +895,18 @@ export const FOUR_TET_NEW_ENERGY: Vinyl = {
   appleMusicId: "new-energy/1288517633",
   artwork: ARTWORK.FOUR_TET_NEW_ENERGY
 };
+
+export const LITTLE_MIX_CONFETTI: Vinyl = {
+  musician: MUSICIANS.LITTLE_MIX,
+  sides: 2,
+  inches: 12,
+  signed: false,
+  title: "Confetti",
+  appleMusicId: "confetti/1531469127",
+  retailer: RETAILERS.EBAY,
+  costExcDelivery: 34,
+  purchaseCondition: "new",
+  year: 2020,
+  artwork: ARTWORK.LITTLE_MIX_CONFETTI,
+  color: { photo: PHOTOS.DISC_ARTWORK.LITTLE_MIX_CONFETTI }
+};

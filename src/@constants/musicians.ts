@@ -7,6 +7,7 @@ export const ALESSIA_CARA: Musician = { name: "Alessia Cara" };
 export const TYCHO: Musician = { name: "Tycho" };
 export const FLETCHER: Musician = { name: "FLETCHER" };
 export const LITTLE_MIX: Musician = { name: "Little Mix" };
+export const OLIVIA_RODRIGO: Musician = { name: "Olivia Rodrigo" };
 export const JOJI: Musician = { name: "Joji" };
 export const WINONA_OAK: Musician = { name: "Winona Oak" };
 export const HONNE: Musician = { name: "HONNE" };
