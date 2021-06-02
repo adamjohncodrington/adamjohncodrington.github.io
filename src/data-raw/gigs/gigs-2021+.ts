@@ -21,6 +21,15 @@ const {
   POPPY_SMITH
 } = FRIENDS;
 
+export const LADY_GAGA_2022: Gig = {
+  headline: MUSICIANS.LADY_GAGA,
+  postponedWithNoNewDate: true,
+  venue: VENUES.TOTTENHAM_HOTSPUR_STADIUM,
+  date: POSTPONED_GIG_DATE,
+  company: [RYAN_MILLS, DAN_SPARROW, TOM_CHINDA_COUTTS],
+  ticketType: TICKET_TYPES.TICKETMASTER_POSTAL
+};
+
 export const SAINT_JHN: Gig = {
   headline: MUSICIANS.SAINT_JHN,
   venue: VENUES.KENTISH_TOWN_FORUM,
@@ -37,14 +46,6 @@ export const ALLIE_X_2020: Gig = {
   company: [DARREN_TAYLOR],
   ticketType: TICKET_TYPES.DICE_APP,
   postponedWithNoNewDate: true
-};
-
-export const LADY_GAGA_2021: Gig = {
-  headline: MUSICIANS.LADY_GAGA,
-  venue: VENUES.TOTTENHAM_HOTSPUR_STADIUM,
-  date: new Date("2021-07-30"),
-  company: [RYAN_MILLS, DAN_SPARROW, TOM_CHINDA_COUTTS],
-  ticketType: TICKET_TYPES.TICKETMASTER_POSTAL
 };
 
 export const HOLLY_HUMBERSTONE: Gig = {
