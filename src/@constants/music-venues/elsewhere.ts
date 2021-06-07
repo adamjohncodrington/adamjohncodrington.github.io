@@ -11,6 +11,7 @@ export const SCHWUZ: MusicVenue = {
   name: "SchwuZ Berlin",
   insignificant: true
 };
+export const PARADISO_AMSTERDAM: MusicVenue = { name: "Paradiso Amsterdam" };
 export const SHEFFIELD_ARENA: MusicVenue = { name: "Sheffield Arena" };
 export const TRESOR: MusicVenue = {
   name: "Tresor Berlin",

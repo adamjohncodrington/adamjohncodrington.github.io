@@ -178,6 +178,14 @@ export const DAGNY: Gig = {
   ticketType: TICKET_TYPES.SEE_TICKETS_PRINT_AT_HOME
 };
 
+export const BICEP_AMSTERDAM: Gig = {
+  headline: MUSICIANS.BICEP,
+  venue: VENUES.PARADISO_AMSTERDAM,
+  date: new Date("2022-03-03"),
+  company: [JERRY_EDWARDS, LEWIS_STEADMAN]
+  // ticketType: TICKET_TYPES.SEE_TICKETS_PRINT_AT_HOME
+};
+
 export const SOPHIE_ELLIS_BEXTOR: Gig = {
   headline: MUSICIANS.SOPHIE_ELLIS_BEXTOR,
   venue: VENUES.LONDON_PALLADIUM,
