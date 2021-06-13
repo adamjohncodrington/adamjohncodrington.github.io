@@ -6,6 +6,7 @@ export const ACADEMY_IS_THE: Musician = { name: "Academy Is..., The" };
 export const ALESSIA_CARA: Musician = { name: "Alessia Cara" };
 export const TYCHO: Musician = { name: "Tycho" };
 export const FLETCHER: Musician = { name: "FLETCHER" };
+export const TINASHE: Musician = { name: "Tinashe" };
 export const LITTLE_MIX: Musician = { name: "Little Mix" };
 export const OLIVIA_RODRIGO: Musician = { name: "Olivia Rodrigo" };
 export const JOJI: Musician = { name: "Joji" };
