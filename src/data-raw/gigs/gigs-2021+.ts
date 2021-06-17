@@ -210,7 +210,7 @@ export const CELESTE: Gig = {
   ticketType: TICKET_TYPES.ROUNDHOUSE_COLLECT_AT_VENUE
 };
 
-export const LITTLE_MIX_2021: Gig = {
+export const LITTLE_MIX_2022: Gig = {
   headline: MUSICIANS.LITTLE_MIX,
   venue: VENUES.ARENA_MANCHESTER,
   date: new Date("2022-05-06"),
@@ -218,7 +218,14 @@ export const LITTLE_MIX_2021: Gig = {
   ticketType: TICKET_TYPES.TICKETMASTER_ETICKET
 };
 
-export const BILLIE_EILISH_2021: Gig = {
+export const MARINA_2022: Gig = {
+  headline: MUSICIANS.MARINA,
+  venue: VENUES.BRIXTON_ACADEMY,
+  date: new Date("2022-05-22"),
+  company: [DARREN_TAYLOR]
+};
+
+export const BILLIE_EILISH_2022: Gig = {
   headline: MUSICIANS.BILLIE_EILISH,
   venue: VENUES.ARENA_MANCHESTER,
   date: new Date("2022-06-08"),
