@@ -53,6 +53,10 @@ export const CARMEN_DALGLISH: Friend = {
   name: "Carmen Dalglish",
   initials: "CD"
 };
+export const CALLUM_BAILEY: Friend = {
+  name: "Callum Bailey",
+  initials: "CB"
+};
 export const CAMERON_BLACKBURN: Friend = {
   name: "Cameron Blackburn",
   initials: "CB"
@@ -60,6 +64,10 @@ export const CAMERON_BLACKBURN: Friend = {
 export const CHELSEA_CUNNINGHAM: Friend = {
   name: "Chelsea Cunningham",
   initials: "CC"
+};
+export const CHLOE_ANDERSON: Friend = {
+  name: "Chloe Anderson",
+  initials: "CA"
 };
 export const CHLOE_WHITE: Friend = { name: "Chloé White", initials: "CW" };
 export const CHRISTELLE_MUTUNDA: Friend = {

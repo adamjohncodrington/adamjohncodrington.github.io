@@ -7,6 +7,47 @@ import {
 } from "@constants";
 import { PHOTOS } from "resources";
 
+const {
+  MUM,
+  EMMA_CODRINGTON,
+  CALLUM_BAILEY,
+  LAURA_CAPECE_GALEOTA,
+  LUKE_STERN,
+  ALICE_RODER,
+  CAITLIN_MCCAIG,
+  MEGAN_BLACKBURN,
+  SIAN_RODWAY_SMITH,
+  LUKE_JONES,
+  TONYA_FRANCE,
+  DAN_SPARROW,
+  DARREN_TAYLOR,
+  AMY_BAGNI,
+  ELLE_OLDROYD,
+  ALEX_FAYE,
+  BECKY_MILLS,
+  GRACE_HULME,
+  ELLIE_GURKIN,
+  THOM_STEPHANAKIS,
+  BETH_SPELLER,
+  SARAH_WHITAKER,
+  ASH_MORETON,
+  SAM_BERRIE,
+  LINDSAY_ASPINALL,
+  NATALIE_LAMBERT,
+  CHELSEA_CUNNINGHAM,
+  CHLOE_WHITE,
+  SONYA_PARDI,
+  TOM_CHINDA_COUTTS,
+  CHLOE_ANDERSON,
+  MARIA_TAYLOR,
+  RYAN_MILLS,
+  FANNY_LINDQVIST,
+  HANNA_FROGNER,
+  JESS_SMITH,
+  POOJA_DHIR,
+  JERRY_EDWARDS
+} = FRIENDS;
+
 export const DECAYDANCE: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.DECAYDANCE,
   lineup: [
@@ -20,7 +61,7 @@ export const DECAYDANCE: IFestivalWithoutVideo = {
   ],
   dates: [new Date("2007-08-22")],
   venue: MUSIC_VENUES.HAMMERSMITH_APOLLO,
-  company: [FRIENDS.MUM, FRIENDS.EMMA_CODRINGTON, FRIENDS.MEGAN_BLACKBURN]
+  company: [MUM, EMMA_CODRINGTON, MEGAN_BLACKBURN]
 };
 
 export const WHP_2014_10: IFestivalWithoutVideo = {
@@ -34,7 +75,7 @@ export const WHP_2014_10: IFestivalWithoutVideo = {
     ]
   ],
   venue: MUSIC_VENUES.STORE_STREET,
-  company: [FRIENDS.TONYA_FRANCE],
+  company: [TONYA_FRANCE],
   dates: [new Date("2014-10-04")]
 };
 
@@ -49,7 +90,7 @@ export const WHP_2014_11_07: IFestivalWithoutVideo = {
     ]
   ],
   venue: MUSIC_VENUES.STORE_STREET,
-  company: [FRIENDS.AMY_BAGNI, FRIENDS.ELLE_OLDROYD],
+  company: [AMY_BAGNI, ELLE_OLDROYD],
   dates: [new Date("2014-11-07")]
 };
 
@@ -64,7 +105,7 @@ export const WHP_2014_11_15: IFestivalWithoutVideo = {
     ]
   ],
   venue: MUSIC_VENUES.STORE_STREET,
-  company: [FRIENDS.ALEX_FAYE],
+  company: [ALEX_FAYE],
   dates: [new Date("2014-11-15")]
 };
 
@@ -72,11 +113,7 @@ export const WHP_2014_12: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.WAREHOUSE_PROJECT,
   lineup: [[MUSICIANS.MIDLAND, MUSICIANS.JOY_ORBISON, MUSICIANS.DUSKY]],
   venue: MUSIC_VENUES.STORE_STREET,
-  company: [
-    FRIENDS.EMMA_CODRINGTON,
-    FRIENDS.BECKY_MILLS,
-    FRIENDS.NATALIE_LAMBERT
-  ],
+  company: [EMMA_CODRINGTON, BECKY_MILLS, NATALIE_LAMBERT],
   dates: [new Date("2014-12-06")]
 };
 
@@ -100,7 +137,7 @@ export const PARKLIFE_2014: IFestivalWithoutVideo = {
     ]
   ],
   venue: MUSIC_VENUES.HEATON_PARK,
-  company: [FRIENDS.JESS_SMITH, FRIENDS.POOJA_DHIR, FRIENDS.TONYA_FRANCE],
+  company: [JESS_SMITH, POOJA_DHIR, TONYA_FRANCE],
   dates: [new Date("2014-06-07"), new Date("2014-06-08")]
 };
 
@@ -108,7 +145,7 @@ export const TRANSMISSION_2015_02_07: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.TRANSMISSION,
   lineup: [[MUSICIANS.TEN_WALLS, MUSICIANS.DUSKY, MUSICIANS.YOUSEF]],
   venue: MUSIC_VENUES.ALBERT_HALL_MANCHESTER,
-  company: [FRIENDS.CHLOE_WHITE, FRIENDS.AMY_BAGNI, FRIENDS.BETH_SPELLER],
+  company: [CHLOE_WHITE, AMY_BAGNI, BETH_SPELLER],
   dates: [new Date("2015-02-07")]
 };
 
@@ -117,14 +154,14 @@ export const DEFECTED_BRISTOL: IFestivalWithoutVideo = {
   lineup: [[MUSICIANS.MK]],
   venue: MUSIC_VENUES.MOTION,
   dates: [new Date("2016-07-30")],
-  company: [FRIENDS.CHELSEA_CUNNINGHAM, FRIENDS.SARAH_WHITAKER]
+  company: [CHELSEA_CUNNINGHAM, SARAH_WHITAKER]
 };
 
 export const TRIBAL_SESSIONS: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.TRIBAL_SESSIONS,
   lineup: [[MUSICIANS.JOSH_BUTLER, MUSICIANS.BONTAN, MUSICIANS.GREEN_VELVET]],
   venue: MUSIC_VENUES.SANKEYS,
-  company: [FRIENDS.TONYA_FRANCE, FRIENDS.ALEX_FAYE],
+  company: [TONYA_FRANCE, ALEX_FAYE],
   dates: [new Date("2015-02-13")]
 };
 
@@ -132,7 +169,7 @@ export const TRANSMISSION_2015_02_27: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.TRANSMISSION,
   lineup: [[MUSICIANS.JAX_JONES, MUSICIANS.DUKE_DUMONT, MUSICIANS.BLONDE]],
   venue: MUSIC_VENUES.ALBERT_HALL_MANCHESTER,
-  company: [FRIENDS.BETH_SPELLER],
+  company: [BETH_SPELLER],
   dates: [new Date("2015-02-27")]
 };
 
@@ -140,7 +177,7 @@ export const TRANSMISSION_2015_04: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.TRANSMISSION,
   lineup: [[MUSICIANS.EATS_EVERYTHING, MUSICIANS.CARL_COX]],
   venue: MUSIC_VENUES.ALBERT_HALL_MANCHESTER,
-  company: [FRIENDS.SONYA_PARDI, FRIENDS.TONYA_FRANCE, FRIENDS.ALEX_FAYE],
+  company: [SONYA_PARDI, TONYA_FRANCE, ALEX_FAYE],
   dates: [new Date("2015-04-03")]
 };
 
@@ -166,13 +203,7 @@ export const PARKLIFE_2015: IFestivalWithoutVideo = {
     ]
   ],
   venue: MUSIC_VENUES.HEATON_PARK,
-  company: [
-    FRIENDS.SONYA_PARDI,
-    FRIENDS.TONYA_FRANCE,
-    FRIENDS.AMY_BAGNI,
-    FRIENDS.ELLE_OLDROYD,
-    FRIENDS.CHLOE_WHITE
-  ],
+  company: [SONYA_PARDI, TONYA_FRANCE, AMY_BAGNI, ELLE_OLDROYD, CHLOE_WHITE],
   dates: [new Date("2015-06-06"), new Date("2015-06-07")]
 };
 
@@ -210,13 +241,13 @@ export const GLASTONBURY_2015: IFestivalWithoutVideo = {
   ],
   venue: MUSIC_VENUES.WORTHY_FARM,
   company: [
-    FRIENDS.TONYA_FRANCE,
-    FRIENDS.GRACE_HULME,
-    FRIENDS.ELLIE_GURKIN,
-    FRIENDS.EMMA_CODRINGTON,
-    FRIENDS.THOM_STEPHANAKIS,
-    FRIENDS.FANNY_LINDQVIST,
-    FRIENDS.HANNA_FROGNER
+    TONYA_FRANCE,
+    GRACE_HULME,
+    ELLIE_GURKIN,
+    EMMA_CODRINGTON,
+    THOM_STEPHANAKIS,
+    FANNY_LINDQVIST,
+    HANNA_FROGNER
   ],
   dates: [
     new Date("2015-06-26"),
@@ -230,11 +261,11 @@ export const FABRIC_NYE: IFestivalWithoutVideo = {
   lineup: [[MUSICIANS.GEORGE_FITZGERALD, MUSICIANS.EATS_EVERYTHING]],
   venue: MUSIC_VENUES.FABRIC,
   company: [
-    FRIENDS.TONYA_FRANCE,
-    FRIENDS.SONYA_PARDI,
-    FRIENDS.FANNY_LINDQVIST,
-    FRIENDS.HANNA_FROGNER,
-    FRIENDS.LAURA_CAPECE_GALEOTA
+    TONYA_FRANCE,
+    SONYA_PARDI,
+    FANNY_LINDQVIST,
+    HANNA_FROGNER,
+    LAURA_CAPECE_GALEOTA
   ],
   dates: [new Date("2015-12-31")]
 };
@@ -245,12 +276,12 @@ export const BRIGHTON_PRIDE_2017: IFestivalWithoutVideo = {
   dates: [new Date("2017-08-05")],
   venue: MUSIC_VENUES.PRESTON_PARK,
   company: [
-    FRIENDS.LUKE_STERN,
-    FRIENDS.TONYA_FRANCE,
-    FRIENDS.SONYA_PARDI,
-    FRIENDS.TOM_CHINDA_COUTTS,
-    FRIENDS.RYAN_MILLS,
-    FRIENDS.LAURA_CAPECE_GALEOTA
+    LUKE_STERN,
+    TONYA_FRANCE,
+    SONYA_PARDI,
+    TOM_CHINDA_COUTTS,
+    RYAN_MILLS,
+    LAURA_CAPECE_GALEOTA
   ]
 };
 
@@ -269,11 +300,11 @@ export const LOVEBOX_2017: IFestivalWithoutVideo = {
   dates: [new Date("2017-07-14")],
   venue: MUSIC_VENUES.VICTORIA_PARK,
   company: [
-    FRIENDS.TONYA_FRANCE,
-    FRIENDS.TOM_CHINDA_COUTTS,
-    FRIENDS.RYAN_MILLS,
-    FRIENDS.CAITLIN_MCCAIG,
-    FRIENDS.ALICE_RODER
+    TONYA_FRANCE,
+    TOM_CHINDA_COUTTS,
+    RYAN_MILLS,
+    CAITLIN_MCCAIG,
+    ALICE_RODER
   ]
 };
 
@@ -291,7 +322,7 @@ export const NOTION_SUMMER_PARTY: IFestivalWithoutVideo = {
   ],
   venue: MUSIC_VENUES.TROXY,
   dates: [new Date("2018-07-27")],
-  company: [FRIENDS.LUKE_JONES]
+  company: [LUKE_JONES]
 };
 
 export const BRIGHTON_PRIDE_2018: IFestivalWithoutVideo = {
@@ -300,11 +331,11 @@ export const BRIGHTON_PRIDE_2018: IFestivalWithoutVideo = {
   venue: MUSIC_VENUES.PRESTON_PARK,
   dates: [new Date("2018-08-04")],
   company: [
-    FRIENDS.TONYA_FRANCE,
-    FRIENDS.SONYA_PARDI,
-    FRIENDS.TOM_CHINDA_COUTTS,
-    FRIENDS.RYAN_MILLS,
-    FRIENDS.SIAN_RODWAY_SMITH
+    TONYA_FRANCE,
+    SONYA_PARDI,
+    TOM_CHINDA_COUTTS,
+    RYAN_MILLS,
+    SIAN_RODWAY_SMITH
   ]
 };
 
@@ -322,11 +353,12 @@ export const MANCHESTER_PRIDE_2019: IFestivalWithoutVideo = {
   venue: MUSIC_VENUES.MAYFIELD_DEPOT,
   dates: [new Date("2019-08-25")],
   company: [
-    FRIENDS.DAN_SPARROW,
-    FRIENDS.MARIA_TAYLOR,
-    FRIENDS.ASH_MORETON,
-    FRIENDS.SAM_BERRIE,
-    FRIENDS.LINDSAY_ASPINALL
+    DAN_SPARROW,
+    MARIA_TAYLOR,
+    ASH_MORETON,
+    SAM_BERRIE,
+    CALLUM_BAILEY,
+    LINDSAY_ASPINALL
   ]
 };
 
@@ -335,15 +367,23 @@ export const CHINGFEST: IFestivalWithoutVideo = {
   lineup: [[MUSICIANS.INCOGNITO, MUSICIANS.NAO]],
   venue: MUSIC_VENUES.RIDGEWAY_PARK,
   dates: [new Date("2019-08-31")],
-  company: [FRIENDS.DARREN_TAYLOR]
+  company: [DARREN_TAYLOR]
 };
 
-export const HOMOBLOC: IFestivalWithoutVideo = {
+export const HOMOBLOC_2019: IFestivalWithoutVideo = {
   title: FESTIVAL_TITLES.HOMOBLOC,
   lineup: [[MUSICIANS.ROMY, MUSICIANS.ROBYN, MUSICIANS.HORSE_MEAT_DISCO]],
   venue: MUSIC_VENUES.MAYFIELD_DEPOT,
   dates: [new Date("2019-11-09")],
-  company: [FRIENDS.DAN_SPARROW, FRIENDS.MARIA_TAYLOR]
+  company: [DAN_SPARROW, MARIA_TAYLOR]
+};
+
+export const HOMOBLOC_2021: IFestivalWithoutVideo = {
+  title: FESTIVAL_TITLES.HOMOBLOC,
+  lineup: [[]],
+  venue: MUSIC_VENUES.MAYFIELD_DEPOT,
+  dates: [new Date("2021-11-06")],
+  company: [DAN_SPARROW, MARIA_TAYLOR, CALLUM_BAILEY]
 };
 
 export const AREA_10_NYE: IFestivalWithoutVideo = {
@@ -352,11 +392,7 @@ export const AREA_10_NYE: IFestivalWithoutVideo = {
   photos: PHOTOS.GIGS.MK_AREA_10_NYE,
   venue: MUSIC_VENUES.BRIXTON_ACADEMY,
   dates: [new Date("2019-12-31")],
-  company: [
-    FRIENDS.TOM_CHINDA_COUTTS,
-    FRIENDS.TONYA_FRANCE,
-    FRIENDS.SONYA_PARDI
-  ]
+  company: [TOM_CHINDA_COUTTS, TONYA_FRANCE, SONYA_PARDI]
 };
 
 export const MIGHTY_HOOPLA_2021: IFestivalWithoutVideo = {
@@ -365,14 +401,16 @@ export const MIGHTY_HOOPLA_2021: IFestivalWithoutVideo = {
   dates: [new Date("2021-09-04")],
   lineup: [[]],
   company: [
-    FRIENDS.TONYA_FRANCE,
-    FRIENDS.MARIA_TAYLOR,
-    FRIENDS.TOM_CHINDA_COUTTS,
-    FRIENDS.RYAN_MILLS,
-    FRIENDS.DARREN_TAYLOR,
-    FRIENDS.SIAN_RODWAY_SMITH,
-    FRIENDS.CAITLIN_MCCAIG,
-    FRIENDS.DAN_SPARROW
+    TONYA_FRANCE,
+    MARIA_TAYLOR,
+    TOM_CHINDA_COUTTS,
+    RYAN_MILLS,
+    DARREN_TAYLOR,
+    CHLOE_ANDERSON,
+    JERRY_EDWARDS,
+    SIAN_RODWAY_SMITH,
+    CAITLIN_MCCAIG,
+    DAN_SPARROW
   ],
   ticketType: TICKET_TYPES.KABOODLE_ETICKET
 };
