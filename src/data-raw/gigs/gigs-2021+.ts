@@ -10,6 +10,7 @@ const {
   JERRY_EDWARDS,
   DARREN_TAYLOR,
   LEWIS_STEADMAN,
+  CAITLIN_MCCAIG,
   LUCY_TWAITE,
   DAN_SPARROW,
   RYAN_MILLS,
@@ -225,6 +226,13 @@ export const MARINA_2022: Gig = {
   venue: VENUES.BRIXTON_ACADEMY,
   date: new Date("2022-05-22"),
   company: [DARREN_TAYLOR]
+};
+
+export const LORDE_2022: Gig = {
+  headline: MUSICIANS.LORDE,
+  venue: VENUES.ROUNDHOUSE,
+  date: new Date("2022-06-02"),
+  company: [DARREN_TAYLOR, TONYA_FRANCE, CAITLIN_MCCAIG]
 };
 
 export const BILLIE_EILISH_2022: Gig = {
