@@ -2,15 +2,15 @@ import { MEASUREMENTS } from "@constants";
 
 import { concatenateQuantityAndMeasurement } from "./concatenateQuantityAndMeasurement";
 
-interface IGetIngredientsHeader {
+type GetIngredientsHeader = {
   defaultIngredientsHeader: string;
   makes: IRecipeMakes;
-}
+};
 
 export const getIngredientsHeader = ({
   defaultIngredientsHeader,
   makes
-}: IGetIngredientsHeader): string => {
+}: GetIngredientsHeader): string => {
   if (!makes.measurement)
     return `${defaultIngredientsHeader} (makes ${makes.quantity})`;
 

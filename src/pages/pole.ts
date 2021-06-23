@@ -2,7 +2,7 @@ import { SFW_MODE } from "config";
 import { SVG } from "resources";
 import { POLE as sections } from "sections";
 
-export const POLE: IPage = {
+export const POLE: Page = {
   title: "Pole",
   path: "/pole",
   SvgIcon: SVG.DANCER_POSE,

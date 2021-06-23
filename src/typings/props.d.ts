@@ -48,10 +48,6 @@ interface I_Photos {
   photos: Photo[];
 }
 
-interface I__Photos {
-  photos?: Photo[];
-}
-
 interface I_Date {
   date: Date;
 }

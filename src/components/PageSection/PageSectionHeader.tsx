@@ -12,7 +12,7 @@ import {
   PageSectionSvgContainer
 } from "./styles";
 
-interface IPageSectionHeader extends IDisclosureHeader {
+interface IPageSectionHeader extends DisclosureHeader {
   title: string;
   count?: number;
   starCount?: number;

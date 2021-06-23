@@ -4,11 +4,17 @@ import { SPEED_UP_PAGE_LOAD } from "config";
 
 import { PanelContainer, StyledDiv, DisclosureContainer } from "./styles";
 
-export const Disclosure: FC<IDisclosure> = ({
+type Props = I__AutoExpand &
+  I_PanelExists & {
+    Header: React.FC<DisclosureHeader>;
+    Panel: React.FC;
+  };
+
+export const Disclosure: FC<Props> = ({
   Header,
   Panel,
-  panelExists,
-  autoExpand
+  autoExpand,
+  panelExists
 }) => {
   const [panelVisible, switchPanelVisibility] = useState<boolean>(!!autoExpand);
 

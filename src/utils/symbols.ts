@@ -1,6 +1,6 @@
 import { SYMBOLS } from "@constants";
 import { COLORS, getBackgoundImageUrl, getTwoColorDiagonal } from "styles";
-import { Person, Gift, VinylAppearance } from "types";
+import { Person, Gift, VinylAppearance, Photo } from "types";
 
 import { isInFuture } from "./basic";
 import { daysToGo } from "./daysToGo";
@@ -8,9 +8,7 @@ import { daysToGo } from "./daysToGo";
 const { GRAY_DARK } = COLORS;
 
 const sortCompany = (company: Person[]): Person[] =>
-  company.sort((a: Person, b: Person): number =>
-    a.initials.localeCompare(b.initials)
-  );
+  company.sort((a, b): number => a.initials.localeCompare(b.initials));
 
 const getCompanySymbols = (company: Person[]): SymbolProps[] =>
   sortCompany(company).map(
@@ -22,8 +20,8 @@ const getCompanySymbols = (company: Person[]): SymbolProps[] =>
 
 type GetSymbols = I__Date &
   I__Signed &
-  I__Photos &
   I__Video & {
+    photos?: Photo[];
     company?: Person[];
     gift?: Gift;
     poleCategory?: IPoleCategory;

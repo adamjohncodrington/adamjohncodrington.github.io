@@ -14,7 +14,7 @@ interface ITravelVideo extends IVideo, I_StartEndDates {
   locations: LocationProps[];
 }
 
-interface IRecipeHeader extends IRecipe, IDisclosureHeader {}
+interface IRecipeHeader extends IRecipe, DisclosureHeader {}
 
 interface Song {
   musician: Musician;

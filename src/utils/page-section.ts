@@ -22,10 +22,10 @@ const compare = (a: any, b: any): number => {
 };
 
 export const sortCards = (cards: CardProps[]): CardProps[] =>
-  cards.sort((a: CardProps, b: CardProps): number => compare(a, b));
+  cards.sort((a, b): number => compare(a, b));
 
 export const sortMiniCards = (miniCards: MiniCardProps[]): MiniCardProps[] =>
-  miniCards.sort((a: MiniCardProps, b: MiniCardProps): number => compare(a, b));
+  miniCards.sort((a, b): number => compare(a, b));
 
 export const sortMiniCardPanelDetails = (
   miniCardPanelDetails: MiniCardPanelDetailProps[]

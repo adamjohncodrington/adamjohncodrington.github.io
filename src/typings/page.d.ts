@@ -2,7 +2,7 @@ interface IPhotoGrid extends I_Photos {
   columnCount?: number;
 }
 
-interface IPage extends I__Hide {
+interface Page extends I__Hide {
   title: string;
   path: string;
   SvgIcon: ISvgIcon;

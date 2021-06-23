@@ -1,20 +1,21 @@
-interface IBreakpoint {
+type Breakpoint = {
   maxWidth?: PxValue;
   minWidth?: PxValue;
   maxHeight?: PxValue;
   minHeight?: PxValue;
-}
+};
 
-interface IBreakpoints {
-  phoneSmall: IBreakpoint;
-  phoneLarge: IBreakpoint;
-  tablet: IBreakpoint;
-  laptop: IBreakpoint;
-  desktop: IBreakpoint;
-  largeDesktop: IBreakpoint;
-}
+type Breakpoints = {
+  [size in
+    | "phoneSmall"
+    | "phoneLarge"
+    | "tablet"
+    | "laptop"
+    | "desktop"
+    | "largeDesktop"]: Breakpoint;
+};
 
-export const BREAKPOINTS: IBreakpoints = {
+export const BREAKPOINTS: Breakpoints = {
   phoneSmall: { maxWidth: "576px", maxHeight: "568px" },
   phoneLarge: {
     minWidth: "577px",

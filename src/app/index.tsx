@@ -7,8 +7,8 @@ import { PAGES } from "pages";
 export const App: FC = () => (
   <BrowserRouter>
     <Switch>
-      {PAGES.filter(({ hide }: IPage): boolean => !hide).map(
-        ({ path, sections }: IPage, i: number) => (
+      {PAGES.filter(({ hide }: Page): boolean => !hide).map(
+        ({ path, sections }: Page, i: number) => (
           <Route key={i} path={path}>
             <header>
               <NavBar pages={PAGES} />

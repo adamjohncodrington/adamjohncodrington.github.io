@@ -59,12 +59,12 @@ const StyledRouterNavLink = styled(RouterNavLink)(
 );
 
 type Props = {
-  pages: IPage[];
+  pages: Page[];
 };
 
 export const NavBar: FC<Props> = ({ pages }) => (
   <StyledNav data-test="nav-bar">
-    {pages.map(({ path, SvgIcon }: IPage, i: number) => (
+    {pages.map(({ path, SvgIcon }: Page, i: number) => (
       <StyledRouterNavLink key={i} to={path} activeClassName="ACTIVE">
         <SvgIcon />
       </StyledRouterNavLink>
