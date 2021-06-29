@@ -9,6 +9,7 @@ export const ROUNDHOUSE_COLLECT_AT_VENUE: TicketType =
   "Roundhouse collect at venue";
 export const SEE_TICKETS_POSTAL: TicketType = "SeeTickets postal";
 export const SEE_TICKETS_PRINT_AT_HOME: TicketType = "SeeTickets print-at-home";
+export const SEE_TICKETS_WALLET: TicketType = "SeeTickets wallet";
 export const TICKETWEB: TicketType = `Ticketweb PDF`;
 export const TICKETMASTER_POSTAL: TicketType = "Ticketmaster postal";
 export const TICKETMASTER_ETICKET: TicketType = "Ticketmaster eTicket";

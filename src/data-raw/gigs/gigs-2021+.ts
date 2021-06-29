@@ -228,17 +228,18 @@ export const MARINA_2022: Gig = {
   company: [DARREN_TAYLOR]
 };
 
-export const LORDE_2022: Gig = {
-  headline: MUSICIANS.LORDE,
-  venue: VENUES.ROUNDHOUSE,
-  date: new Date("2022-06-02"),
-  company: [DARREN_TAYLOR, TONYA_FRANCE, CAITLIN_MCCAIG]
-};
-
 export const BILLIE_EILISH_2022: Gig = {
   headline: MUSICIANS.BILLIE_EILISH,
   venue: VENUES.ARENA_MANCHESTER,
   date: new Date("2022-06-08"),
   company: [DAN_SPARROW, LINDSAY_ASPINALL, ASH_MORETON],
   ticketType: TICKET_TYPES.TICKETMASTER_POSTAL
+};
+
+export const LORDE_2022: Gig = {
+  headline: MUSICIANS.LORDE,
+  venue: VENUES.ROUNDHOUSE,
+  date: new Date("2022-06-28"),
+  company: [DARREN_TAYLOR],
+  ticketType: TICKET_TYPES.SEE_TICKETS_WALLET
 };
