@@ -238,7 +238,7 @@ export const BILLIE_EILISH_2022: Gig = {
 
 export const LORDE_2022: Gig = {
   headline: MUSICIANS.LORDE,
-  venue: VENUES.ROUNDHOUSE,
+  venue: VENUES.ALEXANDRA_PALACE,
   date: new Date("2022-06-28"),
   company: [DARREN_TAYLOR],
   ticketType: TICKET_TYPES.SEE_TICKETS_WALLET
