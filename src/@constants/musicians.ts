@@ -10,6 +10,7 @@ export const TINASHE: Musician = { name: "Tinashe" };
 export const LITTLE_MIX: Musician = { name: "Little Mix" };
 export const OLIVIA_RODRIGO: Musician = { name: "Olivia Rodrigo" };
 export const JOJI: Musician = { name: "Joji" };
+export const DOJA_CAT: Musician = { name: "Doja Cat" };
 export const WINONA_OAK: Musician = { name: "Winona Oak" };
 export const HONNE: Musician = { name: "HONNE" };
 export const BEKA: Musician = { name: "BEKA" };
